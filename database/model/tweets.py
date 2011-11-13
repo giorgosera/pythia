@@ -6,6 +6,7 @@ The models represent entities in the database
 import pymongo, datetime
 from mongoengine import Document, StringField, DateTimeField, IntField
 
+
 class Tweet(Document):
     username = StringField(required=True)
     date = DateTimeField(required=True, default=datetime.datetime.utcnow)
@@ -30,3 +31,4 @@ class TopsyTweet(Tweet):
     trackback_author_url = StringField(required=True)
     trackback_permalink = StringField(required=True)
     topsy_author_url = StringField(required=True)  
+
