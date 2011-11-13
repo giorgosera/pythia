@@ -1,0 +1,7 @@
+mongoengine==0.4
+pycrypto==2.4.1
+pymongo==2.0.1
+python-dateutil==1.5
+python-otter==0.1.0
+ssh==1.7.9
+wsgiref==0.1.2
