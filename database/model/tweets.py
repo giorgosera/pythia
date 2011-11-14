@@ -3,12 +3,12 @@ The models represent entities in the database
 @author: Giorgos Eracleous
 '''
 
-import pymongo, datetime
+import datetime
 from mongoengine import Document, StringField, DateTimeField, IntField
 
 
 class Tweet(Document):
-    username = StringField(required=True)
+    from_user = StringField(required=True)
     date = DateTimeField(required=True, default=datetime.datetime.utcnow)
     text = StringField(required=True)
     

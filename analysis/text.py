@@ -17,10 +17,10 @@ class TextAnalyser(object):
     
     def __init__(self, tweet_list=None):
         self.tweets = tweet_list
-        words = self._preprocess_text(tweet_list)
+        words = self._preprocess_text()
         self.words = words
         
-    def _preprocess_text(self, corpus):    
+    def _preprocess_text(self):    
         '''
         Preprocess plain text. It is supposed to be a private method. Should not
         be called fro, outside.
@@ -42,14 +42,16 @@ class TextAnalyser(object):
         A regular expression is used to identify retweets. Note that 
         Twitter identifies retweets either with "RT" followed by username
         or "via" followed by username. 
+        It returns a list of dictionaries containing the origin and the user 
+        who retweeted.
         
         #TODO: Refactor regex generation to the tools package
         '''
         rt_patterns = re.compile(r"(RT|via)((?:\b\W*@\w+)+)", re.IGNORECASE)
-        matches = []
+        rt_origins = []
         for t in self.tweets:
-            matches += rt_patterns.findall(t)
-                
-        return matches
+            rt_origins += rt_patterns.findall(t)
+              
+        return rt_origins
     
     

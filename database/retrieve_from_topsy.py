@@ -5,7 +5,8 @@ Created on 13 Nov 2011
 
 This module utilizes the Otter API bindings for Python to retrieve old tweets.
 '''
-import otter, dateutil.parser, datetime
+import otter #!@UnresolvedImport
+import dateutil.parser, datetime
 from model.tweets import TopsyTweet
 from mongoengine import connect
 
@@ -27,6 +28,6 @@ for page in r:
         tt.trackback_author_url = item.trackback_author_url
         tt.trackback_permalink = item.trackback_permalink
         tt.topsy_author_url = item.topsy_author_url
-        tt.username = item.trackback_author_nick
+        tt.from_user = item.trackback_author_nick
         tt.save()
     

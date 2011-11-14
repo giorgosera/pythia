@@ -20,7 +20,7 @@ cur.execute("select username, date, origin, no_followers, message \
 results = cur.fetchall()
 for result in results:
     ct = CambridgeTweet()
-    ct.username = result[0]
+    ct.from_user = result[0]
     ct.date = dateutil.parser.parse(result[1])
     ct.origin = result[2]
     ct.no_of_followers = result[3]
