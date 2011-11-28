@@ -29,11 +29,16 @@ class TwitterCrawler(AbstractCrawler):
         app_name = "TestGeorge"
         
         (oauth_token, oauth_token_secret) = oauth_dance(app_name, consumer_key, consumer_secret)
-        return twitter.Twitter(domain='api.twitter.com', api_version='1', 
-                               auth=twitter.oauth.OAuth(oauth_token, oauth_token_secret,
-                               consumer_key, consumer_secret))
+        self.twitter_object_handle =  twitter.Twitter(domain='api.twitter.com', api_version='1', 
+                                      auth=twitter.oauth.OAuth(oauth_token, oauth_token_secret,
+                                      consumer_key, consumer_secret))
+        return self.twitter_object_handle
     
-    def make_twitter_request(self, twitter_function, max_errors=3, *args, **kwargs ): 
+    def _make_twitter_request(self, twitter_function, max_errors=3, *args, **kwargs ): 
+        '''
+        A wrapper method for executing a twitter API request. It is supposed to be a private
+        method.
+        '''
         wait_period = 2
         error_count = 0
         while True:
@@ -66,8 +71,8 @@ class TwitterCrawler(AbstractCrawler):
             time.sleep(wait_period)
             wait_period *= 1.5
             return wait_period
-        elif self.account.rate_limit_status()['remaining_hits'] == 0:
-            status = self.t.account.rate_limit_status()
+        elif self.twitter_object_handle.account.rate_limit_status()['remaining_hits'] == 0:
+            status = self.twitter_object_handle.account.rate_limit_status()
             now = time.time() # UTC
             when_rate_limit_resets = status['reset_time_in_seconds'] # UTC
             sleep_time = when_rate_limit_resets - now
@@ -77,4 +82,17 @@ class TwitterCrawler(AbstractCrawler):
             return 2
         else:
             raise e
+        
+    def getUserInfoByScreenName(self, screen_name):
+        '''
+        Returns a user's info given their screen name.
+        The API's response is a JSON object stored as a list element.
+        That's why it returns the first element of a list  
+        '''     
+        info = self._make_twitter_request(self.twitter_object_handle.users.lookup, 
+                                              screen_name = screen_name)
+        
+        return info[0] 
+        
+       
     

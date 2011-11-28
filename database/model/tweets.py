@@ -8,7 +8,7 @@ from mongoengine import Document, StringField, DateTimeField, IntField
 
 
 class Tweet(Document):
-    from_user = StringField(required=True)
+    screen_name = StringField(required=True)
     date = DateTimeField(required=True, default=datetime.datetime.utcnow)
     text = StringField(required=True)
     
@@ -20,15 +20,16 @@ class CambridgeTweet(Tweet):
     
 class TopsyTweet(Tweet):
     meta = {"collection": "TopsyTweets"}
-    
-    hits = IntField(required=True, default=0)
-    title = StringField(required=True)
-    #The url of the original author
+    #The url of the original tweet
     url = StringField(required=True)
-    trackback_total = IntField(required=True, default=0)
-    highlight = StringField(required=True)
+    
+    #What else is available in response:
+    #title = StringField()
+    #hits = IntField(required=True, default=0)
+    #trackback_total = IntField(required=True, default=0)
+    #highlight = StringField()
     #The url of the author trackbacked tweet
-    trackback_author_url = StringField(required=True)
-    trackback_permalink = StringField(required=True)
-    topsy_author_url = StringField(required=True)  
+    #trackback_author_url = StringField()
+    #trackback_permalink = StringField()
+    #topsy_author_url = StringField(required=True)  
 
