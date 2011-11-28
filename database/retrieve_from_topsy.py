@@ -39,8 +39,11 @@ for page in r:
         print "Storing author info for this tweet!"    
         at = Author()
         try:
-            info = t.getUserInfoByScreenName(tt.screen_name)
+            info = t.get_user_info_by_screenname(tt.screen_name)
+            at.twitter_id = info['id']
             at.screen_name = info['screen_name']
+            at.followers_ids = t.get_user_followers(at.screen_name)
+            at.friends_ids = t.get_user_friends(at.screen_name)
             at.followers_count = info['followers_count']
             at.friends_count = info['friends_count']
             at.statuses_count = info['statuses_count']

@@ -83,7 +83,7 @@ class TwitterCrawler(AbstractCrawler):
         else:
             raise e
         
-    def getUserInfoByScreenName(self, screen_name):
+    def get_user_info_by_screenname(self, screen_name):
         '''
         Returns a user's info given their screen name.
         The API's response is a JSON object stored as a list element.
@@ -93,6 +93,40 @@ class TwitterCrawler(AbstractCrawler):
                                               screen_name = screen_name)
         
         return info[0] 
+    
+    def get_user_followers(self, screen_name=None, limit=10000):
+        '''
+        Returns the followers of the given user
+        '''
+        cursor = -1
+        result = []
+        while cursor != 0:
+            response = self._make_twitter_request(self.twitter_object_handle.followers.ids, 
+                                                  screen_name=screen_name, 
+                                                  cursor=cursor)
+            for id in response.ids:
+                result.append(id)    
+            cursor = response['next_cursor']
+         
+        return result
+    
+    def get_user_friends(self, screen_name=None, limit=10000):
+        '''
+        Returns the friends of the given user
+        '''
+        cursor = -1
+        result = []
+        while cursor != 0:
+            response = self._make_twitter_request(self.twitter_object_handle.friends.ids, 
+                                                  screen_name=screen_name, 
+                                                  cursor=cursor)
+            for id in response.ids:
+                result.append(id)    
+            cursor = response['next_cursor']
+         
+        return result
+            
+        
         
        
     
