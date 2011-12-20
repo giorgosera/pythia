@@ -1,4 +1,5 @@
 PyYAML==3.10
+feedparser==5.1
 matplotlib==1.0.1
 mongoengine==0.4
 networkx==1.5
