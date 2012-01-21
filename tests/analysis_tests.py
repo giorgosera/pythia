@@ -33,13 +33,15 @@ class TestTextAnalyserFunctions(unittest.TestCase):
         expected = [entry1, entry2, entry3]
         
         sample_docs = [doc1_raw, doc2_raw, doc3_raw]
-        
+
         analyser = TextAnalyser()
         for s in sample_docs:
             analyser.add_document(s)
-         
+                 
         self.assertEqual(expected, analyser.get_documents())
         self.assertEqual(global_freqs_expected, analyser.get_global_token_frequencies())
+        
+        analyser.save_frequency_matrix("test.txt")
         
 if __name__ == "__main__":
     unittest.main()

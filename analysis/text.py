@@ -68,9 +68,10 @@ class TextAnalyser(object):
         Filters tokens which appear either too often (i.e the, a) or very rarely (i.e flim flam).
         The lower and higher percentages indicate the tolerance.
         '''
+        dict = {}
         filtered = []
-        for token, count in self.global_token_frequencies:
-            fraction = float(count)/len(self.document_list)
+        for token in self.global_token_frequencies:
+            fraction = float(self.global_token_frequencies[token])/len(self.document_list)
             if fraction > lower and fraction < higher:
                 filtered.append(token)
         return filtered        
@@ -87,13 +88,26 @@ class TextAnalyser(object):
         '''
         pass
     
-    def save_frequency_matrix(self, filename, ):
+    def save_frequency_matrix(self, filename):
         '''
         Writes the frequency matrix into a file in a human readable form.  
         '''
         out = file(filename, 'w')
         out.write("Frequency matrix")
-        
+        out.write('\n\n')
+        token_list = self._filter_tokens(lower=0, higher=1.0)
+        for token in token_list:
+            out.write('\t%s' % token)
+        out.write('\n')
+        for i, document in enumerate(self.document_list):
+            out.write('Doc'+str(i))
+            tf = document["word_frequencies"]
+            for token in token_list:
+                if token in tf:
+                    out.write('\t%d' % tf[token])
+                else:
+                    out.write('\t0')
+            out.write('\n')
           
   
 #    def retweets_patterns(self):
