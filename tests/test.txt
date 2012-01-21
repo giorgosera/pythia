@@ -1,6 +1,0 @@
-Frequency matrix
-
-	a	tokenized	word	sentence	spring	is	arab	not	document	frequent
-Doc0	0	0	2	2	0	0	0	0	0	3
-Doc1	0	0	0	1	1	0	1	0	0	0
-Doc2	2	1	0	0	0	1	0	1	1	0
