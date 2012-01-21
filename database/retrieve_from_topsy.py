@@ -18,19 +18,24 @@ PAGE_SIZE = 10
 connect("pythia_db")
 
 mintime = datetime.datetime(2011, 01, 01, 0, 0, 0)
-delta = datetime.timedelta(hours=12)
+delta = datetime.timedelta(hours=3)
 maxtime = mintime + delta
 final_date = datetime.datetime(2011, 02, 15, 0, 0, 0)
 
 count = 0
 exception_log = []
 
+search_hashtags = "#25jan OR #jan25 OR #egypt OR #tahrir OR #fuckmubarak OR #mubarak \
+                   OR #suez OR #DownWithMubarak OR #NOSCAF OR #SCAF OR #cairo"
+
+kw = otter.loadrc() # load api key
+
 while maxtime != final_date:
     for page in range(PAGE_SIZE):        
         try:
-            search = otter.Resource('search')
+            search = otter.Resource('search', **kw)
             #search(q='#jan25 OR #egypt OR #tahrir', mintime = time.mktime(mintime.timetuple()), maxtime = time.mktime(maxtime.timetuple()), type='tweet', offset=page*10)
-            search(q='#jan25 OR #egypt OR #tahrir', mintime = time.mktime(mintime.timetuple()), maxtime = time.mktime(maxtime.timetuple()), type='tweet', perpage=100, page=page+1)
+            search(q=search_hashtags, mintime = time.mktime(mintime.timetuple()), maxtime = time.mktime(maxtime.timetuple()), type='tweet', perpage=100, page=page+1)
             for item in search.response.list:
                 print "Storing tweet #",count, "for the period",mintime,"until",maxtime 
                 tt = TopsyTweet()
@@ -46,7 +51,7 @@ while maxtime != final_date:
         finally:
             pass          
     print tt.url        
-    print "Retrieving tweets for next twelve hours"         
+    print "Retrieving tweets for next three hours"         
     mintime = maxtime
     maxtime += delta
         
@@ -78,4 +83,3 @@ for e in exception_log:
        # 
        # count += 1    
        #========================================================================
-

@@ -8,79 +8,139 @@ This module performs text analysis of the feeds
 
 import nltk #!@UnresolvedImport
 import re
+import tools.utils
 
 class TextAnalyser(object):
     '''
     This class contains and implements all the methods responsible for 
     text analysis.
     '''
-    
-    def __init__(self, tweet_list=None):
-        self.tweets = tweet_list
-        words = self._preprocess_text()
-        self.words = words
+    def __init__(self):
+        self.document_list = []
+        #Keeps the number of times a word appears in all the docs in the corpus
+        #For example if the word 'hello' appears in three documents then global_token_frequencies['hello']= 3
+        self.global_token_frequencies = {}
         
-    def _preprocess_text(self):    
+    def _tokenize(self, document):
         '''
-        Preprocess plain text. It is supposed to be a private method. Should not
-        be called from outside.
+        Distinguishes the tokens of a document. Strips out HTML,
+        split alphanumreric and then turns the text to lowercase.
+        It's supposed to be a private method.
+        '''     
+        clean_text = tools.utils.strip_html(document)
+        alphanumeric = tools.utils.split_alpha(clean_text)
+        tokens = tools.utils.turn_lowercase(alphanumeric)
+        return tokens
+    
+    def _word_frequencies(self, tokens):
         '''
-        words = []
-        for t in self.tweets:
-            words += [ w for w in t.split() ]
-        return words    
+        Counts the word frequencies in this document. This is supposed to be 
+        a private method. 
+        '''
+        tf = {}
+        for t in tokens:
+            tf.setdefault(t, 0)
+            tf[t] += 1
+        return tf   
+    
+    def add_document(self, document):
+        '''
+        Inserts a new document in the list of documents
+        '''
+        tokens = self._tokenize(document)
+        word_frequencies = self._word_frequencies(tokens)
+        self.document_list.append({"raw": document, "tokens": tokens, "word_frequencies": word_frequencies})
         
-    def frequency_distribution(self):    
-        '''
-        Performs simple frequency distribution on the given text.
-        '''
-        frequencies = nltk.FreqDist(self.words)
-        return frequencies   
-    
-    def retweets_patterns(self):
-        '''
-        A regular expression is used to identify retweets. Note that 
-        Twitter identifies retweets either with "RT" followed by username
-        or "via" followed by username. 
-        It returns a list of dictionaries containing the origin and the user 
-        who retweeted.
+        #Update global frequncies count
+        for token, count in word_frequencies.items():
+            self.global_token_frequencies.setdefault(token, 0)
+            if count > 0:
+                self.global_token_frequencies[token] += 1
         
-        #TODO: Refactor regex generation to the tools package
-        '''
-        rt_patterns = re.compile(r"(RT|via)((?:\b\W*@\w+)+)", re.IGNORECASE)
-        rt_origins = []
-        for t in self.tweets:
-            rt_origins += rt_patterns.findall(t)
-              
-        return rt_origins
+    def get_documents(self):
+        return self.document_list   
     
-    def get_word_counts(self, text):
+    def get_global_token_frequencies(self):
+        return self.global_token_frequencies       
+
+    def _filter_tokens(self, lower=0.1, higher=0.5):
         '''
-        Returns the word frequency for each word found in the text.
+        Filters tokens which appear either too often (i.e the, a) or very rarely (i.e flim flam).
+        The lower and higher percentages indicate the tolerance.
         '''
-#        wc={}
-#    
-#        for word in text:
-#            wc.setdefault(word,0)
-#            wc[word]+=1
-#        return wc
+        filtered = []
+        for token, count in self.global_token_frequencies:
+            fraction = float(count)/len(self.document_list)
+            if fraction > lower and fraction < higher:
+                filtered.append(token)
+        return filtered        
     
-    def filter_word_count(self, lower_bound = 0.1, upper_bound = 0.5, word_count_dict):
+    def construct_frequency_matrix(self):
         '''
-        Removes words that do not appear to often and words that appear way to often 
-        (i.e the, and, I etc)
+        Constructs a matrix with the word frequencies across all documents 
+        '''    
+        pass
+    
+    def get_frequency_matrix(self):
         '''
-#        word_list = []
-#        total_word_count = 0
-#        #First get the total count of the words present in the text
-#        for w, wc in word_count_dict.items():
-#            total_word_count += wc
-#            
-#        #Then check if the percentage of each word count is greater than the lb
-#        # or lower than the ub and accept this word. Othwrwise reject it.            
-#        for w, wc in word_count_dict.items():
-#            frac = wc / total_word_count
-#            if frac > lower_bound and frac < upper_bound:
-#                word_list.append(w)
+        Returns the frequency matrix
+        '''
+        pass
+    
+    def save_frequency_matrix(self, filename, ):
+        '''
+        Writes the frequency matrix into a file in a human readable form.  
+        '''
+        out = file(filename, 'w')
+        out.write("Frequency matrix")
+        
+          
+  
+#    def retweets_patterns(self):
+#        '''
+#        A regular expression is used to identify retweets. Note that 
+#        Twitter identifies retweets either with "RT" followed by username
+#        or "via" followed by username. 
+#        It returns a list of dictionaries containing the origin and the user 
+#        who retweeted.
 #        
-#        return word_list        
+#        #TODO: Refactor regex generation to the tools package
+#        '''
+#        rt_patterns = re.compile(r"(RT|via)((?:\b\W*@\w+)+)", re.IGNORECASE)
+#        rt_origins = []
+#        for t in self.tweets:
+#            rt_origins += rt_patterns.findall(t)
+#              
+#        return rt_origins
+#    
+#    def get_word_counts(self, text):
+#        '''
+#        Returns the word frequency for each word found in the text.
+#        '''
+# #        wc={}
+# #    
+# #        for word in text:
+# #            wc.setdefault(word,0)
+# #            wc[word]+=1
+# #        return wc
+#    
+#    def filter_word_count(self, lower_bound = 0.1, upper_bound = 0.5, word_count_dict):
+#        '''
+#        Removes words that do not appear to often and words that appear way to often 
+#        (i.e the, and, I etc)
+#        '''
+# #        word_list = []
+# #        total_word_count = 0
+# #        #First get the total count of the words present in the text
+# #        for w, wc in word_count_dict.items():
+# #            total_word_count += wc
+# #            
+# #        #Then check if the percentage of each word count is greater than the lb
+# #        # or lower than the ub and accept this word. Othwrwise reject it.            
+# #        for w, wc in word_count_dict.items():
+# #            frac = wc / total_word_count
+# #            if frac > lower_bound and frac < upper_bound:
+# #                word_list.append(w)
+# #        
+# #        return word_list        
+#===============================================================================
