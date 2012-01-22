@@ -6,6 +6,7 @@ Created on 22 Jan 2012
 
 from analysis.clustering.datastructures.clusterers import Biclusterer
 from math import sqrt
+import numpy
 
 ###########################################
 ## Similarity measures                   ##
@@ -31,6 +32,16 @@ def pearson(v1,v2):
     
     return 1.0-num/den
 
+def cosine(v1,v2):
+    '''
+    Calculates the cosine similarity between two vectors. In the end we
+    return the similarity multiplied by -1 in order to indicate that lower
+    distances are closer similarities. The cosine sim of two close vectors
+    should be almost 1 but in our clustering algorithm we take distances so
+    1 must become -1 to indicate a closer distance. 
+    '''
+    sim = numpy.dot(v1, v2) / (sqrt(numpy.dot(v1, v1)) * sqrt(numpy.dot(v2, v2))) 
+    return -1*sim
 ###########################################
 ## Clustering algorithms                 ##
 ###########################################
@@ -41,7 +52,9 @@ def hierarchical(data, similarity=pearson):
     points to be clustered and the similarity metric to be used. It returns 
     the top cluster since it references the two other clusters which have been 
     merged to create it and then each one of them references other two etc. So we
-    can just traverse it recursively to get all the clusters. 
+    can just traverse it recursively to get all the clusters. By default Pearson similarity
+    is used to measure distances but others can be used too by giving other measures as 
+    input.
     '''
     distances = {}
     curr_clust_id = -1
@@ -59,6 +72,7 @@ def hierarchical(data, similarity=pearson):
                 if (cluster[i].id, cluster[j].id) not in distances:
                     distances[(cluster[i].id, cluster[j].id)] = similarity(cluster[i].vector, cluster[j].vector)
                 d = distances[cluster[i].id, cluster[j].id]
+                print distances
                 if d < closest:
                     closest = d 
                     lowestpair = (i, j)

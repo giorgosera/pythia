@@ -74,18 +74,6 @@ class TextAnalyser(object):
                 filtered.append(token)
         return filtered        
     
-    def construct_frequency_matrix(self):
-        '''
-        Constructs a matrix with the word frequencies across all documents 
-        '''    
-        pass
-    
-    def get_frequency_matrix(self):
-        '''
-        Returns the frequency matrix
-        '''
-        pass
-    
     def save_frequency_matrix(self, filename):
         '''
         Creates a file containing a matrix of word counts and documents
@@ -100,7 +88,7 @@ class TextAnalyser(object):
         '''
         out = file(filename, 'w')
         out.write("Frequency matrix")
-        token_list = self._filter_tokens(lower=0, higher=1.0)
+        token_list = self._filter_tokens(lower=0.1, higher=1.0)
         for token in token_list:
             out.write('\t%s' % token)
         out.write('\n')
