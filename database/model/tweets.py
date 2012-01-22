@@ -22,7 +22,7 @@ class TopsyTweet(Tweet):
     meta = {"collection": "TopsyTweets"}
     #The url of the original tweet
     url = StringField(required=True)
-    
+
     #What else is available in response:
     #title = StringField()
     #hits = IntField(required=True, default=0)

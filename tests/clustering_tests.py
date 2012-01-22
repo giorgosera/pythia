@@ -21,15 +21,6 @@ doc3 = 'This document is related to programming. More specifically Python and CP
 doc4 = 'I wrote a small Python script to run a clustering algorithm. I hope it works well . If not Ill try CPP' 
 doc5 = 'This blog writes about Python and programming in general.'
 
-#=======================================================================
-# doc0 = 'Hello Hello Hello Hello Hello Hello '
-# doc1 = 'Hello Hello Hello Hello Hello Hello '
-# doc2 = 'Hello Hello Hello Hello Hello Hello ' 
-# doc3 = 'Bye Bye Bye Bye Bye '
-# doc4 = 'Bye Bye Bye Bye Bye '
-# doc5 = 'Bye Bye Bye Bye Bye ' 
-#=======================================================================
-
 sample_docs = [doc0, doc1, doc2, doc3, doc4, doc5]
 analyser = TextAnalyser()
 for s in sample_docs:
@@ -51,7 +42,7 @@ class TestHierarchicalClustering(unittest.TestCase):
         analyser.save_frequency_matrix("test.txt")
         rownames, colnames, data = analyser.read_frequency_matrix("test.txt")
         
-        clusters = kmeans(data, cosine, 2)
+        clusters = kmeans(data=data, similarity=cosine, k=2)
         c2dp = Cluster2DPlot(data=data, labels=rownames, filename="2dclusters.jpg")
         c2dp.draw()
         
