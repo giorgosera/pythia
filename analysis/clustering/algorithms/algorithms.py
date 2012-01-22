@@ -6,7 +6,7 @@ Created on 22 Jan 2012
 
 from analysis.clustering.datastructures.clusterers import Biclusterer
 from math import sqrt
-import numpy
+import numpy, redis, random
 
 ###########################################
 ## Similarity measures                   ##
@@ -42,6 +42,20 @@ def cosine(v1,v2):
     '''
     sim = numpy.dot(v1, v2) / (sqrt(numpy.dot(v1, v1)) * sqrt(numpy.dot(v2, v2))) 
     return (-1*sim + 1) / 2.0
+
+def tanimoto(v1,v2):
+    '''
+    Calculates the tanimoto coeeficient between two vectors. 
+    '''
+    count_v1,count_v2,common=0,0,0
+    
+    for i in range(len(v1)):
+        if v1[i]!=0: count_v1+=1 # in v1
+        if v2[i]!=0: count_v2+=1 # in v2
+        if v1[i]!=0 and v2[i]!=0: common+=1 # in both
+    return 1.0-(float(common)/(count_v1+count_v2-common))
+        
+
 ###########################################
 ## Clustering algorithms                 ##
 ###########################################
@@ -92,3 +106,53 @@ def hierarchical(data, similarity=pearson):
         cluster.append(newcluster)
         
     return cluster[0]
+
+
+def kmeans(data, similarity=pearson, k = 10):
+    '''
+    This method performs k-means clustering. The user selects the similarity 
+    measure and the number of clusters k to be used. 
+    '''
+    # Determine the minimum and maximum values for each point
+    ranges=[(min([d[i] for d in data]),max([d[i] for d in data])) 
+            for i in range(len(data[0]))]
+
+    #We assign k randomly placed centroids
+    clusters = [[ random.random()*(ranges[i][1]-ranges[i][0])+ranges[i][0]
+                 for i in range(len(data[0]))] for j in range(k)]
+
+    lastmatches = None 
+    #The algorithm will run for maximum 100 iterations
+    for t in range(100):
+        print "Iteration %d" %t
+        bestmatches = [[] for i in range(k)]
+        
+        #Find the closest centroid for each row in data
+        for j in range(len(data)):
+            d = data[j]
+            bestmatch = 0
+            for i in range(k):
+                distance = similarity(clusters[i], d)
+                if distance < similarity(clusters[bestmatch], d):
+                    bestmatch = i
+            bestmatches[bestmatch].append(j)
+        
+        #This is a termination condition. If the last matches are the same as 
+        #this iteration's ones then we must have reached the equilibrium.
+        if bestmatches==lastmatches:
+            break
+        lastmatches = bestmatches    
+        
+        #The last step of the iteration is to move the centroids to their new positions
+        for i in range(k):
+            average = [0.0]*len(data[0])
+            if len(bestmatches[i])>0:
+                for d in bestmatches[i]:
+                    for m in range(len(data[d])):
+                        average[m] += data[d][m]
+                for j in range(len(average)):
+                    average[j] /= len(bestmatches[i])
+                clusters[i]=average
+    
+    return bestmatches
+        
