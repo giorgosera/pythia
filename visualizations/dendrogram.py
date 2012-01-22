@@ -34,7 +34,8 @@ class Dendrogram(object):
         
     def draw_node(self, x, y):
         '''
-        Draws a node of the dendrogram.
+        Draws a node of the dendrogram. The code is adopted from Programming Collective 
+        Intelligence by Toby Segaran.
         '''
         if self.cluster.id<0:
             h1=self.cluster.left.get_height()*20
@@ -60,6 +61,6 @@ class Dendrogram(object):
             self.draw_node(x+ll,bottom-h2/2)
             self.cluster = temp
         else:   
-            # If this is an endpoint, draw the item label
+            # If this is an endpoint, draws the appropriate label
             self.drawobj.text((x+5,y-7),self.labels[self.cluster.id],(0,0,0))
         

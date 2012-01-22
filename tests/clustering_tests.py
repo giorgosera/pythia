@@ -13,11 +13,11 @@ from visualizations.dendrogram import Dendrogram
 class TestHierarchicalClustering(unittest.TestCase):
     
     def test_hierarchical(self):
-        doc0 = 'This is a document related to sports : Football, basketball, tennis etc.' 
-        doc1 = 'In this document we will be talking about basketball, football, tennis and sports in general.'
-        doc2 = 'Football is an amazing sport. I love it. But I love basketball too and tennis'
-        doc3 = 'This document is related to programming. More specifically Python and C++'
-        doc4 = 'I wrote a small Python script to run a clustering algorithm'
+        doc0 = 'This is a document related to sports : Football, basketball, tennis, golf etc.' 
+        doc1 = 'In this document we will be talking about basketball, football, tennis, golf and sports in general.'
+        doc2 = 'I like golf but football is really an amazing sport. I love it. But I love basketball too and tennis'
+        doc3 = 'This document is related to programming. More specifically Python and CPP. For more info check my blog.'
+        doc4 = 'I wrote a small Python script to run a clustering algorithm. I hope it works well . If not Ill try CPP' 
         doc5 = 'This blog writes about Python and programming in general.'
         
         #=======================================================================
@@ -34,10 +34,10 @@ class TestHierarchicalClustering(unittest.TestCase):
         analyser = TextAnalyser()
         for s in sample_docs:
             analyser.add_document(s)
-                 
+            
         analyser.save_frequency_matrix("test.txt")
         rownames, colnames, data = analyser.read_frequency_matrix("test.txt")
-
+        
         cluster = hierarchical(data, cosine)
         cluster.print_it(rownames)
         

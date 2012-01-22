@@ -15,6 +15,7 @@ class TextAnalyser(object):
     '''
     def __init__(self):
         self.document_list = []
+        self.frequency_matrix_data = None
         #Keeps the number of times a word appears in all the docs in the corpus
         #For example if the word 'hello' appears in three documents then global_token_frequencies['hello']= 3
         self.global_token_frequencies = {}
@@ -116,8 +117,23 @@ class TextAnalyser(object):
             p=line.strip().split('\t')
             rownames.append(p[0])
             data.append([float(x) for x in p[1:]])
+        self.frequency_matrix_data = data    
         return rownames,colnames,data
-        
+
+    def rotate_frequency_matrix(self):
+        '''
+        It rotates the frequency matrix. This is useful when we perfrom column clustering.
+        '''
+        #First we have to read the data using read_frequency_matrix(filename)
+        if self.frequency_matrix_data:
+            rotated = []
+            data = self.frequency_matrix_data
+            for i in range(len(data[0])):
+                newrow = [data[j][i] for j in range(len(data))]
+                rotated.append(newrow)
+            return rotated    
+        else:
+            raise Exception("Oops, no data to rotate. Maybe you didn't call read_frequency_matrix(filename)")    
   
 #    def retweets_patterns(self):
 #        '''
