@@ -6,8 +6,6 @@ Created on 13 Nov 2011
 This module performs text analysis of the feeds
 '''
 
-import nltk #!@UnresolvedImport
-import re
 import tools.utils
 
 class TextAnalyser(object):
@@ -90,11 +88,18 @@ class TextAnalyser(object):
     
     def save_frequency_matrix(self, filename):
         '''
-        Writes the frequency matrix into a file in a human readable form.  
+        Creates a file containing a matrix of word counts and documents
+        i.e
+        
+        ########################################################################
+        #            "hello" | "this" | "is" | "a" | "word" | "count" | "matrix"
+        # George        1    |  0     |   5  |  6  |    1   |   6     |   6
+        # Chuck         3    |  1     |   3  |  3  |    0   |   0     |   4
+        # .....................................................................
+        #########################################################################  
         '''
         out = file(filename, 'w')
         out.write("Frequency matrix")
-        out.write('\n\n')
         token_list = self._filter_tokens(lower=0, higher=1.0)
         for token in token_list:
             out.write('\t%s' % token)
@@ -108,7 +113,23 @@ class TextAnalyser(object):
                 else:
                     out.write('\t0')
             out.write('\n')
-          
+    
+    def read_frequency_matrix(self, filename): 
+        '''
+        Reads the frequency matrix from a file and returns the row names, col names
+        and the actual frequencies. 
+        '''
+        lines=[line for line in file(filename)]
+        
+        colnames=lines[0].strip().split('\t')[1:]
+        rownames=[]
+        data=[]
+        for line in lines[1:]:
+            p=line.strip().split('\t')
+            rownames.append(p[0])
+            data.append([float(x) for x in p[1:]])
+        return rownames,colnames,data
+        
   
 #    def retweets_patterns(self):
 #        '''

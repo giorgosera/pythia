@@ -42,6 +42,7 @@ class TestTextAnalyserFunctions(unittest.TestCase):
         self.assertEqual(global_freqs_expected, analyser.get_global_token_frequencies())
         
         analyser.save_frequency_matrix("test.txt")
+        analyser.read_frequency_matrix("test.txt")
         
 if __name__ == "__main__":
     unittest.main()

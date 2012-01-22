@@ -1,0 +1,7 @@
+Frequency matrix	and	love	is	it	related	general	talking	in	sport	clustering	basketball	etc	writes	tennis	specifically	sports	blog	to	amazing	document	more	be	we	run	python	football	c	an	a	about	algorithm	i	script	programming	will	this	small	wrote
+Doc0	0	0	1	0	1	0	0	0	0	0	1	1	0	1	0	1	0	1	0	1	0	0	0	0	0	1	0	0	1	0	0	0	0	0	0	1	0	0
+Doc1	1	0	0	0	0	1	1	2	0	0	1	0	0	0	0	1	0	0	0	1	0	1	1	0	0	1	0	0	0	1	0	0	0	0	1	1	0	0
+Doc2	0	1	1	1	0	0	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	1	0	0	0	1	0	0	0	0	0	0
+Doc3	1	0	1	0	1	0	0	0	0	0	0	0	0	0	1	0	0	1	0	1	1	0	0	0	1	0	1	0	0	0	0	0	0	1	0	1	0	0
+Doc4	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0	0	1	1	0	0	0	2	0	1	1	1	0	0	0	1	1
+Doc5	1	0	0	0	0	1	0	1	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0	1	0	1	0	0
