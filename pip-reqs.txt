@@ -1,3 +1,5 @@
+BeautifulSoup==3.2.0
+PIL==1.1.7
 PyYAML==3.10
 feedparser==5.1
 matplotlib==1.0.1
@@ -12,4 +14,5 @@ python-otter==0.1.0
 redis==2.4.10
 ssh==1.7.9
 twitter==1.7.2
+urllib3==1.0.2
 wsgiref==0.1.2

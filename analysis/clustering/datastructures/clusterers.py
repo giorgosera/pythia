@@ -34,6 +34,25 @@ class Biclusterer(AbstractClusterer):
         self.vector = vector
         self.similarity = similarity
         self.id = id 
+        
+    def get_height(self):
+        '''
+        Returns the height of a cluster. Endpoints have a height of 1 and 
+        then all other points have height equal to the sum of all their branches.
+        '''    
+        if self.left == None and self.right == None:
+            return 1
+        
+        return self.left.get_height() + self.right.get_height()
+        
+    def get_depth(self):
+        '''
+        Returns the depth of the error.
+        '''
+        if self.left == None and self.right == None:
+            return 0 
+        
+        return max(self.left.get_depth(), self.right.get_depth()) + self.similarity
 
     def print_it(self, labels=None, n=0):
         '''
@@ -44,7 +63,7 @@ class Biclusterer(AbstractClusterer):
             print ' ',
         if self.id<0:
             # This is a branch
-            print '-'
+            print '->'
         else:
             # This is an root node
             if labels==None: print self.id

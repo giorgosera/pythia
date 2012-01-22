@@ -41,7 +41,7 @@ def cosine(v1,v2):
     1 must become -1 to indicate a closer distance. 
     '''
     sim = numpy.dot(v1, v2) / (sqrt(numpy.dot(v1, v1)) * sqrt(numpy.dot(v2, v2))) 
-    return -1*sim
+    return (-1*sim + 1) / 2.0
 ###########################################
 ## Clustering algorithms                 ##
 ###########################################
@@ -72,7 +72,6 @@ def hierarchical(data, similarity=pearson):
                 if (cluster[i].id, cluster[j].id) not in distances:
                     distances[(cluster[i].id, cluster[j].id)] = similarity(cluster[i].vector, cluster[j].vector)
                 d = distances[cluster[i].id, cluster[j].id]
-                print distances
                 if d < closest:
                     closest = d 
                     lowestpair = (i, j)
