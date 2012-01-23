@@ -24,9 +24,9 @@ class TestTextAnalyserFunctions(unittest.TestCase):
         freq3 = {'a': 2, 'document': 1, 'is':1, 'not': 1, 'tokenized':1}
         
         
-        entry1 = {"raw": doc1_raw, "tokens":doc1_tokens, "word_frequencies":freq1}
-        entry2 = {"raw": doc2_raw, "tokens":doc2_tokens, "word_frequencies":freq2}
-        entry3 = {"raw": doc3_raw, "tokens":doc3_tokens, "word_frequencies":freq3}
+        entry1 = {"id": 1, "raw": doc1_raw, "tokens":doc1_tokens, "word_frequencies":freq1}
+        entry2 = {"id": 2, "raw": doc2_raw, "tokens":doc2_tokens, "word_frequencies":freq2}
+        entry3 = {"id": 3, "raw": doc3_raw, "tokens":doc3_tokens, "word_frequencies":freq3}
         
         global_freqs_expected = {'a': 1, 'tokenized': 1, 'word': 1, 'sentence': 2, 'spring': 1, 'is': 1, 'arab': 1, 'not': 1, 'document': 1, 'frequent': 1}
         
@@ -35,8 +35,10 @@ class TestTextAnalyserFunctions(unittest.TestCase):
         sample_docs = [doc1_raw, doc2_raw, doc3_raw]
 
         analyser = TextAnalyser()
+        i = 1
         for s in sample_docs:
-            analyser.add_document(s)
+            analyser.add_document(i, s)
+            i += 1
                  
         self.assertEqual(expected, analyser.get_documents())
         self.assertEqual(global_freqs_expected, analyser.get_global_token_frequencies())

@@ -42,13 +42,13 @@ class TextAnalyser(object):
             tf[t] += 1
         return tf   
     
-    def add_document(self, document):
+    def add_document(self, id, document):
         '''
-        Inserts a new document in the list of documents
+        Inserts a new document in the list of documents.
         '''
         tokens = self._tokenize(document)
         word_frequencies = self._word_frequencies(tokens)
-        self.document_list.append({"raw": document, "tokens": tokens, "word_frequencies": word_frequencies})
+        self.document_list.append({"id": id, "raw": document, "tokens": tokens, "word_frequencies": word_frequencies})
         
         #Update global frequncies count
         for token, count in word_frequencies.items():
@@ -94,7 +94,7 @@ class TextAnalyser(object):
             out.write('\t%s' % token)
         out.write('\n')
         for i, document in enumerate(self.document_list):
-            out.write('Doc'+str(i))
+            out.write(str(document["id"]))
             tf = document["word_frequencies"]
             for token in token_list:
                 if token in tf:
