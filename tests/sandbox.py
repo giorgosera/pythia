@@ -38,7 +38,7 @@ class TestPlayground(unittest.TestCase):
         x = Orange.data.variable.Continuous("word1")
         y = Orange.data.variable.Continuous("word2")
         z = Orange.data.variable.Continuous("word3")
-        domain = Orange.data.Domain([x, y, z])
+        domain = Orange.data.Domain([x, y, z], False)
         
         #Data
         data = numpy.array([[1, 2, 3], [3, 2, 1]])
@@ -49,14 +49,11 @@ class TestPlayground(unittest.TestCase):
         id = Orange.data.new_meta_id()
         t.add_meta_attribute(id)
         t.domain.add_meta(id, tweet_id)
-        
         for inst in t:
-            inst[id] = "hello"
+            inst[id] = "hello_id"
              
         orange.saveTabDelimited ("test_table_creation.tab", t)
         
-
-        #table = Orange.data.Table(domain, data) 
 if __name__ == "__main__":
     unittest.main()
 
