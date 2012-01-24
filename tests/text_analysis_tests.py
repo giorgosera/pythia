@@ -47,5 +47,15 @@ class TestTextAnalyserFunctions(unittest.TestCase):
         analyser.save_frequency_matrix("test.txt")
         analyser.read_frequency_matrix("test.txt")
         
+    def test_unicode_doc_translation(self):
+        document = 'هذا اختبار' 
+        analyser = TextAnalyser()
+        analyser.add_document(1, document)
+        saved_doc = analyser.get_documents()
+        
+        expected = "This is a test"
+        
+        self.assertEqual(expected, saved_doc[0]["raw"])
+        
 if __name__ == "__main__":
     unittest.main()

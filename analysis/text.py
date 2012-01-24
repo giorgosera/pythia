@@ -6,8 +6,8 @@ Created on 13 Nov 2011
 This module performs text analysis of the feeds
 '''
 
-import tools.utils
-import Orange #!@UnresolvedImport
+import tools.utils, numpy
+import Orange, orange #!@UnresolvedImport
 
 class TextAnalyser(object):
     '''
@@ -43,12 +43,26 @@ class TextAnalyser(object):
             tf[t] += 1
         return tf   
     
-    def add_document(self, id, document):
+    def _preprocess(self, document):
         '''
-        Inserts a new document in the list of documents.
+        It preprocess the input text by checking for encoding and also
+        tokenizes the text. Finally it creates the word frequency vector.
         '''
+        encoding = tools.utils.detect_encoding(document)
+        if encoding == 'unicode':
+            document = tools.utils.translate_text(document)
         tokens = self._tokenize(document)
         word_frequencies = self._word_frequencies(tokens)
+        return document, tokens, word_frequencies
+    
+    
+    def add_document(self, id, document):
+        '''
+        Inserts a new document in the list of documents. Note that it 
+        deals with unicode strings which are automatically translated to 
+        English.
+        '''
+        document, tokens, word_frequencies = self._preprocess(document)
         self.document_list.append({"id": id, "raw": document, "tokens": tokens, "word_frequencies": word_frequencies})
         
         #Update global frequncies count
@@ -113,6 +127,42 @@ class TextAnalyser(object):
                 else:
                     out.write('\t0')
             out.write('\n')
+            
+    def save_frequency_matrix_as_tab(self, filename):
+        '''
+        It stores the frequency matrix as a tab delimited file
+        which is supported by Orange. 
+        '''
+        token_list = self._filter_tokens(lower=0.1, higher=1.0)
+        
+        #First construct the domain object (top row)
+        vars = []
+        for token in token_list:
+            vars.append(Orange.data.variable.Continuous(token))
+        domain = Orange.data.Domain(vars, False) #The second argument indicated that the last attr must not be a class
+         
+        #Add data rows 
+        data = numpy.empty([len(self.document_list), len(token_list)])
+        for i, document in enumerate(self.document_list):
+            tf = document["word_frequencies"]
+            new_frequencies_row = numpy.zeros([1, len(token_list)])
+            for j, token in enumerate(token_list):
+                if token in tf:
+                    new_frequencies_row[0][j] = tf[token]
+            data[i] = new_frequencies_row    
+        #Construct the table with the domain and the data
+        t = Orange.data.Table(domain, data)
+        
+        #Add meta attributes to the samples i.e. the id of the document
+        doc_id = Orange.data.variable.String("id")
+        id = Orange.data.new_meta_id()
+        t.add_meta_attribute(id)
+        t.domain.add_meta(id, doc_id)
+        for i, inst in enumerate(t):
+            inst[id] = str(self.document_list[i]["id"])
+             
+        orange.saveTabDelimited (filename+".tab", t)
+                    
     
     def read_frequency_matrix(self, filename): 
         '''
@@ -145,13 +195,6 @@ class TextAnalyser(object):
             return rotated    
         else:
             raise Exception("Oops, no data to rotate. Maybe you didn't call read_frequency_matrix(filename)")
-        
-    def save_frequency_matrix_as_tab(self, filename):
-        '''
-        It stores the frequency matrix as a tab delimited file
-        which is supported by Orange.
-        '''
-        pass
   
 #    def retweets_patterns(self):
 #        '''

@@ -5,8 +5,7 @@ Created on 13 Nov 2011
 
 Unit tests for the analysis.clustering package.
 '''
-import datetime
-import unittest
+import datetime, unittest, Orange #!@UnresolvedImport
 from analysis.text import TextAnalyser
 from analysis.clustering.algorithms.algorithms import hierarchical, kmeans, cosine, tanimoto
 from visualizations.dendrogram import Dendrogram
@@ -36,60 +35,97 @@ for s in sample_docs:
 
 class TestHierarchicalClustering(unittest.TestCase):
     
-    def test_hierarchical(self):        
-        analyser.save_frequency_matrix("test.txt")
-        rownames, colnames, data = analyser.read_frequency_matrix("test.txt")
+#===============================================================================
+#    def test_sample_doc_hierarchical(self):        
+#        analyser.save_frequency_matrix("test.txt")
+#        rownames, colnames, data = analyser.read_frequency_matrix("test.txt")
+#        
+#        cluster = hierarchical(data, similarity=cosine)
+#        cluster.print_it(rownames)
+#        
+#        dendro = Dendrogram(cluster, rownames, "cluster.jpg", cluster.get_height(), cluster.get_depth())
+#        dendro.draw_node(10, cluster.get_height()/2)
+#        
+#    def test_sample_doc_kmeans(self):
+#        analyser.save_frequency_matrix("test.txt")
+#        rownames, colnames, data = analyser.read_frequency_matrix("test.txt")
+#        
+#        clusters = kmeans(data=data, similarity=cosine, k=2)
+#        c2dp = Cluster2DPlot(data=data, labels=rownames, filename="2dclusters.jpg")
+#        c2dp.draw()
+#        
+# 
+#    def test_tweet_hierarchical_clustering(self):        
+# 
+#        from_date = datetime.datetime(2011, 1, 25, 0, 0, 0)
+#        to_date = datetime.datetime(2011, 1, 25, 3, 0, 0) 
+#        items = ws.get_documents_by_date(from_date, to_date)
+#        
+#        t = TextAnalyser()
+#        for i in items:
+#            print i.date
+#            t.add_document(i.id, i.text)
+#        
+#        t.save_frequency_matrix("tweet_clusters.txt")
+#        rownames, colnames, data = t.read_frequency_matrix("tweet_clusters.txt")
+# 
+#        cluster = hierarchical(data)
+#        
+#        dendro = Dendrogram(cluster, rownames, "tweet_cluster.jpg", cluster.get_height(), cluster.get_depth())
+#        dendro.draw_node(10, cluster.get_height()/2)
+#        
+#    def test_tweet_kmeans_clustering(self):        
+# 
+#        from_date = datetime.datetime(2011, 1, 25, 0, 0, 0)
+#        to_date = datetime.datetime(2011, 1, 25, 3, 0, 0) 
+#        items = ws.get_documents_by_date(from_date, to_date)
+#        
+#        t = TextAnalyser()
+#        for i in items:
+#            print i.date
+#            t.add_document(i.id, i.text)
+#        
+#        t.save_frequency_matrix("tweet_clusters.txt")
+#        rownames, colnames, data = t.read_frequency_matrix("tweet_clusters.txt")
+# 
+#        clusters = kmeans(data, k=30)
+#        output_clusters_to_file(clusters, rownames, "kmeans_with_tweets")
+#===============================================================================
         
-        cluster = hierarchical(data, similarity=cosine)
-        cluster.print_it(rownames)
-        
-        dendro = Dendrogram(cluster, rownames, "cluster.jpg", cluster.get_height(), cluster.get_depth())
-        dendro.draw_node(10, cluster.get_height()/2)
-        
-    def test_kmeans(self):
-        analyser.save_frequency_matrix("test.txt")
-        rownames, colnames, data = analyser.read_frequency_matrix("test.txt")
-        
-        clusters = kmeans(data=data, similarity=cosine, k=2)
-        c2dp = Cluster2DPlot(data=data, labels=rownames, filename="2dclusters.jpg")
-        c2dp.draw()
-        
+#===============================================================================
+#    def test_orange_sample_doc_kmeans(self):
+#        analyser.save_frequency_matrix_as_tab("test_orange_with_samples")
+#        table = Orange.data.Table("test_orange_with_samples")
+#        k = 3
+#        km = Orange.clustering.kmeans.Clustering(table, k)
+# 
+#        expected = [0, 1, 0, 2, 0, 1]
+#        self.assertEqual(expected, km.clusters)
+#===============================================================================
 
-    def test_tweet_hierarchical_clustering(self):        
-
+    def test_orange_with_tweets_kmeans(self):       
         from_date = datetime.datetime(2011, 1, 25, 0, 0, 0)
         to_date = datetime.datetime(2011, 1, 25, 3, 0, 0) 
         items = ws.get_documents_by_date(from_date, to_date)
         
         t = TextAnalyser()
         for i in items:
-            print i.date
             t.add_document(i.id, i.text)
-        
-        t.save_frequency_matrix("tweet_clusters.txt")
-        rownames, colnames, data = t.read_frequency_matrix("tweet_clusters.txt")
 
-        cluster = hierarchical(data)
+        t.save_frequency_matrix_as_tab("test_with_tweets_orange")
+        table = Orange.data.Table("test_orange_with_samples")
+        k = 3
+        km = Orange.clustering.kmeans.Clustering(table, k)
+        print km.clusters
         
-        dendro = Dendrogram(cluster, rownames, "tweet_cluster.jpg", cluster.get_height(), cluster.get_depth())
-        dendro.draw_node(10, cluster.get_height()/2)
+        rownames = []
         
-    def test_tweet_kmeans_clustering(self):        
-
-        from_date = datetime.datetime(2011, 1, 25, 0, 0, 0)
-        to_date = datetime.datetime(2011, 1, 25, 3, 0, 0) 
-        items = ws.get_documents_by_date(from_date, to_date)
+        for inst in table:
+            rownames.append(int(inst['id'].value))
         
-        t = TextAnalyser()
-        for i in items:
-            print i.date
-            t.add_document(i.id, i.text)
-        
-        t.save_frequency_matrix("tweet_clusters.txt")
-        rownames, colnames, data = t.read_frequency_matrix("tweet_clusters.txt")
-
-        clusters = kmeans(data, k=30)
-        output_clusters_to_file(clusters, rownames, "kmeans_with_tweets")
-        
+        clusters = [[], [], []]
+        for i, point in enumerate(km.clusters):
+            clusters[km.clusters[i]].append(sample_docs[i])
+            
 if __name__ == "__main__":
     unittest.main()
