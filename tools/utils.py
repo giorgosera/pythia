@@ -18,13 +18,18 @@ def turn_lowercase(text):
     return [word.lower() for word in text if word!=''] 
 
 def detect_encoding(text):
-    encoding = chardet.detect(text)
-    if encoding['encoding'] == 'ascii':
-        return 'ascii'
-    else:
-        return 'unicode'
+    try:
+        text = unicode(text).encode('utf-8')
+        encoding = chardet.detect(text)
+    except Exception, e:
+        print e
+    else:    
+        if encoding['encoding'] == 'ascii':
+            return 'ascii'
+        else:
+            return 'unicode'
 
 def translate_text(text, src='ar', tgt='en'):
     bingtrans.set_app_id('5521E4A630094D968D49B39B6511A0A76CB025E1')  # you can get your AppID at: http://www.bing.com/developers/
-    return bingtrans.translate(text, src, tgt)             
-    
+    translation =  bingtrans.translate(text, src, tgt)            
+    return translation

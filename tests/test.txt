@@ -1,4 +1,7 @@
-Frequency matrix	a	tokenized	word	sentence	spring	is	arab	not	document	frequent
-1	0	0	2	2	0	0	0	0	0	3
-2	0	0	0	1	1	0	1	0	0	0
-3	2	1	0	0	0	1	0	1	1	0
+Frequency matrix	and	info	golf	well	is	it	related	general	talking	in	love	sport	check	really	clustering	try	basketball	for	etc	writes	tennis	specifically	sports	blog	to	amazing	too	document	hope	more	be	we	run	python	football	but	small	if	not	an	a	about	like	algorithm	this	ill	script	programming	will	i	cpp	works	my	wrote
+0	0	0	1	0	1	0	1	0	0	0	0	0	0	0	0	0	1	0	1	0	1	0	1	0	1	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0	0	0
+1	1	0	1	0	0	0	0	1	1	2	0	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	1	0	0	1	1	0	0	1	0	0	0	0	0	0	1	0	0	1	0	0	0	1	0	0	0	0	0
+2	1	0	1	0	1	1	0	0	0	0	2	1	0	1	0	0	1	0	0	0	1	0	0	0	0	1	1	0	0	0	0	0	0	0	1	2	0	0	0	1	0	0	1	0	0	0	0	0	0	3	0	0	0	0
+3	1	1	0	0	1	0	1	0	0	0	0	0	1	0	0	0	0	1	0	0	0	1	0	1	1	0	0	1	0	2	0	0	0	1	0	0	0	0	0	0	0	0	0	0	1	0	0	1	0	0	1	0	1	0
+4	0	0	0	1	0	1	0	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0	0	1	0	0	0	1	0	0	0	1	1	0	0	1	1	1	0	2	0	0	1	0	1	1	0	0	2	1	1	0	1
+5	1	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	1	0	0	1	0	0	0	0	0	0

@@ -75,14 +75,15 @@ class TextAnalyser(object):
         return self.document_list   
     
     def get_document_by_id(self, id):
+        result = None
         for document in self.document_list:
-            if document["id"] == id:
+            if str(document["id"]) == id:
                 result = document
         
         if result:
             return result 
         else:    
-            raise Exception       
+            raise Exception()       
         
     def get_global_token_frequencies(self):
         return self.global_token_frequencies       
@@ -138,7 +139,7 @@ class TextAnalyser(object):
         #First construct the domain object (top row)
         vars = []
         for token in token_list:
-            vars.append(Orange.data.variable.Continuous(token))
+            vars.append(Orange.data.variable.Continuous(str(token)))
         domain = Orange.data.Domain(vars, False) #The second argument indicated that the last attr must not be a class
          
         #Add data rows 
