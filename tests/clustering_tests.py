@@ -71,11 +71,10 @@ class TestHierarchicalClustering(unittest.TestCase):
  
         from_date = datetime.datetime(2011, 1, 25, 0, 0, 0)
         to_date = datetime.datetime(2011, 1, 25, 3, 0, 0) 
-        items = ws.get_documents_by_date(from_date, to_date)
+        items = ws.get_documents_by_date(from_date, to_date, 50)
         
         t = TextAnalyser()
         for i in items:
-            print i.date
             t.add_document(i.id, i.text)
         
         t.save_frequency_matrix("tweet_clusters.txt")
@@ -90,7 +89,7 @@ class TestHierarchicalClustering(unittest.TestCase):
  
         from_date = datetime.datetime(2011, 1, 25, 0, 0, 0)
         to_date = datetime.datetime(2011, 1, 25, 3, 0, 0) 
-        items = ws.get_documents_by_date(from_date, to_date, 20)
+        items = ws.get_documents_by_date(from_date, to_date, 50)
         
         t = TextAnalyser()
         for i in items:
@@ -99,7 +98,7 @@ class TestHierarchicalClustering(unittest.TestCase):
         t.save_frequency_matrix("tweet_clusters.txt")
         rownames, colnames, data = t.read_frequency_matrix("tweet_clusters.txt")
  
-        clusters = kmeans(data, k=30)
+        clusters = kmeans(data, k=5)
         output_clusters_to_file(clusters, rownames, "kmeans_with_tweets")
         
     def test_orange_sample_doc_kmeans(self):
@@ -113,8 +112,8 @@ class TestHierarchicalClustering(unittest.TestCase):
 
     def test_orange_with_tweets_kmeans(self):    
         from_date = datetime.datetime(2011, 1, 25, 0, 0, 0)
-        to_date = datetime.datetime(2011, 1, 25, 0, 0, 0) 
-        items = ws.get_documents_by_date(from_date, to_date, 20)
+        to_date = datetime.datetime(2011, 1, 25, 3, 0, 0) 
+        items = ws.get_documents_by_date(from_date, to_date)
 
         t = TextAnalyser()
         for item in items:
@@ -122,8 +121,8 @@ class TestHierarchicalClustering(unittest.TestCase):
             
         t.save_frequency_matrix_as_tab("test_with_tweets_orange")
         table = Orange.data.Table("test_with_tweets_orange")
-        k = 10
-        km = Orange.clustering.kmeans.Clustering(table, k)
+        k = 5
+        km = Orange.clustering.kmeans.Clustering(table, k, initialization=Orange.clustering.kmeans.init_diversity)
         
         rownames = []
         

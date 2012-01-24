@@ -28,6 +28,7 @@ class TextAnalyser(object):
         It's supposed to be a private method.
         '''     
         clean_text = tools.utils.strip_html(document)
+        clean_text = tools.utils.strip_url(clean_text)
         alphanumeric = tools.utils.split_alpha(clean_text)
         tokens = tools.utils.turn_lowercase(alphanumeric)
         return tokens

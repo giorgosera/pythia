@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 '''
 Created on 14 Nov 2011
 
@@ -8,6 +9,9 @@ This file contains useful functions used throughout the application.
 import re
 import chardet, bingtrans #!@UnresolvedImport
 
+def strip_url(text):
+    return re.compile(r"""((?:[a-z][\w-]+:(?:/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|(([^\s()<>]+|(([^\s()<>]+)))*))+(?:(([^\s()<>]+|(([‌​^\s()<>]+)))*)|[^\s`!()[]{};:'".,<>?«»“”‘’]))""", re.DOTALL).sub('',text)
+    
 def strip_html(html):
     return re.compile(r'<[^>]+>').sub('',html)
     
