@@ -3,6 +3,7 @@ Created on 21 Jan 2012
 
 @author: george
 '''
+import Orange #!@UnresolvedImport
 
 class AbstractClusterer(object):
     '''
@@ -74,3 +75,20 @@ class Biclusterer(AbstractClusterer):
             self.left.print_it(labels=labels,n=n+1)
         if self.right!=None: 
             self.right.print_it(labels=labels,n=n+1)
+            
+class OrangeClusterer(AbstractClusterer):
+    '''
+    A clustering implementation with Orange
+    '''            
+
+    def __init__(self):
+        '''
+        Constructor
+        '''
+        self.data = None
+        
+    def load_data(self, filename):
+        '''
+        Loads the data from a tab delimited file. 
+        '''
+        self.data = Orange.data.Table(filename)    

@@ -7,6 +7,7 @@ This module performs text analysis of the feeds
 '''
 
 import tools.utils
+import Orange #!@UnresolvedImport
 
 class TextAnalyser(object):
     '''
@@ -59,6 +60,16 @@ class TextAnalyser(object):
     def get_documents(self):
         return self.document_list   
     
+    def get_document_by_id(self, id):
+        for document in self.document_list:
+            if document["id"] == id:
+                result = document
+        
+        if result:
+            return result 
+        else:    
+            raise Exception       
+        
     def get_global_token_frequencies(self):
         return self.global_token_frequencies       
 
@@ -133,7 +144,14 @@ class TextAnalyser(object):
                 rotated.append(newrow)
             return rotated    
         else:
-            raise Exception("Oops, no data to rotate. Maybe you didn't call read_frequency_matrix(filename)")    
+            raise Exception("Oops, no data to rotate. Maybe you didn't call read_frequency_matrix(filename)")
+        
+    def save_frequency_matrix_as_tab(self, filename):
+        '''
+        It stores the frequency matrix as a tab delimited file
+        which is supported by Orange.
+        '''
+        pass
   
 #    def retweets_patterns(self):
 #        '''

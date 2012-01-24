@@ -12,7 +12,6 @@ from analysis.clustering.algorithms.algorithms import hierarchical, kmeans, cosi
 from visualizations.dendrogram import Dendrogram
 from visualizations.Cluster2DPlot import Cluster2DPlot
 from visualizations.outputfile import output_clusters_to_file 
-from mongoengine import DateTimeField
 from database.warehouse import WarehouseServer
 
 ###########################################
@@ -89,7 +88,7 @@ class TestHierarchicalClustering(unittest.TestCase):
         t.save_frequency_matrix("tweet_clusters.txt")
         rownames, colnames, data = t.read_frequency_matrix("tweet_clusters.txt")
 
-        clusters = kmeans(data)
+        clusters = kmeans(data, k=30)
         output_clusters_to_file(clusters, rownames, "kmeans_with_tweets")
         
 if __name__ == "__main__":

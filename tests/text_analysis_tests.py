@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 '''
 Created on 13 Nov 2011
 
@@ -39,7 +40,7 @@ class TestTextAnalyserFunctions(unittest.TestCase):
         for s in sample_docs:
             analyser.add_document(i, s)
             i += 1
-                 
+        
         self.assertEqual(expected, analyser.get_documents())
         self.assertEqual(global_freqs_expected, analyser.get_global_token_frequencies())
         
