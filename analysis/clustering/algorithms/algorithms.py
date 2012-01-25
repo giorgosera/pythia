@@ -4,7 +4,7 @@ Created on 22 Jan 2012
 @author: george
 '''
 
-from analysis.clustering.datastructures.clusterers import Biclusterer
+from analysis.clustering.datastructures.clusters import Bicluster
 from math import sqrt
 import numpy, redis, random
 
@@ -74,7 +74,7 @@ def hierarchical(data, similarity=pearson):
     curr_clust_id = -1
     
     #Initially all the data points are considered as clusters. 
-    cluster = [Biclusterer(data[i], id=i) for i in range(len(data))]
+    cluster = [Bicluster(data[i], id=i) for i in range(len(data))]
             
     while len(cluster) > 1:
         lowestpair = (0, 1)
@@ -95,7 +95,7 @@ def hierarchical(data, similarity=pearson):
                   for i in range(len(cluster[0].vector))]
     
         # create the new cluster
-        newcluster= Biclusterer(mergevec,left=cluster[lowestpair[0]],
+        newcluster= Bicluster(mergevec,left=cluster[lowestpair[0]],
                              right=cluster[lowestpair[1]],
                              similarity=closest,id=curr_clust_id)
     

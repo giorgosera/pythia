@@ -6,8 +6,9 @@ Created on 13 Nov 2011
 This module performs text analysis of the feeds
 '''
 
-import tools.utils, numpy
-import Orange, orange #!@UnresolvedImport
+import tools.utils, numpy, HTMLParser
+import Orange, orange, nltk #!@UnresolvedImport
+from application.boot import PythiaApp
 
 class TextAnalyser(object):
     '''
@@ -17,9 +18,13 @@ class TextAnalyser(object):
     def __init__(self):
         self.document_list = []
         self.frequency_matrix_data = None
+        
         #Keeps the number of times a word appears in all the docs in the corpus
-        #For example if the word 'hello' appears in three documents then global_token_frequencies['hello']= 3
-        self.global_token_frequencies = {}
+        #For example if the word 'hello' appears in three documents then token_list['hello']= 3
+        self.token_list = {}
+        
+        self.app = PythiaApp()
+        self.ignorewords = set(['#', '@', '?', '!', '.', ',', '=', '|', '&', ':'])
         
     def _tokenize(self, document):
         '''
@@ -29,8 +34,8 @@ class TextAnalyser(object):
         '''     
         clean_text = tools.utils.strip_html(document)
         clean_text = tools.utils.strip_url(clean_text)
-        alphanumeric = tools.utils.split_alpha(clean_text)
-        tokens = tools.utils.turn_lowercase(alphanumeric)
+        tokens = nltk.word_tokenize(clean_text)
+        tokens = tools.utils.turn_lowercase(tokens)
         return tokens
     
     def _word_frequencies(self, tokens):
@@ -42,13 +47,14 @@ class TextAnalyser(object):
         for t in tokens:
             tf.setdefault(t, 0)
             tf[t] += 1
-        return tf   
+        return tf  
     
     def _preprocess(self, document):
         '''
         It preprocess the input text by checking for encoding and also
         tokenizes the text. Finally it creates the word frequency vector.
         '''
+        document = HTMLParser.HTMLParser().unescape(document)
         encoding = tools.utils.detect_encoding(document)
         if encoding == 'unicode':
             document = tools.utils.translate_text(document)
@@ -65,12 +71,11 @@ class TextAnalyser(object):
         '''
         document, tokens, word_frequencies = self._preprocess(document)
         self.document_list.append({"id": id, "raw": document, "tokens": tokens, "word_frequencies": word_frequencies})
-        
         #Update global frequncies count
         for token, count in word_frequencies.items():
-            self.global_token_frequencies.setdefault(token, 0)
+            self.token_list.setdefault(token, 0)
             if count > 0:
-                self.global_token_frequencies[token] += 1
+                self.token_list[token] += 1
         
     def get_documents(self):
         return self.document_list   
@@ -87,18 +92,20 @@ class TextAnalyser(object):
             raise Exception()       
         
     def get_global_token_frequencies(self):
-        return self.global_token_frequencies       
+        return self.token_list       
 
-    def _filter_tokens(self, lower=0.1, higher=0.5):
+    def _filter_tokens(self, lower=0.1, higher=0.5, ignorewords=True):
         '''
         Filters tokens which appear either too often (i.e the, a) or very rarely (i.e flim flam).
-        The lower and higher percentages indicate the tolerance.
+        The lower and higher percentages indicate the tolerance. Also filters out common ignorewords.
         '''
         dict = {}
         filtered = []
-        for token in self.global_token_frequencies:
-            fraction = float(self.global_token_frequencies[token])/len(self.document_list)
-            if fraction > lower and fraction < higher:
+        for token in self.token_list:
+            fraction = float(self.token_list[token])/len(self.document_list)
+            not_stop_word = token not in nltk.corpus.stopwords.words('english')
+            not_ignore_word = token not in self.ignorewords
+            if fraction > lower and fraction < higher and not_stop_word and not_ignore_word and tools.utils.detect_encoding(token) != "unicode":
                 filtered.append(token)
         return filtered        
     
@@ -116,7 +123,7 @@ class TextAnalyser(object):
         '''
         out = file(filename, 'w')
         out.write("Frequency matrix")
-        token_list = self._filter_tokens(lower=0.1, higher=1.0)
+        token_list = self._filter_tokens(lower=0.0, higher=1.0)
         for token in token_list:
             out.write('\t%s' % token)
         out.write('\n')
@@ -135,14 +142,15 @@ class TextAnalyser(object):
         It stores the frequency matrix as a tab delimited file
         which is supported by Orange. 
         '''
-        token_list = self._filter_tokens(lower=0.1, higher=1.0)
+        token_list = self._filter_tokens(lower=0.0, higher=1.0)
         
         #First construct the domain object (top row)
         vars = []
         for token in token_list:
+            if token == "&amp;":print 'un'
             vars.append(Orange.data.variable.Continuous(str(token)))
         domain = Orange.data.Domain(vars, False) #The second argument indicated that the last attr must not be a class
-         
+        
         #Add data rows 
         data = numpy.empty([len(self.document_list), len(token_list)])
         for i, document in enumerate(self.document_list):
@@ -214,35 +222,3 @@ class TextAnalyser(object):
 #            rt_origins += rt_patterns.findall(t)
 #              
 #        return rt_origins
-#    
-#    def get_word_counts(self, text):
-#        '''
-#        Returns the word frequency for each word found in the text.
-#        '''
-# #        wc={}
-# #    
-# #        for word in text:
-# #            wc.setdefault(word,0)
-# #            wc[word]+=1
-# #        return wc
-#    
-#    def filter_word_count(self, lower_bound = 0.1, upper_bound = 0.5, word_count_dict):
-#        '''
-#        Removes words that do not appear to often and words that appear way to often 
-#        (i.e the, and, I etc)
-#        '''
-# #        word_list = []
-# #        total_word_count = 0
-# #        #First get the total count of the words present in the text
-# #        for w, wc in word_count_dict.items():
-# #            total_word_count += wc
-# #            
-# #        #Then check if the percentage of each word count is greater than the lb
-# #        # or lower than the ub and accept this word. Othwrwise reject it.            
-# #        for w, wc in word_count_dict.items():
-# #            frac = wc / total_word_count
-# #            if frac > lower_bound and frac < upper_bound:
-# #                word_list.append(w)
-# #        
-# #        return word_list        
-#===============================================================================

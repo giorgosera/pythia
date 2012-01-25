@@ -1,7 +1,7 @@
-Frequency matrix	and	info	golf	well	is	it	related	general	talking	in	love	sport	check	really	clustering	try	basketball	for	etc	writes	tennis	specifically	sports	blog	to	amazing	too	document	hope	more	be	we	run	python	football	but	small	if	not	an	a	about	like	algorithm	this	ill	script	programming	will	i	cpp	works	my	wrote
-0	0	0	1	0	1	0	1	0	0	0	0	0	0	0	0	0	1	0	1	0	1	0	1	0	1	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0	0	0
-1	1	0	1	0	0	0	0	1	1	2	0	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	1	0	0	1	1	0	0	1	0	0	0	0	0	0	1	0	0	1	0	0	0	1	0	0	0	0	0
-2	1	0	1	0	1	1	0	0	0	0	2	1	0	1	0	0	1	0	0	0	1	0	0	0	0	1	1	0	0	0	0	0	0	0	1	2	0	0	0	1	0	0	1	0	0	0	0	0	0	3	0	0	0	0
-3	1	1	0	0	1	0	1	0	0	0	0	0	1	0	0	0	0	1	0	0	0	1	0	1	1	0	0	1	0	2	0	0	0	1	0	0	0	0	0	0	0	0	0	0	1	0	0	1	0	0	1	0	1	0
-4	0	0	0	1	0	1	0	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0	0	1	0	0	0	1	0	0	0	1	1	0	0	1	1	1	0	2	0	0	1	0	1	1	0	0	2	1	1	0	1
-5	1	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	1	0	0	1	0	0	0	0	0	0
+Frequency matrix	info	golf	programming	related	general	talking	love	.	check	really	clustering	try	basketball	script	algorithm.	writes	tennis	,	specifically	sports	blog	amazing	:	hope	it.	run	python	football	small	cpp.	programming.	document	like	ill	well	etc	sport.	cpp	works	wrote
+0	0	1	0	1	0	0	0	1	0	0	0	0	1	0	0	0	1	3	0	1	0	0	1	0	0	0	0	1	0	0	0	1	0	0	0	1	0	0	0	0
+1	0	1	0	0	1	1	0	1	0	0	0	0	1	0	0	0	1	3	0	1	0	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0	0
+2	0	1	0	0	0	0	2	0	0	1	0	0	1	0	0	0	1	0	0	0	0	1	0	0	1	0	0	1	0	0	0	0	1	0	0	0	1	0	0	0
+3	1	0	0	1	0	0	0	1	1	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	1	0	0	1	1	1	0	0	0	0	0	0	0	0
+4	0	0	0	0	0	0	0	1	0	0	1	1	0	1	1	0	0	0	0	0	0	0	0	1	0	1	1	0	1	0	0	0	0	1	1	0	0	1	1	1
+5	0	0	1	0	1	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0

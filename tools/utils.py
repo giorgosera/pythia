@@ -32,8 +32,8 @@ def detect_encoding(text):
             return 'ascii'
         else:
             return 'unicode'
-
+        
 def translate_text(text, src='ar', tgt='en'):
-    bingtrans.set_app_id('5521E4A630094D968D49B39B6511A0A76CB025E1')  # you can get your AppID at: http://www.bing.com/developers/
+    bingtrans.set_app_id('5521E4A630094D968D49B39B6511A0A76CB025E1')
     translation =  bingtrans.translate(text, src, tgt)            
-    return translation
+    return translation         

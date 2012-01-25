@@ -19,7 +19,7 @@ class WarehouseServer(object):
         self.connection = connect("pythia_db")
         
     
-    def get_documents_by_date(self, from_date, to_date, limit = 100, collection="TopsyTweets"):
+    def get_documents_by_date(self, from_date, to_date, limit = 10000, collection="TopsyTweets"):
         '''
         This is a getter which returns all the documents which were retrieved during
         the period from_date <--> to_date. 

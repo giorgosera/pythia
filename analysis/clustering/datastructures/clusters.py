@@ -4,8 +4,9 @@ Created on 21 Jan 2012
 @author: george
 '''
 import Orange #!@UnresolvedImport
+import numpy
 
-class AbstractClusterer(object):
+class AbstractCluster(object):
     '''
     This is the abstract clusterer and specialized clusterers
     must be derived from it. 
@@ -20,16 +21,16 @@ class AbstractClusterer(object):
     def print_it(self):
         raise NotImplementedError('algo is not implemented.')
  
-class Biclusterer(AbstractClusterer):
+class Bicluster(AbstractCluster):
     '''
-    A biclusterer class. 
+    A bicluster class. 
     '''
 
     def __init__(self, vector, left=None, right=None, similarity=0.0, id=None):
         '''
-        Constructs a biclusterer
+        Constructs a bicluster
         '''
-        AbstractClusterer.__init__(self)
+        AbstractCluster.__init__(self)
         self.left = left
         self.right = right
         self.vector = vector
@@ -76,7 +77,7 @@ class Biclusterer(AbstractClusterer):
         if self.right!=None: 
             self.right.print_it(labels=labels,n=n+1)
             
-class OrangeClusterer(AbstractClusterer):
+class OrangeClusterer(AbstractCluster):
     '''
     A clustering implementation with Orange
     '''            
@@ -91,4 +92,10 @@ class OrangeClusterer(AbstractClusterer):
         '''
         Loads the data from a tab delimited file. 
         '''
-        self.data = Orange.data.Table(filename)    
+        self.data = Orange.data.Table(filename)
+        
+    def add_data_row(self, row):
+        '''
+        Adds a new row in the feature table.
+        '''    
+        

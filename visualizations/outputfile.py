@@ -19,6 +19,9 @@ def output_clusters_to_file(clusters, rownames, filename):
     out.write('\n')
     i = 0 
     for cluster in clusters:
+        out.write('\n')
+        out.write('***********************************************************')
+        out.write('\n')
         out.write("Cluster"+str(i))
         out.write('\n')
         for document in cluster:
@@ -38,6 +41,9 @@ def output_clusters_to_file_translated(clusters, rownames, analyser, filename):
     out.write('\n')
     i = 0 
     for cluster in clusters:
+        out.write('\n')
+        out.write('***********************************************************')
+        out.write('\n')
         out.write("Cluster"+str(i))
         out.write('\n')
         for document in cluster:

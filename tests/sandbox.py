@@ -8,8 +8,10 @@ My playground!
 '''
 import unittest
 import Orange, orange, numpy, bingtrans #!@UnresolvedImport
-import chardet #!@UnresolvedImport
+import chardet, nltk #!@UnresolvedImport
 from mygengo import MyGengo #!@UnresolvedImport
+from calais import Calais #!@UnresolvedImport
+import HTMLParser
 
 gengo = MyGengo(
     public_key = 'Br1#utdXkjX}w4SX92Vk(UOfQ05^mRkQgPRZ9e(A035(KvUdFQ9|_bdXMO|7(35m',
@@ -54,14 +56,31 @@ class TestPlayground(unittest.TestCase):
              
         orange.saveTabDelimited ("test_table_creation.tab", t)
         
-    def testLangDetection(self):
+    def test_lang_detection(self):
         text_ar = "هذا هو الاختبار"
         text_en = "Hello" 
         encoding = chardet.detect(text_en)
         if encoding['encoding'] == 'ascii':
             print 'string is in ascii'
             
-             
+    def test_nltk_named_entity_extraction(self):
+        text = "George is a student. He studies the events that took place in Cairo, Egypt."
+        sentences = nltk.sent_tokenize(text)         
+        sentences = [nltk.word_tokenize(sent) for sent in sentences]
+        sentences = [nltk.pos_tag(sent) for sent in sentences]
+        print nltk.ne_chunk(sentences[1])
+        
+    def test_calais_named_entity_extraction(self):
+        text = "George Eracleous is a student. He studies the events that took place in Cairo, Egypt."
+        API_KEY = "av536xwvy4mgmcbw9cancqmd"
+        calais = Calais(API_KEY, submitter="python-calais demo")
+        result = calais.analyze(text)
+        print result.print_entities()
+        
+    def test_text_unquoting(self):
+        print HTMLParser.HTMLParser().unescape("@ReemAbdellatif We&#39;ve been so inspired by #Tunisia, it&#39;s intoxicating to think we&#39;ll witness something similar in #Egypt")
+        
+        
 if __name__ == "__main__":
     unittest.main()
 

@@ -5,18 +5,24 @@ Created on 13 Nov 2011
 
 This module boots the application.
 '''
-import pymongo
+import bingtrans
 from mongoengine import connect
+from calais import Calais #!@UnresolvedImport
 
 class PythiaApp(object):
     
     def __init__(self):    
         self.db_name = "pythia_db"
-        connect(self.db_name)
         
+        self.connections = {"db": connect(self.db_name),
+                            "calais": Calais("av536xwvy4mgmcbw9cancqmd", submitter="pythia-application")
+                            }
         
-if __name__ == "__main__":
-    pa = PythiaApp()
+    def get_connections(self):
+        '''
+        Returns the collections dictionary
+        '''
+        return self.connections
     
     
     
