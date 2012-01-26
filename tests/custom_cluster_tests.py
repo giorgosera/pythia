@@ -4,7 +4,7 @@ Created on 26 Jan 2012
 @author: george
 '''
 import unittest
-from analysis.clustering.datastructures.clusters import CustomCluster
+from analysis.clustering.datastructures.clusters import CustomClusterer
 from analysis.text import TextAnalyser
 import numpy
 
@@ -17,7 +17,7 @@ doc3 = 'a is not a toKENIzed document'
 samples = [doc1, doc2, doc3] 
 
 ta = TextAnalyser()
-cc = CustomCluster()        
+cc = CustomClusterer()        
 i = 0
 for sample in samples:
     index, d = ta.add_document(i, sample)

@@ -18,7 +18,9 @@ class TextAnalyser(object):
     def __init__(self):
         self.frequency_matrix_data = None
         self.app = PythiaApp()
-        self.ignorewords = set(['(' , ')', '<', '>', '#', '@', '?', '!', '.', ',', '=', '|', '&', ':', '+', '\'', '\'ve','\'m' ])
+        self.ignorewords = set(['rt', 'jan25', 'protest', 'egypt', 'cairo', '25jan', "'s", \
+                                '(' , ')', '<', '>', '#', '@', '?', '!', '.', ',', '=', '|', \
+                                '&', ':', '+', '\'', '\'ve',"'m", '-', '"', '."', '...', '..', '--' ])
         
     def _tokenize(self, document):
         '''
@@ -28,7 +30,7 @@ class TextAnalyser(object):
         '''     
         clean_text = nltk.clean_html(document)
         clean_text = tools.utils.strip_url(clean_text)
-        tokens = nltk.word_tokenize(clean_text)
+        tokens = nltk.WordPunctTokenizer().tokenize(clean_text)#nltk.word_tokenize(clean_text)
         tokens = tools.utils.turn_lowercase(tokens)
         return tokens
     
@@ -41,7 +43,7 @@ class TextAnalyser(object):
         encoding = tools.utils.detect_encoding(text)
         if encoding == 'unicode':
             text = tools.utils.translate_text(text)
-            
+
         tokens = self._tokenize(text)
         tokens = self._filter_tokens(tokens)
         tokens = [tools.utils.text_stemming(token) for token in tokens]

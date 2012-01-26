@@ -10,7 +10,7 @@ import datetime, unittest, Orange #!@UnresolvedImport
 from analysis.text import TextAnalyser
 from visualizations.outputfile import output_clusters_to_file_translated  
 from database.warehouse import WarehouseServer
-from analysis.clustering.datastructures.clusters import OrangeCluster
+from analysis.clustering.datastructures.clusters import OrangeClusterer
 
 ###########################################
 # GLOBALS                                #
@@ -26,7 +26,7 @@ doc5 = 'This blog writes about Python and programming in general.'
 
 sample_docs = [doc0, doc1, doc2, doc3, doc4, doc5]
 analyser = TextAnalyser()
-oc = OrangeCluster()
+oc = OrangeClusterer()
 id = 0
 for s in sample_docs:
     index, d = analyser.add_document(id, s)
@@ -39,7 +39,7 @@ oc.save_table("orange_clustering_test")
 ###########################################
 # TESTS                                   #
 ###########################################
-class TestHierarchicalClustering(unittest.TestCase):
+class TestOrangeClustering(unittest.TestCase):
            
     def test_orange_sample_doc_kmeans(self):
         
@@ -47,16 +47,16 @@ class TestHierarchicalClustering(unittest.TestCase):
         k = 3
         km = Orange.clustering.kmeans.Clustering(table, k, initialization = Orange.clustering.kmeans.init_diversity)
   
-        expected = [1, 1, 2, 1, 2, 0]
+        expected = [1, 1, 1, 2, 0, 2]
         self.assertEqual(expected, km.clusters)
 
     def test_orange_with_tweets_kmeans(self):    
-        from_date = datetime.datetime(2011, 1, 25, 12, 0, 0)
-        to_date = datetime.datetime(2011, 1, 26, 0, 0, 0) 
+        from_date = datetime.datetime(2011, 1, 21, 12, 0, 0)
+        to_date = datetime.datetime(2011, 1, 30, 0, 0, 0) 
         items = ws.get_documents_by_date(from_date, to_date, 50)
  
         t = TextAnalyser()
-        oc = OrangeCluster()
+        oc = OrangeClusterer()
         for item in items:
             index, d = t.add_document(item.id, item.text)
             oc.add_document(index, d)
@@ -66,17 +66,9 @@ class TestHierarchicalClustering(unittest.TestCase):
         k = 5
         table = oc.load_table()
         km = Orange.clustering.kmeans.Clustering(table, k)
-        
-        rownames = []
-        for inst in table:
-            rownames.append(str(inst['id'].value))
-        
-        clusters = [[] for k in range(k)]
- 
-        for item_index, cluster in enumerate(km.clusters):
-            clusters[cluster].append(item_index)
             
-        output_clusters_to_file_translated(clusters, rownames, oc, "kmeans_with_tweets_orange")
+        oc.split_documents(km, k)
+        oc.dump_clusters_to_file("kmeans_with_tweets_orange")
             
 if __name__ == "__main__":
     unittest.main()

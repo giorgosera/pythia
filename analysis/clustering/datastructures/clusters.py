@@ -7,7 +7,7 @@ import Orange, orange #!@UnresolvedImport
 import nltk, numpy
 from collections import OrderedDict 
 
-class AbstractCluster(object):
+class AbstractClusterer(object):
     '''
     This is the abstract clusterer and specialized clusterers
     must be derived from it. 
@@ -21,6 +21,7 @@ class AbstractCluster(object):
         self.attributes = None
         self.td_matrix = None
         self.table_name = None
+        self.clusters = []
     
     def add_document(self, id, document):
         '''
@@ -69,13 +70,6 @@ class AbstractCluster(object):
             return rotated    
         else:
             raise Exception("Oops, no matrix to rotate. Maybe you didn't call construct_term_doc_matrix()")
-        
-    def get_most_frequent_terms(self, N=5):
-        '''
-        Returns the top N occuring terms in this data set.
-        '''
-        corpus = nltk.TextCollection([document['tokens'] for document in self.document_dict.values()])
-        return nltk.FreqDist(corpus).items()[:N]
 
     def load_table(self):
         raise NotImplementedError('load_table is not implemented.')
@@ -86,10 +80,53 @@ class AbstractCluster(object):
     def print_it(self):
         raise NotImplementedError('print_it is not implemented.')
             
-class OrangeCluster(AbstractCluster):
+class OrangeClusterer(AbstractClusterer):
     '''
     A clustering data structure that works with Orange
     '''            
+    
+    def split_documents(self, km, k):
+        '''
+        This method splits the whole collection of documents 
+        of this data set into the different clusters. Of course
+        the algorithm should have been run and then invoke this method.
+        It takes as input an object handler for the result of kmeans.
+        '''
+        clusters = [{} for k in range(k)]
+        for doc_index, cluster in enumerate(km.clusters):
+            document = self.document_dict.popitem(doc_index)
+            doc_id = document[0]
+            rest = document[1]
+            clusters[cluster][doc_id] = rest
+        
+        #Finally create K cluster objects with their document dicts. 
+        [self.clusters.append(Cluster(id, cluster)) for id, cluster in enumerate(clusters)]
+            
+    def dump_clusters_to_file(self, filename):
+        '''
+        Dumps a simple representation of the clusters to a file.
+        '''
+        for cluster in self.clusters:
+            cluster.get_collocations()
+        out = file(filename, 'w')
+        out.write("Clustering results")
+        out.write('\n')
+        i = 0 
+        for cluster in self.clusters:
+            out.write('\n')
+            out.write('***********************************************************')
+            out.write('\n')
+            out.write("Cluster" + str(cluster.id))
+            out.write('\n')
+            top_terms = ""
+            for term in cluster.get_most_frequent_terms():
+                top_terms += str(term)
+            out.write("Most frequent terms:" + top_terms)
+            out.write('\n')
+            for document in cluster.document_dict.values():
+                out.write(document["raw"])
+                out.write('\n')
+            i += 1   
         
     def load_table(self):
         '''
@@ -129,7 +166,7 @@ class OrangeCluster(AbstractCluster):
         else:
             raise Exception("Oops. It seems that you have not constructed a term-document matrix. Use construct_term_document_matrix()")
                    
-class CustomCluster(AbstractCluster):
+class CustomClusterer(AbstractClusterer):
     '''
     A clustering data structure that works with Orange
     '''            
@@ -171,8 +208,53 @@ class CustomCluster(AbstractCluster):
         else:
             raise Exception("Oops. It seems that you have not constructed a term-document matrix. Use construct_term_document_matrix()")    
     
+    
+class Cluster(object):
+    '''
+    This is a structure responsible for representing a cluster after the 
+    clustering has been performed. This class is used by the clusterers.
+    '''
+    def __init__(self, id, document_dict):
+        '''
+        Id specifies the id of this cluster and document_dict 
+        is a dictionary storing all the relevant documents for this
+        cluster.
+        '''
+        self.id = id
+        self.document_dict = document_dict
+        
+    def get_documents(self):
+        '''
+        Returns a dictionary of the documents in the cluster.
+        '''
+        return self.document_dict
+    
+    def get_most_frequent_terms(self, N=5):
+        '''
+        Returns the top N occuring terms in this cluster.
+        '''
+        corpus = nltk.TextCollection([document['tokens'] for document in self.document_dict.values()])
+        return nltk.FreqDist(corpus).items()[:N]        
+    
+    def get_collocations(self, n=2, N=5):
+        '''
+        Returns the top collocations of the cluster corpus 
+        based on Jaccard index. The collocations correspond 
+        to n-grams and more specifically we limited the options
+        to bigrams (n=2) and trigrams (n=3) ( n defaults to 2 ). 
+        '''
+        corpus = nltk.TextCollection([document['raw'].lower().split() for document in self.document_dict.values()])
+        finder = nltk.BigramCollocationFinder.from_words(corpus)
+        scorer = nltk.metrics.BigramAssocMeasures.jaccard
+        #finder.apply_freq_filter(3)
+        finder.apply_word_filter(lambda w:w in nltk.corpus.stopwords.words('english'))
+        collocations = finder.nbest(scorer, N)
+        
+        #print "Cluster",self.id,"collocations:"
+        #for collocation in collocations:
+            #print ' '.join(str(i) for i in collocation)
 
-class Bicluster(AbstractCluster):
+class Bicluster(AbstractClusterer):
     '''
     A bicluster class. 
     '''
@@ -181,7 +263,7 @@ class Bicluster(AbstractCluster):
         '''
         Constructs a bicluster
         '''
-        AbstractCluster.__init__(self)
+        AbstractClusterer.__init__(self)
         self.left = left
         self.right = right
         self.vector = vector

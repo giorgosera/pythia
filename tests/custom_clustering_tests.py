@@ -11,7 +11,7 @@ from visualizations.dendrogram import Dendrogram
 from visualizations.Cluster2DPlot import Cluster2DPlot
 from visualizations.outputfile import output_clusters_to_file_translated
 from database.warehouse import WarehouseServer
-from analysis.clustering.datastructures.clusters import CustomCluster
+from analysis.clustering.datastructures.clusters import CustomClusterer
 
 ###########################################
 # GLOBALS                                #
@@ -27,7 +27,7 @@ doc5 = 'This blog writes about Python and programming in general.'
 
 sample_docs = [doc0, doc1, doc2, doc3, doc4, doc5]
 analyser = TextAnalyser()
-cc = CustomCluster()
+cc = CustomClusterer()
 id = 0
 for s in sample_docs:
     index, d = analyser.add_document(id, s)
@@ -61,7 +61,7 @@ class Test(unittest.TestCase):
         items = ws.get_documents_by_date(from_date, to_date, 50)
         
         t = TextAnalyser()
-        cc = CustomCluster()
+        cc = CustomClusterer()
         for i in items:
             index, d = t.add_document(i.id, i.text)
             cc.add_document(index, d)
@@ -81,7 +81,7 @@ class Test(unittest.TestCase):
         items = ws.get_documents_by_date(from_date, to_date, 50)
         
         t = TextAnalyser()
-        cc = CustomCluster()
+        cc = CustomClusterer()
         for i in items:
             index, d = t.add_document(i.id, i.text)
             cc.add_document(index, d)

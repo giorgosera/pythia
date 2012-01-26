@@ -97,6 +97,14 @@ class TestPlayground(unittest.TestCase):
         self.assertEqual(True, must_be_true)
         self.assertEqual(False, must_be_false)
         
+    def test_collocations(self):
+        text = "This is project aims to detect events from twitter feeds and summarize them. George Eracleous"
+        txt = nltk.Text(text.split())
+        finder = nltk.BigramCollocationFinder.from_words(txt)
+        scorer = nltk.metrics.BigramAssocMeasures.jaccard
+        item = finder.nbest(scorer, 10)
+        print ' '.join(str(i) for i in item[0])
+        
 if __name__ == "__main__":
     unittest.main()
 

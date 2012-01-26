@@ -4,9 +4,10 @@ Created on 26 Jan 2012
 @author: george
 '''
 import unittest
-from analysis.clustering.datastructures.clusters import OrangeCluster
+from analysis.clustering.datastructures.clusters import OrangeClusterer
 from analysis.text import TextAnalyser
 import numpy
+import Orange, orange #!@UnresolvedImport
 
 ###########################################
 # GLOBALS                                #
@@ -17,7 +18,7 @@ doc3 = 'a is not a toKENIzed document'
 samples = [doc1, doc2, doc3] 
 
 ta = TextAnalyser()
-oc = OrangeCluster()        
+oc = OrangeClusterer()        
 i = 0
 for sample in samples:
     index, d = ta.add_document(i, sample)
@@ -52,11 +53,20 @@ class Test(unittest.TestCase):
         
         self.assertEqual(expected, rtd)
         
-    def test_most_frequent_terms(self):
+    
+    def test_split_into_clusters(self):
         oc.construct_term_doc_matrix()
-        top = oc.get_most_frequent_terms(N=5)
-        expected = [('frequent', 3), ('sentenc', 3), ('word', 2), ('arab', 1), ('document', 1)]
-        self.assertEqual(expected, top)
+        oc.save_table("orange_clustering_test")
+        k = 2
+        table = oc.load_table()
+        km = Orange.clustering.kmeans.Clustering(table, k)
+        oc.split_documents(km, k)
+        
+        expected_clusters = [{'0': {'tokens': ['frequent', 'frequent', 'frequent', 'word', 'word', 'sentenc', 'sentenc'], 'raw': 'frequent FrEquEnt frequent <li>word</li> word sentence sentence', 'word_frequencies': [('frequent', 3), ('sentenc', 2), ('word', 2)]}, '2': {'tokens': ['token', 'document'], 'raw': 'a is not a toKENIzed document', 'word_frequencies': [('document', 1), ('token', 1)]}}
+                             ,{'1': {'tokens': ['sentenc', 'arab', 'spring'], 'raw': 'sentence <a href="www.google.com">arab</a> spring', 'word_frequencies': [('arab', 1), ('sentenc', 1), ('spring', 1)]}}]
+        
+        self.assertEqual(expected_clusters, [c.get_documents() for c in oc.clusters])
+        
         
 if __name__ == "__main__":
     unittest.main()
