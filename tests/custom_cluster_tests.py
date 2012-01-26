@@ -20,8 +20,8 @@ ta = TextAnalyser()
 cc = CustomCluster()        
 i = 0
 for sample in samples:
-    d = ta.add_document(i, sample)
-    cc.add_document(d)
+    index, d = ta.add_document(i, sample)
+    cc.add_document(index, d)
     i += 1
 cc.construct_term_doc_matrix()
 
@@ -54,8 +54,15 @@ class Test(unittest.TestCase):
         
     def test_matrix_rotation(self):
         rtd = cc.rotate_td_matrix()
-        print rtd
+        expected = [[0.31388922533374564, 0.0, 0.0], 
+                    [0.11584717374518982, 0.13515503603605478, 0.0], 
+                    [0.0, 0.36620409622270322, 0.0], 
+                    [0.0, 0.0, 0.54930614433405489], 
+                    [0.0, 0.36620409622270322, 0.0], 
+                    [0.0, 0.0, 0.54930614433405489], 
+                    [0.47083383800061845, 0.0, 0.0]]
         
+        self.assertEqual(expected, rtd)
 
         
 

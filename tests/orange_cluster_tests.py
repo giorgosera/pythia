@@ -20,8 +20,8 @@ ta = TextAnalyser()
 oc = OrangeCluster()        
 i = 0
 for sample in samples:
-    d = ta.add_document(i, sample)
-    oc.add_document(d)
+    index, d = ta.add_document(i, sample)
+    oc.add_document(index, d)
     i += 1
 
 class Test(unittest.TestCase):

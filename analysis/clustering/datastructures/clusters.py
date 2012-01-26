@@ -16,27 +16,27 @@ class AbstractCluster(object):
         '''
         Constructs a new cluster object
         '''
-        self.document_list = []
+        self.document_dict = {}
         self.attributes = None
         self.td_matrix = None
         self.table_name = None
     
-    def add_document(self, document):
+    def add_document(self, id, document):
         '''
         Adds a new document in the cluster structure.
         '''    
-        self.document_list.append(document)
+        self.document_dict[id] = document
         
     def construct_term_doc_matrix(self):
         '''
         Constructs a term-document matrix such that td_matrix[document][term] 
         contains the weighting score for the term in the document.
         '''
-        corpus = nltk.TextCollection([document['tokens'] for document in self.document_list])
+        corpus = nltk.TextCollection([document['tokens'] for document in self.document_dict.values()])
         terms = list(set(corpus))
-        data_rows = numpy.zeros([len(self.document_list), len(set(corpus))])
+        data_rows = numpy.zeros([len(self.document_dict), len(set(corpus))])
         
-        for i, document in enumerate(self.document_list):
+        for i, document in enumerate(self.document_dict.values()):
             text = nltk.Text(document['tokens'])
             for term, count in document['word_frequencies']:
                 data_rows[i][terms.index(term)] = corpus.tf_idf(term, text)
@@ -77,7 +77,7 @@ class OrangeCluster(AbstractCluster):
         Loads the data from a tab delimited file. 
         '''
         if self.table_name != None:
-            self.data = Orange.data.Table(self.table_name)
+            return Orange.data.Table(self.table_name)
         else:
             raise Exception("Oops. It seems that you have not saved a term-document matrix. Use save_table(filename)")
         
@@ -101,8 +101,9 @@ class OrangeCluster(AbstractCluster):
             id = Orange.data.new_meta_id()
             t.add_meta_attribute(id)
             t.domain.add_meta(id, doc_id)
-            for i, inst in enumerate(t):
-                inst[id] = str(self.document_list[i]["id"])
+            
+            for i, id in enumerate(self.document_dict.keys()):
+                t[i]['id'] = str(id)
             
             orange.saveTabDelimited (filename+".tab", t)
             self.table_name = filename
@@ -134,15 +135,7 @@ class CustomCluster(AbstractCluster):
         
     def save_table(self, filename):
         '''
-        Creates a file containing a matrix of word counts and documents
-        i.e
-        
-        ########################################################################
-        #            "hello" | "this" | "is" | "a" | "word" | "count" | "matrix"
-        # George        1    |  0     |   5  |  6  |    1   |   6     |   6
-        # Chuck         3    |  1     |   3  |  3  |    0   |   0     |   4
-        # .....................................................................
-        #########################################################################  
+        It stores the term-document matrix in a custom format.
         '''
         if self.td_matrix != None:  
             out = file(filename, 'w')
@@ -151,14 +144,10 @@ class CustomCluster(AbstractCluster):
             for token in self.attributes:
                 out.write('\t%s' % token)
             out.write('\n')
-            for i, document in enumerate(self.document_list):
-                out.write(str(document["id"]))
-                #tf = document["word_frequencies"]
+            for i, id in enumerate(self.document_dict.keys()):
+                out.write(str(id))
                 for token in self.attributes:
-                #    if token in tf:
                     out.write('\t%f' % self.td_matrix[i][self.attributes.index(token)])
-                #    else:
-                #        out.write('\t0')
                 out.write('\n') 
             self.table_name = filename
         else:
