@@ -25,13 +25,13 @@ class TestTextAnalyserFunctions(unittest.TestCase):
         freq3 = [('document', 1), ('token', 1)]
         
         
-        entry1 = {"id": 1, "raw": doc1_raw, "tokens":doc1_tokens, "word_frequencies":freq1}
-        entry2 = {"id": 2, "raw": doc2_raw, "tokens":doc2_tokens, "word_frequencies":freq2}
-        entry3 = {"id": 3, "raw": doc3_raw, "tokens":doc3_tokens, "word_frequencies":freq3}
+        entry1 = {"raw": doc1_raw, "tokens":doc1_tokens, "word_frequencies":freq1}
+        entry2 = {"raw": doc2_raw, "tokens":doc2_tokens, "word_frequencies":freq2}
+        entry3 = {"raw": doc3_raw, "tokens":doc3_tokens, "word_frequencies":freq3}
         
         global_freqs_expected = {'word': 1, 'sentenc': 2, 'arab': 1, 'token': 1, 'spring': 1, 'document': 1, 'frequent': 1}
         
-        expected = [entry1, entry2, entry3]
+        expected = {'1': entry1, '2': entry2, '3': entry3}
         
         sample_docs = [doc1_raw, doc2_raw, doc3_raw]
 
@@ -44,18 +44,14 @@ class TestTextAnalyserFunctions(unittest.TestCase):
         self.assertEqual(expected, analyser.get_documents())
         self.assertEqual(global_freqs_expected, analyser.get_global_token_frequencies())
         
-        analyser.save_frequency_matrix("test.txt")
-        analyser.read_frequency_matrix("test.txt")
-        
     def test_unicode_doc_translation(self):
         document = 'هذا اختبار' 
         analyser = TextAnalyser()
-        analyser.add_document(1, document)
-        saved_doc = analyser.get_documents()
+        id, document = analyser.add_document(1, document)
         
         expected = "This is a test"
         
-        self.assertEqual(expected, saved_doc[0]["raw"])
+        self.assertEqual(expected, document["raw"])
         
     def test_text_preprocessing(self):
         text = "This is a sample text. # ! . "

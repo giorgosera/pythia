@@ -45,41 +45,38 @@ class TestHierarchicalClustering(unittest.TestCase):
         
         table = oc.load_table()
         k = 3
-        km = Orange.clustering.kmeans.Clustering(table, k)
+        km = Orange.clustering.kmeans.Clustering(table, k, initialization = Orange.clustering.kmeans.init_diversity)
   
-        expected = [0, 1, 1, 2, 2, 2]
+        expected = [1, 1, 1, 2, 0, 2]
         self.assertEqual(expected, km.clusters)
 
-#===============================================================================
-#    def test_orange_with_tweets_kmeans(self):    
-#        from_date = datetime.datetime(2011, 1, 25, 12, 0, 0)
-#        to_date = datetime.datetime(2011, 1, 26, 0, 0, 0) 
-#        items = ws.get_documents_by_date(from_date, to_date, 100)
-# 
-#        t = TextAnalyser()
-#        oc = OrangeCluster()
-#        for item in items:
-#            index, d = t.add_document(item.id, item.text)
-#            oc.add_document(index, d)
-#        
-#        oc.construct_term_doc_matrix()
-#        oc.save_table("orange_clustering_test")
-#        k = 5
-#        table = oc.load_table()
-#        km = Orange.clustering.kmeans.Clustering(table, k)
-#        
-#        rownames = []
-#        
-#        for inst in table:
-#            rownames.append(str(inst['id'].value))
-#        
-#        clusters = [[] for k in range(k)]
-# 
-#        for item_index, cluster in enumerate(km.clusters):
-#            clusters[cluster].append(item_index)
-#            
-#        output_clusters_to_file_translated(clusters, rownames, t, "kmeans_with_tweets_orange")
-#===============================================================================
+    def test_orange_with_tweets_kmeans(self):    
+        from_date = datetime.datetime(2011, 1, 25, 12, 0, 0)
+        to_date = datetime.datetime(2011, 1, 26, 0, 0, 0) 
+        items = ws.get_documents_by_date(from_date, to_date, 50)
+ 
+        t = TextAnalyser()
+        oc = OrangeCluster()
+        for item in items:
+            index, d = t.add_document(item.id, item.text)
+            oc.add_document(index, d)
+        
+        oc.construct_term_doc_matrix()
+        oc.save_table("orange_clustering_test")
+        k = 3
+        table = oc.load_table()
+        km = Orange.clustering.kmeans.Clustering(table, k, initialization = Orange.clustering.kmeans.init_diversity, distance=Orange.distance.instances.PearsonRConstructor())
+        
+        rownames = []
+        for inst in table:
+            rownames.append(str(inst['id'].value))
+        
+        clusters = [[] for k in range(k)]
+ 
+        for item_index, cluster in enumerate(km.clusters):
+            clusters[cluster].append(item_index)
+            
+        output_clusters_to_file_translated(clusters, rownames, t, "kmeans_with_tweets_orange")
             
 if __name__ == "__main__":
     unittest.main()

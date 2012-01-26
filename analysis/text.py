@@ -6,8 +6,8 @@ Created on 13 Nov 2011
 This module performs text analysis of the feeds
 '''
 
-import tools.utils, numpy, HTMLParser
-import Orange, orange, nltk #!@UnresolvedImport
+import tools.utils, HTMLParser
+import nltk #!@UnresolvedImport
 from application.boot import PythiaApp
 
 class TextAnalyser(object):
@@ -18,11 +18,6 @@ class TextAnalyser(object):
     def __init__(self):
         self.document_dict = {}
         self.frequency_matrix_data = None
-        
-        #Keeps the number of times a word appears in all the docs in the corpus
-        #For example if the word 'hello' appears in three documents then token_list['hello']= 3
-        self.token_list = {}
-        
         self.app = PythiaApp()
         self.ignorewords = set(['(' , ')', '<', '>', '#', '@', '?', '!', '.', ',', '=', '|', '&', ':', '+', '\'', '\'ve','\'m' ])
         
@@ -64,12 +59,7 @@ class TextAnalyser(object):
         '''
         text, tokens, word_frequencies = self._preprocess(document)
         new_document= {"raw": text, "tokens": tokens, "word_frequencies": word_frequencies}
-        self.document_dict[id] = new_document
-        #Update global frequncies count
-        for token, count in word_frequencies:
-            self.token_list.setdefault(token, 0)
-            if count > 0:
-                self.token_list[token] += 1
+        self.document_dict[str(id)] = new_document
                 
         return id, new_document
         
@@ -77,19 +67,13 @@ class TextAnalyser(object):
         return self.document_dict   
     
     def get_document_by_id(self, id):
-        result = None
-        for document in self.document_dict:
-            if str(document["id"]) == id:
-                result = document
-        
+        result = self.document_dict[id]
+
         if result:
             return result 
         else:    
-            raise Exception()       
+            raise Exception("Oops. No document with this ID was found.")       
         
-    def get_global_token_frequencies(self):
-        return self.token_list    
-    
     def _filter_tokens(self, tokens):
         filtered = []
         for token in tokens:
