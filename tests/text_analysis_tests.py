@@ -6,7 +6,7 @@ Created on 13 Nov 2011
 
 Unit tests for the analysis package.
 '''
-import unittest
+import unittest, tools.utils
 from analysis.text import TextAnalyser
 
 class TestTextAnalyserFunctions(unittest.TestCase):
@@ -16,20 +16,20 @@ class TestTextAnalyserFunctions(unittest.TestCase):
         doc2_raw = 'sentence <a href="www.google.com">arab</a> spring'
         doc3_raw = 'a is not a toKENIzed document'               
         
-        doc1_tokens = ['frequent', 'frequent', 'frequent', 'word', 'word', 'sentence', 'sentence'] 
-        doc2_tokens = ['sentence', 'arab', 'spring'] 
-        doc3_tokens = ['a', 'is', 'not', 'a', 'tokenized', 'document']
+        doc1_tokens = ['frequent', 'frequent', 'frequent', 'word', 'word', 'sentenc', 'sentenc']
+        doc2_tokens = ['sentenc', 'arab', 'spring']
+        doc3_tokens = ['token', 'document']
         
-        freq1 = {'frequent': 3, 'sentence': 2, 'word':2}
-        freq2 = {'arab': 1, 'sentence': 1, 'spring':1}
-        freq3 = {'a': 2, 'document': 1, 'is':1, 'not': 1, 'tokenized':1}
+        freq1 = [('frequent', 3), ('sentenc', 2), ('word', 2)]
+        freq2 = [('arab', 1), ('sentenc', 1), ('spring', 1)]
+        freq3 = [('document', 1), ('token', 1)]
         
         
         entry1 = {"id": 1, "raw": doc1_raw, "tokens":doc1_tokens, "word_frequencies":freq1}
         entry2 = {"id": 2, "raw": doc2_raw, "tokens":doc2_tokens, "word_frequencies":freq2}
         entry3 = {"id": 3, "raw": doc3_raw, "tokens":doc3_tokens, "word_frequencies":freq3}
         
-        global_freqs_expected = {'a': 1, 'tokenized': 1, 'word': 1, 'sentence': 2, 'spring': 1, 'is': 1, 'arab': 1, 'not': 1, 'document': 1, 'frequent': 1}
+        global_freqs_expected = {'word': 1, 'sentenc': 2, 'arab': 1, 'token': 1, 'spring': 1, 'document': 1, 'frequent': 1}
         
         expected = [entry1, entry2, entry3]
         
@@ -56,6 +56,21 @@ class TestTextAnalyserFunctions(unittest.TestCase):
         expected = "This is a test"
         
         self.assertEqual(expected, saved_doc[0]["raw"])
+        
+    def test_text_preprocessing(self):
+        text = "This is a sample text. # ! . "
+        analyser = TextAnalyser()
+        processed = analyser._preprocess(text)
+        expected = ('This is a sample text. # ! . ', ['sampl', 'text.'], [('sampl', 1), ('text.', 1)])
+        self.assertEqual(expected, processed)
+        
+    def test_tfidf(self):
+        token_occurences = 2 
+        no_of_tokens = 10
+        no_of_docs = 10
+        token_appears_in = 3
+        result = tools.utils.tfidf(token_occurences, no_of_tokens, no_of_docs, token_appears_in)
+        self.assertAlmostEqual(0.24079, result, 4)
         
 if __name__ == "__main__":
     unittest.main()

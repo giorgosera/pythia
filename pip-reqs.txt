@@ -3,6 +3,8 @@ Orange==2.5a2
 PIL==1.1.7
 PyYAML==3.10
 bingtrans==0.1
+calais==0.0.0
+chardet==1.0.1
 feedparser==5.1
 httplib2==0.7.2
 matplotlib==1.0.1
@@ -12,6 +14,7 @@ networkx==1.5
 nltk==2.0.1rc1
 numpy==1.6.1
 pycrypto==2.4.1
+pyenchant==1.6.5
 pymongo==2.0.1
 python-dateutil==1.5
 python-otter==0.1.0

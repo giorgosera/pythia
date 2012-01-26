@@ -11,7 +11,7 @@ import Orange, orange, numpy, bingtrans #!@UnresolvedImport
 import chardet, nltk #!@UnresolvedImport
 from mygengo import MyGengo #!@UnresolvedImport
 from calais import Calais #!@UnresolvedImport
-import HTMLParser
+import HTMLParser, tools.utils
 
 gengo = MyGengo(
     public_key = 'Br1#utdXkjX}w4SX92Vk(UOfQ05^mRkQgPRZ9e(A035(KvUdFQ9|_bdXMO|7(35m',
@@ -34,7 +34,8 @@ class TestPlayground(unittest.TestCase):
         
     def testBingTranslate(self):   
         bingtrans.set_app_id('5521E4A630094D968D49B39B6511A0A76CB025E1')  # you can get your AppID at: http://www.bing.com/developers/
-        print bingtrans.translate("هذا هو الاختبار", 'ar', 'en')             
+        result = bingtrans.translate("هذا هو الاختبار", 'ar', 'en') 
+        self.assertEqual("This is a test", result)            
         
     def testOrangeTableCreation(self):
         x = Orange.data.variable.Continuous("word1")
@@ -61,8 +62,10 @@ class TestPlayground(unittest.TestCase):
         text_en = "Hello" 
         encoding = chardet.detect(text_en)
         if encoding['encoding'] == 'ascii':
-            print 'string is in ascii'
-            
+            result = 'string is in ascii'
+        
+        self.assertEqual('string is in ascii', result)
+        
     def test_nltk_named_entity_extraction(self):
         text = "George is a student. He studies the events that took place in Cairo, Egypt."
         sentences = nltk.sent_tokenize(text)         
@@ -78,8 +81,21 @@ class TestPlayground(unittest.TestCase):
         print result.print_entities()
         
     def test_text_unquoting(self):
-        print HTMLParser.HTMLParser().unescape("@ReemAbdellatif We&#39;ve been so inspired by #Tunisia, it&#39;s intoxicating to think we&#39;ll witness something similar in #Egypt")
+        result = HTMLParser.HTMLParser().unescape("@ReemAbdellatif We&#39;ve been so inspired by #Tunisia, it&#39;s intoxicating to think we&#39;ll witness something similar in #Egypt")
+        expected = "@ReemAbdellatif We've been so inspired by #Tunisia, it's intoxicating to think we'll witness something similar in #Egypt"
+        self.assertEqual(expected, result)
         
+    def test_stemming(self):
+        stem = tools.utils.text_stemming("factionally")
+        self.assertEqual("faction", stem)
+        
+    def test_english_detection(self):
+        english_text = "This"
+        non_english_text = "Αυτό"
+        must_be_true = tools.utils.detect_english(english_text)
+        must_be_false = tools.utils.detect_english(non_english_text)
+        self.assertEqual(True, must_be_true)
+        self.assertEqual(False, must_be_false)
         
 if __name__ == "__main__":
     unittest.main()

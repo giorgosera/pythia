@@ -15,16 +15,17 @@ class TextAnalyser(object):
     This class contains and implements all the methods responsible for 
     text analysis.
     '''
-    def __init__(self):
+    def __init__(self, only_english = False):
         self.document_list = []
         self.frequency_matrix_data = None
+        self.only_english = only_english
         
         #Keeps the number of times a word appears in all the docs in the corpus
         #For example if the word 'hello' appears in three documents then token_list['hello']= 3
         self.token_list = {}
         
         self.app = PythiaApp()
-        self.ignorewords = set(['#', '@', '?', '!', '.', ',', '=', '|', '&', ':'])
+        self.ignorewords = set(['(' , ')', '<', '>', '#', '@', '?', '!', '.', ',', '=', '|', '&', ':', '+', '\'', '\'ve','\'m' ])
         
     def _tokenize(self, document):
         '''
@@ -32,35 +33,27 @@ class TextAnalyser(object):
         split alphanumreric and then turns the text to lowercase.
         It's supposed to be a private method.
         '''     
-        clean_text = tools.utils.strip_html(document)
+        clean_text = nltk.clean_html(document)
         clean_text = tools.utils.strip_url(clean_text)
         tokens = nltk.word_tokenize(clean_text)
         tokens = tools.utils.turn_lowercase(tokens)
         return tokens
     
-    def _word_frequencies(self, tokens):
-        '''
-        Counts the word frequencies in this document. This is supposed to be 
-        a private method. 
-        '''
-        tf = {}
-        for t in tokens:
-            tf.setdefault(t, 0)
-            tf[t] += 1
-        return tf  
-    
-    def _preprocess(self, document):
+    def _preprocess(self, text):
         '''
         It preprocess the input text by checking for encoding and also
         tokenizes the text. Finally it creates the word frequency vector.
         '''
-        document = HTMLParser.HTMLParser().unescape(document)
-        encoding = tools.utils.detect_encoding(document)
+        text = HTMLParser.HTMLParser().unescape(text)
+        encoding = tools.utils.detect_encoding(text)
         if encoding == 'unicode':
-            document = tools.utils.translate_text(document)
-        tokens = self._tokenize(document)
-        word_frequencies = self._word_frequencies(tokens)
-        return document, tokens, word_frequencies
+            text = tools.utils.translate_text(text)
+            
+        tokens = self._tokenize(text)
+        tokens = self._filter_tokens(tokens)
+        tokens = [tools.utils.text_stemming(token) for token in tokens]
+        word_frequencies = nltk.FreqDist(tokens).items()
+        return text, tokens, word_frequencies
     
     
     def add_document(self, id, document):
@@ -69,10 +62,10 @@ class TextAnalyser(object):
         deals with unicode strings which are automatically translated to 
         English.
         '''
-        document, tokens, word_frequencies = self._preprocess(document)
-        self.document_list.append({"id": id, "raw": document, "tokens": tokens, "word_frequencies": word_frequencies})
+        text, tokens, word_frequencies = self._preprocess(document)
+        self.document_list.append({"id": id, "raw": text, "tokens": tokens, "word_frequencies": word_frequencies})
         #Update global frequncies count
-        for token, count in word_frequencies.items():
+        for token, count in word_frequencies:
             self.token_list.setdefault(token, 0)
             if count > 0:
                 self.token_list[token] += 1
@@ -92,9 +85,19 @@ class TextAnalyser(object):
             raise Exception()       
         
     def get_global_token_frequencies(self):
-        return self.token_list       
+        return self.token_list    
+    
+    def _filter_tokens(self, tokens):
+        filtered = []
+        for token in tokens:
+            not_stop_word = token not in nltk.corpus.stopwords.words('english')
+            not_ignore_word = token not in self.ignorewords
+            ascii = tools.utils.detect_encoding(token) == "ascii"
+            if not_stop_word and not_ignore_word and ascii:
+                filtered.append(token)
+        return filtered   
 
-    def _filter_tokens(self, lower=0.1, higher=0.5, ignorewords=True):
+    def _filter_token_list(self, lower=0.1, higher=0.5, ignorewords=True):
         '''
         Filters tokens which appear either too often (i.e the, a) or very rarely (i.e flim flam).
         The lower and higher percentages indicate the tolerance. Also filters out common ignorewords.
@@ -103,9 +106,7 @@ class TextAnalyser(object):
         filtered = []
         for token in self.token_list:
             fraction = float(self.token_list[token])/len(self.document_list)
-            not_stop_word = token not in nltk.corpus.stopwords.words('english')
-            not_ignore_word = token not in self.ignorewords
-            if fraction > lower and fraction < higher and not_stop_word and not_ignore_word and tools.utils.detect_encoding(token) != "unicode":
+            if fraction > lower and fraction < higher:
                 filtered.append(token)
         return filtered        
     
@@ -123,7 +124,7 @@ class TextAnalyser(object):
         '''
         out = file(filename, 'w')
         out.write("Frequency matrix")
-        token_list = self._filter_tokens(lower=0.0, higher=1.0)
+        token_list = self._filter_token_list(lower=0.0, higher=1.0)
         for token in token_list:
             out.write('\t%s' % token)
         out.write('\n')
@@ -142,7 +143,7 @@ class TextAnalyser(object):
         It stores the frequency matrix as a tab delimited file
         which is supported by Orange. 
         '''
-        token_list = self._filter_tokens(lower=0.0, higher=1.0)
+        token_list = self._filter_token_list(lower=0.0, higher=1.0)
         
         #First construct the domain object (top row)
         vars = []
@@ -154,11 +155,13 @@ class TextAnalyser(object):
         #Add data rows 
         data = numpy.empty([len(self.document_list), len(token_list)])
         for i, document in enumerate(self.document_list):
-            tf = document["word_frequencies"]
+            tokens = document["word_frequencies"]
             new_frequencies_row = numpy.zeros([1, len(token_list)])
             for j, token in enumerate(token_list):
-                if token in tf:
-                    new_frequencies_row[0][j] = tf[token]
+                if token in tokens:
+                    tfidf = tools.utils.tfidf(tokens[token], len(tokens), len(self.document_list), self.token_list[token])
+                    print i, token, tfidf
+                    new_frequencies_row[0][j] = tfidf#tokens[token]
             data[i] = new_frequencies_row    
         #Construct the table with the domain and the data
         t = Orange.data.Table(domain, data)

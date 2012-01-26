@@ -6,7 +6,7 @@ Created on 22 Jan 2012
 
 from analysis.clustering.datastructures.clusters import Bicluster
 from math import sqrt
-import numpy, redis, random
+import numpy, random, math
 
 ###########################################
 ## Similarity measures                   ##
@@ -155,4 +155,3 @@ def kmeans(data, similarity=pearson, k = 10):
                 clusters[i]=average
     
     return bestmatches
-        

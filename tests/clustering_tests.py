@@ -112,9 +112,9 @@ class TestHierarchicalClustering(unittest.TestCase):
  #==============================================================================
 
     def test_orange_with_tweets_kmeans(self):    
-        from_date = datetime.datetime(2011, 1, 25, 0, 0, 0)
-        to_date = datetime.datetime(2011, 1, 25, 12, 0, 0) 
-        items = ws.get_documents_by_date(from_date, to_date, 50)
+        from_date = datetime.datetime(2011, 1, 25, 12, 0, 0)
+        to_date = datetime.datetime(2011, 1, 26, 0, 0, 0) 
+        items = ws.get_documents_by_date(from_date, to_date, 100)
 
         t = TextAnalyser()
         for item in items:
@@ -122,8 +122,8 @@ class TestHierarchicalClustering(unittest.TestCase):
             
         t.save_frequency_matrix_as_tab("test_with_tweets_orange")
         table = Orange.data.Table("test_with_tweets_orange")
-        k = 10
-        km = Orange.clustering.kmeans.Clustering(table, k, initialization=Orange.clustering.kmeans.init_diversity)
+        k = 5
+        km = Orange.clustering.kmeans.Clustering(table, k, distance=Orange.distance.instances.PearsonRConstructor,initialization=Orange.clustering.kmeans.init_diversity)
         
         rownames = []
         
