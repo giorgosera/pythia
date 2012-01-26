@@ -8,6 +8,7 @@ from database.warehouse import WarehouseServer
 
 def output_clusters_to_file(clusters, rownames, filename):
     '''
+    DEPRECATED
     This method takes as input a set of clusters and generates 
     a very simplistic representation of these clusters in text form
     in a file. 
@@ -29,7 +30,7 @@ def output_clusters_to_file(clusters, rownames, filename):
             out.write('\n')
         i += 1
         
-def output_clusters_to_file_translated(clusters, rownames, analyser, filename):
+def output_clusters_to_file_translated(clusters, rownames, cluster_struct, filename):
     '''
     This method takes as input a set of clusters and generates 
     a very simplistic representation of these clusters in text form
@@ -46,8 +47,10 @@ def output_clusters_to_file_translated(clusters, rownames, analyser, filename):
         out.write('\n')
         out.write("Cluster"+str(i))
         out.write('\n')
+        out.write("Most frequent terms:" + cluster_struct.get_most_frequent_terms())
+        out.write('\n')
         for document in cluster:
-            out.write( analyser.get_document_by_id(rownames[document])["raw"])
+            out.write( cluster_struct.get_document_by_id(rownames[document])["raw"])
             out.write('\n')
         i += 1        
             

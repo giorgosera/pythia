@@ -9,7 +9,7 @@ from analysis.text import TextAnalyser
 from analysis.clustering.algorithms.algorithms import hierarchical, kmeans, cosine, tanimoto
 from visualizations.dendrogram import Dendrogram
 from visualizations.Cluster2DPlot import Cluster2DPlot
-from visualizations.outputfile import output_clusters_to_file
+from visualizations.outputfile import output_clusters_to_file_translated
 from database.warehouse import WarehouseServer
 from analysis.clustering.datastructures.clusters import CustomCluster
 
@@ -76,8 +76,8 @@ class Test(unittest.TestCase):
         dendro.draw_node(10, cluster.get_height()/2)
         
     def test_tweet_kmeans_clustering(self):        
-        from_date = datetime.datetime(2011, 1, 25, 0, 0, 0)
-        to_date = datetime.datetime(2011, 1, 25, 3, 0, 0) 
+        from_date = datetime.datetime(2011, 1, 25, 12, 0, 0)
+        to_date = datetime.datetime(2011, 1, 26, 0, 0, 0) 
         items = ws.get_documents_by_date(from_date, to_date, 50)
         
         t = TextAnalyser()
@@ -91,7 +91,7 @@ class Test(unittest.TestCase):
         rownames, colnames, data = cc.load_table()
   
         clusters = kmeans(data, k=5)
-        output_clusters_to_file(clusters, rownames, "kmeans_custom_cluster_with_tweets")
+        output_clusters_to_file_translated(clusters, rownames, cc, "kmeans_with_tweets_custom")
 
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testName']

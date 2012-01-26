@@ -16,7 +16,6 @@ class TextAnalyser(object):
     text analysis.
     '''
     def __init__(self):
-        self.document_dict = {}
         self.frequency_matrix_data = None
         self.app = PythiaApp()
         self.ignorewords = set(['(' , ')', '<', '>', '#', '@', '?', '!', '.', ',', '=', '|', '&', ':', '+', '\'', '\'ve','\'m' ])
@@ -59,20 +58,8 @@ class TextAnalyser(object):
         '''
         text, tokens, word_frequencies = self._preprocess(document)
         new_document= {"raw": text, "tokens": tokens, "word_frequencies": word_frequencies}
-        self.document_dict[str(id)] = new_document
                 
         return id, new_document
-        
-    def get_documents(self):
-        return self.document_dict   
-    
-    def get_document_by_id(self, id):
-        result = self.document_dict[id]
-
-        if result:
-            return result 
-        else:    
-            raise Exception("Oops. No document with this ID was found.")       
         
     def _filter_tokens(self, tokens):
         filtered = []

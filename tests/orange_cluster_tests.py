@@ -39,8 +39,24 @@ class Test(unittest.TestCase):
         oc.construct_term_doc_matrix()
         oc.save_table("sample_table_orange")
         
-
+    def test_matrix_rotation(self):
+        oc.construct_term_doc_matrix()
+        rtd = oc.rotate_td_matrix()
+        expected = [[0.31388922533374564, 0.0, 0.0], 
+                    [0.11584717374518982, 0.13515503603605478, 0.0], 
+                    [0.0, 0.36620409622270322, 0.0], 
+                    [0.0, 0.0, 0.54930614433405489], 
+                    [0.0, 0.36620409622270322, 0.0], 
+                    [0.0, 0.0, 0.54930614433405489], 
+                    [0.47083383800061845, 0.0, 0.0]]
         
-
+        self.assertEqual(expected, rtd)
+        
+    def test_most_frequent_terms(self):
+        oc.construct_term_doc_matrix()
+        top = oc.get_most_frequent_terms(N=5)
+        expected = [('frequent', 3), ('sentenc', 3), ('word', 2), ('arab', 1), ('document', 1)]
+        self.assertEqual(expected, top)
+        
 if __name__ == "__main__":
     unittest.main()

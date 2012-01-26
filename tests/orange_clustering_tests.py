@@ -47,7 +47,7 @@ class TestHierarchicalClustering(unittest.TestCase):
         k = 3
         km = Orange.clustering.kmeans.Clustering(table, k, initialization = Orange.clustering.kmeans.init_diversity)
   
-        expected = [1, 1, 1, 2, 0, 2]
+        expected = [1, 1, 2, 1, 2, 0]
         self.assertEqual(expected, km.clusters)
 
     def test_orange_with_tweets_kmeans(self):    
@@ -63,9 +63,9 @@ class TestHierarchicalClustering(unittest.TestCase):
         
         oc.construct_term_doc_matrix()
         oc.save_table("orange_clustering_test")
-        k = 3
+        k = 5
         table = oc.load_table()
-        km = Orange.clustering.kmeans.Clustering(table, k, initialization = Orange.clustering.kmeans.init_diversity, distance=Orange.distance.instances.PearsonRConstructor())
+        km = Orange.clustering.kmeans.Clustering(table, k)
         
         rownames = []
         for inst in table:
@@ -76,7 +76,7 @@ class TestHierarchicalClustering(unittest.TestCase):
         for item_index, cluster in enumerate(km.clusters):
             clusters[cluster].append(item_index)
             
-        output_clusters_to_file_translated(clusters, rownames, t, "kmeans_with_tweets_orange")
+        output_clusters_to_file_translated(clusters, rownames, oc, "kmeans_with_tweets_orange")
             
 if __name__ == "__main__":
     unittest.main()

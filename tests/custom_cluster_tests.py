@@ -63,6 +63,12 @@ class Test(unittest.TestCase):
                     [0.47083383800061845, 0.0, 0.0]]
         
         self.assertEqual(expected, rtd)
+        
+    def test_most_frequent_terms(self):
+        cc.construct_term_doc_matrix()
+        top = cc.get_most_frequent_terms(N=5)
+        expected = [('frequent', 3), ('sentenc', 3), ('word', 2), ('arab', 1), ('document', 1)]
+        self.assertEqual(expected, top)
 
         
 

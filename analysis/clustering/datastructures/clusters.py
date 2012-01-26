@@ -5,6 +5,7 @@ Created on 21 Jan 2012
 '''
 import Orange, orange #!@UnresolvedImport
 import nltk, numpy
+from collections import OrderedDict 
 
 class AbstractCluster(object):
     '''
@@ -16,7 +17,7 @@ class AbstractCluster(object):
         '''
         Constructs a new cluster object
         '''
-        self.document_dict = {}
+        self.document_dict = OrderedDict()
         self.attributes = None
         self.td_matrix = None
         self.table_name = None
@@ -25,7 +26,18 @@ class AbstractCluster(object):
         '''
         Adds a new document in the cluster structure.
         '''    
-        self.document_dict[id] = document
+        self.document_dict[str(id)] = document
+        
+    def get_documents(self, id):
+        return self.document_dict
+    
+    def get_document_by_id(self, id):
+        result = self.document_dict[id]
+
+        if result:
+            return result 
+        else:    
+            raise Exception("Oops. No document with this ID was found.")       
         
     def construct_term_doc_matrix(self):
         '''
@@ -49,14 +61,21 @@ class AbstractCluster(object):
         It rotates the term-document matrix. This is useful when we perfrom column clustering.
         '''
         #First we have to read the data using read_frequency_matrix(filename)
-        if self.frequency_matrix_data:
+        if self.td_matrix != None:
             rotated = []
-            for i in range(len(self.td_matrix[0])):
-                newrow = [self.td_matrix[j][i] for j in range(len(self.td_matrix))]
+            for i in range(self.td_matrix.shape[1]):
+                newrow = [self.td_matrix[j][i] for j in range(self.td_matrix.shape[0])]
                 rotated.append(newrow)
             return rotated    
         else:
-            raise Exception("Oops, no data to rotate. Maybe you didn't call read_frequency_matrix(filename)")
+            raise Exception("Oops, no matrix to rotate. Maybe you didn't call construct_term_doc_matrix()")
+        
+    def get_most_frequent_terms(self, N=5):
+        '''
+        Returns the top N occuring terms in this data set.
+        '''
+        corpus = nltk.TextCollection([document['tokens'] for document in self.document_dict.values()])
+        return nltk.FreqDist(corpus).items()[:N]
 
     def load_table(self):
         raise NotImplementedError('load_table is not implemented.')
@@ -128,7 +147,6 @@ class CustomCluster(AbstractCluster):
                 p=line.strip().split('\t')
                 rownames.append(p[0])
                 data.append([float(x) for x in p[1:]])
-            self.frequency_matrix_data = data    
             return rownames,colnames,data
         else:
             raise Exception("Oops. It seems that you have not saved a term-document matrix. Use save_table(filename)")
