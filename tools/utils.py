@@ -21,6 +21,9 @@ def strip_url(text):
 
 def strip_mentions(text):
     return re.compile(r'@[\s,_,A-Z,a-z]+').sub('',text)
+
+def strip_hashtags(text):
+    return re.compile(r'#[\s]?[,A-Z,a-z,0-9]+[\s]?').sub('',text)
     
 def strip_html(html):
     return re.compile(r'<[^>]+>').sub('',html)
@@ -44,7 +47,11 @@ def detect_encoding(text):
             return 'unicode'
         
 def translate_text(text, src='ar', tgt='en'):
-    translation =  bingtrans.translate(text, src, tgt)            
+    translation = text
+    try:
+        translation =  bingtrans.translate(text, src, tgt)            
+    except ValueError:
+        pass
     return translation       
 
 

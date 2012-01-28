@@ -18,6 +18,11 @@ class CambridgeTweet(Tweet):
     origin = StringField(required=True, default="Unknown")
     no_of_followers = IntField(required=True, default=0) 
     
+class TwoGroupsTweet(Tweet):
+    meta = {"collection": "TwoGroupsTweets"}
+    #The url of the original tweet
+    url = StringField(required=True)
+    
 class TopsyTweet(Tweet):
     meta = {"collection": "TopsyTweets"}
     #The url of the original tweet

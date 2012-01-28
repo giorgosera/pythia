@@ -31,7 +31,8 @@ class TextAnalyser(object):
         clean_text = nltk.clean_html(document)
         clean_text = tools.utils.strip_url(clean_text)
         clean_text = tools.utils.strip_mentions(clean_text)
-        
+        clean_text = tools.utils.strip_hashtags(clean_text)
+                
         if self.ngram == 1:
             tokens = nltk.WordPunctTokenizer().tokenize(clean_text)#nltk.word_tokenize(clean_text)
             tokens = tools.utils.turn_lowercase(tokens)
@@ -43,10 +44,11 @@ class TextAnalyser(object):
             text = nltk.Text(filtered_tokens)
             if self.ngram == 2:
                 finder = nltk.BigramCollocationFinder.from_words(text)
+                scorer = nltk.metrics.BigramAssocMeasures.jaccard   
             elif self.ngram == 3:
                 finder = nltk.TrigramCollocationFinder.from_words(text)
-            scorer = nltk.metrics.BigramAssocMeasures.jaccard
-            collocations = finder.nbest(scorer, 2)
+                scorer = nltk.metrics.TrigramAssocMeasures.jaccard
+            collocations = finder.nbest(scorer, 5)
             tokens = [' '.join(str(i) for i in collocation) for collocation in collocations]
         return tokens
     
@@ -67,7 +69,6 @@ class TextAnalyser(object):
 
         return text, tokens, word_frequencies
     
-    
     def add_document(self, id, document):
         '''
         Inserts a new document in the list of documents. Note that it 
@@ -76,7 +77,6 @@ class TextAnalyser(object):
         '''
         text, tokens, word_frequencies = self._preprocess(document)
         new_document= {"raw": text, "tokens": tokens, "word_frequencies": word_frequencies}
-        print "Added another"
                 
         return id, new_document
         

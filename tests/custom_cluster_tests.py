@@ -6,7 +6,6 @@ Created on 26 Jan 2012
 import unittest
 import numpy
 from analysis.clustering.datastructures.clusters import CustomClusterer
-from analysis.text import TextAnalyser
 from analysis.clustering.algorithms.algorithms import hierarchical, kmeans, cosine, tanimoto
 
 
@@ -18,12 +17,10 @@ doc2 = 'sentence <a href="www.google.com">arab</a> spring'
 doc3 = 'a is not a toKENIzed document'
 samples = [doc1, doc2, doc3] 
 
-ta = TextAnalyser()
 cc = CustomClusterer()        
 i = 0
 for sample in samples:
-    index, d = ta.add_document(i, sample)
-    cc.add_document(index, d)
+    cc.add_document(i, sample)
     i += 1
 cc.construct_term_doc_matrix()
 

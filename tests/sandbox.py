@@ -13,6 +13,7 @@ from mygengo import MyGengo #!@UnresolvedImport
 from calais import Calais #!@UnresolvedImport
 from numword.numword_en import NumWordEN#!@UnresolvedImport
 import HTMLParser, tools.utils
+from nltk.corpus import movie_reviews
 
 gengo = MyGengo(
     public_key = 'Br1#utdXkjX}w4SX92Vk(UOfQ05^mRkQgPRZ9e(A035(KvUdFQ9|_bdXMO|7(35m',
@@ -43,7 +44,7 @@ class TestPlayground(unittest.TestCase):
         y = Orange.data.variable.Continuous("word2")
         z = Orange.data.variable.Continuous("word3")
         domain = Orange.data.Domain([x, y, z], False)
-
+ 
         #Data
         data = numpy.array([[1, 2, 3], [3, 2, 1]])
         t = Orange.data.Table(domain, data)

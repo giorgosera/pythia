@@ -4,6 +4,9 @@ Created on 22 Jan 2012
 @author: george
 '''
 from PIL import Image, ImageDraw #!@UnresolvedImport 
+import sys
+import PIL.Image
+sys.modules['Image'] = PIL.Image
 
 class Dendrogram(object):
     '''

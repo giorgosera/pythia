@@ -6,6 +6,7 @@ Created on 21 Jan 2012
 import Orange, orange #!@UnresolvedImport
 import nltk, numpy
 from collections import OrderedDict 
+from analysis.text import TextAnalyser
 
 class AbstractKmeansClusterer(object):
     '''
@@ -22,14 +23,16 @@ class AbstractKmeansClusterer(object):
         self.td_matrix = None
         self.table_name = None
         self.clusters = []
+        self.text_analyser = TextAnalyser()
     
     def add_document(self, id, document):
         '''
         Adds a new document in the cluster structure.
         '''    
+        id, document = self.text_analyser.add_document(id, document)
         self.document_dict[str(id)] = document
-        
-    def get_documents(self, id):
+    
+    def get_documents(self):
         return self.document_dict
     
     def get_document_by_id(self, id):
@@ -108,6 +111,16 @@ class OrangeKmeansClusterer(AbstractKmeansClusterer):
     '''
     A clustering data structure that works with Orange
     '''            
+    
+    def run(self, filename, k=3):
+        '''
+        Runs the kmeans algorithm.
+        '''
+        self.construct_term_doc_matrix()
+        self.save_table(filename)
+        table = self.load_table()
+        km = Orange.clustering.kmeans.Clustering(table, k, initialization= Orange.clustering.kmeans.init_hclustering(n=100), distance =  Orange.distance.instances.PearsonRConstructor)
+        self.split_documents(km, k)
     
     def split_documents(self, km, k):
         '''
@@ -259,7 +272,13 @@ class Cluster(object):
         Returns the top N occuring terms in this cluster.
         '''
         corpus = nltk.TextCollection([document['tokens'] for document in self.document_dict.values()])
-        return nltk.FreqDist(corpus).items()[:N]        
+        return nltk.FreqDist(corpus).items()[:N]     
+    
+    def get_size(self):
+        '''
+        The size of the cluster is defined by the number of its documents.
+        '''   
+        return len(self.document_dict.keys())
     
     def get_collocations(self, n=2, N=5):
         '''

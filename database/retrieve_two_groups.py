@@ -8,26 +8,23 @@ This module utilizes the Otter API bindings for Python to retrieve old tweets.
 import otter #!@UnresolvedImport
 import dateutil.parser, datetime
 import time
-from model.tweets import TopsyTweet
+from model.tweets import TwoGroupsTweet
 from model.agents import Author
 from mongoengine import connect
-from crawlers.CrawlerFactory import CrawlerFactory
 
 PAGE_SIZE = 10
 
 connect("pythia_db")
 
-#The old retrievals were between 1/1/2011 and 15/2/2011 (3 hours)
-mintime = datetime.datetime(2011, 01, 24, 0, 0, 0)
-delta = datetime.timedelta(hours=1)
+mintime = datetime.datetime(2011, 10, 15, 0, 0, 0)
+delta = datetime.timedelta(days=1)
 maxtime = mintime + delta
-final_date = datetime.datetime(2011, 01, 24, 12, 0, 0)
+final_date = datetime.datetime(2011, 10, 18, 0, 0, 0)
 
 count = 0
 exception_log = []
 
-search_hashtags = "#25jan OR #jan25 OR #egypt OR #tahrir OR #fuckmubarak OR #mubarak \
-                   OR #suez OR #DownWithMubarak OR #NOSCAF OR #SCAF OR #cairo"
+search_hashtags = "#football OR football OR #basketball OR basketball"
 
 kw = otter.loadrc() # load api key
 
@@ -39,7 +36,7 @@ while maxtime != final_date:
             search(q=search_hashtags, mintime = time.mktime(mintime.timetuple()), maxtime = time.mktime(maxtime.timetuple()), type='tweet', perpage=100, page=page+1)
             for item in search.response.list:
                 print "Storing tweet #",count, "for the period",mintime,"until",maxtime 
-                tt = TopsyTweet()
+                tt = TwoGroupsTweet()
                 tt.url = item.url
                 tt.text = item.content
                 tt.date = mintime
