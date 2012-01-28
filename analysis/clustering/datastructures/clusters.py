@@ -119,7 +119,8 @@ class OrangeKmeansClusterer(AbstractKmeansClusterer):
         self.construct_term_doc_matrix()
         self.save_table(filename)
         table = self.load_table()
-        km = Orange.clustering.kmeans.Clustering(table, k, initialization= Orange.clustering.kmeans.init_hclustering(n=100), distance =  Orange.distance.instances.PearsonRConstructor)
+        #initialization= Orange.clustering.kmeans.init_hclustering(n=100), distance =  Orange.distance.instances.PearsonRConstructor
+        km = Orange.clustering.kmeans.Clustering(table, k)
         self.split_documents(km, k)
     
     def split_documents(self, km, k):
