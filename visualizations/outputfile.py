@@ -48,8 +48,8 @@ def output_clusters_to_file_translated(clusters, rownames, cluster_struct, filen
         out.write("Cluster"+str(i))
         out.write('\n')
         top_terms = ""
-        for term in cluster_struct.get_most_frequent_terms():
-            top_terms += str(term)
+        #for term in cluster_struct.get_most_frequent_terms():
+        #    top_terms += str(term)
         out.write("Most frequent terms:" + top_terms)
         out.write('\n')
         for document in cluster:

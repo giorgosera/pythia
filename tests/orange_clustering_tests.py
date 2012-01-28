@@ -10,7 +10,7 @@ import datetime, unittest, Orange #!@UnresolvedImport
 from analysis.text import TextAnalyser
 from visualizations.outputfile import output_clusters_to_file_translated  
 from database.warehouse import WarehouseServer
-from analysis.clustering.datastructures.clusters import OrangeClusterer
+from analysis.clustering.datastructures.clusters import OrangeKmeansClusterer
 
 ###########################################
 # GLOBALS                                #
@@ -25,8 +25,8 @@ doc4 = 'I wrote a small Python script to run a clustering algorithm. I hope it w
 doc5 = 'This blog writes about Python and programming in general.'
 
 sample_docs = [doc0, doc1, doc2, doc3, doc4, doc5]
-analyser = TextAnalyser()
-oc = OrangeClusterer()
+analyser = TextAnalyser(ngram=1)
+oc = OrangeKmeansClusterer()
 id = 0
 for s in sample_docs:
     index, d = analyser.add_document(id, s)
@@ -51,22 +51,23 @@ class TestOrangeClustering(unittest.TestCase):
         self.assertEqual(expected, km.clusters)
 
     def test_orange_with_tweets_kmeans(self):    
-        from_date = datetime.datetime(2011, 1, 21, 12, 0, 0)
-        to_date = datetime.datetime(2011, 1, 30, 0, 0, 0) 
-        items = ws.get_documents_by_date(from_date, to_date, 50)
+        from_date = datetime.datetime(2011, 1, 24, 0, 0, 0)
+        to_date = datetime.datetime(2011, 1, 25, 0, 0, 0) 
+        items = ws.get_documents_by_date(from_date, to_date, 10)
  
         t = TextAnalyser()
-        oc = OrangeClusterer()
+        oc = OrangeKmeansClusterer()
         for item in items:
             index, d = t.add_document(item.id, item.text)
             oc.add_document(index, d)
         
         oc.construct_term_doc_matrix()
         oc.save_table("orange_clustering_test")
+        
         k = 5
         table = oc.load_table()
-        km = Orange.clustering.kmeans.Clustering(table, k)
-            
+        km = Orange.clustering.kmeans.Clustering(table, k, distance =  Orange.distance.instances.PearsonRConstructor)
+           
         oc.split_documents(km, k)
         oc.dump_clusters_to_file("kmeans_with_tweets_orange")
             

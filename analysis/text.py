@@ -15,12 +15,12 @@ class TextAnalyser(object):
     This class contains and implements all the methods responsible for 
     text analysis.
     '''
-    def __init__(self):
-        self.frequency_matrix_data = None
+    def __init__(self, ngram=1):
+        self.ngram = ngram
         self.app = PythiaApp()
-        self.ignorewords = set(['rt', 'jan25', 'protest', 'egypt', 'cairo', '25jan', "'s", \
+        self.ignorewords = set(['rt', 'jan25', 'egypt', 'cairo', '25jan', "s", \
                                 '(' , ')', '<', '>', '#', '@', '?', '!', '.', ',', '=', '|', \
-                                '&', ':', '+', '\'', '\'ve',"'m", '-', '"', '."', '...', '..', '--' ])
+                                '&', ':', '+', '\'', '\'ve',"m", 're', '-', '"', '."', '...', '..', '--', '[', ']' ])
         
     def _tokenize(self, document):
         '''
@@ -30,8 +30,24 @@ class TextAnalyser(object):
         '''     
         clean_text = nltk.clean_html(document)
         clean_text = tools.utils.strip_url(clean_text)
-        tokens = nltk.WordPunctTokenizer().tokenize(clean_text)#nltk.word_tokenize(clean_text)
-        tokens = tools.utils.turn_lowercase(tokens)
+        clean_text = tools.utils.strip_mentions(clean_text)
+        
+        if self.ngram == 1:
+            tokens = nltk.WordPunctTokenizer().tokenize(clean_text)#nltk.word_tokenize(clean_text)
+            tokens = tools.utils.turn_lowercase(tokens)
+            tokens = self._filter_tokens(tokens)
+        else:
+            tokens = nltk.WordPunctTokenizer().tokenize(clean_text)
+            lower_tokens = tools.utils.turn_lowercase(tokens)
+            filtered_tokens = self._filter_tokens(lower_tokens)
+            text = nltk.Text(filtered_tokens)
+            if self.ngram == 2:
+                finder = nltk.BigramCollocationFinder.from_words(text)
+            elif self.ngram == 3:
+                finder = nltk.TrigramCollocationFinder.from_words(text)
+            scorer = nltk.metrics.BigramAssocMeasures.jaccard
+            collocations = finder.nbest(scorer, 2)
+            tokens = [' '.join(str(i) for i in collocation) for collocation in collocations]
         return tokens
     
     def _preprocess(self, text):
@@ -43,9 +59,9 @@ class TextAnalyser(object):
         encoding = tools.utils.detect_encoding(text)
         if encoding == 'unicode':
             text = tools.utils.translate_text(text)
-
+        
         tokens = self._tokenize(text)
-        tokens = self._filter_tokens(tokens)
+        #tokens = self._filter_tokens(tokens)
         tokens = [tools.utils.text_stemming(token) for token in tokens]
         word_frequencies = nltk.FreqDist(tokens).items()
 
@@ -60,6 +76,7 @@ class TextAnalyser(object):
         '''
         text, tokens, word_frequencies = self._preprocess(document)
         new_document= {"raw": text, "tokens": tokens, "word_frequencies": word_frequencies}
+        print "Added another"
                 
         return id, new_document
         

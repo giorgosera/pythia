@@ -4,9 +4,11 @@ Created on 26 Jan 2012
 @author: george
 '''
 import unittest
+import numpy
 from analysis.clustering.datastructures.clusters import CustomClusterer
 from analysis.text import TextAnalyser
-import numpy
+from analysis.clustering.algorithms.algorithms import hierarchical, kmeans, cosine, tanimoto
+
 
 ###########################################
 # GLOBALS                                #
@@ -63,14 +65,36 @@ class Test(unittest.TestCase):
                     [0.47083383800061845, 0.0, 0.0]]
         
         self.assertEqual(expected, rtd)
-        
-    def test_most_frequent_terms(self):
+    
+    def test_split_into_clusters(self):
         cc.construct_term_doc_matrix()
-        top = cc.get_most_frequent_terms(N=5)
-        expected = [('frequent', 3), ('sentenc', 3), ('word', 2), ('arab', 1), ('document', 1)]
-        self.assertEqual(expected, top)
+        cc.save_table("orange_clustering_test")
+        k = 2
+        rownames, colnames, data = cc.load_table()
+        km = kmeans(data=data, similarity=cosine, k=2)
 
+        cc.split_documents(km, k)
+    
+        expected_clusters = [{'0': {'tokens': ['frequent', 'frequent', 'frequent', 'word', 'word', 'sentenc', 'sentenc'], 'raw': 'frequent FrEquEnt frequent <li>word</li> word sentence sentence', 'word_frequencies': [('frequent', 3), ('sentenc', 2), ('word', 2)]}, '2': {'tokens': ['token', 'document'], 'raw': 'a is not a toKENIzed document', 'word_frequencies': [('document', 1), ('token', 1)]}}
+                             ,{'1': {'tokens': ['sentenc', 'arab', 'spring'], 'raw': 'sentence <a href="www.google.com">arab</a> spring', 'word_frequencies': [('arab', 1), ('sentenc', 1), ('spring', 1)]}}]
+         
+        self.assertEqual(expected_clusters, [c.get_documents() for c in cc.clusters])
         
+        cc.dump_clusters_to_file("test_cluster_with_samples")
+
+        #The dump should read like below.
+        #=======================================================================
+        # ***********************************************************
+        # Cluster0
+        # Most frequent terms:('frequent', 3)('sentenc', 2)('word', 2)('document', 1)('token', 1)
+        # frequent FrEquEnt frequent <li>word</li> word sentence sentence
+        # a is not a toKENIzed document
+        # 
+        # ***********************************************************
+        # Cluster1
+        # Most frequent terms:('arab', 1)('sentenc', 1)('spring', 1)
+        # sentence <a href="www.google.com">arab</a> spring
+        #=======================================================================
 
 if __name__ == "__main__":
     unittest.main()

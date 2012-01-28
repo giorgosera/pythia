@@ -18,6 +18,9 @@ bingtrans.set_app_id('5521E4A630094D968D49B39B6511A0A76CB025E1')
 
 def strip_url(text):
     return re.compile(r"""((?:[a-z][\w-]+:(?:/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|(([^\s()<>]+|(([^\s()<>]+)))*))+(?:(([^\s()<>]+|(([‌​^\s()<>]+)))*)|[^\s`!()[]{};:'".,<>?«»“”‘’]))""", re.DOTALL).sub('',text)
+
+def strip_mentions(text):
+    return re.compile(r'@[\s,_,A-Z,a-z]+').sub('',text)
     
 def strip_html(html):
     return re.compile(r'<[^>]+>').sub('',html)

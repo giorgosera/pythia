@@ -56,8 +56,8 @@ class Test(unittest.TestCase):
         c2dp.draw()
         
     def test_tweet_hierarchical_clustering(self):        
-        from_date = datetime.datetime(2011, 1, 25, 0, 0, 0)
-        to_date = datetime.datetime(2011, 1, 25, 3, 0, 0) 
+        from_date = datetime.datetime(2011, 1, 25, 12, 0, 0)
+        to_date = datetime.datetime(2011, 1, 25, 13, 0, 0) 
         items = ws.get_documents_by_date(from_date, to_date, 50)
         
         t = TextAnalyser()
@@ -78,7 +78,7 @@ class Test(unittest.TestCase):
     def test_tweet_kmeans_clustering(self):        
         from_date = datetime.datetime(2011, 1, 25, 12, 0, 0)
         to_date = datetime.datetime(2011, 1, 26, 0, 0, 0) 
-        items = ws.get_documents_by_date(from_date, to_date, 50)
+        items = ws.get_documents_by_date(from_date, to_date, 100)
         
         t = TextAnalyser()
         cc = CustomClusterer()

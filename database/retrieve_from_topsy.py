@@ -17,16 +17,21 @@ PAGE_SIZE = 10
 
 connect("pythia_db")
 
-mintime = datetime.datetime(2011, 01, 01, 0, 0, 0)
-delta = datetime.timedelta(hours=3)
+#The old retrievals were between 1/1/2011 and 15/2/2011 (3 hours)
+mintime = datetime.datetime(2011, 01, 24, 0, 0, 0)
+delta = datetime.timedelta(days=1)
 maxtime = mintime + delta
-final_date = datetime.datetime(2011, 02, 15, 0, 0, 0)
+final_date = datetime.datetime(2011, 01, 26, 0, 0, 0)
 
 count = 0
 exception_log = []
 
-search_hashtags = "#25jan OR #jan25 OR #egypt OR #tahrir OR #fuckmubarak OR #mubarak \
-                   OR #suez OR #DownWithMubarak OR #NOSCAF OR #SCAF OR #cairo"
+#===============================================================================
+# search_hashtags = "#25jan OR #jan25 OR #egypt OR #tahrir OR #fuckmubarak OR #mubarak \
+#                   OR #suez OR #DownWithMubarak OR #NOSCAF OR #SCAF OR #cairo"
+#===============================================================================
+
+search_hashtags = "#greece OR #love OR #usa OR #fuck OR #life"
 
 kw = otter.loadrc() # load api key
 

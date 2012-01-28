@@ -11,6 +11,7 @@ import Orange, orange, numpy, bingtrans #!@UnresolvedImport
 import chardet, nltk #!@UnresolvedImport
 from mygengo import MyGengo #!@UnresolvedImport
 from calais import Calais #!@UnresolvedImport
+from numword.numword_en import NumWordEN#!@UnresolvedImport
 import HTMLParser, tools.utils
 
 gengo = MyGengo(
@@ -98,8 +99,9 @@ class TestPlayground(unittest.TestCase):
         self.assertEqual(False, must_be_false)
         
     def test_collocations(self):
-        text = "This is project aims to detect events from twitter feeds and summarize them. George Eracleous"
-        txt = nltk.Text(text.split())
+        text = "This is project George Eracleous aims to detect events from twitter feeds and summarize them. George Eracleous"
+        txt = nltk.Text(tools.utils.turn_lowercase(nltk.WordPunctTokenizer().tokenize(text)))
+        
         finder = nltk.BigramCollocationFinder.from_words(txt)
         scorer = nltk.metrics.BigramAssocMeasures.jaccard
         item = finder.nbest(scorer, 10)

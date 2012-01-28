@@ -13,6 +13,8 @@ mygengo==1.3.3
 networkx==1.5
 nltk==2.0.1rc1
 numpy==1.6.1
+numword==0.4
+odict==1.4.4
 pycrypto==2.4.1
 pyenchant==1.6.5
 pymongo==2.0.1

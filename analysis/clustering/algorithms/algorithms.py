@@ -153,5 +153,5 @@ def kmeans(data, similarity=pearson, k = 10):
                 for j in range(len(average)):
                     average[j] /= len(bestmatches[i])
                 clusters[i]=average
-    
+     
     return bestmatches
