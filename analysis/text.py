@@ -86,7 +86,8 @@ class TextAnalyser(object):
             not_stop_word = token not in nltk.corpus.stopwords.words('english')
             not_ignore_word = token not in self.ignorewords
             ascii = tools.utils.detect_encoding(token) == "ascii"
-            if not_stop_word and not_ignore_word and ascii:
+            not_single_char = len(token) > 1 
+            if not_stop_word and not_ignore_word and ascii and not_single_char:
                 filtered.append(token)
         return filtered         
   

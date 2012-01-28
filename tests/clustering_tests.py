@@ -117,6 +117,8 @@ class TestOrangeClustering(unittest.TestCase):
         rownames, colnames, data = cc.load_table()
         cluster = hierarchical(data)
         
+        rownames = [cc.get_document_by_id(id)["raw"][:140] for id in rownames]
+        
         dendro = Dendrogram(cluster, rownames, "hierarchical_custom_cluster_with_tweets.jpg", cluster.get_height(), cluster.get_depth())
         dendro.draw_node(10, cluster.get_height()/2)
         
