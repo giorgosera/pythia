@@ -188,7 +188,6 @@ class CustomClusterer(AbstractKmeansClusterer):
         It takes as input an object handler for the result of kmeans.
         '''
         clusters = [{} for k in range(k)]
-        [[0, 2] [1]]
         for cluster_id, cluster in enumerate(km):
             for doc_index in cluster:
                 document = self.document_dict.popitem(doc_index)
