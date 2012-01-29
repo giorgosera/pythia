@@ -9,30 +9,10 @@ My playground!
 import unittest
 import Orange, orange, numpy, bingtrans #!@UnresolvedImport
 import chardet, nltk #!@UnresolvedImport
-from mygengo import MyGengo #!@UnresolvedImport
 from calais import Calais #!@UnresolvedImport
-from numword.numword_en import NumWordEN#!@UnresolvedImport
 import HTMLParser, tools.utils
-from nltk.corpus import movie_reviews
-
-gengo = MyGengo(
-    public_key = 'Br1#utdXkjX}w4SX92Vk(UOfQ05^mRkQgPRZ9e(A035(KvUdFQ9|_bdXMO|7(35m',
-    private_key = 'kut$VBhbClg#]@WE]Jhmiz2^QqeRz$^Ydx3W~XNO|#6BvnCvWz73Bywa$c4FjFvZ',
-    sandbox = False, # possibly False, depending on your dev needs
-)
 
 class TestPlayground(unittest.TestCase):
-    
-    def testGengoTranslate(self):
-        translation = gengo.postTranslationJob(job = {
-          'type': 'text', # REQUIRED. Type to translate, you'll probably always put 'text' here (for now ;)
-          'slug': 'Translating Chinese to English with the myGengo API', # REQUIRED. For storing on the myGengo side
-          'body_src': '我們今天要去那裏嗎', # REQUIRED. The text you're translating. ;P
-          'lc_src': 'zh', # REQUIRED. source_language_code (see getServiceLanguages() for a list of codes)  
-          'lc_tgt': 'en', # REQUIRED. target_language_code (see getServiceLanguages() for a list of codes)
-          'tier': 'machine', # REQUIRED. tier type ("machine", "standard", "pro", or "ultra")
-          })
-        print translation['response']['job']['body_tgt']
         
     def testBingTranslate(self):   
         bingtrans.set_app_id('5521E4A630094D968D49B39B6511A0A76CB025E1')  # you can get your AppID at: http://www.bing.com/developers/
@@ -77,10 +57,10 @@ class TestPlayground(unittest.TestCase):
         
     def test_calais_named_entity_extraction(self):
         text = "George Eracleous is a student. He studies the events that took place in Cairo, Egypt."
-        API_KEY = "av536xwvy4mgmcbw9cancqmd"
-        calais = Calais(API_KEY, submitter="python-calais demo")
-        result = calais.analyze(text)
-        print result.print_entities()
+        #API_KEY = "av536xwvy4mgmcbw9cancqmd"
+        #calais = Calais(API_KEY, submitter="python-calais demo")
+        #result = calais.analyze(text)
+        #print result.print_entities()
         
     def test_text_unquoting(self):
         result = HTMLParser.HTMLParser().unescape("@ReemAbdellatif We&#39;ve been so inspired by #Tunisia, it&#39;s intoxicating to think we&#39;ll witness something similar in #Egypt")

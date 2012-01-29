@@ -14,7 +14,7 @@ class AbstractKmeansClusterer(object):
     must be derived from it. 
     '''
 
-    def __init__(self):
+    def __init__(self, k=3, ngram=1):
         '''
         Constructs a new cluster object
         '''
@@ -23,8 +23,9 @@ class AbstractKmeansClusterer(object):
         self.td_matrix = None
         self.table_name = None
         self.clusters = []
-        self.text_analyser = TextAnalyser()
-    
+        self.text_analyser = TextAnalyser(ngram=ngram)
+        self.k = k
+        
     def add_document(self, id, document):
         '''
         Adds a new document in the cluster structure.
@@ -97,6 +98,9 @@ class AbstractKmeansClusterer(object):
                 out.write(document["raw"])
                 out.write('\n')
             i += 1   
+    
+    def run(self):
+        raise NotImplementedError('run is not implemented.')
 
     def load_table(self):
         raise NotImplementedError('load_table is not implemented.')
@@ -112,31 +116,34 @@ class OrangeKmeansClusterer(AbstractKmeansClusterer):
     A clustering data structure that works with Orange
     '''            
     
-    def run(self, filename, k=3):
+    def run(self, filename):
         '''
         Runs the kmeans algorithm.
         '''
         self.construct_term_doc_matrix()
-        self.save_table(filename)
-        table = self.load_table()
-        #initialization= Orange.clustering.kmeans.init_hclustering(n=100), distance =  Orange.distance.instances.PearsonRConstructor
-        km = Orange.clustering.kmeans.Clustering(table, k)
-        self.split_documents(km, k)
+        vars = []
+        for token in self.attributes:
+            vars.append(Orange.data.variable.Continuous(str(token)))
+        domain = Orange.data.Domain(vars, False) #The second argument indicated that the last attr must not be a class
+        table = Orange.data.Table(domain, self.td_matrix)
+        km = Orange.clustering.kmeans.Clustering(table, self.k)        #initialization= Orange.clustering.kmeans.init_hclustering(n=100), distance =  Orange.distance.instances.PearsonRConstructor
+        self.split_documents(km)
+        return km
     
-    def split_documents(self, km, k):
+    def split_documents(self, km):
         '''
         This method splits the whole collection of documents 
         of this data set into the different clusters. Of course
         the algorithm should have been run and then invoke this method.
         It takes as input an object handler for the result of kmeans.
         '''
-        clusters = [{} for k in range(k)]
+        clusters = [{} for k in range(self.k)]
         for doc_index, cluster in enumerate(km.clusters):
             document = self.document_dict.popitem(last=False)
             doc_id = document[0]
             rest = document[1]
             clusters[cluster][doc_id] = rest
-        
+            self.document_dict[doc_id] = rest
         #Finally create K cluster objects with their document dicts. 
         [self.clusters.append(Cluster(id, cluster)) for id, cluster in enumerate(clusters)]
             

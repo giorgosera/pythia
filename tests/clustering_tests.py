@@ -13,6 +13,11 @@ from analysis.clustering.algorithms.algorithms import hierarchical, kmeans, cosi
 from visualizations.dendrogram import Dendrogram
 from visualizations.Cluster2DPlot import Cluster2DPlot
 
+import nimfa, numpy#!@UnresolvedImport
+from scipy.sparse import csr_matrix#!@UnresolvedImport
+from scipy import array#!@UnresolvedImport
+from numpy import dot
+
 ###########################################
 # GLOBALS                                #
 ###########################################
@@ -26,13 +31,11 @@ doc4 = 'I wrote a small Python script to run a clustering algorithm. I hope it w
 doc5 = 'This blog writes about Python and programming in general.'
 sample_docs = [doc0, doc1, doc2, doc3, doc4, doc5]
 
-oc = OrangeKmeansClusterer()
+oc = OrangeKmeansClusterer(k=2)
 id = 0
 for s in sample_docs:
     oc.add_document(id, s)
-    id += 1
-oc.construct_term_doc_matrix()
-oc.save_table("orange_clustering_test") 
+    id += 1 
    
 cc = CustomClusterer()
 id = 0
@@ -49,24 +52,21 @@ class TestOrangeClustering(unittest.TestCase):
     # ORANGE TESTS                            #
     ###########################################       
     def test_orange_sample_doc_kmeans(self):
-        
-        table = oc.load_table()
-        k = 3
-        km = Orange.clustering.kmeans.Clustering(table, k, initialization = Orange.clustering.kmeans.init_diversity)
-  
-        expected = [1, 1, 1, 2, 0, 2]
+        km = oc.run("orange_clustering_test")
+
+        expected = [0, 0, 0, 1, 1, 1]
         self.assertEqual(expected, km.clusters)
 
     def test_orange_with_tweets_kmeans(self):    
-        from_date = datetime.datetime(2011, 1, 24, 0, 0, 0)
+        from_date = datetime.datetime(2011, 1, 23, 0, 0, 0)
         to_date = datetime.datetime(2011, 1, 25, 0, 0, 0) 
-        items = ws.get_documents_by_date(from_date, to_date, 50)
+        items = ws.get_documents_by_date(from_date, to_date, 30)
  
-        oc = OrangeKmeansClusterer()
+        oc = OrangeKmeansClusterer(k=10)
         for item in items:
             oc.add_document(item.id, item.text)
             
-        oc.run("orange_clustering_test", k=10)
+        oc.run("orange_clustering_test")
         oc.dump_clusters_to_file("kmeans_with_tweets_orange")
         
         #Experiments
@@ -75,12 +75,66 @@ class TestOrangeClustering(unittest.TestCase):
             if cluster.get_size() > max[1]:
                 max = (i, cluster.get_size())
 
-        oc_new = OrangeKmeansClusterer()
+        oc_new = OrangeKmeansClusterer(k=5)
         for doc_id in oc.clusters[max[0]].get_documents().keys():
             oc_new.add_document(doc_id, ws.get_document_by_id(doc_id).text)         
         
-        oc_new.run("orange_clustering_test", k=5)
+        oc_new.run("orange_clustering_test")
         oc_new.dump_clusters_to_file("re-kmeans_with_tweets_orange")
+        #End of experiments
+                
+        def showfeatures(w,h,titles,wordvec,out='features.txt'): 
+            outfile=file(out,'w')  
+            pc,wc=numpy.shape(h)
+            toppatterns=[[] for i in range(len(titles))]
+            patternnames=[]
+            
+            # Loop over all the features
+            for i in range(pc):
+              slist=[]
+              # Create a list of words and their weights
+              for j in range(wc):
+                slist.append((h[i,j],wordvec[j]))
+              # Reverse sort the word list
+              slist.sort()
+              slist.reverse()
+              
+              # Print the first six elements
+              n=[s[1] for s in slist[0:6]]
+              outfile.write(str(n)+'\n')
+              patternnames.append(n)
+              
+              # Create a list of articles for this feature
+              flist=[]
+              for j in range(len(titles)):
+                # Add the article with its weight
+                flist.append((w[j,i],titles[j]))
+                toppatterns[j].append((w[j,i],i,titles[j]))
+              
+              # Reverse sort the list
+              flist.sort()
+              flist.reverse()
+              
+              # Show the top 3 articles
+              for f in flist[0:3]:
+                outfile.write(str(f)+'\n')
+              outfile.write('\n')
+            
+            outfile.close()
+            # Return the pattern names for later use
+            return toppatterns,patternnames
+        
+        V = oc.td_matrix
+
+        model = nimfa.mf(V, seed = 'random_vcol', method = 'nmf', rank = 10, max_iter = 65)
+        fitted = nimfa.mf_run(model)
+        w = fitted.basis() 
+        h = fitted.coef()
+        print numpy.shape(w)
+        print numpy.shape(h)
+
+        showfeatures(w,h, [doc["raw"] for doc in oc.document_dict.values()], oc.attributes)
+        
     #===========================================================================
     # def test_orange_with_tweets_hierarchical(self):
     #    data = oc.load_table()
