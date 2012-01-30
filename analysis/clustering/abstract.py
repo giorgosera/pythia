@@ -89,7 +89,7 @@ class AbstractClusterer(object):
             out.write('\n')
             top_terms = ""
             for term in cluster.get_most_frequent_terms(N=10):
-                top_terms += str(term)
+                top_terms += str(term) + " "
             out.write("Most frequent terms:" + top_terms)
             out.write('\n')
             for document in cluster.document_dict.values():

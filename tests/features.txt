@@ -1,60 +1,75 @@
+
+***********************************************************
+Cluster0
+[u'religi', u'make', u'interest', u'histori', u'discuss', u'radio4']
+(0.26652521198851853, u'RT @monaeltahawy: RT @Gheblawi Beyond belief: religious history & make-up of #Egypt interesting discussion #Copts http://www.bbc.co.uk/podcasts/series/belief')
+(0.26652521198851853, u'RT @Gheblawi Beyond belief: religious history & make-up of #Egypt interesting discussion #Copts http://www.bbc.co.uk/podcasts/series/belief')
+(0.19097239310951578, u'BBC radio4 Beyond belief: religious history & make-up of #Egypt v interesting discussion #Copts http://www.bbc.co.uk/podcasts/series/belief')
+(6.1826013433061047e-10, u'Are #Morocco, #Algeria, #Tunisia, #Libya and #Egypt Sub-#Mediterranean #European countries?')
+(4.1494608890607933e-15, u"King #Tut's Tomb to Remain Open: http://ow.ly/3HOVn #Egypt #archaeology")
+(2.2204460492503131e-16, u'\u201cWe Are All Khaled Said\u201d: Will the Revolution Come to #Egypt? - The Daily Beast - http://goo.gl/bSWtP #sidibouzid')
+(2.2204460492503131e-16, u'Ya Zein Rahmat Mubarak flyer in you video: role role http://bit.ly/evAdfp role your so nights remained elusive # 25jan # egypt # tunisia')
+(2.2204460492503131e-16, u'The strong statement: together on January 25, under the banner of Justice-freedom-def get Thawra at 2 pm http://on.fb.me/ff7qdH # 25jan')
+(2.2204460492503131e-16, u'The most rational and best essay so far on Jan. 25.So be a real step towards change and not merely call for a revolution followed by foil http://bit.ly/eP3gVA # 25jan')
+(2.2204460492503131e-16, u'Renewed protests in #Algeria and #Tunisia as Arab unrest spreads RT @seyachoumeh http://kwick.me/ktMh #egypt #yemen via @Sonja_Jo')
+
+
+***********************************************************
+Cluster1
+[u'sleep', u'rose', u'malakish', u'koun', u'khayef', u'tomb']
+(0.24913873327021438, u'# Egypt khayef Koun malakish Egypt rose from sleeping http://www.youtube.com/watch?v=oWZM9fWzvp0&feature=related # 25jan')
+(0.24913873327021438, u'# Egypt khayef Koun malakish Egypt rose from sleeping http://www.youtube.com/watch?v=oWZM9fWzvp0&feature=related # 25jan')
+(2.2204460492503131e-16, u'\u201cWe Are All Khaled Said\u201d: Will the Revolution Come to #Egypt? - The Daily Beast - http://goo.gl/bSWtP #sidibouzid')
+(2.2204460492503131e-16, u'Ya Zein Rahmat Mubarak flyer in you video: role role http://bit.ly/evAdfp role your so nights remained elusive # 25jan # egypt # tunisia')
+(2.2204460492503131e-16, u'The strong statement: together on January 25, under the banner of Justice-freedom-def get Thawra at 2 pm http://on.fb.me/ff7qdH # 25jan')
+(2.2204460492503131e-16, u'The most rational and best essay so far on Jan. 25.So be a real step towards change and not merely call for a revolution followed by foil http://bit.ly/eP3gVA # 25jan')
+(2.2204460492503131e-16, u'Renewed protests in #Algeria and #Tunisia as Arab unrest spreads RT @seyachoumeh http://kwick.me/ktMh #egypt #yemen via @Sonja_Jo')
+(2.2204460492503131e-16, u"RT @royasmusic: U can do it! V @mar3e Egypt's frustrated young wait 4 their lives to begin,&dream of revolution http://bit.ly/f803we #Egypt #jan25 #YesWeCan")
+(2.2204460492503131e-16, u'RT @octavianasr: Renewed protests in #Algeria and #Tunisia as Arab unrest spreads RT @seyachoumeh http://kwick.me/ktMh #egypt #yemen via @Sonja_Jo')
+(2.2204460492503131e-16, u'RT @octavianasr: Renewed protests in #Algeria and #Tunisia as Arab unrest spreads RT @seyachoumeh http://kwick.me/ktMh #egypt #yemen via ...')
+
+
+***********************************************************
+Cluster2
+[u'sub', u'countri', u'peopl', u'kuwait', u'harem', u'cafe']
+(0.41089232334870868, u'Are #Morocco, #Algeria, #Tunisia, #Libya and #Egypt Sub-#Mediterranean #European countries?')
+(6.4398708340168398e-14, u'A harem on "young people" in a cafe in Kuwait http://bit.ly/gzxt9w # Egypt')
+(1.7495834538552178e-14, u"Egypt's frustrated young wait for their lives to begin, and dream of revolution http://bit.ly/f803we #Egypt #jan25 #YesWeCan")
+(1.6961171756895496e-14, u"RT @mar3e Egypt's frustrated young wait for their lives to begin, & dream of revolution http://bit.ly/f803we #Egypt || @Guardian")
+(1.6138021829528169e-14, u"RT @royasmusic: U can do it! V @mar3e Egypt's frustrated young wait 4 their lives to begin,&dream of revolution http://bit.ly/f803we #Egypt #jan25 #YesWeCan")
+(6.5506492240417922e-15, u'\u201cWe Are All Khaled Said\u201d: Will the Revolution Come to #Egypt? - The Daily Beast - http://goo.gl/bSWtP #sidibouzid')
+(8.8436693585806212e-16, u'The most rational and best essay so far on Jan. 25.So be a real step towards change and not merely call for a revolution followed by foil http://bit.ly/eP3gVA # 25jan')
+(2.6447506848120325e-16, u'According to folk Hey Muhammad ... Paul Egypt gets reel: video is the living Tunisia nor death nor Vute lane bridge http://bit.ly/htylff # 25jan # egypt')
+(2.2204460492503131e-16, u'Ya Zein Rahmat Mubarak flyer in you video: role role http://bit.ly/evAdfp role your so nights remained elusive # 25jan # egypt # tunisia')
+(2.2204460492503131e-16, u'The strong statement: together on January 25, under the banner of Justice-freedom-def get Thawra at 2 pm http://on.fb.me/ff7qdH # 25jan')
+
+
+***********************************************************
+Cluster3
+[u'role', u'young', u'zein', u'ya', u'rahmat', u'flyer']
+(0.1773936515741297, u'Ya Zein Rahmat Mubarak flyer in you video: role role http://bit.ly/evAdfp role your so nights remained elusive # 25jan # egypt # tunisia')
+(0.13830417559899461, u'A harem on "young people" in a cafe in Kuwait http://bit.ly/gzxt9w # Egypt')
+(0.052280689663039018, u"Egypt's frustrated young wait for their lives to begin, and dream of revolution http://bit.ly/f803we #Egypt #jan25 #YesWeCan")
+(0.050957484315357127, u"RT @mar3e Egypt's frustrated young wait for their lives to begin, & dream of revolution http://bit.ly/f803we #Egypt || @Guardian")
+(0.048650701279013789, u"RT @royasmusic: U can do it! V @mar3e Egypt's frustrated young wait 4 their lives to begin,&dream of revolution http://bit.ly/f803we #Egypt #jan25 #YesWeCan")
+(0.02972057220800112, u'\u201cWe Are All Khaled Said\u201d: Will the Revolution Come to #Egypt? - The Daily Beast - http://goo.gl/bSWtP #sidibouzid')
+(0.020174789839958348, u'RT @ S_Elhussieny: 500,000 (poster) and 250,000 (t-shirt) to support (Mubarak) 25 Jan-gate Sunrise http://bit.ly/i6p7pA # egypt # 25jan')
+(0.016078311448038701, u'According to folk Hey Muhammad ... Paul Egypt gets reel: video is the living Tunisia nor death nor Vute lane bridge http://bit.ly/htylff # 25jan # egypt')
+(0.0048924507380477648, u'The most rational and best essay so far on Jan. 25.So be a real step towards change and not merely call for a revolution followed by foil http://bit.ly/eP3gVA # 25jan')
+(0.0038991665161626689, u"King #Tut's Tomb to Remain Open: http://ow.ly/3HOVn #Egypt #archaeology")
+
+
+***********************************************************
+Cluster4
 [u'unrest', u'spread', u'renew', u'arab', u'protest', u'lost']
-(0.19600025032388269, u'Renewed protests in #Algeria and #Tunisia as Arab unrest spreads RT @seyachoumeh http://kwick.me/ktMh #egypt #yemen via @Sonja_Jo')
-(0.19600025032388269, u'RT @octavianasr: Renewed protests in #Algeria and #Tunisia as Arab unrest spreads RT @seyachoumeh http://kwick.me/ktMh #egypt #yemen via @Sonja_Jo')
-(0.19600025032388269, u'RT @octavianasr: Renewed protests in #Algeria and #Tunisia as Arab unrest spreads RT @seyachoumeh http://kwick.me/ktMh #egypt #yemen via ...')
-(0.059301241456923247, u'RT @ Alotaibih3af: # Jan25 Hey folks Egypt returned to the Arabs their mother!!!\nArabs lost on lost Egypt ...')
-(0.026913299189348705, u"RT @ AkherElAkhbar: # Egypt Beltagy confirms participation of brothers and members of Parliament's protests January 25, http://bit.ly/hfIZ3H # 25Jan # Jan25 # Egypt")
-(0.026913299189348698, u"RT @ Melshamy: Al emphasizes participation of brothers and members of Parliament's protests January 25, http://bit.ly/gfn42d # 25jan # Egypt # Mb # Tunis # Si ...")
-(0.0029151785300996534, u'According to folk Hey Muhammad ... Paul Egypt gets reel: video is the living Tunisia nor death nor Vute lane bridge http://bit.ly/htylff # 25jan # egypt')
-(0.0020246099575913518, u'The strong statement: together on January 25, under the banner of Justice-freedom-def get Thawra at 2 pm http://on.fb.me/ff7qdH # 25jan')
-(0.0007835819866187537, u'RT @ LoaiNagati: predicted severe and fatal cases stupidity on 25 such as lifting photos of Gamal Abdel Nasser. #jan25')
-(0.00072055466059619112, u'RT @ S_Elhussieny: 500,000 (poster) and 250,000 (t-shirt) to support (Mubarak) 25 Jan-gate Sunrise http://bit.ly/i6p7pA # egypt # 25jan')
-
-[u'sleep', u'rose', u'malakish', u'koun', u'khayef', u'religi']
-(0.29864707832317244, u'# Egypt khayef Koun malakish Egypt rose from sleeping http://www.youtube.com/watch?v=oWZM9fWzvp0&feature=related # 25jan')
-(0.29864707832317244, u'# Egypt khayef Koun malakish Egypt rose from sleeping http://www.youtube.com/watch?v=oWZM9fWzvp0&feature=related # 25jan')
-(2.2204460492503131e-16, u'\u201cWe Are All Khaled Said\u201d: Will the Revolution Come to #Egypt? - The Daily Beast - http://goo.gl/bSWtP #sidibouzid')
-(2.2204460492503131e-16, u'Ya Zein Rahmat Mubarak flyer in you video: role role http://bit.ly/evAdfp role your so nights remained elusive # 25jan # egypt # tunisia')
-(2.2204460492503131e-16, u'The strong statement: together on January 25, under the banner of Justice-freedom-def get Thawra at 2 pm http://on.fb.me/ff7qdH # 25jan')
-(2.2204460492503131e-16, u'The most rational and best essay so far on Jan. 25.So be a real step towards change and not merely call for a revolution followed by foil http://bit.ly/eP3gVA # 25jan')
-(2.2204460492503131e-16, u'Renewed protests in #Algeria and #Tunisia as Arab unrest spreads RT @seyachoumeh http://kwick.me/ktMh #egypt #yemen via @Sonja_Jo')
-(2.2204460492503131e-16, u"RT @royasmusic: U can do it! V @mar3e Egypt's frustrated young wait 4 their lives to begin,&dream of revolution http://bit.ly/f803we #Egypt #jan25 #YesWeCan")
-(2.2204460492503131e-16, u'RT @octavianasr: Renewed protests in #Algeria and #Tunisia as Arab unrest spreads RT @seyachoumeh http://kwick.me/ktMh #egypt #yemen via @Sonja_Jo')
-(2.2204460492503131e-16, u'RT @octavianasr: Renewed protests in #Algeria and #Tunisia as Arab unrest spreads RT @seyachoumeh http://kwick.me/ktMh #egypt #yemen via ...')
-
-[u'sub', u'countri', u'religi', u'make', u'interest', u'histori']
-(0.40095412539630276, u'Are #Morocco, #Algeria, #Tunisia, #Libya and #Egypt Sub-#Mediterranean #European countries?')
-(2.2204460492503131e-16, u'\u201cWe Are All Khaled Said\u201d: Will the Revolution Come to #Egypt? - The Daily Beast - http://goo.gl/bSWtP #sidibouzid')
-(2.2204460492503131e-16, u'Ya Zein Rahmat Mubarak flyer in you video: role role http://bit.ly/evAdfp role your so nights remained elusive # 25jan # egypt # tunisia')
-(2.2204460492503131e-16, u'The strong statement: together on January 25, under the banner of Justice-freedom-def get Thawra at 2 pm http://on.fb.me/ff7qdH # 25jan')
-(2.2204460492503131e-16, u'The most rational and best essay so far on Jan. 25.So be a real step towards change and not merely call for a revolution followed by foil http://bit.ly/eP3gVA # 25jan')
-(2.2204460492503131e-16, u'Renewed protests in #Algeria and #Tunisia as Arab unrest spreads RT @seyachoumeh http://kwick.me/ktMh #egypt #yemen via @Sonja_Jo')
-(2.2204460492503131e-16, u"RT @royasmusic: U can do it! V @mar3e Egypt's frustrated young wait 4 their lives to begin,&dream of revolution http://bit.ly/f803we #Egypt #jan25 #YesWeCan")
-(2.2204460492503131e-16, u'RT @octavianasr: Renewed protests in #Algeria and #Tunisia as Arab unrest spreads RT @seyachoumeh http://kwick.me/ktMh #egypt #yemen via @Sonja_Jo')
-(2.2204460492503131e-16, u'RT @octavianasr: Renewed protests in #Algeria and #Tunisia as Arab unrest spreads RT @seyachoumeh http://kwick.me/ktMh #egypt #yemen via ...')
-(2.2204460492503131e-16, u'RT @monaeltahawy: RT @Gheblawi Beyond belief: religious history & make-up of #Egypt interesting discussion #Copts http://www.bbc.co.uk/podcasts/series/belief')
-
-[u'peopl', u'kuwait', u'harem', u'cafe', u'young', u'wait']
-(0.2976941437124031, u'A harem on "young people" in a cafe in Kuwait http://bit.ly/gzxt9w # Egypt')
-(0.067181484495506982, u"Egypt's frustrated young wait for their lives to begin, and dream of revolution http://bit.ly/f803we #Egypt #jan25 #YesWeCan")
-(0.065006630597554238, u"RT @mar3e Egypt's frustrated young wait for their lives to begin, & dream of revolution http://bit.ly/f803we #Egypt || @Guardian")
-(0.061779841505097535, u"RT @royasmusic: U can do it! V @mar3e Egypt's frustrated young wait 4 their lives to begin,&dream of revolution http://bit.ly/f803we #Egypt #jan25 #YesWeCan")
-(0.0040009651305890912, u'According to folk Hey Muhammad ... Paul Egypt gets reel: video is the living Tunisia nor death nor Vute lane bridge http://bit.ly/htylff # 25jan # egypt')
-(0.0014626751846541235, u'The most rational and best essay so far on Jan. 25.So be a real step towards change and not merely call for a revolution followed by foil http://bit.ly/eP3gVA # 25jan')
-(0.00028760466534565764, u'RT @ Alotaibih3af: # Jan25 Hey folks Egypt returned to the Arabs their mother!!!\nArabs lost on lost Egypt ...')
-(1.681794177943554e-05, u'The strong statement: together on January 25, under the banner of Justice-freedom-def get Thawra at 2 pm http://on.fb.me/ff7qdH # 25jan')
-(2.1937033134496237e-12, u"King #Tut's Tomb to Remain Open: http://ow.ly/3HOVn #Egypt #archaeology")
-(7.1264201049077232e-14, u'RT @monaeltahawy: RT @Gheblawi Beyond belief: religious history & make-up of #Egypt interesting discussion #Copts http://www.bbc.co.uk/podcasts/series/belief')
-
-[u'said', u'khale', u'daili', u'come', u'beast', u'revolut']
-(0.38350750504076719, u'\u201cWe Are All Khaled Said\u201d: Will the Revolution Come to #Egypt? - The Daily Beast - http://goo.gl/bSWtP #sidibouzid')
-(0.088796226854860466, u'Ya Zein Rahmat Mubarak flyer in you video: role role http://bit.ly/evAdfp role your so nights remained elusive # 25jan # egypt # tunisia')
-(0.048104354269684478, u"Egypt's frustrated young wait for their lives to begin, and dream of revolution http://bit.ly/f803we #Egypt #jan25 #YesWeCan")
-(0.046326367096077882, u"RT @mar3e Egypt's frustrated young wait for their lives to begin, & dream of revolution http://bit.ly/f803we #Egypt || @Guardian")
-(0.043893298244292868, u"RT @royasmusic: U can do it! V @mar3e Egypt's frustrated young wait 4 their lives to begin,&dream of revolution http://bit.ly/f803we #Egypt #jan25 #YesWeCan")
-(0.016688201034553683, u'The most rational and best essay so far on Jan. 25.So be a real step towards change and not merely call for a revolution followed by foil http://bit.ly/eP3gVA # 25jan')
-(0.011268689307759544, u'RT @ S_Elhussieny: 500,000 (poster) and 250,000 (t-shirt) to support (Mubarak) 25 Jan-gate Sunrise http://bit.ly/i6p7pA # egypt # 25jan')
-(0.009319135541652198, u'According to folk Hey Muhammad ... Paul Egypt gets reel: video is the living Tunisia nor death nor Vute lane bridge http://bit.ly/htylff # 25jan # egypt')
-(0.0057282639415844978, u"Aswan's floating hotel fleet cruises toward disaster: http://bit.ly/fBK515 #egypt #aswan")
-(0.0012657446647232928, u"RT @ Melshamy: Al emphasizes participation of brothers and members of Parliament's protests January 25, http://bit.ly/gfn42d # 25jan # Egypt # Mb # Tunis # Si ...")
+(0.22019256557328745, u'Renewed protests in #Algeria and #Tunisia as Arab unrest spreads RT @seyachoumeh http://kwick.me/ktMh #egypt #yemen via @Sonja_Jo')
+(0.22019256557328745, u'RT @octavianasr: Renewed protests in #Algeria and #Tunisia as Arab unrest spreads RT @seyachoumeh http://kwick.me/ktMh #egypt #yemen via @Sonja_Jo')
+(0.22019256557328745, u'RT @octavianasr: Renewed protests in #Algeria and #Tunisia as Arab unrest spreads RT @seyachoumeh http://kwick.me/ktMh #egypt #yemen via ...')
+(0.066592450647215945, u'RT @ Alotaibih3af: # Jan25 Hey folks Egypt returned to the Arabs their mother!!!\nArabs lost on lost Egypt ...')
+(0.030221679693073929, u"RT @ AkherElAkhbar: # Egypt Beltagy confirms participation of brothers and members of Parliament's protests January 25, http://bit.ly/hfIZ3H # 25Jan # Jan25 # Egypt")
+(0.030221679693073926, u"RT @ Melshamy: Al emphasizes participation of brothers and members of Parliament's protests January 25, http://bit.ly/gfn42d # 25jan # Egypt # Mb # Tunis # Si ...")
+(0.003158365921341087, u'According to folk Hey Muhammad ... Paul Egypt gets reel: video is the living Tunisia nor death nor Vute lane bridge http://bit.ly/htylff # 25jan # egypt')
+(0.0022585843627813567, u'The strong statement: together on January 25, under the banner of Justice-freedom-def get Thawra at 2 pm http://on.fb.me/ff7qdH # 25jan')
+(0.00087203814806452906, u'RT @ LoaiNagati: predicted severe and fatal cases stupidity on 25 such as lifting photos of Gamal Abdel Nasser. #jan25')
+(0.00065018935789733234, u'RT @ S_Elhussieny: 500,000 (poster) and 250,000 (t-shirt) to support (Mubarak) 25 Jan-gate Sunrise http://bit.ly/i6p7pA # egypt # 25jan')
 

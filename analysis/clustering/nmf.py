@@ -76,6 +76,10 @@ class NMFClusterer(AbstractClusterer):
         
         # Loop over all the features
         for i in range(pc):
+          outfile.write('\n')
+          outfile.write('***********************************************************')
+          outfile.write('\n')
+          outfile.write('Cluster' + str(i) + '\n')
           slist=[]
           # Create a list of words and their weights
           for j in range(wc):
