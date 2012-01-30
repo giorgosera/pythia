@@ -4,7 +4,7 @@ Created on 22 Jan 2012
 @author: george
 '''
 
-from analysis.clustering.datastructures.clusters import Bicluster
+from analysis.clustering.structures import Bicluster
 from math import sqrt
 import numpy, random, math
 

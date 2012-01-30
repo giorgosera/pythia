@@ -22,7 +22,12 @@ class TwoGroupsTweet(Tweet):
     meta = {"collection": "TwoGroupsTweets"}
     #The url of the original tweet
     url = StringField(required=True)
-    
+
+class CyprusTweet(Tweet):
+    meta = {"collection": "CyprusTweets"}
+    #The url of the original tweet
+    url = StringField(required=True)
+        
 class TopsyTweet(Tweet):
     meta = {"collection": "TopsyTweets"}
     #The url of the original tweet

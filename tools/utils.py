@@ -49,8 +49,7 @@ def detect_encoding(text):
 def translate_text(text, src='ar', tgt='en'):
     translation = text
     try:
-        pass
-        #translation =  bingtrans.translate(text, src, tgt)            
+        translation =  bingtrans.translate(text, src, tgt)            
     except ValueError:
         pass
     return translation       

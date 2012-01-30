@@ -6,17 +6,12 @@ Created on 13 Nov 2011
 
 Unit tests for the analysis.clustering package.
 '''
-import datetime, unittest, Orange, orange, orngClustering #!@UnresolvedImport
+import datetime, unittest 
 from database.warehouse import WarehouseServer
-from analysis.clustering.datastructures.clusters import OrangeKmeansClusterer, CustomClusterer
+from analysis.clustering.kmeans import OrangeKmeansClusterer, CustomClusterer
 from analysis.clustering.algorithms.algorithms import hierarchical, kmeans, cosine
 from visualizations.dendrogram import Dendrogram
 from visualizations.Cluster2DPlot import Cluster2DPlot
-
-import nimfa, numpy#!@UnresolvedImport
-from scipy.sparse import csr_matrix#!@UnresolvedImport
-from scipy import array#!@UnresolvedImport
-from numpy import dot
 
 ###########################################
 # GLOBALS                                #
@@ -83,57 +78,6 @@ class TestOrangeClustering(unittest.TestCase):
         oc_new.dump_clusters_to_file("re-kmeans_with_tweets_orange")
         #End of experiments
                 
-        def showfeatures(w,h,titles,wordvec,out='features.txt'): 
-            outfile=file(out,'w')  
-            pc,wc=numpy.shape(h)
-            toppatterns=[[] for i in range(len(titles))]
-            patternnames=[]
-            
-            # Loop over all the features
-            for i in range(pc):
-              slist=[]
-              # Create a list of words and their weights
-              for j in range(wc):
-                slist.append((h[i,j],wordvec[j]))
-              # Reverse sort the word list
-              slist.sort()
-              slist.reverse()
-              
-              # Print the first six elements
-              n=[s[1] for s in slist[0:6]]
-              outfile.write(str(n)+'\n')
-              patternnames.append(n)
-              
-              # Create a list of articles for this feature
-              flist=[]
-              for j in range(len(titles)):
-                # Add the article with its weight
-                flist.append((w[j,i],titles[j]))
-                toppatterns[j].append((w[j,i],i,titles[j]))
-              
-              # Reverse sort the list
-              flist.sort()
-              flist.reverse()
-              
-              # Show the top 3 articles
-              for f in flist[0:3]:
-                outfile.write(str(f)+'\n')
-              outfile.write('\n')
-            
-            outfile.close()
-            # Return the pattern names for later use
-            return toppatterns,patternnames
-        
-        V = oc.td_matrix
-
-        model = nimfa.mf(V, seed = 'random_vcol', method = 'nmf', rank = 10, max_iter = 65)
-        fitted = nimfa.mf_run(model)
-        w = fitted.basis() 
-        h = fitted.coef()
-        print numpy.shape(w)
-        print numpy.shape(h)
-
-        showfeatures(w,h, [doc["raw"] for doc in oc.document_dict.values()], oc.attributes)
         
     #===========================================================================
     # def test_orange_with_tweets_hierarchical(self):
