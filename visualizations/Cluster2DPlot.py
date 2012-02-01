@@ -3,7 +3,7 @@ Created on 22 Jan 2012
 
 @author: george
 '''
-from analysis.clustering.algorithms.algorithms import pearson
+from analysis.clustering.algorithms import pearson
 from PIL import Image, ImageDraw #!@UnresolvedImport 
 import random, math
 

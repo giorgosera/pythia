@@ -10,6 +10,13 @@ import tools.utils, HTMLParser
 import nltk #!@UnresolvedImport
 from application.boot import PythiaApp
 
+###########################################
+# GLOBALS                                #
+###########################################
+ignorewords = set(['rt', 'jan25', 'egypt', 'cairo', '25jan', "s", \
+                '(' , ')', '<', '>', '#', '@', '?', '!', '.', ',', '=', '|', \
+                '&', ':', '+', '\'', '\'ve',"m", 're', '-', '"', '."', '...', '..', '--', '[', ']' ])
+
 class TextAnalyser(object):
     '''
     This class contains and implements all the methods responsible for 
@@ -18,9 +25,6 @@ class TextAnalyser(object):
     def __init__(self, ngram=1):
         self.ngram = ngram
         self.app = PythiaApp()
-        self.ignorewords = set(['rt', 'jan25', 'egypt', 'cairo', '25jan', "s", \
-                                '(' , ')', '<', '>', '#', '@', '?', '!', '.', ',', '=', '|', \
-                                '&', ':', '+', '\'', '\'ve',"m", 're', '-', '"', '."', '...', '..', '--', '[', ']' ])
         
     def _tokenize(self, document):
         '''
@@ -63,7 +67,6 @@ class TextAnalyser(object):
             text = tools.utils.translate_text(text)
         
         tokens = self._tokenize(text)
-        #tokens = self._filter_tokens(tokens)
         tokens = [tools.utils.text_stemming(token) for token in tokens]
         word_frequencies = nltk.FreqDist(tokens).items()
 
@@ -84,7 +87,7 @@ class TextAnalyser(object):
         filtered = []
         for token in tokens:
             not_stop_word = token not in nltk.corpus.stopwords.words('english')
-            not_ignore_word = token not in self.ignorewords
+            not_ignore_word = token not in ignorewords
             ascii = tools.utils.detect_encoding(token) == "ascii"
             not_single_char = len(token) > 1 
             if not_stop_word and not_ignore_word and ascii and not_single_char:

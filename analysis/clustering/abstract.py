@@ -93,8 +93,8 @@ class AbstractClusterer(object):
             out.write("Most frequent terms:" + top_terms)
             out.write('\n')
             for document in cluster.document_dict.values():
-                if document["weight"] != None:
-                    out.write(str(document["weight"]) + "-->")
+                #if document["weight"] != None:
+                #    out.write(str(document["weight"]) + "-->")
                 out.write(document["raw"])
                 out.write('\n')
             i += 1   

@@ -9,7 +9,7 @@ import unittest
 
 from database.warehouse import WarehouseServer
 from analysis.text import TextAnalyser
-from analysis.clustering.algorithms.algorithms import hierarchical, cosine, pearson
+from analysis.clustering.algorithms import *
 from visualizations.dendrogram import Dendrogram
 from visualizations.Cluster2DPlot import Cluster2DPlot
 

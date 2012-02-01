@@ -25,24 +25,23 @@ class TestTextAnalyserFunctions(unittest.TestCase):
         freq3 = [('document', 1), ('token', 1)]
         
         
-        entry1 = {"raw": doc1_raw, "tokens":doc1_tokens, "word_frequencies":freq1}
-        entry2 = {"raw": doc2_raw, "tokens":doc2_tokens, "word_frequencies":freq2}
-        entry3 = {"raw": doc3_raw, "tokens":doc3_tokens, "word_frequencies":freq3}
-        
-        global_freqs_expected = {'word': 1, 'sentenc': 2, 'arab': 1, 'token': 1, 'spring': 1, 'document': 1, 'frequent': 1}
+        entry1 = {"tokens":doc1_tokens, "raw": doc1_raw, "word_frequencies":freq1}
+        entry2 = {"tokens":doc2_tokens, "raw": doc2_raw, "word_frequencies":freq2}
+        entry3 = {"tokens":doc3_tokens, "raw": doc3_raw, "word_frequencies":freq3}
         
         expected = {'1': entry1, '2': entry2, '3': entry3}
         
         sample_docs = [doc1_raw, doc2_raw, doc3_raw]
-
+        
+        calculated = {}
         analyser = TextAnalyser()
         i = 1
         for s in sample_docs:
-            analyser.add_document(i, s)
+            i, d = analyser.add_document(i, s)
+            calculated[str(i)] = d
             i += 1
         
-        self.assertEqual(expected, analyser.get_documents())
-        self.assertEqual(global_freqs_expected, analyser.get_global_token_frequencies())
+        self.assertEqual(expected, calculated)
         
     def test_unicode_doc_translation(self):
         document = 'هذا اختبار' 
@@ -57,7 +56,7 @@ class TestTextAnalyserFunctions(unittest.TestCase):
         text = "This is a sample text. # ! . "
         analyser = TextAnalyser()
         processed = analyser._preprocess(text)
-        expected = ('This is a sample text. # ! . ', ['sampl', 'text.'], [('sampl', 1), ('text.', 1)])
+        expected = ('This is a sample text. # ! . ', ['sampl', 'text'], [('sampl', 1), ('text', 1)])
         self.assertEqual(expected, processed)
         
     def test_tfidf(self):

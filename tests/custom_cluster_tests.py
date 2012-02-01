@@ -6,7 +6,7 @@ Created on 26 Jan 2012
 import unittest
 import numpy
 from analysis.clustering.kmeans import CustomClusterer
-from analysis.clustering.algorithms.algorithms import hierarchical, kmeans, cosine, tanimoto
+from analysis.clustering.algorithms import *
 
 
 ###########################################

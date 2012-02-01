@@ -18,7 +18,7 @@ class Test(unittest.TestCase):
         from_date = datetime.datetime(2011, 1, 23, 0, 0, 0)
         to_date = datetime.datetime(2011, 1, 25, 0, 0, 0) 
         items = ws.get_documents_by_date(from_date, to_date, 30)
-        nmfc = NMFClusterer(ngram=1)
+        nmfc = NMFClusterer(ngram=2)
 
         for item in items:
             nmfc.add_document(item.id, item.text)

@@ -55,9 +55,9 @@ class TestOrangeClustering(unittest.TestCase):
     def test_orange_with_tweets_kmeans(self):    
         from_date = datetime.datetime(2011, 1, 23, 0, 0, 0)
         to_date = datetime.datetime(2011, 1, 25, 0, 0, 0) 
-        items = ws.get_documents_by_date(from_date, to_date, 30)
+        items = ws.get_documents_by_date(from_date, to_date, 50)
  
-        oc = OrangeKmeansClusterer(k=10)
+        oc = OrangeKmeansClusterer(k=10, ngram=2)
         for item in items:
             oc.add_document(item.id, item.text)
             
@@ -70,7 +70,7 @@ class TestOrangeClustering(unittest.TestCase):
             if cluster.get_size() > max[1]:
                 max = (i, cluster.get_size())
 
-        oc_new = OrangeKmeansClusterer(k=5)
+        oc_new = OrangeKmeansClusterer(k=5, ngram=2)
         for doc_id in oc.clusters[max[0]].get_documents().keys():
             oc_new.add_document(doc_id, ws.get_document_by_id(doc_id).text)         
         

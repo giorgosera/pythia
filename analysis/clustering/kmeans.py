@@ -37,7 +37,6 @@ class OrangeKmeansClusterer(AbstractKmeansClusterer):
         clusters = [{} for k in range(self.k)]
         for doc_index, cluster in enumerate(km.clusters):
             document = self.document_dict.popitem(last=False)
-            print document
             doc_id = document[0]
             rest = document[1]
             clusters[cluster][doc_id] = rest
