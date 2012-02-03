@@ -44,6 +44,11 @@ while maxtime != final_date:
                 tt.text = item.content
                 tt.date = mintime
                 tt.screen_name = item.trackback_author_nick
+                tt.retweet_count = item.trackback_total
+                tt.author_screen_name = item.trackback_author_nick
+                tt.author_name = item.trackback_author_name
+                print tt.url
+                print tt.author_name
                 tt.save(safe=True)
                 count += 1     
         except Exception, e:

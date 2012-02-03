@@ -25,5 +25,21 @@ class TestToolsFunctions(unittest.TestCase):
         self.assertEqual(calculated2, expected2)
         self.assertEqual(calculated3, expected3)
         
+    def test_is_a_retweet_method(self):
+        tweet_with_RT = "RT @monaeltahawy: RT @Gheblawi Beyond belief: religious history &amp; make-up of #Egypt interesting discussion #Copts http://www.bbc.co.uk/podcasts/series/belief"
+        tweet_with_VIA= "Breaking News - Messi spotted outside the Etihad #transferdeadlineday http://twitpic.com/8dwcum (via @AndrewBloch )"
+        not_a_retweet = "This is not a retweet #test"
+        tweet_with_almost_RT = "RT Beyond belief: religious history &amp; make-up of #Egypt interesting discussion #Copts http://www.bbc.co.uk/podcasts/series/belief"
+        result1 = tools.utils.is_a_retweet(tweet_with_RT)
+        result2 = tools.utils.is_a_retweet(tweet_with_VIA)
+        result3 = tools.utils.is_a_retweet(not_a_retweet)
+        result4 = tools.utils.is_a_retweet(tweet_with_almost_RT)
+        
+        self.assertEqual(True, result1)
+        self.assertEqual(True, result2)
+        self.assertEqual(False, result3)
+        self.assertEqual(False, result4)
+        
+        
 if __name__ == "__main__":
     unittest.main()

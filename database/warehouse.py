@@ -27,6 +27,14 @@ class WarehouseServer(object):
         t = TopsyTweet.objects(Q(date__gte=from_date) & Q(date__lte=to_date)).limit(limit)
         return t
     
+    def get_top_documents_by_date(self, from_date, to_date, limit = 10000, threshold=5, collection="TopsyTweets"):
+        '''
+        This is a getter which returns the top documents (in terms of retweets which were retrieved during
+        the period from_date <--> to_date. 
+        '''
+        t = TopsyTweet.objects(Q(date__gte=from_date) & Q(date__lte=to_date) & Q(retweet_count__gte=threshold)).limit(limit)
+        return t
+    
     def get_all_documents(self, collection="TopsyTweets"):
         '''
         This is a getter which returns all the documents in the collection.

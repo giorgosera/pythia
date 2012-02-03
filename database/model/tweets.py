@@ -8,7 +8,8 @@ from mongoengine import Document, StringField, DateTimeField, IntField
 
 
 class Tweet(Document):
-    screen_name = StringField(required=True)
+    author_screen_name = StringField(required=True)
+    author_name = StringField(required=True)
     date = DateTimeField(required=True, default=datetime.datetime.utcnow)
     text = StringField(required=True)
     
@@ -32,6 +33,7 @@ class TopsyTweet(Tweet):
     meta = {"collection": "TopsyTweets"}
     #The url of the original tweet
     url = StringField(required=True)
+    retweet_count = IntField(required=True, default=0)
 
     #What else is available in response:
     #title = StringField()

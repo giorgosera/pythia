@@ -11,6 +11,8 @@ import Orange, orange, numpy, bingtrans #!@UnresolvedImport
 import chardet, nltk #!@UnresolvedImport
 from calais import Calais #!@UnresolvedImport
 import HTMLParser, tools.utils
+import matplotlib.pyplot as plt  #!@UnresolvedImport
+import AlchemyAPI#!@UnresolvedImport
 
 class TestPlayground(unittest.TestCase):
         
@@ -89,15 +91,23 @@ class TestPlayground(unittest.TestCase):
  #       item = finder.nbest(scorer, 10)
  #       print ' '.join(str(i) for i in item[0])
  #==============================================================================
- 
-    def test_plot(self):
-        import matplotlib
-        matplotlib.use('GTKAgg')
-        import matplotlib.pyplot as plt
-        radius = [1.0, 2.0, 3.0, 4.0, 5.0, 6.0]
-        area = [3.14159, 12.56636, 28.27431, 50.26544, 78.53975, 113.09724]
-        plt.plot(radius, area)
-        plt.show()
+    
+    #===========================================================================
+    # def test_plot(self):
+    #    import matplotlib
+    #    matplotlib.use('GTKAgg')
+    #    import matplotlib.pyplot as plt
+    #    radius = [1.0, 2.0, 3.0, 4.0, 5.0, 6.0]
+    #    area = [3.14159, 12.56636, 28.27431, 50.26544, 78.53975, 113.09724]
+    #    plt.plot(radius, area)
+    #    plt.show()
+    #===========================================================================
+    
+    def test_alchemy(self):
+        alchemyObj = AlchemyAPI.AlchemyAPI()
+        alchemyObj.setAPIKey("d7605e69dd3d2d7a032f11272d9b000e77d43545");
+        result = alchemyObj.TextGetRankedKeywords("Hello my name is Bob Jones.  I am speaking to you at this very moment.  Are you listening to me, Bob?");
+        print result
         
 if __name__ == "__main__":
     unittest.main()

@@ -9,7 +9,7 @@ Unit tests for the analysis.clustering package.
 import datetime, unittest 
 from database.warehouse import WarehouseServer
 from analysis.clustering.kmeans import OrangeKmeansClusterer, CustomClusterer
-from analysis.clustering.algorithms.algorithms import hierarchical, kmeans, cosine
+from analysis.clustering.algorithms import *
 from visualizations.dendrogram import Dendrogram
 from visualizations.Cluster2DPlot import Cluster2DPlot
 
@@ -54,10 +54,10 @@ class TestOrangeClustering(unittest.TestCase):
 
     def test_orange_with_tweets_kmeans(self):    
         from_date = datetime.datetime(2011, 1, 23, 0, 0, 0)
-        to_date = datetime.datetime(2011, 1, 25, 0, 0, 0) 
-        items = ws.get_documents_by_date(from_date, to_date, 50)
- 
-        oc = OrangeKmeansClusterer(k=10, ngram=2)
+        to_date = datetime.datetime(2011, 1, 27, 0, 0, 0) 
+        items = ws.get_top_documents_by_date(from_date, to_date, threshold=1)
+
+        oc = OrangeKmeansClusterer(k=60, ngram=1)
         for item in items:
             oc.add_document(item.id, item.text)
             

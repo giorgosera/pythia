@@ -6,8 +6,9 @@ Created on 14 Nov 2011
 
 This file contains useful functions used throughout the application.
 '''
-import re, math, chardet, bingtrans, enchant #!@UnresolvedImport
+import re, math, chardet, bingtrans, enchant, nltk, numpy #!@UnresolvedImport
 from nltk.stem.porter import PorterStemmer #!@UnresolvedImport
+import twitter_text#!@UnresolvedImport
 
 ###########################################
 # GLOBALS                                #
@@ -68,3 +69,29 @@ def tfidf(token_occurences, no_of_tokens, no_of_docs, token_appears_in):
     tf = float(token_occurences) / float(no_of_tokens)
     idf = math.log(float(no_of_docs) / float(token_appears_in))
     return tf*idf
+
+def is_a_retweet(tweet):
+    '''
+    A regular expression is used to identify retweets. Note that 
+    Twitter identifies retweets either with "RT" followed by username
+    or "via" followed by username. 
+    '''
+    rt_patterns = re.compile(r"(RT|via)((?:\b\W*@\w+)+)", re.IGNORECASE)
+    match = rt_patterns.search(tweet)
+    if match != None:
+        return True
+    else:
+        return False
+
+def is_a_mention(tweet):
+    '''
+    A regular expression is used to identify mentions.
+    '''
+    extractor = twitter_text.Extractor(tweet)
+    entities = []
+    for um in extractor.extract_mentioned_screen_names_with_indices():
+        entities['user_mentions'].append(um)
+    if len(entities) > 0:
+        return True
+    else:
+        return False

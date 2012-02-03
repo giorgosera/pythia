@@ -93,20 +93,4 @@ class TextAnalyser(object):
             if not_stop_word and not_ignore_word and ascii and not_single_char:
                 filtered.append(token)
         return filtered         
-  
-#    def retweets_patterns(self):
-#        '''
-#        A regular expression is used to identify retweets. Note that 
-#        Twitter identifies retweets either with "RT" followed by username
-#        or "via" followed by username. 
-#        It returns a list of dictionaries containing the origin and the user 
-#        who retweeted.
-#        
-#        #TODO: Refactor regex generation to the tools package
-#        '''
-#        rt_patterns = re.compile(r"(RT|via)((?:\b\W*@\w+)+)", re.IGNORECASE)
-#        rt_origins = []
-#        for t in self.tweets:
-#            rt_origins += rt_patterns.findall(t)
-#              
-#        return rt_origins
+

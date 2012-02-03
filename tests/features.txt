@@ -1,0 +1,16 @@
+
+***********************************************************
+Cluster0
+['frequent', 'word', 'sentenc', 'spring', 'arab', 'token']
+(1.0768534397397329, 'frequent FrEquEnt frequent <li>word</li> word sentence sentence')
+(0.2784217211023442, 'sentence <a href="www.google.com">arab</a> spring')
+(2.2204460492503131e-16, 'a is not a toKENIzed document')
+
+
+***********************************************************
+Cluster1
+['token', 'document', 'spring', 'arab', 'sentenc', 'word']
+(1.6300399385167166, 'a is not a toKENIzed document')
+(6.598581498999105e-07, 'sentence <a href="www.google.com">arab</a> spring')
+(1.7209707092382426e-11, 'frequent FrEquEnt frequent <li>word</li> word sentence sentence')
+
