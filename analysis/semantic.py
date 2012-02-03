@@ -4,8 +4,7 @@ Created on 28 Nov 2011
 @author: george
 '''
 import AlchemyAPI#!@UnresolvedImport
-from lxml import etree#!@UnresolvedImport
-from StringIO import StringIO
+import tools.utils
 
 class AbstractSemanticAnalyser(object):
     '''
@@ -21,26 +20,7 @@ class AbstractSemanticAnalyser(object):
         alchemyObj = AlchemyAPI.AlchemyAPI()
         alchemyObj.setAPIKey("d7605e69dd3d2d7a032f11272d9b000e77d43545");
         self.alchemy = alchemyObj
-    
-    def parse_result(self, result, type):
-        '''
-        Parses the result returned from Alchemy and constructs
-        and dict.
-        '''
-        context = etree.iterparse(StringIO(result))
-        object_dict = {}
-        objects = []
-        for action, elem in context:
-            if not elem.text:
-                text = "None"
-            else:
-                text = elem.text
-            object_dict[elem.tag] = text
-            if elem.tag == type:
-                objects.append(object_dict)
-                object_dict = {}
-        return objects
-        
+        self.language = None       
     
     def analyse_text(self, text):
         raise NotImplementedError('run is not implemented.')
@@ -52,13 +32,16 @@ class TwitterSemanticAnalyser(AbstractSemanticAnalyser):
     
     def analyse_text(self, text):
         entities = self.extract_entities(text)
+        sentiment = self.extract_sentiment(text)
+        keywords = self.extract_keywords(text)
+        return entities, sentiment, keywords
     
     def extract_entities(self, text):
         '''
         Extracts the main entities in this text.
         '''
         result = self.alchemy.TextGetRankedNamedEntities(text)     
-        entities = self.parse_result(result, "entity")
+        entities = tools.utils.parse_result(result, "entity")
         return entities 
     
     def extract_sentiment(self, text):
@@ -66,5 +49,13 @@ class TwitterSemanticAnalyser(AbstractSemanticAnalyser):
         Extracts the sentiment of this text.
         '''
         result = self.alchemy.TextGetTextSentiment(text);  
-        sentiment = self.parse_result(result, "docSentiment") 
+        sentiment = tools.utils.parse_result(result, "docSentiment") 
         return sentiment
+    
+    def extract_keywords(self, text):
+        '''
+        Extracts important keywords in this text.
+        '''
+        result = self.alchemy.TextGetRankedKeywords(text);  
+        keywords = tools.utils.parse_result(result, "keyword")         
+        return keywords

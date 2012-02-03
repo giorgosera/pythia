@@ -9,12 +9,17 @@ This file contains useful functions used throughout the application.
 import re, math, chardet, bingtrans, enchant, nltk, numpy #!@UnresolvedImport
 from nltk.stem.porter import PorterStemmer #!@UnresolvedImport
 import twitter_text#!@UnresolvedImport
+import AlchemyAPI#!@UnresolvedImport
+from lxml import etree#!@UnresolvedImport
+from StringIO import StringIO
 
 ###########################################
 # GLOBALS                                #
 ###########################################
 d = enchant.Dict("en_US")
 bingtrans.set_app_id('5521E4A630094D968D49B39B6511A0A76CB025E1')
+alchemyObj = AlchemyAPI.AlchemyAPI()
+alchemyObj.setAPIKey("d7605e69dd3d2d7a032f11272d9b000e77d43545");
 
 
 def strip_url(text):
@@ -50,11 +55,16 @@ def detect_encoding(text):
 def translate_text(text, src='ar', tgt='en'):
     translation = text
     try:
-        translation =  bingtrans.translate(text, src, tgt)            
-    except ValueError:
-        pass
+        src = parse_result(alchemyObj.TextGetLanguage(text), "iso-639-1")[0]['iso-639-1']
+    except Exception, e:
+        src = 'en'
+        
+    if src != 'en': 
+        try:
+            translation =  bingtrans.translate(text, src, tgt)            
+        except ValueError:
+            pass
     return translation       
-
 
 def text_stemming(text):
     return PorterStemmer().stem_word(text)
@@ -95,3 +105,22 @@ def is_a_mention(tweet):
         return True
     else:
         return False
+
+def parse_result(result, type):
+    '''
+    Parses the result returned from Alchemy and constructs
+    and dict.
+    '''
+    context = etree.iterparse(StringIO(result))
+    object_dict = {}
+    objects = []
+    for action, elem in context:
+        if not elem.text:
+            text = "None"
+        else:
+            text = elem.text
+        object_dict[elem.tag] = text
+        if elem.tag == type:
+            objects.append(object_dict)
+            object_dict = {}
+    return objects

@@ -62,9 +62,12 @@ class TextAnalyser(object):
         tokenizes the text. Finally it creates the word frequency vector.
         '''
         text = HTMLParser.HTMLParser().unescape(text)
-        encoding = tools.utils.detect_encoding(text)
-        if encoding == 'unicode':
-            text = tools.utils.translate_text(text)
+        #encoding = tools.utils.detect_encoding(text)
+        #if encoding == 'unicode':
+        #    text = tools.utils.translate_text(text)
+        print text
+        text = tools.utils.translate_text(unicode(text).encode('utf-8'))
+        print text
         
         tokens = self._tokenize(text)
         tokens = [tools.utils.text_stemming(token) for token in tokens]
