@@ -9,6 +9,7 @@ This module performs text analysis of the feeds
 import tools.utils, HTMLParser
 import nltk #!@UnresolvedImport
 from application.boot import PythiaApp
+from analysis.semantic import TwitterSemanticAnalyser 
 
 ###########################################
 # GLOBALS                                #
@@ -26,23 +27,28 @@ class TextAnalyser(object):
         self.ngram = ngram
         self.app = PythiaApp()
         
-    def _tokenize(self, document):
+    def clean_text(self, text):
+        '''
+        Strips off html, urls, mentions and hashtags.
+        '''
+        clean_text = nltk.clean_html(text)
+        clean_text = tools.utils.strip_url(clean_text)
+        clean_text = tools.utils.strip_mentions(clean_text)
+        clean_text = tools.utils.strip_hashtags(clean_text)
+        return clean_text
+    
+    def tokenize(self, document):
         '''
         Distinguishes the tokens of a document. Strips out HTML,
         split alphanumreric and then turns the text to lowercase.
         It's supposed to be a private method.
-        '''     
-        clean_text = nltk.clean_html(document)
-        clean_text = tools.utils.strip_url(clean_text)
-        clean_text = tools.utils.strip_mentions(clean_text)
-        clean_text = tools.utils.strip_hashtags(clean_text)
-                
+        '''
         if self.ngram == 1:
-            tokens = nltk.WordPunctTokenizer().tokenize(clean_text)#nltk.word_tokenize(clean_text)
+            tokens = nltk.WordPunctTokenizer().tokenize(document)#nltk.word_tokenize(clean_text)
             tokens = tools.utils.turn_lowercase(tokens)
             tokens = self._filter_tokens(tokens)
         else:
-            tokens = nltk.WordPunctTokenizer().tokenize(clean_text)
+            tokens = nltk.WordPunctTokenizer().tokenize(document)
             lower_tokens = tools.utils.turn_lowercase(tokens)
             filtered_tokens = self._filter_tokens(lower_tokens)
             text = nltk.Text(filtered_tokens)
@@ -62,14 +68,11 @@ class TextAnalyser(object):
         tokenizes the text. Finally it creates the word frequency vector.
         '''
         text = HTMLParser.HTMLParser().unescape(text)
-        #encoding = tools.utils.detect_encoding(text)
-        #if encoding == 'unicode':
-        #    text = tools.utils.translate_text(text)
-        print text
-        text = tools.utils.translate_text(unicode(text).encode('utf-8'))
-        print text
-        
-        tokens = self._tokenize(text)
+        encoding = tools.utils.detect_encoding(text)
+        if encoding == "unicode":
+            text = tools.utils.translate_text(unicode(text).encode('utf-8'))
+        clean_text = self.clean_text(text)
+        tokens = self.tokenize(clean_text)
         tokens = [tools.utils.text_stemming(token) for token in tokens]
         word_frequencies = nltk.FreqDist(tokens).items()
 
@@ -81,9 +84,14 @@ class TextAnalyser(object):
         deals with unicode strings which are automatically translated to 
         English.
         '''
+        #First perform basic text processing operations
         text, tokens, word_frequencies = self._preprocess(document)
         new_document= {"raw": text, "tokens": tokens, "word_frequencies": word_frequencies}
-                
+        
+        #Then apply semantic analysis on text
+        #sa = TwitterSemanticAnalyser()      
+        #entities, sentiment, keywords = sa.analyse_text(unicode(new_document['raw']).encode('utf-8') )
+          
         return id, new_document
         
     def _filter_tokens(self, tokens):

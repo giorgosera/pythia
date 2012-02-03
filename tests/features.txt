@@ -1,16 +1,450 @@
 
 ***********************************************************
 Cluster0
-['frequent', 'word', 'sentenc', 'spring', 'arab', 'token']
-(1.0768534397397329, 'frequent FrEquEnt frequent <li>word</li> word sentence sentence')
-(0.2784217211023442, 'sentence <a href="www.google.com">arab</a> spring')
-(2.2204460492503131e-16, 'a is not a toKENIzed document')
+[u'wonder', u'evid', u'prove', u'decis', u'year', u'new']
+(0.46145942556150271, u'Wonderful wonderful http://on.fb.me/egyptiansabroad images of Egyptians abroad in solidarity with the uprising of January 25, chovoha # is # egypt # jan25 mubarak # april6')
+(0.047938326363180982, u'Wondering what the "decisive" evidence is that #Egypt has to prove it was a #Palestinian group behind #coptic church attack on new years.')
+(0.00049422011470871764, u'RT @washingtonpost #Egypt: Militant group in #Gaza behind church attack http://wapo.st/f389FB #p21')
+(0.00048633842091535639, u"\u267b @AlMasryAlYoum_E: Egypt's trade deficit jumps by over 40% in one year http://ow.ly/3IEDk #Egypt #Trade")
+(0.00048633842091535639, u"Egypt's trade deficit jumps by over 40% in one year http://ow.ly/3IEDk #Egypt #Trade")
+(0.00046742889861206956, u'# Egypt "Minister" a decision to prevent anyone from an inventory of Cairo\'s population only after approval http://dlvr.it/Dx03T')
+(0.00043447331350402748, u'Spokesman for Army of Islam denies involvement in #Coptic Church attack in Alexandria on New Years #egypt #egychurch')
+(0.00043447331350402748, u'RT @SherineT: Spokesman for Army of Islam denies involvement in #Coptic Church attack in Alexandria on New Years #egypt #egychurch')
+(0.00041718036507645118, u"RT @SherineT: Hamas blames #Israel's Mossad for #Coptic Church attack & calls on #Egypt to share their evidence pointing to Palestinian group involvement")
+(0.00041718036507645118, u"Hamas blames #Israel's Mossad for #Coptic Church attack & calls on #Egypt to share their evidence pointing to Palestinian group involvement")
 
 
 ***********************************************************
 Cluster1
-['token', 'document', 'spring', 'arab', 'sentenc', 'word']
-(1.6300399385167166, 'a is not a toKENIzed document')
-(6.598581498999105e-07, 'sentence <a href="www.google.com">arab</a> spring')
-(1.7209707092382426e-11, 'frequent FrEquEnt frequent <li>word</li> word sentence sentence')
+[u'25', u'januari', u'support', u'particip', u'demonstr', u'protest']
+(0.096608680929059332, u'RT @ fustat: R @ RamyRaoof front to defend Egypt demonstrators were preparing to provide legal support to participants in proceedings January 25, http://bit.ly/iceHWB # Egypt # Jan25')
+(0.064127204494490803, u'RT @ o_salem: download shiny: January 25, http://youtu.be/SY1r1TzORb4 # egypt # 25jan')
+(0.064127204494490803, u'Download shiny: January 25, http://youtu.be/SY1r1TzORb4 # egypt # 25jan')
+(0.062132018435261643, u'RT @Moutaz_D: Video: \u0625\u0631\u0634\u0627\u062f\u0627\u062a \u0623\u0645\u0646\u064a\u0647 \u0647\u0627\u0645\u0647 \u0644\u0643\u0644 \u0645\u0634\u0627\u0631\u0643 \u0641\u0649 \u064a\u0648\u0645 25 \u064a\u0646\u0627\u064a\u0631 #Egypt #25Jan http://tumblr.com/xqk1bmaj01')
+(0.058619648356878155, u'RT @ MasrawyFans: # Egypt delegation to announce his participation in a demonstration on January 25, http://bit.ly/dLxIG1')
+(0.058619648356878155, u'RT @ MasrawyFans: # Egypt delegation to announce his participation in a demonstration on January 25, http://bit.ly/dLxIG1')
+(0.058619648356878155, u'RT @ EgyFeeds: delegation announces its participation in a demonstration on January 25, http://dlvr.it/Dx7Qp # Egypt')
+(0.058619648356878155, u'Delegation announces its participation in a demonstration on January 25, http://dlvr.it/Dx7Qp # Egypt')
+(0.058404679068673512, u'Why not? RT @AlMasryAlYoum_E: ElBaradei supports, but won\u2019t participate, in 25 January protest http://ow.ly/3IDnm #Egypt #25Jan #arabprotest')
+(0.058404679068673512, u'RT @AlMasryAlYoum_E: ElBaradei supports, but won\u2019t participate, in 25 January protest http://ow.ly/3IDnm #ElBaradei #Egypt #25Jan')
+
+
+***********************************************************
+Cluster2
+[u'peac', u'assembl', u'binti', u'aggreg', u'chant', u'tool']
+(0.19439088695727805, u'R @RamyRaoof\n Aggregating Chants by People of #Egypt in Peaceful Assemblies http://egychants.tumblr.com [Ar] #Jan25')
+(0.19254836858212096, u'RT @ waelsalem: our peaceful and I in # jan25 binti http://twitpic.com/3ssred')
+(0.11668129898945567, u'\u267b @RamyRaoof: Aggregating Chants by People of #Egypt in Peaceful Assemblies http://egychants.tumblr.com [Ar] #Jan25')
+(0.11668129898945567, u'RT @RamyRaoof: Aggregating Chants by People of #Egypt in Peaceful Assemblies http://egychants.tumblr.com [Ar] #Jan25')
+(0.11668129898945567, u'RT @RamyRaoof: Aggregating Chants by People of #Egypt in Peaceful Assemblies http://egychants.tumblr.com [Ar] #Jan25')
+(0.082684902891696208, u'Tools and practices for networking and electronic publishing of participants in peaceful assemblies Jan25 # http://www.box.net/shared/3vbqnx7e27 # Egypt')
+(0.082684902891696208, u'RT @ RamyRaoof: tools and practices for networking and electronic publishing of participants in peaceful assemblies Jan25 # http://www.box.net/shared/3vbqnx7e27 ...')
+(0.082684902891696208, u'RT @ RamyRaoof: tools and practices for networking and electronic publishing of participants in peaceful assemblies Jan25 # http://www.box.net/shared/3vbqnx7e27 ...')
+(0.082684902891696208, u'RT @ RamyRaoof: tools and practices for networking and electronic publishing of participants in peaceful assemblies Jan25 # http://www.box.net/shared/3vbqnx7e27 ...')
+(0.082684902891696208, u'RT @ RamyRaoof: tools and practices for networking and electronic publishing of participants in peaceful assemblies Jan25 # http://www.box.net/shared/3vbqnx7e27 # Egypt')
+
+
+***********************************************************
+Cluster3
+[u'heart', u'pic', u'):', u'ralli', u'rtin', u'nyc']
+(0.19745368202097779, u'RT @monaeltahawy: #Egypt in our hearts (pics): Rally 4 Egypt @ #UN: http://on.fb.me/eMGsWp In solidarity w Egypt nationwide #Jan25 protests #arabprotest')
+(0.19745368202097779, u'RT @monaeltahawy: #Egypt in our hearts (pics): Rally 4 Egypt @ #UN: http://on.fb.me/eMGsWp In solidarity w Egypt nationwide #Jan25 prote ...')
+(0.19745368202097779, u'RT @monaeltahawy: #Egypt in our hearts (pics): Rally 4 Egypt @ #UN: http://on.fb.me/eMGsWp In solidarity w Egypt nationwide #Jan25 prote ...')
+(0.19745368202097779, u'#Egypt in our hearts (pics): Rally 4 Egypt @ #UN: http://on.fb.me/eMGsWp In solidarity w Egypt nationwide #Jan25 protests #arabprotest')
+(0.16974077368596341, u'RT@monaeltahawy  #Egypt in our hearts(pics):Rally 4 Egypt @ #UN: http://on.fb.me/eMGsWp In solidarity w Egypt nationwide #Jan25 #arabprotest')
+(0.056514841125412614, u'RT @monaeltahawy: #Egyptians in NYC rallied in support of freedom & dignity 4 #Egypt (pics) http://on.fb.me/ehSFv6  We will rally again #jan25 #arabprotest')
+(0.026838568532416673, u'(Internal): Ahmed Lutfi Ibrahim is a port in Alexandria Saints Church http://dlvr.it/Dx21B # Egypt')
+(0.026323283335958382, u'@mar3e We protested today in front of the UN and we will protest again on #jan25 pics here http://on.fb.me/eMGsWp & http://fb.me/AHQW83g3')
+(0.021960403454773243, u'Any #Egyptians in #Chicago who will/want to rally on #Jan25? Let @litfreak know.')
+(0.010422310244998791, u'Rally: day protests inappropriate police http://dlvr.it/Dwf70 # Egypt')
+
+
+***********************************************************
+Cluster4
+[u'daili', u'tweet', u'beast', u'said', u'khale', u'revolut']
+(0.32195077905433084, u'The #Jan25 Daily is out! http://bit.ly/eRvsEi \u25b8 Top stories today by @elshaheeed @weltenbuerger1 @awizahwa @usabach @egoadel')
+(0.2091229805811117, u'#Egypt Tweets Daily is out! http://bit.ly/hzdA4L \u25b8 Top stories today by @melshamy @seyahchoumeh @travelworldgeek @samueltfikry')
+(0.063697644270272649, u'\u201cWe Are All Khaled Said\u201d: Will the Revolution Come to #Egypt? - The Daily Beast - http://goo.gl/bSWtP #sidibouzid')
+(0.063697644270272649, u'RT @Tharwacolamus: \u201cWe Are All Khaled Said\u201d: Will the Revolution Come to #Egypt? - The Daily Beast - http://goo.gl/bSWtP #sidibouzid')
+(0.055576871340616202, u'"We Are All Khaled Said": Will the Revolution Come to Egypt? - The Daily Beast http://bit.ly/gdqc8s #Jan25')
+(0.025480092165333642, u"#Egypt blames Palestinian group for New Years' Day church bombing - Haaretz Daily Newspaper | Israel News - http://goo.gl/frvir  #Copts")
+(0.010001665217052381, u"RT @monaeltahawy: Must peel off #Twitter and head to rally for #Egypt in front of UN. Yalla, Egypt! #arabprotest Will tweet there if fingers don't freeze off")
+(0.010001665217052381, u"Must peel off #Twitter and head to rally for #Egypt in front of UN. Yalla, Egypt! #arabprotest Will tweet there if fingers don't freeze off")
+(0.0046701304207066585, u'AMR said: reform and change from one, not this our # EgyRevol # 25Jan # Jan25 # AmrWaked # Egypt # EgyptianProtest @ amrwaked http://bit.ly/euGZSr')
+(0.0025708049885053261, u'RT @monaeltahawy: At rally for #Egypt I front of #UN with Khaled. #arabprotest  http://yfrog.com/h5wsikjgj')
+
+
+***********************************************************
+Cluster5
+[u'ya', u'professor', u'melegi', u'mami', u'raafat', u'miss']
+(0.21334013951296063, u':D RT: @ oshaokhtmeligi: melegy # run ya Professor jan25')
+(0.21334013951296063, u':D RT: @ oshaokhtmeligi: melegy # run ya Professor jan25')
+(0.21334013951296063, u':D RT: @ oshaokhtmeligi: melegy # run ya Professor jan25')
+(0.16521295514923443, u'ya mami http://www.almasryalyoum.com/en/node/303405 #jan25')
+(0.038122771915035068, u'RT @monaeltahawy: @Raafatology This one is 4 u, ya Raafat. We missed u! At rally for #Egypt in front of #UN w/Khaled. #arabprotest http://yfrog.com/h5wsikjgj')
+(0.034385884736505397, u'RT @ MAswad: Yalla ya Egyptian healthy spirit ... Liberty open http://bit.ly/f0yA96 # Egypt # Jan25')
+(0.019489116197880046, u'RT: @ abdelrahmanG: I mean Sapoa army and Mossad and settlers and traitors and ehna kill Christians in Egypt? You ass ya donkey? #Egypt')
+(0.013749803984890032, u'RT @ oshaokhtmeligi: walk ya Mubarak, I walk yabeni albhedlh allowance, Christians have you blood, your blood, and the sinaitic them and the upper Egyptians have you blood, will establish work eh? #jan25')
+(0.00079077183668928611, u"I stand in solidarity with #Egyptians as they prepare for #Jan25 nationwide protests. I'll b there in spirit& @ NYC rallies in support")
+(0.00049407503353094382, u'A Dutch frigate open fire on a pirate ship in the Arabian Sea http://dlvr.it/Dwlx9 # Egypt')
+
+
+***********************************************************
+Cluster6
+[u'arab', u'3arabawi', u'foreign', u'expert', u'world', u'nudg']
+(0.15987494269650379, u'# Egypt foreign experts http://bit.ly/eMYZrr armed forces hospitals')
+(0.13584697445545763, u'RT @3arabawy: Count the ironies in this sentence  http://angryarab.blogspot.com/2011/01/count-ironies-in-this-sentence.html #Lebanon #Egypt')
+(0.13584697445545763, u'RT @3arabawy: Count the ironies in this sentence  http://angryarab.blogspot.com/2011/01/count-ironies-in-this-sentence.html #Lebanon #Egypt')
+(0.13186818669739372, u'RT @Cer Exactly! RT @3arabawy: #Tunisia nudges Arab world out of its hopelessness http://lat.ms/gZqqwS #egypt')
+(0.12503787444114031, u'#Tunisia nudges Arab world out of its hopelessness http://lat.ms/gZqqwS #egypt')
+(0.11745406998951695, u'Exactly! RT @3arabawy: #Tunisia nudges Arab world out of its hopelessness http://lat.ms/gZqqwS #egypt')
+(0.070839996822331067, u'Renewed protests in #Algeria and #Tunisia as Arab unrest spreads RT @seyachoumeh http://kwick.me/ktMh #egypt #yemen via @Sonja_Jo')
+(0.070839996822331067, u'RT @octavianasr: Renewed protests in #Algeria and #Tunisia as Arab unrest spreads RT @seyachoumeh http://kwick.me/ktMh #egypt #yemen via @Sonja_Jo')
+(0.070839996822331067, u'RT @octavianasr: Renewed protests in #Algeria and #Tunisia as Arab unrest spreads RT @seyachoumeh http://kwick.me/ktMh #egypt #yemen via ...')
+(0.06334408836866981, u'FOREIGN POLICY: The Post-Tunisia World \nhttp://goo.gl/PBAS1  #Egypt #Jordan #Saudi #Kuwait #Bahrain #arab #humanrights #democracy #Tunisia')
+
+
+***********************************************************
+Cluster7
+[u'tok', u'island', u'death', u'mr', u'presid', u'document']
+(0.33791684497888053, u'| Island Tok http://t.co/C8V57rj # Egypt death ... Mr. President-Tok island')
+(0.19183866039052966, u'The death of ... Mr. President | Island Tok http://t.co/C8V57rj # Tok Island eBook Egypt')
+(0.19183866039052966, u'RT @ mneuropa: death ... Mr. President | Island Tok http://t.co/C8V57rj # Tok Island eBook Egypt')
+(0.11393347669569984, u'Tok Tok driver and his friend they rape a girl at gunpoint in kerdasa http://bit.ly/hAWFZ9 # Egypt')
+(0.064938851193233602, u'Island reveal the documents confirming PA concessions Jerusalem Egypt http://bit.ly/fT87Qa #')
+(0.059833719317852328, u'"The island" confidential documents: PA Jews had "the largest Jerusalem in history" http://dlvr.it/DxBpd # Egypt')
+(0.050843739919297186, u'# Egypt documents "island" confidentiality: the Palestinian Authority before the Jews "in history" greater Jerusalem http://bit.ly/h9UU7l')
+(0.036162940971043965, u'Documents reveal the death of 190 prisoners in US prisons http://dlvr.it/DxH1v # Egypt')
+(0.036162940971043965, u'Documents reveal the death of 190 prisoners in US prisons http://bit.ly/hYwVoi # Egypt')
+(0.03144924885757111, u'Island: demonstrations in Yemen now and great revolution in Yemen to topple the Government after the abduction and torture of press with # egypt # jan25')
+
+
+***********************************************************
+Cluster8
+[u'take', u'street', u'region', u'away', u'light', u'entir']
+(0.17408566027546818, u'we will all take to the streets #Jan25 #Egypt http://bit.ly/eBpzGc 2011 WILL be different')
+(0.15689377307428753, u'rt @Gsquare86 we will all take to the streets #Jan25 #Egypt http://bit.ly/eBpzGc 2011 WILL be different')
+(0.15689377307428753, u'RT @Gsquare86: we will all take to the streets #Jan25 #Egypt http://bit.ly/eBpzGc 2011 WILL be different')
+(0.12893500523043025, u'RT @sahoura: RT @nmoawad #PalestinePapers will not take away any light from #Tunisia or #Egypt or #Algeria or #Lebanon. Entire region is on fire.')
+(0.12893500523043025, u'RT @sahoura: RT @nmoawad #PalestinePapers will not take away any light from #Tunisia or #Egypt or #Algeria or #Lebanon. Entire region is on fire.')
+(0.12893500523043025, u'RT @nmoawad: #PalestinePapers will not take away any light from #Tunisia or #Egypt or #Algeria or #Lebanon. Entire region is on fire.')
+(0.12893500523043025, u'RT @nmoawad: #PalestinePapers will not take away any light from #Tunisia or #Egypt or #Algeria or #Lebanon. Entire region is on fire.')
+(0.12893500523043025, u'RT @SaloumehZ: RT @nmoawad #PalestinePapers will not take away any light from #Tunisia or #Egypt or #Algeria or #Lebanon. Entire region is on fire.')
+(0.12893500523043025, u'RT @SaloumehZ: RT @nmoawad #PalestinePapers will not take away any light from #Tunisia or #Egypt or #Algeria or #Lebanon. Entire region is on fire.')
+(0.057523568754049285, u'\xabDiver\xbb flooded the streets \xabAmiriyah\xbb http://dlvr.it/DvBZz # Egypt')
+
+
+***********************************************************
+Cluster9
+[u'merci', u'...!!', u'feelgod', u'god', u'see', u'understood']
+(0.27267954765344304, u'RT @ memam8: p. .. they feelGod have mercy you ...!!\u0661: http://t.co/YlHuCJY #Egypt #Tunisia')
+(0.27267954765344304, u'RT @ memam8: p. .. they feelGod have mercy you ...!!\u0661: http://t.co/YlHuCJY #Egypt #Tunisia')
+(0.27267954765344304, u'@ Masrawya_magda3 p. .. they feelGod have mercy you ...!!\u0661: http://t.co/YlHuCJY #Egypt #Tunisia')
+(0.27267954765344304, u'@ Ahmediiiii p. .. they feelGod have mercy you ...!!\u0661: http://t.co/YlHuCJY #Egypt #Tunisia')
+(0.15116047659693937, u'F. they see ...God have mercy you ...!!\u0661: http://t.co/YlHuCJY #Egypt #Tunisia')
+(0.01047296099291407, u"RT @ iDhooom: I'm I have understood you, God I have understood you, auzinh # wehaml all Elly Jan25 # Mubarak # http://twitpic.com/3snelx LOL")
+(0.01047296099291407, u"RT @ iDhooom: I'm I have understood you, God I have understood you, auzinh # wehaml all Elly Jan25 # Mubarak # http://twitpic.com/3snelx LOL")
+(0.0089050633140870562, u"LOL RT @ iDhooom: I'm I have understood you, God I have understood you, auzinh # wehaml all Elly Jan25 # Mubarak # http://twitpic.com/3snelx LOL")
+(0.0056814449323877433, u'See ... Thus spoke to greet Abdel Nasser (6) http://dlvr.it/Dw4qc # Egypt')
+(0.004664153126472414, u'See: Slim Ammamou Tunisian blogger who became Ministers! http://bit.ly/hBiMpb  #Egypt')
+
+
+***********************************************************
+Cluster10
+[u'messag', u'nour', u'entitl', u'ayman', u'go', u'9a7']
+(0.38024899577404675, u'A Message http://t.co/PFsyPJn message via @ youtube # EGYPT # 25JAN # FB')
+(0.098506160246081276, u'Ayman Nour to Mubarak a message entitled go http://www.youtube.com/watch?v=3DfpOS7PTsY # Jan25')
+(0.089585005528301051, u'RT @ Mashi9a7: Ayman Nour to Mubarak a message entitled go http://www.youtube.com/watch?v=3DfpOS7PTsY # Jan25')
+(0.072825638544473104, u'RT @ Mashi9a7 the greatest Jihad: Ayman Nour to Mubarak a message entitled go http://www.youtube.com/watch?v=3DfpOS7PTsY # Jan25')
+(0.060444211143777446, u'I will never understand even to his colleague RT: @ Mashi9a7: Ayman Nour to Mubarak a message entitled go http://www.youtube.com/watch?v=3DfpOS7PTsY # Jan25')
+(0.03947086034244305, u'You can communicate with the front to defend the demonstrators across Egypt telephone calls or text messages: 0120624003-0129295510-0106701470 # Egypt # Jan25')
+(0.039394501416055154, u'RT @ RamyRaoof: can communicate with the front to defend Egypt via telephone calls demonstrators or text messages: 0120624003-0129295510-0106701470 # Egypt # Jan25')
+(0.039394501416055154, u'RT @ RamyRaoof: can communicate with the front to defend Egypt via telephone calls demonstrators or text messages: 0120624003-0129295510-0106701470 # Egypt # Jan25')
+(0.036563586373523339, u'RT @ Elshaheeed: message of solidarity from one Egyptian officers: the Tunisian army best mesh maakom Oh boy we me my http://fb.me/J64c1evs # Jan25')
+(0.036563586373523339, u'Message of solidarity from one Egyptian officers: the Tunisian army best mesh maakom Oh boy we me my http://fb.me/J64c1evs # Jan25')
+
+
+***********************************************************
+Cluster11
+[u'come', u'revolut', u'newsweek', u'articl', u'citj', u'beast']
+(0.29880745007322679, u'The #revolution comes to #Egypt: http://bit.ly/fujLe2 #KhaledSaid #HumanRights #Jan25 #Mubarak #Rebellion #Protest #EgyRevolution')
+(0.29880745007322679, u'The #revolution comes to #Egypt http://tiny.cc/tt14c #25jan #tunisia')
+(0.1656407893932397, u'Will the Revolution Come to Egypt? - #NewsWeek http://goo.gl/mUJ23  #Jan25')
+(0.1656407893932397, u'The revolution comes to Egypt \nhttp://tiny.cc/tt14c #Egypt #revolution #25jan #tunisia')
+(0.15182866040001475, u'RT @Elicoopter_mid: CitJ @MAswad: The #revolution comes to #Egypt:   #KhaledSaid #HumanRights #Jan25 #Mubarak #Rebellion #Protest #E... http://bit.ly/fujLe2')
+(0.094226138841406071, u'RT @Elshaheeed: Newsweek Article about #Jan25: The Revolution Comes to Egypt http://bit.ly/hNwg1F')
+(0.094226138841406071, u'RT @Elshaheeed: Newsweek Article about #Jan25: The Revolution Comes to Egypt http://bit.ly/hNwg1F')
+(0.059956313009298191, u'\u201cWe Are All Khaled Said\u201d: Will the Revolution Come to #Egypt? - The Daily Beast - http://goo.gl/bSWtP #sidibouzid')
+(0.059956313009298191, u'RT @Tharwacolamus: \u201cWe Are All Khaled Said\u201d: Will the Revolution Come to #Egypt? - The Daily Beast - http://goo.gl/bSWtP #sidibouzid')
+(0.051913939175881073, u'"We Are All Khaled Said": Will the Revolution Come to Egypt? - The Daily Beast http://bit.ly/gdqc8s #Jan25')
+
+
+***********************************************************
+Cluster12
+[u'encount', u'unexpect', u'string', u'object', u'error', u'deseri']
+(0.078266161833737261, u"There was an error deserializing the object of type System.String. Encountered unexpected character '\xd9'.")
+(0.078266161833737261, u"There was an error deserializing the object of type System.String. Encountered unexpected character '\xd9'.")
+(0.078266161833737261, u"There was an error deserializing the object of type System.String. Encountered unexpected character '\xd9'.")
+(0.078266161833737261, u"There was an error deserializing the object of type System.String. Encountered unexpected character '\xd9'.")
+(0.078266161833737261, u"There was an error deserializing the object of type System.String. Encountered unexpected character '\xd9'.")
+(0.078266161833737261, u"There was an error deserializing the object of type System.String. Encountered unexpected character '\xd9'.")
+(0.078266161833737261, u"There was an error deserializing the object of type System.String. Encountered unexpected character '\xd9'.")
+(0.078266161833737261, u"There was an error deserializing the object of type System.String. Encountered unexpected character '\xd9'.")
+(0.078266161833737261, u"There was an error deserializing the object of type System.String. Encountered unexpected character '\xd9'.")
+(0.078266161833737261, u"There was an error deserializing the object of type System.String. Encountered unexpected character '\xd9'.")
+
+
+***********************************************************
+Cluster13
+[u'polic', u'memori', u'celebr', u'nation', u'alaeddin', u'stimul']
+(0.123981035257915, u'The Alaeddin: celebrate National occasion to stimulate memory police http://dlvr.it/DwCFP # Egypt')
+(0.123981035257915, u'The Alaeddin: celebrate National occasion to stimulate memory police http://dlvr.it/DwC8h # Egypt')
+(0.123981035257915, u'RT @ Shorouk_News: # # Egypolice # Watani Jan25 # 25Jan to Alaeddin: celebrate National occasion to stimulate memory police http://bit.ly/gy18RP')
+(0.123981035257915, u'# 25Jan # Jan25 on Alaeddin: celebrate National occasion to stimulate memory police http://t.co/xNHb2HZ \u201d so Hey you idiot')
+(0.123981035257915, u'# # Egypolice # Watani Jan25 # 25Jan to Alaeddin: celebrate National occasion to stimulate memory police http://bit.ly/gy18RP')
+(0.071074251276973754, u'The Alaeddin: holiday suitable to activate memory national police for youth: http://bit.ly/gNVP1H # Egypt')
+(0.069046941443159468, u'NDP: police day glorious memory for internal stability http://t.co/yJDzcNl: D # Egypt # Jan25 # Pigs # Police')
+(0.069046941443159468, u'NDP: police day glorious memory for internal stability http://t.co/yJDzcNl: D # Egypt # Jan25 # Pigs # Police')
+(0.069046941443159468, u'NDP: police day glorious memory for internal stability http://t.co/yJDzcNl: D # Egypt # Jan25 # Pigs # Police')
+(0.068870369625726791, u'Statement by the President of the Republic to celebrate police jan25 http://is.gd/RTRJ6N #')
+
+
+***********************************************************
+Cluster14
+[u'effect', u'domino', u'bouazizi', u'understood', u'elli', u'burn']
+(0.24147920967444667, u'The dominoes effect http://twitpic.com/3smoq8 (By @CarlosLatuff) #Jan25 #Egypt #Mubarak #Tunisia')
+(0.24147920967444667, u'RT @orthotox: The dominoes effect http://twitpic.com/3smoq8 (By @CarlosLatuff) #Jan25 #Egypt #Mubarak #Tunisia')
+(0.24147920967444667, u'#degage #sidibouzid RT @orthotox: The dominoes effect http://twitpic.com/3smoq8 (By @CarlosLatuff) #Jan25 #Egypt #Mubarak #Tunisia')
+(0.16334459229922252, u'RT @H_A_NassaR: BouAzizi Effect RT @Adel_Salib    Butterfly Effect #Tunis #Egypt #Jan25')
+(2.2204460492503131e-16, u'\u267b @RamyRaoof: government officials in Egypt ask people to close shops on #Jan25 due to riots that might take place http://twitpic.com/3ss0xq')
+(2.2204460492503131e-16, u'\u267b @RamyRaoof: Aggregating Chants by People of #Egypt in Peaceful Assemblies http://egychants.tumblr.com [Ar] #Jan25')
+(2.2204460492503131e-16, u"\u267b @AlMasryAlYoum_E: Egypt's trade deficit jumps by over 40% in one year http://ow.ly/3IEDk #Egypt #Trade")
+(2.2204460492503131e-16, u'\u267b @ Wael: one people, two mesh-reel Hosni gets Zen-http://twitpic.com/3smpnc poster for 25 January @ CarlosLatuff # Jan25')
+(2.2204460492503131e-16, u'\u267b @ Wael: drops drops Hosni Mubarak-poster of Carlos http://twitpic.com/3smq4m @ CarlosLatuff # circled Jan25')
+(2.2204460492503131e-16, u'\u267b @ Wael: 25 January-shoes in the Mubarak-poster Berisha Carlos toured the Egyptian revolution supports http://twitpic.com/3smkxy @ CarlosLatuff # Jan25')
+
+
+***********************************************************
+Cluster15
+[u'menac', u'regim', u'offici', u'peopl', u'shop', u'ask']
+(0.22616945471263572, u'RT @Zeinobia: #Jan25 is official Menace to the regime #HumanRights #Egypt #middleeast \u2192 http://bit.ly/e38Ghu')
+(0.22616945471263572, u'#Jan25 is official Menace to the regime #HumanRights #Egypt #middleeast \u2192 http://bit.ly/e38Ghu')
+(0.053977063927776354, u'RT @hebalsherif: RT @RamyRaoof government officials in #Egypt ask people to close their shops on #Jan25 http://twitpic.com/3ss0xq')
+(0.053977063927776354, u'RT @RamyRaoof government officials in #Egypt ask people to close their shops on #Jan25 http://twitpic.com/3ss0xq')
+(0.052892906342807501, u'Actv @RamyRaoof: government officials in #Egypt ask people to close their shops on #Jan25 due to riots that... http://twitpic.com/3ss0xq')
+(0.046040173479976382, u'\u267b @RamyRaoof: government officials in Egypt ask people to close shops on #Jan25 due to riots that might take place http://twitpic.com/3ss0xq')
+(0.046040173479976382, u'RT @RamyRaoof: government officials in #Egypt ask people to close their shops on #Jan25 due to riots that might take place http://twitpic.com/3ss0xq')
+(0.04583271635154864, u'RT @alaa\u267b @RamyRaoof: #Egypt gov officials ask people to close shops on #Jan25 due to riots that might take place http://twitpic.com/3ss0xq')
+(0.04447741619336272, u'Government officials in Egypt ask people close their shops on January 25 because of demonstrations http://t.co/0MZpJsN # Egypt # 25jan # jan25 # revolution')
+(0.036982000974164042, u'Not the Muslim Brotherhood, ElBaradei, or "opposition" parties will topple the #Mubarak regime. The people of #Egypt will. #arabprotest')
+
+
+***********************************************************
+Cluster16
+[u'detail', u'complet', u'full', u'januari', u'25', u'publish']
+(0.28348938487841097, u'RT @ Elshaheeed: complete details: http://bit.ly/Egypt25 # Jan25')
+(0.26417220544845166, u'Full details: http://bit.ly/Egypt25 # Jan25')
+(0.12312272849879848, u'RT @ hossam_karama: details on January 25, ... \nhttp://on.fb.me/dMrbjV\n#25jan')
+(0.12312272849879848, u'RT @ hossam_karama: details on January 25, ... \nhttp://on.fb.me/dMrbjV\n#25jan')
+(0.12312272849879848, u'Details on January 25, ... \nhttp://on.fb.me/dMrbjV\n#25jan')
+(0.04029205330112362, u'All the details of demonstrations and instructions and places published in p. de wehitm updated the first Powell: # Jan25 # 25jan # http://bit.ly/Egypt25 Revolution')
+(0.036466248581135549, u'Trial postponed until tomorrow to complete the railway women plead http://dlvr.it/DwGHJ # Egypt')
+(0.034464984288021479, u'3 news on January 25 in the first page in the sunrise and the whole page with all the details., Goh Excellent # jan25')
+(0.032010945065228537, u'Followed in another hour Bulletin: details Interior publishes the Saints Church bombing in Alexandria egypt alexandria # # # church')
+(0.023532667290929246, u'Sunrise Publisher full page on Jan. 25 with places and times and whole # jan25')
+
+
+***********************************************************
+Cluster17
+[u'drop', u'poster', u'hosni', u'carlo', u'mubarak', u'tour']
+(0.17236360080820004, u'\u267b @ Wael: drops drops Hosni Mubarak-poster of Carlos http://twitpic.com/3smq4m @ CarlosLatuff # circled Jan25')
+(0.17236360080820004, u'RT @ wael: drops drops Hosni Mubarak-poster of Carlos http://twitpic.com/3smq4m @ CarlosLatuff # circled Jan25')
+(0.17236360080820004, u'RT @ wael: drops drops Hosni Mubarak-poster of Carlos http://twitpic.com/3smq4m @ CarlosLatuff # circled Jan25')
+(0.17236360080820004, u'RT @ wael: drops drops Hosni Mubarak-poster of Carlos http://twitpic.com/3smq4m @ CarlosLatuff # circled Jan25')
+(0.17236360080820004, u'RT @ wael: drops drops Hosni Mubarak-poster of Carlos http://twitpic.com/3smq4m @ CarlosLatuff # circled Jan25')
+(0.17236360080820004, u'RT @ wael: drops drops Hosni Mubarak-poster of Carlos http://twitpic.com/3smq4m @ CarlosLatuff # circled Jan25')
+(0.17236360080820004, u'Drops drops Hosni Mubarak-poster of Carlos http://twitpic.com/3smq4m @ CarlosLatuff # circled Jan25')
+(0.072823957944288378, u'\u267b @ Asadx: wehashtni 2005 demonstrations and cheers drops drops Hosni Mubarak bihez land in the Centre of the country and we hope he drops really Joanna # jan25 # egypt')
+(0.072823957944288378, u'Wehashtni 2005 demonstrations and cheers drops drops Hosni Mubarak bihez land in the Centre of the country and we hope he drops really Joanna # jan25 # egypt')
+(0.032965863121982915, u'\u267b @ Wael: 25 January-shoes in the Mubarak-poster Berisha Carlos toured the Egyptian revolution supports http://twitpic.com/3smkxy @ CarlosLatuff # Jan25')
+
+
+***********************************************************
+Cluster18
+[u'church', u'bomb', u'palestinian', u'group', u'behind', u'islam']
+(0.085579048670645558, u'#Egypt blames #Gaza militants for bomb \nhttp://reut.rs/faKp7J \n.. but provides no evidence and it helps to keep Gazans in their open prison.')
+(0.084490564661379011, u'RT @washingtonpost #Egypt: Militant group in #Gaza behind church attack http://wapo.st/f389FB #p21')
+(0.07518202579346836, u'ESTERI. RT @washingtonpost: #Egypt: Militant group in #Gaza behind #church# attack, http://wapo.st/f389FB #terrorism')
+(0.072754964635740993, u'# Egypt army Palestinian Islam denies responsibility for the bombing of the Church of Saints http://dlvr.it/DwDs4')
+(0.071426718696550554, u'RT @ahramonline: #Egypt Palestinian group behind Egypt church bombing, minister of interior http://ht.ly/1aZs6C')
+(0.071426718696550554, u'#Egypt Palestinian group behind Egypt church bombing, minister of interior http://ht.ly/1aZs6C')
+(0.071404388461344878, u'Organization of the Palestinian army of Islam "behind a church of Saints http://t.co/06SgbIU # news # ahram egypt #')
+(0.070916787299791409, u'RT @ummhajarforpal: Palestinian group denies bombing Egyptian church : http://t.co/RUGW63Q #palestine #Egypt #paltweets #Gaza')
+(0.070916787299791409, u'Palestinian group denies bombing Egyptian church : http://t.co/RUGW63Q #palestine #Egypt #paltweets #Gaza')
+(0.070053303026422833, u'# Egypt "army of Islam denies it attacked a church in Alexandria')
+
+
+***********************************************************
+Cluster19
+[u'yargalh', u'atsrkt', u'kill', u'understood', u'secur', u'abdel']
+(0.29708542946546274, u'RT @ iDhooom: atsrkt yargalh http://goo.gl/sPPKl left her country # Jan25 # Egypt')
+(0.29708542946546274, u'RT @ iDhooom: atsrkt yargalh http://goo.gl/sPPKl left her country # Jan25 # Egypt')
+(0.29708542946546274, u'Atsrkt yargalh http://goo.gl/sPPKl left her country # Jan25 # Egypt')
+(2.2204460492503131e-16, u'\u267b @RamyRaoof: government officials in Egypt ask people to close shops on #Jan25 due to riots that might take place http://twitpic.com/3ss0xq')
+(2.2204460492503131e-16, u'\u267b @RamyRaoof: Aggregating Chants by People of #Egypt in Peaceful Assemblies http://egychants.tumblr.com [Ar] #Jan25')
+(2.2204460492503131e-16, u"\u267b @AlMasryAlYoum_E: Egypt's trade deficit jumps by over 40% in one year http://ow.ly/3IEDk #Egypt #Trade")
+(2.2204460492503131e-16, u'\u267b @ Wael: one people, two mesh-reel Hosni gets Zen-http://twitpic.com/3smpnc poster for 25 January @ CarlosLatuff # Jan25')
+(2.2204460492503131e-16, u'\u267b @ Wael: drops drops Hosni Mubarak-poster of Carlos http://twitpic.com/3smq4m @ CarlosLatuff # circled Jan25')
+(2.2204460492503131e-16, u'\u267b @ Wael: 25 January-shoes in the Mubarak-poster Berisha Carlos toured the Egyptian revolution supports http://twitpic.com/3smkxy @ CarlosLatuff # Jan25')
+(2.2204460492503131e-16, u'\u267b @ R @ alaa wael: break lock up you and open his door-poster Berisha Carlos toured the Egyptian revolution supports http://twitpic.com/3smp3k @ CarlosLatuff # Jan25')
+
+
+***********************************************************
+Cluster20
+[u'ralli', u'front', u'khale', u'dictat', u'exil', u'arabia']
+(0.17820188871329143, u'Rally for #Egypt in front of #UN. #arabprotest  http://yfrog.com/h5koqjgotnzczj')
+(0.17820188871329143, u'RT @monaeltahawy: Rally for #Egypt in front of #UN. #arabprotest  http://yfrog.com/h5koqjgotnzczj')
+(0.14494248152738559, u'RT @monaeltahawy: At rally for #Egypt I front of #UN with Khaled. #arabprotest  http://yfrog.com/h5wsikjgj')
+(0.14494248152738559, u'At rally for #Egypt I front of #UN with Khaled. #arabprotest  http://yfrog.com/h5wsikjgj')
+(0.12157695515338285, u'ProJ @monaeltahawy: At rally for #Egypt I front of #UN with Khaled. #arabprotest http://tinyurl.com/4n43eam')
+(0.10833044917992297, u'RT @monaeltahawy: Children rally for #Egypt in front of UN. #arabprotest  http://yfrog.com/h7xd5fgj')
+(0.1070343871196104, u'RT @weddady: RT @monaeltahawy Free tickets for #Arab dictators to exile in #Saudi Arabia @ #Egypt rally in front of #UN #arabprotest http://bit.ly/e3VLkp')
+(0.1070343871196104, u'RT @Astrubaal: RT @weddady "RT @monaeltahawy Free tickets for #Arab dictators to exile in #Saudi Arabia @ #Egypt rally in front of #UN http://bit.ly/e3VLkp')
+(0.085439396655195565, u'RT @monaeltahawy: Free tickets for #Arab dictators to exile in #Saudi Arabia at #Egypt rally in front of #UN #arabprotest http://yfrog.com/gyziztsj')
+(0.081055762994541078, u'ProJ @monaeltahawy: Free tickets for #Arab dictators to exile in #Saudi Arabia at #Egypt rally in front of ... http://yfrog.com/gyziztsj')
+
+
+***********************************************************
+Cluster21
+[u'outset', u'tunisia', u'convoy', u'arriv', u'central', u'cartoon']
+(0.26871623071519601, u'RT @ CarlosLatuff: at the outset, Tunisia, and now Egypt http://bit.ly/dGlOKt http://bit.ly/gCF9ou http://bit.ly/dKRhQ5 http://bit.ly/gaa6zD # Jan25')
+(0.26871623071519601, u'RT @ CarlosLatuff: at the outset, Tunisia, and now Egypt http://bit.ly/dGlOKt http://bit.ly/gCF9ou http://bit.ly/dKRhQ5 http://bit.ly/gaa6zD # Jan25')
+(0.26871623071519601, u'RT @ CarlosLatuff: at the outset, Tunisia, and now Egypt http://bit.ly/dGlOKt http://bit.ly/gCF9ou http://bit.ly/dKRhQ5 http://bit.ly/gaa6zD # Jan25')
+(0.08029984667048011, u'RT @CarlosLatuff: Cartoons-First Tunisia, now Egypt http://bit.ly/dGlOKt http://bit.ly/gCF9ou http://bit.ly/dKRhQ5 http://bit.ly/gaa6zD #Jan25')
+(0.077787998151075746, u"RT @ Elshaheeed: @ M_ibr if you're in Tunisia was your time with any? eih #Jan25 #SidiBouzid")
+(0.071658319213855196, u'The arrival of a "convoy" of Central Tunisia to Egypt http://dlvr.it/Dvc2M #')
+(0.071658319213855196, u'The arrival of a "convoy" of Central Tunisia to Egypt http://bit.ly/fKQfjz #')
+(0.062036963113957323, u'# Egypt Zaki Salim writes: Egypt and Tunisia http://dlvr.it/Dx7HK')
+(0.044136584566107785, u'FOREIGN POLICY: The Post-Tunisia World \nhttp://goo.gl/PBAS1  #Egypt #Jordan #Saudi #Kuwait #Bahrain #arab #humanrights #democracy #Tunisia')
+(0.037417524165018666, u'Actv @Nabeelrajab: FOREIGN POLICY: The Post-Tunisia World   #Egypt #Jordan #Saudi #Kuwait #Bahrain #arab #humanri... http://goo.gl/PBAS1')
+
+
+***********************************************************
+Cluster22
+[u'countri', u'lot', u'sub', u'gold', u'leav', u'baldkhlet']
+(0.26307901272997664, u'Are #Morocco, #Algeria, #Tunisia, #Libya and #Egypt Sub-#Mediterranean #European countries?')
+(0.21387729157225688, u'That\u2019s lot of gold leaving the country #Egypt #citizenJournalism #politics \u2192 http://bit.ly/eNY5vS')
+(0.21387729157225688, u'RT @Zeinobia: That\u2019s lot of gold leaving the country #Egypt #citizenJournalism #politics \u2192 http://bit.ly/eNY5vS')
+(0.21387729157225688, u'RT @Zeinobia: That\u2019s lot of gold leaving the country #Egypt #citizenJournalism #politics \u2192 http://bit.ly/eNY5vS')
+(0.045775602803192088, u'Hey de days elsoda Fluss country evade # 25jan http://twitpic.com/3srr1m')
+(0.041159536430210898, u'A girl and her fiance stealing jewelry gold flat baldkhlet http://dlvr.it/DxBdY # Egypt')
+(0.041159536430210898, u'A girl and her fiance stealing jewelry gold flat baldkhlet http://bit.ly/hA2kAh # Egypt')
+(0.039682938053122452, u'Abul Gheit: Egypt supports country efforts to resolve the Darfur crisis http://bit.ly/fSYGfX # Egypt')
+(0.028418299086472677, u'Minia University organized a Conference for agriculture and irrigation in order to develop the Nile basin countries Egypt http://dlvr.it/DxJmN #')
+(0.020626023689848092, u'In the bus. Secretary of the police to his colleague: all workers on Tuesday and leave no 8 million call for demonstrations jan25 # atosat')
+
+
+***********************************************************
+Cluster23
+[u'saturday', u'tunisian', u'hungri', u'revolut', u'lesson', u'elbaradei']
+(0.44450956953481446, u'4 #suicides in #Egypt on Saturday http://ow.ly/3IAps #TunisiaEffect')
+(1.2150396912471853e-09, u"It's not just Tunisians who are hungry http://t.co/f9Hx5xu #revolution #egypt #algeria #sidibouzid")
+(6.0515780237687788e-10, u'Lessons of the Tunisian Revolution http://bit.ly/hWESFl #Tunisia #Jordan #Egypt #Lebanon #Algeria #Kuwait #KSA #tcot #P2 #News #Ocra #USA')
+(3.1669930755233346e-10, u'Egypt Proactively Preparing For Tunisian-Style Rioting http://tiny.cc/93s9q #Egypt #Tunisia #SidiBouzid')
+(2.9477986966994065e-10, u'# Egypt Dr. Essam Al-Eryan, the Tunisian http://dlvr.it/DvNcR writes: lesson')
+(2.6367985376628037e-10, u'RT @ahramonline: #Egypt ElBaradei: If the Tunisians have done it, Egyptians should get there too http://ht.ly/1aZ9Zx')
+(2.6367985376628037e-10, u'#Egypt ElBaradei: If the Tunisians have done it, Egyptians should get there too http://ht.ly/1aZ9Zx')
+(2.6190168075818241e-10, u'RT: @ AlMasryAlYoum_A: tonight, 8 p.m., diary \xabTunisian uprising\xbb in dialogue with @ Norayounis neighborhood ... http://ow.ly/3ICPs #Tunisia #SidiBouzid #Egypt')
+(2.2124842497242839e-10, u'Refer to the owner of a Tunisian channel treason trial http://bit.ly/eKgFqP # Egypt')
+(2.1626850925989915e-10, u'Tunisian page on months "Facebook" supports demonstrations January 25, http://dlvr.it/DxPCM # Egypt')
+
+
+***********************************************************
+Cluster24
+[u'worri', u'investor', u'turmoil', u'say', u'worship', u'thor']
+(0.26311913548415589, u'RT @ahramonline: #Egypt says #Tunisia turmoil worrying investors  http://english.ahram.org.eg/News/4667.aspx #sidibouzid')
+(0.26311913548415589, u'#Egypt says #Tunisia turmoil worrying investors  http://english.ahram.org.eg/News/4667.aspx #sidibouzid')
+(0.094086572860536441, u'RT @ MinaNaguib90: clerics: we say Thor ... Say worship # Egypt # Jan25 # LOL')
+(0.08308451734348947, u'Events in Tunisia worries small investors and economists warn of selling low-http://dlvr.it/DvBbG # Egypt')
+(0.071020487348318978, u'#Egypt: Min of Commerce raises worries over investment cuz of #Tunisia http://tinyurl.com/6y785c9 #sidibouzid')
+(0.036166688698960073, u'RT @ monasosh: limit says ElBaradei deterred and a side keda us countenance de # Jan25')
+(0.035696525077985299, u'RT @ monasosh: RT @ wael: ElBaradei says limit on side keda and keeping a US countenance de # Jan25')
+(0.032070186873191582, u'Hey Zen saying Mubarak flyer in you video: role role http://bit.ly/evAdfp role remained elusive nights your above # 25jan # egypt # tunisia')
+(0.028949070870574061, u'AFP: Egypt says Palestinian group behind church bombing - http://goo.gl/wINOd  #Copts #Christians #Egypt #Islam #Muslims')
+(0.023790114725442076, u'#Egypt #Gaza Gaza Flotilla Raid Was Legal Under International Law, Israeli Panel Says - Bloomberg http://ow.ly/1aZxNP')
+
+
+***********************************************************
+Cluster25
+[u'egyptian', u'tunisian', u'hungri', u'role', u'govern', u'gaza']
+(0.1679884238746529, u"It's not just Tunisians who are hungry http://t.co/f9Hx5xu #revolution #egypt #algeria #sidibouzid")
+(0.10242304178096752, u'RT @DohaFarhat: Egyptian Role in Gaza #Egypt #PalestinePapers http://bit.ly/gIVqT2')
+(0.10242304178096752, u'RT @DohaFarhat: Egyptian Role in Gaza #Egypt #PalestinePapers http://bit.ly/gIVqT2')
+(0.069837278361140259, u'RT @ahramonline: #Egypt ElBaradei: If the Tunisians have done it, Egyptians should get there too http://ht.ly/1aZ9Zx')
+(0.069837278361140259, u'#Egypt ElBaradei: If the Tunisians have done it, Egyptians should get there too http://ht.ly/1aZ9Zx')
+(0.065181174281846457, u'# Video \xabEgyptian\xbb vs. Captain Tunisian journalists http://dlvr.it/DxLTw # Egypt')
+(0.061682385973368697, u'Egyptian government-based bullshit http://t.co/AC3zOIS #Gaza #Egypt')
+(0.051865201966155086, u'Lessons of the Tunisian Revolution http://bit.ly/hWESFl #Tunisia #Jordan #Egypt #Lebanon #Algeria #Kuwait #KSA #tcot #P2 #News #Ocra #USA')
+(0.048919867668119128, u'RT @ Sabrology: urgent: the Egyptian Government announced that January 24 on only # Egypt # 25jan')
+(0.048919867668119128, u'RT @ Sabrology: urgent: the Egyptian Government announced that January 24 on only # Egypt # 25jan')
+
+
+***********************************************************
+Cluster26
+[u'loos', u'chang', u'mood', u'region', u'amr', u'reform']
+(0.31715878385108026, u'RT @ahramonline: Loose change http://english.ahram.org.eg/News/4645.aspx #Egypt #business')
+(0.31715878385108026, u'Loose change http://english.ahram.org.eg/News/4645.aspx #Egypt #business')
+(0.10365256170187481, u'The change in regional mood after #Tunisia http://t.co/vDapqeI #revolution #sidibouzid #egypt')
+(0.056462776256513948, u'AMR said: reform and change from one, not this our # EgyRevol # 25Jan # Jan25 # AmrWaked # Egypt # EgyptianProtest @ amrwaked http://bit.ly/euGZSr')
+(0.04456714126591934, u'RT @ kayehia: on the occasion of the change, the most important change in 2010 is amelto Egypt got another quarter of an hour in the Gedo region # Egypt')
+(0.036898007487321666, u'Funny: Arab dictators stage demonstration to change their people http://twitpic.com/3sk2r0  #KSA #Egypt #Tunisia #JO #Yemen #ArabProtest #fb')
+(0.034526363464005415, u'ElBaradei: security violence against us even farther determination to change http://dlvr.it/DxL3J # Egypt')
+(0.034171899238463817, u'# Egypt ElBaradei: violence leads us to change and security campaign stresses: http://bit.ly/dSj0Ym will not terrorize us threats')
+(0.028778367728073278, u'The book "how to change the world" lairik haobsbaom tops sales of books this week as the guardian http://is.gd/OpgeBl speech de Lena we # jan25')
+(0.026899913424741212, u'# Egypt national change involved in protests on January 25, in front of the UN building http://dlvr.it/DwhqQ')
+
+
+***********************************************************
+Cluster27
+[u'citj', u'warn', u'self', u'immol', u'case', u'reuter']
+(0.29598000926112927, u'RT @Elicoopter_mid: CitJ @MAswad: #ElBaradei warns of #revolution in #Egypt:  #Jan25 #REBELLION #Mubarak #EgyRevolution http://tinyurl.com/4wbe4rk')
+(0.1791627029417393, u'RT @Elicoopter_mid: CitJ @MAswad: The #revolution comes to #Egypt:   #KhaledSaid #HumanRights #Jan25 #Mubarak #Rebellion #Protest #E... http://bit.ly/fujLe2')
+(0.11499633077123426, u'CitJ @MAswad: More cases of self-immolation in #Egypt after #Tunisia |Reuters:   #Jan25 #HumanRights #Rebellion ... http://bit.ly/dN2LCs')
+(0.056488319030453905, u'Israel warns of Government led by Hezbollah in Lebanon http://dlvr.it/Dvc2G # Egypt')
+(0.056488319030453905, u'Israel warns of Government led by Hezbollah in Lebanon http://bit.ly/geBikJ # Egypt')
+(0.051494166232794382, u'More cases of self-immolation in #Egypt after #Tunisia |Reuters: http://bit.ly/dN2LCs #Jan25 #HumanRights #Rebellion  #Poverty #Corruption')
+(0.042383591203829847, u"CitJ @MAswad: #Egypt's frustrated young wait for their lives to begin, and dream of #revolution   via @guardian #... http://t.co/kBqG9yY")
+(0.030348081281343871, u'Events in Tunisia worries small investors and economists warn of selling low-http://dlvr.it/DvBbG # Egypt')
+(0.021756141762388524, u'# In Qaliubiya egypt State security calls for citizens of Arabic States to warn them of the demonstrations of 25 January http://dlvr.it/DwW2l')
+(0.012745164679175799, u'Hezbollah chief to address Lebanon crisis http://bit.ly/hDNX66 #Tunisia #Jordan #Egypt #Lebanon #Syria #Israel #tcot #P2 #News #Ocra #USA')
+
+
+***********************************************************
+Cluster28
+[u'live', u'frustrat', u'dream', u'begin', u'wait', u'young']
+(0.15108678357685124, u"#Egypt's frustrated young wait for their lives to begin, and dream of #revolution http://t.co/kBqG9yY via @guardian #Jan25 #REBELLION")
+(0.14385203084040987, u"Egypt's frustrated young wait for their lives to begin, and dream of revolution http://bit.ly/f803we #Egypt #jan25 #YesWeCan")
+(0.14385203084040987, u"Egypt's frustrated young wait for their lives to begin - and dream of revolution | http://bit.ly/eHUwmx #SidiBouzid #Jan25")
+(0.14385203084040987, u"#Egypt's frustrated young wait for lives to begin, dream of revolution http://bit.ly/gTd5ZX via @Tharwacolamus #Sidibouzid #arabprotest")
+(0.13260569310275996, u"RT @Tharwacolamus: #Egypt's frustrated young wait for their lives to begin, and dream of revolution |  The Observer - http://goo.gl/A1GC3 #sidibouzid")
+(0.13260569310275996, u"#Egypt's frustrated young wait for their lives to begin, and dream of revolution |  The Observer - http://goo.gl/A1GC3 #sidibouzid")
+(0.13130156175533866, u"RT @mar3e Egypt's frustrated young wait for their lives to begin, & dream of revolution http://bit.ly/f803we #Egypt || @Guardian")
+(0.12994025023249584, u"Gaurdian: Egypt's frustrated young wait for their lives to begin, and dream of revolution  http://bit.ly/gTd5ZX #Egypt #25jan #jan25")
+(0.11967400250567917, u"RT @royasmusic: U can do it! V @mar3e Egypt's frustrated young wait 4 their lives to begin,&dream of revolution http://bit.ly/f803we #Egypt #jan25 #YesWeCan")
+(0.10397313198542268, u"CitJ @MAswad: #Egypt's frustrated young wait for their lives to begin, and dream of #revolution   via @guardian #... http://t.co/kBqG9yY")
+
+
+***********************************************************
+Cluster29
+[u'masr', u'ta7ya', u'khale', u'front', u'beast', u'said']
+(0.32686004430503673, u'RT @monaeltahawy: Masr Masr, ta7ya Masr! @KhaledEibid At rally for #Egypt in front of #UN w/Khaled. #arabprotest http://yfrog.com/h5wsikjgj')
+(0.32686004430503673, u'Masr Masr, ta7ya Masr! @KhaledEibid At rally for #Egypt in front of #UN w/Khaled. #arabprotest http://yfrog.com/h5wsikjgj')
+(0.054423823737453823, u"RT @ Mariumaz: I'm all my want Sahabi, 75, head downward on 25 ... Our demands we fiddle and cowardice delayed # Egypt Masr # NoNDP # # NoMubarak # 25january # 25jan")
+(0.034318099322815813, u'RT @monaeltahawy: At rally for #Egypt I front of #UN with Khaled. #arabprotest  http://yfrog.com/h5wsikjgj')
+(0.034318099322815813, u'At rally for #Egypt I front of #UN with Khaled. #arabprotest  http://yfrog.com/h5wsikjgj')
+(0.024638912363159758, u'ProJ @monaeltahawy: At rally for #Egypt I front of #UN with Khaled. #arabprotest http://tinyurl.com/4n43eam')
+(0.024288511161724528, u'\u201cWe Are All Khaled Said\u201d: Will the Revolution Come to #Egypt? - The Daily Beast - http://goo.gl/bSWtP #sidibouzid')
+(0.024288511161724528, u'RT @Tharwacolamus: \u201cWe Are All Khaled Said\u201d: Will the Revolution Come to #Egypt? - The Daily Beast - http://goo.gl/bSWtP #sidibouzid')
+(0.021348383377923042, u'"We Are All Khaled Said": Will the Revolution Come to Egypt? - The Daily Beast http://bit.ly/gdqc8s #Jan25')
+(0.016992664708537199, u'RT @monaeltahawy: @Raafatology This one is 4 u, ya Raafat. We missed u! At rally for #Egypt in front of #UN w/Khaled. #arabprotest http://yfrog.com/h5wsikjgj')
 

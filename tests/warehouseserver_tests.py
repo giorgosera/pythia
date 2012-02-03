@@ -23,20 +23,20 @@ class TestWarehouseServer(unittest.TestCase):
         
     def test_get_top_by_date(self):
 
-        tweet1 = TopsyTweet()
+        tweet1 = EgyptTweet()
         tweet1.date = datetime.datetime(2015, 01, 27, 0, 0, 0)
         tweet1.retweet_count = 10
-        tweet1.text ="test_tweet1"
+        tweet1.content = {'test': "test_tweet1"}
         tweet1.screen_name ="test_tweet"
         tweet1.url ="test_url"
         tweet1.author_name ="test_name"
         tweet1.author_screen_name ="test_name"
-        tweet2 = TopsyTweet()
+        tweet2 = EgyptTweet()
         tweet2.date = datetime.datetime(2015, 01, 27, 0, 0, 0)
         tweet2.retweet_count = 5
         tweet2.screen_name ="test_tweet"
         tweet2.url ="test_url"
-        tweet2.text ="test_tweet2"
+        tweet2.content = {'test': "test_tweet2"}
         tweet2.author_name ="test_name"
         tweet2.author_screen_name ="test_name"
         tweet1.save()
@@ -47,12 +47,12 @@ class TestWarehouseServer(unittest.TestCase):
         
         result = []
         for item in ws.get_top_documents_by_date(from_date, to_date, threshold=7):
-            result.append(item.text)
+            result.append(item.content)
             
-        self.assertEquals("test_tweet1", result[0])
+        self.assertEquals({'test': "test_tweet1"}, result[0])
         
         #Erases the two test tweets
-        for item in TopsyTweet.objects(date = datetime.datetime(2015, 01, 27, 0, 0, 0)):
+        for item in EgyptTweet.objects(date = datetime.datetime(2015, 01, 27, 0, 0, 0)):
             item.delete()
             
         

@@ -4,10 +4,12 @@ Created on 27 Nov 2011
 @author: george
 '''
 
-from TwitterCrawler import TwitterCrawler
+from crawlers.TwitterCrawler import TwitterCrawler
+from crawlers.TopsyCrawler import TopsyCrawler
 
 #Available crawlers
-_crawlers_ = {"twitter": TwitterCrawler}
+_crawlers_ = {"twitter": TwitterCrawler,
+              "topsy": TopsyCrawler}
 
 class CrawlerFactory(object):
     '''
@@ -33,7 +35,6 @@ class CrawlerFactory(object):
         If a valid crawler exists then it gets constructed and returned.
         '''
         crl = self.avail_crawlers.get(crawler_name, None)
-        
         if not crl:
             raise Exception("No available crawler exists for " + crawler_name + "." )
         return crl(crawler_name)

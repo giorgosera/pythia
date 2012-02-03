@@ -6,7 +6,7 @@ Created on 14 Nov 2011
 
 This file contains useful functions used throughout the application.
 '''
-import re, math, chardet, bingtrans, enchant, nltk, numpy #!@UnresolvedImport
+import re, math, chardet, bingtrans, enchant#!@UnresolvedImport
 from nltk.stem.porter import PorterStemmer #!@UnresolvedImport
 import twitter_text#!@UnresolvedImport
 import AlchemyAPI#!@UnresolvedImport
@@ -54,11 +54,15 @@ def detect_encoding(text):
         
 def translate_text(text, src='ar', tgt='en'):
     translation = text
-    try:
-        src = parse_result(alchemyObj.TextGetLanguage(text), "iso-639-1")[0]['iso-639-1']
-    except Exception, e:
-        src = 'en'
-        
+    #===========================================================================
+    # try:
+    #    detected = parse_result(alchemyObj.TextGetLanguage(text), "iso-639-1")
+    #    src = detected[0]['iso-639-1']
+    #    print src
+    # except Exception, e:
+    #    print e
+    #    src = 'en'    
+    #===========================================================================
     if src != 'en': 
         try:
             translation =  bingtrans.translate(text, src, tgt)            
@@ -115,10 +119,10 @@ def parse_result(result, type):
     object_dict = {}
     objects = []
     for action, elem in context:
-        if not elem.text:
+        if not elem.content:
             text = "None"
         else:
-            text = elem.text
+            text = elem.content
         object_dict[elem.tag] = text
         if elem.tag == type:
             objects.append(object_dict)

@@ -4,14 +4,15 @@ The models represent entities in the database
 '''
 
 import datetime
-from mongoengine import Document, StringField, DateTimeField, IntField
+from mongoengine import Document, StringField, DateTimeField, IntField, DictField
 
 
 class Tweet(Document):
     author_screen_name = StringField(required=True)
     author_name = StringField(required=True)
     date = DateTimeField(required=True, default=datetime.datetime.utcnow)
-    text = StringField(required=True)
+    content = DictField(required=True)
+    
     
 class CambridgeTweet(Tweet):
     meta = {"collection": "CambridgeTweets"}
@@ -29,8 +30,8 @@ class CyprusTweet(Tweet):
     #The url of the original tweet
     url = StringField(required=True)
         
-class TopsyTweet(Tweet):
-    meta = {"collection": "TopsyTweets"}
+class EgyptTweet(Tweet):
+    meta = {"collection": "EgyptTweets"}
     #The url of the original tweet
     url = StringField(required=True)
     retweet_count = IntField(required=True, default=0)

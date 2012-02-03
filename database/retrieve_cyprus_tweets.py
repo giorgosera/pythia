@@ -39,7 +39,7 @@ while maxtime != final_date:
                 print "Storing tweet #",count, "for the period",mintime,"until",maxtime 
                 tt = CyprusTweet()
                 tt.url = item.url
-                tt.text = item.content
+                tt.content = item.content
                 tt.date = mintime
                 tt.screen_name = item.trackback_author_nick
                 tt.save(safe=True)

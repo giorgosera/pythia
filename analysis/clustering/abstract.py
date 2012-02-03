@@ -22,13 +22,11 @@ class AbstractClusterer(object):
         self.td_matrix = None
         self.table_name = None
         self.clusters = []
-        self.text_analyser = TextAnalyser(ngram=ngram)
         
     def add_document(self, id, document):
         '''
         Adds a new document in the cluster structure.
         '''    
-        id, document = self.text_analyser.add_document(id, document)
         self.document_dict[str(id)] = document
     
     def get_documents(self):

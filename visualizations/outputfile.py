@@ -26,7 +26,7 @@ def output_clusters_to_file(clusters, rownames, filename):
         out.write("Cluster"+str(i))
         out.write('\n')
         for document in cluster:
-            out.write( ws.get_document_by_id(rownames[document]).text)
+            out.write( ws.get_document_by_id(rownames[document]).content)
             out.write('\n')
         i += 1
         

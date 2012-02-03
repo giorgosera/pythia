@@ -24,7 +24,7 @@ for result in results:
     ct.date = dateutil.parser.parse(result[1])
     ct.origin = result[2]
     ct.no_of_followers = result[3]
-    ct.text = result[4]
+    ct.content = result[4]
     ct.save()
 
     

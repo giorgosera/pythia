@@ -65,5 +65,5 @@ class Dendrogram(object):
             self.cluster = temp
         else:   
             # If this is an endpoint, draws the appropriate label
-            self.drawobj.text((x+5,y-7),self.labels[self.cluster.id],(0,0,0))
+            self.drawobj.content((x+5,y-7),self.labels[self.cluster.id],(0,0,0))
         

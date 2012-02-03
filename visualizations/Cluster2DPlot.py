@@ -33,7 +33,7 @@ class Cluster2DPlot(object):
         for i in range(len(self.data)):
             x=(self.data[i][0]+0.5)*1000
             y=(self.data[i][1]+0.5)*1000
-            draw.text((x,y),self.labels[i],(0,0,0))
+            draw.content((x,y),self.labels[i],(0,0,0))
         img.save(self.filename,'JPEG')
     
     def _scale_down(self):

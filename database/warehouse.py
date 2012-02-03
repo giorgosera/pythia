@@ -4,7 +4,7 @@ Created on 22 Jan 2012
 @author: george
 '''
 from mongoengine import *
-from database.model.tweets import *
+from database.model.tweets import EgyptTweet
 
 class WarehouseServer(object):
     '''
@@ -19,44 +19,38 @@ class WarehouseServer(object):
         self.connection = connect("pythia_db")
         
     
-    def get_documents_by_date(self, from_date, to_date, limit = 10000, collection="TopsyTweets"):
+    def get_documents_by_date(self, from_date, to_date, limit = 10000, type=EgyptTweet):
         '''
         This is a getter which returns all the documents which were retrieved during
         the period from_date <--> to_date. 
         '''
-        t = TopsyTweet.objects(Q(date__gte=from_date) & Q(date__lte=to_date)).limit(limit)
+        t = type.objects(Q(date__gte=from_date) & Q(date__lte=to_date)).limit(limit)
         return t
     
-    def get_top_documents_by_date(self, from_date, to_date, limit = 10000, threshold=5, collection="TopsyTweets"):
+    def get_top_documents_by_date(self, from_date, to_date, limit = 10000, threshold=5, type=EgyptTweet):
         '''
         This is a getter which returns the top documents (in terms of retweets which were retrieved during
         the period from_date <--> to_date. 
         '''
-        t = TopsyTweet.objects(Q(date__gte=from_date) & Q(date__lte=to_date) & Q(retweet_count__gte=threshold)).limit(limit)
+        t = type.objects(Q(date__gte=from_date) & Q(date__lte=to_date) & Q(retweet_count__gte=threshold)).limit(limit)
         return t
     
-    def get_all_documents(self, collection="TopsyTweets"):
+    def get_all_documents(self, type=EgyptTweet):
         '''
         This is a getter which returns all the documents in the collection.
         '''
-        t = TopsyTweet.objects
+        t = type.objects
         return t
     
-    def get_n_documents(self, n=0, collection="TopsyTweets"):
+    def get_n_documents(self, n=0, type=EgyptTweet):
         '''
         This is a getter which returns the n first the documents in the collection.
         '''
-        t = TopsyTweet.objects[:n]
+        t = type.objects[:n]
         return t
     
-    def get_document_by_id(self, id, collection="TopsyTweets"):
+    def get_document_by_id(self, id, type=EgyptTweet):
         '''
         Returns the document which corresponds to this id
         '''
-        return TopsyTweet.objects(id=id).get()
-    
-    def save_topsy_document(self, document):
-        '''
-        Saves a tweet coming from Topsy
-        '''
-        pass
+        return type.objects(id=id).get()

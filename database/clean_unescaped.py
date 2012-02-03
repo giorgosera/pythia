@@ -11,10 +11,10 @@ from database.model.tweets import *
 import HTMLParser
 
 connect("pythia_db")
-for t in TopsyTweet.objects:
-    print t.text
-    t.text = HTMLParser.HTMLParser().unescape(t.text)
-    print t.text
+for t in EgyptTweet.objects:
+    print t.content
+    t.content = HTMLParser.HTMLParser().unescape(t.content)
+    print t.content
     t.save()
 print "All tweets are clear."
      

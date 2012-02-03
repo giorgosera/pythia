@@ -42,7 +42,8 @@ class TwitterSemanticAnalyser(AbstractSemanticAnalyser):
         '''
         result = self.alchemy.TextGetRankedNamedEntities(text)     
         entities = tools.utils.parse_result(result, "entity")
-        return entities 
+        filtered_entities = self.filter_results(entities)
+        return filtered_entities 
     
     def extract_sentiment(self, text):
         '''
@@ -50,12 +51,26 @@ class TwitterSemanticAnalyser(AbstractSemanticAnalyser):
         '''
         result = self.alchemy.TextGetTextSentiment(text);  
         sentiment = tools.utils.parse_result(result, "docSentiment") 
-        return sentiment
+        filtered_sentiment = sentiment[0]['type']
+        return filtered_sentiment
     
     def extract_keywords(self, text):
         '''
         Extracts important keywords in this text.
         '''
         result = self.alchemy.TextGetRankedKeywords(text);  
-        keywords = tools.utils.parse_result(result, "keyword")         
-        return keywords
+        keywords = tools.utils.parse_result(result, "keyword")        
+        filtered_keywords = self.filter_results(keywords, True)
+        return filtered_keywords
+    
+    def filter_results(self, results, keywords=False):
+        '''
+        Filters our uneccesary info from the response
+        '''
+        filtered = []
+        for result in results:
+            if not keywords:
+                filtered.append( (result['text'], result['type']) )
+            else:    
+                filtered.append(result['text'])
+        return filtered
