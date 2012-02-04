@@ -66,6 +66,8 @@ class TestTextAnalyserFunctions(unittest.TestCase):
         token_appears_in = 3
         result = tools.utils.tfidf(token_occurences, no_of_tokens, no_of_docs, token_appears_in)
         self.assertAlmostEqual(0.24079, result, 4)
+
+        
         
 if __name__ == "__main__":
     unittest.main()

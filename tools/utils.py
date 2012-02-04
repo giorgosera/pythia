@@ -23,8 +23,16 @@ alchemyObj.setAPIKey("d7605e69dd3d2d7a032f11272d9b000e77d43545");
 
 
 def strip_url(text):
-    return re.compile(r"""((?:[a-z][\w-]+:(?:/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|(([^\s()<>]+|(([^\s()<>]+)))*))+(?:(([^\s()<>]+|(([‌​^\s()<>]+)))*)|[^\s`!()[]{};:'".,<>?«»“”‘’]))""", re.DOTALL).sub('',text)
-
+    #return re.compile(r'(\w+:\/\/\S+)').sub('', text)
+    #return re.compile(r"""((?:[a-z][\w-]+:(?:/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|(([^\s()<>]+|(([^\s()<>]+)))*))+(?:(([^\s()<>]+|(([‌​^\s()<>]+)))*)|[^\s`!()[]{};:'".,<>?«»“”‘’]))""", re.DOTALL).sub('',text)
+    extractor = twitter_text.Extractor(text)
+    urls = []
+    for um in extractor.extract_urls_with_indices():
+        urls.append(um)
+    for url in urls:
+        text=' '.join(re.sub(url['url']," ",text).split())
+    return text
+    
 def strip_mentions(text):
     return re.compile(r'@[\s,_,A-Z,a-z]+').sub('',text)
 

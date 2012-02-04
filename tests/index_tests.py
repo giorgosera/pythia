@@ -34,6 +34,6 @@ class TestPlayground(unittest.TestCase):
 if __name__ == "__main__":
     unittest.main()
 
-#Check out www.djamesuk.co.uk for the latest mixtape downloads and updates!
+
 
 

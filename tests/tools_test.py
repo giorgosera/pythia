@@ -49,5 +49,25 @@ class TestToolsFunctions(unittest.TestCase):
         translated = tools.utils.translate_text(text)
         self.assertEquals("I'm Giorgos", translated)
         
+        
+    def test_strip_url(self):
+        text1 = 'Check out http://www.djamesuk.co.uk for the latest mixtape downloads and updates!'
+        text2 = 'Check out www.djamesuk.co.uk for the latest mixtape downloads and updates!'
+        text3 = 'http://www.djamesuk.co.uk Check out for the latest mixtape downloads and updates!'
+        text4 = 'www.djamesuk.co.uk Check out for the latest mixtape downloads and updates!'
+        text5 = 'Check out for the latest mixtape downloads and updates! www.djamesuk.co.uk'
+        result1 =  tools.utils.strip_url(text1)
+        result2 =  tools.utils.strip_url(text2)
+        result3 = tools.utils.strip_url(text3)
+        result4 = tools.utils.strip_url(text4)
+        result5 = tools.utils.strip_url(text5)        
+        expected = 'Check out for the latest mixtape downloads and updates!'
+        
+        self.assertEqual(expected, result1)
+        self.assertEqual(expected, result2)
+        self.assertEqual(expected, result3)
+        self.assertEqual(expected, result4)
+        self.assertEqual(expected, result5)
+        
 if __name__ == "__main__":
     unittest.main()
