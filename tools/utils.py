@@ -36,6 +36,7 @@ def strip_url(text):
 def strip_mentions(text):
     return re.compile(r'@[\s,_,A-Z,a-z]+').sub('',text)
 
+
 def strip_hashtags(text):
     return re.compile(r'#[\s]?[,A-Z,a-z,0-9]+[\s]?').sub('',text)
     

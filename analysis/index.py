@@ -3,7 +3,7 @@ Created on 4 Feb 2012
 
 @author: george
 '''
-import os, lucene#!@UnresolvedImport
+import os, time, lucene#!@UnresolvedImport
 from lucene import *
 
 class Index(object):
@@ -35,12 +35,19 @@ class Index(object):
         '''
         doc = lucene.Document()
         try:
+            #All fields are converted to string since Lucene accepts only textual fields (and binary)
             doc.add(lucene.Field("id", str(document.id),
                                 lucene.Field.Store.YES,
                                 lucene.Field.Index.NOT_ANALYZED))
             doc.add(lucene.Field("content", document.content['raw'],
                                 lucene.Field.Store.YES,
                                 lucene.Field.Index.ANALYZED))
+            doc.add(lucene.Field("author", document.author_screen_name,
+                                lucene.Field.Store.YES,
+                                lucene.Field.Index.NOT_ANALYZED))
+            doc.add(lucene.Field("timestamp", str(time.mktime(document.date.timetuple())),
+                                lucene.Field.Store.YES,
+                                lucene.Field.Index.NOT_ANALYZED))
             self.writer.addDocument(doc)
         except Exception, e:
             print "Failed in indexDocs:", e

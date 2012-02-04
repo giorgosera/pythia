@@ -30,7 +30,7 @@ class TestPlayground(unittest.TestCase):
         expected = ['4f2d602780286c38a7000013', '4f2d603280286c38a700001e']
 
         self.assertEqual(expected, calculated)
-        
+
 if __name__ == "__main__":
     unittest.main()
 

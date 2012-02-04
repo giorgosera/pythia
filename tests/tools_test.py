@@ -69,5 +69,9 @@ class TestToolsFunctions(unittest.TestCase):
         self.assertEqual(expected, result4)
         self.assertEqual(expected, result5)
         
+    def test_random(self):
+        text = 'RT @S_Elhussieny: + 1 # egypt # elbaradei RT @ ZeinabSamir: @ shmpOngO if taken by Criss ElBaradei hamil revolution revolution'
+        print tools.utils.strip_mentions(text)
+        
 if __name__ == "__main__":
     unittest.main()

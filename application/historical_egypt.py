@@ -21,4 +21,3 @@ t.search_between(from_date=datetime.datetime(2011, 01, 23, 0, 0, 0),
                  granularity_mins=0)
 t.retrieve_items_of_type(EgyptTweet)
 #t.crawl()
-

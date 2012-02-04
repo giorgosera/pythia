@@ -68,8 +68,8 @@ class TextAnalyser(object):
         tokenizes the text. Finally it creates the word frequency vector.
         '''
         text = HTMLParser.HTMLParser().unescape(text)
-        encoding = tools.utils.detect_encoding(text)
         #=======================================================================
+        # encoding = tools.utils.detect_encoding(text)
         # if encoding == "unicode":
         #    text = tools.utils.translate_text(unicode(text).encode('utf-8'))
         #=======================================================================
