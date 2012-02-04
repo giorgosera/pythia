@@ -21,11 +21,19 @@ class TestPlayground(unittest.TestCase):
         for doc in sample_docs:
             index.add_document(doc)
         index.finalize()
-        index.search("critic")
+        results = index.search("sales")
+        
+        calculated = []
+        for doc in results:
+            calculated.append(doc.get('id'))
+            
+        expected = ['4f2d602780286c38a7000013', '4f2d603280286c38a700001e']
+
+        self.assertEqual(expected, calculated)
         
 if __name__ == "__main__":
     unittest.main()
 
-#4f2c3d6880286c53bf000001
+#Check out www.djamesuk.co.uk for the latest mixtape downloads and updates!
 
 

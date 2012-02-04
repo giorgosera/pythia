@@ -61,10 +61,13 @@ class Index(object):
         query = lucene.QueryParser(lucene.Version.LUCENE_CURRENT, "content",
                                 self.analyser).parse(query)
         scoreDocs = searcher.search(query, 50).scoreDocs
+        
+        results = []
         for scoreDoc in scoreDocs:
-                doc = searcher.doc(scoreDoc.doc)
-                print doc.get("id")
+                results.append(searcher.doc(scoreDoc.doc))
+                
         searcher.close()
+        return results
         
 class PorterStemmerAnalyzer(lucene.PythonAnalyzer):
     '''
