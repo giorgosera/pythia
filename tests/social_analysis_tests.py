@@ -26,11 +26,10 @@ class Test(unittest.TestCase):
     def test_retweet_filter(self):
         tsa = TwitterSocialAnalyser(dataset)
         result = tsa.filter_retweets()
-        print result
         expected = []
-        expected.append( t.add_document(0, tweet_with_RT)[1] )
-        expected.append( t.add_document(1, tweet_with_VIA)[1] )
-        self.assertEqual(result, expected)
+        expected.append( (0, t.add_document(0, tweet_with_RT)[1]) )
+        expected.append( (1, t.add_document(1, tweet_with_VIA)[1]) )
+        self.assertEqual(result, OrderedDict(expected))
 
         
     def test_mention_filter(self):

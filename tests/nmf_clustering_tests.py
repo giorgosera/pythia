@@ -17,7 +17,7 @@ class Test(unittest.TestCase):
     def test_nmf_clustering_with_tweets(self):
         from_date = datetime.datetime(2011, 1, 23, 0, 0, 0)
         to_date = datetime.datetime(2011, 1, 27, 0, 0, 0) 
-        items = ws.get_documents_by_date(from_date, to_date)
+        items = ws.get_documents_by_date(from_date, to_date, limit=100)
         nmfc = NMFClusterer(ngram=1)
         for item in items:
             nmfc.add_document(item.id, item.content)

@@ -69,8 +69,11 @@ class TextAnalyser(object):
         '''
         text = HTMLParser.HTMLParser().unescape(text)
         encoding = tools.utils.detect_encoding(text)
-        if encoding == "unicode":
-            text = tools.utils.translate_text(unicode(text).encode('utf-8'))
+        #=======================================================================
+        # if encoding == "unicode":
+        #    text = tools.utils.translate_text(unicode(text).encode('utf-8'))
+        #=======================================================================
+        text = tools.utils.translate_text(unicode(text).encode('utf-8'))
         clean_text = self.clean_text(text)
         tokens = self.tokenize(clean_text)
         tokens = [tools.utils.text_stemming(token) for token in tokens]

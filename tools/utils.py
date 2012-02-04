@@ -54,15 +54,13 @@ def detect_encoding(text):
         
 def translate_text(text, src='ar', tgt='en'):
     translation = text
-    #===========================================================================
-    # try:
-    #    detected = parse_result(alchemyObj.TextGetLanguage(text), "iso-639-1")
-    #    src = detected[0]['iso-639-1']
-    #    print src
-    # except Exception, e:
-    #    print e
-    #    src = 'en'    
-    #===========================================================================
+    try:
+        detected = parse_result(alchemyObj.TextGetLanguage(text), "iso-639-1")
+        src = detected[0]['iso-639-1']
+    except Exception, e:
+        print e
+        src = 'en'    
+    
     if src != 'en': 
         try:
             translation =  bingtrans.translate(text, src, tgt)            
@@ -119,10 +117,10 @@ def parse_result(result, type):
     object_dict = {}
     objects = []
     for action, elem in context:
-        if not elem.content:
+        if not elem.text:
             text = "None"
         else:
-            text = elem.content
+            text = elem.text
         object_dict[elem.tag] = text
         if elem.tag == type:
             objects.append(object_dict)

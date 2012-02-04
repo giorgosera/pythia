@@ -42,11 +42,12 @@ class TestToolsFunctions(unittest.TestCase):
         
     def test_translation(self):
         text = "تسجيل صوتي ل د.محمد البلتاجي يعلن مشاركة الاخوان بشكل رسمي في 25يناير http://www.palsharing.com/y5brwm1nrdio.html #Jan25"
-        #translated = tools.utils.translate_text(text)
-        #expected = 'Audio recording of Dr. Mohammed Al announces the participation of brothers officially in January 25, http://www.palsharing.com/y5brwm1nrdio.html # Jan25'
-        #self.assertEquals(expected, translated)
+        translated = tools.utils.translate_text(text)
+        expected = 'Audio recording of Dr. Mohammed Al announces the participation of brothers officially in January 25, http://www.palsharing.com/y5brwm1nrdio.html # Jan25'
+        self.assertEquals(expected, translated)
         text = 'Io sono Giorgos'
-        #translated = tools.utils.translate_text(text)
-        #self.assertEquals("I'm Giorgos", translated)
+        translated = tools.utils.translate_text(text)
+        self.assertEquals("I'm Giorgos", translated)
+        
 if __name__ == "__main__":
     unittest.main()
