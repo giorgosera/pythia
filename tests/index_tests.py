@@ -11,6 +11,7 @@ from analysis.index import Index
 from database.warehouse import WarehouseServer
 from database.model.tweets import TwoGroupsTweet
 
+
 ws = WarehouseServer()
 sample_docs = ws.get_n_documents(100, type=TwoGroupsTweet)
 
@@ -29,7 +30,6 @@ class TestPlayground(unittest.TestCase):
             calculated.append(doc.get('id'))
             
         expected = ['4f2d602780286c38a7000013', '4f2d603280286c38a700001e']
-
         self.assertEqual(expected, calculated)
     
     def test_top_terms_index(self):
@@ -41,6 +41,11 @@ class TestPlayground(unittest.TestCase):
         results = index.search_by_term("sales", limit=1)
         self.assertEquals(1, len(results))
         
+    def test_search_by_author(self):
+        results = index.search_by_author("islandrecordsuk")
+        expected = '4f2d5ff580286c38a7000000'
+        self.assertEquals(expected, results[0].get('id'))
+            
 if __name__ == "__main__":
     unittest.main()
 

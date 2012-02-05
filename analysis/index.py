@@ -5,6 +5,7 @@ Created on 4 Feb 2012
 '''
 import os, time, lucene#!@UnresolvedImport
 from lucene import *
+from time import gmtime, strftime
 
 class Index(object):
     '''
@@ -45,7 +46,8 @@ class Index(object):
             doc.add(lucene.Field("author", document.author_screen_name,
                                 lucene.Field.Store.YES,
                                 lucene.Field.Index.NOT_ANALYZED))
-            doc.add(lucene.Field("timestamp", str(time.mktime(document.date.timetuple())),
+            formatted_date = lucene.SimpleDateFormat("yyyyMMddHHmmss").parse(str(document.date))
+            doc.add(lucene.Field("date", lucene.DateTools.dateToString(formatted_date, lucene.DateTools.Resolution.MINUTE),
                                 lucene.Field.Store.YES,
                                 lucene.Field.Index.NOT_ANALYZED))
             self.writer.addDocument(doc)
@@ -60,16 +62,16 @@ class Index(object):
         self.writer.close()
         
     def search_by_term(self, query, limit=None):
-        return self.search(query, "content", limit)
+        return self.search(query, "content", limit=limit)
     
-    def search_by_author(self, query, limit):
-        return self.search(query, "author", limit=None)
+    def search_by_author(self, query, limit=None):
+        return self.search(query, field="author", limit=limit)
     
-    def search_by_date(self, query, limit):
-        return self.search(query, "timestamp", limit=None)
+    def search_by_date(self, query, limit=None):
+        return self.search(query, field="timestamp", limit=limit)
     
     def search_by_id(self, query, limit=None):
-        return self.search(query, "id", limit)
+        return self.search(query, field="id", limit=limit)
         
     def search(self, query, field="content", limit=None):
         '''
@@ -86,7 +88,6 @@ class Index(object):
                 collector = DocumentHitCollector(searcher)
                 scoreDocs = searcher.search(query, collector)
                 results = collector.get_collected_documents()
-                searcher.close()
             else:
                 scoreDocs = searcher.search(query, limit).scoreDocs
                 results = []
@@ -94,7 +95,7 @@ class Index(object):
                         results.append(searcher.doc(scoreDoc.doc))
         except lucene.JavaError, e:
                 print e
-                    
+        searcher.close()
         return results
     
     def get_top_terms(self, limit=10):
