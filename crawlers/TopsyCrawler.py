@@ -77,7 +77,7 @@ class TopsyCrawler(AbstractCrawler):
                 finally:
                     pass          
             print tt.url        
-            print "Retrieving tweets for next three hours"         
+            print "Retrieving tweets for next "+ str(self.delta) + " hours"         
             self.from_date = self.maxtime
             self.maxtime += self.delta
                 

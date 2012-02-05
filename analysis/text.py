@@ -14,10 +14,10 @@ from analysis.semantic import TwitterSemanticAnalyser
 ###########################################
 # GLOBALS                                #
 ###########################################
-ignorewords = set(['rt', 'jan25', 'egypt', 'cairo', '25jan', "s", \
+ignorewords = set(['rt','jan25', 'egypt', 'cairo', '25jan', "s", \
                 '(' , ')', '<', '>', '#', '@', '?', '!', '.', ',', '=', '|', \
                 '&', ':', '+', '\'', '\'ve',"m", 're', '-', '"', '."', '...', '..', '--', '[', ']' ])
-
+                
 class TextAnalyser(object):
     '''
     This class contains and implements all the methods responsible for 

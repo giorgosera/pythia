@@ -3,9 +3,8 @@ Created on 4 Feb 2012
 
 @author: george
 '''
-import os, time, lucene#!@UnresolvedImport
+import os, lucene#!@UnresolvedImport
 from lucene import *
-from time import gmtime, strftime
 
 class Index(object):
     '''
@@ -29,6 +28,13 @@ class Index(object):
                                     True, 
                                     lucene.IndexWriter.MaxFieldLength.LIMITED)
         self.writer.setMaxFieldLength(1048576)
+    
+    def add_documents(self, document_list):
+        '''
+        Adds a batch of documents in the index.
+        '''
+        for document in document_list:
+            self.add_document(document)
         
     def add_document(self, document):
         '''
@@ -79,7 +85,7 @@ class Index(object):
         '''
         directory = lucene.SimpleFSDirectory(lucene.File(self.index_dir))
         searcher = lucene.IndexSearcher(directory, True)  
-
+        
         query = lucene.QueryParser(lucene.Version.LUCENE_CURRENT, field,
                                    self.analyser).parse(query)
         try:                           

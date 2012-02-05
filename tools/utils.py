@@ -63,12 +63,14 @@ def detect_encoding(text):
         
 def translate_text(text, src='ar', tgt='en'):
     translation = text
-    try:
-        detected = parse_result(alchemyObj.TextGetLanguage(text), "iso-639-1")
-        src = detected[0]['iso-639-1']
-    except Exception, e:
-        print e
-        src = 'en'    
+    #===========================================================================
+    # try:
+    #    detected = parse_result(alchemyObj.TextGetLanguage(text), "iso-639-1")
+    #    src = detected[0]['iso-639-1']
+    # except Exception, e:
+    #    print e
+    #    src = 'en'    
+    #===========================================================================
     
     if src != 'en': 
         try:

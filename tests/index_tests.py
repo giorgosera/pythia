@@ -6,16 +6,17 @@ Created on 23 Jan 2012
 
 My playground!
 '''
-import unittest
+import unittest, os
 from analysis.index import Index
 from database.warehouse import WarehouseServer
 from database.model.tweets import TwoGroupsTweet
 
-
+BASE_PATH = os.path.expanduser("~/virtualenvfyp/pythia/data/")
+index_path = BASE_PATH + "test_index"
 ws = WarehouseServer()
 sample_docs = ws.get_n_documents(100, type=TwoGroupsTweet)
 
-index = Index("index")
+index = Index(index_path)
 for doc in sample_docs:
     index.add_document(doc)
 index.finalize()
