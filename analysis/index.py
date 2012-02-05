@@ -59,41 +59,49 @@ class Index(object):
         self.writer.optimize()
         self.writer.close()
         
-    def search(self, query, limit=50):
+    def search_by_term(self, query, limit=None):
+        return self.search(query, "content", limit)
+    
+    def search_by_author(self, query, limit):
+        return self.search(query, "author", limit=None)
+    
+    def search_by_date(self, query, limit):
+        return self.search(query, "timestamp", limit=None)
+    
+    def search_by_id(self, query, limit=None):
+        return self.search(query, "id", limit)
+        
+    def search(self, query, field="content", limit=None):
         '''
         Searches the index based on the query supplied.
         '''
         directory = lucene.SimpleFSDirectory(lucene.File(self.index_dir))
         searcher = lucene.IndexSearcher(directory, True)  
-        
-        try:  
-            query = lucene.QueryParser(lucene.Version.LUCENE_CURRENT, "content",
-                                    self.analyser).parse(query)
-            scoreDocs = searcher.search(query, limit).scoreDocs
-            results = []
-            for scoreDoc in scoreDocs:
-                    results.append(searcher.doc(scoreDoc.doc))
+
+        query = lucene.QueryParser(lucene.Version.LUCENE_CURRENT, field,
+                                   self.analyser).parse(query)
+        try:                           
+            #if there's no limit then use a collector to retrieve them all
+            if limit is None:
+                collector = DocumentHitCollector(searcher)
+                scoreDocs = searcher.search(query, collector)
+                results = collector.get_collected_documents()
+                searcher.close()
+            else:
+                scoreDocs = searcher.search(query, limit).scoreDocs
+                results = []
+                for scoreDoc in scoreDocs:
+                        results.append(searcher.doc(scoreDoc.doc))
         except lucene.JavaError, e:
-            print e
-                
-        searcher.close()
+                print e
+                    
         return results
     
-    def get_top_keywords(self, limit=10):
+    def get_top_terms(self, limit=10):
         '''
         Returns the top keywords, in terms of documents mentioning them
         in the index. 
         '''
-        #=======================================================================
-        # directory = lucene.SimpleFSDirectory(lucene.File(self.index_dir))
-        # searcher = lucene.IndexSearcher(directory, True)
-        # 
-        # #Please note that we had to default number of hits to a large number
-        # #because search needs the number of the hits to return as an argument.
-        # #Since we want all the results  
-        # hits = searcher.search(lucene.MatchAllDocsQuery(), 10**6)
-        # return hits.scoreDocs
-        #=======================================================================
         directory = lucene.SimpleFSDirectory(lucene.File(self.index_dir))
         reader = lucene.FilterIndexReader.open(directory, True)
         terms = reader.terms()
@@ -117,5 +125,26 @@ class PorterStemmerAnalyzer(lucene.PythonAnalyzer):
         result = lucene.StopFilter(True, result, lucene.StopAnalyzer.ENGLISH_STOP_WORDS_SET)
         return result
         
+class DocumentHitCollector(lucene.PythonCollector):
+    '''
+    Overrides the PythonCollector method collect in order 
+    to create a list with all the documents appearing in the 
+    search results.
+    '''
+    def __init__(self, searcher):
+        lucene.PythonCollector.__init__(self)
+        self.documents = []
+        self.searcher = searcher
+
+    def collect(self, id, score):
+        doc = self.searcher.doc(id)
+        self.documents.append(doc);
         
+    def get_collected_documents(self):
+        return self.documents
+    
+    def setNextReader(self, reader, base):
+        self.base = base
         
+    def acceptsDocsOutOfOrder(self):
+        return True

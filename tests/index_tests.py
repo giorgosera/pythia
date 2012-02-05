@@ -22,7 +22,7 @@ index.finalize()
 class TestPlayground(unittest.TestCase):
   
     def test_searching(self):        
-        results = index.search("sales")
+        results = index.search_by_term("sales")
         
         calculated = []
         for doc in results:
@@ -33,12 +33,14 @@ class TestPlayground(unittest.TestCase):
         self.assertEqual(expected, calculated)
     
     def test_top_terms_index(self):
-        results = index.get_top_keywords(10)
+        results = index.get_top_terms(10)
         expected = [(52, u'uk'), (8, u'us'), (8, u'new'), (6, u'week'), (5, u'last'), (5, u'host'), (4, u'yeah'), (4, u'want'), (4, u'presid'), (4, u'nation')]
         self.assertEquals(expected, results)
-        
-    
 
+    def test_search_limit(self):
+        results = index.search_by_term("sales", limit=1)
+        self.assertEquals(1, len(results))
+        
 if __name__ == "__main__":
     unittest.main()
 
