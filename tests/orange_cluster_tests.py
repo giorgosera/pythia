@@ -6,32 +6,16 @@ Created on 26 Jan 2012
 import unittest, numpy
 import nimfa#!@UnresolvedImport
 from analysis.clustering.kmeans import OrangeKmeansClusterer
-
+from tests.test_document import get_test_documents
 ###########################################
 # GLOBALS                                #
 ###########################################
-doc1_raw = 'frequent FrEquEnt frequent <li>word</li> word sentence sentence' 
-doc2_raw = 'sentence <a href="www.google.com">arab</a> spring'
-doc3_raw = 'a is not a toKENIzed document'               
-
-doc1_tokens = ['frequent', 'frequent', 'frequent', 'word', 'word', 'sentenc', 'sentenc']
-doc2_tokens = ['sentenc', 'arab', 'spring']
-doc3_tokens = ['token', 'document']
-
-freq1 = [('frequent', 3), ('sentenc', 2), ('word', 2)]
-freq2 = [('arab', 1), ('sentenc', 1), ('spring', 1)]
-freq3 = [('document', 1), ('token', 1)]
-
-
-entry1 = {"tokens":doc1_tokens, "raw": doc1_raw, "word_frequencies":freq1}
-entry2 = {"tokens":doc2_tokens, "raw": doc2_raw, "word_frequencies":freq2}
-entry3 = {"tokens":doc3_tokens, "raw": doc3_raw, "word_frequencies":freq3}
-samples = [entry1, entry2, entry3] 
+ignore, ignore, samples  =  get_test_documents()
 
 oc = OrangeKmeansClusterer(k=2)        
 i = 0
 for sample in samples:
-    oc.add_document(i, sample)
+    oc.add_document(i, sample.content)
     i += 1
 
 class Test(unittest.TestCase):

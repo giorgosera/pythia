@@ -5,7 +5,7 @@ Created on 29 Jan 2012
 '''
 import nltk, numpy 
 from collections import OrderedDict 
-from analysis.text import TextAnalyser
+from visualizations.graphs import Timeline
 
 class AbstractClusterer(object):
     '''
@@ -23,11 +23,13 @@ class AbstractClusterer(object):
         self.table_name = None
         self.clusters = []
         
-    def add_document(self, id, document):
+    def add_document(self, document):
         '''
         Adds a new document in the cluster structure.
         '''    
-        self.document_dict[str(id)] = document
+        #Append date on the content dictionary for future use
+        document.content['date'] = document.date
+        self.document_dict[str(document.id)] = document.content
     
     def get_documents(self):
         return self.document_dict
@@ -96,7 +98,17 @@ class AbstractClusterer(object):
                 out.write(document["raw"])
                 out.write('\n')
             i += 1   
-    
+            
+    def plot_timeline(self):
+        '''
+        Plots a graph depicting the growth of each cluster's size as a 
+        function of time.
+        '''
+        for cluster in self.clusters:
+            documents =  cluster.get_documents()
+            t = Timeline([doc['date'] for doc in documents.values()])
+            t.plot()
+            
     def run(self):
         raise NotImplementedError('run is not implemented.')
 

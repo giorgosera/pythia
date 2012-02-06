@@ -18,8 +18,8 @@ t = TextAnalyser()
 dataset = OrderedDict()
 id = 0
 for tweet in tweets:
-    i, d = t.add_document(id, tweet)
-    dataset[i] = d
+    d = t.add_document(tweet)
+    dataset[id] = d
     id += 1
     
 class Test(unittest.TestCase):
@@ -27,8 +27,8 @@ class Test(unittest.TestCase):
         tsa = TwitterSocialAnalyser(dataset)
         result = tsa.filter_retweets()
         expected = []
-        expected.append( (0, t.add_document(0, tweet_with_RT)[1]) )
-        expected.append( (1, t.add_document(1, tweet_with_VIA)[1]) )
+        expected.append( (0, t.add_document(tweet_with_RT)) )
+        expected.append( (1, t.add_document(tweet_with_VIA)) )
         self.assertEqual(result, OrderedDict(expected))
 
         

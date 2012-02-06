@@ -7,7 +7,6 @@ Created on 23 Jan 2012
 My playground!
 '''
 import unittest
-import time
 from visualizations.graphs import Timeline  
 from database.warehouse import WarehouseServer
 from database.model.tweets import EgyptTweet
@@ -23,7 +22,3 @@ class TestPlayground(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
-
-
-

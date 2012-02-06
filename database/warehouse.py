@@ -54,3 +54,12 @@ class WarehouseServer(object):
         Returns the document which corresponds to this id
         '''
         return type.objects(id=id).get()
+    
+    def get_documents_by_id(self, ids, type=EgyptTweet):
+        '''
+        Returns a batch of docs which correspind to the given list of ids.
+        '''
+        documents = []
+        for id in ids:
+            documents.append(self.get_document_by_id(id=id, type=type))
+        return documents

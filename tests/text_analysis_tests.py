@@ -8,48 +8,26 @@ Unit tests for the analysis package.
 '''
 import unittest, tools.utils
 from analysis.text import TextAnalyser
+from tests.test_document import get_test_documents, get_unicode_document
 
 class TestTextAnalyserFunctions(unittest.TestCase):
     
     def test_tokenization(self):
-        doc1_raw = 'frequent FrEquEnt frequent <li>word</li> word sentence sentence' 
-        doc2_raw = 'sentence <a href="www.google.com">arab</a> spring'
-        doc3_raw = 'a is not a toKENIzed document'               
-        
-        doc1_tokens = ['frequent', 'frequent', 'frequent', 'word', 'word', 'sentenc', 'sentenc']
-        doc2_tokens = ['sentenc', 'arab', 'spring']
-        doc3_tokens = ['token', 'document']
-        
-        freq1 = [('frequent', 3), ('sentenc', 2), ('word', 2)]
-        freq2 = [('arab', 1), ('sentenc', 1), ('spring', 1)]
-        freq3 = [('document', 1), ('token', 1)]
-        
-        
-        entry1 = {"tokens":doc1_tokens, "raw": doc1_raw, "word_frequencies":freq1}
-        entry2 = {"tokens":doc2_tokens, "raw": doc2_raw, "word_frequencies":freq2}
-        entry3 = {"tokens":doc3_tokens, "raw": doc3_raw, "word_frequencies":freq3}
-        
-        expected = {'1': entry1, '2': entry2, '3': entry3}
-        
-        sample_docs = [doc1_raw, doc2_raw, doc3_raw]
-        
+        expected, sample_docs, objects = get_test_documents()
         calculated = {}
         analyser = TextAnalyser()
-        i = 1
+        id=0
         for s in sample_docs:
-            i, d = analyser.add_document(i, s)
-            calculated[str(i)] = d
-            i += 1
-        
+            d = analyser.add_document(s)
+            calculated[str(id)] = d
+            id+=1
+            
         self.assertEqual(expected, calculated)
         
     def test_unicode_doc_translation(self):
-        document = 'هذا اختبار' 
+        expected, document = get_unicode_document()
         analyser = TextAnalyser()
-        id, document = analyser.add_document(1, document)
-        
-        expected = "This is a test"
-        
+        document = analyser.add_document(document)
         self.assertEqual(expected, document["raw"])
         
     def test_text_preprocessing(self):

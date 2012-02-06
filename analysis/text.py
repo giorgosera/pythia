@@ -81,7 +81,7 @@ class TextAnalyser(object):
 
         return text, tokens, word_frequencies
     
-    def add_document(self, id, document):
+    def add_document(self, document):
         '''
         Inserts a new document in the list of documents. Note that it 
         deals with unicode strings which are automatically translated to 
@@ -95,7 +95,7 @@ class TextAnalyser(object):
         #sa = TwitterSemanticAnalyser()      
         #entities, sentiment, keywords = sa.analyse_text(unicode(new_document['raw']).encode('utf-8') )
           
-        return id, new_document
+        return new_document
         
     def _filter_tokens(self, tokens):
         filtered = []

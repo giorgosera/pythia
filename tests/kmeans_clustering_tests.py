@@ -12,39 +12,21 @@ from analysis.clustering.kmeans import OrangeKmeansClusterer, CustomClusterer
 from analysis.clustering.algorithms import *
 from visualizations.dendrogram import Dendrogram
 from visualizations.Cluster2DPlot import Cluster2DPlot
+from tests.test_document import get_orange_clustering_test_data
 
 ###########################################
 # GLOBALS                                #
 ###########################################
 ws = WarehouseServer()
-
-doc0 = 'This is a document related to sports : Football, basketball, tennis, golf etc.' 
-doc1 = 'In this document we will be talking about basketball, football, tennis, golf and sports in general.'
-doc2 = 'I like golf but football is really an amazing sport. I love it. But I love basketball too and tennis'
-doc3 = 'This document is related to programming. More specifically Python and CPP. For more info check my blog.'
-doc4 = 'I wrote a small Python script to run a clustering algorithm. I hope it works well . If not Ill try CPP' 
-doc5 = 'This blog writes about Python and programming in general.'
-
-doc0 = {'tokens': ['document', 'relat', 'sport', 'footbal', 'basketbal', 'tenni', 'golf', 'etc'], 'raw': 'This is a document related to sports : Football, basketball, tennis, golf etc.', 'word_frequencies': [('basketbal', 1), ('document', 1), ('etc', 1), ('footbal', 1), ('golf', 1), ('relat', 1), ('sport', 1), ('tenni', 1)]}
-doc1 = {'tokens': ['document', 'talk', 'basketbal', 'footbal', 'tenni', 'golf', 'sport', 'gener'], 'raw': 'In this document we will be talking about basketball, football, tennis, golf and sports in general.', 'word_frequencies': [('basketbal', 1), ('document', 1), ('footbal', 1), ('gener', 1), ('golf', 1), ('sport', 1), ('talk', 1), ('tenni', 1)]}
-doc2 = {'tokens': ['like', 'golf', 'footbal', 'realli', 'amaz', 'sport', 'love', 'love', 'basketbal', 'tenni'], 'raw': 'I like golf but football is really an amazing sport. I love it. But I love basketball too and tennis', 'word_frequencies': [('love', 2), ('amaz', 1), ('basketbal', 1), ('footbal', 1), ('golf', 1), ('like', 1), ('realli', 1), ('sport', 1), ('tenni', 1)]}
-doc3 = {'tokens': ['document', 'relat', 'program', 'specif', 'python', 'cpp', 'info', 'check', 'blog'], 'raw': 'This document is related to programming. More specifically Python and CPP. For more info check my blog.', 'word_frequencies': [('blog', 1), ('check', 1), ('cpp', 1), ('document', 1), ('info', 1), ('program', 1), ('python', 1), ('relat', 1), ('specif', 1)]}
-doc4 = {'tokens': ['wrote', 'small', 'python', 'script', 'run', 'cluster', 'algorithm', 'hope', 'work', 'well', 'ill', 'tri', 'cpp'], 'raw': 'I wrote a small Python script to run a clustering algorithm. I hope it works well . If not Ill try CPP', 'word_frequencies': [('algorithm', 1), ('cluster', 1), ('cpp', 1), ('hope', 1), ('ill', 1), ('python', 1), ('run', 1), ('script', 1), ('small', 1), ('tri', 1), ('well', 1), ('work', 1), ('wrote', 1)]}
-doc5 = {'tokens': ['blog', 'write', 'python', 'program', 'gener'], 'raw': 'This blog writes about Python and programming in general.', 'word_frequencies': [('blog', 1), ('gener', 1), ('program', 1), ('python', 1), ('write', 1)]}
-
-sample_docs = [doc0, doc1, doc2, doc3, doc4, doc5]
+sample_docs = get_orange_clustering_test_data()
 
 oc = OrangeKmeansClusterer(k=2)
-id = 0
 for s in sample_docs:
-    oc.add_document(id, s)
-    id += 1 
+    oc.add_document(s)
    
 cc = CustomClusterer()
-id = 0
 for s in sample_docs:
-    cc.add_document(id, s)
-    id += 1
+    cc.add_document(s)
     
 cc.construct_term_doc_matrix()
 cc.save_table("custom_clustering_test.txt")
@@ -56,19 +38,19 @@ class TestOrangeClustering(unittest.TestCase):
     ###########################################       
     def test_orange_sample_doc_kmeans(self):
         km = oc.run("orange_clustering_test")
-
         expected = [0, 0, 0, 1, 1, 1]
         self.assertEqual(expected, km.clusters)
 
     def test_orange_with_tweets_kmeans(self):    
         from_date = datetime.datetime(2011, 1, 23, 0, 0, 0)
         to_date = datetime.datetime(2011, 1, 27, 0, 0, 0) 
-        items = ws.get_documents_by_date(from_date, to_date)
-        
-        oc = OrangeKmeansClusterer(k=60, ngram=1)
+        items = ws.get_documents_by_date(from_date, to_date, 300)
+
+        oc = OrangeKmeansClusterer(k=10, ngram=1)
         for item in items:
-            oc.add_document(item.id, item.content)
+            oc.add_document(item)
         oc.run("orange_clustering_test")
+        oc.plot_timeline()
         oc.dump_clusters_to_file("kmeans_with_tweets_orange")
         
         #Experiments
@@ -79,7 +61,7 @@ class TestOrangeClustering(unittest.TestCase):
 
         oc_new = OrangeKmeansClusterer(k=5, ngram=2)
         for doc_id in oc.clusters[max[0]].get_documents().keys():
-            oc_new.add_document(doc_id, ws.get_document_by_id(doc_id).content)         
+            oc_new.add_document(ws.get_document_by_id(doc_id))         
         
         oc_new.run("orange_clustering_test")
         oc_new.dump_clusters_to_file("re-kmeans_with_tweets_orange")

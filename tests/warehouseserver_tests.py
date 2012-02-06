@@ -21,6 +21,11 @@ class TestWarehouseServer(unittest.TestCase):
         items = ws.get_n_documents(n)
         self.assertEqual(n, len(items))
         
+    def test_get_batch_of_docs_by_id(self):
+        items = ws.get_n_documents(5)
+        batch = ws.get_documents_by_id([item.id for item in items], type=EgyptTweet)
+        self.assertEqual([item.id for item in items], [item.id for item in batch])
+        
     def test_get_top_by_date(self):
 
         tweet1 = EgyptTweet()

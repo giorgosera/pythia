@@ -20,7 +20,7 @@ class Test(unittest.TestCase):
         items = ws.get_documents_by_date(from_date, to_date, limit=100)
         nmfc = NMFClusterer(ngram=1)
         for item in items:
-            nmfc.add_document(item.id, item.content)
+            nmfc.add_document(item)
         
         nmfc.run(seed = 'random_vcol', method='nmf', rank=30, max_iter=65, display_N_tokens = 6, display_N_documents =10)
         nmfc.dump_clusters_to_file("nmf_with_tweets")
