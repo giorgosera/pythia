@@ -99,15 +99,17 @@ class AbstractClusterer(object):
                 out.write('\n')
             i += 1   
             
-    def plot_timeline(self):
+    def plot_timeline(self, cumulative=True):
         '''
         Plots a graph depicting the growth of each cluster's size as a 
         function of time.
         '''
         for cluster in self.clusters:
             documents =  cluster.get_documents()
-            t = Timeline([doc['date'] for doc in documents.values()])
-            t.plot()
+            if len(documents) > 0:
+                t = Timeline([doc['date'] for doc in documents.values()], cumulative=cumulative)
+                t.plot()
+        t.show()
             
     def run(self):
         raise NotImplementedError('run is not implemented.')

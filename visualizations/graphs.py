@@ -3,13 +3,11 @@ Created on 5 Feb 2012
 
 @author: george
 '''
-import itertools
+import itertools, numpy
 import matplotlib.pyplot as plt#!@UnresolvedImport
-import matplotlib#!@UnresolvedImport
 #matplotlib.use('GTKAgg')
 from matplotlib.dates import date2num, num2date#!@UnresolvedImport
 from matplotlib import ticker#!@UnresolvedImport
-from matplotlib.ticker import Formatter#!@UnresolvedImport
 
 class Timeline(object):
     '''
@@ -17,23 +15,32 @@ class Timeline(object):
     as a function of time. 
     '''
 
-    def __init__(self, data):
+    def __init__(self, data, cumulative=False):
         '''
         Constructor method. The data should provide 
         a datetime field.
         '''
         self.data = data
+        self.cumulative = cumulative
         
     def _format_date(self, x, pos):
         return num2date(x).strftime('%Y-%m-%d %H:%M:%S')
         #lambda numdate, _: num2date(numdate).strftime('%Y-%m-%d %H:%M:%S')
         
     def plot(self):
-        grouped_data = self._aggregate_data()    
-        plt.plot([h[0] for h in grouped_data], [h[1] for h in grouped_data], 'o-')
+        '''
+        First calls a function to aggregate data into time buckets and then
+        holds the figure in case we want to plot multiple lines.
+        '''
+        dates, counts = self._aggregate_data()
+        plt.plot(dates, counts, 'o-')             
         plt.gca().xaxis.set_major_formatter(ticker.FuncFormatter(self._format_date))
         plt.gcf().autofmt_xdate()        
+        plt.hold(True)
+    
+    def show(self):
         plt.show()
+        plt.hold(False)
     
     def _aggregate_data(self):
         '''
@@ -43,5 +50,9 @@ class Timeline(object):
         same bucket. 
         '''        
         x = sorted([date2num(item) for item in self.data]) 
-        return [[d, len(list(g))] for d, g in itertools.groupby(x)]
+        grouped_dates = numpy.array([[d, len(list(g))] for d, g in itertools.groupby(x)])
+        dates, counts = grouped_dates.transpose()
+        if self.cumulative:
+            counts = counts.cumsum()
+        return dates, counts
         

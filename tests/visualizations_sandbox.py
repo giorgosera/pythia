@@ -19,6 +19,7 @@ class TestPlayground(unittest.TestCase):
         items = [item.date for item in ws.get_all_documents(type=EgyptTweet)]
         t = Timeline(items)
         t.plot()
+        t.show()
 
 if __name__ == "__main__":
     unittest.main()

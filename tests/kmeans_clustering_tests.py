@@ -44,13 +44,13 @@ class TestOrangeClustering(unittest.TestCase):
     def test_orange_with_tweets_kmeans(self):    
         from_date = datetime.datetime(2011, 1, 23, 0, 0, 0)
         to_date = datetime.datetime(2011, 1, 27, 0, 0, 0) 
-        items = ws.get_documents_by_date(from_date, to_date, 300)
+        items = ws.get_documents_by_date(from_date, to_date, 100)
 
-        oc = OrangeKmeansClusterer(k=10, ngram=1)
+        oc = OrangeKmeansClusterer(k=20, ngram=1)
         for item in items:
             oc.add_document(item)
         oc.run("orange_clustering_test")
-        oc.plot_timeline()
+        oc.plot_timeline(cumulative=True)  
         oc.dump_clusters_to_file("kmeans_with_tweets_orange")
         
         #Experiments
@@ -62,11 +62,9 @@ class TestOrangeClustering(unittest.TestCase):
         oc_new = OrangeKmeansClusterer(k=5, ngram=2)
         for doc_id in oc.clusters[max[0]].get_documents().keys():
             oc_new.add_document(ws.get_document_by_id(doc_id))         
-        
         oc_new.run("orange_clustering_test")
         oc_new.dump_clusters_to_file("re-kmeans_with_tweets_orange")
-        #End of experiments
-                
+        #End of experiments      
         
     #===========================================================================
     # def test_orange_with_tweets_hierarchical(self):
