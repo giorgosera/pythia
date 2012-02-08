@@ -4,7 +4,6 @@ Created on 26 Jan 2012
 @author: george
 '''
 import unittest, numpy
-import nimfa#!@UnresolvedImport
 from analysis.clustering.kmeans import OrangeKmeansClusterer
 from tests.test_document import get_test_documents
 ###########################################
@@ -13,10 +12,8 @@ from tests.test_document import get_test_documents
 ignore, ignore, samples  =  get_test_documents()
 
 oc = OrangeKmeansClusterer(k=2)        
-i = 0
 for sample in samples:
-    oc.add_document(i, sample.content)
-    i += 1
+    oc.add_document(sample)
 
 class Test(unittest.TestCase):
 
@@ -49,11 +46,8 @@ class Test(unittest.TestCase):
     def test_split_into_clusters(self):
 
         oc.run("orange_clustering_test")
-        expected_clusters = [{'0': {'tokens': ['frequent', 'frequent', 'frequent', 'word', 'word', 'sentenc', 'sentenc'], 'raw': 'frequent FrEquEnt frequent <li>word</li> word sentence sentence', 'word_frequencies': [('frequent', 3), ('sentenc', 2), ('word', 2)]}, '2': {'tokens': ['token', 'document'], 'raw': 'a is not a toKENIzed document', 'word_frequencies': [('document', 1), ('token', 1)]}}
-                             ,{'1': {'tokens': ['sentenc', 'arab', 'spring'], 'raw': 'sentence <a href="www.google.com">arab</a> spring', 'word_frequencies': [('arab', 1), ('sentenc', 1), ('spring', 1)]}}]
-        
-        self.assertEqual(expected_clusters, [c.get_documents() for c in oc.clusters])
-        
+        expected_clusters = [ ['0', '2'],['1']]
+        self.assertEqual(expected_clusters, [c.get_documents().keys() for c in oc.clusters])
         oc.dump_clusters_to_file("test_orange_with_samples")
         
         

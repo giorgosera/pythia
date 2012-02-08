@@ -1,162 +1,162 @@
 
 ***********************************************************
 Cluster0
-[u'messag', u'via', u'revolut', u'young', u'wait', u'live']
-(0.7197683590555608, u'A Message http://t.co/PFsyPJn message via @ youtube # EGYPT # 25JAN # FB')
-(0.0223724342212606, u"#Egypt's frustrated young wait for lives to begin, dream of revolution http://bit.ly/gTd5ZX via @Tharwacolamus #Sidibouzid #arabprotest")
-(0.00041238507213812921, u'Renewed protests in #Algeria and #Tunisia as Arab unrest spreads RT @seyachoumeh http://kwick.me/ktMh #egypt #yemen via @Sonja_Jo')
-(0.00041238507213812921, u'RT @octavianasr: Renewed protests in #Algeria and #Tunisia as Arab unrest spreads RT @seyachoumeh http://kwick.me/ktMh #egypt #yemen via @Sonja_Jo')
+[u'tunisian', u'done', u'get', u'elbaradei', u'egyptian', u'khalina']
+(0.30963568021446708, u'RT @ahramonline: #Egypt ElBaradei: If the Tunisians have done it, Egyptians should get there too http://ht.ly/1aZ9Zx')
+(0.30963568021446708, u'#Egypt ElBaradei: If the Tunisians have done it, Egyptians should get there too http://ht.ly/1aZ9Zx')
+(0.029720839879035496, u'The strong statement: together on January 25, under the banner of Justice-freedom-def get Thawra at 2 pm http://on.fb.me/ff7qdH # 25jan')
+(0.026165937811846486, u'RT @ Gemyhood: Suez and everyone declares get strained on 25 ... Thai protesters workers on employment she took their places # Jan25 Elly')
+(0.02298854617107007, u'According to the folk Hey Muhammad. Paul. Reel video: Egypt gets Tunisia is not death nor life in hot filling http://bit.ly/htylff Vute # 25jan # egypt')
+(0.019378244014499467, u'RT @ mesh: wael hasharb ships August khalina kept \xf1\xe7\xed\xfe. Beryl khalina astrgl-lavantalob and abibsi-El Moselhi: khalina because not one comparative-hasharb Murr-because Egyptian and will stay free # Jan25')
+(0.019378244014499467, u'RT @ mesh: wael hasharb ships August khalina kept \xf1\xe7\xed\xfe. Beryl khalina astrgl-lavantalob and abibsi-El Moselhi: khalina because not one comparative-hasharb Murr-because Egyptian and will stay free # Jan25')
+(0.019378244014499467, u'RT @ mesh: wael hasharb ships August khalina kept \xf1\xe7\xed\xfe. Beryl khalina astrgl-lavantalob and abibsi-El Moselhi: khalina because not one comparative-hasharb Murr-because Egyptian and will stay free # Jan25')
+(0.018542193867003755, u'RT @ oshaokhtmeligi: walk ya Mubarak, I walk yabeni albhedlh allowance, Christians have you blood, your blood, and the sinaitic them and the upper Egyptians have you blood, will establish work eh? #jan25')
+(0.010462930185202711, u"RT @ahramonline: #Egypt ElBaradei supports a national day of action on Tuesday, but won't take part http://ht.ly/1aZ9Zw")
+
+
+***********************************************************
+Cluster1
+[u'speak', u'russia', u'qur', u'miracl', u'anic', u'programm']
+(0.38832267497369, u"Her Russia speaks in its programme on Qur'anic miracle http://dlvr.it/DtbPP # Egypt")
+(0.031481154166678391, u'Sunrise: prestige: President with limited income and poor aim, its election programme achieved attests to that.(Morning heartburn blood) # Egypt')
+(0.0027648636586609029, u'RT @ oshaokhtmeligi: walk ya Mubarak, I walk yabeni albhedlh allowance, Christians have you blood, your blood, and the sinaitic them and the upper Egyptians have you blood, will establish work eh? #jan25')
+(0.0011431134408797573, u"# Jan25 # Egypt # EgyGovernment # 25Jan # Mubarak http://bit.ly/gVHLb4 an important speech of President's Police today || Hey messahel Lord ... Lord")
+(0.00086306503168044125, u'That blogging if flying the President to change, to change for years build up example http://hasantalk.com/?p=375 # egypt # Tunisia')
+(0.00076880893252623283, u"RT @ karembue: saturated with the smell of gasoline morning ... Ghstwa wearing the revolution????!!\nI'm khayef Koun revolution Elly talk by de aspiration times Bull!\n#Egypt #jan25")
+(0.00053073170942338852, u'RT @ S_Elhussieny: 500,000 (poster) and 250,000 (t-shirt) to support (Mubarak) 25 Jan-gate Sunrise http://bit.ly/i6p7pA # egypt # 25jan')
+(7.8648780787989015e-05, u'The book "how to change the world" lairik haobsbaom tops sales of books this week as the guardian http://is.gd/OpgeBl speech de Lena we # jan25')
+(5.3953282700432396e-05, u'# Egypt khayef Koun malakish Egypt rose from sleeping http://www.youtube.com/watch?v=oWZM9fWzvp0&feature=related # 25jan')
+(5.3953282700432396e-05, u'# Egypt khayef Koun malakish Egypt rose from sleeping http://www.youtube.com/watch?v=oWZM9fWzvp0&feature=related # 25jan')
+
+
+***********************************************************
+Cluster2
+[u'role', u'million', u'mubarak', u'shirt', u'poster', u'text']
+(0.28182448337185745, u'Hey Zen saying Mubarak flyer in you video: role role http://bit.ly/evAdfp role remained elusive nights your above # 25jan # egypt # tunisia')
+(0.19288743059474731, u'Text of poster and a quarter of a million million t-shirt to support Mubarak on 25, but card gwakt and Kochi Bata fiddle http://t.co/xT7zByq # egypt # jan25 # egyfun')
+(0.19288743059474731, u'RT @ altahawi: text million posters and a quarter of a million t-shirts to support Mubarak on 25, but card gwakt and Kochi Bata fiddle http://t.co/xT7zByq # egypt # jan25 ...')
+(0.092060994566983897, u'RT @ S_Elhussieny: 500,000 (poster) and 250,000 (t-shirt) to support (Mubarak) 25 Jan-gate Sunrise http://bit.ly/i6p7pA # egypt # 25jan')
+(0.031681799561850348, u'Washington Post: all indicators confirm that Mubarak will lead Egypt to a catastrophe ...Obama insists on silence http://j.mp/eNNJrY # EgyRevol # 25Jan # Jan25 # Mubarak # Egypt')
+(0.021852176609134584, u'RT @ oshaokhtmeligi: walk ya Mubarak, I walk yabeni albhedlh allowance, Christians have you blood, your blood, and the sinaitic them and the upper Egyptians have you blood, will establish work eh? #jan25')
+(0.013359421765152778, u'RT @ LoaiNagati: predicted severe and fatal cases stupidity on 25 such as raising photos of Gamal Abdel Nasser. #jan25')
+(0.0096546755250567617, u'Sunrise: prestige: President with limited income and poor aim, its election programme achieved attests to that.(Morning heartburn blood) # Egypt')
+(0.0077201767695773329, u'RT @ mamdoh_: http://www.youtube.com/watch?v=n94-pXrIzT8 this video will move with minds on January 25, # egypt')
+(0.0075518242400354546, u'# Egypt over 5,000 website promotes terrorism. 500 of them addressed to http://bit.ly/i0RAAC Arabic region')
+
+
+***********************************************************
+Cluster3
+[u'suprem', u'slogan', u'great', u'front', u'court', u'demonstr']
+(0.39725570212636779, u'RT @ MAswad: great slogans of demonstration in front of the Supreme Court http://t.co/HkZtaHX # Jan25 # Egypt # Mubarak # Protest')
+(3.0831026954576882e-06, u'RT @wael: Another sign, best seller on Guardian list this week is "How to Change the World" by Eric Hobsbawm http://is.gd/OpgeBl  #jan25')
+(3.0831026954576882e-06, u'Another sign, best seller on Guardian list this week is "How to Change the World" by Eric Hobsbawm http://is.gd/OpgeBl  #jan25')
+(1.728125788688418e-06, u'The book "how to change the world" lairik haobsbaom tops sales of books this week as the guardian http://is.gd/OpgeBl speech de Lena we # jan25')
+(6.179708099088916e-07, u'That blogging if flying the President to change, to change for years build up example http://hasantalk.com/?p=375 # egypt # Tunisia')
+(4.9011274134041961e-07, u'The most rational and best essay so far on Jan. 25.So be a real step towards change and not merely call for a revolution followed by foil http://bit.ly/eP3gVA # 25jan')
+(5.0387455487474068e-08, u'SSI bitab Uwe khalina spied out the English courses-visualizer Internet blogging and Facebook wetoitr # Egypt')
+(5.0101573793363279e-08, u'# Egypt khayef Koun malakish Egypt rose from sleeping http://www.youtube.com/watch?v=oWZM9fWzvp0&feature=related # 25jan')
+(5.0101573793363279e-08, u'# Egypt khayef Koun malakish Egypt rose from sleeping http://www.youtube.com/watch?v=oWZM9fWzvp0&feature=related # 25jan')
+(4.2908211486444789e-08, u'RT @ mamdoh_: http://www.youtube.com/watch?v=n94-pXrIzT8 this video will move with minds on January 25, # egypt')
+
+
+***********************************************************
+Cluster4
+[u'young', u'wait', u'live', u'frustrat', u'dream', u'begin']
+(0.18886885604964834, u"Egypt's frustrated young wait for their lives to begin, and dream of revolution http://bit.ly/f803we #Egypt #jan25 #YesWeCan")
+(0.18209865082495388, u"RT @Tharwacolamus: #Egypt's frustrated young wait for their lives to begin, and dream of revolution |  The Observer - http://goo.gl/A1GC3 #sidibouzid")
+(0.18209865082495388, u"#Egypt's frustrated young wait for their lives to begin, and dream of revolution |  The Observer - http://goo.gl/A1GC3 #sidibouzid")
+(0.16856809525315591, u"#Egypt's frustrated young wait for lives to begin, dream of revolution http://bit.ly/gTd5ZX via @Tharwacolamus #Sidibouzid #arabprotest")
+(0.16745129448576757, u"RT @royasmusic: U can do it! V @mar3e Egypt's frustrated young wait 4 their lives to begin,&dream of revolution http://bit.ly/f803we #Egypt #jan25 #YesWeCan")
+(0.16313886915196538, u"RT @mar3e Egypt's frustrated young wait for their lives to begin, & dream of revolution http://bit.ly/f803we #Egypt || @Guardian")
+(0.016699471401456598, u"RT @ karembue: saturated with the smell of gasoline morning ... Ghstwa wearing the revolution????!!\nI'm khayef Koun revolution Elly talk by de aspiration times Bull!\n#Egypt #jan25")
+(0.010037366455196255, u'# JAN25 here the significance of revolution in dignity on Tuesday http://www.youtube.com/watch?v=jI9QdcRt4fc&feature=player_embedded#!')
+(0.0092134260123446689, u'The most rational and best essay so far on Jan. 25.So be a real step towards change and not merely call for a revolution followed by foil http://bit.ly/eP3gVA # 25jan')
+(0.0040909063747312209, u"# Jan25 # Egypt # EgyGovernment # 25Jan # Mubarak http://bit.ly/gVHLb4 an important speech of President's Police today || Hey messahel Lord ... Lord")
+
+
+***********************************************************
+Cluster5
+[u'octob', u'kill', u'injur', u'two', u'peopl', u'five']
+(0.41751595619142778, u'Killing and injuring five people in two b "October" http://dlvr.it/Dv86J # Egypt')
+(0.41751595619142778, u'Killing and injuring five people in two b "October" http://bit.ly/eBX6ta # Egypt')
+(0.057538386457406339, u'France: careful to ensure the security of Israel and Jerusalem as the capital of two States http://dlvr.it/DvJQK # Egypt')
+(0.036859126114116757, u'RT @ AhmadFahmy: two questions: 1. milestone with any degree any BU dear Kaffir and no, 2-stroke machine after al-Dahr sues ergonomics????? #bouazizi #tunisia #egypt #sidibouzid')
+(0.036254869748504059, u"RT @ Mohrad: the poet's view: If people one day wanted life.. Lord right Gah Prophet works need stayed # jan25")
+(0.036254869748504059, u"RT @ Mohrad: the poet's view: If people one day wanted life.. Lord right Gah Prophet works need stayed # jan25")
+(0.0016176366879111816, u'RT @ mesh: wael hasharb ships August khalina kept \xf1\xe7\xed\xfe. Beryl khalina astrgl-lavantalob and abibsi-El Moselhi: khalina because not one comparative-hasharb Murr-because Egyptian and will stay free # Jan25')
+(0.0016176366879111816, u'RT @ mesh: wael hasharb ships August khalina kept \xf1\xe7\xed\xfe. Beryl khalina astrgl-lavantalob and abibsi-El Moselhi: khalina because not one comparative-hasharb Murr-because Egyptian and will stay free # Jan25')
+(0.0016176366879111816, u'RT @ mesh: wael hasharb ships August khalina kept \xf1\xe7\xed\xfe. Beryl khalina astrgl-lavantalob and abibsi-El Moselhi: khalina because not one comparative-hasharb Murr-because Egyptian and will stay free # Jan25')
+(0.0011839738430269831, u'RT @ oshaokhtmeligi: walk ya Mubarak, I walk yabeni albhedlh allowance, Christians have you blood, your blood, and the sinaitic them and the upper Egyptians have you blood, will establish work eh? #jan25')
+
+
+***********************************************************
+Cluster6
+[u'matter', u'go', u'doesn', u'street', u'!!!', u'86']
+(0.31130889358085667, u"It doesn't matter where u go on #jan25, just be the street!!!")
+(0.29553061775571687, u"RT @Gsquare86: It doesn't matter where u go on #jan25, just be the street!!!")
+(0.006683083969968172, u'RT @ Alotaibih3af: # Jan25 Hey folks Egypt returned to Arab mother!!!\nThe Arabs lost on lost Egypt ...')
+(0.006683083969968172, u'RT @ Alotaibih3af: # Jan25 Hey folks Egypt returned to Arab mother!!!\nThe Arabs lost on lost Egypt ...')
+(0.0013308659763779063, u'\xabDiver\xbb flooded the streets \xabAmiriyah\xbb http://dlvr.it/DvBZz # Egypt')
+(2.2204460492503131e-16, u'\u201cWe Are All Khaled Said\u201d: Will the Revolution Come to #Egypt? - The Daily Beast - http://goo.gl/bSWtP #sidibouzid')
+(2.2204460492503131e-16, u'\xabLocal customs\xbb looking worn out sewerage and \xabChadli\xbb: remove the breakages task http://dlvr.it/DvF8T road # Egypt')
+(2.2204460492503131e-16, u"Yamser national and Cheddi tricks every Elly you desire him I | Don't cross me and Lil oppression | Safety safety safety Bajram Effendi Jan25 http://t.co/aioDzAy #")
+(2.2204460492503131e-16, u'Washington Post: all indicators confirm that Mubarak will lead Egypt to a catastrophe ...Obama insists on silence http://j.mp/eNNJrY # EgyRevol # 25Jan # Jan25 # Mubarak # Egypt')
+(2.2204460492503131e-16, u"There was an error deserializing the object of type System.String. Encountered unexpected character '\xd8'.")
+
+
+***********************************************************
+Cluster7
+[u'effect', u'bouazizi', u'khalina', u'chang', u'hasharb', u'tunisia']
+(0.6895155948495435, u'RT @H_A_NassaR: BouAzizi Effect RT @Adel_Salib    Butterfly Effect #Tunis #Egypt #Jan25')
 (2.2204460492503131e-16, u'\u201cWe Are All Khaled Said\u201d: Will the Revolution Come to #Egypt? - The Daily Beast - http://goo.gl/bSWtP #sidibouzid')
 (2.2204460492503131e-16, u'\xabLocal customs\xbb looking worn out sewerage and \xabChadli\xbb: remove the breakages task http://dlvr.it/DvF8T road # Egypt')
 (2.2204460492503131e-16, u'\xabDiver\xbb flooded the streets \xabAmiriyah\xbb http://dlvr.it/DvBZz # Egypt')
 (2.2204460492503131e-16, u"Yamser national and Cheddi tricks every Elly you desire him I | Don't cross me and Lil oppression | Safety safety safety Bajram Effendi Jan25 http://t.co/aioDzAy #")
 (2.2204460492503131e-16, u'Washington Post: all indicators confirm that Mubarak will lead Egypt to a catastrophe ...Obama insists on silence http://j.mp/eNNJrY # EgyRevol # 25Jan # Jan25 # Mubarak # Egypt')
 (2.2204460492503131e-16, u"There was an error deserializing the object of type System.String. Encountered unexpected character '\xd8'.")
-
-
-***********************************************************
-Cluster1
-[u'due', u'wife', u'shimon', u'pere', u'death', u'mubarak']
-(0.34446061646083243, u"Mubarak was due to his wife's death, Shimon Peres in Egypt http://dlvr.it/DvDjN #")
-(0.14434976246483397, u'Anger among citizens \xabAPIs\xbb due to the lack of logistical http://dlvr.it/DvBc6 recognizes rice # Egypt')
-(0.035274131094692136, u'Text of poster and a quarter of a million million t-shirt to support Mubarak on 25, but card gwakt and Kochi Bata fiddle http://t.co/xT7zByq # egypt # jan25 # egyfun')
-(0.035274131094692136, u'RT @ altahawi: text million posters and a quarter of a million t-shirts to support Mubarak on 25, but card gwakt and Kochi Bata fiddle http://t.co/xT7zByq # egypt # jan25 ...')
-(0.028687524145005017, u'According to the folk Hey Muhammad. Paul. Reel video: Egypt gets Tunisia is not death nor life in hot filling http://bit.ly/htylff Vute # 25jan # egypt')
-(0.025702761701906465, u'Washington Post: all indicators confirm that Mubarak will lead Egypt to a catastrophe ...Obama insists on silence http://j.mp/eNNJrY # EgyRevol # 25Jan # Jan25 # Mubarak # Egypt')
-(0.019237333548241815, u'RT @ S_Elhussieny: 500,000 (poster) and 250,000 (t-shirt) to support (Mubarak) 25 Jan-gate Sunrise http://bit.ly/i6p7pA # egypt # 25jan')
-(0.017010277524564334, u'Hey Zen saying Mubarak flyer in you video: role role http://bit.ly/evAdfp role remained elusive nights your above # 25jan # egypt # tunisia')
-(0.014383710716169645, u'RT @ oshaokhtmeligi: walk ya Mubarak, I walk yabeni albhedlh allowance, Christians have you blood, your blood, and the sinaitic them and the upper Egyptians have you blood, will establish work eh? #jan25')
-(0.001858080517302803, u'Sunrise: prestige: President with limited income and poor aim, its election programme achieved attests to that.(Morning heartburn blood) # Egypt')
-
-
-***********************************************************
-Cluster2
-[u'flood', u'diver', u'amiriyah', u'street', u'!!!', u'matter']
-(0.48433876701031991, u'\xabDiver\xbb flooded the streets \xabAmiriyah\xbb http://dlvr.it/DvBZz # Egypt')
-(0.0042490560531604224, u"It doesn't matter where u go on #jan25, just be the street!!!")
-(0.00016288269411461772, u"RT @Gsquare86: It doesn't matter where u go on #jan25, just be the street!!!")
-(2.2204460492503131e-16, u'\u201cWe Are All Khaled Said\u201d: Will the Revolution Come to #Egypt? - The Daily Beast - http://goo.gl/bSWtP #sidibouzid')
-(2.2204460492503131e-16, u'\xabLocal customs\xbb looking worn out sewerage and \xabChadli\xbb: remove the breakages task http://dlvr.it/DvF8T road # Egypt')
-(2.2204460492503131e-16, u"Yamser national and Cheddi tricks every Elly you desire him I | Don't cross me and Lil oppression | Safety safety safety Bajram Effendi Jan25 http://t.co/aioDzAy #")
-(2.2204460492503131e-16, u'Washington Post: all indicators confirm that Mubarak will lead Egypt to a catastrophe ...Obama insists on silence http://j.mp/eNNJrY # EgyRevol # 25Jan # Jan25 # Mubarak # Egypt')
-(2.2204460492503131e-16, u"There was an error deserializing the object of type System.String. Encountered unexpected character '\xd8'.")
 (2.2204460492503131e-16, u"There was an error deserializing the object of type System.String. Encountered unexpected character '\xd8'.")
 (2.2204460492503131e-16, u"There was an error deserializing the object of type System.String. Encountered unexpected character ':'.")
-
-
-***********************************************************
-Cluster3
-[u'unrest', u'spread', u'renew', u'via', u'arab', u'protest']
-(0.3736188080242161, u'Renewed protests in #Algeria and #Tunisia as Arab unrest spreads RT @seyachoumeh http://kwick.me/ktMh #egypt #yemen via @Sonja_Jo')
-(0.3736188080242161, u'RT @octavianasr: Renewed protests in #Algeria and #Tunisia as Arab unrest spreads RT @seyachoumeh http://kwick.me/ktMh #egypt #yemen via @Sonja_Jo')
-(0.033854514740569872, u"#Egypt's frustrated young wait for lives to begin, dream of revolution http://bit.ly/gTd5ZX via @Tharwacolamus #Sidibouzid #arabprotest")
-(0.015402239902526335, u'RT @ Gemyhood: Suez and everyone declares get strained on 25 ... Thai protesters workers on employment she took their places # Jan25 Elly')
-(0.011559541036212777, u'RT @ MenaNader: Naguib Gabriel Coptic youth urged to boycott protests 25 January || Medicine you take to you money!!!??? #25Jan #Jan25 #Copts #Egypt #EgyptRevol #A7A')
-(0.011559541036212777, u'RT @ MenaNader: Naguib Gabriel Coptic youth urged to boycott protests 25 January || Medicine you take to you money!!!??? #25Jan #Jan25 #Copts #Egypt #EgyptRevol #A7A')
-(0.0016842060932556226, u'RT @ Alotaibih3af: # Jan25 Hey folks Egypt returned to Arab mother!!!\nThe Arabs lost on lost Egypt ...')
-(0.0016842060932556226, u'RT @ Alotaibih3af: # Jan25 Hey folks Egypt returned to Arab mother!!!\nThe Arabs lost on lost Egypt ...')
-(0.0015913590329336533, u'# Egypt over 5,000 website promotes terrorism. 500 of them addressed to http://bit.ly/i0RAAC Arabic region')
-(0.0015913590329336533, u'# Egypt over 5,000 website promotes terrorism. 500 of them addressed to http://bit.ly/i0RAAC Arabic region')
-
-
-***********************************************************
-Cluster4
-[u'octob', u'kill', u'injur', u'two', u'peopl', u'five']
-(0.29581782016263303, u'Killing and injuring five people in two b "October" http://dlvr.it/Dv86J # Egypt')
-(0.29581782016263303, u'Killing and injuring five people in two b "October" http://bit.ly/eBX6ta # Egypt')
-(0.042823114692311634, u'France: careful to ensure the security of Israel and Jerusalem as the capital of two States http://dlvr.it/DvJQK # Egypt')
-(0.026167477974817631, u'RT @ AhmadFahmy: two questions: 1. milestone with any degree any BU dear Kaffir and no, 2-stroke machine after al-Dahr sues ergonomics????? #bouazizi #tunisia #egypt #sidibouzid')
-(0.025913663988478036, u"RT @ Mohrad: the poet's view: If people one day wanted life.. Lord right Gah Prophet works need stayed # jan25")
-(0.025913663988478036, u"RT @ Mohrad: the poet's view: If people one day wanted life.. Lord right Gah Prophet works need stayed # jan25")
-(0.00074111617940288577, u'RT @ NorthCup: Guide to demonstrators on twenty-five http://bit.ly/iihznO By @ Wild_atHeart # egypt # jan25')
-(0.00074111617940288577, u'Guide to demonstrators on twenty-five http://bit.ly/iihznO By @ Wild_atHeart # egypt # jan25')
-(0.00048311661676325078, u'RT @ oshaokhtmeligi: walk ya Mubarak, I walk yabeni albhedlh allowance, Christians have you blood, your blood, and the sinaitic them and the upper Egyptians have you blood, will establish work eh? #jan25')
-(0.00031206968616859075, u"RT @ Melshamy: Al confirms the participation of brothers and members of Parliament's protests January 25, http://bit.ly/gfn42d # 25jan # Egypt # Mb # Tunis # Si ...")
-
-
-***********************************************************
-Cluster5
-[u'safeti', u'nation', u'yamser', u'trick', u'oppress', u'lil']
-(0.21721116729334489, u"Yamser national and Cheddi tricks every Elly you desire him I | Don't cross me and Lil oppression | Safety safety safety Bajram Effendi Jan25 http://t.co/aioDzAy #")
-(0.21721116729334489, u"RT @ memam8: yamser national and Cheddi tricks every Elly you desire him I | Don't cross me and Lil oppression | Safety safety safety Bajram Effendi Jan25 http://t.co/aioDzAy #")
-(0.076854780122054378, u"RT @ahramonline: #Egypt ElBaradei supports a national day of action on Tuesday, but won't take part http://ht.ly/1aZ9Zw")
-(0.076854780122054378, u"#Egypt ElBaradei supports a national day of action on Tuesday, but won't take part http://ht.ly/1aZ9Zw")
-(0.012572365431209759, u'RT @ Gemyhood: Suez and everyone declares get strained on 25 ... Thai protesters workers on employment she took their places # Jan25 Elly')
-(0.01238555308865584, u'Text of poster and a quarter of a million million t-shirt to support Mubarak on 25, but card gwakt and Kochi Bata fiddle http://t.co/xT7zByq # egypt # jan25 # egyfun')
-(0.01238555308865584, u'RT @ altahawi: text million posters and a quarter of a million t-shirts to support Mubarak on 25, but card gwakt and Kochi Bata fiddle http://t.co/xT7zByq # egypt # jan25 ...')
-(0.011082207951918136, u'# JAN25 here the significance of revolution in dignity on Tuesday http://www.youtube.com/watch?v=jI9QdcRt4fc&feature=player_embedded#!')
-(0.010463668648293994, u"RT @ karembue: saturated with the smell of gasoline morning ... Ghstwa wearing the revolution????!!\nI'm khayef Koun revolution Elly talk by de aspiration times Bull!\n#Egypt #jan25")
-(0.0088680427623347591, u'RT @ MenaNader: Naguib Gabriel Coptic youth urged to boycott protests 25 January || Medicine you take to you money!!!??? #25Jan #Jan25 #Copts #Egypt #EgyptRevol #A7A')
-
-
-***********************************************************
-Cluster6
-[u'unemploy', u'theft', u'major', u'grand', u'auto', u'tunisia']
-(0.32569756968360353, u'4 unemployed majored in Grand Theft Auto http://dlvr.it/DtchR # modern Cairo, Egypt')
-(0.26222912577490171, u'Events in Tunisia worries small investors and economists warn of selling low-http://dlvr.it/DvBbG # Egypt')
-(0.13063662220106192, u'Rasheed for CNN: impossible scenario occurs in Tunisia because it better http://www.youm7.com//News.asp Egypt?NewsID=341409 :D #sidibouzid #egypt #revolution')
-(0.028731621679639718, u'According to the folk Hey Muhammad. Paul. Reel video: Egypt gets Tunisia is not death nor life in hot filling http://bit.ly/htylff Vute # 25jan # egypt')
-(0.0017144463784790895, u"RT @ Mohrad: the poet's view: If people one day wanted life.. Lord right Gah Prophet works need stayed # jan25")
-(0.0017144463784790895, u"RT @ Mohrad: the poet's view: If people one day wanted life.. Lord right Gah Prophet works need stayed # jan25")
-(0.00059222387438291905, u'The strong statement: together on January 25, under the banner of Justice-freedom-def get Thawra at 2 pm http://on.fb.me/ff7qdH # 25jan')
-(0.00050017885152369628, u'RT @ Gemyhood: Suez and everyone declares get strained on 25 ... Thai protesters workers on employment she took their places # Jan25 Elly')
-(0.00023708401297461418, u'RT @ mamdoh_: http://www.youtube.com/watch?v=n94-pXrIzT8 this video will move with minds on January 25, # egypt')
-(7.2749098808872296e-08, u"Mubarak was due to his wife's death, Shimon Peres in Egypt http://dlvr.it/DvDjN #")
-
-
-***********************************************************
-Cluster7
-[u'young', u'wait', u'live', u'frustrat', u'dream', u'begin']
-(0.20410619379316447, u"Egypt's frustrated young wait for their lives to begin, and dream of revolution http://bit.ly/f803we #Egypt #jan25 #YesWeCan")
-(0.19684596688919639, u"RT @Tharwacolamus: #Egypt's frustrated young wait for their lives to begin, and dream of revolution |  The Observer - http://goo.gl/A1GC3 #sidibouzid")
-(0.19684596688919639, u"#Egypt's frustrated young wait for their lives to begin, and dream of revolution |  The Observer - http://goo.gl/A1GC3 #sidibouzid")
-(0.18218560693850519, u"#Egypt's frustrated young wait for lives to begin, dream of revolution http://bit.ly/gTd5ZX via @Tharwacolamus #Sidibouzid #arabprotest")
-(0.1810154745632028, u"RT @royasmusic: U can do it! V @mar3e Egypt's frustrated young wait 4 their lives to begin,&dream of revolution http://bit.ly/f803we #Egypt #jan25 #YesWeCan")
-(0.17636693769492184, u"RT @mar3e Egypt's frustrated young wait for their lives to begin, & dream of revolution http://bit.ly/f803we #Egypt || @Guardian")
-(0.017996541091333224, u"RT @ karembue: saturated with the smell of gasoline morning ... Ghstwa wearing the revolution????!!\nI'm khayef Koun revolution Elly talk by de aspiration times Bull!\n#Egypt #jan25")
-(0.011086317758483941, u'# JAN25 here the significance of revolution in dignity on Tuesday http://www.youtube.com/watch?v=jI9QdcRt4fc&feature=player_embedded#!')
-(0.0099245987796495287, u'The most rational and best essay so far on Jan. 25.So be a real step towards change and not merely call for a revolution followed by foil http://bit.ly/eP3gVA # 25jan')
-(0.0043549071173157681, u"# Jan25 # Egypt # EgyGovernment # 25Jan # Mubarak http://bit.ly/gVHLb4 an important speech of President's Police today || Hey messahel Lord ... Lord")
+(2.2204460492503131e-16, u'The strong statement: together on January 25, under the banner of Justice-freedom-def get Thawra at 2 pm http://on.fb.me/ff7qdH # 25jan')
 
 
 ***********************************************************
 Cluster8
-[u'fadel', u'alhelo', u'step', u'toward', u'real', u'mere']
-(0.40578295551516536, u'Fadel alhelo step http://yfrog.com/gypr4jnj # Jan25 # Egypt')
-(0.025147525304052856, u'The most rational and best essay so far on Jan. 25.So be a real step towards change and not merely call for a revolution followed by foil http://bit.ly/eP3gVA # 25jan')
-(0.00057047356839886449, u'RT @wael: Another sign, best seller on Guardian list this week is "How to Change the World" by Eric Hobsbawm http://is.gd/OpgeBl  #jan25')
-(0.00057047356839886449, u'Another sign, best seller on Guardian list this week is "How to Change the World" by Eric Hobsbawm http://is.gd/OpgeBl  #jan25')
-(0.00030362322644788203, u'That blogging if flying the President to change, to change for years build up example http://hasantalk.com/?p=375 # egypt # Tunisia')
-(0.00016905165701251929, u'The book "how to change the world" lairik haobsbaom tops sales of books this week as the guardian http://is.gd/OpgeBl speech de Lena we # jan25')
-(6.3507359367376826e-05, u"RT @ karembue: saturated with the smell of gasoline morning ... Ghstwa wearing the revolution????!!\nI'm khayef Koun revolution Elly talk by de aspiration times Bull!\n#Egypt #jan25")
-(2.3915808083019262e-05, u'The strong statement: together on January 25, under the banner of Justice-freedom-def get Thawra at 2 pm http://on.fb.me/ff7qdH # 25jan')
-(1.6523890026196119e-05, u'RT @ MenaNader: Naguib Gabriel Coptic youth urged to boycott protests 25 January || Medicine you take to you money!!!??? #25Jan #Jan25 #Copts #Egypt #EgyptRevol #A7A')
-(1.6523890026196119e-05, u'RT @ MenaNader: Naguib Gabriel Coptic youth urged to boycott protests 25 January || Medicine you take to you money!!!??? #25Jan #Jan25 #Copts #Egypt #EgyptRevol #A7A')
+[u'brother', u'parliament', u'member', u'confirm', u'januari', u'particip']
+(0.19086117197037616, u"RT @ AkherElAkhbar: # Egypt Beltagy confirms the participation of brothers and members of Parliament's protests January 25, http://bit.ly/hfIZ3H # 25Jan # Jan25 # Egypt")
+(0.19086117197037616, u"# Egypt Beltagy confirms the participation of brothers and members of Parliament's protests January 25, http://bit.ly/hfIZ3H")
+(0.19086117197037616, u"# Egypt Beltagy confirms the participation of brothers and members of Parliament's protests January 25, http://bit.ly/hfIZ3H")
+(0.18060504110921385, u"Beltagui confirms the participation of brothers and members of Parliament's protests January 25, http://t.co/87NnlNZ # Egypt # 25JAn")
+(0.17811752811289724, u"RT @ Melshamy: Al confirms the participation of brothers and members of Parliament's protests January 25, http://bit.ly/gfn42d # 25jan # Egypt # Mb # Tunis # Si ...")
+(0.085709203189109781, u'RT @ Lastoadri: RT @ A7medAmeen soundtracks for Dr. Mohammed Al announces the participation of brothers officially in January 25, http://www.palsharing.com/y5brwm1nrdio.html # Jan25')
+(0.044811362129519486, u'RT @ MenaNader: Naguib Gabriel Coptic youth urged to boycott protests 25 January || Medicine you take to you money!!!??? #25Jan #Jan25 #Copts #Egypt #EgyptRevol #A7A')
+(0.044811362129519486, u'RT @ MenaNader: Naguib Gabriel Coptic youth urged to boycott protests 25 January || Medicine you take to you money!!!??? #25Jan #Jan25 #Copts #Egypt #EgyptRevol #A7A')
+(0.033099508058138494, u'The strong statement: together on January 25, under the banner of Justice-freedom-def get Thawra at 2 pm http://on.fb.me/ff7qdH # 25jan')
+(0.032537042320095022, u'Washington Post: all indicators confirm that Mubarak will lead Egypt to a catastrophe ...Obama insists on silence http://j.mp/eNNJrY # EgyRevol # 25Jan # Jan25 # Mubarak # Egypt')
 
 
 ***********************************************************
 Cluster9
-[u'matter', u'go', u'doesn', u'street', u'!!!', u'86']
-(0.33953262925221855, u"It doesn't matter where u go on #jan25, just be the street!!!")
-(0.32244250338081648, u"RT @Gsquare86: It doesn't matter where u go on #jan25, just be the street!!!")
-(0.00086934099429027741, u'RT @ Alotaibih3af: # Jan25 Hey folks Egypt returned to Arab mother!!!\nThe Arabs lost on lost Egypt ...')
-(0.00086934099429027741, u'RT @ Alotaibih3af: # Jan25 Hey folks Egypt returned to Arab mother!!!\nThe Arabs lost on lost Egypt ...')
-(0.00046956655517016346, u'\xabDiver\xbb flooded the streets \xabAmiriyah\xbb http://dlvr.it/DvBZz # Egypt')
-(2.174653396104232e-14, u'RT @wael: Another sign, best seller on Guardian list this week is "How to Change the World" by Eric Hobsbawm http://is.gd/OpgeBl  #jan25')
-(2.174653396104232e-14, u'Another sign, best seller on Guardian list this week is "How to Change the World" by Eric Hobsbawm http://is.gd/OpgeBl  #jan25')
-(3.392846394500809e-15, u'The most rational and best essay so far on Jan. 25.So be a real step towards change and not merely call for a revolution followed by foil http://bit.ly/eP3gVA # 25jan')
-(1.120706595407295e-15, u'That blogging if flying the President to change, to change for years build up example http://hasantalk.com/?p=375 # egypt # Tunisia')
-(4.0199359060048013e-16, u'# Egypt khayef Koun malakish Egypt rose from sleeping http://www.youtube.com/watch?v=oWZM9fWzvp0&feature=related # 25jan')
+[u'rule', u'hous', u'former', u'clinton', u'chairman', u'repres']
+(0.3081864010762761, u'Former Chairman of the u.s. House of representatives: the Clinton rule America now http://dlvr.it/DvF8v # Egypt')
+(0.095684238634872382, u'RT @ MenaNader: Disclaimer: El-komos "Abdul Christ simple not church leadership, nor represents only himself, and I as a Christian I refuse to enter the Church policy # Egypt # Copts # EgyRevol # 25Jan # Jan25')
+(0.095684238634872382, u'RT @ MenaNader: Disclaimer: El-komos "Abdul Christ simple not church leadership, nor represents only himself, and I as a Christian I refuse to enter the Church policy # Egypt # Copts # EgyRevol # 25Jan # Jan25')
+(0.010114214568184681, u'RT @ mesh: wael hasharb ships August khalina kept \xf1\xe7\xed\xfe. Beryl khalina astrgl-lavantalob and abibsi-El Moselhi: khalina because not one comparative-hasharb Murr-because Egyptian and will stay free # Jan25')
+(0.010114214568184681, u'RT @ mesh: wael hasharb ships August khalina kept \xf1\xe7\xed\xfe. Beryl khalina astrgl-lavantalob and abibsi-El Moselhi: khalina because not one comparative-hasharb Murr-because Egyptian and will stay free # Jan25')
+(0.010114214568184681, u'RT @ mesh: wael hasharb ships August khalina kept \xf1\xe7\xed\xfe. Beryl khalina astrgl-lavantalob and abibsi-El Moselhi: khalina because not one comparative-hasharb Murr-because Egyptian and will stay free # Jan25')
+(0.0076088212749715551, u'RT @ oshaokhtmeligi: walk ya Mubarak, I walk yabeni albhedlh allowance, Christians have you blood, your blood, and the sinaitic them and the upper Egyptians have you blood, will establish work eh? #jan25')
+(0.0031979160254940729, u'SSI bitab Uwe khalina spied out the English courses-visualizer Internet blogging and Facebook wetoitr # Egypt')
+(0.0015744362851508667, u"Egypt's Ambassador in Washington: our relationship with America and rational strategy http://dlvr.it/DvKn5 # Egypt")
+(0.0015405149549631784, u"RT @ Mohrad: the poet's view: If people one day wanted life.. Lord right Gah Prophet works need stayed # jan25")
 
 
 ***********************************************************
 Cluster10
 [u'twenti', u'guid', u'demonstr', u'five', u'octob', u'kill']
-(0.40218369350862671, u'RT @ NorthCup: Guide to demonstrators on twenty-five http://bit.ly/iihznO By @ Wild_atHeart # egypt # jan25')
-(0.40218369350862671, u'Guide to demonstrators on twenty-five http://bit.ly/iihznO By @ Wild_atHeart # egypt # jan25')
-(0.0018274356258095065, u'Killing and injuring five people in two b "October" http://dlvr.it/Dv86J # Egypt')
-(0.0018274356258095065, u'Killing and injuring five people in two b "October" http://bit.ly/eBX6ta # Egypt')
-(0.0012852049792615211, u'RT @ MAswad: great slogans of demonstration in front of the Supreme Court http://t.co/HkZtaHX # Jan25 # Egypt # Mubarak # Protest')
+(0.3157861175468315, u'RT @ NorthCup: Guide to demonstrators on twenty-five http://bit.ly/iihznO By @ Wild_atHeart # egypt # jan25')
+(0.3157861175468315, u'Guide to demonstrators on twenty-five http://bit.ly/iihznO By @ Wild_atHeart # egypt # jan25')
+(0.0014876939275835859, u'Killing and injuring five people in two b "October" http://dlvr.it/Dv86J # Egypt')
+(0.0014876939275835859, u'Killing and injuring five people in two b "October" http://bit.ly/eBX6ta # Egypt')
+(0.0011583591541687521, u'RT @ MAswad: great slogans of demonstration in front of the Supreme Court http://t.co/HkZtaHX # Jan25 # Egypt # Mubarak # Protest')
 (2.2204460492503131e-16, u'\u201cWe Are All Khaled Said\u201d: Will the Revolution Come to #Egypt? - The Daily Beast - http://goo.gl/bSWtP #sidibouzid')
 (2.2204460492503131e-16, u'\xabLocal customs\xbb looking worn out sewerage and \xabChadli\xbb: remove the breakages task http://dlvr.it/DvF8T road # Egypt')
 (2.2204460492503131e-16, u'\xabDiver\xbb flooded the streets \xabAmiriyah\xbb http://dlvr.it/DvBZz # Egypt')
@@ -166,285 +166,285 @@ Cluster10
 
 ***********************************************************
 Cluster11
-[u'said', u'khale', u'daili', u'come', u'beast', u'revolut']
-(0.3176487712692786, u'\u201cWe Are All Khaled Said\u201d: Will the Revolution Come to #Egypt? - The Daily Beast - http://goo.gl/bSWtP #sidibouzid')
-(0.3176487712692786, u'RT @Tharwacolamus: \u201cWe Are All Khaled Said\u201d: Will the Revolution Come to #Egypt? - The Daily Beast - http://goo.gl/bSWtP #sidibouzid')
-(0.015506511610097135, u"RT @ karembue: saturated with the smell of gasoline morning ... Ghstwa wearing the revolution????!!\nI'm khayef Koun revolution Elly talk by de aspiration times Bull!\n#Egypt #jan25")
-(0.009752022592444334, u'# JAN25 here the significance of revolution in dignity on Tuesday http://www.youtube.com/watch?v=jI9QdcRt4fc&feature=player_embedded#!')
-(0.0086374760916032734, u'The most rational and best essay so far on Jan. 25.So be a real step towards change and not merely call for a revolution followed by foil http://bit.ly/eP3gVA # 25jan')
-(0.0015939852346919267, u'# Egypt khayef Koun malakish Egypt rose from sleeping http://www.youtube.com/watch?v=oWZM9fWzvp0&feature=related # 25jan')
-(0.0015939852346919267, u'# Egypt khayef Koun malakish Egypt rose from sleeping http://www.youtube.com/watch?v=oWZM9fWzvp0&feature=related # 25jan')
-(0.00086231056053637939, u'RT @ mamdoh_: http://www.youtube.com/watch?v=n94-pXrIzT8 this video will move with minds on January 25, # egypt')
-(0.00080110480143047956, u"Egypt's frustrated young wait for their lives to begin, and dream of revolution http://bit.ly/f803we #Egypt #jan25 #YesWeCan")
-(0.00063052015397012146, u'That blogging if flying the President to change, to change for years build up example http://hasantalk.com/?p=375 # egypt # Tunisia')
+[u'messag', u'via', u'young', u'wait', u'live', u'frustrat']
+(0.53132688823412966, u'A Message http://t.co/PFsyPJn message via @ youtube # EGYPT # 25JAN # FB')
+(0.016502645997356531, u"#Egypt's frustrated young wait for lives to begin, dream of revolution http://bit.ly/gTd5ZX via @Tharwacolamus #Sidibouzid #arabprotest")
+(0.00040621092222907273, u'Renewed protests in #Algeria and #Tunisia as Arab unrest spreads RT @seyachoumeh http://kwick.me/ktMh #egypt #yemen via @Sonja_Jo')
+(0.00040621092222907273, u'RT @octavianasr: Renewed protests in #Algeria and #Tunisia as Arab unrest spreads RT @seyachoumeh http://kwick.me/ktMh #egypt #yemen via @Sonja_Jo')
+(2.2204460492503131e-16, u'\u201cWe Are All Khaled Said\u201d: Will the Revolution Come to #Egypt? - The Daily Beast - http://goo.gl/bSWtP #sidibouzid')
+(2.2204460492503131e-16, u'\xabLocal customs\xbb looking worn out sewerage and \xabChadli\xbb: remove the breakages task http://dlvr.it/DvF8T road # Egypt')
+(2.2204460492503131e-16, u'\xabDiver\xbb flooded the streets \xabAmiriyah\xbb http://dlvr.it/DvBZz # Egypt')
+(2.2204460492503131e-16, u"Yamser national and Cheddi tricks every Elly you desire him I | Don't cross me and Lil oppression | Safety safety safety Bajram Effendi Jan25 http://t.co/aioDzAy #")
+(2.2204460492503131e-16, u'Washington Post: all indicators confirm that Mubarak will lead Egypt to a catastrophe ...Obama insists on silence http://j.mp/eNNJrY # EgyRevol # 25Jan # Jan25 # Mubarak # Egypt')
+(2.2204460492503131e-16, u"There was an error deserializing the object of type System.String. Encountered unexpected character '\xd8'.")
 
 
 ***********************************************************
 Cluster12
-[u'000', u'websit', u'terror', u'region', u'promot', u'address']
-(0.28697237272611859, u'# Egypt over 5,000 website promotes terrorism. 500 of them addressed to http://bit.ly/i0RAAC Arabic region')
-(0.28697237272611859, u'# Egypt over 5,000 website promotes terrorism. 500 of them addressed to http://bit.ly/i0RAAC Arabic region')
-(0.091636312683704826, u'RT @ S_Elhussieny: 500,000 (poster) and 250,000 (t-shirt) to support (Mubarak) 25 Jan-gate Sunrise http://bit.ly/i6p7pA # egypt # 25jan')
-(0.005571133206079353, u'Text of poster and a quarter of a million million t-shirt to support Mubarak on 25, but card gwakt and Kochi Bata fiddle http://t.co/xT7zByq # egypt # jan25 # egyfun')
-(0.005571133206079353, u'RT @ altahawi: text million posters and a quarter of a million t-shirts to support Mubarak on 25, but card gwakt and Kochi Bata fiddle http://t.co/xT7zByq # egypt # jan25 ...')
-(0.0028213643981115908, u'Sunrise: prestige: President with limited income and poor aim, its election programme achieved attests to that.(Morning heartburn blood) # Egypt')
-(0.0017993462975745766, u"RT @ahramonline: #Egypt ElBaradei supports a national day of action on Tuesday, but won't take part http://ht.ly/1aZ9Zw")
-(0.0017993462975745766, u"#Egypt ElBaradei supports a national day of action on Tuesday, but won't take part http://ht.ly/1aZ9Zw")
-(0.00096800334943895373, u'RT @ Alotaibih3af: # Jan25 Hey folks Egypt returned to Arab mother!!!\nThe Arabs lost on lost Egypt ...')
-(0.00096800334943895373, u'RT @ Alotaibih3af: # Jan25 Hey folks Egypt returned to Arab mother!!!\nThe Arabs lost on lost Egypt ...')
+[u'kid', u'fled', u'driver', u'bump', u'arrest', u'agouza']
+(0.49546644700767106, u'Arrested driver bumped kid agouza fled Egypt http://bit.ly/faw6Rh #')
+(7.2563003380959287e-14, u'RT @ mesh: wael hasharb ships August khalina kept \xf1\xe7\xed\xfe. Beryl khalina astrgl-lavantalob and abibsi-El Moselhi: khalina because not one comparative-hasharb Murr-because Egyptian and will stay free # Jan25')
+(7.2563003380959287e-14, u'RT @ mesh: wael hasharb ships August khalina kept \xf1\xe7\xed\xfe. Beryl khalina astrgl-lavantalob and abibsi-El Moselhi: khalina because not one comparative-hasharb Murr-because Egyptian and will stay free # Jan25')
+(7.2563003380959287e-14, u'RT @ mesh: wael hasharb ships August khalina kept \xf1\xe7\xed\xfe. Beryl khalina astrgl-lavantalob and abibsi-El Moselhi: khalina because not one comparative-hasharb Murr-because Egyptian and will stay free # Jan25')
+(4.2835714899041586e-14, u'SSI bitab Uwe khalina spied out the English courses-visualizer Internet blogging and Facebook wetoitr # Egypt')
+(2.0178626193556931e-14, u"RT @ Mohrad: the poet's view: If people one day wanted life.. Lord right Gah Prophet works need stayed # jan25")
+(2.0178626193556931e-14, u"RT @ Mohrad: the poet's view: If people one day wanted life.. Lord right Gah Prophet works need stayed # jan25")
+(5.0183130784844037e-15, u'RT @ oshaokhtmeligi: walk ya Mubarak, I walk yabeni albhedlh allowance, Christians have you blood, your blood, and the sinaitic them and the upper Egyptians have you blood, will establish work eh? #jan25')
+(3.9933319985515395e-15, u"# Jan25 # Egypt # EgyGovernment # 25Jan # Mubarak http://bit.ly/gVHLb4 an important speech of President's Police today || Hey messahel Lord ... Lord")
+(3.1298407315729625e-15, u'That blogging if flying the President to change, to change for years build up example http://hasantalk.com/?p=375 # egypt # Tunisia')
 
 
 ***********************************************************
 Cluster13
-[u'suprem', u'slogan', u'great', u'front', u'court', u'demonstr']
-(0.42897175525799719, u'RT @ MAswad: great slogans of demonstration in front of the Supreme Court http://t.co/HkZtaHX # Jan25 # Egypt # Mubarak # Protest')
-(9.7630021335241664e-12, u'4 unemployed majored in Grand Theft Auto http://dlvr.it/DtchR # modern Cairo, Egypt')
-(7.6834441767002663e-12, u'RT @wael: Another sign, best seller on Guardian list this week is "How to Change the World" by Eric Hobsbawm http://is.gd/OpgeBl  #jan25')
-(7.6834441767002663e-12, u'Another sign, best seller on Guardian list this week is "How to Change the World" by Eric Hobsbawm http://is.gd/OpgeBl  #jan25')
-(4.312112375490462e-12, u'The book "how to change the world" lairik haobsbaom tops sales of books this week as the guardian http://is.gd/OpgeBl speech de Lena we # jan25')
-(1.5780053373570732e-12, u'That blogging if flying the President to change, to change for years build up example http://hasantalk.com/?p=375 # egypt # Tunisia')
-(1.1345485190215501e-12, u'The most rational and best essay so far on Jan. 25.So be a real step towards change and not merely call for a revolution followed by foil http://bit.ly/eP3gVA # 25jan')
-(2.4161564499642794e-13, u'# Egypt khayef Koun malakish Egypt rose from sleeping http://www.youtube.com/watch?v=oWZM9fWzvp0&feature=related # 25jan')
-(2.4161564499642794e-13, u'# Egypt khayef Koun malakish Egypt rose from sleeping http://www.youtube.com/watch?v=oWZM9fWzvp0&feature=related # 25jan')
-(2.036011434353703e-13, u'# JAN25 here the significance of revolution in dignity on Tuesday http://www.youtube.com/watch?v=jI9QdcRt4fc&feature=player_embedded#!')
+[u'due', u'wife', u'shimon', u'pere', u'death', u'mubarak']
+(0.32654116581437459, u"Mubarak was due to his wife's death, Shimon Peres in Egypt http://dlvr.it/DvDjN #")
+(0.14138637441376511, u'Anger among citizens \xabAPIs\xbb due to the lack of logistical http://dlvr.it/DvBc6 recognizes rice # Egypt')
+(0.032088214503247559, u'According to the folk Hey Muhammad. Paul. Reel video: Egypt gets Tunisia is not death nor life in hot filling http://bit.ly/htylff Vute # 25jan # egypt')
+(0.018127658626080005, u'Washington Post: all indicators confirm that Mubarak will lead Egypt to a catastrophe ...Obama insists on silence http://j.mp/eNNJrY # EgyRevol # 25Jan # Jan25 # Mubarak # Egypt')
+(0.009968736469399447, u'RT @ oshaokhtmeligi: walk ya Mubarak, I walk yabeni albhedlh allowance, Christians have you blood, your blood, and the sinaitic them and the upper Egyptians have you blood, will establish work eh? #jan25')
+(0.0054124045966748987, u'RT @ S_Elhussieny: 500,000 (poster) and 250,000 (t-shirt) to support (Mubarak) 25 Jan-gate Sunrise http://bit.ly/i6p7pA # egypt # 25jan')
+(0.0049782109841555733, u'Events in Tunisia worries small investors and economists warn of selling low-http://dlvr.it/DvBbG # Egypt')
+(0.0036833521929263953, u'Rasheed for CNN: impossible scenario occurs in Tunisia because it better http://www.youm7.com//News.asp Egypt?NewsID=341409 :D #sidibouzid #egypt #revolution')
+(0.0015290049545342783, u"RT @ Mohrad: the poet's view: If people one day wanted life.. Lord right Gah Prophet works need stayed # jan25")
+(0.0015290049545342783, u"RT @ Mohrad: the poet's view: If people one day wanted life.. Lord right Gah Prophet works need stayed # jan25")
 
 
 ***********************************************************
 Cluster14
-[u'kid', u'fled', u'driver', u'bump', u'arrest', u'agouza']
-(0.49005537345427619, u'Arrested driver bumped kid agouza fled Egypt http://bit.ly/faw6Rh #')
-(2.5728473780061512e-13, u'4 unemployed majored in Grand Theft Auto http://dlvr.it/DtchR # modern Cairo, Egypt')
-(2.2476480421708681e-16, u'RT @H_A_NassaR: BouAzizi Effect RT @Adel_Salib    Butterfly Effect #Tunis #Egypt #Jan25')
-(2.2204460492503131e-16, u'\u201cWe Are All Khaled Said\u201d: Will the Revolution Come to #Egypt? - The Daily Beast - http://goo.gl/bSWtP #sidibouzid')
-(2.2204460492503131e-16, u'\xabLocal customs\xbb looking worn out sewerage and \xabChadli\xbb: remove the breakages task http://dlvr.it/DvF8T road # Egypt')
-(2.2204460492503131e-16, u'\xabDiver\xbb flooded the streets \xabAmiriyah\xbb http://dlvr.it/DvBZz # Egypt')
-(2.2204460492503131e-16, u"Yamser national and Cheddi tricks every Elly you desire him I | Don't cross me and Lil oppression | Safety safety safety Bajram Effendi Jan25 http://t.co/aioDzAy #")
-(2.2204460492503131e-16, u'Washington Post: all indicators confirm that Mubarak will lead Egypt to a catastrophe ...Obama insists on silence http://j.mp/eNNJrY # EgyRevol # 25Jan # Jan25 # Mubarak # Egypt')
-(2.2204460492503131e-16, u"There was an error deserializing the object of type System.String. Encountered unexpected character '\xd8'.")
-(2.2204460492503131e-16, u"There was an error deserializing the object of type System.String. Encountered unexpected character '\xd8'.")
+[u'day', u'won', u'part', u'action', u'tuesday', u'take']
+(0.19124904660581127, u"RT @ahramonline: #Egypt ElBaradei supports a national day of action on Tuesday, but won't take part http://ht.ly/1aZ9Zw")
+(0.19124904660581127, u"#Egypt ElBaradei supports a national day of action on Tuesday, but won't take part http://ht.ly/1aZ9Zw")
+(0.1778687457727651, u'RT @ llasfazas your design procedure 3arabawy NDP: police day glorious memory for internal stability http://t.co/yJDzcNl: D # Egypt # Jan25 # Pigs # Police')
+(0.052088763979223643, u"RT @ Mohrad: the poet's view: If people one day wanted life.. Lord right Gah Prophet works need stayed # jan25")
+(0.052088763979223643, u"RT @ Mohrad: the poet's view: If people one day wanted life.. Lord right Gah Prophet works need stayed # jan25")
+(0.045228692669555537, u"# Jan25 # Egypt # EgyGovernment # 25Jan # Mubarak http://bit.ly/gVHLb4 an important speech of President's Police today || Hey messahel Lord ... Lord")
+(0.029413650926534293, u'# JAN25 here the significance of revolution in dignity on Tuesday http://www.youtube.com/watch?v=jI9QdcRt4fc&feature=player_embedded#!')
+(0.026921459686386748, u'RT @ MenaNader: Naguib Gabriel Coptic youth urged to boycott protests 25 January || Medicine you take to you money!!!??? #25Jan #Jan25 #Copts #Egypt #EgyptRevol #A7A')
+(0.026921459686386748, u'RT @ MenaNader: Naguib Gabriel Coptic youth urged to boycott protests 25 January || Medicine you take to you money!!!??? #25Jan #Jan25 #Copts #Egypt #EgyptRevol #A7A')
+(0.017403194597520384, u'RT @wael: Another sign, best seller on Guardian list this week is "How to Change the World" by Eric Hobsbawm http://is.gd/OpgeBl  #jan25')
 
 
 ***********************************************************
 Cluster15
-[u'speak', u'russia', u'qur', u'miracl', u'anic', u'programm']
-(0.47765121296084811, u"Her Russia speaks in its programme on Qur'anic miracle http://dlvr.it/DtbPP # Egypt")
-(0.038766356936927281, u'Sunrise: prestige: President with limited income and poor aim, its election programme achieved attests to that.(Morning heartburn blood) # Egypt')
-(0.0035100189984115493, u'RT @ oshaokhtmeligi: walk ya Mubarak, I walk yabeni albhedlh allowance, Christians have you blood, your blood, and the sinaitic them and the upper Egyptians have you blood, will establish work eh? #jan25')
-(0.001049807496344165, u"# Jan25 # Egypt # EgyGovernment # 25Jan # Mubarak http://bit.ly/gVHLb4 an important speech of President's Police today || Hey messahel Lord ... Lord")
-(0.0010182059172341076, u'That blogging if flying the President to change, to change for years build up example http://hasantalk.com/?p=375 # egypt # Tunisia')
-(0.00094585124595428867, u"RT @ karembue: saturated with the smell of gasoline morning ... Ghstwa wearing the revolution????!!\nI'm khayef Koun revolution Elly talk by de aspiration times Bull!\n#Egypt #jan25")
-(0.00092248699639150124, u'RT @ S_Elhussieny: 500,000 (poster) and 250,000 (t-shirt) to support (Mubarak) 25 Jan-gate Sunrise http://bit.ly/i6p7pA # egypt # 25jan')
-(6.8204586138676101e-05, u'# Egypt khayef Koun malakish Egypt rose from sleeping http://www.youtube.com/watch?v=oWZM9fWzvp0&feature=related # 25jan')
-(6.8204586138676101e-05, u'# Egypt khayef Koun malakish Egypt rose from sleeping http://www.youtube.com/watch?v=oWZM9fWzvp0&feature=related # 25jan')
-(3.2696595460794374e-05, u'# JAN25 here the significance of revolution in dignity on Tuesday http://www.youtube.com/watch?v=jI9QdcRt4fc&feature=player_embedded#!')
-
-
-***********************************************************
-Cluster16
-[u'america', u'strategi', u'relationship', u'ambassador', u'washington', u'ration']
-(0.29246252969692887, u"Egypt's Ambassador in Washington: our relationship with America and rational strategy http://dlvr.it/DvKn5 # Egypt")
-(0.18771292217665433, u'Former Chairman of the u.s. House of representatives: the Clinton rule America now http://dlvr.it/DvF8v # Egypt')
-(0.044732929381506768, u'Washington Post: all indicators confirm that Mubarak will lead Egypt to a catastrophe ...Obama insists on silence http://j.mp/eNNJrY # EgyRevol # 25Jan # Jan25 # Mubarak # Egypt')
-(0.024190749015837898, u'RT @ MenaNader: Disclaimer: El-komos "Abdul Christ simple not church leadership, nor represents only himself, and I as a Christian I refuse to enter the Church policy # Egypt # Copts # EgyRevol # 25Jan # Jan25')
-(0.024190749015837898, u'RT @ MenaNader: Disclaimer: El-komos "Abdul Christ simple not church leadership, nor represents only himself, and I as a Christian I refuse to enter the Church policy # Egypt # Copts # EgyRevol # 25Jan # Jan25')
-(0.021058379878286824, u'The most rational and best essay so far on Jan. 25.So be a real step towards change and not merely call for a revolution followed by foil http://bit.ly/eP3gVA # 25jan')
-(0.0029015732998663984, u'RT @wael: Another sign, best seller on Guardian list this week is "How to Change the World" by Eric Hobsbawm http://is.gd/OpgeBl  #jan25')
-(0.0029015732998663984, u'Another sign, best seller on Guardian list this week is "How to Change the World" by Eric Hobsbawm http://is.gd/OpgeBl  #jan25')
-(0.0011848808786831544, u'The book "how to change the world" lairik haobsbaom tops sales of books this week as the guardian http://is.gd/OpgeBl speech de Lena we # jan25')
-(0.00089581729819537066, u'That blogging if flying the President to change, to change for years build up example http://hasantalk.com/?p=375 # egypt # Tunisia')
-
-
-***********************************************************
-Cluster17
-[u'tunisian', u'done', u'get', u'elbaradei', u'egyptian', u'khalina']
-(0.25523448036599761, u'RT @ahramonline: #Egypt ElBaradei: If the Tunisians have done it, Egyptians should get there too http://ht.ly/1aZ9Zx')
-(0.25523448036599761, u'#Egypt ElBaradei: If the Tunisians have done it, Egyptians should get there too http://ht.ly/1aZ9Zx')
-(0.024387158908688599, u'The strong statement: together on January 25, under the banner of Justice-freedom-def get Thawra at 2 pm http://on.fb.me/ff7qdH # 25jan')
-(0.020759760998354956, u'RT @ Gemyhood: Suez and everyone declares get strained on 25 ... Thai protesters workers on employment she took their places # Jan25 Elly')
-(0.019339384304693355, u"RT @ahramonline: #Egypt ElBaradei supports a national day of action on Tuesday, but won't take part http://ht.ly/1aZ9Zw")
-(0.019339384304693355, u"#Egypt ElBaradei supports a national day of action on Tuesday, but won't take part http://ht.ly/1aZ9Zw")
-(0.018385382896490481, u'According to the folk Hey Muhammad. Paul. Reel video: Egypt gets Tunisia is not death nor life in hot filling http://bit.ly/htylff Vute # 25jan # egypt')
-(0.015319097848934789, u'RT @ mesh: wael hasharb ships August khalina kept \xf1\xe7\xed\xfe. Beryl khalina astrgl-lavantalob and abibsi-El Moselhi: khalina because not one comparative-hasharb Murr-because Egyptian and will stay free # Jan25')
-(0.015319097848934789, u'RT @ mesh: wael hasharb ships August khalina kept \xf1\xe7\xed\xfe. Beryl khalina astrgl-lavantalob and abibsi-El Moselhi: khalina because not one comparative-hasharb Murr-because Egyptian and will stay free # Jan25')
-(0.015319097848934789, u'RT @ mesh: wael hasharb ships August khalina kept \xf1\xe7\xed\xfe. Beryl khalina astrgl-lavantalob and abibsi-El Moselhi: khalina because not one comparative-hasharb Murr-because Egyptian and will stay free # Jan25')
-
-
-***********************************************************
-Cluster18
-[u'religi', u'make', u'interest', u'histori', u'discuss', u'radio4']
-(0.30418820940111435, u'RT @monaeltahawy: RT @Gheblawi Beyond belief: religious history & make-up of #Egypt interesting discussion #Copts http://www.bbc.co.uk/podcasts/series/belief')
-(0.30418820940111435, u'RT @Gheblawi Beyond belief: religious history & make-up of #Egypt interesting discussion #Copts http://www.bbc.co.uk/podcasts/series/belief')
-(0.20714240463430908, u'BBC radio4 Beyond belief: religious history & make-up of #Egypt v interesting discussion #Copts http://www.bbc.co.uk/podcasts/series/belief')
-(0.03541532525860263, u'Discuss crisis incentives pharmacists University hospitals and therapeutic institutions in meeting the Board \xabsyndicate\xbb http://dlvr.it/DvBcN # Egypt')
+[u'sub', u'countri', u'khalina', u'hasharb', u'tunisia', u'http']
+(0.54034604315803747, u'Are #Morocco, #Algeria, #Tunisia, #Libya and #Egypt Sub-#Mediterranean #European countries?')
 (2.2204460492503131e-16, u'\u201cWe Are All Khaled Said\u201d: Will the Revolution Come to #Egypt? - The Daily Beast - http://goo.gl/bSWtP #sidibouzid')
 (2.2204460492503131e-16, u'\xabLocal customs\xbb looking worn out sewerage and \xabChadli\xbb: remove the breakages task http://dlvr.it/DvF8T road # Egypt')
 (2.2204460492503131e-16, u'\xabDiver\xbb flooded the streets \xabAmiriyah\xbb http://dlvr.it/DvBZz # Egypt')
 (2.2204460492503131e-16, u"Yamser national and Cheddi tricks every Elly you desire him I | Don't cross me and Lil oppression | Safety safety safety Bajram Effendi Jan25 http://t.co/aioDzAy #")
 (2.2204460492503131e-16, u'Washington Post: all indicators confirm that Mubarak will lead Egypt to a catastrophe ...Obama insists on silence http://j.mp/eNNJrY # EgyRevol # 25Jan # Jan25 # Mubarak # Egypt')
 (2.2204460492503131e-16, u"There was an error deserializing the object of type System.String. Encountered unexpected character '\xd8'.")
+(2.2204460492503131e-16, u"There was an error deserializing the object of type System.String. Encountered unexpected character '\xd8'.")
+(2.2204460492503131e-16, u"There was an error deserializing the object of type System.String. Encountered unexpected character ':'.")
+(2.2204460492503131e-16, u'The strong statement: together on January 25, under the banner of Justice-freedom-def get Thawra at 2 pm http://on.fb.me/ff7qdH # 25jan')
+
+
+***********************************************************
+Cluster16
+[u'said', u'khale', u'daili', u'come', u'beast', u'revolut']
+(0.32305148035883652, u'\u201cWe Are All Khaled Said\u201d: Will the Revolution Come to #Egypt? - The Daily Beast - http://goo.gl/bSWtP #sidibouzid')
+(0.32305148035883652, u'RT @Tharwacolamus: \u201cWe Are All Khaled Said\u201d: Will the Revolution Come to #Egypt? - The Daily Beast - http://goo.gl/bSWtP #sidibouzid')
+(0.015810383023372655, u"RT @ karembue: saturated with the smell of gasoline morning ... Ghstwa wearing the revolution????!!\nI'm khayef Koun revolution Elly talk by de aspiration times Bull!\n#Egypt #jan25")
+(0.0099344827484661967, u'# JAN25 here the significance of revolution in dignity on Tuesday http://www.youtube.com/watch?v=jI9QdcRt4fc&feature=player_embedded#!')
+(0.0088385829835588813, u'The most rational and best essay so far on Jan. 25.So be a real step towards change and not merely call for a revolution followed by foil http://bit.ly/eP3gVA # 25jan')
+(0.0017070454700185763, u'# Egypt khayef Koun malakish Egypt rose from sleeping http://www.youtube.com/watch?v=oWZM9fWzvp0&feature=related # 25jan')
+(0.0017070454700185763, u'# Egypt khayef Koun malakish Egypt rose from sleeping http://www.youtube.com/watch?v=oWZM9fWzvp0&feature=related # 25jan')
+(0.00098031494983153128, u'RT @ mamdoh_: http://www.youtube.com/watch?v=n94-pXrIzT8 this video will move with minds on January 25, # egypt')
+(0.00067424638071958626, u'That blogging if flying the President to change, to change for years build up example http://hasantalk.com/?p=375 # egypt # Tunisia')
+(0.00031233610974305321, u'RT @wael: Another sign, best seller on Guardian list this week is "How to Change the World" by Eric Hobsbawm http://is.gd/OpgeBl  #jan25')
+
+
+***********************************************************
+Cluster17
+[u'unexpect', u'type', u'system', u'string', u'object', u'error']
+(0.21817695299263443, u"There was an error deserializing the object of type System.String. Encountered unexpected character '\xd8'.")
+(0.21817695299263443, u"There was an error deserializing the object of type System.String. Encountered unexpected character '\xd8'.")
+(0.21211481298919316, u"There was an error deserializing the object of type System.String. Encountered unexpected character ':'.")
+(0.00076469939791659028, u'# Egypt over 5,000 website promotes terrorism. 500 of them addressed to http://bit.ly/i0RAAC Arabic region')
+(0.00076469939791659028, u'# Egypt over 5,000 website promotes terrorism. 500 of them addressed to http://bit.ly/i0RAAC Arabic region')
+(0.00037544037709647275, u'RT @ S_Elhussieny: 500,000 (poster) and 250,000 (t-shirt) to support (Mubarak) 25 Jan-gate Sunrise http://bit.ly/i6p7pA # egypt # 25jan')
+(1.3668252911521094e-05, u'Renewed protests in #Algeria and #Tunisia as Arab unrest spreads RT @seyachoumeh http://kwick.me/ktMh #egypt #yemen via @Sonja_Jo')
+(1.3668252911521094e-05, u'RT @octavianasr: Renewed protests in #Algeria and #Tunisia as Arab unrest spreads RT @seyachoumeh http://kwick.me/ktMh #egypt #yemen via @Sonja_Jo')
+(1.188847698230875e-05, u'Sunrise: prestige: President with limited income and poor aim, its election programme achieved attests to that.(Morning heartburn blood) # Egypt')
+(7.1160675114940971e-06, u'The most rational and best essay so far on Jan. 25.So be a real step towards change and not merely call for a revolution followed by foil http://bit.ly/eP3gVA # 25jan')
+
+
+***********************************************************
+Cluster18
+[u'arab', u'lost', u'return', u'mother', u'3af', u'websit']
+(0.24259473501694559, u'RT @ Alotaibih3af: # Jan25 Hey folks Egypt returned to Arab mother!!!\nThe Arabs lost on lost Egypt ...')
+(0.24259473501694559, u'RT @ Alotaibih3af: # Jan25 Hey folks Egypt returned to Arab mother!!!\nThe Arabs lost on lost Egypt ...')
+(0.20166226711620475, u'# Egypt over 5,000 website promotes terrorism. 500 of them addressed to http://bit.ly/i0RAAC Arabic region')
+(0.20166226711620475, u'# Egypt over 5,000 website promotes terrorism. 500 of them addressed to http://bit.ly/i0RAAC Arabic region')
+(0.027182087039772214, u'According to the folk Hey Muhammad. Paul. Reel video: Egypt gets Tunisia is not death nor life in hot filling http://bit.ly/htylff Vute # 25jan # egypt')
+(0.017612312037410299, u"# Jan25 # Egypt # EgyGovernment # 25Jan # Mubarak http://bit.ly/gVHLb4 an important speech of President's Police today || Hey messahel Lord ... Lord")
+(0.0019209917200889038, u"It doesn't matter where u go on #jan25, just be the street!!!")
+(0.0016990509650804124, u'Events in Tunisia worries small investors and economists warn of selling low-http://dlvr.it/DvBbG # Egypt')
+(0.0014554370027039432, u'Hey Zen saying Mubarak flyer in you video: role role http://bit.ly/evAdfp role remained elusive nights your above # 25jan # egypt # tunisia')
+(0.0014214692423557454, u'Renewed protests in #Algeria and #Tunisia as Arab unrest spreads RT @seyachoumeh http://kwick.me/ktMh #egypt #yemen via @Sonja_Jo')
 
 
 ***********************************************************
 Cluster19
-[u'king', u'elbaradei', u'toitat', u'mesh', u'erupt', u'won']
-(0.43803109718900984, u'ElBaradei ElBaradei eruptions King King mesh toitat # ElBaradei # Egypt')
-(0.0490251447008394, u"RT @ahramonline: #Egypt ElBaradei supports a national day of action on Tuesday, but won't take part http://ht.ly/1aZ9Zw")
-(0.0490251447008394, u"#Egypt ElBaradei supports a national day of action on Tuesday, but won't take part http://ht.ly/1aZ9Zw")
-(0.0010211277709554778, u'RT @ahramonline: #Egypt ElBaradei: If the Tunisians have done it, Egyptians should get there too http://ht.ly/1aZ9Zx')
-(0.0010211277709554778, u'#Egypt ElBaradei: If the Tunisians have done it, Egyptians should get there too http://ht.ly/1aZ9Zx')
-(0.00059423496922611833, u'Text of poster and a quarter of a million million t-shirt to support Mubarak on 25, but card gwakt and Kochi Bata fiddle http://t.co/xT7zByq # egypt # jan25 # egyfun')
-(0.00059423496922611833, u'RT @ altahawi: text million posters and a quarter of a million t-shirts to support Mubarak on 25, but card gwakt and Kochi Bata fiddle http://t.co/xT7zByq # egypt # jan25 ...')
-(1.7244712065982322e-12, u'RT @ S_Elhussieny: 500,000 (poster) and 250,000 (t-shirt) to support (Mubarak) 25 Jan-gate Sunrise http://bit.ly/i6p7pA # egypt # 25jan')
-(9.4482676527215221e-14, u'# JAN25 here the significance of revolution in dignity on Tuesday http://www.youtube.com/watch?v=jI9QdcRt4fc&feature=player_embedded#!')
-(1.7237057823768575e-14, u'RT @ MenaNader: Naguib Gabriel Coptic youth urged to boycott protests 25 January || Medicine you take to you money!!!??? #25Jan #Jan25 #Copts #Egypt #EgyptRevol #A7A')
+[u'religi', u'make', u'interest', u'histori', u'discuss', u'radio4']
+(0.31029343855142349, u'RT @monaeltahawy: RT @Gheblawi Beyond belief: religious history & make-up of #Egypt interesting discussion #Copts http://www.bbc.co.uk/podcasts/series/belief')
+(0.31029343855142349, u'RT @Gheblawi Beyond belief: religious history & make-up of #Egypt interesting discussion #Copts http://www.bbc.co.uk/podcasts/series/belief')
+(0.21129986967717726, u'BBC radio4 Beyond belief: religious history & make-up of #Egypt v interesting discussion #Copts http://www.bbc.co.uk/podcasts/series/belief')
+(0.036126130837129566, u'Discuss crisis incentives pharmacists University hospitals and therapeutic institutions in meeting the Board \xabsyndicate\xbb http://dlvr.it/DvBcN # Egypt')
+(0.033266343774060646, u'4 unemployed majored in Grand Theft Auto http://dlvr.it/DtchR # modern Cairo, Egypt')
+(2.2204460492503131e-16, u'\u201cWe Are All Khaled Said\u201d: Will the Revolution Come to #Egypt? - The Daily Beast - http://goo.gl/bSWtP #sidibouzid')
+(2.2204460492503131e-16, u'\xabLocal customs\xbb looking worn out sewerage and \xabChadli\xbb: remove the breakages task http://dlvr.it/DvF8T road # Egypt')
+(2.2204460492503131e-16, u'\xabDiver\xbb flooded the streets \xabAmiriyah\xbb http://dlvr.it/DvBZz # Egypt')
+(2.2204460492503131e-16, u"Yamser national and Cheddi tricks every Elly you desire him I | Don't cross me and Lil oppression | Safety safety safety Bajram Effendi Jan25 http://t.co/aioDzAy #")
+(2.2204460492503131e-16, u'Washington Post: all indicators confirm that Mubarak will lead Egypt to a catastrophe ...Obama insists on silence http://j.mp/eNNJrY # EgyRevol # 25Jan # Jan25 # Mubarak # Egypt')
 
 
 ***********************************************************
 Cluster20
-[u'man', u'fractur', u'floor', u'fell', u'drunken', u'concuss']
-(0.25862468769770797, u'Concussion and fractures to the drunken man \xab\xbb fell from the 6th floor Alexandria Egypt http://dlvr.it/Dv9ML #')
-(0.21628480781585185, u'RT @ llasfazas your design procedure 3arabawy NDP: police day glorious memory for internal stability http://t.co/yJDzcNl: D # Egypt # Jan25 # Pigs # Police')
-(0.06122353957721155, u"# Jan25 # Egypt # EgyGovernment # 25Jan # Mubarak http://bit.ly/gVHLb4 an important speech of President's Police today || Hey messahel Lord ... Lord")
-(0.051268833730718021, u"RT @ Mohrad: the poet's view: If people one day wanted life.. Lord right Gah Prophet works need stayed # jan25")
-(0.051268833730718021, u"RT @ Mohrad: the poet's view: If people one day wanted life.. Lord right Gah Prophet works need stayed # jan25")
-(0.031081100526139542, u"RT @ahramonline: #Egypt ElBaradei supports a national day of action on Tuesday, but won't take part http://ht.ly/1aZ9Zw")
-(0.031081100526139542, u"#Egypt ElBaradei supports a national day of action on Tuesday, but won't take part http://ht.ly/1aZ9Zw")
-(0.024196735285255361, u'RT @ mesh: wael hasharb ships August khalina kept \xf1\xe7\xed\xfe. Beryl khalina astrgl-lavantalob and abibsi-El Moselhi: khalina because not one comparative-hasharb Murr-because Egyptian and will stay free # Jan25')
-(0.024196735285255361, u'RT @ mesh: wael hasharb ships August khalina kept \xf1\xe7\xed\xfe. Beryl khalina astrgl-lavantalob and abibsi-El Moselhi: khalina because not one comparative-hasharb Murr-because Egyptian and will stay free # Jan25')
-(0.024196735285255361, u'RT @ mesh: wael hasharb ships August khalina kept \xf1\xe7\xed\xfe. Beryl khalina astrgl-lavantalob and abibsi-El Moselhi: khalina because not one comparative-hasharb Murr-because Egyptian and will stay free # Jan25')
+[u'strategi', u'relationship', u'ambassador', u'washington', u'ration', u'america']
+(0.41838392989098666, u"Egypt's Ambassador in Washington: our relationship with America and rational strategy http://dlvr.it/DvKn5 # Egypt")
+(0.073887761058899507, u'Washington Post: all indicators confirm that Mubarak will lead Egypt to a catastrophe ...Obama insists on silence http://j.mp/eNNJrY # EgyRevol # 25Jan # Jan25 # Mubarak # Egypt')
+(0.034265914876198046, u'The most rational and best essay so far on Jan. 25.So be a real step towards change and not merely call for a revolution followed by foil http://bit.ly/eP3gVA # 25jan')
+(0.0094451940595271858, u'RT @wael: Another sign, best seller on Guardian list this week is "How to Change the World" by Eric Hobsbawm http://is.gd/OpgeBl  #jan25')
+(0.0094451940595271858, u'Another sign, best seller on Guardian list this week is "How to Change the World" by Eric Hobsbawm http://is.gd/OpgeBl  #jan25')
+(0.0090621607860336129, u'Former Chairman of the u.s. House of representatives: the Clinton rule America now http://dlvr.it/DvF8v # Egypt')
+(0.0047108548134837539, u'The book "how to change the world" lairik haobsbaom tops sales of books this week as the guardian http://is.gd/OpgeBl speech de Lena we # jan25')
+(0.0026636707864071242, u'That blogging if flying the President to change, to change for years build up example http://hasantalk.com/?p=375 # egypt # Tunisia')
+(0.00025761534020643197, u"RT @ karembue: saturated with the smell of gasoline morning ... Ghstwa wearing the revolution????!!\nI'm khayef Koun revolution Elly talk by de aspiration times Bull!\n#Egypt #jan25")
+(7.2550255050907508e-06, u'# JAN25 here the significance of revolution in dignity on Tuesday http://www.youtube.com/watch?v=jI9QdcRt4fc&feature=player_embedded#!')
 
 
 ***********************************************************
 Cluster21
-[u'kuwait', u'harem', u'cafe', u'youth', u'urg', u'naguib']
-(0.50304886948339667, u'A harem on "youth" in a cafe in Kuwait http://bit.ly/gzxt9w # Egypt')
-(0.033638230583619318, u'RT @ MenaNader: Naguib Gabriel Coptic youth urged to boycott protests 25 January || Medicine you take to you money!!!??? #25Jan #Jan25 #Copts #Egypt #EgyptRevol #A7A')
-(0.033638230583619318, u'RT @ MenaNader: Naguib Gabriel Coptic youth urged to boycott protests 25 January || Medicine you take to you money!!!??? #25Jan #Jan25 #Copts #Egypt #EgyptRevol #A7A')
-(0.0011214031746355439, u"# Jan25 # Egypt # EgyGovernment # 25Jan # Mubarak http://bit.ly/gVHLb4 an important speech of President's Police today || Hey messahel Lord ... Lord")
-(0.00092456664738111425, u"RT @mar3e Egypt's frustrated young wait for their lives to begin, & dream of revolution http://bit.ly/f803we #Egypt || @Guardian")
-(3.0797117976828153e-05, u'The most rational and best essay so far on Jan. 25.So be a real step towards change and not merely call for a revolution followed by foil http://bit.ly/eP3gVA # 25jan')
-(8.5036124332849193e-07, u'RT @ S_Elhussieny: 500,000 (poster) and 250,000 (t-shirt) to support (Mubarak) 25 Jan-gate Sunrise http://bit.ly/i6p7pA # egypt # 25jan')
-(1.0124638072211003e-07, u'Text of poster and a quarter of a million million t-shirt to support Mubarak on 25, but card gwakt and Kochi Bata fiddle http://t.co/xT7zByq # egypt # jan25 # egyfun')
-(1.0124638072211003e-07, u'RT @ altahawi: text million posters and a quarter of a million t-shirts to support Mubarak on 25, but card gwakt and Kochi Bata fiddle http://t.co/xT7zByq # egypt # jan25 ...')
-(3.6381500819137741e-12, u'RT @ Gemyhood: Suez and everyone declares get strained on 25 ... Thai protesters workers on employment she took their places # Jan25 Elly')
+[u'safeti', u'yamser', u'trick', u'oppress', u'lil', u'everi']
+(0.28289316814323501, u"Yamser national and Cheddi tricks every Elly you desire him I | Don't cross me and Lil oppression | Safety safety safety Bajram Effendi Jan25 http://t.co/aioDzAy #")
+(0.28289316814323501, u"RT @ memam8: yamser national and Cheddi tricks every Elly you desire him I | Don't cross me and Lil oppression | Safety safety safety Bajram Effendi Jan25 http://t.co/aioDzAy #")
+(0.019622091753686857, u'RT @ Gemyhood: Suez and everyone declares get strained on 25 ... Thai protesters workers on employment she took their places # Jan25 Elly')
+(0.013130964029626381, u"RT @ karembue: saturated with the smell of gasoline morning ... Ghstwa wearing the revolution????!!\nI'm khayef Koun revolution Elly talk by de aspiration times Bull!\n#Egypt #jan25")
+(0.0058967059634590811, u"RT @ahramonline: #Egypt ElBaradei supports a national day of action on Tuesday, but won't take part http://ht.ly/1aZ9Zw")
+(0.0058967059634590811, u"#Egypt ElBaradei supports a national day of action on Tuesday, but won't take part http://ht.ly/1aZ9Zw")
+(0.00025749927656211117, u'Events in Tunisia worries small investors and economists warn of selling low-http://dlvr.it/DvBbG # Egypt')
+(0.00019702337138636399, u'The most rational and best essay so far on Jan. 25.So be a real step towards change and not merely call for a revolution followed by foil http://bit.ly/eP3gVA # 25jan')
+(0.00016341199589456243, u'Sunrise: prestige: President with limited income and poor aim, its election programme achieved attests to that.(Morning heartburn blood) # Egypt')
+(0.00015969030265827966, u'According to the folk Hey Muhammad. Paul. Reel video: Egypt gets Tunisia is not death nor life in hot filling http://bit.ly/htylff Vute # 25jan # egypt')
 
 
 ***********************************************************
 Cluster22
 [u'henczel', u'drop', u'alasolh', u'de', u'book', u'top']
-(0.44124945504983965, u'RT @ MuslimStudent: http://www.flixya.com/photo/1890088/-Le alasolh de will drop I Henczel # jan25 # 25jan # egypt')
-(0.44124945504983965, u'Http://www.flixya.com/photo/1890088/-Le alasolh de will drop I Henczel # jan25 # 25jan # egypt')
-(0.032306889008400619, u'The book "how to change the world" lairik haobsbaom tops sales of books this week as the guardian http://is.gd/OpgeBl speech de Lena we # jan25')
-(0.022314024548057955, u"RT @ karembue: saturated with the smell of gasoline morning ... Ghstwa wearing the revolution????!!\nI'm khayef Koun revolution Elly talk by de aspiration times Bull!\n#Egypt #jan25")
-(0.0021544015880362909, u'RT @wael: Another sign, best seller on Guardian list this week is "How to Change the World" by Eric Hobsbawm http://is.gd/OpgeBl  #jan25')
-(0.0021544015880362909, u'Another sign, best seller on Guardian list this week is "How to Change the World" by Eric Hobsbawm http://is.gd/OpgeBl  #jan25')
-(0.00055415292675359165, u'That blogging if flying the President to change, to change for years build up example http://hasantalk.com/?p=375 # egypt # Tunisia')
-(0.00032486507980243807, u'# Egypt khayef Koun malakish Egypt rose from sleeping http://www.youtube.com/watch?v=oWZM9fWzvp0&feature=related # 25jan')
-(0.00032486507980243807, u'# Egypt khayef Koun malakish Egypt rose from sleeping http://www.youtube.com/watch?v=oWZM9fWzvp0&feature=related # 25jan')
-(0.0002297769651425712, u'The most rational and best essay so far on Jan. 25.So be a real step towards change and not merely call for a revolution followed by foil http://bit.ly/eP3gVA # 25jan')
+(0.39843562651790149, u'RT @ MuslimStudent: http://www.flixya.com/photo/1890088/-Le alasolh de will drop I Henczel # jan25 # 25jan # egypt')
+(0.39843562651790149, u'Http://www.flixya.com/photo/1890088/-Le alasolh de will drop I Henczel # jan25 # 25jan # egypt')
+(0.029164961464904285, u'The book "how to change the world" lairik haobsbaom tops sales of books this week as the guardian http://is.gd/OpgeBl speech de Lena we # jan25')
+(0.020152630400774821, u"RT @ karembue: saturated with the smell of gasoline morning ... Ghstwa wearing the revolution????!!\nI'm khayef Koun revolution Elly talk by de aspiration times Bull!\n#Egypt #jan25")
+(0.0019126267066297659, u'RT @wael: Another sign, best seller on Guardian list this week is "How to Change the World" by Eric Hobsbawm http://is.gd/OpgeBl  #jan25')
+(0.0019126267066297659, u'Another sign, best seller on Guardian list this week is "How to Change the World" by Eric Hobsbawm http://is.gd/OpgeBl  #jan25')
+(0.00050978214431621335, u'That blogging if flying the President to change, to change for years build up example http://hasantalk.com/?p=375 # egypt # Tunisia')
+(0.00031808581567213039, u"# Jan25 # Egypt # EgyGovernment # 25Jan # Mubarak http://bit.ly/gVHLb4 an important speech of President's Police today || Hey messahel Lord ... Lord")
+(0.00029540697389463351, u'The most rational and best essay so far on Jan. 25.So be a real step towards change and not merely call for a revolution followed by foil http://bit.ly/eP3gVA # 25jan')
+(0.00029313436619387315, u'# Egypt khayef Koun malakish Egypt rose from sleeping http://www.youtube.com/watch?v=oWZM9fWzvp0&feature=related # 25jan')
 
 
 ***********************************************************
 Cluster23
-[u'unexpect', u'type', u'system', u'string', u'object', u'error']
-(0.23158454809005907, u"There was an error deserializing the object of type System.String. Encountered unexpected character '\xd8'.")
-(0.23158454809005907, u"There was an error deserializing the object of type System.String. Encountered unexpected character '\xd8'.")
-(0.22514987231931888, u"There was an error deserializing the object of type System.String. Encountered unexpected character ':'.")
-(1.9762869629851739e-12, u'4 unemployed majored in Grand Theft Auto http://dlvr.it/DtchR # modern Cairo, Egypt')
-(2.300770160799851e-15, u'RT @wael: Another sign, best seller on Guardian list this week is "How to Change the World" by Eric Hobsbawm http://is.gd/OpgeBl  #jan25')
-(2.300770160799851e-15, u'Another sign, best seller on Guardian list this week is "How to Change the World" by Eric Hobsbawm http://is.gd/OpgeBl  #jan25')
-(1.2609412696807917e-15, u'The book "how to change the world" lairik haobsbaom tops sales of books this week as the guardian http://is.gd/OpgeBl speech de Lena we # jan25')
-(4.648884325033381e-16, u'That blogging if flying the President to change, to change for years build up example http://hasantalk.com/?p=375 # egypt # Tunisia')
-(2.8839446230049099e-16, u'The most rational and best essay so far on Jan. 25.So be a real step towards change and not merely call for a revolution followed by foil http://bit.ly/eP3gVA # 25jan')
+[u'king', u'elbaradei', u'toitat', u'mesh', u'erupt', u'won']
+(0.4362655035255924, u'ElBaradei ElBaradei eruptions King King mesh toitat # ElBaradei # Egypt')
+(0.014529673964662043, u"RT @ahramonline: #Egypt ElBaradei supports a national day of action on Tuesday, but won't take part http://ht.ly/1aZ9Zw")
+(0.014529673964662043, u"#Egypt ElBaradei supports a national day of action on Tuesday, but won't take part http://ht.ly/1aZ9Zw")
+(0.0014215637487385374, u'RT @ahramonline: #Egypt ElBaradei: If the Tunisians have done it, Egyptians should get there too http://ht.ly/1aZ9Zx')
+(0.0014215637487385374, u'#Egypt ElBaradei: If the Tunisians have done it, Egyptians should get there too http://ht.ly/1aZ9Zx')
+(4.8208131094840548e-09, u'Text of poster and a quarter of a million million t-shirt to support Mubarak on 25, but card gwakt and Kochi Bata fiddle http://t.co/xT7zByq # egypt # jan25 # egyfun')
+(4.8208131094840548e-09, u'RT @ altahawi: text million posters and a quarter of a million t-shirts to support Mubarak on 25, but card gwakt and Kochi Bata fiddle http://t.co/xT7zByq # egypt # jan25 ...')
+(6.7981765594214762e-16, u"Yamser national and Cheddi tricks every Elly you desire him I | Don't cross me and Lil oppression | Safety safety safety Bajram Effendi Jan25 http://t.co/aioDzAy #")
+(6.7981765594214762e-16, u"RT @ memam8: yamser national and Cheddi tricks every Elly you desire him I | Don't cross me and Lil oppression | Safety safety safety Bajram Effendi Jan25 http://t.co/aioDzAy #")
 (2.2204460492503131e-16, u'\u201cWe Are All Khaled Said\u201d: Will the Revolution Come to #Egypt? - The Daily Beast - http://goo.gl/bSWtP #sidibouzid')
 
 
 ***********************************************************
 Cluster24
-[u'secur', u'instruct', u'import', u'video', u'jan', u'particip']
-(0.22413352770729991, u'RT @ Moutaz_D: Video: important security instructions for each participant in the Jan. 25 # Egypt # 25Jan http://tumblr.com/xqk1bmaj01')
-(0.22413352770729991, u'RT @ Moutaz_D: Video: important security instructions for each participant in the Jan. 25 # Egypt # 25Jan http://tumblr.com/xqk1bmaj01')
-(0.088250158277325297, u'France: careful to ensure the security of Israel and Jerusalem as the capital of two States http://dlvr.it/DvJQK # Egypt')
-(0.077086008392577468, u'Hey Zen saying Mubarak flyer in you video: role role http://bit.ly/evAdfp role remained elusive nights your above # 25jan # egypt # tunisia')
-(0.053604695932264163, u"# Jan25 # Egypt # EgyGovernment # 25Jan # Mubarak http://bit.ly/gVHLb4 an important speech of President's Police today || Hey messahel Lord ... Lord")
-(0.035549868359264748, u'RT @ S_Elhussieny: 500,000 (poster) and 250,000 (t-shirt) to support (Mubarak) 25 Jan-gate Sunrise http://bit.ly/i6p7pA # egypt # 25jan')
-(0.033933755718171789, u'RT @ mamdoh_: http://www.youtube.com/watch?v=n94-pXrIzT8 this video will move with minds on January 25, # egypt')
-(0.032000443337101316, u'The most rational and best essay so far on Jan. 25.So be a real step towards change and not merely call for a revolution followed by foil http://bit.ly/eP3gVA # 25jan')
-(0.0225985066655497, u'According to the folk Hey Muhammad. Paul. Reel video: Egypt gets Tunisia is not death nor life in hot filling http://bit.ly/htylff Vute # 25jan # egypt')
-(0.015730210682230204, u'RT @wael: Another sign, best seller on Guardian list this week is "How to Change the World" by Eric Hobsbawm http://is.gd/OpgeBl  #jan25')
+[u'kuwait', u'harem', u'cafe', u'youth', u'urg', u'naguib']
+(0.46602409764046904, u'A harem on "youth" in a cafe in Kuwait http://bit.ly/gzxt9w # Egypt')
+(0.030452677723351453, u'RT @ MenaNader: Naguib Gabriel Coptic youth urged to boycott protests 25 January || Medicine you take to you money!!!??? #25Jan #Jan25 #Copts #Egypt #EgyptRevol #A7A')
+(0.030452677723351453, u'RT @ MenaNader: Naguib Gabriel Coptic youth urged to boycott protests 25 January || Medicine you take to you money!!!??? #25Jan #Jan25 #Copts #Egypt #EgyptRevol #A7A')
+(0.00072273800521247282, u"RT @mar3e Egypt's frustrated young wait for their lives to begin, & dream of revolution http://bit.ly/f803we #Egypt || @Guardian")
+(6.5742763129455065e-10, u"# Jan25 # Egypt # EgyGovernment # 25Jan # Mubarak http://bit.ly/gVHLb4 an important speech of President's Police today || Hey messahel Lord ... Lord")
+(1.5836291205527635e-13, u'The most rational and best essay so far on Jan. 25.So be a real step towards change and not merely call for a revolution followed by foil http://bit.ly/eP3gVA # 25jan')
+(1.6802874893369443e-14, u'Text of poster and a quarter of a million million t-shirt to support Mubarak on 25, but card gwakt and Kochi Bata fiddle http://t.co/xT7zByq # egypt # jan25 # egyfun')
+(1.6802874893369443e-14, u'RT @ altahawi: text million posters and a quarter of a million t-shirts to support Mubarak on 25, but card gwakt and Kochi Bata fiddle http://t.co/xT7zByq # egypt # jan25 ...')
+(2.2204460492503131e-16, u'\u201cWe Are All Khaled Said\u201d: Will the Revolution Come to #Egypt? - The Daily Beast - http://goo.gl/bSWtP #sidibouzid')
+(2.2204460492503131e-16, u'\xabLocal customs\xbb looking worn out sewerage and \xabChadli\xbb: remove the breakages task http://dlvr.it/DvF8T road # Egypt')
 
 
 ***********************************************************
 Cluster25
-[u'effect', u'bouazizi', u'khalina', u'chang', u'world', u'week']
-(0.65259957194614016, u'RT @H_A_NassaR: BouAzizi Effect RT @Adel_Salib    Butterfly Effect #Tunis #Egypt #Jan25')
-(2.2204460492503131e-16, u'\u201cWe Are All Khaled Said\u201d: Will the Revolution Come to #Egypt? - The Daily Beast - http://goo.gl/bSWtP #sidibouzid')
-(2.2204460492503131e-16, u'\xabLocal customs\xbb looking worn out sewerage and \xabChadli\xbb: remove the breakages task http://dlvr.it/DvF8T road # Egypt')
-(2.2204460492503131e-16, u'\xabDiver\xbb flooded the streets \xabAmiriyah\xbb http://dlvr.it/DvBZz # Egypt')
-(2.2204460492503131e-16, u"Yamser national and Cheddi tricks every Elly you desire him I | Don't cross me and Lil oppression | Safety safety safety Bajram Effendi Jan25 http://t.co/aioDzAy #")
-(2.2204460492503131e-16, u'Washington Post: all indicators confirm that Mubarak will lead Egypt to a catastrophe ...Obama insists on silence http://j.mp/eNNJrY # EgyRevol # 25Jan # Jan25 # Mubarak # Egypt')
-(2.2204460492503131e-16, u"There was an error deserializing the object of type System.String. Encountered unexpected character '\xd8'.")
-(2.2204460492503131e-16, u"There was an error deserializing the object of type System.String. Encountered unexpected character '\xd8'.")
-(2.2204460492503131e-16, u"There was an error deserializing the object of type System.String. Encountered unexpected character ':'.")
-(2.2204460492503131e-16, u'The strong statement: together on January 25, under the banner of Justice-freedom-def get Thawra at 2 pm http://on.fb.me/ff7qdH # 25jan')
+[u'unrest', u'spread', u'renew', u'via', u'arab', u'protest']
+(0.32730696952404104, u'Renewed protests in #Algeria and #Tunisia as Arab unrest spreads RT @seyachoumeh http://kwick.me/ktMh #egypt #yemen via @Sonja_Jo')
+(0.32730696952404104, u'RT @octavianasr: Renewed protests in #Algeria and #Tunisia as Arab unrest spreads RT @seyachoumeh http://kwick.me/ktMh #egypt #yemen via @Sonja_Jo')
+(0.02970080409858197, u"#Egypt's frustrated young wait for lives to begin, dream of revolution http://bit.ly/gTd5ZX via @Tharwacolamus #Sidibouzid #arabprotest")
+(0.013426982403218206, u'RT @ Gemyhood: Suez and everyone declares get strained on 25 ... Thai protesters workers on employment she took their places # Jan25 Elly')
+(0.010151940791955746, u'RT @ MenaNader: Naguib Gabriel Coptic youth urged to boycott protests 25 January || Medicine you take to you money!!!??? #25Jan #Jan25 #Copts #Egypt #EgyptRevol #A7A')
+(0.010151940791955746, u'RT @ MenaNader: Naguib Gabriel Coptic youth urged to boycott protests 25 January || Medicine you take to you money!!!??? #25Jan #Jan25 #Copts #Egypt #EgyptRevol #A7A')
+(0.0022293679319484476, u'# Egypt over 5,000 website promotes terrorism. 500 of them addressed to http://bit.ly/i0RAAC Arabic region')
+(0.0022293679319484476, u'# Egypt over 5,000 website promotes terrorism. 500 of them addressed to http://bit.ly/i0RAAC Arabic region')
+(0.00074218996221047751, u"RT @ Melshamy: Al confirms the participation of brothers and members of Parliament's protests January 25, http://bit.ly/gfn42d # 25jan # Egypt # Mb # Tunis # Si ...")
+(0.00058126964720800901, u"Beltagui confirms the participation of brothers and members of Parliament's protests January 25, http://t.co/87NnlNZ # Egypt # 25JAn")
 
 
 ***********************************************************
 Cluster26
-[u'brother', u'parliament', u'member', u'confirm', u'januari', u'particip']
-(0.17919784857500393, u"RT @ AkherElAkhbar: # Egypt Beltagy confirms the participation of brothers and members of Parliament's protests January 25, http://bit.ly/hfIZ3H # 25Jan # Jan25 # Egypt")
-(0.17919784857500393, u"# Egypt Beltagy confirms the participation of brothers and members of Parliament's protests January 25, http://bit.ly/hfIZ3H")
-(0.17919784857500393, u"# Egypt Beltagy confirms the participation of brothers and members of Parliament's protests January 25, http://bit.ly/hfIZ3H")
-(0.1695572777176455, u"Beltagui confirms the participation of brothers and members of Parliament's protests January 25, http://t.co/87NnlNZ # Egypt # 25JAn")
-(0.16715321588669302, u"RT @ Melshamy: Al confirms the participation of brothers and members of Parliament's protests January 25, http://bit.ly/gfn42d # 25jan # Egypt # Mb # Tunis # Si ...")
-(0.078459578972468261, u'RT @ Lastoadri: RT @ A7medAmeen soundtracks for Dr. Mohammed Al announces the participation of brothers officially in January 25, http://www.palsharing.com/y5brwm1nrdio.html # Jan25')
-(0.043269197224071222, u'RT @ MenaNader: Naguib Gabriel Coptic youth urged to boycott protests 25 January || Medicine you take to you money!!!??? #25Jan #Jan25 #Copts #Egypt #EgyptRevol #A7A')
-(0.043269197224071222, u'RT @ MenaNader: Naguib Gabriel Coptic youth urged to boycott protests 25 January || Medicine you take to you money!!!??? #25Jan #Jan25 #Copts #Egypt #EgyptRevol #A7A')
-(0.033446342385043959, u'Washington Post: all indicators confirm that Mubarak will lead Egypt to a catastrophe ...Obama insists on silence http://j.mp/eNNJrY # EgyRevol # 25Jan # Jan25 # Mubarak # Egypt')
-(0.030821467601310014, u'The strong statement: together on January 25, under the banner of Justice-freedom-def get Thawra at 2 pm http://on.fb.me/ff7qdH # 25jan')
+[u'exit', u'emerg', u'dmagho', u'..!:', u'mubarak', u'silenc']
+(0.40170107411460448, u'Dmaghos: emergency exit for Mubarak ..!: http://bit.ly/acYcwl # Jan25 # Egypt # Mubarak')
+(0.018485487826309637, u'Washington Post: all indicators confirm that Mubarak will lead Egypt to a catastrophe ...Obama insists on silence http://j.mp/eNNJrY # EgyRevol # 25Jan # Jan25 # Mubarak # Egypt')
+(0.010677553739853674, u'RT @ oshaokhtmeligi: walk ya Mubarak, I walk yabeni albhedlh allowance, Christians have you blood, your blood, and the sinaitic them and the upper Egyptians have you blood, will establish work eh? #jan25')
+(0.0075820315217583886, u'RT @ S_Elhussieny: 500,000 (poster) and 250,000 (t-shirt) to support (Mubarak) 25 Jan-gate Sunrise http://bit.ly/i6p7pA # egypt # 25jan')
+(0.0028629191475759508, u"Mubarak was due to his wife's death, Shimon Peres in Egypt http://dlvr.it/DvDjN #")
+(0.00028533877931089587, u'Hey Zen saying Mubarak flyer in you video: role role http://bit.ly/evAdfp role remained elusive nights your above # 25jan # egypt # tunisia')
+(1.2889652875533858e-10, u'Concussion and fractures to the drunken man \xab\xbb fell from the 6th floor Alexandria Egypt http://dlvr.it/Dv9ML #')
+(8.2334262018534565e-11, u'Text of poster and a quarter of a million million t-shirt to support Mubarak on 25, but card gwakt and Kochi Bata fiddle http://t.co/xT7zByq # egypt # jan25 # egyfun')
+(8.2334262018534565e-11, u'RT @ altahawi: text million posters and a quarter of a million t-shirts to support Mubarak on 25, but card gwakt and Kochi Bata fiddle http://t.co/xT7zByq # egypt # jan25 ...')
+(2.3997883971789872e-11, u'RT @ mesh: wael hasharb ships August khalina kept \xf1\xe7\xed\xfe. Beryl khalina astrgl-lavantalob and abibsi-El Moselhi: khalina because not one comparative-hasharb Murr-because Egyptian and will stay free # Jan25')
 
 
 ***********************************************************
 Cluster27
-[u'sub', u'countri', u'khalina', u'chang', u'http', u'com']
-(0.55785486638334847, u'Are #Morocco, #Algeria, #Tunisia, #Libya and #Egypt Sub-#Mediterranean #European countries?')
+[u'fadel', u'alhelo', u'step', u'toward', u'real', u'mere']
+(0.56595757732240481, u'Fadel alhelo step http://yfrog.com/gypr4jnj # Jan25 # Egypt')
+(0.034994224622886379, u'The most rational and best essay so far on Jan. 25.So be a real step towards change and not merely call for a revolution followed by foil http://bit.ly/eP3gVA # 25jan')
+(0.0010017594032403294, u'RT @wael: Another sign, best seller on Guardian list this week is "How to Change the World" by Eric Hobsbawm http://is.gd/OpgeBl  #jan25')
+(0.0010017594032403294, u'Another sign, best seller on Guardian list this week is "How to Change the World" by Eric Hobsbawm http://is.gd/OpgeBl  #jan25')
+(0.00052716969835484159, u'That blogging if flying the President to change, to change for years build up example http://hasantalk.com/?p=375 # egypt # Tunisia')
+(0.0003577204684320546, u'The book "how to change the world" lairik haobsbaom tops sales of books this week as the guardian http://is.gd/OpgeBl speech de Lena we # jan25')
+(0.00010043389354691501, u"RT @ karembue: saturated with the smell of gasoline morning ... Ghstwa wearing the revolution????!!\nI'm khayef Koun revolution Elly talk by de aspiration times Bull!\n#Egypt #jan25")
+(6.7525075290726915e-05, u'RT @ S_Elhussieny: 500,000 (poster) and 250,000 (t-shirt) to support (Mubarak) 25 Jan-gate Sunrise http://bit.ly/i6p7pA # egypt # 25jan')
+(5.5557911596598206e-05, u'# JAN25 here the significance of revolution in dignity on Tuesday http://www.youtube.com/watch?v=jI9QdcRt4fc&feature=player_embedded#!')
+(5.5189195940486644e-05, u'RT @ LoaiNagati: predicted severe and fatal cases stupidity on 25 such as raising photos of Gamal Abdel Nasser. #jan25')
+
+
+***********************************************************
+Cluster28
+[u'secur', u'instruct', u'import', u'jan', u'video', u'particip']
+(0.24503964430936573, u'RT @ Moutaz_D: Video: important security instructions for each participant in the Jan. 25 # Egypt # 25Jan http://tumblr.com/xqk1bmaj01')
+(0.24503964430936573, u'RT @ Moutaz_D: Video: important security instructions for each participant in the Jan. 25 # Egypt # 25Jan http://tumblr.com/xqk1bmaj01')
+(0.10333092126035084, u'France: careful to ensure the security of Israel and Jerusalem as the capital of two States http://dlvr.it/DvJQK # Egypt')
+(0.060594909209496006, u"# Jan25 # Egypt # EgyGovernment # 25Jan # Mubarak http://bit.ly/gVHLb4 an important speech of President's Police today || Hey messahel Lord ... Lord")
+(0.031605036313832581, u'The most rational and best essay so far on Jan. 25.So be a real step towards change and not merely call for a revolution followed by foil http://bit.ly/eP3gVA # 25jan')
+(0.028081421773593216, u'RT @ S_Elhussieny: 500,000 (poster) and 250,000 (t-shirt) to support (Mubarak) 25 Jan-gate Sunrise http://bit.ly/i6p7pA # egypt # 25jan')
+(0.026470075056866021, u'RT @ mamdoh_: http://www.youtube.com/watch?v=n94-pXrIzT8 this video will move with minds on January 25, # egypt')
+(0.024617983407311205, u'According to the folk Hey Muhammad. Paul. Reel video: Egypt gets Tunisia is not death nor life in hot filling http://bit.ly/htylff Vute # 25jan # egypt')
+(0.0050111217932327029, u'Hey Zen saying Mubarak flyer in you video: role role http://bit.ly/evAdfp role remained elusive nights your above # 25jan # egypt # tunisia')
+(0.0039243389255022984, u'That blogging if flying the President to change, to change for years build up example http://hasantalk.com/?p=375 # egypt # Tunisia')
+
+
+***********************************************************
+Cluster29
+[u'flood', u'diver', u'amiriyah', u'street', u'khalina', u'hasharb']
+(0.4998164350333425, u'\xabDiver\xbb flooded the streets \xabAmiriyah\xbb http://dlvr.it/DvBZz # Egypt')
+(0.0041729827011843272, u"It doesn't matter where u go on #jan25, just be the street!!!")
+(6.46572697657544e-05, u"RT @Gsquare86: It doesn't matter where u go on #jan25, just be the street!!!")
 (2.2204460492503131e-16, u'\u201cWe Are All Khaled Said\u201d: Will the Revolution Come to #Egypt? - The Daily Beast - http://goo.gl/bSWtP #sidibouzid')
 (2.2204460492503131e-16, u'\xabLocal customs\xbb looking worn out sewerage and \xabChadli\xbb: remove the breakages task http://dlvr.it/DvF8T road # Egypt')
-(2.2204460492503131e-16, u'\xabDiver\xbb flooded the streets \xabAmiriyah\xbb http://dlvr.it/DvBZz # Egypt')
 (2.2204460492503131e-16, u"Yamser national and Cheddi tricks every Elly you desire him I | Don't cross me and Lil oppression | Safety safety safety Bajram Effendi Jan25 http://t.co/aioDzAy #")
 (2.2204460492503131e-16, u'Washington Post: all indicators confirm that Mubarak will lead Egypt to a catastrophe ...Obama insists on silence http://j.mp/eNNJrY # EgyRevol # 25Jan # Jan25 # Mubarak # Egypt')
 (2.2204460492503131e-16, u"There was an error deserializing the object of type System.String. Encountered unexpected character '\xd8'.")
 (2.2204460492503131e-16, u"There was an error deserializing the object of type System.String. Encountered unexpected character '\xd8'.")
 (2.2204460492503131e-16, u"There was an error deserializing the object of type System.String. Encountered unexpected character ':'.")
-(2.2204460492503131e-16, u'The strong statement: together on January 25, under the banner of Justice-freedom-def get Thawra at 2 pm http://on.fb.me/ff7qdH # 25jan')
-
-
-***********************************************************
-Cluster28
-[u'exit', u'emerg', u'dmagho', u'..!:', u'mubarak', u'role']
-(0.37707360310151111, u'Dmaghos: emergency exit for Mubarak ..!: http://bit.ly/acYcwl # Jan25 # Egypt # Mubarak')
-(0.021660896679378743, u'Hey Zen saying Mubarak flyer in you video: role role http://bit.ly/evAdfp role remained elusive nights your above # 25jan # egypt # tunisia')
-(0.020716298737974443, u'Washington Post: all indicators confirm that Mubarak will lead Egypt to a catastrophe ...Obama insists on silence http://j.mp/eNNJrY # EgyRevol # 25Jan # Jan25 # Mubarak # Egypt')
-(0.012169555392409246, u'RT @ S_Elhussieny: 500,000 (poster) and 250,000 (t-shirt) to support (Mubarak) 25 Jan-gate Sunrise http://bit.ly/i6p7pA # egypt # 25jan')
-(0.011926755083363985, u'RT @ oshaokhtmeligi: walk ya Mubarak, I walk yabeni albhedlh allowance, Christians have you blood, your blood, and the sinaitic them and the upper Egyptians have you blood, will establish work eh? #jan25')
-(0.0083616851204231495, u'Text of poster and a quarter of a million million t-shirt to support Mubarak on 25, but card gwakt and Kochi Bata fiddle http://t.co/xT7zByq # egypt # jan25 # egyfun')
-(0.0083616851204231495, u'RT @ altahawi: text million posters and a quarter of a million t-shirts to support Mubarak on 25, but card gwakt and Kochi Bata fiddle http://t.co/xT7zByq # egypt # jan25 ...')
-(0.00054722242537661911, u'Sunrise: prestige: President with limited income and poor aim, its election programme achieved attests to that.(Morning heartburn blood) # Egypt')
-(0.0003953038040379385, u"Mubarak was due to his wife's death, Shimon Peres in Egypt http://dlvr.it/DvDjN #")
-(0.00012141821459286137, u"RT @ Mohrad: the poet's view: If people one day wanted life.. Lord right Gah Prophet works need stayed # jan25")
-
-
-***********************************************************
-Cluster29
-[u'lost', u'arab', u'return', u'mother', u'3af', u'folk']
-(0.24622875992480625, u'RT @ Alotaibih3af: # Jan25 Hey folks Egypt returned to Arab mother!!!\nThe Arabs lost on lost Egypt ...')
-(0.24622875992480625, u'RT @ Alotaibih3af: # Jan25 Hey folks Egypt returned to Arab mother!!!\nThe Arabs lost on lost Egypt ...')
-(0.03089388560588463, u'According to the folk Hey Muhammad. Paul. Reel video: Egypt gets Tunisia is not death nor life in hot filling http://bit.ly/htylff Vute # 25jan # egypt')
-(0.024038431836534237, u'Hey Zen saying Mubarak flyer in you video: role role http://bit.ly/evAdfp role remained elusive nights your above # 25jan # egypt # tunisia')
-(0.018790739922040584, u"# Jan25 # Egypt # EgyGovernment # 25Jan # Mubarak http://bit.ly/gVHLb4 an important speech of President's Police today || Hey messahel Lord ... Lord")
-(0.0018687413032871941, u"It doesn't matter where u go on #jan25, just be the street!!!")
-(0.0015369246258875977, u'# Egypt over 5,000 website promotes terrorism. 500 of them addressed to http://bit.ly/i0RAAC Arabic region')
-(0.0015369246258875977, u'# Egypt over 5,000 website promotes terrorism. 500 of them addressed to http://bit.ly/i0RAAC Arabic region')
-(0.00042052573032257899, u"RT @mar3e Egypt's frustrated young wait for their lives to begin, & dream of revolution http://bit.ly/f803we #Egypt || @Guardian")
-(5.3041312008350467e-05, u"RT @Gsquare86: It doesn't matter where u go on #jan25, just be the street!!!")
 

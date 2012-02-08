@@ -33,3 +33,8 @@ class EgyptTweet(Tweet):
     meta = {"collection": "EgyptTweets"}
     url = StringField(required=True)
     retweet_count = IntField(required=True, default=0)
+    
+class PsychTweet(Tweet):
+    meta = {"collection": "PsychTweets"}
+    url = StringField(required=True)
+    retweet_count = IntField(required=True, default=0)

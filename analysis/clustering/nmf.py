@@ -14,7 +14,7 @@ class NMFClusterer(AbstractClusterer):
     topics in tweets and then identify similar tweets.
     '''
     def run(self, seed = 'random_vcol', method='nmf', rank=3, max_iter=65, display_N_tokens = 5, display_N_documents = 3):
-        self.construct_term_doc_matrix()
+        self.construct_term_doc_matrix(pca=False) #We cannot perform PCA with NMF because we only want non-negative vectors
         V = self.td_matrix
         model = nimfa.mf(V, seed = seed, method = method, rank = rank, max_iter = max_iter)
         fitted = nimfa.mf_run(model)

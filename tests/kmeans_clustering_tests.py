@@ -41,16 +41,33 @@ class TestOrangeClustering(unittest.TestCase):
         expected = [0, 0, 0, 1, 1, 1]
         self.assertEqual(expected, km.clusters)
 
-    def test_orange_with_tweets_kmeans(self):    
+    def test_orange_with_tweets_kmeans(self):            
         from_date = datetime.datetime(2011, 1, 23, 0, 0, 0)
         to_date = datetime.datetime(2011, 1, 27, 0, 0, 0) 
-        items = ws.get_documents_by_date(from_date, to_date, 100)
+        items = ws.get_documents_by_date(from_date, to_date, limit=500)
 
-        oc = OrangeKmeansClusterer(k=20, ngram=1)
+        ###################
+        # Index retrievals#
+        ###################
+        from analysis.index import Index
+        index = Index("kmeans_index")
+        index.add_documents(items)
+        index.finalize()
+        print index.get_top_terms()
+        ids = index.get_top_documents(lowestf=0.01, highestf=0.1)
+        print len(ids)
+        items = []
+        for id in ids:
+            items.append(ws.get_document_by_id(id))
+        ###################
+        # Index retrievals#
+        ###################
+        
+        oc = OrangeKmeansClusterer(k=100, ngram=1)
         for item in items:
             oc.add_document(item)
-        oc.run("orange_clustering_test")
-        oc.plot_timeline(cumulative=True)  
+        oc.run("orange_clustering_test", pca=True)
+        oc.plot_timeline(cumulative=True)
         oc.dump_clusters_to_file("kmeans_with_tweets_orange")
         
         #Experiments

@@ -14,7 +14,7 @@ from analysis.semantic import TwitterSemanticAnalyser
 ###########################################
 # GLOBALS                                #
 ###########################################
-ignorewords = set(['rt','jan25', 'egypt', 'cairo', '25jan', "s", \
+ignorewords = set(['rt','jan25', 'egypt', 'cairo', '25jan', "s", ":)", ":(", ":p", "25"\
                 '(' , ')', '<', '>', '#', '@', '?', '!', '.', ',', '=', '|', \
                 '&', ':', '+', '\'', '\'ve',"m", 're', '-', '"', '."', '...', '..', '--', '[', ']' ])
                 

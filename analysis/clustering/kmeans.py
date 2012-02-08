@@ -7,22 +7,24 @@ Created on 29 Jan 2012
 import Orange, orange #!@UnresolvedImport
 from analysis.clustering.abstract import AbstractKmeansClusterer
 from analysis.clustering.structures import Cluster
+from tools.orange_utils import construct_orange_table, add_metas_to_table
             
 class OrangeKmeansClusterer(AbstractKmeansClusterer):
     '''
     A clustering data structure that works with Orange
     '''            
     
-    def run(self, filename):
+    def run(self, filename, pca=False):
         '''
         Runs the kmeans algorithm.
         '''
-        self.construct_term_doc_matrix()
         vars = []
+        self.construct_term_doc_matrix(pca=pca)
         for token in self.attributes:
             vars.append(Orange.data.variable.Continuous(str(token)))
         domain = Orange.data.Domain(vars, False) #The second argument indicated that the last attr must not be a class
         table = Orange.data.Table(domain, self.td_matrix)
+        
         km = Orange.clustering.kmeans.Clustering(table, self.k)        #initialization= Orange.clustering.kmeans.init_hclustering(n=100), distance =  Orange.distance.instances.PearsonRConstructor
         self.split_documents(km)
         return km
@@ -70,23 +72,8 @@ class OrangeKmeansClusterer(AbstractKmeansClusterer):
         which is supported by Orange. 
         '''
         if self.td_matrix != None: 
-            #First construct the domain object (top row)
-            vars = []
-            for token in self.attributes:
-                vars.append(Orange.data.variable.Continuous(str(token)))
-            domain = Orange.data.Domain(vars, False) #The second argument indicated that the last attr must not be a class
-            
-            #Add data rows 
-            t = Orange.data.Table(domain, self.td_matrix)
-            
-            #Add meta attributes to the samples i.e. the id of the document
-            doc_id = Orange.data.variable.String("id")
-            id = Orange.data.new_meta_id()
-            t.add_meta_attribute(id)
-            t.domain.add_meta(id, doc_id)
-            
-            for i, id in enumerate(self.document_dict.keys()):
-                t[i]['id'] = str(id)
+            t = construct_orange_table(self.attributes, self.td_matrix)
+            t = add_metas_to_table(t, self.document_dict.keys())
             
             orange.saveTabDelimited (filename+".tab", t)
             self.table_name = filename

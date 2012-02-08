@@ -3,7 +3,8 @@ Created on 29 Jan 2012
 
 @author: george
 '''
-import nltk, numpy 
+import nltk, numpy
+from tools.orange_utils import construct_orange_table, orange_pca, add_metas_to_table
 from collections import OrderedDict 
 from visualizations.graphs import Timeline
 
@@ -23,6 +24,13 @@ class AbstractClusterer(object):
         self.table_name = None
         self.clusters = []
         
+    def add_documents(self, document_list):
+        '''
+        Adds a batch of new documents in the cluster structure.
+        '''    
+        for document in document_list:
+            self.add_document(document)
+
     def add_document(self, document):
         '''
         Adds a new document in the cluster structure.
@@ -42,7 +50,7 @@ class AbstractClusterer(object):
         else:    
             raise Exception("Oops. No document with this ID was found.")       
         
-    def construct_term_doc_matrix(self):
+    def construct_term_doc_matrix(self, pca=False):
         '''
         Constructs a term-document matrix such that td_matrix[document][term] 
         contains the weighting score for the term in the document.
@@ -57,7 +65,15 @@ class AbstractClusterer(object):
                 data_rows[i][terms.index(term)] = corpus.tf_idf(term, text)
         
         self.attributes = terms
-        self.td_matrix = data_rows 
+        self.td_matrix = data_rows
+        
+        #If PCA is True then we project our points on their principal components
+        #for dimensionality reduction
+        if pca:
+            t = construct_orange_table(self.attributes, self.td_matrix)
+            self.td_matrix = orange_pca(t)
+            #Attributes names have no meaning after dimensionality reduction
+            self.attributes = [i for i in range(self.td_matrix.shape[1])]
 
     def rotate_td_matrix(self):
         '''

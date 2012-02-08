@@ -54,6 +54,15 @@ def tanimoto(v1,v2):
         if v2[i]!=0: count_v2+=1 # in v2
         if v1[i]!=0 and v2[i]!=0: common+=1 # in both
     return 1.0-(float(common)/(count_v1+count_v2-common))
+
+def euclidean(x,y):
+    ''' calculate the euclidean distance between x and y.'''
+    # sqrt((x0-y0)^2 + ... (xN-yN)^2)
+    assert len(x) == len(y)
+    sum = 0.0
+    for i in xrange(len(x)):
+        sum += pow(x[i] - y[i],2)
+    return sqrt(sum)
         
 
 ###########################################

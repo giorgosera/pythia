@@ -28,6 +28,8 @@ class Index(object):
                                     True, 
                                     lucene.IndexWriter.MaxFieldLength.LIMITED)
         self.writer.setMaxFieldLength(1048576)
+        directory = lucene.SimpleFSDirectory(lucene.File(self.index_dir))
+        self.reader = lucene.FilterIndexReader.open(directory, True)
     
     def add_documents(self, document_list):
         '''
@@ -104,22 +106,54 @@ class Index(object):
         searcher.close()
         return results
     
-    def get_top_terms(self, limit=10):
+    def get_top_terms(self, limit=10*100):
         '''
         Returns the top keywords, in terms of documents mentioning them
         in the index. 
         '''
-        directory = lucene.SimpleFSDirectory(lucene.File(self.index_dir))
-        reader = lucene.FilterIndexReader.open(directory, True)
-        terms = reader.terms()
+        terms = self.reader.terms()
         
         term_freqs = []
         while terms.next():
             term = terms.term();
             if term.field() == 'content':
-                term_freqs.append( (reader.docFreq(term), term.text()) )
+                term_freqs.append( (self.reader.docFreq(term), term.text()) )
         return sorted(term_freqs, reverse=True)[:limit]
     
+    def get_filtered_terms(self, lowestf, highestf):
+        '''
+        Filters out terms which appear either too frequently or too rarely.
+        '''
+        total_docs = self.reader.numDocs()
+        terms = self.get_top_terms()
+        filtered_terms = []
+        for term in terms:
+            frequency = float(term[0])/float(total_docs)
+            if frequency > lowestf and frequency < highestf:
+                filtered_terms.append(term[1])
+        return filtered_terms
+    
+    def get_top_documents(self, lowestf, highestf):
+        '''
+        This functions is responsible for returning the top documents in the 
+        index. Top documents are the ones that contain terms which appear either 
+        NOT too frequently or NOT too rarely. It returns a list of document
+        ids.
+        '''
+        if lowestf < highestf:
+            filtered_terms = self.get_filtered_terms(lowestf, highestf)
+            ids = set()
+            for term in filtered_terms:
+                doc_ids = set([doc.get('id') for doc in self.search_by_term(term)])
+                ids = ids.union(doc_ids)
+            return ids
+        else:
+            raise BaseException("Oops. lowestf must be lower than highestf")
+        
+            
+#######################################################################
+# HELPER CLASSES
+#######################################################################
 class PorterStemmerAnalyzer(lucene.PythonAnalyzer):
     '''
     This class extends the simple analyzer by adding a stemmer. 

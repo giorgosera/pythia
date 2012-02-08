@@ -46,6 +46,9 @@ class TestPlayground(unittest.TestCase):
         results = index.search_by_author("islandrecordsuk")
         expected = '4f2d5ff580286c38a7000000'
         self.assertEquals(expected, results[0].get('id'))
+        
+    def test_filtered_docs(self):
+        self.assertEquals(92, len(index.get_top_documents(lowestf=0.01, highestf=0.4)))
             
 if __name__ == "__main__":
     unittest.main()
