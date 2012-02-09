@@ -55,7 +55,6 @@ class TestOrangeClustering(unittest.TestCase):
         index.finalize()
         print index.get_top_terms()
         ids = index.get_top_documents(lowestf=0.01, highestf=0.1)
-        print len(ids)
         items = []
         for id in ids:
             items.append(ws.get_document_by_id(id))

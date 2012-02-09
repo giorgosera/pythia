@@ -74,7 +74,6 @@ class OrangeKmeansClusterer(AbstractKmeansClusterer):
         if self.td_matrix != None: 
             t = construct_orange_table(self.attributes, self.td_matrix)
             t = add_metas_to_table(t, self.document_dict.keys())
-            
             orange.saveTabDelimited (filename+".tab", t)
             self.table_name = filename
         else:

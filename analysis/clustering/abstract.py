@@ -130,6 +130,9 @@ class AbstractClusterer(object):
     def run(self):
         raise NotImplementedError('run is not implemented.')
 
+    def split_documents(self):
+        raise NotImplementedError('split_documents is not implemented.')
+    
     def load_table(self):
         raise NotImplementedError('load_table is not implemented.')
     

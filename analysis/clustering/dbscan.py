@@ -5,8 +5,10 @@ Created on 8 Feb 2012
 '''
 from math import pow, sqrt
 from analysis.clustering.algorithms import euclidean
+from analysis.clustering.abstract import AbstractClusterer
+from analysis.clustering.structures import Cluster
 
-class DBSCANClusterer(object):
+class DBSCANClusterer(AbstractClusterer):
     '''
     A simple implementation of the DBSCAN density based clustering a
     algorithm. 
@@ -14,15 +16,17 @@ class DBSCANClusterer(object):
                     which provides a robust implementation of the algorithm.
     '''
 
-    def __init__(self, points, epsilon, min_pts, distance=euclidean, debug=False):
-        '''
-        Constructor
-        '''
-        self.points = points
-        self.epsilon = epsilon
-        self.min_pts = min_pts
-        self.distance = distance
-        self.debug = debug
+    #===========================================================================
+    # def __init__(self, points, epsilon, min_pts, distance=euclidean, debug=False):
+    #    '''
+    #    Constructor
+    #    '''
+    #    self.points = points
+    #    self.epsilon = epsilon
+    #    self.min_pts = min_pts
+    #    self.distance = distance
+    #    self.debug = debug
+    #===========================================================================
         
     def _as_points(self, points):
         ''' convert a list of list- or array-type objects to internal
@@ -131,7 +135,43 @@ class DBSCANClusterer(object):
         # return the dictionary of clusters, converting the Point objects
         # in the clusters back to regular lists
         return self.as_lists(clusters)
+    
+    def run(self, epsilon, min_pts, distance=euclidean, debug=False, pca=False):
+        '''
+        Runs the DBSCAN algorithm.
+        '''
+        if self.td_matrix == None:
+            self.construct_term_doc_matrix(pca=pca)
         
+        #Ugly code to transform a numpy array to a list
+        matrix = []
+        for row in self.td_matrix:
+            matrix.append(list(row))
+            
+        self.points = matrix
+        self.epsilon = epsilon
+        self.min_pts = min_pts
+        self.distance = distance
+        self.debug = debug
+        clusters = self.dbscan()
+        self.split_documents(clusters)
+            
+        return clusters
+    
+    def split_documents(self, clusters):
+        '''
+        This method splits the whole collection of documents 
+        of this data set into the different clusters. Of course
+        the algorithm should have been run first and then invoke this method.
+        It takes as input the clusters of document ids.
+        '''
+        for cluster, members in clusters.iteritems():
+            documents = {}
+            for doc_id in members:
+                print doc_id
+                document = self.document_dict[doc_id]            
+                documents[doc_id] = document
+            self.clusters.append(Cluster(cluster, documents))
         
 #######################################################################
 # HELPER CLASSES
