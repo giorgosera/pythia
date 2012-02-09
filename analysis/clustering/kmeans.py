@@ -18,6 +18,10 @@ class OrangeKmeansClusterer(AbstractKmeansClusterer):
         '''
         Runs the kmeans algorithm.
         '''
+        #Re-initialise clusters
+        if self.clusters != []:
+            self.clusters = []
+            
         vars = []
         self.construct_term_doc_matrix(pca=pca)
         for token in self.attributes:

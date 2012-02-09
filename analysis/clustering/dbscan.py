@@ -7,6 +7,7 @@ from math import pow, sqrt
 from analysis.clustering.algorithms import euclidean
 from analysis.clustering.abstract import AbstractClusterer
 from analysis.clustering.structures import Cluster
+from collections import OrderedDict
 
 class DBSCANClusterer(AbstractClusterer):
     '''
@@ -14,31 +15,21 @@ class DBSCANClusterer(AbstractClusterer):
     algorithm. 
     ACKNOWLEDGMENT: The code is adapted from https://github.com/jessykate/DBScan
                     which provides a robust implementation of the algorithm.
-    '''
-
-    #===========================================================================
-    # def __init__(self, points, epsilon, min_pts, distance=euclidean, debug=False):
-    #    '''
-    #    Constructor
-    #    '''
-    #    self.points = points
-    #    self.epsilon = epsilon
-    #    self.min_pts = min_pts
-    #    self.distance = distance
-    #    self.debug = debug
-    #===========================================================================
-        
+    '''        
     def _as_points(self, points):
         ''' convert a list of list- or array-type objects to internal
         Point class'''
-        return [Point(point) for point in points]
+        return [Point(point[0], point[1]) for point in points]
     
     def as_lists(self, clusters):
-        ''' converts the Points in each cluster back into regular feature
-        vectors (lists).'''
+        ''' 
+        converts the Points in each cluster back into regular feature
+        vectors (lists) and ids. It returns a list of tuples containing
+        the id of that point and its feature vector. 
+        '''
         clusters_as_points = {}
         for cluster, members in clusters.iteritems():
-            clusters_as_points[cluster] = [member.feature_vector for member in members]
+            clusters_as_points[cluster] = [ (member.id, member.feature_vector)  for member in members]
         return clusters_as_points
     
     def print_points(self, points):
@@ -95,10 +86,7 @@ class DBSCANClusterer(AbstractClusterer):
         radius epsilon within which to search for neighbouring points, and
         a min_pts, the minimum number of neighbours a point must have
         within the radius epsilon to be considered connected. the default
-        distance metric is euclidean, but another could be used as
-        well. your custom distance metric must accept two equal-length
-        feature vectors as input as return a distance value. pass in
-        debug=True for verbose output.''' 
+        distance metric is euclidean''' 
     
         assert isinstance(self.points, list)
         epsilon = float(self.epsilon)
@@ -106,7 +94,7 @@ class DBSCANClusterer(AbstractClusterer):
             # only check the first list instance. imperfect, but the lists
             # could be arbitrarily long.
             points = self._as_points(self.points)
-    
+
         if self.debug:
             print '\nEpsilon: %.2f' % epsilon
             print 'Min_Pts: %d' % self.min_pts
@@ -140,13 +128,18 @@ class DBSCANClusterer(AbstractClusterer):
         '''
         Runs the DBSCAN algorithm.
         '''
+        #Re-initialise clusters
+        if self.clusters != []:
+            self.clusters = []
+            
         if self.td_matrix == None:
             self.construct_term_doc_matrix(pca=pca)
         
         #Ugly code to transform a numpy array to a list
         matrix = []
-        for row in self.td_matrix:
-            matrix.append(list(row))
+        for row_index, doc_id in enumerate(self.document_dict.keys()):
+            #Along with the feature vector we append the document id as well
+            matrix.append( (list(self.td_matrix[row_index]), doc_id) )
             
         self.points = matrix
         self.epsilon = epsilon
@@ -166,26 +159,25 @@ class DBSCANClusterer(AbstractClusterer):
         It takes as input the clusters of document ids.
         '''
         for cluster, members in clusters.iteritems():
-            documents = {}
-            for doc_id in members:
-                print doc_id
+            documents = OrderedDict()
+            for member in members:
+                doc_id = member[0]
                 document = self.document_dict[doc_id]            
                 documents[doc_id] = document
             self.clusters.append(Cluster(cluster, documents))
-        
+            
 #######################################################################
 # HELPER CLASSES
 #######################################################################
-
-
 class Point(object):
     ''' internal helper class to support algorithm implementation'''
-    def __init__(self,feature_vector):
+    def __init__(self,feature_vector, id):
         # feature vector should be something like a list or a numpy
         # array
         self.feature_vector = feature_vector
         self.cluster = None
         self.visited = False
+        self.id = id
 
     def __str__(self):
         return str(self.feature_vector)

@@ -59,9 +59,8 @@ class TopsyCrawler(AbstractCrawler):
                         print "Storing tweet #",count, "for the period",self.from_date,"until",self.maxtime 
                         tt = self.type()
                         tt.url = item.url
-                        #Maybe REMOVE id from text analyser when evrything is refactored
                         print item.content
-                        id, content = text_analyser.add_document(0, item.content)
+                        content = text_analyser.add_document(item.content)
                         tt.content = content
                         print tt.content
                         tt.date = self.from_date

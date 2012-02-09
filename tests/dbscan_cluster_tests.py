@@ -6,6 +6,7 @@ Created on 26 Jan 2012
 import unittest, datetime
 from analysis.clustering.dbscan import DBSCANClusterer
 from database.warehouse import WarehouseServer
+from collections import OrderedDict
 
 ###########################################
 # GLOBALS                                #
@@ -29,8 +30,11 @@ points.append([15.0, 17.0])
 points.append([15.0, 17.0])
 points.append([7.5, -5.0])
 dbscan = DBSCANClusterer()
-#A small hack..in normal usage never set td_matrix by urself
+#Small hacks..in normal usage never set td_matrix by urself 
+#and never populate a dummy document_dict
 dbscan.td_matrix = points  
+dbscan.document_dict = OrderedDict( [('0','dummy'), ('1', 'dummy'), ('2', 'dummy'),('3', 'dummy'),('4', 'dummy'),('5', 'dummy'),
+                        ('6', 'dummy'),('7', 'dummy'),('8', 'dummy'),('9', 'dummy'),('10', 'dummy'),('11', 'dummy'),('12', 'dummy'),('13', 'dummy')])
   
 class Test_Dbscan_clustering(unittest.TestCase):
 
@@ -42,11 +46,15 @@ class Test_Dbscan_clustering(unittest.TestCase):
             for point in members:
                 print point
         
-        expected = {0: [[1, 1], [1.5, 1], [1.8, 1.5], [2.1, 1], [1, 1], [3.1, 2], [4.1, 2], [5.1, 2]], 1: [[10, 10], [11, 10.5], [9.5, 11], [9.9, 11.4]], -1: [[15.0, 17.0], [15.0, 17.0], [7.5, -5.0]]}
+        expected = {0: [('0', [1, 1]), ('1', [1.5, 1]), ('2', [1.8, 1.5]), ('3', [2.1, 1]), ('0', [1, 1]), ('4', [3.1, 2]), ('5', [4.1, 2]), ('6', [5.1, 2])], 
+                    1: [('7', [10, 10]), ('8', [11, 10.5]), ('9', [9.5, 11]), ('10', [9.9, 11.4])], 
+                    -1: [('11', [15.0, 17.0]), ('12', [15.0, 17.0]), ('13', [7.5, -5.0])]}
         self.assertEqual(expected, clusters)
 
     def test_split_documents(self):
         clusters = dbscan.run(epsilon, min_pts)
+        expected = [OrderedDict([('0', 'dummy'), ('1', 'dummy'), ('2', 'dummy'), ('3', 'dummy'), ('4', 'dummy'), ('5', 'dummy'), ('6', 'dummy')]), OrderedDict([('7', 'dummy'), ('8', 'dummy'), ('9', 'dummy'), ('10', 'dummy')]), OrderedDict([('11', 'dummy'), ('12', 'dummy'), ('13', 'dummy')])]
+        self.assertEqual(expected, [cluster.document_dict for cluster in dbscan.clusters])
     
 if __name__ == "__main__":
     unittest.main()
