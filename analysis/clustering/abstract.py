@@ -4,9 +4,10 @@ Created on 29 Jan 2012
 @author: george
 '''
 import nltk, numpy
-from tools.orange_utils import construct_orange_table, orange_pca, add_metas_to_table
+from tools.orange_utils import construct_orange_table, orange_pca
 from collections import OrderedDict 
 from visualizations.graphs import Timeline
+from visualizations.mds import MDS
 
 class AbstractClusterer(object):
     '''
@@ -126,6 +127,13 @@ class AbstractClusterer(object):
                 t = Timeline([doc['date'] for doc in documents.values()], cumulative=cumulative)
                 t.plot()
         t.show()
+        
+    def plot_scatter(self):
+        '''
+        Plots all the data points in 2D.
+        '''
+        mds = MDS(construct_orange_table(self.attributes, self.td_matrix))
+        mds.plot()
             
     def run(self):
         raise NotImplementedError('run is not implemented.')

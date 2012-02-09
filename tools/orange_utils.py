@@ -48,3 +48,23 @@ def orange_pca(data):
     matrix, ignore, ignore = pca(data).toNumpy()
     return matrix
 
+def construct_distance_matrix(data):
+    '''
+    Constructs a distance matrix using Euclidean distance
+    '''
+    euclidean = orange.ExamplesDistanceConstructor_Euclidean(data)
+    distance = orange.SymMatrix(len(data))
+    for i in range(len(data)):
+        for j in range(i+1):
+            distance[i, j] = euclidean(data[i], data[j])
+    return distance
+        
+def orange_mds(distance):
+    '''
+    It takes as input a distance matrix (see function above)
+    and projects the data points using MDS
+    '''
+    mds = Orange.projection.mds.MDS(distance)
+    mds.run(100)
+    return mds
+

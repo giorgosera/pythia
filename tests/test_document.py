@@ -66,5 +66,5 @@ def get_orange_clustering_test_data():
     doc2 = TestDocument(2, "test_name", "test_name", datetime.datetime.utcnow, content2, "no_url", 0)   
     doc3 = TestDocument(3, "test_name", "test_name", datetime.datetime.utcnow, content3, "no_url", 0)
     doc4 = TestDocument(4, "test_name", "test_name", datetime.datetime.utcnow, content4, "no_url", 0) 
-    doc5 = TestDocument(5, "test_name", "test_name", datetime.datetime.utcnow, content4, "no_url", 0)     
+    doc5 = TestDocument(5, "test_name", "test_name", datetime.datetime.utcnow, content5, "no_url", 0)     
     return [doc0, doc1, doc2, doc3, doc4, doc5]

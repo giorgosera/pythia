@@ -23,7 +23,7 @@ class Test(unittest.TestCase):
         expected = numpy.array([[ 0.31388923,  0.11584717,  0,           0,           0,           0,           0.47083384], 
                                 [ 0,           0.13515504,  0.3662041,   0,           0.3662041,   0,           0         ],      
                                 [ 0,           0,           0,           0.54930614,  0,           0.549306140, 0        ]])
-        
+
         self.assertEqual(expected.all(), calculated.all())
         
     def test_orange_save_matrix_to_tab_file(self):

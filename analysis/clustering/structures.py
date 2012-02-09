@@ -4,7 +4,6 @@ Created on 29 Jan 2012
 @author: george
 '''
 import nltk 
-from analysis.clustering.abstract import AbstractClusterer
 
 class Cluster(object):
     '''
@@ -61,7 +60,7 @@ class Cluster(object):
         #for collocation in collocations:
             #print ' '.join(str(i) for i in collocation)
 
-class Bicluster(AbstractClusterer):
+class Bicluster(object):
     '''
     A bicluster class. 
     '''
@@ -70,7 +69,7 @@ class Bicluster(AbstractClusterer):
         '''
         Constructs a bicluster
         '''
-        AbstractClusterer.__init__(self)
+        #AbstractClusterer.__init__(self)
         self.left = left
         self.right = right
         self.vector = vector

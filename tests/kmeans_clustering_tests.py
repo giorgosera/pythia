@@ -9,9 +9,6 @@ Unit tests for the analysis.clustering package.
 import datetime, unittest 
 from database.warehouse import WarehouseServer
 from analysis.clustering.kmeans import OrangeKmeansClusterer, CustomClusterer
-from analysis.clustering.algorithms import *
-from visualizations.dendrogram import Dendrogram
-from visualizations.Cluster2DPlot import Cluster2DPlot
 from tests.test_document import get_orange_clustering_test_data
 
 ###########################################
@@ -42,31 +39,33 @@ class TestOrangeClustering(unittest.TestCase):
         self.assertEqual(expected, km.clusters)
 
     def test_orange_with_tweets_kmeans(self):            
-        from_date = datetime.datetime(2011, 1, 23, 0, 0, 0)
-        to_date = datetime.datetime(2011, 1, 27, 0, 0, 0) 
-        items = ws.get_documents_by_date(from_date, to_date, limit=500)
+        from_date = datetime.datetime(2011, 1, 24, 0, 0, 0)
+        to_date = datetime.datetime(2011, 1, 25, 0, 0, 0) 
+        items = ws.get_documents_by_date(from_date, to_date, limit=200)
 
         ###################
         # Index retrievals#
         ###################
-        from analysis.index import Index
-        index = Index("kmeans_index")
-        index.add_documents(items)
-        index.finalize()
-        print index.get_top_terms()
-        ids = index.get_top_documents(lowestf=0.01, highestf=0.1)
-        items = []
-        for id in ids:
-            items.append(ws.get_document_by_id(id))
+        #=======================================================================
+        # from analysis.index import Index
+        # index = Index("kmeans_index")
+        # index.add_documents(items)
+        # index.finalize()
+        # print index.get_top_terms()
+        # ids = index.get_top_documents(lowestf=0.01, highestf=0.1)
+        # items = []
+        # for id in ids:
+        #    items.append(ws.get_document_by_id(id))
         ###################
         # Index retrievals#
         ###################
         
-        oc = OrangeKmeansClusterer(k=100, ngram=1)
+        oc = OrangeKmeansClusterer(k=13, ngram=1)
         for item in items:
             oc.add_document(item)
         oc.run("orange_clustering_test", pca=True)
-        oc.plot_timeline(cumulative=True)
+        #oc.plot_timeline(cumulative=True)
+        oc.plot_scatter()
         oc.dump_clusters_to_file("kmeans_with_tweets_orange")
         
         #Experiments
