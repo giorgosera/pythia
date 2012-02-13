@@ -1,0 +1,664 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0xb6d3e86d, pid=8922, tid=3073300160
+#
+# JRE version: 6.0_23-b23
+# Java VM: OpenJDK Client VM (20.0-b11 mixed mode, sharing linux-x86 )
+# Derivative: IcedTea6 1.11pre
+# Distribution: Ubuntu 11.10, package 6b23~pre11-0ubuntu1.11.10.1
+# Problematic frame:
+# C  [orange.so+0x41b86d]  TExampleTable::operator[](int const&)+0xd
+#
+# If you would like to submit a bug report, please include
+# instructions how to reproduce the bug and visit:
+#   https://bugs.launchpad.net/ubuntu/+source/openjdk-6/
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0b6cb400):  JavaThread "main" [_thread_in_native, id=8922, stack(0xbf9ce000,0xbfa1e000)]
+
+siginfo:si_signo=SIGSEGV: si_errno=0, si_code=1 (SEGV_MAPERR), si_addr=0x00000000
+
+Registers:
+EAX=0x00000000, EBX=0xb6f48ff4, ECX=0x0b528cec, EDX=0x00000000
+ESP=0xbfa1ad7c, EBP=0xaf6a1a2c, ESI=0xbfa1ae3c, EDI=0x0b8fb230
+EIP=0xb6d3e86d, EFLAGS=0x00210202, CR2=0x00000000
+
+Top of Stack: (sp=0xbfa1ad7c)
+0xbfa1ad7c:   b6bf9266 0b8fb230 bfa1ae64 00000001
+0xbfa1ad8c:   00000000 08277aa0 0b4d976c bfa1ae00
+0xbfa1ad9c:   0809338b af6a1a2c 0b8fdca8 00000004
+0xbfa1adac:   082779c0 0b4d97ac 0b8eae78 0acf4f53
+0xbfa1adbc:   0812e0a1 0000001c 00000004 00000004
+0xbfa1adcc:   b7360498 096f0050 0b4d976c 0acf4f52
+0xbfa1addc:   082779c0 0b4d97ac 0b8eae78 0acf4f53
+0xbfa1adec:   0812e183 00000010 00000000 00000004 
+
+Instructions: (pc=0xb6d3e86d)
+0xb6d3e84d:   8b 00 83 c4 1c c3 90 8d b6 00 00 00 00 8d bf 00
+0xb6d3e85d:   00 00 00 8b 44 24 08 8b 10 8b 44 24 04 8b 40 18
+0xb6d3e86d:   8b 04 90 c3 90 8d b4 26 00 00 00 00 8d bc 27 00
+0xb6d3e87d:   00 00 00 8b 44 24 08 8b 10 8b 44 24 04 8b 40 18 
+
+Register to memory mapping:
+
+EAX=0x00000000 is an unknown value
+EBX=0xb6f48ff4: <offset 0x625ff4> in /home/george/virtualenvfyp/pythia/local/lib/python2.7/site-packages/orange/orange.so at 0xb6923000
+ECX=0x0b528cec is an unknown value
+EDX=0x00000000 is an unknown value
+ESP=0xbfa1ad7c is pointing into the stack for thread: 0x0b6cb400
+EBP=0xaf6a1a2c is an unknown value
+ESI=0xbfa1ae3c is pointing into the stack for thread: 0x0b6cb400
+EDI=0x0b8fb230 is an unknown value
+
+
+Stack: [0xbf9ce000,0xbfa1e000],  sp=0xbfa1ad7c,  free space=307k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [orange.so+0x41b86d]  TExampleTable::operator[](int const&)+0xd
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0xaf802800 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=8939, stack(0xaf7af000,0xaf800000)]
+  0xaf800800 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=8938, stack(0xaf923000,0xaf9a4000)]
+  0x0b72a000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=8937, stack(0xaf9a4000,0xaf9f5000)]
+  0x0b727800 JavaThread "Finalizer" daemon [_thread_blocked, id=8936, stack(0xaf9f5000,0xafa46000)]
+  0x0b723000 JavaThread "Reference Handler" daemon [_thread_blocked, id=8935, stack(0xafa46000,0xafa97000)]
+=>0x0b6cb400 JavaThread "main" [_thread_in_native, id=8922, stack(0xbf9ce000,0xbfa1e000)]
+
+Other Threads:
+  0x0b722000 VMThread [stack: 0xafa97000,0xafb18000] [id=8934]
+  0xaf805000 WatcherThread [stack: 0xaf72e000,0xaf7af000] [id=8940]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 4928K, used 741K [0x6ecc0000, 0x6f210000, 0x79760000)
+  eden space 4416K,   7% used [0x6ecc0000, 0x6ed0fa68, 0x6f110000)
+  from space 512K,  82% used [0x6f110000, 0x6f179ae8, 0x6f190000)
+  to   space 512K,   0% used [0x6f190000, 0x6f190000, 0x6f210000)
+ tenured generation   total 10944K, used 3208K [0x79760000, 0x7a210000, 0x8ecc0000)
+   the space 10944K,  29% used [0x79760000, 0x79a82348, 0x79a82400, 0x7a210000)
+ compacting perm gen  total 12288K, used 3748K [0x8ecc0000, 0x8f8c0000, 0x92cc0000)
+   the space 12288K,  30% used [0x8ecc0000, 0x8f069310, 0x8f069400, 0x8f8c0000)
+    ro space 10240K,  73% used [0x92cc0000, 0x93420300, 0x93420400, 0x936c0000)
+    rw space 12288K,  60% used [0x936c0000, 0x93e09bd8, 0x93e09c00, 0x942c0000)
+
+Code Cache  [0xaff21000, 0xb0039000, 0xb1f21000)
+ total_blobs=553 nmethods=412 adapters=77 free_code_cache=32428992 largest_free_block=64
+
+Dynamic libraries:
+08048000-0826b000 r-xp 00000000 08:06 15745418   /home/george/virtualenvfyp/pythia/bin/python
+0826b000-0826c000 r--p 00222000 08:06 15745418   /home/george/virtualenvfyp/pythia/bin/python
+0826c000-082c0000 rw-p 00223000 08:06 15745418   /home/george/virtualenvfyp/pythia/bin/python
+082c0000-082cd000 rw-p 00000000 00:00 0 
+096f0000-0bc48000 rw-p 00000000 00:00 0          [heap]
+6ecc0000-6f210000 rw-p 00000000 00:00 0 
+6f210000-79760000 rw-p 00000000 00:00 0 
+79760000-7a210000 rw-p 00000000 00:00 0 
+7a210000-8ecc0000 rw-p 00000000 00:00 0 
+8ecc0000-8f8c0000 rw-p 00000000 00:00 0 
+8f8c0000-92cc0000 rw-p 00000000 00:00 0 
+92cc0000-93421000 r--s 00001000 08:06 8127550    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/client/classes.jsa
+93421000-936c0000 rw-p 00000000 00:00 0 
+936c0000-93e0a000 rw-p 00762000 08:06 8127550    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/client/classes.jsa
+93e0a000-942c0000 rw-p 00000000 00:00 0 
+942c0000-943bc000 rw-p 00eac000 08:06 8127550    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/client/classes.jsa
+943bc000-946c0000 rw-p 00000000 00:00 0 
+946c0000-946c8000 r-xs 00fa8000 08:06 8127550    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/client/classes.jsa
+946c8000-94ac0000 rw-p 00000000 00:00 0 
+ae5f4000-ae5f5000 ---p 00000000 00:00 0 
+ae5f5000-aedf5000 rw-p 00000000 00:00 0 
+aedf5000-aedf6000 ---p 00000000 00:00 0 
+aedf6000-af5f6000 rw-p 00000000 00:00 0 
+af5f6000-af5fe000 r-xp 00000000 08:06 8127449    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libnio.so
+af5fe000-af5ff000 r--p 00007000 08:06 8127449    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libnio.so
+af5ff000-af600000 rw-p 00008000 08:06 8127449    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libnio.so
+af600000-af6bf000 rw-p 00000000 00:00 0 
+af6bf000-af700000 ---p 00000000 00:00 0 
+af706000-af71b000 r-xp 00000000 08:06 8128330    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libnet.so
+af71b000-af71c000 r--p 00014000 08:06 8128330    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libnet.so
+af71c000-af71d000 rw-p 00015000 08:06 8128330    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libnet.so
+af71d000-af71f000 r--s 0000e000 08:06 15750959   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/lucene-3.5.0-py2.7-linux-i686.egg/lucene/lucene-spellchecker-3.5.0.jar
+af71f000-af727000 r--s 00040000 08:06 15751234   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/lucene-3.5.0-py2.7-linux-i686.egg/lucene/lucene-facet-3.5.0.jar
+af727000-af72e000 r--s 000fb000 08:06 7221508    /usr/lib/jvm/java-6-openjdk/jre/lib/resources.jar
+af72e000-af72f000 ---p 00000000 00:00 0 
+af72f000-af7af000 rw-p 00000000 00:00 0 
+af7af000-af7b2000 ---p 00000000 00:00 0 
+af7b2000-af800000 rw-p 00000000 00:00 0 
+af800000-af900000 rw-p 00000000 00:00 0 
+af901000-af90b000 r--s 000cc000 08:06 15751102   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/lucene-3.5.0-py2.7-linux-i686.egg/lucene/lucene-analyzers-3.5.0.jar
+af90b000-af923000 r--s 0014e000 08:06 15751132   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/lucene-3.5.0-py2.7-linux-i686.egg/lucene/lucene-core-3.5.0.jar
+af923000-af926000 ---p 00000000 00:00 0 
+af926000-af9a4000 rw-p 00000000 00:00 0 
+af9a4000-af9a7000 ---p 00000000 00:00 0 
+af9a7000-af9f5000 rw-p 00000000 00:00 0 
+af9f5000-af9f8000 ---p 00000000 00:00 0 
+af9f8000-afa46000 rw-p 00000000 00:00 0 
+afa46000-afa49000 ---p 00000000 00:00 0 
+afa49000-afa97000 rw-p 00000000 00:00 0 
+afa97000-afa98000 ---p 00000000 00:00 0 
+afa98000-afb18000 rw-p 00000000 00:00 0 
+afb18000-afca9000 r--s 037b8000 08:06 7219187    /usr/lib/jvm/java-6-openjdk/jre/lib/rt.jar
+afca9000-afcb0000 rw-p 00000000 00:00 0 
+afcb0000-afcca000 rw-p 00000000 00:00 0 
+afcca000-afcd0000 rw-p 00000000 00:00 0 
+afcd0000-afd75000 rw-p 00000000 00:00 0 
+afd75000-afd78000 rw-p 00000000 00:00 0 
+afd78000-afdca000 rw-p 00000000 00:00 0 
+afdca000-afdd0000 rw-p 00000000 00:00 0 
+afdd0000-afe75000 rw-p 00000000 00:00 0 
+afe75000-afe7b000 rw-p 00000000 00:00 0 
+afe7b000-afe95000 rw-p 00000000 00:00 0 
+afe95000-afea6000 rw-p 00000000 00:00 0 
+afea6000-aff21000 rw-p 00000000 00:00 0 
+aff21000-b0039000 rwxp 00000000 00:00 0 
+b0039000-b1f21000 rw-p 00000000 00:00 0 
+b1f21000-b1f2b000 r-xp 00000000 08:06 8130840    /lib/i386-linux-gnu/libnss_nis-2.13.so
+b1f2b000-b1f2c000 r--p 00009000 08:06 8130840    /lib/i386-linux-gnu/libnss_nis-2.13.so
+b1f2c000-b1f2d000 rw-p 0000a000 08:06 8130840    /lib/i386-linux-gnu/libnss_nis-2.13.so
+b1f2d000-b1f42000 r-xp 00000000 08:06 8130426    /lib/i386-linux-gnu/libnsl-2.13.so
+b1f42000-b1f43000 r--p 00015000 08:06 8130426    /lib/i386-linux-gnu/libnsl-2.13.so
+b1f43000-b1f44000 rw-p 00016000 08:06 8130426    /lib/i386-linux-gnu/libnsl-2.13.so
+b1f44000-b1f46000 rw-p 00000000 00:00 0 
+b1f49000-b1f4b000 r--s 0000f000 08:06 7221501    /usr/lib/jvm/java-6-openjdk/jre/lib/ext/pulse-java.jar
+b1f4b000-b1f53000 r--s 00066000 08:06 7211937    /usr/share/java/gnome-java-bridge.jar
+b1f53000-b1f60000 rw-p 00000000 00:00 0 
+b1f60000-b1f67000 r-xp 00000000 08:06 8127450    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libzip.so
+b1f67000-b1f68000 r--p 00006000 08:06 8127450    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libzip.so
+b1f68000-b1f69000 rw-p 00007000 08:06 8127450    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libzip.so
+b1f69000-b1f8f000 r-xp 00000000 08:06 8127439    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libjava.so
+b1f8f000-b1f90000 r--p 00025000 08:06 8127439    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libjava.so
+b1f90000-b1f92000 rw-p 00026000 08:06 8127439    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libjava.so
+b1f92000-b1ffb000 r-xp 00000000 08:06 15750656   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/JCC-2.12-py2.7-linux-i686.egg/jcc/_jcc.so
+b1ffb000-b1ffc000 r--p 00069000 08:06 15750656   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/JCC-2.12-py2.7-linux-i686.egg/jcc/_jcc.so
+b1ffc000-b1fff000 rw-p 0006a000 08:06 15750656   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/JCC-2.12-py2.7-linux-i686.egg/jcc/_jcc.so
+b1fff000-b2000000 rw-p 00000000 00:00 0 
+b2000000-b2262000 r-xp 00000000 08:06 6818962    /usr/lib/libpython2.7.so.1.0
+b2262000-b2263000 r--p 00261000 08:06 6818962    /usr/lib/libpython2.7.so.1.0
+b2263000-b22b8000 rw-p 00262000 08:06 6818962    /usr/lib/libpython2.7.so.1.0
+b22b8000-b22c4000 rw-p 00000000 00:00 0 
+b22c7000-b22cf000 rw-s 00000000 08:06 9184159    /tmp/hsperfdata_george/8922
+b22cf000-b22d7000 r-xp 00000000 08:06 8130831    /lib/i386-linux-gnu/libnss_compat-2.13.so
+b22d7000-b22d8000 r--p 00007000 08:06 8130831    /lib/i386-linux-gnu/libnss_compat-2.13.so
+b22d8000-b22d9000 rw-p 00008000 08:06 8130831    /lib/i386-linux-gnu/libnss_compat-2.13.so
+b22d9000-b22e4000 r-xp 00000000 08:06 8128187    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libverify.so
+b22e4000-b22e5000 ---p 0000b000 08:06 8128187    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libverify.so
+b22e5000-b22e6000 r--p 0000b000 08:06 8128187    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libverify.so
+b22e6000-b22e7000 rw-p 0000c000 08:06 8128187    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libverify.so
+b22e7000-b27fa000 r-xp 00000000 08:06 8127484    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/client/libjvm.so
+b27fa000-b2811000 r--p 00512000 08:06 8127484    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/client/libjvm.so
+b2811000-b281e000 rw-p 00529000 08:06 8127484    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/client/libjvm.so
+b281e000-b2c36000 rw-p 00000000 00:00 0 
+b2c36000-b38f3000 r-xp 00000000 08:06 15751008   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/lucene-3.5.0-py2.7-linux-i686.egg/lucene/_lucene.so
+b38f3000-b3904000 r--p 00cbd000 08:06 15751008   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/lucene-3.5.0-py2.7-linux-i686.egg/lucene/_lucene.so
+b3904000-b3973000 rw-p 00cce000 08:06 15751008   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/lucene-3.5.0-py2.7-linux-i686.egg/lucene/_lucene.so
+b3973000-b3977000 rw-p 00000000 00:00 0 
+b3977000-b39db000 r-xp 00000000 08:06 15753764   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/matplotlib-1.1.0-py2.7-linux-i686.egg/matplotlib/backends/_backend_agg.so
+b39db000-b39dc000 r--p 00064000 08:06 15753764   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/matplotlib-1.1.0-py2.7-linux-i686.egg/matplotlib/backends/_backend_agg.so
+b39dc000-b39dd000 rw-p 00065000 08:06 15753764   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/matplotlib-1.1.0-py2.7-linux-i686.egg/matplotlib/backends/_backend_agg.so
+b39dd000-b39fb000 r-xp 00000000 08:06 6820905    /usr/lib/libyaml-0.so.2.0.2
+b39fb000-b39fc000 r--p 0001d000 08:06 6820905    /usr/lib/libyaml-0.so.2.0.2
+b39fc000-b39fd000 rw-p 0001e000 08:06 6820905    /usr/lib/libyaml-0.so.2.0.2
+b39ff000-b3a1e000 r-xp 00000000 08:06 15753731   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/matplotlib-1.1.0-py2.7-linux-i686.egg/matplotlib/backends/_tkagg.so
+b3a1e000-b3a1f000 r--p 0001e000 08:06 15753731   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/matplotlib-1.1.0-py2.7-linux-i686.egg/matplotlib/backends/_tkagg.so
+b3a1f000-b3a20000 rw-p 0001f000 08:06 15753731   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/matplotlib-1.1.0-py2.7-linux-i686.egg/matplotlib/backends/_tkagg.so
+b3a20000-b3a44000 r-xp 00000000 08:06 15747453   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/_yaml.so
+b3a44000-b3a45000 r--p 00023000 08:06 15747453   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/_yaml.so
+b3a45000-b3a48000 rw-p 00024000 08:06 15747453   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/_yaml.so
+b3a48000-b3a49000 ---p 00000000 00:00 0 
+b3a49000-b4249000 rw-p 00000000 00:00 0 
+b4249000-b424e000 r-xp 00000000 08:06 6818166    /usr/lib/i386-linux-gnu/libXdmcp.so.6.0.0
+b424e000-b424f000 r--p 00004000 08:06 6818166    /usr/lib/i386-linux-gnu/libXdmcp.so.6.0.0
+b424f000-b4250000 rw-p 00005000 08:06 6818166    /usr/lib/i386-linux-gnu/libXdmcp.so.6.0.0
+b4250000-b4259000 r-xp 00000000 08:06 6816888    /usr/lib/i386-linux-gnu/libXrender.so.1.3.0
+b4259000-b425a000 r--p 00008000 08:06 6816888    /usr/lib/i386-linux-gnu/libXrender.so.1.3.0
+b425a000-b425b000 rw-p 00009000 08:06 6816888    /usr/lib/i386-linux-gnu/libXrender.so.1.3.0
+b425b000-b426c000 r-xp 00000000 08:06 6818951    /usr/lib/i386-linux-gnu/libXext.so.6.4.0
+b426c000-b426d000 r--p 00010000 08:06 6818951    /usr/lib/i386-linux-gnu/libXext.so.6.4.0
+b426d000-b426e000 rw-p 00011000 08:06 6818951    /usr/lib/i386-linux-gnu/libXext.so.6.4.0
+b426e000-b428b000 r-xp 00000000 08:06 6818170    /usr/lib/i386-linux-gnu/libxcb.so.1.1.0
+b428b000-b428c000 r--p 0001c000 08:06 6818170    /usr/lib/i386-linux-gnu/libxcb.so.1.1.0
+b428c000-b428d000 rw-p 0001d000 08:06 6818170    /usr/lib/i386-linux-gnu/libxcb.so.1.1.0
+b428d000-b42bf000 r-xp 00000000 08:06 6815835    /usr/lib/i386-linux-gnu/libfontconfig.so.1.4.4
+b42bf000-b42c0000 ---p 00032000 08:06 6815835    /usr/lib/i386-linux-gnu/libfontconfig.so.1.4.4
+b42c0000-b42c1000 r--p 00032000 08:06 6815835    /usr/lib/i386-linux-gnu/libfontconfig.so.1.4.4
+b42c1000-b42c2000 rw-p 00033000 08:06 6815835    /usr/lib/i386-linux-gnu/libfontconfig.so.1.4.4
+b42c2000-b43f3000 r-xp 00000000 08:06 6818185    /usr/lib/i386-linux-gnu/libX11.so.6.3.0
+b43f3000-b43f4000 ---p 00131000 08:06 6818185    /usr/lib/i386-linux-gnu/libX11.so.6.3.0
+b43f4000-b43f5000 r--p 00131000 08:06 6818185    /usr/lib/i386-linux-gnu/libX11.so.6.3.0
+b43f5000-b43f7000 rw-p 00132000 08:06 6818185    /usr/lib/i386-linux-gnu/libX11.so.6.3.0
+b43f7000-b43f8000 rw-p 00000000 00:00 0 
+b43f8000-b450b000 r-xp 00000000 08:06 6823336    /usr/lib/libtcl8.5.so.0
+b450b000-b450d000 r--p 00113000 08:06 6823336    /usr/lib/libtcl8.5.so.0
+b450d000-b4511000 rw-p 00115000 08:06 6823336    /usr/lib/libtcl8.5.so.0
+b4511000-b4512000 rw-p 00000000 00:00 0 
+b4512000-b4633000 r-xp 00000000 08:06 6823338    /usr/lib/libtk8.5.so.0
+b4633000-b4639000 r--p 00121000 08:06 6823338    /usr/lib/libtk8.5.so.0
+b4639000-b4644000 rw-p 00127000 08:06 6823338    /usr/lib/libtk8.5.so.0
+b4644000-b471e000 r-xp 00000000 08:06 6824966    /usr/lib/libBLT.2.4.so.8.5
+b471e000-b471f000 r--p 000d9000 08:06 6824966    /usr/lib/libBLT.2.4.so.8.5
+b471f000-b4730000 rw-p 000da000 08:06 6824966    /usr/lib/libBLT.2.4.so.8.5
+b4730000-b4731000 rw-p 00000000 00:00 0 
+b4731000-b4733000 r--s 0000e000 08:06 15751030   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/lucene-3.5.0-py2.7-linux-i686.egg/lucene/lucene-grouping-3.5.0.jar
+b4733000-b4736000 r--s 00013000 08:06 15751056   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/lucene-3.5.0-py2.7-linux-i686.egg/lucene/lucene-highlighter-3.5.0.jar
+b4736000-b473d000 r-xp 00000000 08:06 8130949    /lib/i386-linux-gnu/librt-2.13.so
+b473d000-b473e000 r--p 00006000 08:06 8130949    /lib/i386-linux-gnu/librt-2.13.so
+b473e000-b473f000 rw-p 00007000 08:06 8130949    /lib/i386-linux-gnu/librt-2.13.so
+b473f000-b474b000 r-xp 00000000 08:06 15750573   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/JCC-2.12-py2.7-linux-i686.egg/libjcc.so
+b474b000-b474c000 r--p 0000b000 08:06 15750573   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/JCC-2.12-py2.7-linux-i686.egg/libjcc.so
+b474c000-b474d000 rw-p 0000c000 08:06 15750573   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/JCC-2.12-py2.7-linux-i686.egg/libjcc.so
+b474d000-b4754000 r--s 00000000 08:06 6817283    /usr/lib/i386-linux-gnu/gconv/gconv-modules.cache
+b4754000-b4789000 r-xp 00000000 08:06 15752377   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/matplotlib-1.1.0-py2.7-linux-i686.egg/matplotlib/_tri.so
+b4789000-b478a000 r--p 00035000 08:06 15752377   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/matplotlib-1.1.0-py2.7-linux-i686.egg/matplotlib/_tri.so
+b478a000-b478b000 rw-p 00036000 08:06 15752377   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/matplotlib-1.1.0-py2.7-linux-i686.egg/matplotlib/_tri.so
+b478b000-b47cc000 r-xp 00000000 08:06 15752337   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/matplotlib-1.1.0-py2.7-linux-i686.egg/matplotlib/_image.so
+b47cc000-b47cd000 r--p 00041000 08:06 15752337   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/matplotlib-1.1.0-py2.7-linux-i686.egg/matplotlib/_image.so
+b47cd000-b47cf000 rw-p 00042000 08:06 15752337   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/matplotlib-1.1.0-py2.7-linux-i686.egg/matplotlib/_image.so
+b47cf000-b47f7000 r-xp 00000000 08:06 8130847    /lib/i386-linux-gnu/libpng12.so.0.46.0
+b47f7000-b47f8000 r--p 00027000 08:06 8130847    /lib/i386-linux-gnu/libpng12.so.0.46.0
+b47f8000-b47f9000 rw-p 00028000 08:06 8130847    /lib/i386-linux-gnu/libpng12.so.0.46.0
+b47f9000-b480d000 r-xp 00000000 08:06 6822260    /usr/lib/i386-linux-gnu/libXft.so.2.2.0
+b480d000-b480e000 r--p 00013000 08:06 6822260    /usr/lib/i386-linux-gnu/libXft.so.2.2.0
+b480e000-b480f000 rw-p 00014000 08:06 6822260    /usr/lib/i386-linux-gnu/libXft.so.2.2.0
+b480f000-b481a000 r-xp 00000000 08:06 7084198    /usr/lib/python2.7/lib-dynload/_tkinter.so
+b481a000-b481b000 r--p 0000a000 08:06 7084198    /usr/lib/python2.7/lib-dynload/_tkinter.so
+b481b000-b481c000 rw-p 0000b000 08:06 7084198    /usr/lib/python2.7/lib-dynload/_tkinter.so
+b481c000-b4840000 r-xp 00000000 08:06 15752387   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/matplotlib-1.1.0-py2.7-linux-i686.egg/matplotlib/_png.so
+b4840000-b4841000 r--p 00024000 08:06 15752387   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/matplotlib-1.1.0-py2.7-linux-i686.egg/matplotlib/_png.so
+b4841000-b4842000 rw-p 00025000 08:06 15752387   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/matplotlib-1.1.0-py2.7-linux-i686.egg/matplotlib/_png.so
+b4842000-b48d4000 r-xp 00000000 08:06 6840307    /usr/lib/i386-linux-gnu/libfreetype.so.6.6.2
+b48d4000-b48d8000 r--p 00091000 08:06 6840307    /usr/lib/i386-linux-gnu/libfreetype.so.6.6.2
+b48d8000-b48d9000 rw-p 00095000 08:06 6840307    /usr/lib/i386-linux-gnu/libfreetype.so.6.6.2
+b48da000-b48dd000 r--s 00077000 08:06 7221486    /usr/lib/jvm/java-6-openjdk/jre/lib/ext/localedata.jar
+b48dd000-b48eb000 r-xp 00000000 08:06 15752341   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/matplotlib-1.1.0-py2.7-linux-i686.egg/matplotlib/_delaunay.so
+b48eb000-b48ec000 r--p 0000d000 08:06 15752341   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/matplotlib-1.1.0-py2.7-linux-i686.egg/matplotlib/_delaunay.so
+b48ec000-b48ed000 rw-p 0000e000 08:06 15752341   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/matplotlib-1.1.0-py2.7-linux-i686.egg/matplotlib/_delaunay.so
+b48ed000-b48f2000 r-xp 00000000 08:06 15752274   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/matplotlib-1.1.0-py2.7-linux-i686.egg/matplotlib/_cntr.so
+b48f2000-b48f3000 r--p 00004000 08:06 15752274   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/matplotlib-1.1.0-py2.7-linux-i686.egg/matplotlib/_cntr.so
+b48f3000-b48f4000 rw-p 00005000 08:06 15752274   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/matplotlib-1.1.0-py2.7-linux-i686.egg/matplotlib/_cntr.so
+b48f4000-b48f9000 r-xp 00000000 08:06 7083535    /usr/lib/python2.7/lib-dynload/_csv.so
+b48f9000-b48fa000 r--p 00004000 08:06 7083535    /usr/lib/python2.7/lib-dynload/_csv.so
+b48fa000-b48fc000 rw-p 00005000 08:06 7083535    /usr/lib/python2.7/lib-dynload/_csv.so
+b48fc000-b493c000 r-xp 00000000 08:06 15752328   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/matplotlib-1.1.0-py2.7-linux-i686.egg/matplotlib/ft2font.so
+b493c000-b493e000 r--p 0003f000 08:06 15752328   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/matplotlib-1.1.0-py2.7-linux-i686.egg/matplotlib/ft2font.so
+b493e000-b4940000 rw-p 00041000 08:06 15752328   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/matplotlib-1.1.0-py2.7-linux-i686.egg/matplotlib/ft2font.so
+b4940000-b4980000 r-xp 00000000 08:06 15752288   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/matplotlib-1.1.0-py2.7-linux-i686.egg/matplotlib/_path.so
+b4980000-b4981000 ---p 00040000 08:06 15752288   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/matplotlib-1.1.0-py2.7-linux-i686.egg/matplotlib/_path.so
+b4981000-b4982000 r--p 00040000 08:06 15752288   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/matplotlib-1.1.0-py2.7-linux-i686.egg/matplotlib/_path.so
+b4982000-b4983000 rw-p 00041000 08:06 15752288   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/matplotlib-1.1.0-py2.7-linux-i686.egg/matplotlib/_path.so
+b4983000-b4992000 r-xp 00000000 08:06 530202     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/stats/mvn.so
+b4992000-b4993000 r--p 0000e000 08:06 530202     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/stats/mvn.so
+b4993000-b4994000 rw-p 0000f000 08:06 530202     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/stats/mvn.so
+b4994000-b4a8b000 rw-p 00000000 00:00 0 
+b4a8b000-b4a95000 r-xp 00000000 08:06 530193     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/stats/statlib.so
+b4a95000-b4a96000 r--p 00009000 08:06 530193     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/stats/statlib.so
+b4a96000-b4a97000 rw-p 0000a000 08:06 530193     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/stats/statlib.so
+b4a97000-b4aa5000 r-xp 00000000 08:06 530255     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/stats/vonmises_cython.so
+b4aa5000-b4aa6000 r--p 0000d000 08:06 530255     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/stats/vonmises_cython.so
+b4aa6000-b4aa7000 rw-p 0000e000 08:06 530255     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/stats/vonmises_cython.so
+b4aa7000-b4abb000 r-xp 00000000 08:06 399620     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/integrate/_dop.so
+b4abb000-b4abc000 r--p 00013000 08:06 399620     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/integrate/_dop.so
+b4abc000-b4abd000 rw-p 00014000 08:06 399620     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/integrate/_dop.so
+b4abd000-b4abe000 rw-p 00000000 00:00 0 
+b4abe000-b4aee000 r-xp 00000000 08:06 399623     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/integrate/vode.so
+b4aee000-b4aef000 r--p 0002f000 08:06 399623     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/integrate/vode.so
+b4aef000-b4af0000 rw-p 00030000 08:06 399623     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/integrate/vode.so
+b4af0000-b4af1000 rw-p 00000000 00:00 0 
+b4af1000-b4b0a000 r-xp 00000000 08:06 399627     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/integrate/_quadpack.so
+b4b0a000-b4b0b000 r--p 00018000 08:06 399627     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/integrate/_quadpack.so
+b4b0b000-b4b0c000 rw-p 00019000 08:06 399627     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/integrate/_quadpack.so
+b4b0c000-b4b31000 r-xp 00000000 08:06 399621     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/integrate/_odepack.so
+b4b31000-b4b32000 r--p 00024000 08:06 399621     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/integrate/_odepack.so
+b4b32000-b4b33000 rw-p 00025000 08:06 399621     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/integrate/_odepack.so
+b4b33000-b4b3c000 r-xp 00000000 08:06 399684     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/optimize/_nnls.so
+b4b3c000-b4b3d000 r--p 00008000 08:06 399684     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/optimize/_nnls.so
+b4b3d000-b4b3e000 rw-p 00009000 08:06 399684     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/optimize/_nnls.so
+b4b3e000-b4b53000 r-xp 00000000 08:06 399685     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/optimize/_slsqp.so
+b4b53000-b4b54000 r--p 00014000 08:06 399685     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/optimize/_slsqp.so
+b4b54000-b4b55000 rw-p 00015000 08:06 399685     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/optimize/_slsqp.so
+b4b55000-b4bf9000 r-xp 00000000 08:06 530581     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/sparse/linalg/eigen/arpack/_arpack.so
+b4bf9000-b4bfa000 r--p 000a3000 08:06 530581     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/sparse/linalg/eigen/arpack/_arpack.so
+b4bfa000-b4c02000 rw-p 000a4000 08:06 530581     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/sparse/linalg/eigen/arpack/_arpack.so
+b4c02000-b4c5d000 r-xp 00000000 08:06 530599     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/sparse/linalg/dsolve/_superlu.so
+b4c5d000-b4c5e000 r--p 0005a000 08:06 530599     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/sparse/linalg/dsolve/_superlu.so
+b4c5e000-b4c60000 rw-p 0005b000 08:06 530599     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/sparse/linalg/dsolve/_superlu.so
+b4c60000-b4cad000 r-xp 00000000 08:06 530591     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/sparse/linalg/isolve/_iterative.so
+b4cad000-b4cae000 r--p 0004c000 08:06 530591     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/sparse/linalg/isolve/_iterative.so
+b4cae000-b4cb5000 rw-p 0004d000 08:06 530591     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/sparse/linalg/isolve/_iterative.so
+b4cb5000-b4cbb000 r-xp 00000000 08:06 530621     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/sparse/sparsetools/_csgraph.so
+b4cbb000-b4cbc000 r--p 00005000 08:06 530621     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/sparse/sparsetools/_csgraph.so
+b4cbc000-b4cbd000 rw-p 00006000 08:06 530621     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/sparse/sparsetools/_csgraph.so
+b4cbd000-b4db1000 r-xp 00000000 08:06 530620     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/sparse/sparsetools/_bsr.so
+b4db1000-b4db2000 r--p 000f3000 08:06 530620     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/sparse/sparsetools/_bsr.so
+b4db2000-b4db3000 rw-p 000f4000 08:06 530620     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/sparse/sparsetools/_bsr.so
+b4db3000-b4dd7000 r-xp 00000000 08:06 530619     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/sparse/sparsetools/_coo.so
+b4dd7000-b4dd8000 r--p 00023000 08:06 530619     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/sparse/sparsetools/_coo.so
+b4dd8000-b4dd9000 rw-p 00024000 08:06 530619     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/sparse/sparsetools/_coo.so
+b4dd9000-b4e5f000 r-xp 00000000 08:06 530622     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/sparse/sparsetools/_csc.so
+b4e5f000-b4e60000 r--p 00085000 08:06 530622     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/sparse/sparsetools/_csc.so
+b4e60000-b4e61000 rw-p 00086000 08:06 530622     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/sparse/sparsetools/_csc.so
+b4e61000-b4f36000 r-xp 00000000 08:06 530618     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/sparse/sparsetools/_csr.so
+b4f36000-b4f37000 r--p 000d4000 08:06 530618     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/sparse/sparsetools/_csr.so
+b4f37000-b4f38000 rw-p 000d5000 08:06 530618     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/sparse/sparsetools/_csr.so
+b4f38000-b4f50000 r-xp 00000000 08:06 399676     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/optimize/_cobyla.so
+b4f50000-b4f51000 r--p 00017000 08:06 399676     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/optimize/_cobyla.so
+b4f51000-b4f52000 rw-p 00018000 08:06 399676     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/optimize/_cobyla.so
+b4f52000-b50d3000 rw-p 00000000 00:00 0 
+b50d3000-b510a000 r-xp 00000000 08:06 6822035    /usr/lib/i386-linux-gnu/libjpeg.so.8.3.0
+b510a000-b510b000 r--p 00036000 08:06 6822035    /usr/lib/i386-linux-gnu/libjpeg.so.8.3.0
+b510b000-b510c000 rw-p 00037000 08:06 6822035    /usr/lib/i386-linux-gnu/libjpeg.so.8.3.0
+b510c000-b510e000 r--s 0000a000 08:06 15750990   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/lucene-3.5.0-py2.7-linux-i686.egg/lucene/lucene-queries-3.5.0.jar
+b510e000-b511c000 r-xp 00000000 08:06 530624     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/sparse/sparsetools/_dia.so
+b511c000-b511d000 r--p 0000d000 08:06 530624     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/sparse/sparsetools/_dia.so
+b511d000-b511e000 rw-p 0000e000 08:06 530624     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/sparse/sparsetools/_dia.so
+b511e000-b5125000 r-xp 00000000 08:06 399693     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/optimize/moduleTNC.so
+b5125000-b5126000 r--p 00006000 08:06 399693     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/optimize/moduleTNC.so
+b5126000-b5127000 rw-p 00007000 08:06 399693     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/optimize/moduleTNC.so
+b5127000-b512d000 r-xp 00000000 08:06 530189     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/stats/futil.so
+b512d000-b512e000 r--p 00005000 08:06 530189     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/stats/futil.so
+b512e000-b512f000 rw-p 00006000 08:06 530189     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/stats/futil.so
+b512f000-b516b000 r-xp 00000000 08:06 1837640    /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/PIL/_imaging.so
+b516b000-b516d000 r--p 0003b000 08:06 1837640    /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/PIL/_imaging.so
+b516d000-b516f000 rw-p 0003d000 08:06 1837640    /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/PIL/_imaging.so
+b516f000-b5194000 r-xp 00000000 08:06 399570     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/linalg/cblas.so
+b5194000-b5195000 r--p 00024000 08:06 399570     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/linalg/cblas.so
+b5195000-b5197000 rw-p 00025000 08:06 399570     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/linalg/cblas.so
+b5197000-b51bf000 r-xp 00000000 08:06 399577     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/linalg/calc_lwork.so
+b51bf000-b51c0000 r--p 00027000 08:06 399577     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/linalg/calc_lwork.so
+b51c0000-b51c2000 rw-p 00028000 08:06 399577     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/linalg/calc_lwork.so
+b51c2000-b51ef000 r-xp 00000000 08:06 399584     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/linalg/clapack.so
+b51ef000-b51f0000 r--p 0002c000 08:06 399584     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/linalg/clapack.so
+b51f0000-b51f5000 rw-p 0002d000 08:06 399584     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/linalg/clapack.so
+b51f5000-b5270000 r-xp 00000000 08:06 399580     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/linalg/flapack.so
+b5270000-b5271000 r--p 0007a000 08:06 399580     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/linalg/flapack.so
+b5271000-b528c000 rw-p 0007b000 08:06 399580     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/linalg/flapack.so
+b528c000-b52b6000 r-xp 00000000 08:06 399567     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/linalg/_flinalg.so
+b52b6000-b52b7000 r--p 00029000 08:06 399567     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/linalg/_flinalg.so
+b52b7000-b52b9000 rw-p 0002a000 08:06 399567     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/linalg/_flinalg.so
+b52b9000-b52f1000 r-xp 00000000 08:06 399566     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/linalg/fblas.so
+b52f1000-b52f2000 r--p 00037000 08:06 399566     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/linalg/fblas.so
+b52f2000-b52fe000 rw-p 00038000 08:06 399566     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/linalg/fblas.so
+b52fe000-b5304000 r-xp 00000000 08:06 530642     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/special/_logit.so
+b5304000-b5305000 r--p 00005000 08:06 530642     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/special/_logit.so
+b5305000-b5306000 rw-p 00006000 08:06 530642     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/special/_logit.so
+b5306000-b530b000 r-xp 00000000 08:06 530654     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/special/lambertw.so
+b530b000-b530c000 r--p 00005000 08:06 530654     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/special/lambertw.so
+b530c000-b530f000 rw-p 00006000 08:06 530654     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/special/lambertw.so
+b530f000-b53a8000 r-xp 00000000 08:06 530652     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/special/specfun.so
+b53a8000-b53a9000 r--p 00099000 08:06 530652     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/special/specfun.so
+b53a9000-b53ae000 rw-p 0009a000 08:06 530652     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/special/specfun.so
+b53ae000-b549d000 r-xp 00000000 08:06 530648     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/special/_cephes.so
+b549d000-b549e000 r--p 000ee000 08:06 530648     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/special/_cephes.so
+b549e000-b54a2000 rw-p 000ef000 08:06 530648     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/special/_cephes.so
+b54a2000-b54f0000 r-xp 00000000 08:06 1840546    /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/orange/statc.so
+b54f0000-b54f1000 r--p 0004d000 08:06 1840546    /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/orange/statc.so
+b54f1000-b54f2000 rw-p 0004e000 08:06 1840546    /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/orange/statc.so
+b54f2000-b5518000 r-xp 00000000 08:06 8127320    /lib/i386-linux-gnu/libexpat.so.1.5.2
+b5518000-b5519000 ---p 00026000 08:06 8127320    /lib/i386-linux-gnu/libexpat.so.1.5.2
+b5519000-b551b000 r--p 00026000 08:06 8127320    /lib/i386-linux-gnu/libexpat.so.1.5.2
+b551b000-b551c000 rw-p 00028000 08:06 8127320    /lib/i386-linux-gnu/libexpat.so.1.5.2
+b551c000-b5536000 r-xp 00000000 08:06 7083513    /usr/lib/python2.7/lib-dynload/_io.so
+b5536000-b5537000 r--p 00019000 08:06 7083513    /usr/lib/python2.7/lib-dynload/_io.so
+b5537000-b553f000 rw-p 0001a000 08:06 7083513    /usr/lib/python2.7/lib-dynload/_io.so
+b553f000-b55de000 r-xp 00000000 08:06 1840526    /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/orange/orangeom.so
+b55de000-b55df000 r--p 0009e000 08:06 1840526    /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/orange/orangeom.so
+b55df000-b55e1000 rw-p 0009f000 08:06 1840526    /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/orange/orangeom.so
+b55e1000-b55e4000 rw-p 00000000 00:00 0 
+b55e4000-b5621000 r-xp 00000000 08:06 15866688   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/numpy/random/mtrand.so
+b5621000-b5622000 r--p 0003c000 08:06 15866688   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/numpy/random/mtrand.so
+b5622000-b5655000 rw-p 0003d000 08:06 15866688   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/numpy/random/mtrand.so
+b5655000-b56c7000 r-xp 00000000 08:06 6816798    /usr/lib/i386-linux-gnu/libquadmath.so.0.0.0
+b56c7000-b56c8000 r--p 00071000 08:06 6816798    /usr/lib/i386-linux-gnu/libquadmath.so.0.0.0
+b56c8000-b56c9000 rw-p 00072000 08:06 6816798    /usr/lib/i386-linux-gnu/libquadmath.so.0.0.0
+b56c9000-b57c8000 r-xp 00000000 08:06 6821316    /usr/lib/i386-linux-gnu/libgfortran.so.3.0.0
+b57c8000-b57c9000 r--p 000fe000 08:06 6821316    /usr/lib/i386-linux-gnu/libgfortran.so.3.0.0
+b57c9000-b57ca000 rw-p 000ff000 08:06 6821316    /usr/lib/i386-linux-gnu/libgfortran.so.3.0.0
+b57ca000-b57cb000 rw-p 00000000 00:00 0 
+b57cb000-b5a9c000 r-xp 00000000 08:06 6842662    /usr/lib/atlas-base/atlas/libblas.so.3gf.0
+b5a9c000-b5aa0000 rw-p 002d1000 08:06 6842662    /usr/lib/atlas-base/atlas/libblas.so.3gf.0
+b5aa0000-b6267000 r-xp 00000000 08:06 6842663    /usr/lib/atlas-base/atlas/liblapack.so.3gf.0
+b6267000-b626b000 rw-p 007c6000 08:06 6842663    /usr/lib/atlas-base/atlas/liblapack.so.3gf.0
+b626b000-b6378000 rw-p 00000000 00:00 0 
+b6379000-b637b000 r-xp 00000000 08:06 6818135    /usr/lib/i386-linux-gnu/libXau.so.6.0.0
+b637b000-b637c000 r--p 00001000 08:06 6818135    /usr/lib/i386-linux-gnu/libXau.so.6.0.0
+b637c000-b637d000 rw-p 00002000 08:06 6818135    /usr/lib/i386-linux-gnu/libXau.so.6.0.0
+b637d000-b638b000 r-xp 00000000 08:06 530643     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/special/orthogonal_eval.so
+b638b000-b638c000 r--p 0000d000 08:06 530643     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/special/orthogonal_eval.so
+b638c000-b638d000 rw-p 0000e000 08:06 530643     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/special/orthogonal_eval.so
+b638d000-b6398000 r-xp 00000000 08:06 7083567    /usr/lib/python2.7/lib-dynload/pyexpat.so
+b6398000-b6399000 r--p 0000a000 08:06 7083567    /usr/lib/python2.7/lib-dynload/pyexpat.so
+b6399000-b639a000 rw-p 0000b000 08:06 7083567    /usr/lib/python2.7/lib-dynload/pyexpat.so
+b639a000-b639b000 rw-p 00000000 00:00 0 
+b639b000-b63bd000 r-xp 00000000 08:06 15865810   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/numpy/linalg/lapack_lite.so
+b63bd000-b63be000 r--p 00022000 08:06 15865810   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/numpy/linalg/lapack_lite.so
+b63be000-b63bf000 rw-p 00023000 08:06 15865810   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/numpy/linalg/lapack_lite.so
+b63bf000-b63e9000 r-xp 00000000 08:06 15866619   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/numpy/core/scalarmath.so
+b63e9000-b63ea000 r--p 00029000 08:06 15866619   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/numpy/core/scalarmath.so
+b63ea000-b63eb000 rw-p 0002a000 08:06 15866619   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/numpy/core/scalarmath.so
+b63eb000-b6680000 r-xp 00000000 08:06 6842657    /usr/lib/atlas-base/libatlas.so.3gf.0
+b6680000-b6684000 rw-p 00295000 08:06 6842657    /usr/lib/atlas-base/libatlas.so.3gf.0
+b6684000-b6685000 r--s 00005000 08:06 15751019   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/lucene-3.5.0-py2.7-linux-i686.egg/lucene/lucene-join-3.5.0.jar
+b6685000-b6687000 r-xp 00000000 08:06 6817073    /usr/lib/i386-linux-gnu/libXss.so.1.0.0
+b6687000-b6688000 r--p 00001000 08:06 6817073    /usr/lib/i386-linux-gnu/libXss.so.1.0.0
+b6688000-b6689000 rw-p 00002000 08:06 6817073    /usr/lib/i386-linux-gnu/libXss.so.1.0.0
+b6689000-b6693000 r-xp 00000000 08:06 7083569    /usr/lib/python2.7/lib-dynload/_elementtree.so
+b6693000-b6694000 r--p 00009000 08:06 7083569    /usr/lib/python2.7/lib-dynload/_elementtree.so
+b6694000-b6695000 rw-p 0000a000 08:06 7083569    /usr/lib/python2.7/lib-dynload/_elementtree.so
+b6695000-b669e000 r-xp 00000000 08:06 15866577   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/numpy/fft/fftpack_lite.so
+b669e000-b669f000 r--p 00008000 08:06 15866577   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/numpy/fft/fftpack_lite.so
+b669f000-b66a0000 rw-p 00009000 08:06 15866577   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/numpy/fft/fftpack_lite.so
+b66a0000-b66a5000 r-xp 00000000 08:06 15866672   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/numpy/lib/_compiled_base.so
+b66a5000-b66a6000 r--p 00004000 08:06 15866672   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/numpy/lib/_compiled_base.so
+b66a6000-b66a7000 rw-p 00005000 08:06 15866672   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/numpy/lib/_compiled_base.so
+b66a7000-b66b1000 r-xp 00000000 08:06 15866645   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/numpy/core/_dotblas.so
+b66b1000-b66b2000 r--p 00009000 08:06 15866645   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/numpy/core/_dotblas.so
+b66b2000-b66b3000 rw-p 0000a000 08:06 15866645   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/numpy/core/_dotblas.so
+b66b3000-b6708000 r-xp 00000000 08:06 15866606   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/numpy/core/umath.so
+b6708000-b6709000 r--p 00054000 08:06 15866606   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/numpy/core/umath.so
+b6709000-b670c000 rw-p 00055000 08:06 15866606   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/numpy/core/umath.so
+b670c000-b670d000 rw-p 00000000 00:00 0 
+b670d000-b6811000 r-xp 00000000 08:06 15866620   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/numpy/core/multiarray.so
+b6811000-b6812000 r--p 00104000 08:06 15866620   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/numpy/core/multiarray.so
+b6812000-b6819000 rw-p 00105000 08:06 15866620   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/numpy/core/multiarray.so
+b6819000-b681a000 rw-p 00000000 00:00 0 
+b681a000-b6836000 r-xp 00000000 08:06 8127422    /lib/i386-linux-gnu/libgcc_s.so.1
+b6836000-b6837000 r--p 0001b000 08:06 8127422    /lib/i386-linux-gnu/libgcc_s.so.1
+b6837000-b6838000 rw-p 0001c000 08:06 8127422    /lib/i386-linux-gnu/libgcc_s.so.1
+b6838000-b6916000 r-xp 00000000 08:06 6816229    /usr/lib/i386-linux-gnu/libstdc++.so.6.0.16
+b6916000-b6917000 ---p 000de000 08:06 6816229    /usr/lib/i386-linux-gnu/libstdc++.so.6.0.16
+b6917000-b691b000 r--p 000de000 08:06 6816229    /usr/lib/i386-linux-gnu/libstdc++.so.6.0.16
+b691b000-b691c000 rw-p 000e2000 08:06 6816229    /usr/lib/i386-linux-gnu/libstdc++.so.6.0.16
+b691c000-b6923000 rw-p 00000000 00:00 0 
+b6923000-b6f3c000 r-xp 00000000 08:06 1840543    /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/orange/orange.so
+b6f3c000-b6f49000 r--p 00618000 08:06 1840543    /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/orange/orange.so
+b6f49000-b6f77000 rw-p 00625000 08:06 1840543    /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/orange/orange.so
+b6f77000-b6f91000 rw-p 00000000 00:00 0 
+b6f91000-b6f9c000 r-xp 00000000 08:06 8130837    /lib/i386-linux-gnu/libnss_files-2.13.so
+b6f9c000-b6f9d000 r--p 0000a000 08:06 8130837    /lib/i386-linux-gnu/libnss_files-2.13.so
+b6f9d000-b6f9e000 rw-p 0000b000 08:06 8130837    /lib/i386-linux-gnu/libnss_files-2.13.so
+b6f9e000-b6fa0000 r--s 00006000 08:06 15750974   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/lucene-3.5.0-py2.7-linux-i686.egg/lucene/lucene-memory-3.5.0.jar
+b6fa0000-b6fa2000 r-xp 00000000 08:06 15752362   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/matplotlib-1.1.0-py2.7-linux-i686.egg/matplotlib/nxutils.so
+b6fa2000-b6fa3000 r--p 00001000 08:06 15752362   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/matplotlib-1.1.0-py2.7-linux-i686.egg/matplotlib/nxutils.so
+b6fa3000-b6fa4000 rw-p 00002000 08:06 15752362   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/matplotlib-1.1.0-py2.7-linux-i686.egg/matplotlib/nxutils.so
+b6fa4000-b6fbf000 r-xp 00000000 08:06 15866638   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/numpy/core/_sort.so
+b6fbf000-b6fc0000 r--p 0001a000 08:06 15866638   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/numpy/core/_sort.so
+b6fc0000-b6fc1000 rw-p 0001b000 08:06 15866638   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/numpy/core/_sort.so
+b6fc1000-b6fc6000 r-xp 00000000 08:06 7083587    /usr/lib/python2.7/lib-dynload/_multiprocessing.so
+b6fc6000-b6fc7000 r--p 00004000 08:06 7083587    /usr/lib/python2.7/lib-dynload/_multiprocessing.so
+b6fc7000-b6fc8000 rw-p 00005000 08:06 7083587    /usr/lib/python2.7/lib-dynload/_multiprocessing.so
+b6fc8000-b6fd2000 r-xp 00000000 08:06 15746056   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/pymongo/_cmessage.so
+b6fd2000-b6fd3000 r--p 00009000 08:06 15746056   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/pymongo/_cmessage.so
+b6fd3000-b6fd4000 rw-p 0000a000 08:06 15746056   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/pymongo/_cmessage.so
+b6fd4000-b6fee000 r-xp 00000000 08:06 7083593    /usr/lib/python2.7/lib-dynload/_ctypes.so
+b6fee000-b6ff1000 r--p 0001a000 08:06 7083593    /usr/lib/python2.7/lib-dynload/_ctypes.so
+b6ff1000-b6ff4000 rw-p 0001d000 08:06 7083593    /usr/lib/python2.7/lib-dynload/_ctypes.so
+b6ff4000-b6ff5000 r--s 00004000 08:06 15751014   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/lucene-3.5.0-py2.7-linux-i686.egg/lucene/extensions.jar
+b6ff5000-b6ff6000 rw-p 00000000 00:00 0 
+b6ff6000-b6ff7000 r--p 00000000 00:00 0 
+b6ff7000-b7031000 r-xp 00000000 08:06 399692     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/optimize/_lbfgsb.so
+b7031000-b7032000 r--p 0003a000 08:06 399692     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/optimize/_lbfgsb.so
+b7032000-b7033000 rw-p 0003b000 08:06 399692     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/optimize/_lbfgsb.so
+b7033000-b7049000 r-xp 00000000 08:06 399691     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/optimize/_minpack.so
+b7049000-b704a000 r--p 00015000 08:06 399691     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/optimize/_minpack.so
+b704a000-b704b000 rw-p 00016000 08:06 399691     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/optimize/_minpack.so
+b704b000-b7053000 r-xp 00000000 08:06 399687     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/optimize/minpack2.so
+b7053000-b7054000 r--p 00007000 08:06 399687     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/optimize/minpack2.so
+b7054000-b7055000 rw-p 00008000 08:06 399687     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/optimize/minpack2.so
+b7055000-b7066000 r-xp 00000000 08:06 7083507    /usr/lib/python2.7/lib-dynload/datetime.so
+b7066000-b7067000 r--p 00010000 08:06 7083507    /usr/lib/python2.7/lib-dynload/datetime.so
+b7067000-b706a000 rw-p 00011000 08:06 7083507    /usr/lib/python2.7/lib-dynload/datetime.so
+b706a000-b706b000 r--p 00299000 08:06 6823385    /usr/lib/locale/locale-archive
+b706b000-b726b000 r--p 00000000 08:06 6823385    /usr/lib/locale/locale-archive
+b726b000-b72ee000 rw-p 00000000 00:00 0 
+b72ee000-b7464000 r-xp 00000000 08:06 8127426    /lib/i386-linux-gnu/libc-2.13.so
+b7464000-b7466000 r--p 00176000 08:06 8127426    /lib/i386-linux-gnu/libc-2.13.so
+b7466000-b7467000 rw-p 00178000 08:06 8127426    /lib/i386-linux-gnu/libc-2.13.so
+b7467000-b746b000 rw-p 00000000 00:00 0 
+b746b000-b7493000 r-xp 00000000 08:06 8127430    /lib/i386-linux-gnu/libm-2.13.so
+b7493000-b7494000 r--p 00028000 08:06 8127430    /lib/i386-linux-gnu/libm-2.13.so
+b7494000-b7495000 rw-p 00029000 08:06 8127430    /lib/i386-linux-gnu/libm-2.13.so
+b7495000-b74a8000 r-xp 00000000 08:06 8127380    /lib/i386-linux-gnu/libz.so.1.2.3.4
+b74a8000-b74a9000 r--p 00012000 08:06 8127380    /lib/i386-linux-gnu/libz.so.1.2.3.4
+b74a9000-b74aa000 rw-p 00013000 08:06 8127380    /lib/i386-linux-gnu/libz.so.1.2.3.4
+b74aa000-b7637000 r-xp 00000000 08:06 8130300    /lib/i386-linux-gnu/libcrypto.so.1.0.0
+b7637000-b7645000 r--p 0018c000 08:06 8130300    /lib/i386-linux-gnu/libcrypto.so.1.0.0
+b7645000-b764b000 rw-p 0019a000 08:06 8130300    /lib/i386-linux-gnu/libcrypto.so.1.0.0
+b764b000-b764e000 rw-p 00000000 00:00 0 
+b764e000-b7696000 r-xp 00000000 08:06 8130302    /lib/i386-linux-gnu/libssl.so.1.0.0
+b7696000-b7698000 r--p 00047000 08:06 8130302    /lib/i386-linux-gnu/libssl.so.1.0.0
+b7698000-b769b000 rw-p 00049000 08:06 8130302    /lib/i386-linux-gnu/libssl.so.1.0.0
+b769b000-b769d000 r-xp 00000000 08:06 8130952    /lib/i386-linux-gnu/libutil-2.13.so
+b769d000-b769e000 r--p 00001000 08:06 8130952    /lib/i386-linux-gnu/libutil-2.13.so
+b769e000-b769f000 rw-p 00002000 08:06 8130952    /lib/i386-linux-gnu/libutil-2.13.so
+b769f000-b76a0000 rw-p 00000000 00:00 0 
+b76a0000-b76a3000 r-xp 00000000 08:06 8127429    /lib/i386-linux-gnu/libdl-2.13.so
+b76a3000-b76a4000 r--p 00002000 08:06 8127429    /lib/i386-linux-gnu/libdl-2.13.so
+b76a4000-b76a5000 rw-p 00003000 08:06 8127429    /lib/i386-linux-gnu/libdl-2.13.so
+b76a5000-b76bc000 r-xp 00000000 08:06 8130844    /lib/i386-linux-gnu/libpthread-2.13.so
+b76bc000-b76bd000 r--p 00016000 08:06 8130844    /lib/i386-linux-gnu/libpthread-2.13.so
+b76bd000-b76be000 rw-p 00017000 08:06 8130844    /lib/i386-linux-gnu/libpthread-2.13.so
+b76be000-b76c0000 rw-p 00000000 00:00 0 
+b76c0000-b76c3000 r-xp 00000000 08:06 399681     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/optimize/_zeros.so
+b76c3000-b76c4000 r--p 00002000 08:06 399681     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/optimize/_zeros.so
+b76c4000-b76c5000 rw-p 00003000 08:06 399681     /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/scipy/optimize/_zeros.so
+b76c5000-b76c9000 r-xp 00000000 08:06 8127289    /lib/i386-linux-gnu/libuuid.so.1.3.0
+b76c9000-b76ca000 r--p 00003000 08:06 8127289    /lib/i386-linux-gnu/libuuid.so.1.3.0
+b76ca000-b76cb000 rw-p 00004000 08:06 8127289    /lib/i386-linux-gnu/libuuid.so.1.3.0
+b76cb000-b76cc000 rwxp 00000000 00:00 0 
+b76cc000-b76d5000 r-xp 00000000 08:06 15746076   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/bson/_cbson.so
+b76d5000-b76d6000 r--p 00008000 08:06 15746076   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/bson/_cbson.so
+b76d6000-b76d7000 rw-p 00009000 08:06 15746076   /home/george/virtualenvfyp/pythia/lib/python2.7/site-packages/bson/_cbson.so
+b76d7000-b76da000 r-xp 00000000 08:06 7083511    /usr/lib/python2.7/lib-dynload/_heapq.so
+b76da000-b76db000 r--p 00002000 08:06 7083511    /usr/lib/python2.7/lib-dynload/_heapq.so
+b76db000-b76dd000 rw-p 00003000 08:06 7083511    /usr/lib/python2.7/lib-dynload/_heapq.so
+b76dd000-b76e0000 r-xp 00000000 08:06 7083547    /usr/lib/python2.7/lib-dynload/termios.so
+b76e0000-b76e1000 r--p 00002000 08:06 7083547    /usr/lib/python2.7/lib-dynload/termios.so
+b76e1000-b76e3000 rw-p 00003000 08:06 7083547    /usr/lib/python2.7/lib-dynload/termios.so
+b76e3000-b76e5000 rw-p 00000000 00:00 0 
+b76e5000-b76e6000 r-xp 00000000 00:00 0          [vdso]
+b76e6000-b7704000 r-xp 00000000 08:06 8127423    /lib/i386-linux-gnu/ld-2.13.so
+b7704000-b7705000 r--p 0001d000 08:06 8127423    /lib/i386-linux-gnu/ld-2.13.so
+b7705000-b7706000 rw-p 0001e000 08:06 8127423    /lib/i386-linux-gnu/ld-2.13.so
+bf9ce000-bf9d1000 ---p 00000000 00:00 0 
+bf9d2000-bfa1e000 rw-p 00000000 00:00 0          [stack]
+
+VM Arguments:
+java_command: <unknown>
+Launcher Type: generic
+
+Environment Variables:
+PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+USERNAME=george
+LD_LIBRARY_PATH=/usr/lib/jvm/java-6-openjdk/jre/lib/i386/client:/usr/lib/jvm/java-6-openjdk/jre/lib/i386:
+SHELL=/bin/bash
+DISPLAY=:0.0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x3e3640], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x3e3640], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x300e10], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: [libjvm.so+0x300e10], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGXFSZ: [libjvm.so+0x300e10], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGILL: [libjvm.so+0x300e10], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x300ca0], sa_mask[0]=0x00000004, sa_flags=0x10000004
+SIGHUP: [libjvm.so+0x303d40], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGINT: [libjvm.so+0x303d40], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGTERM: [libjvm.so+0x303d40], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGQUIT: [libjvm.so+0x303d40], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+
+
+---------------  S Y S T E M  ---------------
+
+OS:Ubuntu 11.10 (oneiric)
+uname:Linux 3.0.0-15-generic-pae #26-Ubuntu SMP Fri Jan 20 17:07:31 UTC 2012 i686
+libc:glibc 2.13 NPTL 2.13 
+rlimit: STACK 8192k, CORE 0k, NPROC 31011, NOFILE 4096, AS infinity
+load average:0.92 1.01 0.99
+
+/proc/meminfo:
+MemTotal:        3983492 kB
+MemFree:          845976 kB
+Buffers:          413240 kB
+Cached:          1447064 kB
+SwapCached:            0 kB
+Active:          1550368 kB
+Inactive:        1244708 kB
+Active(anon):     936300 kB
+Inactive(anon):     4440 kB
+Active(file):     614068 kB
+Inactive(file):  1240268 kB
+Unevictable:          68 kB
+Mlocked:              68 kB
+HighTotal:       3140696 kB
+HighFree:         620644 kB
+LowTotal:         842796 kB
+LowFree:          225332 kB
+SwapTotal:       4050940 kB
+SwapFree:        4050940 kB
+Dirty:               960 kB
+Writeback:             0 kB
+AnonPages:        934828 kB
+Mapped:           260856 kB
+Shmem:              5972 kB
+Slab:             167996 kB
+SReclaimable:     151564 kB
+SUnreclaim:        16432 kB
+KernelStack:        4048 kB
+PageTables:        10088 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     6042684 kB
+Committed_AS:    2901456 kB
+VmallocTotal:     122880 kB
+VmallocUsed:       41484 kB
+VmallocChunk:      77456 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:       10232 kB
+DirectMap2M:      903168 kB
+
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 37 stepping 5, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, ht
+
+Memory: 4k page, physical 3983492k(845976k free), swap 4050940k(4050940k free)
+
+vm_info: OpenJDK Client VM (20.0-b11) for linux-x86 JRE (1.6.0_23-b23), built on Jan 20 2012 00:42:41 by "buildd" with gcc 4.6.1
+
+time: Sun Feb 12 12:37:48 2012
+elapsed time: 1 seconds
+

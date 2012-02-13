@@ -21,12 +21,14 @@ oc = OrangeKmeansClusterer(k=2)
 for s in sample_docs:
     oc.add_document(s)
    
-cc = CustomClusterer()
-for s in sample_docs:
-    cc.add_document(s)
-    
-cc.construct_term_doc_matrix()
-cc.save_table("custom_clustering_test.txt")
+#===============================================================================
+# cc = CustomClusterer()
+# for s in sample_docs:
+#    cc.add_document(s)
+#    
+# cc.construct_term_doc_matrix()
+# cc.save_table("custom_clustering_test.txt")
+#===============================================================================
     
 class TestOrangeClustering(unittest.TestCase):
     
@@ -39,14 +41,15 @@ class TestOrangeClustering(unittest.TestCase):
         self.assertEqual(expected, km.clusters)
 
     def test_orange_with_tweets_kmeans(self):            
-        from_date = datetime.datetime(2011, 1, 24, 0, 0, 0)
-        to_date = datetime.datetime(2011, 1, 25, 0, 0, 0) 
-        items = ws.get_documents_by_date(from_date, to_date, limit=200)
+        from_date = datetime.datetime(2011, 1, 25, 0, 0, 0)
+        to_date = datetime.datetime(2011, 1, 26, 0, 0, 0) 
+        items = ws.get_documents_by_date(from_date, to_date, limit=100)
 
-        ###################
-        # Index retrievals#
-        ###################
         #=======================================================================
+        # print len(items)
+        # ##################
+        # #Index retrievals#
+        # ##################
         # from analysis.index import Index
         # index = Index("kmeans_index")
         # index.add_documents(items)
@@ -56,13 +59,14 @@ class TestOrangeClustering(unittest.TestCase):
         # items = []
         # for id in ids:
         #    items.append(ws.get_document_by_id(id))
-        ###################
-        # Index retrievals#
-        ###################
+        # ##################
+        # #Index retrievals#
+        # ##################
+        # print len(items)
+        #=======================================================================
         
-        oc = OrangeKmeansClusterer(k=13, ngram=1)
-        for item in items:
-            oc.add_document(item)
+        oc = OrangeKmeansClusterer(k=4, ngram=1)
+        oc.add_documents(items)
         oc.run("orange_clustering_test", pca=True)
         #oc.plot_timeline(cumulative=True)
         oc.plot_scatter()

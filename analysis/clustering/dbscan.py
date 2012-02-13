@@ -134,7 +134,6 @@ class DBSCANClusterer(AbstractClusterer):
             
         if self.td_matrix == None:
             self.construct_term_doc_matrix(pca=pca)
-        
         #Ugly code to transform a numpy array to a list
         matrix = []
         for row_index, doc_id in enumerate(self.document_dict.keys()):

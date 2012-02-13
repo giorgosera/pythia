@@ -3,8 +3,8 @@ Created on 29 Jan 2012
 
 @author: george
 '''
-import nltk, numpy
-from tools.orange_utils import construct_orange_table, orange_pca
+import nltk, numpy, Orange#!@UnresolvedImport
+from tools.orange_utils import construct_orange_table, orange_pca, add_metas_to_table
 from collections import OrderedDict 
 from visualizations.graphs import Timeline
 from visualizations.mds import MDS
@@ -65,9 +65,14 @@ class AbstractClusterer(object):
             for term, count in document['word_frequencies']:
                 data_rows[i][terms.index(term)] = corpus.tf_idf(term, text)
         
-        self.attributes = terms
-        self.td_matrix = data_rows
         
+        #table = Orange.data.Table("iris.tab")
+        self.attributes = terms#table.domain.features
+        
+        #a, c, w = table.to_numpy()
+        
+        self.td_matrix = data_rows#a
+                
         #If PCA is True then we project our points on their principal components
         #for dimensionality reduction
         if pca:
@@ -121,19 +126,45 @@ class AbstractClusterer(object):
         Plots a graph depicting the growth of each cluster's size as a 
         function of time.
         '''
+        assert self.clusters != []
         for cluster in self.clusters:
             documents =  cluster.get_documents()
             if len(documents) > 0:
                 t = Timeline([doc['date'] for doc in documents.values()], cumulative=cumulative)
                 t.plot()
         t.show()
-        
+
     def plot_scatter(self):
         '''
         Plots all the data points in 2D.
         '''
-        mds = MDS(construct_orange_table(self.attributes, self.td_matrix))
-        mds.plot()
+        assert self.attributes and self.td_matrix != None
+        
+        #Create a clusterer document list to get the index of a doc (horrible hack I know)
+        clusterer_document_list = [key for key in self.document_dict.keys()] 
+        table = construct_orange_table(self.attributes)
+        meta_col_name="cluster_id"
+        table = add_metas_to_table(table, meta_col_name=meta_col_name)
+
+        instances = [doc for doc in range(self.td_matrix.shape[0])]
+        for cluster in self.clusters:
+            #For dbscan noise cluster
+            if cluster.id == -1: cluster.id += len(self.clusters)
+            
+            for doc_id in cluster.document_dict.iterkeys():
+                index = clusterer_document_list.index(doc_id)
+                inst = Orange.data.Instance(table.domain, list(self.td_matrix[index]))
+                inst[meta_col_name] = str(cluster.id)
+                instances[index] = inst
+
+        #we have a table with the clusters ids as metas.                
+        table.extend(instances)        
+        mds = MDS(table)
+        classes_list = []
+        for c in self.clusters:
+            classes_list.append(c.id)
+
+        mds.plot(classes_list=classes_list, class_col_name="cluster_id")
             
     def run(self):
         raise NotImplementedError('run is not implemented.')

@@ -8,7 +8,7 @@ applications of Orange.
 '''
 import Orange, orange #!@UnresolvedImport
 
-def construct_orange_table(variables, matrix):
+def construct_orange_table(variables, matrix=None):
     '''
     Constructs an ExampleTable for Orange. It takes a
     list of variables and the corresponding feature vectors along
@@ -22,20 +22,24 @@ def construct_orange_table(variables, matrix):
     domain = Orange.data.Domain(vars, False) #The second argument indicated that the last attr must not be a class
     
     #Add data rows 
-    t = Orange.data.Table(domain, matrix)        
+    if matrix != None:
+        t = Orange.data.Table(domain, matrix)        
+    else:
+        t = Orange.data.Table(domain)        
     return t
 
-def add_metas_to_table(table, rownames):
+def add_metas_to_table(table, rownames=None, meta_col_name="id"):
     '''
     Add meta attributes to the samples i.e. the id of the document
     '''
-    doc_id = Orange.data.variable.String("id")
+    doc_id = Orange.data.variable.String(meta_col_name)
     id = Orange.data.new_meta_id()
     table.add_meta_attribute(id)
     table.domain.add_meta(id, doc_id)
     
-    for i, id in enumerate(rownames):
-        table[i]['id'] = str(id)
+    if rownames!=None: 
+        for i, id in enumerate(rownames):
+            table[i][meta_col_name] = str(id)
         
     return table
 
@@ -45,7 +49,8 @@ def orange_pca(data):
     '''
     pca = Orange.projection.pca.Pca(data)
     #See Orange documentation to find out what is ignore and ignore 
-    matrix, ignore, ignore = pca(data).toNumpy()
+    projection = pca(data)
+    matrix, ignore, ignore = projection.toNumpy()
     return matrix
 
 def construct_distance_matrix(data):
@@ -64,7 +69,7 @@ def orange_mds(distance):
     It takes as input a distance matrix (see function above)
     and projects the data points using MDS
     '''
-    mds = Orange.projection.mds.MDS(distance)
+    mds = Orange.projection.mds.MDS(distance, dim=2)
     mds.run(100)
     return mds
 

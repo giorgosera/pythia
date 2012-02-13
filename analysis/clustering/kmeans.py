@@ -24,6 +24,7 @@ class OrangeKmeansClusterer(AbstractKmeansClusterer):
             
         vars = []
         self.construct_term_doc_matrix(pca=pca)
+
         for token in self.attributes:
             vars.append(Orange.data.variable.Continuous(str(token)))
         domain = Orange.data.Domain(vars, False) #The second argument indicated that the last attr must not be a class
