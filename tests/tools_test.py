@@ -73,5 +73,8 @@ class TestToolsFunctions(unittest.TestCase):
         text = 'RT @S_Elhussieny: + 1 # egypt # elbaradei RT @ ZeinabSamir: @ shmpOngO if taken by Criss ElBaradei hamil revolution revolution'
         print tools.utils.strip_mentions(text)
         
+    def test_encoding(self):
+        text = 'RT @S_Elhussieny: + 1 # egypt # elbaradei RT @ ZeinabSamir: @ shmpOngO if taken by Criss ElBaradei hamil revolution revolution'
+        
 if __name__ == "__main__":
     unittest.main()

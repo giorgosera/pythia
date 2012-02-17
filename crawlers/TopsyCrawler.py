@@ -8,6 +8,7 @@ import time, datetime
 from mongoengine import connect
 from AbstractCrawler import AbstractCrawler
 from analysis.text import TextAnalyser
+from database.model.tweets import Content
 
 PAGE_SIZE = 10
 connect("pythia_db")
@@ -41,11 +42,11 @@ class TopsyCrawler(AbstractCrawler):
         self.type = type
         
         
-    def crawl(self):
+    def crawl(self, only_english=False):
         '''
         Performs the actual crawling. 
         '''
-        text_analyser = TextAnalyser(ngram=1)
+        text_analyser = TextAnalyser(ngram=1, only_english=only_english)
         exception_log = []
         kw = otter.loadrc() # load api key
         count = 0
@@ -56,13 +57,26 @@ class TopsyCrawler(AbstractCrawler):
                     #search(q='#jan25 OR #egypt OR #tahrir', mintime = time.mktime(mintime.timetuple()), maxtime = time.mktime(maxtime.timetuple()), type='tweet', offset=page*10)
                     search(q=self.keywords, mintime = time.mktime(self.from_date.timetuple()), maxtime = time.mktime(self.maxtime.timetuple()), type='tweet', perpage=100, page=page+1)
                     for item in search.response.list:
+                        print "--------------------------------------------------------------------------"
                         print "Storing tweet #",count, "for the period",self.from_date,"until",self.maxtime 
                         tt = self.type()
                         tt.url = item.url
                         print item.content
-                        content = text_analyser.add_document(item.content)
+                        analysed = text_analyser.add_document(item.content)
+                        #if this tweet is really small just ignore it. 
+                        if len(analysed['tokens']) <= 3: 
+                            print"Ignoring this tweet"
+                            continue
+                        content = Content()
+                        content.raw = analysed['raw']
+                        content.tokens = analysed['tokens']
+                        content.construct_word_freq_list(analysed['word_frequencies'])
+                        content.date = self.from_date
                         tt.content = content
-                        print tt.content
+                        print tt.content.raw
+                        print tt.content.tokens
+                        for t in tt.content.word_frequencies:
+                            print t.word, t.count
                         tt.date = self.from_date
                         tt.screen_name = item.trackback_author_nick
                         tt.retweet_count = item.trackback_total

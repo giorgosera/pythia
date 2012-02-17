@@ -3,7 +3,6 @@ Created on 8 Feb 2012
 
 @author: george
 '''
-from math import pow, sqrt
 from analysis.clustering.algorithms import euclidean
 from analysis.clustering.abstract import AbstractClusterer
 from analysis.clustering.structures import Cluster

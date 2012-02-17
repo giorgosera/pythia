@@ -104,7 +104,7 @@ class TwitterCrawler(AbstractCrawler):
             response = self._make_twitter_request(self.twitter_object_handle.followers.ids, 
                                                   screen_name=screen_name, 
                                                   cursor=cursor)
-            for id in response.ids:
+            for id in response['ids']:
                 result.append(id)    
             cursor = response['next_cursor']
          
@@ -120,7 +120,7 @@ class TwitterCrawler(AbstractCrawler):
             response = self._make_twitter_request(self.twitter_object_handle.friends.ids, 
                                                   screen_name=screen_name, 
                                                   cursor=cursor)
-            for id in response.ids:
+            for id in response['ids']:
                 result.append(id)    
             cursor = response['next_cursor']
          

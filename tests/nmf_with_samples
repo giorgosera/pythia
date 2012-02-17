@@ -2,11 +2,14 @@ Clustering results
 
 ***********************************************************
 Cluster0
-Most frequent terms:('frequent', 3) ('sentenc', 2) ('word', 2) ('document', 1) ('token', 1) 
+Most frequent terms:frequent word sentenc spring arab token 
 frequent FrEquEnt frequent <li>word</li> word sentence sentence
+sentence <a href="www.google.com">arab</a> spring
 a is not a toKENIzed document
 
 ***********************************************************
 Cluster1
-Most frequent terms:('arab', 1) ('sentenc', 1) ('spring', 1) 
+Most frequent terms:token document spring arab sentenc word 
+a is not a toKENIzed document
 sentence <a href="www.google.com">arab</a> spring
+frequent FrEquEnt frequent <li>word</li> word sentence sentence

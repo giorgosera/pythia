@@ -67,7 +67,7 @@ class NMFClusterer(AbstractClusterer):
             # Show the top N articles
             for f in flist[0:display_N_documents]:
                 top_docs[f[1][0]] = f[1][1]
-                top_docs[f[1][0]]["weight"] = f[0]
+                top_docs[f[1][0]].weight = f[0]
             top_documents.append(top_docs)
             
         [self.clusters.append(Cluster(i, top_documents[i], pattern_names[i])) for i in range(pc)]

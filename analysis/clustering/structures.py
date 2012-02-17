@@ -64,7 +64,7 @@ class Bicluster(object):
     '''
     A bicluster class. 
     '''
-
+    
     def __init__(self, vector, left=None, right=None, similarity=0.0, id=None):
         '''
         Constructs a bicluster

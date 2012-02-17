@@ -36,8 +36,6 @@ class AbstractClusterer(object):
         '''
         Adds a new document in the cluster structure.
         '''    
-        #Append date on the content dictionary for future use
-        document.content['date'] = document.date
         self.document_dict[str(document.id)] = document.content
     
     def get_documents(self):
@@ -56,21 +54,19 @@ class AbstractClusterer(object):
         Constructs a term-document matrix such that td_matrix[document][term] 
         contains the weighting score for the term in the document.
         '''
-        corpus = nltk.TextCollection([document['tokens'] for document in self.document_dict.values()])
+        corpus = nltk.TextCollection([document.tokens for document in self.document_dict.values()])
         terms = list(set(corpus))
         data_rows = numpy.zeros([len(self.document_dict), len(set(corpus))])
         
         for i, document in enumerate(self.document_dict.values()):
-            text = nltk.Text(document['tokens'])
-            for term, count in document['word_frequencies']:
-                data_rows[i][terms.index(term)] = corpus.tf_idf(term, text)
+            text = nltk.Text(document.tokens)
+            for item in document.word_frequencies:
+                data_rows[i][terms.index(item.word)] = corpus.tf_idf(item.word, text)
         
         
         #table = Orange.data.Table("iris.tab")
         self.attributes = terms#table.domain.features
-        
-        #a, c, w = table.to_numpy()
-        
+        #a, c, w = table.to_numpy()        
         self.td_matrix = data_rows#a
                 
         #If PCA is True then we project our points on their principal components
@@ -115,9 +111,7 @@ class AbstractClusterer(object):
             out.write("Most frequent terms:" + top_terms)
             out.write('\n')
             for document in cluster.document_dict.values():
-                #if document["weight"] != None:
-                #    out.write(str(document["weight"]) + "-->")
-                out.write(document["raw"])
+                out.write(document.raw)
                 out.write('\n')
             i += 1   
             
@@ -149,7 +143,7 @@ class AbstractClusterer(object):
         instances = [doc for doc in range(self.td_matrix.shape[0])]
         for cluster in self.clusters:
             #For dbscan noise cluster
-            if cluster.id == -1: cluster.id += len(self.clusters)
+            if cluster.id == -1: cluster.id += len(self.clusters);
             
             for doc_id in cluster.document_dict.iterkeys():
                 index = clusterer_document_list.index(doc_id)

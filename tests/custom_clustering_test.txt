@@ -1,2 +1,0 @@
-Term-document matrix	FloatVariable 'sepal length'	FloatVariable 'sepal width'	FloatVariable 'petal length'	FloatVariable 'petal width'	EnumVariable 'iris'
-0	5.100000	3.500000	1.400000	0.200000

@@ -23,8 +23,9 @@ class TextAnalyser(object):
     This class contains and implements all the methods responsible for 
     text analysis.
     '''
-    def __init__(self, ngram=1):
+    def __init__(self, ngram=1, only_english=False):
         self.ngram = ngram
+        self.only_english = only_english
         self.app = PythiaApp()
         
     def clean_text(self, text):
@@ -68,17 +69,21 @@ class TextAnalyser(object):
         tokenizes the text. Finally it creates the word frequency vector.
         '''
         text = HTMLParser.HTMLParser().unescape(text)
-        #=======================================================================
-        # encoding = tools.utils.detect_encoding(text)
-        # if encoding == "unicode":
-        #    text = tools.utils.translate_text(unicode(text).encode('utf-8'))
-        #=======================================================================
-        text = tools.utils.translate_text(unicode(text).encode('utf-8'))
-        clean_text = self.clean_text(text)
-        tokens = self.tokenize(clean_text)
-        tokens = [tools.utils.text_stemming(token) for token in tokens]
+        if not self.only_english:
+            text = tools.utils.translate_text(unicode(text).encode('utf-8'))
+            clean_text = self.clean_text(text)
+            tokens = self.tokenize(clean_text)
+            tokens = [tools.utils.text_stemming(token) for token in tokens]
+        else: #if arabaic returns an empty token list which indicates that this doc should be ignored
+            encoding = tools.utils.detect_encoding(text)
+            if encoding == "unicode":
+                tokens = []
+            else:
+                clean_text = self.clean_text(text)
+                tokens = self.tokenize(clean_text)
+                tokens = [tools.utils.text_stemming(token) for token in tokens]
+            
         word_frequencies = nltk.FreqDist(tokens).items()
-
         return text, tokens, word_frequencies
     
     def add_document(self, document):

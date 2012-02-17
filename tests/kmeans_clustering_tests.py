@@ -43,31 +43,29 @@ class TestOrangeClustering(unittest.TestCase):
     def test_orange_with_tweets_kmeans(self):            
         from_date = datetime.datetime(2011, 1, 25, 0, 0, 0)
         to_date = datetime.datetime(2011, 1, 26, 0, 0, 0) 
-        items = ws.get_documents_by_date(from_date, to_date, limit=100)
+        items = ws.get_documents_by_date(from_date, to_date, limit=200)
 
-        #=======================================================================
-        # print len(items)
-        # ##################
-        # #Index retrievals#
-        # ##################
-        # from analysis.index import Index
-        # index = Index("kmeans_index")
-        # index.add_documents(items)
-        # index.finalize()
-        # print index.get_top_terms()
-        # ids = index.get_top_documents(lowestf=0.01, highestf=0.1)
-        # items = []
-        # for id in ids:
-        #    items.append(ws.get_document_by_id(id))
-        # ##################
-        # #Index retrievals#
-        # ##################
-        # print len(items)
-        #=======================================================================
+        print len(items)
+        ##################
+        #Index retrievals#
+        ##################
+        from analysis.index import Index
+        index = Index("kmeans_index")
+        index.add_documents(items)
+        index.finalize()
+        print index.get_top_terms()
+        ids = index.get_top_documents(lowestf=0.01, highestf=0.2)
+        items = []
+        for id in ids:
+            items.append(ws.get_document_by_id(id))
+        ##################
+        #Index retrievals#
+        ##################
+        print len(items)
         
         oc = OrangeKmeansClusterer(k=4, ngram=1)
         oc.add_documents(items)
-        oc.run("orange_clustering_test", pca=True)
+        oc.run("orange_clustering_test", pca=False)
         #oc.plot_timeline(cumulative=True)
         oc.plot_scatter()
         oc.dump_clusters_to_file("kmeans_with_tweets_orange")

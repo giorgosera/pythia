@@ -11,7 +11,7 @@ from tests.test_document import get_test_documents
 ###########################################
 ignore, ignore, samples  =  get_test_documents()
 
-oc = OrangeKmeansClusterer(k=4)        
+oc = OrangeKmeansClusterer(k=2)        
 for sample in samples:
     oc.add_document(sample)
 

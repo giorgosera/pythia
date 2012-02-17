@@ -3,8 +3,13 @@ Created on 27 Nov 2011
 
 @author: george
 '''
-from mongoengine import Document, StringField, ListField, IntField
+import datetime
+from mongoengine import Document, StringField, ListField, IntField, DateTimeField, EmbeddedDocument, EmbeddedDocumentField
 
+class History(EmbeddedDocument):
+    date = DateTimeField(required=True, default=datetime.datetime.utcnow())
+    count = IntField(required=True, default=0)
+    
 class Agent(Document):
     twitter_id = IntField(required=True, default=0)
     screen_name = StringField(required=True)
@@ -17,4 +22,5 @@ class Author(Agent):
     meta = {"collection": "Authors"}
     followers_ids = ListField(IntField(), required=True, default=list)
     friends_ids = ListField(IntField(), required=True, default=list)
-    pass    
+    followers_history = ListField(EmbeddedDocumentField(History), required=True, default=list)
+    friends_history = ListField(EmbeddedDocumentField(History), required=True, default=list)

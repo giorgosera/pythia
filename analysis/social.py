@@ -4,7 +4,6 @@ Created on 28 Nov 2011
 @author: george
 '''
 import tools.utils
-from analysis.clustering.algorithms import cosine 
 from collections import OrderedDict
 
 class AbstractSocialAnalyser(object):

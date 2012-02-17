@@ -47,7 +47,7 @@ def orange_pca(data):
     '''
     Projects the data points on the Principal Components
     '''
-    pca = Orange.projection.pca.Pca(data)
+    pca = Orange.projection.pca.Pca(data, max_components=2)
     #See Orange documentation to find out what is ignore and ignore 
     projection = pca(data)
     matrix, ignore, ignore = projection.toNumpy()
