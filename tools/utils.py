@@ -20,6 +20,9 @@ d = enchant.Dict("en_US")
 bingtrans.set_app_id('5521E4A630094D968D49B39B6511A0A76CB025E1')
 alchemyObj = AlchemyAPI.AlchemyAPI()
 alchemyObj.setAPIKey("d7605e69dd3d2d7a032f11272d9b000e77d43545");
+ignorewords = set(['rt','jan25', 'egypt', 'cairo', '25jan', "s", ":)", ":(", ":p", "25"\
+                '(' , ')', '<', '>', '#', '@', '?', '!', '.', ',', '=', '|', \
+                '&', ':', '+', '\'', '\'ve',"m", 're', '-', '"', '."', '...', '..', '--', '[', ']' ])
 
 
 def strip_url(text):

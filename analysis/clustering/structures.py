@@ -3,7 +3,7 @@ Created on 29 Jan 2012
 
 @author: george
 '''
-import nltk 
+import nltk, tools.utils 
 
 class Cluster(object):
     '''
@@ -19,6 +19,9 @@ class Cluster(object):
         self.id = id
         self.document_dict = document_dict
         self.top_patterns = top_patterns
+        self.locations = []
+        self.persons = []
+        self.users = []
         
     def get_documents(self):
         '''
@@ -33,7 +36,7 @@ class Cluster(object):
         if self.top_patterns != None:
             return self.top_patterns
         else:
-            corpus = nltk.TextCollection([document['tokens'] for document in self.document_dict.values()])
+            corpus = nltk.TextCollection([document.tokens for document in self.document_dict.values()])
             return nltk.FreqDist(corpus).items()[:N]     
     
     def get_size(self):
@@ -42,6 +45,46 @@ class Cluster(object):
         '''   
         return len(self.document_dict.keys())
     
+    def analyse(self):
+        '''
+        Analyses the cluster to extract meta-information such as 
+        locations, persons, users and relations.
+        '''
+        text_collection = []
+        for document in self.document_dict.values():
+            raw = nltk.WordPunctTokenizer().tokenize(document.raw)
+            for token in raw:
+                if token not in nltk.corpus.stopwords.words('english') and token not in tools.utils.ignorewords:
+                    text_collection.append(token)
+        tagged_corpus = nltk.pos_tag(text_collection)
+
+        for chunk in nltk.ne_chunk(tagged_corpus): 
+            if hasattr(chunk, 'node'):    
+                if chunk.node == 'GPE':
+                    self.locations.append(' '.join(c[0] for c in chunk.leaves()))
+                elif chunk.node == 'PERSON':
+                    self.persons.append(' '.join(c[0] for c in chunk.leaves()))
+        
+    def get_locations(self, N=1):
+        '''
+        Returns the top N locations mentioned in the docs in this cluster.
+        '''
+        corpus = nltk.text.TextCollection([self.locations])
+        return nltk.FreqDist(corpus).items()[:N]
+    
+    def get_persons(self, N=1):
+        '''
+        Returns the top N persons mentioned in the docs in this cluster.
+        '''
+        corpus = nltk.text.TextCollection([self.persons])
+        return nltk.FreqDist(corpus).items()[:N]
+    
+    def get_number_of_users(self):
+        '''
+        Returns the number of unique users whose documents appear in this cluster.
+        '''
+        pass    
+    
     def get_collocations(self, n=2, N=5):
         '''
         Returns the top collocations of the cluster corpus 
@@ -49,7 +92,7 @@ class Cluster(object):
         to n-grams and more specifically we limited the options
         to bigrams (n=2) and trigrams (n=3) ( n defaults to 2 ). 
         '''
-        corpus = nltk.TextCollection([document['tokens'] for document in self.document_dict.values()])
+        corpus = nltk.TextCollection([document.tokens for document in self.document_dict.values()])
         finder = nltk.BigramCollocationFinder.from_words(corpus)
         scorer = nltk.metrics.BigramAssocMeasures.jaccard
         #finder.apply_freq_filter(3)

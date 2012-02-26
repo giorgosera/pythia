@@ -67,21 +67,28 @@ class TestOrangeClustering(unittest.TestCase):
         oc.add_documents(items)
         oc.run("orange_clustering_test", pca=False)
         #oc.plot_timeline(cumulative=True)
-        oc.plot_scatter()
+        #oc.plot_scatter()
         oc.dump_clusters_to_file("kmeans_with_tweets_orange")
         
-        #Experiments
-        max = (0, 0)
-        for i, cluster in enumerate(oc.clusters):
-            if cluster.get_size() > max[1]:
-                max = (i, cluster.get_size())
-
-        oc_new = OrangeKmeansClusterer(k=5, ngram=2)
-        for doc_id in oc.clusters[max[0]].get_documents().keys():
-            oc_new.add_document(ws.get_document_by_id(doc_id))         
-        oc_new.run("orange_clustering_test")
-        oc_new.dump_clusters_to_file("re-kmeans_with_tweets_orange")
-        #End of experiments      
+        cluster = oc.clusters[1]
+        cluster.analyse()
+        print cluster.get_locations(N=2)
+        print cluster.get_persons(N=2)
+        
+#===============================================================================
+#        #Experiments
+#        max = (0, 0)
+#        for i, cluster in enumerate(oc.clusters):
+#            if cluster.get_size() > max[1]:
+#                max = (i, cluster.get_size())
+# 
+#        oc_new = OrangeKmeansClusterer(k=5, ngram=2)
+#        for doc_id in oc.clusters[max[0]].get_documents().keys():
+#            oc_new.add_document(ws.get_document_by_id(doc_id))         
+#        oc_new.run("orange_clustering_test")
+#        oc_new.dump_clusters_to_file("re-kmeans_with_tweets_orange")
+#        #End of experiments      
+#===============================================================================
         
     #===========================================================================
     # def test_orange_with_tweets_hierarchical(self):

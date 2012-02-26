@@ -29,6 +29,16 @@ class TwitterSemanticAnalyser(AbstractSemanticAnalyser):
     '''
     Deals with Twitter related semantic analysis. 
     '''    
+    def analyse_corpus(self, corpus):
+        '''
+        Analyses a collection of documents. 
+        '''
+        results = []
+        for document in corpus:
+            entities, sentiment, keywords = self.analyse_text(document)
+            #For each document we return a tuple of entities, sentiment, keywords
+            results.append( (entities, sentiment, keywords) )
+        return results 
     
     def analyse_text(self, text):
         entities = self.extract_entities(text)
@@ -65,7 +75,7 @@ class TwitterSemanticAnalyser(AbstractSemanticAnalyser):
     
     def filter_results(self, results, keywords=False):
         '''
-        Filters our uneccesary info from the response
+        Filters out unnecessary info from the XML response
         '''
         filtered = []
         for result in results:

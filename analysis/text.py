@@ -11,12 +11,6 @@ import nltk #!@UnresolvedImport
 from application.boot import PythiaApp
 from analysis.semantic import TwitterSemanticAnalyser 
 
-###########################################
-# GLOBALS                                #
-###########################################
-ignorewords = set(['rt','jan25', 'egypt', 'cairo', '25jan', "s", ":)", ":(", ":p", "25"\
-                '(' , ')', '<', '>', '#', '@', '?', '!', '.', ',', '=', '|', \
-                '&', ':', '+', '\'', '\'ve',"m", 're', '-', '"', '."', '...', '..', '--', '[', ']' ])
                 
 class TextAnalyser(object):
     '''
@@ -94,19 +88,14 @@ class TextAnalyser(object):
         '''
         #First perform basic text processing operations
         text, tokens, word_frequencies = self._preprocess(document)
-        new_document= {"raw": text, "tokens": tokens, "word_frequencies": word_frequencies}
-        
-        #Then apply semantic analysis on text
-        #sa = TwitterSemanticAnalyser()      
-        #entities, sentiment, keywords = sa.analyse_text(unicode(new_document['raw']).encode('utf-8') )
-          
+        new_document= {"raw": text, "tokens": tokens, "word_frequencies": word_frequencies}          
         return new_document
         
     def _filter_tokens(self, tokens):
         filtered = []
         for token in tokens:
             not_stop_word = token not in nltk.corpus.stopwords.words('english')
-            not_ignore_word = token not in ignorewords
+            not_ignore_word = token not in tools.utils.ignorewords
             ascii = tools.utils.detect_encoding(token) == "ascii"
             not_single_char = len(token) > 1 
             if not_stop_word and not_ignore_word and ascii and not_single_char:
