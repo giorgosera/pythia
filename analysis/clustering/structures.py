@@ -87,6 +87,18 @@ class Cluster(object):
         ws = WarehouseServer()
         authors = set(ws.get_document_authors(self.document_dict.keys()))
         return list(authors)
+    
+    def get_relations(self):
+        '''
+        Returns the main relations detected in this cluster
+        '''
+        pass
+    
+    def get_sentiment(self):
+        '''
+        Returns the sentiment of the cluster
+        '''
+        pass
         
     def get_collocations(self, n=2, N=5):
         '''
