@@ -3,7 +3,8 @@ Created on 29 Jan 2012
 
 @author: george
 '''
-import nltk, tools.utils 
+import nltk, tools.utils
+from database.warehouse import WarehouseServer
 
 class Cluster(object):
     '''
@@ -79,12 +80,14 @@ class Cluster(object):
         corpus = nltk.text.TextCollection([self.persons])
         return nltk.FreqDist(corpus).items()[:N]
     
-    def get_number_of_users(self):
+    def get_authors(self):
         '''
-        Returns the number of unique users whose documents appear in this cluster.
+        Returns the authors of the documents that appear in this cluster.
         '''
-        pass    
-    
+        ws = WarehouseServer()
+        authors = set(ws.get_document_authors(self.document_dict.keys()))
+        return list(authors)
+        
     def get_collocations(self, n=2, N=5):
         '''
         Returns the top collocations of the cluster corpus 

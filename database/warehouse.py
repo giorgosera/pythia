@@ -63,3 +63,21 @@ class WarehouseServer(object):
         for id in ids:
             documents.append(self.get_document_by_id(id=id, type=type))
         return documents
+    
+    def get_document_author(self, id, type=EgyptTweet):
+        '''
+        Returns a the screen name of the author of the doc with this id.
+        '''
+        t = type.objects(id=id).get()
+        author = t.author_screen_name
+        return author
+    
+    def get_document_authors(self, ids, type=EgyptTweet):
+        '''
+        Returns a the screen names of the authors of the documents specified by ids.
+        '''
+        authors = []
+        for id in ids:
+            authors.append(self.get_document_author(id=id, type=type))
+        return authors    
+        

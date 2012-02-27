@@ -70,11 +70,6 @@ class TestOrangeClustering(unittest.TestCase):
         #oc.plot_scatter()
         oc.dump_clusters_to_file("kmeans_with_tweets_orange")
         
-        cluster = oc.clusters[1]
-        cluster.analyse()
-        print cluster.get_locations(N=2)
-        print cluster.get_persons(N=2)
-        
 #===============================================================================
 #        #Experiments
 #        max = (0, 0)
