@@ -8,6 +8,8 @@ from tools.orange_utils import construct_orange_table, orange_pca, add_metas_to_
 from collections import OrderedDict 
 from visualizations.graphs import MatplotlibTimeline, D3Timeline
 from visualizations.mds import MDS
+from tools.utils import aggregate_data
+from matplotlib.dates import num2date#!@UnresolvedImport
 
 class AbstractClusterer(object):
     '''
@@ -115,28 +117,54 @@ class AbstractClusterer(object):
                 out.write('\n')
             i += 1   
             
-    def plot_timeline(self, cumulative=True):
+    def plot_growth_timeline(self, cumulative=True, plot_method="d3"):
         '''
         Plots a graph depicting the growth of each cluster's size as a 
         function of time.
         '''
         assert self.clusters != []
-        #=======================================================================
-        # for cluster in self.clusters:
-        #    documents =  cluster.get_documents()
-        #    if len(documents) > 0:
-        #        t = MatplotlibTimeline([doc['date'] for doc in documents.values()], cumulative=cumulative)
-        #        t.plot()
-        # t.show()
-        #=======================================================================
-         
+        if plot_method == "matplotlib":
+            for cluster in self.clusters:
+                documents =  cluster.get_documents()
+                if len(documents) > 0:
+                    dates, counts = aggregate_data([doc['date'] for doc in documents.values()], cumulative=cumulative)
+                    t = MatplotlibTimeline(dates, counts, cumulative=cumulative)
+                    t.plot()
+            t.show()
+        elif plot_method=="d3":        
+            data = []
+            for cluster in self.clusters:
+                documents = cluster.get_documents()
+                if len(documents) > 0:
+                    data.append([doc.date for doc in documents.values()])
+                    
+            dates = []
+            counts = []
+            for d in data:
+                t_dates, t_counts = aggregate_data(d, cumulative)
+                dates.append([num2date(date).strftime('%Y-%m-%d %H:%M:%S') for date in t_dates])
+                counts.append(t_counts)
+            final_dates = dates
+            final_counts = [count.tolist() for count in counts]
+            t = D3Timeline(final_dates, final_counts, cumulative=cumulative)
+            t.plot(url='timeline_growth.html')
+            
+    def plot_sentiment_timeline(self, cumulative=True, plot_method="d3"):
+        '''
+        Plots a graph depicting the sentiment variation of each cluster as a 
+        function of time.
+        '''
+        assert self.clusters != []
         data = []
-        for cluster in self.clusters:
-            documents = cluster.get_documents()
-            if len(documents) > 0:
-                data.append([doc.date for doc in documents.values()])
+        for i, cluster in enumerate(self.clusters):
+            cluster_sentiment = cluster.get_sentiment()
+            dates = [sentiment[0] for sentiment in cluster_sentiment]
+            counts = [sentiment[1] for sentiment in cluster_sentiment]
+            data[0][i] = dates 
+            data[1][i] = counts 
+            
         t = D3Timeline(data, cumulative=cumulative)
-        t.plot()
+        t.plot(url='timeline_sentiment.html')
 
     def plot_scatter(self):
         '''

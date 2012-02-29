@@ -2,36 +2,64 @@ Clustering results
 
 ***********************************************************
 Cluster0
-Most frequent terms:(u'block', 4) (u'bumbus', 4) (u'pleas', 4) (u'user', 4) (u'ell', 1) (u'exempl', 1) (u'peut', 1) (u'suivr', 1) (u'tunisien', 1) 
+Most frequent terms:(u'alexandria', 8) (u'district', 4) (u'join', 4) (u'poorer', 4) (u'protest', 4) (u'burn', 2) (u'common', 2) (u'demonstr', 2) (u'liberti', 2) (u'mediterranean', 2) 
+RT @quilombosfera: The Mediterranean is burning. Liberties and commons for all! #tunisia #lebanon #jan25 #egypt #palestinepapers #democracy #sidibouzid #europe
+RT @MiranianDilemma: Alexandria's poorer districts join in RT @Brian_Whit: Protest in Alexandria #jan25 http://yfrog.com/h3jidthj #Jan25
+RT @MiranianDilemma: Alexandria's poorer districts join in RT @Brian_Whit: Protest in Alexandria #jan25 http://yfrog.com/h3jidthj #Jan25
+RT @MiranianDilemma: Alexandria's poorer districts join in RT @Brian_Whit: Protest in Alexandria #jan25 http://yfrog.com/h3jidthj #Jan25
+RT @quilombosfera: The Mediterranean is burning. Liberties and commons for all! #tunisia #lebanon #jan25 #egypt #palestinepapers #democracy #sidibouzid #europe
+Demonstrators merge at appeals court #jan25
+RT @MiranianDilemma: Alexandria's poorer districts join in RT @Brian_Whit: Protest in Alexandria #jan25 http://yfrog.com/h3jidthj #Jan25
+RT @amnesty: #Jan25 demonstrations to mark new direction for #Egypt? http://ow.ly/3JowE
+RT @youssefsalah: I can't believe this working. Thank you God ! #cairo #egypt #jan25
+
+***********************************************************
+Cluster1
+Most frequent terms:(u'500', 1) (u'aljazeera', 1) (u'broadcast', 1) (u'current', 1) (u'ell', 1) (u'exempl', 1) (u'footag', 1) (u'live', 1) (u'peut', 1) (u'photo', 1) 
 RT @Naddah: L'#Egypte peut-elle suivre l'exemple tunisien ? http://j.mp/hEtMgc #Jan25 #SidiBouzid #Tunisie
+RT @razaniyat: AlJazeera LIVE broadcasts footage from #jan25 now
+RT @exiledsurfer: currently 500  photos from #cairo #jan25 #egypt #protest s on http://hashalbum.com/cairo  via @hashalbum
+
+***********************************************************
+Cluster2
+Most frequent terms:(u'block', 5) (u'bumbus', 5) (u'pleas', 5) (u'user', 5) 
 RT @JawazSafar: if bumbuser is blocked, User http://www.ustream.tv or http://www.flixwagon.com #Jan25 Please RT
 RT @JawazSafar: if bumbuser is blocked, User http://www.ustream.tv or http://www.flixwagon.com #Jan25 Please RT
 RT @Assemism: if bumbuser is blocked, User http://www.ustream.tv or http://www.flixwagon.com #Jan25 Please RT
 RT @Adel_Salib: RT @Assemism: if bumbuser is blocked, User http://www.ustream.tv or http://www.flixwagon.com #Jan25 Please RT
+RT @JawazSafar: if bumbuser is blocked, User http://www.ustream.tv or http://www.flixwagon.com #Jan25 Please RT
 
 ***********************************************************
-Cluster1
-Most frequent terms:(u'alexandria', 6) (u'district', 3) (u'join', 3) (u'poorer', 3) (u'protest', 3) 
-RT @MiranianDilemma: Alexandria's poorer districts join in RT @Brian_Whit: Protest in Alexandria #jan25 http://yfrog.com/h3jidthj #Jan25
-RT @MiranianDilemma: Alexandria's poorer districts join in RT @Brian_Whit: Protest in Alexandria #jan25 http://yfrog.com/h3jidthj #Jan25
-RT @MiranianDilemma: Alexandria's poorer districts join in RT @Brian_Whit: Protest in Alexandria #jan25 http://yfrog.com/h3jidthj #Jan25
+Cluster3
+Most frequent terms:(u'protest', 5) (u'consensu', 4) (u'scale', 4) (u'seem', 4) (u'today', 4) (u'twitter', 4) (u'unpreced', 4) (u'appar', 1) (u'live', 1) (u'still', 1) 
+RT @Brian_Whit: There seems to be a consensus on Twitter that the scale of today's protests in Egypt is unprecedented. #jan25
+RT @Brian_Whit: There seems to be a consensus on Twitter that the scale of today's protests in Egypt is unprecedented. #jan25
+Ustream apparently still working in Cairo, live video from #jan25 protests http://bit.ly/i17cUW
+RT @Brian_Whit: There seems to be a consensus on Twitter that the scale of today's protests in Egypt is unprecedented. #jan25
+RT @Brian_Whit: There seems to be a consensus on Twitter that the scale of today's protests in Egypt is unprecedented. #jan25
 
 ***********************************************************
-Cluster2
+Cluster4
 Most frequent terms:(u'3arabawi', 3) (u'aspx', 3) (u'aswan', 3) (u'continu', 3) (u'giza', 3) (u'mansoura', 3) 
 RT @3arabawy: #Protests continue in Cairo, Aswan, Mansoura and Giza http://english.ahram.org.eg/News/4773.aspx #Jan25
 RT @3arabawy: #Protests continue in Cairo, Aswan, Mansoura and Giza http://english.ahram.org.eg/News/4773.aspx #Jan25
 RT @3arabawy: #Protests continue in Cairo, Aswan, Mansoura and Giza http://english.ahram.org.eg/News/4773.aspx #Jan25
 
 ***********************************************************
+Cluster5
+Most frequent terms:(u'audio', 4) (u'dispatch', 4) (u'dramat', 4) (u'jack', 4) (u'protest', 4) (u'shenker', 4) 
+RT @Brian_Whit: Dramatic audio dispatch from Cairo protests by @hackneylad (Jack Shenker) http://t.co/ghEFdlj #25jan #Egypt
+RT @Brian_Whit: Dramatic audio dispatch from Cairo protests by @hackneylad (Jack Shenker) http://t.co/ghEFdlj #25jan #Egypt
+RT @Brian_Whit: Dramatic audio dispatch from Cairo protests by @hackneylad (Jack Shenker) http://t.co/ghEFdlj #25jan #Egypt
+RT @Hisham_G: RT @Brian_Whit: Dramatic audio dispatch from Cairo protests by @hackneylad (Jack Shenker) http://bit.ly/ftNdmV #25jan #Egypt
+
+***********************************************************
 Cluster-1
-Most frequent terms:(u'protest', 16) (u'el', 10) (u'86', 9) (u'peopl', 7) (u'polic', 6) (u'live', 5) (u'street', 5) (u'ya', 5) (u'go', 4) (u'!!', 3) 
+Most frequent terms:(u'protest', 27) (u'polic', 13) (u'egyptian', 12) (u'peopl', 12) (u'el', 10) (u'street', 10) (u'86', 9) (u'block', 9) (u'march', 9) (u'go', 7) 
 RT @Gsquare86: Ya 2ahlina ya 2alhlina bokra el dor hayegi 3alena #jan25 http://yfrog.com/h06ozmej
-RT @quilombosfera: The Mediterranean is burning. Liberties and commons for all! #tunisia #lebanon #jan25 #egypt #palestinepapers #democracy #sidibouzid #europe
 RT @Gsquare86: People joining ..but square is cordoned and police every where #jan25 shubra http://yfrog.com/h8fvzvrj
 I am so proud of egyptians today .. They are brave people #jan25
 RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25
-RT @Brian_Whit: There seems to be a consensus on Twitter that the scale of today's protests in Egypt is unprecedented. #jan25
 RT @mfatta7: Elderly women chanting against mubarak from balconies #jan25 alexandria
 RT @monaeltahawy: In past 8 days at least 12 #Egyptians set themselves on fire out of desperation: unemployment, poverty, corruption. #Jan25 #Egypt protest
 RT @NadiaE: Just heard my sis was temporarily placed in police truck with friends then released #jan25
@@ -58,10 +86,46 @@ RT @Gsquare86: Ya 2ahlina ya 2alhlina bokra el dor hayegi 3alena #jan25 http://y
 RT @mand0z: Aywa ya Mohandeseen RT @banbarkawi: Mohandeseen #egypt #jan25 http://plixi.com/p/72361570
 RT @Gsquare86: 7ad adna lel sakneen fel 2boor, 7ad aksa lel sakneen el ksoor #jan25 http://yfrog.com/hs29wzcj
 RT @Amatoun: RT @Alshaheeed: Protesters are giving flowers to Policemen. http://on.fb.me/8Z50YF #Jan25 #Egypt #EgyRevol via @SmithSofia
-RT @Brian_Whit: Dramatic audio dispatch from Cairo protests by @hackneylad (Jack Shenker) http://t.co/ghEFdlj #25jan #Egypt
-RT @Brian_Whit: There seems to be a consensus on Twitter that the scale of today's protests in Egypt is unprecedented. #jan25
 RT @ocicat_bengals: #25Jan #Egypt #solidarity http://on.fb.me/ha7dRY cordon broken,police is now surrounded by protesters for the first time in Egypt's history.
 #Egypt blocks #bambuser live-streaming site, #Dostour newspaper website. #Jan25
 RT @guardian_world: #Egypt braced for "day of revolution". Democracy activists, Islamists, workers & football fans demand reform http://t.co/U6F2smu #jan25
-RT @razaniyat: AlJazeera LIVE broadcasts footage from #jan25 now
 RT @Brian_Whit: What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25
+RT @Salamander: Thousands now marching in batal abdel aziz street .. March moved from nahya to there #jan25
+.@houssini has lots of #jan25 pics and is attempting to stream live at http://qik.com/Houssini (tho bandwidth is uncooperative)
+RT @monaeltahawy: RT @ashrafkhalil #Jan25 maybe 2000 strong march moving toward al Ahram (state-owned paper) building. Police following but not hindering yet
+RT @Dima_Khatib: There are about 50 thousand protesters reported to be on the streets of Cairo, in different demos, in different neighbourhoods #JAN25 #Egypt
+Egyptian ISPs seem to be illegally blocking websites again, collaborating with police despite no laws allowing internet censorship #jan25
+RT @Tharwacolamus: As expected, Egyptian authorities blocked several news and sharing websites to prevent access to videos and photos #jan25
+Had to walk to zamalek on 6 october bridge cause 15 may is blocked. Heading back to mohabdeseen. Allthe action is there. #jan25
+RT @monaeltahawy: I love how smaller #Cairo protests are heading towards each other to join forces. #Jan25 #Egypt
+RT @alaa: Egyptian ISPs seem to be illegally blocking websites again, collaborating with police despite no laws allowing internet censorship #jan25
+RT @FourYawkeyWay: #jan25 clear video out of #Egypt. Chanting, Egyptian flags. First day and already this turnout! 
+http://tinyurl.com/5ss3xwg
+RT @SamIDaouD: There seems 2 be less police in downtown now, downtown residents, u can all come down now #egypt #25jan
+RT @monaeltahawy: In past 8 days at least 12 #Egyptians set themselves on fire out of desperation: unemployment, poverty, corruption. #Jan25 #Egypt protest
+thousands of Egyptians are protesting in the streets against Mubarak right now watch videos http://bit.ly/fVRjga #egypt
+RT @ianinegypt: People leaving buses and cars to join protest. Roughly 2000 people. #egypt #jan25
+RT @kamal_nabil: Al Jazeera English reporter speaking about the demos on #Egypt streets: "scenes downtown Cairo has not witnessed since the 70s" #Jan25
+RT @Aouds: March met ayman nour and moving to ramses #jan25
+Police reajy gearing up now. Had to stand against wall as they stampeded #jan25
+Egyptian protesters, mobilized on social media & energized by Tunisia, plan "day of revolution" #jan25 http://nyti.ms/gaRUyr
+RT @ahmednaguib: Protesters, use Qik http://www.qik.com instead of bambuser. It's much better and supports lots of phones. #Jan25
+RT @FourYawkeyWay: #Jan25 video coming in faster now. people of all age groups rallied with #Tunisia's and #Egypt's flag.
+http://tinyurl.com/6yj4ph8
+RT @Ghafari: crowd definately in the thousands on #jan25 in #cairo #egypt and this is just ONE of the marches http://yfrog.com/h4owzlij
+RT @DinaBasnaly: RT @waelabbas it is now confirmed that bambuser.com is blocked in Egypt !!! use alternatives like qik.com #Jan25
+RT @jarkas: Hey ppl in egypt, to bypass the internet block in Linux, use "Tor" or "yourfreedom" http://bit.ly/dXs5LR  #jan25
+RT @monaeltahawy: #Egypt blocks #bambuser live-streaming site, #Dostour newspaper website. #Jan25
+RT @justicentric: About 10 thousand here at al batal ahmed abdelaziz in mohandesin #jan25
+RT @AlMasryAlYoum_E: Egypt govt security detains protesters in Cairo and Assiut http://ow.ly/3JLgX #25Jan #CollectiveProtestDay #Egypt
+RT @3effat: "To every Egyptian at home if you are ever when to do something for Egypt its fuckin NOW" a protester said #jan25
+Police are making a move to contain. Minor clashes breaking out. #egypt #jan25
+RT @Brian_Whit: One man versus the riot police, Cairo #jan25 http://twitpic.com/3t95uj
+RT @3arabawy: Protesters have taken over the nile corniche, http://english.ahram.org.eg/News/4773.aspx heading to 15 May bridge #Jan25
+RT @Salamander: I am so proud of egyptians today .. They are brave people #jan25
+RT @3arabawy: Protests in Aswan and Mansoura http://english.ahram.org.eg/News/4773.aspx #Jan25
+RT @ahmednaguib: Protesters, use Qik http://www.qik.com instead of bambuser. It's much better and supports lots of phones. #Jan25
+RT @3effat: Protesters are shaking the earth with their chants, I've never seen this in my life #jan25
+RT @3arabawy: Hundreds of protesters are marching in Mansoura, waving the Egyptian flags and banners calling for reform http://bit.ly/gn6Ss9 #Jan25
+RT @Tharwacolamus: Factoring all reports, there are about 50,000 people in Cairo streets at the moment spread out in different neighborhoods. Go, go go #jan25
+RT @seyyedreza: Protestors in Cairo have taken over the corniche http://english.ahram.org.eg/News/4773.aspx #jan25

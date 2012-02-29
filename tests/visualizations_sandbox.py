@@ -22,13 +22,11 @@ ws = WarehouseServer()
 
 class TestPlayground(unittest.TestCase):
     
-    #===========================================================================
-    # def test_matpotlib_timeline(self):
-    #    items = [item.date for item in ws.get_all_documents(type=EgyptTweet)]
-    #    t = Timeline(items)
-    #    t.plot()
-    #    t.show()
-    #===========================================================================
+    def test_matpotlib_timeline(self):
+        items = [item.date for item in ws.get_all_documents(type=EgyptTweet)]
+        t = Timeline(items)
+        t.plot()
+        t.show()
         
     def test_d3_timeline(self):
         items = [item.date for item in ws.get_all_documents(type=EgyptTweet)]

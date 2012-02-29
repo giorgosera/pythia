@@ -23,6 +23,6 @@ class Test(unittest.TestCase):
         
         nmfc.run(seed = 'random_vcol', method='nmf', rank=30, max_iter=65, display_N_tokens = 6, display_N_documents =10)
         nmfc.dump_clusters_to_file("nmf_with_tweets")
-        nmfc.plot_timeline(cumulative=True)
+        nmfc.plot_growth_timeline(cumulative=True)
 if __name__ == "__main__":
     unittest.main()

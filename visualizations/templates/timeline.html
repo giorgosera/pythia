@@ -28,7 +28,6 @@ path {
 <script src="../d3/d3.v2.js"></script>
 <script>
 var items = $items
-
 var series = []
 var formatDate = d3.time.format('%Y-%m-%d %H:%M:%S');
 for (var i=0; i<items.dates.length; i++){
@@ -37,7 +36,6 @@ for (var i=0; i<items.dates.length; i++){
 		series[i][j] = {date: formatDate.parse(items.dates[i][j]), price:items.counts[i][j]}
 	}
 }
-console.log(series);
 
 //var formatDateTest = d3.time.format("%b %Y");
 //series = [ 

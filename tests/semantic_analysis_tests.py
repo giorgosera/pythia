@@ -16,35 +16,31 @@ tweet7 = "I am so happy!"
 corpus = [tweet1, tweet2, tweet3, tweet4, tweet5, tweet6, tweet7]
 class Test(unittest.TestCase):
     
-#    def test_entity_extraction(self):
-#        tsa = TwitterSemanticAnalyser()
-#        calculated = tsa.extract_entities(tweet5)
-#        expected = [('Bob Jones', 'Person'), ('Bob', 'Person'), ('Egypt', 'Country')]
-#        self.assertEqual(expected, calculated)
-#       
-#    def test_sentiment_extraction(self):
-#        tsa = TwitterSemanticAnalyser()
-#        calculated_sad = tsa.extract_sentiment(tweet6)
-#        calculated_happy = tsa.extract_sentiment(tweet7)
-#        self.assertEqual("negative", calculated_sad)
-#        self.assertEqual("positive", calculated_happy)
-#       
-#    def test_extract_keywords(self):
-#        tsa = TwitterSemanticAnalyser()
-#        calculated = tsa.extract_keywords(tweet5)
-#        expected = ['Bob Jones', 'Egypt']
-#        self.assertEqual(expected, calculated) 
-#       
-#    def test_analysing_multiple_docs(self):
-#        tsa = TwitterSemanticAnalyser()
-#        calculated = tsa.analyse_corpus(corpus)
-#        expected = [([], 'positive', ['Gheblawi Beyond belief', 'Egypt interesting discussion', 'religious history', 'make-up', 'interesting']), ([], 'negative', ['Messi', 'News']), ([('retweet', 'FieldTerminology')], 'neutral', []), ([], 'positive', ['RT Beyond belief', 'Egypt interesting discussion', 'religious history', 'make-up', 'interesting']), ([('Bob Jones', 'Person'), ('Bob', 'Person'), ('Egypt', 'Country')], 'neutral', ['Bob Jones', 'Egypt']), ([], 'negative', []), ([], 'positive', ['happy'])]
-#        self.assertEquals(expected, calculated)
-    
-    def test_kati(self):
-        tokens = nltk.pos_tag(nltk.WordPunctTokenizer().tokenize(tweet1))
-        for p in nltk.ne_chunk(tokens):
-            print p
+    def test_entity_extraction(self):
+        tsa = TwitterSemanticAnalyser()
+        calculated = tsa.extract_entities(tweet5)
+        expected = [('Bob Jones', 'Person'), ('Bob', 'Person'), ('Egypt', 'Country')]
+        self.assertEqual(expected, calculated)
+       
+    def test_sentiment_extraction(self):
+        tsa = TwitterSemanticAnalyser()
+        calculated_sad = tsa.extract_sentiment(tweet6)
+        calculated_happy = tsa.extract_sentiment(tweet7)
+        self.assertEqual(('negative', '-0.200008'), calculated_sad)
+        self.assertEqual(('positive', '0.61373'), calculated_happy)
+       
+    def test_extract_keywords(self):
+        tsa = TwitterSemanticAnalyser()
+        calculated = tsa.extract_keywords(tweet5)
+        expected = ['Bob Jones', 'Egypt']
+        self.assertEqual(expected, calculated) 
+       
+    def test_analysing_multiple_docs(self):
+        tsa = TwitterSemanticAnalyser()
+        calculated = tsa.analyse_corpus(corpus)
+        expected = [([], ('positive', '0.0593345'), ['Gheblawi Beyond belief', 'Egypt interesting discussion', 'religious history', 'make-up', 'interesting']), ([], ('negative', '-0.31492'), ['Messi', 'News']), ([('retweet', 'FieldTerminology')], ('neutral', 0), []), ([], ('positive', '0.060677'), ['RT Beyond belief', 'Egypt interesting discussion', 'religious history', 'make-up', 'interesting']), ([('Bob Jones', 'Person'), ('Bob', 'Person'), ('Egypt', 'Country')], ('neutral', 0), ['Bob Jones', 'Egypt']), ([], ('negative', '-0.200008'), []), ([], ('positive', '0.61373'), ['happy'])]
+        self.assertEquals(expected, calculated)
+
          
         
 

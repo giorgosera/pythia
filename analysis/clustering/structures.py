@@ -3,8 +3,9 @@ Created on 29 Jan 2012
 
 @author: george
 '''
-import nltk, tools.utils
+import itertools, nltk, tools.utils, numpy
 from database.warehouse import WarehouseServer
+from analysis.semantic import TwitterSemanticAnalyser
 
 class Cluster(object):
     '''
@@ -68,7 +69,7 @@ class Cluster(object):
         
     def get_locations(self, N=1):
         '''
-        Returns the top N locations mentioned in the docs in this cluster.
+        Returns a list with the top N locations mentioned in the docs in this cluster.
         '''
         corpus = nltk.text.TextCollection([self.locations])
         return nltk.FreqDist(corpus).items()[:N]
@@ -94,12 +95,24 @@ class Cluster(object):
         '''
         pass
     
-    def get_sentiment(self):
+    def get_sentiment(self, cumulative=False):
         '''
-        Returns the sentiment of the cluster
+        Calculates the sentiment of the cluster. It returns 
+        a list of tuples (date, value) where date value is the accumulated sentiment
+        of that date.
         '''
-        pass
-        
+        emotional_rollercoaster = []
+        tsa = TwitterSemanticAnalyser()
+        for document in self.document_dict.values():
+            sentiment = tsa.extract_sentiment(' '.join(token for token in document.tokens))
+            emotional_rollercoaster.append( (document.date, sentiment) )
+
+        #It's important to sort this list otherwise itertools will npt work.
+        #The we group emotion scores by date. t[1][1] is the score of a document at time d.
+        x = sorted(emotional_rollercoaster)
+        grouped_emotions = [(d, sum([float(t[1][1]) for t in g])) for d, g in itertools.groupby(x, lambda x: x[0])]
+        return grouped_emotions
+            
     def get_collocations(self, n=2, N=5):
         '''
         Returns the top collocations of the cluster corpus 

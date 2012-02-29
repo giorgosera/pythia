@@ -51,7 +51,7 @@ class TwitterSemanticAnalyser(AbstractSemanticAnalyser):
         Extracts the main entities in this text.
         '''
         result = self.alchemy.TextGetRankedNamedEntities(text)     
-        entities = tools.utils.parse_result(result, "entity")
+        entities = tools.utils.parse_result(result, ["entity"])
         filtered_entities = self.filter_results(entities)
         return filtered_entities 
     
@@ -60,8 +60,8 @@ class TwitterSemanticAnalyser(AbstractSemanticAnalyser):
         Extracts the sentiment of this text.
         '''
         result = self.alchemy.TextGetTextSentiment(text);  
-        sentiment = tools.utils.parse_result(result, "docSentiment") 
-        filtered_sentiment = sentiment[0]['type']
+        sentiment = tools.utils.parse_result(result, ["docSentiment", "score"])
+        filtered_sentiment = (sentiment[0]['type'], sentiment[0]['score'] if sentiment[0]['type'] != "neutral" else 0)
         return filtered_sentiment
     
     def extract_keywords(self, text):
@@ -69,7 +69,7 @@ class TwitterSemanticAnalyser(AbstractSemanticAnalyser):
         Extracts important keywords in this text.
         '''
         result = self.alchemy.TextGetRankedKeywords(text);  
-        keywords = tools.utils.parse_result(result, "keyword")        
+        keywords = tools.utils.parse_result(result, ["keyword"])        
         filtered_keywords = self.filter_results(keywords, True)
         return filtered_keywords
     

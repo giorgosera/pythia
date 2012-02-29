@@ -6,12 +6,14 @@ Created on 14 Nov 2011
 
 This file contains useful functions used throughout the application.
 '''
-import re, math, chardet, bingtrans, enchant#!@UnresolvedImport
-from nltk.stem.porter import PorterStemmer #!@UnresolvedImport
+import re, math, chardet, bingtrans, enchant, itertools#!@UnresolvedImport
 import twitter_text#!@UnresolvedImport
 import AlchemyAPI#!@UnresolvedImport
+import numpy
+from matplotlib.dates import date2num#!@UnresolvedImport
 from lxml import etree#!@UnresolvedImport
 from StringIO import StringIO
+from nltk.stem.porter import PorterStemmer #!@UnresolvedImport
 
 ###########################################
 # GLOBALS                                #
@@ -136,7 +138,21 @@ def parse_result(result, type):
         else:
             text = elem.text
         object_dict[elem.tag] = text
-        if elem.tag == type:
+        if elem.tag in type:
             objects.append(object_dict)
             object_dict = {}
     return objects
+
+def aggregate_data(dates, cumulative):
+    '''
+    This method aggregates the dates into buckets and the buckets'
+    size depends on the desired resolution. i.e. if resolution is 
+    an hour then the dates belonging to the same day will fall in the 
+    same bucket. 
+    '''        
+    x = sorted([date2num(item) for item in dates]) 
+    grouped_dates = numpy.array([[d, len(list(g))] for d, g in itertools.groupby(x)])
+    dates, counts = grouped_dates.transpose()
+    if cumulative:
+        counts = counts.cumsum()
+    return dates, counts
