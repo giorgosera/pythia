@@ -66,7 +66,7 @@ class TestOrangeClustering(unittest.TestCase):
         oc = OrangeKmeansClusterer(k=4, ngram=1)
         oc.add_documents(items)
         oc.run("orange_clustering_test", pca=False)
-        #oc.plot_timeline(cumulative=True)
+        oc.plot_timeline(cumulative=True)
         #oc.plot_scatter()
         oc.dump_clusters_to_file("kmeans_with_tweets_orange")
         

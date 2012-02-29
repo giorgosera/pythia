@@ -6,7 +6,7 @@ Created on 29 Jan 2012
 import nltk, numpy, Orange#!@UnresolvedImport
 from tools.orange_utils import construct_orange_table, orange_pca, add_metas_to_table
 from collections import OrderedDict 
-from visualizations.graphs import Timeline
+from visualizations.graphs import MatplotlibTimeline, D3Timeline
 from visualizations.mds import MDS
 
 class AbstractClusterer(object):
@@ -121,12 +121,22 @@ class AbstractClusterer(object):
         function of time.
         '''
         assert self.clusters != []
+        #=======================================================================
+        # for cluster in self.clusters:
+        #    documents =  cluster.get_documents()
+        #    if len(documents) > 0:
+        #        t = MatplotlibTimeline([doc['date'] for doc in documents.values()], cumulative=cumulative)
+        #        t.plot()
+        # t.show()
+        #=======================================================================
+         
+        data = []
         for cluster in self.clusters:
-            documents =  cluster.get_documents()
+            documents = cluster.get_documents()
             if len(documents) > 0:
-                t = Timeline([doc['date'] for doc in documents.values()], cumulative=cumulative)
-                t.plot()
-        t.show()
+                data.append([doc.date for doc in documents.values()])
+        t = D3Timeline(data, cumulative=cumulative)
+        t.plot()
 
     def plot_scatter(self):
         '''

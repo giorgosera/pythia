@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+svg {
+  font: 10px sans-serif;
+}
+
+path {
+  fill: none;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.brush .extent {
+  stroke: #fff;
+  fill-opacity: .125;
+  shape-rendering: crispEdges;
+}
+
+</style>
+
+<body>
+<script src="../d3/d3.v2.js"></script>
+<script>
+var items = $items
+
+var series = []
+var formatDate = d3.time.format('%Y-%m-%d %H:%M:%S');
+for (var i=0; i<items.dates.length; i++){
+	series[i] = []
+	for (var j=0; j<items.dates[i].length; j++){
+		series[i][j] = {date: formatDate.parse(items.dates[i][j]), price:items.counts[i][j]}
+	}
+}
+console.log(series);
+
+//var formatDateTest = d3.time.format("%b %Y");
+//series = [ 
+//		   [{date: formatDateTest.parse("Apr 2007"), price: 1182.37}, {date: formatDateTest.parse("May 2007"), price: 1130.62},{ date: formatDateTest.parse("Jun 2007"),price: 1503.35},{ date: formatDateTest.parse("Jul 2007"),price: 1103.35}], 
+//    	   [{date: formatDateTest.parse("Apr 2007"), price: 1532.37}, {date: formatDateTest.parse("May 2007"), price: 1130.62},{ date: formatDateTest.parse("Jun 2007"),price: 1903.35},{ date: formatDateTest.parse("Jul 2007"),price: 803.35},{ date: formatDateTest.parse("Aug 2007"),price: 1803.35}],
+//    	   [{date: formatDateTest.parse("Apr 2007"), price: 132.37}, {date: formatDateTest.parse("May 2007"), price: 1290.62},{ date: formatDateTest.parse("Jun 2007"),price: 1703.35},{ date: formatDateTest.parse("Jul 2007"),price: 893.35},{ date: formatDateTest.parse("Aug 2007"),price: 1103.35}]
+//		   ]	 
+//console.log(series);		 
+
+var color = d3.scale.category20c();
+
+var margin = {top: 10, right: 10, bottom: 100, left: 40},
+    margin2 = {top: 430, right: 10, bottom: 20, left: 40},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom,
+    height2 = 500 - margin2.top - margin2.bottom;
+
+var x = d3.time.scale().range([0, width]),
+    x2 = d3.time.scale().range([0, width]),
+    y = d3.scale.linear().range([height, 0]),
+    y2 = d3.scale.linear().range([height2, 0]);
+
+var xAxis = d3.svg.axis().scale(x).orient("bottom"),
+    xAxis2 = d3.svg.axis().scale(x2).orient("bottom"),
+    yAxis = d3.svg.axis().scale(y).orient("left");
+
+var brush = d3.svg.brush()
+    .x(x2)
+    .on("brush", brush);
+
+var area = d3.svg.line()
+			 .x(function(d) { return x(d.date); })
+			 .y(function(d) { return y(d.price); })
+			 .interpolate("monotone");
+			 
+var area2 = d3.svg.line()
+    .x(function(d) { return x2(d.date); })
+    .y(function(d) { return y2(d.price); })
+    .interpolate("monotone");
+    
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom);
+
+svg.append("defs").append("clipPath")
+    .attr("id", "clip")
+    .append("rect")
+    .attr("width", width)
+    .attr("height", height);
+
+var focus = svg.append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var context = svg.append("g")
+    .attr("transform", "translate(" + margin2.left + "," + margin2.top + ")"); 
+
+//Find extent of x domain and the max value of y domain. Iterate over all extents and find the largest extent
+//x domain must be scaled according to the largest extent
+var maxx = d3.max(series[0].map(function(d) { return d.date; }));
+var minx = d3.min(series[0].map(function(d) { return d.date; }));
+var maxy = 0;
+for (var i=0; i<series.length; i++){
+	var temp_maxx = d3.max(series[i].map(function(d) { return d.date; }));
+	if (temp_maxx > maxx){
+		maxx = temp_maxx;
+	}
+	var temp_minx = d3.min(series[i].map(function(d) { return d.date; }));
+	if (temp_minx < minx){
+		minx = temp_minx;
+	}
+	var temp_maxy = d3.max(series[i].map(function(d) { return d.price; }));
+	if (temp_maxy > maxy){
+		maxy = temp_maxy;
+	}
+}
+console.log(maxx);
+console.log(minx);
+
+//Sets the x domain to be equal to the width of the extent	
+x.domain([minx, maxx]);
+y.domain([0, maxy]);
+x2.domain(x.domain());
+y2.domain(y.domain());
+
+//Appends the large chart
+focus.selectAll(".line")
+    .data(series)
+    .enter()
+    .append("path")
+    .attr("clip-path", "url(#clip)")
+    .attr("d", area)
+    .attr("stroke", function(d, i) {return color(i)})
+    .attr("stroke-width", 3);
+
+//Appends the x axis
+focus.append("g")
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + height + ")")
+    .call(xAxis);
+    
+//Appends the y axis
+focus.append("g")
+    .attr("class", "y axis")
+    .call(yAxis);
+
+//Appends the small chart
+context.selectAll(".line")
+    .data(series)
+    .enter()
+    .append("path")
+    .attr("d", area2)
+	.attr("stroke", function(d, i) {return color(i)});
+
+//Appends the x axis of the small chart
+context.append("g")
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + height2 + ")")
+    .call(xAxis2);
+
+//Appends the brush of the small chart
+context.append("g")
+    .attr("class", "x brush")
+    .call(brush)
+    .selectAll("rect")
+    .attr("y", -6)
+    .attr("height", height2);
+
+function brush() {
+  x.domain(brush.empty() ? x2.domain() : brush.extent());
+  focus.selectAll("path").attr("d", area);
+  focus.select(".x.axis").call(xAxis);
+}
+
+</script>
