@@ -146,7 +146,7 @@ class DBSCANClusterer(AbstractClusterer):
         self.debug = debug
         clusters = self.dbscan()
         self.split_documents(clusters)
-            
+        self._post_processing()    
         return clusters
     
     def split_documents(self, clusters):

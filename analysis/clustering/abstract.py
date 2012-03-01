@@ -10,27 +10,31 @@ from visualizations.graphs import MatplotlibTimeline, D3Timeline
 from visualizations.mds import MDS
 from tools.utils import aggregate_data
 from matplotlib.dates import num2date#!@UnresolvedImport
-
+from analysis.index import Index
+        
 class AbstractClusterer(object):
     '''
     This is the abstract clusterer and specialized clusterers
     must be derived from it. 
     '''
 
-    def __init__(self, ngram=1):
+    def __init__(self, ngram=1, filter_terms=False):
         '''
         Constructs a new cluster object
         '''
+        self.db_documents = None
         self.document_dict = OrderedDict()
         self.attributes = None
         self.td_matrix = None
         self.table_name = None
         self.clusters = []
+        self.filter_terms = filter_terms
         
     def add_documents(self, document_list):
         '''
         Adds a batch of new documents in the cluster structure.
         '''    
+        self.db_documents = document_list
         for document in document_list:
             self.add_document(document)
 
@@ -51,12 +55,43 @@ class AbstractClusterer(object):
         else:    
             raise Exception("Oops. No document with this ID was found.")       
         
+    def _filter_terms(self):
+        '''
+        Removes tokens that appear either too often or too rarely. It returns the corpus of 
+        filtered tokens and also changes the token and word_frequencies lists of each document
+        according to the filtered tokens.
+        '''
+        index = Index("kmeans_index")
+        index.add_documents(self.db_documents)
+        index.finalize()
+        filtered_terms = index.get_filtered_terms(lowestf=0.01, highestf=0.2)
+        
+        corpus = []
+        for id, document in self.document_dict.iteritems():
+            filtered_tokens = []
+            for token in document.tokens:
+                if token in filtered_terms:
+                    filtered_tokens.append(token)
+            
+            if len(filtered_tokens) == 0: #if all the tokens are removed then this document is worthless
+                self.document_dict.pop(id)
+            else: #if there are still tokens ammend the token list and the word frequencies list to include only the relevant tokens
+                self.document_dict[id].tokens = filtered_tokens
+                self.document_dict[id].word_frequencies = [item for item in self.document_dict[id].word_frequencies if item.word in filtered_tokens]
+                
+            corpus.append(filtered_tokens)
+        return corpus
+        
     def construct_term_doc_matrix(self, pca=False):
         '''
         Constructs a term-document matrix such that td_matrix[document][term] 
         contains the weighting score for the term in the document.
         '''
-        corpus = nltk.TextCollection([document.tokens for document in self.document_dict.values()])
+        if not self.filter_terms:    
+            corpus = nltk.TextCollection([document.tokens for document in self.document_dict.values()])
+        else:
+            corpus = nltk.TextCollection(self._filter_terms())
+            
         terms = list(set(corpus))
         data_rows = numpy.zeros([len(self.document_dict), len(set(corpus))])
         
@@ -150,7 +185,7 @@ class AbstractClusterer(object):
                 counts.append(t_counts)
             final_dates = dates
             final_counts = [count.tolist() for count in counts]
-            t = D3Timeline(final_dates, final_counts, cumulative=cumulative)
+            t = D3Timeline(final_dates, final_counts, meta, cumulative=cumulative)
             t.plot(url='timeline_growth.html')
             
     def plot_sentiment_timeline(self, cumulative=True, plot_method="d3"):
@@ -183,16 +218,15 @@ class AbstractClusterer(object):
         meta_col_name="cluster_id"
         table = add_metas_to_table(table, meta_col_name=meta_col_name)
 
-        instances = [doc for doc in range(self.td_matrix.shape[0])]
+        instances = []
         for cluster in self.clusters:
-            #For dbscan noise cluster
+            #A small hack for dbscan noise cluster. It's id is -1 and color scale is  wrong if -1
             if cluster.id == -1: cluster.id += len(self.clusters);
-            
             for doc_id in cluster.document_dict.iterkeys():
                 index = clusterer_document_list.index(doc_id)
                 inst = Orange.data.Instance(table.domain, list(self.td_matrix[index]))
                 inst[meta_col_name] = str(cluster.id)
-                instances[index] = inst
+                instances.insert(index, inst)
 
         #we have a table with the clusters ids as metas.                
         table.extend(instances)        
@@ -202,6 +236,19 @@ class AbstractClusterer(object):
             classes_list.append(c.id)
 
         mds.plot(classes_list=classes_list, class_col_name="cluster_id")
+        
+    def _post_processing(self):
+        '''
+        Post processing takes place after the clustering algorithm has finished execution.
+        It removes the clusters that are not important. 
+        TODO: Find a way to define importance. For now remove clusters with either too much or too few docs.
+        '''
+        total_docs = len(self.document_dict.keys())
+        for cluster in self.clusters:
+            size = cluster.get_size()
+            if size > total_docs*0.2 or size < total_docs*0.1:
+                print cluster.id
+                self.clusters.remove(cluster)            
             
     def run(self):
         raise NotImplementedError('run is not implemented.')

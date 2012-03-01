@@ -1,0 +1,450 @@
+
+***********************************************************
+Cluster0
+[u'fuck', u'tv', u'coverag', u'live', u'still', u'download']
+(0.30212757668264439, u'RT @Ghafari: Fuck tvs. No live coverage of #jan25?')
+(0.30212757668264439, u'Fuck tvs. No live coverage of #jan25?')
+(0.17858173495945331, u'Still downloading qik, FUCK! until then, photos #jan25    http://twitpic.com/3t9mk2')
+(0.17858173495945331, u'RT @tarekshalaby: Still downloading qik, FUCK! until then, photos #jan25    http://twitpic.com/3t9mk2')
+(0.12935345907235024, u'Confirmed: @TEDataEgypt currently blocking dostor.org & bambuser.com FUCK YOU MOTHERFUCKERS! #Jan25 #Egypt #Censorship')
+(0.1200312717358183, u'@3arabawy cyber activisme live on tv http://bit.ly/dMBOrM #sidibouzid #Jan25')
+(0.11836588601560923, u'RT @estr4ng3d: Confirmed: @TEDataEgypt currently blocking dostor.org & bambuser.com FUCK YOU MOTHERFUCKERS! #Jan25 #Egypt #Censorship')
+(0.042834211557640708, u'RT @monaeltahawy: For overall coverage of #Egypt protests vs unemployment, torture, corruption and dictatorship look for #Jan25')
+(0.042173232255956435, u'RT @CVirus: Respectful protesters .. lots of women among us .. lots of news coverage #Jan25  our number is still MADLY increasing #fb')
+(0.038586036918994537, u"RT @ahmednaguib: Protesters, use Qik http://www.qik.com instead of bambuser. It's much better and supports lots of phones. #Jan25")
+
+
+***********************************************************
+Cluster1
+[u'mark', u'direct', u'new', u'demonstr', u'big', u'merg']
+(0.26141180264874442, u'RT @snarkybat: RT @amnesty: #Jan25 demonstrations to mark new direction for #Egypt? http://ow.ly/3JowE v @Mondoweiss')
+(0.26141180264874442, u'RT @snarkybat RT @amnesty: #Jan25 demonstrations to mark new direction for #Egypt? http://ow.ly/3JowE v @Mondoweiss')
+(0.26141180264874442, u'RT @amnesty: #Jan25 demonstrations to mark new direction for #Egypt? http://ow.ly/3JowE')
+(0.26141180264874442, u'RT @amnesty: #Jan25 demonstrations to mark new direction for #Egypt? http://ow.ly/3JowE')
+(0.26141180264874442, u'RT @amnesty: #Jan25 demonstrations to mark new direction for #Egypt? http://ow.ly/3JowE')
+(0.26141180264874442, u'RT @SmithSofia: RT @snarkybat RT @amnesty: #Jan25 demonstrations to mark new direction for #Egypt? http://ow.ly/3JowE v @Mondoweiss')
+(0.17937864840192611, u'Big day in Cairo: RT @amnesty #Jan25 demonstrations to mark new direction for #Egypt? http://ow.ly/3JowE')
+(0.04139300155391417, u'RT @NadiaE: Demonstrators merge at appeals court #jan25')
+(0.04139300155391417, u'Demonstrators merge at appeals court #jan25')
+(0.030566950008825373, u'Videos show huge demonstrations in Cairo http://youtu.be/o-wZpF6P7sQ http://youtu.be/Aq1B5C5IRa8 http://youtu.be/GsD3dLKpO3E #Jan25')
+
+
+***********************************************************
+Cluster2
+[u'mediterranean', u'liberti', u'common', u'burn', u'etc', u'ya']
+(0.37016104085273921, u'RT @quilombosfera: The Mediterranean is burning. Liberties and commons for all! #tunisia #lebanon #jan25 #egypt #palestinepapers #democracy #sidibouzid #europe')
+(0.37016104085273921, u'RT @quilombosfera: The Mediterranean is burning. Liberties and commons for all! #tunisia #lebanon #jan25 #egypt #palestinepapers #democracy #sidibouzid #europe')
+(0.37016104085273921, u'RT @quilombosfera: The Mediterranean is burning. Liberties and commons for all! #tunisia #lebanon #jan25 #egypt #palestinepapers #democracy #sidibouzid #europe')
+(2.2204460492503131e-16, u'ya mubarak ya mubarak el so3dyia fi entzarak...bokra hosni yero7 3ala jeddah  #jan25 http://yfrog.com/gziaerj')
+(2.2204460492503131e-16, u'thousands of Egyptians are protesting in the streets against Mubarak right now watch videos http://bit.ly/fVRjga #egypt')
+(2.2204460492503131e-16, u'picture of protesters Chanting, Masr http://yfrog.com/h2m2nzsj #Jan25 #egypt via @ircpresident @exiledsurfer')
+(2.2204460492503131e-16, u'la marcia di protesta in Egitto #Jan25 #Egypt http://twitpic.com/3t9crj http://twitpic.com/3t99op')
+(2.2204460492503131e-16, u'if you want follow what happens in egypte at the the moment go for hasthag #jan25 and follow @monaeltahawy @mfatta7 @ashrafkhali @hackneylad')
+(2.2204460492503131e-16, u'ashrafkhalil ashraf khalil\n#Jan25 the central security guys look miserable. Crowd making A major push against them. Happy Police Day guys!')
+(2.2204460492503131e-16, u'Ya moghees ya moghees koba takhod el khasees ..koba takhod el warees #jan25 http://yfrog.com/h2xx9cvj')
+
+
+***********************************************************
+Cluster3
+[u'never', u'seen', u'flood', u'dokki', u'nation', u'meant']
+(0.29386638251835251, u'RT @UrdunMubdi3: RT @Ghafari: Floods that I never seen in dokki now #jan25 http://yfrog.com/gzkf4hnj')
+(0.29386638251835251, u'RT @Ghafari: Floods that I never seen in dokki now #jan25 http://yfrog.com/gzkf4hnj')
+(0.29386638251835251, u'RT @Ghafari: Floods that I never seen in dokki now #jan25 http://yfrog.com/gzkf4hnj')
+(0.29386638251835251, u'Floods that I never seen in dokki now #jan25 http://yfrog.com/gzkf4hnj')
+(0.12172720184007042, u'RT @TravellerW: The national anthem has never meant more. #25jan')
+(0.098101374160151453, u'"Floods  of peoplethat I never seen b4 in dokki now #egypt #jan25"http://yfrog.com/gzkf4hnj  picture via @Ghafari')
+(0.086241916308692643, u"RT @3effat: Protesters are shaking the earth with their chants, I've never seen this in my life #jan25")
+(0.086241916308692643, u"RT @3effat: Protesters are shaking the earth with their chants, I've never seen this in my life #jan25")
+(0.086241916308692643, u"RT @3effat: Protesters are shaking the earth with their chants, I've never seen this in my life #jan25")
+(0.063974263029198078, u'RT @monasosh: I know this will sound corny, but I have never felt like this is my country more than now #jan25')
+
+
+***********************************************************
+Cluster4
+[u'govt', u'detain', u'assiut', u'secur', u'protest', u'plainscloth']
+(0.18917313190017274, u'RT @AlMasryAlYoum_E: Egypt govt security detains protesters in Cairo and Assiut http://ow.ly/3JLgX #25Jan #CollectiveProtestDay #Egypt')
+(0.18917313190017274, u'RT @AlMasryAlYoum_E: Egypt govt security detains protesters in Cairo and Assiut http://ow.ly/3JLgX #25Jan #CollectiveProtestDay #Egypt')
+(0.18917313190017274, u'RT @AlMasryAlYoum_E: Egypt govt security detains protesters in Cairo and Assiut http://ow.ly/3JLgX #25Jan #CollectiveProtestDay #Egypt')
+(0.18917313190017274, u'RT @AlMasryAlYoum_E: Egypt govt security detains protesters in Cairo and Assiut http://ow.ly/3JLgX #25Jan #CollectiveProtestDay #Egypt')
+(0.18917313190017274, u'RT @AlMasryAlYoum_E: Egypt govt security detains protesters in Cairo and Assiut http://ow.ly/3JLgX #25Jan #CollectiveProtestDay #Egypt')
+(0.18917313190017274, u'RT @AlMasryAlYoum_E: Egypt govt security detains protesters in Cairo and Assiut http://ow.ly/3JLgX #25Jan #CollectiveProtestDay #Egypt')
+(0.18917313190017274, u'RT @AlMasryAlYoum_E: Egypt govt security detains protesters in Cairo and Assiut http://ow.ly/3JLgX #25Jan #CollectiveProtestDay #Egypt')
+(0.18917313190017274, u'RT @AlMasryAlYoum_E: Egypt govt security detains protesters in Cairo and Assiut http://ow.ly/3JLgX #25Jan #CollectiveProtestDay #Egypt')
+(0.18917313190017274, u'RT @AlMasryAlYoum_E: Egypt govt security detains protesters in Cairo and Assiut http://ow.ly/3JLgX #25Jan #CollectiveProtestDay #Egypt')
+(0.18917313190017274, u'RT @AlMasryAlYoum_E: Egypt govt security detains protesters in Cairo and Assiut http://ow.ly/3JLgX #25Jan #CollectiveProtestDay #Egypt')
+
+
+***********************************************************
+Cluster5
+[u'user', u'pleas', u'bumbus', u'block', u'use', u'confirm']
+(0.22223225293535007, u'RT @JawazSafar: if bumbuser is blocked, User http://www.ustream.tv or http://www.flixwagon.com #Jan25 Please RT')
+(0.22223225293535007, u'RT @JawazSafar: if bumbuser is blocked, User http://www.ustream.tv or http://www.flixwagon.com #Jan25 Please RT')
+(0.22223225293535007, u'RT @JawazSafar: if bumbuser is blocked, User http://www.ustream.tv or http://www.flixwagon.com #Jan25 Please RT')
+(0.22223225293535007, u'RT @JawazSafar: if bumbuser is blocked, User http://www.ustream.tv or http://www.flixwagon.com #Jan25 Please RT')
+(0.22223225293535007, u'RT @JawazSafar: if bumbuser is blocked, User http://www.ustream.tv or http://www.flixwagon.com #Jan25 Please RT')
+(0.22223225293535007, u'RT @Assemism: if bumbuser is blocked, User http://www.ustream.tv or http://www.flixwagon.com #Jan25 Please RT')
+(0.22223225293535007, u'RT @Assemism: if bumbuser is blocked, User http://www.ustream.tv or http://www.flixwagon.com #Jan25 Please RT')
+(0.22223225293535007, u'RT @Adel_Salib: RT @Assemism: if bumbuser is blocked, User http://www.ustream.tv or http://www.flixwagon.com #Jan25 Please RT')
+(0.012775848516363047, u'RT @ricoshocks: @waelabbas .. Confirmed http://bambuser.com/ is blocked in #Egypt now, as protesters using it to stream live. #egypt #Jan25')
+(0.012775848516363047, u'RT @ricoshocks: @waelabbas .. Confirmed http://bambuser.com/ is blocked in #Egypt now, as protesters using it to stream live. #egypt #Jan25')
+
+
+***********************************************************
+Cluster6
+[u'follow', u'want', u'tweet', u'updat', u'3effat', u'egypt']
+(0.36534594477127569, u'Want to follow #jan25 tweets in Egypt, follow @alaa')
+(0.18161182173652479, u'if you want follow what happens in egypte at the the moment go for hasthag #jan25 and follow @monaeltahawy @mfatta7 @ashrafkhali @hackneylad')
+(0.14923219709257626, u'RT @DailyNewsEgypt: Follow @ianinegypt @heba_afahmy @ElFoulio & @3effat for updates on #jan25 protests.')
+(0.11811348807706919, u'RT @Salamander: To follow updates and information from Egy Defense Front visit  http://egyprotest-defense.blogspot.com #Egypt #Jan25')
+(0.075251079161031811, u'RT @exiledsurfer: link to collection of photos i have tweeted so far on #25jan #egypt demonstrations  http://bit.ly/efD0Hx')
+(0.05797992407530584, u'RT @monaeltahawy: Follow him in #Cairo RT @ashrafkhalil #Jan25 grandma with maybe 4 teeth chanting along happily in boulaq as marchers pass')
+(0.04646779158574723, u'V @octavianasr Unrest in MiddleEast: live updates courtesy of @guardian http://gu.com/p/2mjej/tw < Latest from #Lebanon, #Tunisia & #Egypt')
+(0.036131330798877342, u'RT @exiledsurfer: To Follow any blocked website in #egypt today about #jan25 go to http://j.mp/uaPMT Anonymouse.com and enter the websit ...')
+(0.036131330798877342, u'RT @exiledsurfer: To Follow any blocked website in #egypt today about #jan25 go to http://j.mp/uaPMT Anonymouse.com and enter the websit ...')
+(0.036131330798877342, u'RT @exiledsurfer: To Follow any blocked website in #egypt today about #jan25 go to http://j.mp/uaPMT Anonymouse.com and enter the websit ...')
+
+
+***********************************************************
+Cluster7
+[u'alexandria', u'skeptic', u'fact', u'revolut', u'poorer', u'district']
+(0.27719894274689844, u"RT @mfatta7: Alexandria's revolution is now a fact :) no skepticism #jan25 http://yfrog.com/h4yz1tj")
+(0.27719894274689844, u"RT @mfatta7: Alexandria's revolution is now a fact :) no skepticism #jan25 http://yfrog.com/h4yz1tj")
+(0.27719894274689844, u"RT @mfatta7: Alexandria's revolution is now a fact :) no skepticism #jan25 http://yfrog.com/h4yz1tj")
+(0.27719894274689844, u"RT @mfatta7: Alexandria's revolution is now a fact :) no skepticism #jan25 http://yfrog.com/h4yz1tj")
+(0.27719894274689844, u"Alexandria's revolution is now a fact :) no skepticism #jan25 http://yfrog.com/h4yz1tj")
+(0.096077934100576176, u"RT @MiranianDilemma: Alexandria's poorer districts join in RT @Brian_Whit: Protest in Alexandria #jan25 http://yfrog.com/h3jidthj #Jan25")
+(0.096077934100576176, u"RT @MiranianDilemma: Alexandria's poorer districts join in RT @Brian_Whit: Protest in Alexandria #jan25 http://yfrog.com/h3jidthj #Jan25")
+(0.096077934100576176, u"RT @MiranianDilemma: Alexandria's poorer districts join in RT @Brian_Whit: Protest in Alexandria #jan25 http://yfrog.com/h3jidthj #Jan25")
+(0.096077934100576176, u"RT @MiranianDilemma: Alexandria's poorer districts join in RT @Brian_Whit: Protest in Alexandria #jan25 http://yfrog.com/h3jidthj #Jan25")
+(0.038404320467209277, u'RT @Cyberela: RT @ianinegypt: protesters calling for same revolution as in #tunisia Police have yet to challenge them. #jan25 #egypt')
+
+
+***********************************************************
+Cluster8
+[u'video', u'flag', u'first', u'day', u'alreadi', u'turnout']
+(0.14768089383823457, u'RT @FourYawkeyWay: #jan25 clear video out of #Egypt. Chanting, Egyptian flags. First day and already this turnout! \nhttp://tinyurl.com/5ss3xwg')
+(0.14768089383823457, u'RT @FourYawkeyWay: #jan25 clear video out of #Egypt. Chanting, Egyptian flags. First day and already this turnout! \nhttp://tinyurl.com/5ss3xwg')
+(0.14768089383823457, u'RT @FourYawkeyWay: #jan25 clear video out of #Egypt. Chanting, Egyptian flags. First day and already this turnout! \nhttp://tinyurl.com/5ss3xwg')
+(0.14768089383823457, u'RT @FourYawkeyWay: #jan25 clear video out of #Egypt. Chanting, Egyptian flags. First day and already this turnout! \nhttp://tinyurl.com/5 ...')
+(0.14768089383823457, u'RT @FourYawkeyWay: #jan25 clear video out of #Egypt. Chanting, Egyptian flags. First day and already this turnout! \nhttp://tinyurl.com/5 ...')
+(0.14768089383823457, u'RT @FourYawkeyWay: #jan25 clear video out of #Egypt. Chanting, Egyptian flags. First day and already this turnout! \nhttp://tinyurl.com/5 ...')
+(0.14073593560108477, u"RT @FourYawkeyWay: #Jan25 video coming in faster now. people of all age groups rallied with #Tunisia's and #Egypt's flag.\nhttp://tinyurl.com/6yj4ph8")
+(0.14073593560108477, u"RT @FourYawkeyWay: #Jan25 video coming in faster now. people of all age groups rallied with #Tunisia's and #Egypt's flag.\nhttp://tinyurl.com/6yj4ph8")
+(0.14073593560108477, u"RT @FourYawkeyWay: #Jan25 video coming in faster now. people of all age groups rallied with #Tunisia's and #Egypt's flag.\nhttp://tinyurl.com/6yj4ph8")
+(0.14073593560108477, u"RT @FourYawkeyWay: #Jan25 video coming in faster now. people of all age groups rallied with #Tunisia's and #Egypt's flag.\nhttp://tinyurl.com/6yj4ph8")
+
+
+***********************************************************
+Cluster9
+[u'atlant', u'shadi', u'imposs', u'hamid', u'dilemma', u'freedom']
+(0.26595961271458995, u"RT @Tharwacolamus: After #Tunisia: #Obama's Impossible Dilemma in #Egypt - Shadi Hamid - The Atlantic | http://goo.gl/bj3ZP #jan25 #sidi ...")
+(0.26595961271458995, u"After #Tunisia: #Obama's Impossible Dilemma in #Egypt - Shadi Hamid - The Atlantic | http://goo.gl/bj3ZP #jan25 #sidibouzid #egypt")
+(0.21558567721503616, u"After #Tunisia: #Obama's Impossible Dilemma in #Egypt - Shadi Hamid - The Atlantic | Coveting Freedom | http://goo.gl/bj3ZP #jan25")
+(0.078625064844597831, u'#Jan25 worthwhile article in the Atlantic about #Obama and what will be his reaction to #Egypt protests. http://tinyurl.com/4p7c63n')
+(0.037587851462989437, u'#Egypt Dilemma of Day: Should Grandma Get Home Safe or Join the Protests? http://tinyurl.com/63e5r8h #sidibouzid  #Jan25')
+(0.0039966171637492937, u"RT @Gsquare86: I am looking at shubra's residents reaction from the balconies and they r chanting with us #jan25 http://yfrog.com/h29m5hrj")
+(0.0039966171637492937, u"RT @Gsquare86: I am looking at shubra's residents reaction from the balconies and they r chanting with us #jan25 http://yfrog.com/h29m5hrj")
+(0.0012937330419768461, u'RT @3effat: "To every Egyptian at home if you are ever when to do something for Egypt its fuckin NOW" a protester said #jan25')
+(0.0012937330419768461, u'RT @3effat: "To every Egyptian at home if you are ever when to do something for Egypt its fuckin NOW" a protester said #jan25')
+(0.0012937330419768461, u'RT @3effat: "To every Egyptian at home if you are ever when to do something for Egypt its fuckin NOW" a protester said #jan25')
+
+
+***********************************************************
+Cluster10
+[u'part', u'multimedi', u'feel', u'!!!', u'world', u'internet']
+(0.26816712618652022, u'RT @exiledsurfer: @monaeltahawy pretty damn amazing to witness this #jan25 over the internet, multimedially. I feel part of it. #solidarity with the world !!!')
+(0.26816712618652022, u'RT @exiledsurfer: @monaeltahawy pretty damn amazing to witness this #jan25 over the internet, multimedially. I feel part of it. #solidarity with the world !!!')
+(0.26816712618652022, u'RT @exiledsurfer: @monaeltahawy pretty damn amazing to witness this #jan25 over the internet, multimedially. I feel part of it. #solidarity with the world !!!')
+(0.26816712618652022, u'RT @exiledsurfer: @monaeltahawy pretty damn amazing to witness this #jan25 over the internet, multimedially. I feel part of it. #solidarity with the world !!!')
+(0.036950983851567996, u'CBC News - World - Eygptian poverty protesters denounce Mubarek http://t.co/bAsBXCo #Jan25 #Egypt')
+(0.035373312886943932, u'RT @DinaBasnaly: RT @waelabbas it is now confirmed that bambuser.com is blocked in Egypt !!! use alternatives like qik.com #Jan25')
+(0.034057415702146362, u"Egyptian activists inspired by Tunisia for 'day of wrath' - Telegraph http://bit.ly/fvD0yy we inspire the world #sidibouzid  #25jan")
+(0.030672556796050715, u'I am so in an #egypt state of mind today, #jan25. as a westerner i am damn proud of the arab world. When will we in the west do the same?')
+(0.027499974947127782, u'Thought world will be watching this time, w/all the advance warning, but Nooo! Who needs it anyway. Onward heroes, to liberation #jan25')
+(0.027499974947127782, u'RT @Tharwacolamus: Thought world will be watching this time, w/all the advance warning, but Nooo! Who needs it anyway. Onward heroes, to liberation #jan25')
+
+
+***********************************************************
+Cluster11
+[u'unpreced', u'scale', u'consensu', u'twitter', u'seem', u'today']
+(0.20904900484829048, u"RT @Brian_Whit: There seems to be a consensus on Twitter that the scale of today's protests in Egypt is unprecedented. #jan25")
+(0.20904900484829048, u"RT @Brian_Whit: There seems to be a consensus on Twitter that the scale of today's protests in Egypt is unprecedented. #jan25")
+(0.20904900484829048, u"RT @Brian_Whit: There seems to be a consensus on Twitter that the scale of today's protests in Egypt is unprecedented. #jan25")
+(0.20904900484829048, u"RT @Brian_Whit: There seems to be a consensus on Twitter that the scale of today's protests in Egypt is unprecedented. #jan25")
+(0.20904900484829048, u"RT @Brian_Whit: There seems to be a consensus on Twitter that the scale of today's protests in Egypt is unprecedented. #jan25")
+(0.20904900484829048, u"RT @Brian_Whit: There seems to be a consensus on Twitter that the scale of today's protests in Egypt is unprecedented. #jan25")
+(0.067740516346304763, u"RT @octavianasr: Twitter today belongs 2 #Egypt's opposition & their #Jan25 campaign mirroring demos on the (cont) http://tl.gd/8ci2o3")
+(0.066311278194995785, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25")
+(0.066311278194995785, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25")
+(0.046675758783820492, u"Twitter today belongs 2 #Egypt's opposition & their #Jan25 campaign mirroring demos on the ground demanding economic social political reform")
+
+
+***********************************************************
+Cluster12
+[u'kobri', u'el', u'fire', u'dokki', u'ya', u'86']
+(0.25770319649251594, u'RT @tarekshalaby: Kobri el dokki on fire! #jan25 http://twitpic.com/3t9kf0')
+(0.25770319649251594, u'RT @tarekshalaby: Kobri el dokki on fire! #jan25 http://twitpic.com/3t9kf0')
+(0.25770319649251594, u'RT @tarekshalaby: Kobri el dokki on fire! #jan25 http://twitpic.com/3t9kf0')
+(0.25770319649251594, u'Kobri el dokki on fire! #jan25 http://twitpic.com/3t9kf0')
+(0.096975162973119505, u'RT @Sandmonkey: Everyone moved to kobry eldokki. Thousands there. #jan25')
+(0.096975162973119505, u'Everyone moved to kobry eldokki. Thousands there. #jan25')
+(0.085325429053916935, u'Crossing medan el galaa #jan25  http://twitpic.com/3t9p5a')
+(0.075365077290515434, u'Adi el nazam ibn el 7aram!! 10million 3atel #jan25 bataaal http://yfrog.com/h37y1thj')
+(0.071152414598656372, u'RT: @Gsquare86: Adi el nazam ibn el 7aram!! 10million 3atel #jan25 bataaal http://yfrog.com/h37y1thj')
+(0.071152414598656372, u'RT: @Gsquare86: Adi el nazam ibn el 7aram!! 10million 3atel #jan25 bataaal http://yfrog.com/h37y1thj')
+
+
+***********************************************************
+Cluster13
+[u'balconi', u'alexandria', u'elderli', u'mubarak', u'women', u'chant']
+(0.21090533461673652, u'RT @mfatta7: Elderly women chanting against mubarak from balconies #jan25 alexandria')
+(0.21090533461673652, u'RT @mfatta7: Elderly women chanting against mubarak from balconies #jan25 alexandria')
+(0.21090533461673652, u'RT @Hooriali: "@mfatta7: Elderly women chanting against mubarak from balconies  #jan25 alexandria"')
+(0.18720248605958498, u'#Jan25 RT @TravellerW: Saw that woman in a balcony raising her hands in prayer #Egypt http://twitpic.com/3t9nbk')
+(0.17890694431270224, u'Saw that woman in a balcony raising her hands in prayer. Thank you. #25jan #Egypt http://twitpic.com/3t9nbk')
+(0.078943591314805384, u"RT @MiranianDilemma: Alexandria's poorer districts join in RT @Brian_Whit: Protest in Alexandria #jan25 http://yfrog.com/h3jidthj #Jan25")
+(0.078943591314805384, u"RT @MiranianDilemma: Alexandria's poorer districts join in RT @Brian_Whit: Protest in Alexandria #jan25 http://yfrog.com/h3jidthj #Jan25")
+(0.078943591314805384, u"RT @MiranianDilemma: Alexandria's poorer districts join in RT @Brian_Whit: Protest in Alexandria #jan25 http://yfrog.com/h3jidthj #Jan25")
+(0.078943591314805384, u"RT @MiranianDilemma: Alexandria's poorer districts join in RT @Brian_Whit: Protest in Alexandria #jan25 http://yfrog.com/h3jidthj #Jan25")
+(0.078080174741615285, u"RT @Gsquare86: I am looking at shubra's residents reaction from the balconies and they r chanting with us #jan25 http://yfrog.com/h29m5hrj")
+
+
+***********************************************************
+Cluster14
+[u'polic', u'make', u'move', u'minor', u'contain', u'clash']
+(0.19307093675979564, u'RT @ianinegypt: Police are making a move to contain. Minor clashes breaking out. #egypt #jan25')
+(0.19307093675979564, u'RT @ianinegypt: Police are making a move to contain. Minor clashes breaking out. #egypt #jan25')
+(0.19307093675979564, u'RT @ianinegypt: Police are making a move to contain. Minor clashes breaking out. #egypt #jan25')
+(0.19307093675979564, u'RT @ianinegypt: Police are making a move to contain. Minor clashes breaking out. #egypt #jan25')
+(0.19307093675979564, u'Police are making a move to contain. Minor clashes breaking out. #egypt #jan25')
+(0.093645507226896726, u'RT @uriohau: RT @brian_whit: One man versus the riot police, Cairo #jan25 http://twitpic.com/3t95uj')
+(0.093645507226896726, u'RT @Brian_Whit: One man versus the riot police, Cairo #jan25 http://twitpic.com/3t95uj')
+(0.078368130109183629, u'RT @eigensinn83 Whos gonna make THIS #remix? : Up and #Anon  Up and at them  #frown....  http://bit.ly/D7CXk #opTunisia #Egypt #PanArabia')
+(0.067389573611476558, u'RT @ashrafkhalil: #Jan25 crowds overwhelming police cordons outside courthouse downtown!')
+(0.067389573611476558, u'RT @ashrafkhalil: #Jan25 crowds overwhelming police cordons outside courthouse downtown!')
+
+
+***********************************************************
+Cluster15
+[u'aspx', u'aswan', u'mansoura', u'3arabawi', u'giza', u'continu']
+(0.24753731784772351, u'RT @3arabawy: #Protests continue in Cairo, Aswan, Mansoura and Giza http://english.ahram.org.eg/News/4773.aspx #Jan25')
+(0.24753731784772351, u'RT @3arabawy: #Protests continue in Cairo, Aswan, Mansoura and Giza http://english.ahram.org.eg/News/4773.aspx #Jan25')
+(0.24753731784772351, u'RT @3arabawy: #Protests continue in Cairo, Aswan, Mansoura and Giza http://english.ahram.org.eg/News/4773.aspx #Jan25')
+(0.24753731784772351, u'RT @3arabawy: #Protests continue in Cairo, Aswan, Mansoura and Giza http://english.ahram.org.eg/News/4773.aspx #Jan25')
+(0.24753731784772351, u'RT @3arabawy: #Protests continue in Cairo, Aswan, Mansoura and Giza http://english.ahram.org.eg/News/4773.aspx #Jan25')
+(0.19918485921413315, u'RT @3arabawy: Protests in Aswan and Mansoura http://english.ahram.org.eg/News/4773.aspx #Jan25')
+(0.19180963158934045, u'RT @seyyedreza: Protestors in Cairo have taken over the corniche http://english.ahram.org.eg/News/4773.aspx #jan25')
+(0.19180963158934045, u'RT @seyyedreza: Protestors in Cairo have taken over the corniche http://english.ahram.org.eg/News/4773.aspx #jan25')
+(0.086445130788225077, u'RT @3arabawy: Protesters have taken over the nile corniche, http://english.ahram.org.eg/News/4773.aspx heading to 15 May bridge #Jan25')
+(0.08595229721523634, u'RT @3arabawy: Protesters on the Nile Cornich are chanting "Tunis! Tunis!"  http://english.ahram.org.eg/News/4773.aspx #Jan25 #Egypt')
+
+
+***********************************************************
+Cluster16
+[u'live', u'long', u'stream', u'tunisia', u'updat', u'site']
+(0.28650666550909126, u'Long live Tunisia! Long Live Egypt! #sidibouzid #Jan25')
+(0.24145554486397153, u'RT @3arabawy: Long live Tunisia! Long Live Egypt! #sidibouzid #Jan25')
+(0.11273208097214119, u'RT @barrysmit: Live stream video from the demonstrations #jan25 #Egypt http://qik.com/wa7edmenmasr #freedom #democracy')
+(0.11273208097214119, u'Live stream video from the demonstrations #jan25 #Egypt http://qik.com/wa7edmenmasr #freedom #democracy')
+(0.10745908824970217, u'RT @Mahasneh: Live stream of Egyptian demonstrations #Jan25 http://www.ustream.tv/channel/righter#utm_campaign=unknown')
+(0.10509392718177336, u'V @octavianasr Unrest in MiddleEast: live updates courtesy of @guardian http://gu.com/p/2mjej/tw < Latest from #Lebanon, #Tunisia & #Egypt')
+(0.10434298963299923, u'RT @razaniyat: AlJazeera LIVE broadcasts footage from #jan25 now')
+(0.077723366629751892, u'Live streaming http://www.ustream.tv/channel/righter#utm_campaign=twitter.com&utm_source=2372037&utm_medium=social #jan25')
+(0.077313241646140646, u'.@houssini has lots of #jan25 pics and is attempting to stream live at http://qik.com/Houssini (tho bandwidth is uncooperative)')
+(0.074724181572852405, u'RT @monaeltahawy: #Egypt blocks #bambuser live-streaming site, #Dostour newspaper website. #Jan25')
+
+
+***********************************************************
+Cluster17
+[u'soldier', u'amaz', u'call', u'join', u'demonstr', u'shabab']
+(0.20792268630755129, u'RT @ocicat_bengals: RT @TravellerW: Demonstrators calling on soldiers to join them. This is AMAZING. #25jan http://twitpic.com/3t9mhg #s ...')
+(0.20792268630755129, u'RT @TravellerW: Demonstrators calling on soldiers to join them. This is AMAZING. #25jan http://twitpic.com/3t9mhg #solidarity')
+(0.20792268630755129, u'RT @TravellerW: Demonstrators calling on soldiers to join them. This is AMAZING. #25jan http://twitpic.com/3t9mhg')
+(0.20792268630755129, u'RT @TravellerW: Demonstrators calling on soldiers to join them. This is AMAZING. #25jan http://twitpic.com/3t9mhg')
+(0.20792268630755129, u'RT @TravellerW: Demonstrators calling on soldiers to join them. This is AMAZING. #25jan http://twitpic.com/3t9mhg')
+(0.20792268630755129, u'RT @TravellerW: Demonstrators calling on soldiers to join them. This is AMAZING. #25jan http://twitpic.com/3t9mhg')
+(0.20792268630755129, u'RT @TravellerW: Demonstrators calling on soldiers to join them. This is AMAZING. #25jan http://twitpic.com/3t9mhg')
+(0.14988241256706472, u'RT @3arabawy: GO SHABAB! RT: @TravellerW: Demonstrators calling on soldiers to join them. This is AMAZING. #25jan http://twitpic.com/3t9mhg')
+(0.14988241256706472, u'RT @3arabawy: GO SHABAB! RT: @TravellerW: Demonstrators calling on soldiers to join them. This is AMAZING. #25jan http://twitpic.com/3t9mhg')
+(0.14988241256706472, u'RT @3arabawy: GO SHABAB! RT: @TravellerW: Demonstrators calling on soldiers to join them. This is AMAZING. #25jan http://twitpic.com/3t9mhg')
+
+
+***********************************************************
+Cluster18
+[u'st', u'tahrir', u'traffic', u'impact', u'stop', u'attaba']
+(0.20720974674534567, u'RT @Ghafari: Now in tahrir st. Stopped traffic. Now impact #jan25 http://yfrog.com/h0xm2jgj')
+(0.20720974674534567, u'RT @Ghafari: Now in tahrir st. Stopped traffic. Now impact #jan25 http://yfrog.com/h0xm2jgj')
+(0.20720974674534567, u'Now in tahrir st. Stopped traffic. Now impact #jan25 http://yfrog.com/h0xm2jgj')
+(0.20052966320940771, u'RT @norashalaby Occupying 26th July st. Of to attaba after http://yfrog.com/gyzu1fuj #Cairo #jan25')
+(0.18005558982466466, u'RT @norashalaby: Occupying 26th July st. Of to attaba after http://yfrog.com/gyzu1fuj #Egypt #Jan25')
+(0.099518541483026524, u'RT @Ghafari: picture of thousands of protesters In tahrir st #jan25 #egypt #cairo  http://yfrog.com/gzqnkxej')
+(0.083229244006031877, u'Thousands march through Gamet El Dowal St., El-Batal Ahmad St. and now on Tahrir St., heading to Tahrir Square. #jan25')
+(0.083229244006031877, u'RT @DailyNewsEgypt: Thousands march through Gamet El Dowal St., El-Batal Ahmad St. and now on Tahrir St., heading to Tahrir Square. #jan25')
+(0.057488553455303244, u'More than 10 thousand protesters are marching to Tahrir determined not to stop whatever happens #jan25')
+(0.054037825432699353, u'RT @3effat: More than 10 thousand protesters are marching to Tahrir determined not to stop whatever happens #jan25')
+
+
+***********************************************************
+Cluster19
+[u'brave', u'proud', u'peopl', u'egyptian', u'today', u'solidar']
+(0.23774174970942288, u'RT @Salamander: I am so proud of egyptians today .. They are brave people #jan25')
+(0.23774174970942288, u'RT @Salamander: I am so proud of egyptians today .. They are brave people #jan25')
+(0.23774174970942288, u'RT @Salamander: I am so proud of egyptians today .. They are brave people #jan25')
+(0.23774174970942288, u'RT @Salamander: I am so proud of egyptians today .. They are brave people #jan25')
+(0.23774174970942288, u'RT @Salamander: I am so proud of egyptians today .. They are brave people #jan25')
+(0.23774174970942288, u'I am so proud of egyptians today .. They are brave people #jan25')
+(0.10572587598102368, u'RT @razaniyat: Solidarity with brave Egyptian ppl from Damascus #jan25. When will I ever stop envying you?')
+(0.10572587598102368, u'RT @razaniyat: Solidarity with brave Egyptian ppl from Damascus #jan25. When will I ever stop envying you?')
+(0.10572587598102368, u'RT @razaniyat: Solidarity with brave Egyptian ppl from Damascus #jan25. When will I ever stop envying you?')
+(0.071828533526977323, u'RT @iRevolt: In solidarity with brave Egyptians who will begin protesting today against the totalitarian,pharaonic regime of Hosni Mubarak. #Jan25')
+
+
+***********************************************************
+Cluster20
+[u'pictur', u'chang', u'shout', u'art', u'honour', u'particip']
+(0.18840931335157957, u'RT @monaeltahawy: RT @LaurenBohn: picture of protesters Shouting "Change." #Jan25 #Cairo #egypt http://twitpic.com/3t9jto')
+(0.18840931335157957, u'RT @LaurenBohn: picture of protesters Shouting "Change." #Jan25 #Cairo #egypt http://twitpic.com/3t9jto')
+(0.18840931335157957, u'RT @LaurenBohn: picture of protesters Shouting "Change." #Jan25 #Cairo #egypt http://twitpic.com/3t9jto')
+(0.18840931335157957, u'RT @LaurenBohn: picture of protesters Shouting "Change." #Jan25 #Cairo #egypt http://twitpic.com/3t9jto')
+(0.1671340469146482, u'What a honour for me to participate w/my art in the #Jan25 protests in #Egypt')
+(0.1671340469146482, u'RT @CarlosLatuff: What a honour for me to participate w/my art in the #Jan25 protests in #Egypt')
+(0.11886962136107983, u'RT @CarlosLatuff: Quanta honra p/mim participar c/minha arte dos protestos d #Jan25 no #Egito http://yfrog.com/f/h0krefrj/')
+(0.11886962136107983, u'RT @CarlosLatuff: Quanta honra p/mim participar c/minha arte dos protestos d #Jan25 no #Egito http://yfrog.com/f/h0krefrj/')
+(0.11886962136107983, u'Quanta honra p/mim participar c/minha arte dos protestos d #Jan25 no #Egito http://yfrog.com/f/h0krefrj/')
+(0.071777749529058521, u'picture of protesters Chanting, Masr http://yfrog.com/h2m2nzsj #Jan25 #egypt via @ircpresident @exiledsurfer')
+
+
+***********************************************************
+Cluster21
+[u'way', u'forward', u'"\'', u'real', u'wait', u'someth']
+(0.28464563601561721, u'RT @nadinetoukan: Egypt, only way out is forward! "@arwasm It\'s real #jan25 http://yfrog.com/h4v7yyj')
+(0.28464563601561721, u'RT @nadinetoukan: Egypt, only way out is forward! "@arwasm It\'s real #jan25 http://yfrog.com/h4v7yyj')
+(0.28464563601561721, u'RT @nadinetoukan: Egypt, only way out is forward! "@arwasm It\'s real #jan25 http://yfrog.com/h4v7yyj')
+(0.28464563601561721, u'RT @naccaratojf: RT @NadineToukan: Egypt, only way out is forward! "@arwasm It\'s real #jan25 http://yfrog.com/h4v7yyj')
+(0.033960687322030621, u'RT @Sandmonkey: Huge demo going to tahrir #jan25 shit just got real')
+(0.031654502832226407, u"RT @monaeltahawy: Amazing pictures of protesters bridge towards Opera House, Cairo RT @arwasm It's real #jan25 http://yfrog.com/h4v7yyj")
+(0.031654502832226407, u"RT @dominiquerdr: RT @monaeltahawy: Amazing pictures of protesters bridge towards Opera House, Cairo RT @arwasm It's real #jan25 http://yfrog.com/h4v7yyj")
+(0.02980200644484635, u"RT @Alshaheeed: If you are in Cairo and you were waiting for something to happen to go to the protest. It's real. Time now to go. #Jan25 #Egypt")
+(0.02980200644484635, u"RT @Alshaheeed: If you are in Cairo and you were waiting for something to happen to go to the protest. It's real. Time now to go. #Jan25 #Egypt")
+(0.02980200644484635, u"RT @Alshaheeed: If you are in Cairo and you were waiting for something to happen to go to the protest. It's real. Time now to go. #Jan25 #Egypt")
+
+
+***********************************************************
+Cluster22
+[u'prepar', u'gora', u'bedouin', u'sinai', u'airport', u'near']
+(0.16879965616249573, u'Sinai Bedouins prepare for protest near al-Gora airport http://ow.ly/3JLpw #25Jan #CollectiveProtestDay #Egypt')
+(0.16879965616249573, u'RT @ircpresident: #Jan25 RT @AlMasryAlYoum_E: Sinai Bedouins prepare for protest near al-Gora airport http://ow.ly/3JLpw')
+(0.16879965616249573, u'RT @AlMasryAlYoum_E: Sinai Bedouins prepare for protest near al-Gora airport http://ow.ly/3JLpw #25Jan #CollectiveProtestDay #Egypt')
+(0.16879965616249573, u'RT @AlMasryAlYoum_E: Sinai Bedouins prepare for protest near al-Gora airport http://ow.ly/3JLpw #25Jan #CollectiveProtestDay #Egypt')
+(0.16879965616249573, u'RT @AlMasryAlYoum_E: Sinai Bedouins prepare for protest near al-Gora airport http://ow.ly/3JLpw #25Jan #CollectiveProtestDay #Egypt')
+(0.16879965616249573, u'RT @AlMasryAlYoum_E: Sinai Bedouins prepare for protest near al-Gora airport http://ow.ly/3JLpw #25Jan #CollectiveProtestDay #Egypt')
+(0.16879965616249573, u'RT @AlMasryAlYoum_E: Sinai Bedouins prepare for protest near al-Gora airport http://ow.ly/3JLpw #25Jan #CollectiveProtestDay #Egypt')
+(0.16879965616249573, u'RT @AlMasryAlYoum_E: Sinai Bedouins prepare for protest near al-Gora airport http://ow.ly/3JLpw #25Jan #CollectiveProtestDay #Egypt')
+(0.16879965616249573, u'RT @AlMasryAlYoum_E: Sinai Bedouins prepare for protest near al-Gora airport http://ow.ly/3JLpw #25Jan #CollectiveProtestDay #Egypt')
+(0.16879965616249573, u'RT @AlMasryAlYoum_E: Sinai Bedouins prepare for protest near al-Gora airport http://ow.ly/3JLpw #25Jan #CollectiveProtestDay #Egypt')
+
+
+***********************************************************
+Cluster23
+[u'dispatch', u'audio', u'dramat', u'shenker', u'jack', u'protest']
+(0.2005828514390928, u'RT @Hisham_G: RT @Brian_Whit: Dramatic audio dispatch from Cairo protests by @hackneylad (Jack Shenker) http://bit.ly/ftNdmV #25jan #Egypt')
+(0.2005828514390928, u'RT @Brian_Whit: Dramatic audio dispatch from Cairo protests by @hackneylad (Jack Shenker) http://t.co/ghEFdlj #25jan #Egypt')
+(0.2005828514390928, u'RT @Brian_Whit: Dramatic audio dispatch from Cairo protests by @hackneylad (Jack Shenker) http://t.co/ghEFdlj #25jan #Egypt')
+(0.2005828514390928, u'RT @Brian_Whit: Dramatic audio dispatch from Cairo protests by @hackneylad (Jack Shenker) http://t.co/ghEFdlj #25jan #Egypt')
+(0.2005828514390928, u'RT @Brian_Whit: Dramatic audio dispatch from Cairo protests by @hackneylad (Jack Shenker) http://t.co/ghEFdlj #25jan #Egypt')
+(0.2005828514390928, u'RT @Brian_Whit: Dramatic audio dispatch from Cairo protests by @hackneylad (Jack Shenker) http://t.co/ghEFdlj #25jan #Egypt')
+(0.2005828514390928, u'RT @Brian_Whit: Dramatic audio dispatch from Cairo protests by @hackneylad (Jack Shenker) http://t.co/ghEFdlj #25jan #Egypt')
+(0.19699598599302884, u'RT @guardian_world: Dramatic audio dispatch from Cairo protests from @hackneylad  http://t.co/ghEFdlj #25jan #Egypt #sidbouzid')
+(0.19699598599302884, u'RT @guardian_world: Dramatic audio dispatch from Cairo protests from @hackneylad  http://t.co/ghEFdlj #25jan #Egypt #sidbouzid')
+(0.026080117750777298, u'RT @3effat: Protesters are beneath october bridge, security is over the bridge watching, numbers are increasing dramatically #jan25')
+
+
+***********************************************************
+Cluster24
+[u'current', u'500', u'photo', u'via', u'download', u'qik']
+(0.36434275319699155, u'RT @exiledsurfer: currently 500  photos from #cairo #jan25 #egypt #protest s on http://hashalbum.com/cairo  via @hashalbum')
+(0.36434275319699155, u'RT @exiledsurfer: currently 500  photos from #cairo #jan25 #egypt #protest s on http://hashalbum.com/cairo  via @hashalbum')
+(0.074766586500178867, u'Still downloading qik, FUCK! until then, photos #jan25    http://twitpic.com/3t9mk2')
+(0.074766586500178867, u'RT @tarekshalaby: Still downloading qik, FUCK! until then, photos #jan25    http://twitpic.com/3t9mk2')
+(0.07429830332666805, u'RT @exiledsurfer: link to collection of photos i have tweeted so far on #25jan #egypt demonstrations  http://bit.ly/efD0Hx')
+(0.055547112044219672, u"#egypt's protesters show #solidarity with #sidibouzid on #jan25 in #cairo #egypt. Excellent pic:  http://yfrog.com/h3h3cij  via @monasosh")
+(0.049951726307775515, u'RT @3effat: Photo of protesters in Gam3et el dowal st #jan25 http://yfrog.com/gy8bbhj')
+(0.047216355322793321, u'picture of protesters Chanting, Masr http://yfrog.com/h2m2nzsj #Jan25 #egypt via @ircpresident @exiledsurfer')
+(0.042100748024087135, u'#Mahalla, northern #Egypt, #Jan25 protest is looking good via @rassdwehda')
+(0.040646386561352721, u'RT @weltenbuerger1: Live updates of #Egypt protest via http://english.ahram.org.eg/News/4773.aspx  #Jan25')
+
+
+***********************************************************
+Cluster25
+[u'websit', u'block', u'com', u'enter', u'anonymous', u'site']
+(0.13751136775929002, u'RT @exiledsurfer: To Follow any blocked website in #egypt today about #jan25 go to http://j.mp/uaPMT Anonymouse.com and enter the websit ...')
+(0.13751136775929002, u'RT @exiledsurfer: To Follow any blocked website in #egypt today about #jan25 go to http://j.mp/uaPMT Anonymouse.com and enter the websit ...')
+(0.13751136775929002, u'RT @exiledsurfer: To Follow any blocked website in #egypt today about #jan25 go to http://j.mp/uaPMT Anonymouse.com and enter the websit ...')
+(0.13751136775929002, u'RT @exiledsurfer: To Follow any blocked website in #egypt today about #jan25 go to http://j.mp/uaPMT Anonymouse.com and enter the websit ...')
+(0.13204775887910206, u'To Follow any blocked website in #egypt today about #jan25 go to http://j.mp/uaPMT Anonymouse.com and enter the website url  #anonymous')
+(0.13204775887910206, u'RT @exiledsurfer: To Follow any blocked website in #egypt today about #jan25 go to http://j.mp/uaPMT Anonymouse.com and enter the website url  #anonymous')
+(0.13204775887910206, u'RT @exiledsurfer: To Follow any blocked website in #egypt today about #jan25 go to http://j.mp/uaPMT Anonymouse.com and enter the website url  #anonymous')
+(0.115217313167518, u'RT @monaeltahawy: #Egypt blocks #bambuser live-streaming site, #Dostour newspaper website. #Jan25')
+(0.115217313167518, u'RT @monaeltahawy: #Egypt blocks #bambuser live-streaming site, #Dostour newspaper website. #Jan25')
+(0.115217313167518, u'RT @monaeltahawy: #Egypt blocks #bambuser live-streaming site, #Dostour newspaper website. #Jan25')
+
+
+***********************************************************
+Cluster26
+[u'jazeera', u'mubash', u'al', u'tune', u'video', u'show']
+(0.24451680203662296, u'Tune On Al Jazeera Mubasher Now #Jan25')
+(0.19920431222082818, u'RT @rThursday: People! Tune in to al-jazeera mubasher #Jan25')
+(0.16582776135219399, u'RT @exiledsurfer: RT @Fady_D: Videos of the protest on Al-Jazeera Mubasher now #jan25 #egypt')
+(0.16582776135219399, u'RT @Fady_D: Videos of the protest on Al-Jazeera Mubasher now #jan25 #egypt')
+(0.14470665499037227, u'RT @ahmednaguib: Goosebumps! Al Jazeera Mubasher is showing a video from Tahrir Square. #Jan25')
+(0.14470665499037227, u'RT @ahmednaguib: Goosebumps! Al Jazeera Mubasher is showing a video from Tahrir Square. #Jan25')
+(0.14470665499037227, u'Goosebumps! Al Jazeera Mubasher is showing a video from Tahrir Square. #Jan25')
+(0.10605845153556133, u'The Al-Jazeera Arabic is FINALLY showing some video footage! #Jan25')
+(0.10034496719365894, u'RT @Dima_Khatib: Historic day in #Egypt, says Al Jazeera reporter in Cairo #JAN25')
+(0.10034496719365894, u'RT @Dima_Khatib: Historic day in #Egypt, says Al Jazeera reporter in Cairo #JAN25')
+
+
+***********************************************************
+Cluster27
+[u'wow', u'bump', u'know', u'everyon', u'eldokki', u'sound']
+(0.42523342050432938, u'RT @sarrahsworld: Bumping into everyone I know.  Wow wow wow #jan25')
+(0.42523342050432938, u'Bumping into everyone I know.  Wow wow wow #jan25')
+(0.036019869668533003, u'RT @monasosh: I know this will sound corny, but I have never felt like this is my country more than now #jan25')
+(0.036019869668533003, u'I know this will sound corny, but I have never felt like this is my country more than now #jan25')
+(0.031749504330283194, u'RT @Sandmonkey: Everyone moved to kobry eldokki. Thousands there. #jan25')
+(0.031749504330283194, u'Everyone moved to kobry eldokki. Thousands there. #jan25')
+(0.024521889102361659, u'RT @Sandmonkey: Gam3et eldowal is where everyone is going. Ahmedabdelaziz is shutdown protesters. This is insane. #jan25')
+(0.024521889102361659, u'RT @Sandmonkey: Gam3et eldowal is where everyone is going. Ahmedabdelaziz is shutdown protesters. This is insane. #jan25')
+(0.024521889102361659, u'Gam3et eldowal is where everyone is going. Ahmedabdelaziz is shutdown protesters. This is insane. #jan25')
+(0.01912685152234998, u'RT @Sandmonkey: Police just arrested everyone in cilantro. Took their ids and phone. We barely got out." #jan25')
+
+
+***********************************************************
+Cluster28
+[u'public', u'prosecutor', u'offic', u'ramsi', u'street', u'near']
+(0.22651620747560261, u'RT: @Salamander: At ramsis street near public prosecutor office #jan25 http://twitpic.com/3t9jty')
+(0.22651620747560261, u'RT @Salamander: At ramsis street near public prosecutor office #jan25 http://twitpic.com/3t9jty #Egypt')
+(0.22651620747560261, u'RT @Salamander: At ramsis street near public prosecutor office #jan25 http://twitpic.com/3t9jty')
+(0.22651620747560261, u'RT @Salamander: At ramsis street near public prosecutor office #jan25 http://twitpic.com/3t9jty')
+(0.22651620747560261, u'RT @Salamander: At ramsis street near public prosecutor office #jan25 #egypt #cairo http://twitpic.com/3t9jty')
+(0.22651620747560261, u'At ramsis street near public prosecutor office #jan25 http://twitpic.com/3t9jty')
+(0.062495126647190924, u"RT @basboussa1: http://twitpic.com/3t9h47 - Wa7ed itnin isha3b I'll masri fei ramsis street #jan25")
+(0.056123484647018135, u'RT @pcmsma: RT @Gsquare86: Thugs are sweeping streets after us #jan25 http://yfrog.com/h4na3xvj')
+(0.056123484647018135, u'RT @Gsquare86: Thugs are sweeping streets after us #jan25 http://yfrog.com/h4na3xvj')
+(0.051096746773263223, u'RT @IranNewsNow: Another pic of protesters in streets of #Cairo #Egypt http://yfrog.com/h4na3xvj')
+
+
+***********************************************************
+Cluster29
+[u'wa7d', u'ged3an', u'fen', u'etnan', u'shubra', u'86']
+(0.31059841841952374, u'Wa7d etnan ged3an shubra fen #jan25 http://yfrog.com/h2fopdj')
+(0.27840792664443437, u'RT @Gsquare86: Wa7d etnan ged3an shubra fen #jan25 http://yfrog.com/h2fopdj')
+(0.27840792664443437, u'RT @Gsquare86: Wa7d etnan ged3an shubra fen #jan25 http://yfrog.com/h2fopdj')
+(0.27840792664443437, u'RT @Gsquare86: Wa7d etnan ged3an shubra fen #jan25 http://yfrog.com/h2fopdj')
+(0.069386647306480656, u'RT @znewdealz: Ca bouge an Egypte ... RT @lindsayscarroll: http://yfrog.com/gzdctclj toward shubra  #jan25')
+(0.055839678215862623, u'RT @Mabusharkh: @Gsquare86: Shubra ..el sha3b ethan el sha3b etzal  #jan25 http://yfrog.com/h5tqmadj')
+(0.051962575351987381, u"RT @Gsquare86: I am looking at shubra's residents reaction from the balconies and they r chanting with us #jan25 http://yfrog.com/h29m5hrj")
+(0.051962575351987381, u"RT @Gsquare86: I am looking at shubra's residents reaction from the balconies and they r chanting with us #jan25 http://yfrog.com/h29m5hrj")
+(0.048668169454261723, u'RT @Gsquare86: People joining ..but square is cordoned and police every where #jan25 shubra http://yfrog.com/h8fvzvrj')
+(0.048668169454261723, u'RT @Gsquare86: People joining ..but square is cordoned and police every where #jan25 shubra http://yfrog.com/h8fvzvrj')
+

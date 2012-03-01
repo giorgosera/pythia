@@ -32,6 +32,7 @@ class OrangeKmeansClusterer(AbstractKmeansClusterer):
         
         km = Orange.clustering.kmeans.Clustering(table, self.k)        #initialization= Orange.clustering.kmeans.init_hclustering(n=100), distance =  Orange.distance.instances.PearsonRConstructor
         self.split_documents(km)
+        self._post_processing()
         return km
     
     def split_documents(self, km):
