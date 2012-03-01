@@ -59,9 +59,13 @@ class TwitterSemanticAnalyser(AbstractSemanticAnalyser):
         '''
         Extracts the sentiment of this text.
         '''
-        result = self.alchemy.TextGetTextSentiment(text);  
-        sentiment = tools.utils.parse_result(result, ["docSentiment", "score"])
-        filtered_sentiment = (sentiment[0]['type'], sentiment[0]['score'] if sentiment[0]['type'] != "neutral" else 0)
+        try:
+            result = self.alchemy.TextGetTextSentiment(text);  
+            sentiment = tools.utils.parse_result(result, ["docSentiment", "score"])
+            filtered_sentiment = (sentiment[0]['type'], sentiment[0]['score'] if sentiment[0]['type'] != "neutral" else 0)
+        except Exception, e:
+            print e
+            filtered_sentiment = ("neutral", 0)
         return filtered_sentiment
     
     def extract_keywords(self, text):

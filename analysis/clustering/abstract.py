@@ -132,14 +132,18 @@ class AbstractClusterer(object):
                     t.plot()
             t.show()
         elif plot_method=="d3":        
-            data = []
+            data = []; meta = []
             for cluster in self.clusters:
                 documents = cluster.get_documents()
+                cluster.analyse()
                 if len(documents) > 0:
                     data.append([doc.date for doc in documents.values()])
-                    
-            dates = []
-            counts = []
+                    meta.append({"Terms" :cluster.get_most_frequent_terms(N=10), 
+                                 "Authors": [len(cluster.get_authors())], #should be wrapped in a list
+                                 "Locations": cluster.get_locations(N=5),
+                                 "Mentioned Persons": cluster.get_persons(N=5)})
+
+            dates = []; counts = []
             for d in data:
                 t_dates, t_counts = aggregate_data(d, cumulative)
                 dates.append([num2date(date).strftime('%Y-%m-%d %H:%M:%S') for date in t_dates])
@@ -155,15 +159,16 @@ class AbstractClusterer(object):
         function of time.
         '''
         assert self.clusters != []
-        data = []
+        dates = []
+        counts = []
         for i, cluster in enumerate(self.clusters):
             cluster_sentiment = cluster.get_sentiment()
-            dates = [sentiment[0] for sentiment in cluster_sentiment]
-            counts = [sentiment[1] for sentiment in cluster_sentiment]
-            data[0][i] = dates 
-            data[1][i] = counts 
+            dates.append([sentiment[0] for sentiment in cluster_sentiment])
+            counts.append([sentiment[1] for sentiment in cluster_sentiment])
+        final_dates = dates 
+        final_counts = counts 
             
-        t = D3Timeline(data, cumulative=cumulative)
+        t = D3Timeline(final_dates, final_counts, cumulative=cumulative)
         t.plot(url='timeline_sentiment.html')
 
     def plot_scatter(self):

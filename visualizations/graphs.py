@@ -17,15 +17,15 @@ class Timeline(object):
     as a function of time. 
     '''
 
-    def __init__(self, dates, counts, cumulative):
+    def __init__(self, dates, counts, meta=None, cumulative=False):
         '''
-        Constructor method. The data should provide  a datetime field. 
-        If data is already aggregated then pass a list with the 
-        element being a list of the dates and the second one a list
-        of counts. Otherwise, if not aggregated pass a list of the dates.
+        Constructs a timeline object. It takes as input the 
+        dates (x-axis), the counts (y-axis) and optionally 
+        a meta dictionary which contains meta information for the plot.
         '''
         self.dates = dates
         self.counts = counts
+        self.meta = meta
 
     def plot(self):
         raise NotImplementedError('plot is not implemented.')
@@ -41,10 +41,10 @@ class D3Timeline(Timeline):
         passed to a javascript file which then renders the timeline. In order
         to see the result navigate to your browser to the url specified as input.  
         '''
-        json_data = {'dates': self.dates, "counts": self.counts}
+        json_data = {'dates': self.dates, "counts": self.counts, 'meta': self.meta}
         dthandler = lambda obj: obj.isoformat() if isinstance(obj, datetime.datetime) else None
         template = os.path.join(os.getcwd(), '../visualizations/templates/timeline.html')
-        
+
         html = Template(open(template).read())
         html = html.substitute(items=json.dumps(json_data, default=dthandler))
         f = open(os.path.join(os.getcwd(), '../visualizations/templates', os.path.basename('../visualizations/templates/'+url)), 'w')

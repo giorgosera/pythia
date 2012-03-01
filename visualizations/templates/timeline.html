@@ -22,12 +22,36 @@ path {
   shape-rendering: crispEdges;
 }
 
+.meta-column {
+	float: right;
+	margin-right: 400px;
+	width: 500px;
+    height: 500px;
+    border: solid black 1px;
+    background-color: #FFEFD5;
+}
+
+.timeline-column {
+	float: left;
+}
+
+.title {
+	display: block;
+	color: black;
+	font-weight: bold;
+}
+
 </style>
 
 <body>
+<div id="left-col" class="timeline-column"></div>
+<div id="meta-box" class="meta-column"></div>
+
 <script src="../d3/d3.v2.js"></script>
 <script>
 var items = $items
+
+var meta = items.meta
 var series = []
 var formatDate = d3.time.format('%Y-%m-%d %H:%M:%S');
 for (var i=0; i<items.dates.length; i++){
@@ -36,14 +60,6 @@ for (var i=0; i<items.dates.length; i++){
 		series[i][j] = {date: formatDate.parse(items.dates[i][j]), price:items.counts[i][j]}
 	}
 }
-
-//var formatDateTest = d3.time.format("%b %Y");
-//series = [ 
-//		   [{date: formatDateTest.parse("Apr 2007"), price: 1182.37}, {date: formatDateTest.parse("May 2007"), price: 1130.62},{ date: formatDateTest.parse("Jun 2007"),price: 1503.35},{ date: formatDateTest.parse("Jul 2007"),price: 1103.35}], 
-//    	   [{date: formatDateTest.parse("Apr 2007"), price: 1532.37}, {date: formatDateTest.parse("May 2007"), price: 1130.62},{ date: formatDateTest.parse("Jun 2007"),price: 1903.35},{ date: formatDateTest.parse("Jul 2007"),price: 803.35},{ date: formatDateTest.parse("Aug 2007"),price: 1803.35}],
-//    	   [{date: formatDateTest.parse("Apr 2007"), price: 132.37}, {date: formatDateTest.parse("May 2007"), price: 1290.62},{ date: formatDateTest.parse("Jun 2007"),price: 1703.35},{ date: formatDateTest.parse("Jul 2007"),price: 893.35},{ date: formatDateTest.parse("Aug 2007"),price: 1103.35}]
-//		   ]	 
-//console.log(series);		 
 
 var color = d3.scale.category20c();
 
@@ -79,6 +95,8 @@ var area2 = d3.svg.line()
 var svg = d3.select("body").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom);
+
+d3.select("#left-col").append("svg").attr("d", svg);
 
 svg.append("defs").append("clipPath")
     .attr("id", "clip")
@@ -128,7 +146,21 @@ focus.selectAll(".line")
     .attr("clip-path", "url(#clip)")
     .attr("d", area)
     .attr("stroke", function(d, i) {return color(i)})
-    .attr("stroke-width", 3);
+    .attr("stroke-width", 3)
+    .on("mouseover", mouseover)
+    .on("mouseout", mouseout)
+    .on("click", click);
+
+//Appends invisible circles to show coords
+focus.selectAll("circle") 
+          .data(series[0]) 
+          .enter() 
+          .append("circle") 
+          .attr("cx", function(d) { return x(d.date); }) 
+          .attr("cy", function(d) { return y(d.price); }) 
+          .attr("r", 3) 
+          .attr("opacity", 10) 
+          .append("svg:title").text(function(d) {return "Date: " + d.date + "\nValue: " + d.price;});
 
 //Appends the x axis
 focus.append("g")
@@ -140,7 +172,7 @@ focus.append("g")
 focus.append("g")
     .attr("class", "y axis")
     .call(yAxis);
-
+		  
 //Appends the small chart
 context.selectAll(".line")
     .data(series)
@@ -168,5 +200,47 @@ function brush() {
   focus.selectAll("path").attr("d", area);
   focus.select(".x.axis").call(xAxis);
 }
+
+//-------------------EVENT HANDLERS ---------------//
+function mouseover(d, i){
+	focus.select("path:nth-child("+(i+1)+")").attr("stroke-width", 5);
+}
+
+function mouseout(d, i){
+	focus.select("path:nth-child("+(i+1)+")").attr("stroke-width", 3);
+}
+
+function click(d, i){
+	metaBox = d3.select("#meta-box");
+	metaBox.html("");
+	
+	if (meta){
+		//Iterate over the JSON object for meta and append the text
+		for (var key in meta[i]) {
+		  if (meta[i].hasOwnProperty(key)) {
+				//Append title
+				metaBox.append("text")
+				        .attr("class", "title")
+				        .text(key);
+				console.log(meta[i][key])
+				//Append main text
+				metaBox.selectAll("g")
+				  	   .data(meta[i][key])
+				       .enter()
+					   .append("text")
+					   .append("ul")
+					   .text(function(d){console.log(d); return d});
+		  }
+		}
+	}
+	else{
+		//Append title
+		metaBox.append("text")
+		        .attr("class", "title")
+		        .text("No meta data provided for this element");
+	}
+}
+
+
 
 </script>
