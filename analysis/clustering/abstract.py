@@ -244,12 +244,14 @@ class AbstractClusterer(object):
         TODO: Find a way to define importance. For now remove clusters with either too much or too few docs.
         '''
         total_docs = len(self.document_dict.keys())
+        filtered = []
         for cluster in self.clusters:
             size = cluster.get_size()
-            if size > total_docs*0.2 or size < total_docs*0.1:
-                print cluster.id
-                self.clusters.remove(cluster)            
-            
+            if size > total_docs*0.01 and size < total_docs*0.05:
+                filtered.append(cluster) 
+            print '------------------------'
+        #Replace cluster list with the filtered ones
+        self.clusters = filtered
     def run(self):
         raise NotImplementedError('run is not implemented.')
 

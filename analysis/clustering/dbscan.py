@@ -162,6 +162,7 @@ class DBSCANClusterer(AbstractClusterer):
                 doc_id = member[0]
                 document = self.document_dict[doc_id]            
                 documents[doc_id] = document
+            
             self.clusters.append(Cluster(cluster, documents))
             
 #######################################################################

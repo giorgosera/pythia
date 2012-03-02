@@ -17,7 +17,7 @@ class Test_Dbscan_clustering(unittest.TestCase):
     def test_dbscan_clustering_with_tweets(self):
         from_date = datetime.datetime(2011, 1, 25, 12, 0, 0)
         to_date = datetime.datetime(2011, 1, 26, 12, 30, 0) 
-        items = ws.get_documents_by_date(from_date, to_date, limit=600)             
+        items = ws.get_documents_by_date(from_date, to_date, limit=100)             
         
         epsilon = 0.01
         min_pts = 2
@@ -27,8 +27,9 @@ class Test_Dbscan_clustering(unittest.TestCase):
         dbscan.dump_clusters_to_file("dbscan_with_tweets")
         #=======================================================================
         dbscan.plot_scatter()
+        #dbscan.plot_growth_timeline(cumulative=False, plot_method="matplotlib")
         # dbscan.plot_growth_timeline(cumulative=True)
-        dbscan.plot_growth_timeline(cumulative=True)
+        dbscan.plot_growth_timeline(cumulative=False)
         # dbscan.plot_sentiment_timeline(cumulative=False)
         #=======================================================================
          
