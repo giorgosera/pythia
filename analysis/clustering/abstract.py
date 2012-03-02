@@ -37,7 +37,7 @@ class AbstractClusterer(object):
         self.db_documents = document_list
         for document in document_list:
             self.add_document(document)
-
+        
     def add_document(self, document):
         '''
         Adds a new document in the cluster structure.
@@ -64,8 +64,7 @@ class AbstractClusterer(object):
         index = Index("kmeans_index")
         index.add_documents(self.db_documents)
         index.finalize()
-        filtered_terms = index.get_filtered_terms(lowestf=0.01, highestf=0.2)
-        
+        filtered_terms = index.get_filtered_terms(lowestf=0, highestf=1)
         corpus = []
         for id, document in self.document_dict.iteritems():
             filtered_tokens = []
@@ -173,10 +172,12 @@ class AbstractClusterer(object):
                 cluster.analyse()
                 if len(documents) > 0:
                     data.append([doc.date for doc in documents.values()])
-                    meta.append({"Terms" :cluster.get_most_frequent_terms(N=10), 
-                                 "Authors": [len(cluster.get_authors())], #should be wrapped in a list
-                                 "Locations": cluster.get_locations(N=5),
-                                 "Mentioned Persons": cluster.get_persons(N=5)})
+                    #===========================================================
+                    # meta.append({"Terms" :cluster.get_most_frequent_terms(N=10), 
+                    #             "Authors": [len(cluster.get_authors())], #should be wrapped in a list
+                    #             "Locations": cluster.get_locations(N=5),
+                    #             "Mentioned Persons": cluster.get_persons(N=5)})
+                    #===========================================================
 
             dates = []; counts = []
             for d in data:
@@ -249,9 +250,9 @@ class AbstractClusterer(object):
             size = cluster.get_size()
             if size > total_docs*0.01 and size < total_docs*0.05:
                 filtered.append(cluster) 
-            print '------------------------'
         #Replace cluster list with the filtered ones
         self.clusters = filtered
+        
     def run(self):
         raise NotImplementedError('run is not implemented.')
 
