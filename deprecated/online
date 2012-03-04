@@ -1,0 +1,20 @@
+        #=======================================================================
+        # oc.add_documents(items)
+        # oc.construct_term_doc_matrix(pca=False)
+        # matrix = oc.td_matrix
+        # for doc_index, (doc_id, doc_content) in enumerate(oc.document_dict.iteritems()):
+        #    oc.cluster(doc_index, doc_id, doc_content)
+        #=======================================================================
+
+        
+        #=======================================================================
+        # for item in items:
+        #    index = oc.add_document(item)
+        #    if index >= window:
+        #        oc.construct_term_doc_matrix(index=index, pca=True)
+        #        pylab.scatter(oc.td_matrix[window-2][0], oc.td_matrix[window-2][1])
+        #        oc.cluster(window-2, str(item.id), item.content)
+        #    elif index > 0:
+        #        oc.construct_term_doc_matrix(index=index, pca=True)
+        #        oc.cluster(index, str(item.id), item.content)
+        #=======================================================================

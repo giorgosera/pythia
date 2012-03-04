@@ -14,7 +14,7 @@ class OrangeKmeansClusterer(AbstractKmeansClusterer):
     A clustering data structure that works with Orange
     '''            
     
-    def run(self, filename, pca=False):
+    def run(self, filename, pca=False, post_process=False):
         '''
         Runs the kmeans algorithm.
         '''
@@ -32,7 +32,8 @@ class OrangeKmeansClusterer(AbstractKmeansClusterer):
         
         km = Orange.clustering.kmeans.Clustering(table, self.k)        #initialization= Orange.clustering.kmeans.init_hclustering(n=100), distance =  Orange.distance.instances.PearsonRConstructor
         self.split_documents(km)
-        self._post_processing()
+        if post_process:
+            self._post_processing()
         return km
     
     def split_documents(self, km):

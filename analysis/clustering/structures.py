@@ -3,9 +3,10 @@ Created on 29 Jan 2012
 
 @author: george
 '''
-import itertools, nltk, tools.utils, numpy
+import itertools, nltk, tools.utils, numpy, scipy, math
 from database.warehouse import WarehouseServer
 from analysis.semantic import TwitterSemanticAnalyser
+from collections import OrderedDict
 
 class Cluster(object):
     '''
@@ -130,6 +131,58 @@ class Cluster(object):
         #print "Cluster",self.id,"collocations:"
         #for collocation in collocations:
             #print ' '.join(str(i) for i in collocation)
+
+####################################
+# Online clustering algos
+####################################
+def kernel_linear(x,y):
+    return scipy.dot(x,y)
+
+def kernel_poly(x,y,a=1.0,b=1.0,p=2.0):
+    return (a*scipy.dot(x,y)+b)**p
+     
+def kernel_gauss(x,y, sigma=0.00001):
+    v=x-y
+    l=math.sqrt(scipy.square(v).sum())
+    return math.exp(-sigma*(l**2))
+
+def kernel_dist(x,y):
+    # if gaussian kernel:
+    return 2-2*kernel(x,y)
+    # if not
+    #return kernel(x,x)-2*kernel(x,y)+kernel(y,y)   
+def kernel_normalise(k): 
+    return lambda x,y: k(x,y)/math.sqrt(k(x,x)+k(y,y))
+
+kernel=kernel_normalise(kernel_gauss)
+
+class OnlineCluster(Cluster):
+    '''
+    This the data structure which is used by the online clustering
+    algorithm. It inherits the cluster structure and adds to extra
+    arguments center and size. 
+    '''
+    def __init__(self, a, cluster_id, doc_id, doc_content): 
+        super(OnlineCluster, self).__init__(id=cluster_id, document_dict=OrderedDict([(doc_id, doc_content)])) #Creates a new Cluster with empty document dict
+        self.center=a
+        self.size=0
+        
+    def add(self, e, doc_id, doc_content):
+        self.size+= kernel(self.center, e)
+        self.center+=(e-self.center)/self.size
+        self.document_dict[doc_id] = doc_content
+        
+    def merge(self, c):        
+        self.center=(self.center*self.size+c.center*c.size)/(self.size+c.size)
+        self.size+=c.size
+        self.document_dict.update(c.document_dict)
+
+    def resize(self,dim):
+        extra=scipy.zeros(dim-len(self.center))
+        self.center=scipy.append(self.center, extra)
+        
+    def __str__(self):
+        return "Cluster( %s, %f )"%(self.center, self.size)
 
 class Bicluster(object):
     '''

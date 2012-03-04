@@ -41,8 +41,12 @@ class AbstractClusterer(object):
     def add_document(self, document):
         '''
         Adds a new document in the cluster structure.
+        It also returns the index of the new doc for future use.
+        The index is N-1 where N is the length of the dict since 
+        this is an OrderedDict structure.
         '''    
         self.document_dict[str(document.id)] = document.content
+        return len(self.document_dict.keys())-1
     
     def get_documents(self):
         return self.document_dict

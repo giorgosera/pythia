@@ -123,7 +123,7 @@ class DBSCANClusterer(AbstractClusterer):
         # in the clusters back to regular lists
         return self.as_lists(clusters)
     
-    def run(self, epsilon, min_pts, distance=euclidean, debug=False, pca=False):
+    def run(self, epsilon, min_pts, distance=euclidean, debug=False, pca=False, post_process=False):
         '''
         Runs the DBSCAN algorithm.
         '''
@@ -146,7 +146,8 @@ class DBSCANClusterer(AbstractClusterer):
         self.debug = debug
         clusters = self.dbscan()
         self.split_documents(clusters)
-        self._post_processing()    
+        if post_process:
+            self._post_processing()    
         return clusters
     
     def split_documents(self, clusters):

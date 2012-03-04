@@ -3,10 +3,9 @@ Created on 22 Jan 2012
 
 @author: george
 '''
-
+import numpy, random, math, scipy
 from analysis.clustering.structures import Bicluster
 from math import sqrt
-import numpy, random, math
 
 ###########################################
 ## Similarity measures                   ##
@@ -164,3 +163,7 @@ def kmeans(data, similarity=pearson, k = 10):
                 clusters[i]=average
      
     return bestmatches
+
+
+
+  
