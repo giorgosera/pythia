@@ -39,7 +39,40 @@ class OnlineClusterer(AbstractClusterer):
         index = super(OnlineClusterer, self).add_document(document)
         return index
     
-    def construct_term_doc_matrix(self, index, pca=False):
+#===============================================================================
+#    def construct_term_doc_matrix(self, index, document, pca=False):
+#        '''
+#        Overrides the parent method for constructing a td_matrix. The reason is 
+#        because we want to construct the matrix based on a sliding window approach.
+#        '''            
+#        if index < self.window:
+#            documents = self.document_dict.values()
+#        else:
+#            window=(index-self.window+1, index)
+#            documents = self.document_dict.values()[window[0]:window[1]]
+#        
+#        #Online clustering doesn't support term filtering yet     
+#        corpus = nltk.TextCollection([document.tokens for document in documents])
+#        
+#        terms = list(set(corpus))
+#        data_rows = numpy.zeros([len(documents), len(set(corpus))])
+#        
+#        for i, document in enumerate(documents):
+#            text = nltk.Text(document.tokens)
+#            for item in document.word_frequencies:
+#                data_rows[i][terms.index(item.word)] = corpus.tf_idf(item.word, text)
+#                
+#        self.attributes = terms
+#        self.td_matrix = data_rows
+# 
+#        #If PCA is True then we project our points on their principal components
+#        #for dimensionality reduction
+#        if pca:
+#            t = construct_orange_table(self.attributes, self.td_matrix)
+#            self.td_matrix = orange_pca(t)
+#===============================================================================
+
+    def construct_term_doc_matrix(self, index, document, pca=False):
         '''
         Overrides the parent method for constructing a td_matrix. The reason is 
         because we want to construct the matrix based on a sliding window approach.
@@ -54,28 +87,18 @@ class OnlineClusterer(AbstractClusterer):
         corpus = nltk.TextCollection([document.tokens for document in documents])
         
         terms = list(set(corpus))
-        data_rows = numpy.zeros([len(documents), len(set(corpus))])
+        term_vector = numpy.zeros(len(set(corpus)))
         
-        for i, document in enumerate(documents):
-            text = nltk.Text(document.tokens)
-            for item in document.word_frequencies:
-                data_rows[i][terms.index(item.word)] = corpus.tf_idf(item.word, text)
+        text = nltk.Text(document.tokens)
+        for item in document.word_frequencies:
+            term_vector[terms.index(item.word)] = corpus.tf_idf(item.word, text)
                 
         self.attributes = terms
-        self.td_matrix = data_rows
-
-        #If PCA is True then we project our points on their principal components
-        #for dimensionality reduction
-        if pca:
-            t = construct_orange_table(self.attributes, self.td_matrix)
-            self.td_matrix = orange_pca(t)
-            #Attributes names have no meaning after dimensionality reduction
-            self.attributes = [i for i in range(self.td_matrix.shape[1])]
+        self.td_matrix = term_vector
         
-    def resize(self, dim):
+    def resize(self):
         for c in self.clusters:
-            c.resize(dim)
-        self.dim=dim
+            c.resize(self.attributes)
     
     def cluster(self, doc_index, doc_id, doc_content):
         '''
@@ -84,17 +107,25 @@ class OnlineClusterer(AbstractClusterer):
         doc_contetn are used to store the document in its cluster.
         '''
         if doc_index >= self.window:
-            self.construct_term_doc_matrix(index=doc_index, pca=True)
+            self.construct_term_doc_matrix(index=doc_index, document=doc_content, pca=False)
             doc_index = self.window-2
         elif doc_index > 0:
-            self.construct_term_doc_matrix(index=doc_index, pca=True)   
+            self.construct_term_doc_matrix(index=doc_index, document=doc_content, pca=False)   
         
         if doc_index > 0: #ignore the first document
-            e = self.td_matrix[doc_index]
             #e = doc_index
-            if len(e)>self.dim:
-                self.resize(len(e))
-    
+            e = self.td_matrix
+            newc=OnlineCluster(a=e, cluster_id=self.cluster_id_counter, doc_id=doc_id, doc_content=doc_content, term_vector=self.attributes) 
+            
+            #If the new term vector is larger then change all the cluster centers
+            #However, if the new term vector is smaller then pad the new cluster's center
+            if len(self.clusters) > 0:
+                if len(newc.term_vector) > len(self.clusters[0].term_vector):
+                    self.resize()
+                else:
+                    newc.resize(self.clusters[0].term_vector)
+                    e = newc.center
+                
             if len(self.clusters)>0: 
                 # Compare the new document to each existing cluster
                 c=[ ( i, kernel_dist(x.center, e) ) for i,x in enumerate(self.clusters)]
@@ -113,7 +144,6 @@ class OnlineClusterer(AbstractClusterer):
                 self.cluster_id_counter += 1
                 
             # make a new cluster for this point
-            newc=OnlineCluster(a=e, cluster_id=self.cluster_id_counter, doc_id=doc_id, doc_content=doc_content) 
             self.clusters.append(newc)
             self.updatedist(newc)
         
@@ -198,7 +228,7 @@ if __name__=="__main__":
     # around 10 it will start finding more
     c=OnlineClusterer(N=6, window=0)
     while len(points)>0: 
-        c.cluster(points.pop(), 1, "potso")
+        c.cluster(points.pop(), 1, "test")
 
     clusters=c.trimclusters()
     print "I clustered %d points in %.2f seconds and found %d clusters."%(n, time.time()-start, len(clusters))

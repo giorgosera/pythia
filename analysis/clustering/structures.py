@@ -162,10 +162,11 @@ class OnlineCluster(Cluster):
     algorithm. It inherits the cluster structure and adds to extra
     arguments center and size. 
     '''
-    def __init__(self, a, cluster_id, doc_id, doc_content): 
+    def __init__(self, a, cluster_id, doc_id, doc_content, term_vector): 
         super(OnlineCluster, self).__init__(id=cluster_id, document_dict=OrderedDict([(doc_id, doc_content)])) #Creates a new Cluster with empty document dict
         self.center=a
         self.size=0
+        self.term_vector = term_vector
         
     def add(self, e, doc_id, doc_content):
         self.size+= kernel(self.center, e)
@@ -176,10 +177,28 @@ class OnlineCluster(Cluster):
         self.center=(self.center*self.size+c.center*c.size)/(self.size+c.size)
         self.size+=c.size
         self.document_dict.update(c.document_dict)
-
-    def resize(self,dim):
-        extra=scipy.zeros(dim-len(self.center))
-        self.center=scipy.append(self.center, extra)
+        
+    def resize(self,new_term_vector):
+        '''
+        This function resizes the center vector of this cluster according to
+        a new term vector. 
+        '''       
+        new_center = numpy.zeros(len(new_term_vector))
+        new_vector = []
+        assert(len(new_term_vector) >= len(self.term_vector) )
+        #Iterates over the new term vector (either smaller or bigger)
+        #and modifies the existing one.
+        for new_index, term in enumerate(new_term_vector):
+            if term in self.term_vector: 
+                old_index = self.term_vector.index(term)
+                old_value = self.center[old_index]
+                new_center[new_index] = old_value
+                new_vector.insert(new_index, term)
+            else:
+                new_vector.insert(new_index, term)
+                new_center[new_index]= 0.0
+        self.center = new_center
+        self.term_vector = new_vector
         
     def __str__(self):
         return "Cluster( %s, %f )"%(self.center, self.size)
