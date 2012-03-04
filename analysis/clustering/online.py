@@ -45,8 +45,7 @@ class OnlineClusterer(AbstractClusterer):
         '''
         Overrides the parent method for constructing a td_matrix. The reason is 
         because we want to construct the matrix based on a sliding window approach.
-        '''    
-        start=time.time()        
+        '''        
         if index < self.window:
             documents = self.document_dict.values()
         else:
@@ -65,7 +64,6 @@ class OnlineClusterer(AbstractClusterer):
                 
         self.attributes = terms
         self.td_matrix = term_vector
-        print time.time()-start
     
     def resize(self):
         for c in self.clusters:
@@ -82,7 +80,8 @@ class OnlineClusterer(AbstractClusterer):
 
         self.construct_term_doc_matrix(index=doc_index, document=doc_content)
         
-        start = time.time()
+        print 'N', len(self.clusters)
+        print 'clustering', doc_index
         if doc_index > 0: #ignore the first document
             #e = doc_index
             e = self.td_matrix
@@ -100,10 +99,16 @@ class OnlineClusterer(AbstractClusterer):
             if len(self.clusters)>0: 
                 # Compare the new document to each existing cluster
                 c=[ ( i, kernel_dist(x.center, e) ) for i,x in enumerate(self.clusters)]
-                closest=self.clusters[min( c , key=operator.itemgetter(1))[0]]
-                closest.add(e, doc_id, doc_content)
-                # invalidate dist-cache for this cluster
-                self.updatedist(closest)
+                closest_cluster = min( c , key=operator.itemgetter(1))
+                if closest_cluster[1] < 1.0:
+                    closest=self.clusters[closest_cluster[0]]
+                    closest.add(e, doc_id, doc_content)
+                    # invalidate dist-cache for this cluster
+                    self.updatedist(closest)
+                else:
+                    # make a new cluster for this point
+                    self.clusters.append(newc)
+                    self.updatedist(newc)
     
             if len(self.clusters)>=self.N and len(self.clusters)>1:
                 # merge closest two clusters. It doesn't matter which ones, Only the closest
@@ -113,12 +118,11 @@ class OnlineClusterer(AbstractClusterer):
                 self.removedist(m.y)
                 self.updatedist(m.x)
                 self.cluster_id_counter += 1
-                
-            # make a new cluster for this point
+        else:
+            newc=OnlineCluster(a=self.td_matrix, cluster_id=self.cluster_id_counter, doc_id=doc_id, doc_content=doc_content, term_vector=self.attributes) 
             self.clusters.append(newc)
             self.updatedist(newc)
-            print 'clustering', time.time() - start, doc_index
-            
+                
     def removedist(self,c):
         """
         Invalidate intercluster distance cache for c
@@ -154,7 +158,8 @@ class OnlineClusterer(AbstractClusterer):
         '''
         #Create a clusterer document list to get the index of a doc (horrible hack I know)
         clusterer_document_list = [key for key in self.document_dict.keys()] 
-        all_terms_vector = self.clusters[0].term_vector
+        corpus = nltk.TextCollection([document.tokens for document in self.document_dict.values()])
+        all_terms_vector = list(set(corpus))
         table = construct_orange_table(all_terms_vector)
         meta_col_name="cluster_id"
         table = add_metas_to_table(table, meta_col_name=meta_col_name)
@@ -163,6 +168,8 @@ class OnlineClusterer(AbstractClusterer):
         for cluster in self.clusters:
             for doc_id, doc_content in cluster.document_dict.iteritems():
                 index = clusterer_document_list.index(doc_id)
+                
+                #We use index = 1 to force the function to construct the vector according to all the documents in the collection
                 self.construct_term_doc_matrix(index, doc_content)
                 oc = OnlineCluster(self.td_matrix, 1, doc_id, doc_content, self.attributes)
                 oc.resize(all_terms_vector)

@@ -17,10 +17,10 @@ class Test_online_clustering(unittest.TestCase):
     def test_online_clustering_with_tweets(self):
         from_date = datetime.datetime(2011, 1, 25, 12, 0, 0)
         to_date = datetime.datetime(2011, 1, 26, 12, 30, 0) 
-        items = ws.get_documents_by_date(from_date, to_date, limit=100)             
+        items = ws.get_documents_by_date(from_date, to_date, limit=300)             
         
-        window = 100
-        oc = OnlineClusterer(N=10, window = window)
+        window = 150
+        oc = OnlineClusterer(N=25, window = window)
         for item in items:
             oc.cluster(item)
 

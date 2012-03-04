@@ -47,7 +47,10 @@ class MDS(object):
                 sel = filter(lambda x: x[-1] == str(c), points)
                 x = [s[0] for s in sel]
                 y = [s[1] for s in sel]
-                pylab.scatter(x, y, c=cm.jet(float(c)/(len(classes_list)-1)))
+                if len(classes_list) > 1:
+                    pylab.scatter(x, y, c=cm.jet(float(c)/(len(classes_list)-1)))
+                else:
+                    pylab.scatter(x, y, c=cm.jet(1))
         else:
             sel = filter(lambda x: x[-1] == 0, points)
             x = [s[0] for s in sel]
