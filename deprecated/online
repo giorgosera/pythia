@@ -18,3 +18,36 @@
         #        oc.construct_term_doc_matrix(index=index, pca=True)
         #        oc.cluster(index, str(item.id), item.content)
         #=======================================================================
+        
+        #===============================================================================
+#    def construct_term_doc_matrix(self, index, document, pca=False):
+#        '''
+#        Overrides the parent method for constructing a td_matrix. The reason is 
+#        because we want to construct the matrix based on a sliding window approach.
+#        '''            
+#        if index < self.window:
+#            documents = self.document_dict.values()
+#        else:
+#            window=(index-self.window+1, index)
+#            documents = self.document_dict.values()[window[0]:window[1]]
+#        
+#        #Online clustering doesn't support term filtering yet     
+#        corpus = nltk.TextCollection([document.tokens for document in documents])
+#        
+#        terms = list(set(corpus))
+#        data_rows = numpy.zeros([len(documents), len(set(corpus))])
+#        
+#        for i, document in enumerate(documents):
+#            text = nltk.Text(document.tokens)
+#            for item in document.word_frequencies:
+#                data_rows[i][terms.index(item.word)] = corpus.tf_idf(item.word, text)
+#                
+#        self.attributes = terms
+#        self.td_matrix = data_rows
+# 
+#        #If PCA is True then we project our points on their principal components
+#        #for dimensionality reduction
+#        if pca:
+#            t = construct_orange_table(self.attributes, self.td_matrix)
+#            self.td_matrix = orange_pca(t)
+#===============================================================================

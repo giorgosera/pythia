@@ -22,7 +22,7 @@ class MDS(object):
         '''
         self.data = data
     
-    def plot(self, classes_list=None, class_col_name=None):
+    def plot(self, classes_list=None, class_col_name=None, color=None):
         '''
         Projects the data points using MDS.
         Optionally we can input with the classes names in order to 

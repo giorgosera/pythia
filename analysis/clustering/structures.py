@@ -154,7 +154,7 @@ def kernel_dist(x,y):
 def kernel_normalise(k): 
     return lambda x,y: k(x,y)/math.sqrt(k(x,x)+k(y,y))
 
-kernel=kernel_normalise(kernel_gauss)
+kernel=kernel_normalise(kernel_poly)
 
 class OnlineCluster(Cluster):
     '''
@@ -185,7 +185,8 @@ class OnlineCluster(Cluster):
         '''       
         new_center = numpy.zeros(len(new_term_vector))
         new_vector = []
-        assert(len(new_term_vector) >= len(self.term_vector) )
+        
+        #assert(len(new_term_vector) >= len(self.term_vector) )
         #Iterates over the new term vector (either smaller or bigger)
         #and modifies the existing one.
         for new_index, term in enumerate(new_term_vector):

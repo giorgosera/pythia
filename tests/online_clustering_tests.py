@@ -17,34 +17,21 @@ class Test_online_clustering(unittest.TestCase):
     def test_online_clustering_with_tweets(self):
         from_date = datetime.datetime(2011, 1, 25, 12, 0, 0)
         to_date = datetime.datetime(2011, 1, 26, 12, 30, 0) 
-        items = ws.get_documents_by_date(from_date, to_date, limit=600)             
+        items = ws.get_documents_by_date(from_date, to_date, limit=100)             
         
-        window = 200
+        window = 100
         oc = OnlineClusterer(N=10, window = window)
         for item in items:
-            index = oc.add_document(item)
-            oc.cluster(index, str(item.id), item.content)
-            
-            if index >= window:
-                pylab.scatter(oc.td_matrix[0], oc.td_matrix[1])
-            elif index > 0:
-                pylab.scatter(oc.td_matrix[0], oc.td_matrix[1])
+            oc.cluster(item)
 
-        #clusters=oc.trimclusters()            
+        clusters=oc.trimclusters()            
         oc.dump_clusters_to_file("online_with_tweets")
-        #oc.plot_scatter()
+        oc.plot_scatter()
 
         for cluster in oc.clusters:
             print cluster.id
             print cluster.get_size()
             print '-----------------'
 
-        cx=[x.center[0] for x in oc.clusters]
-        cy=[y.center[1] for y in oc.clusters]
-    
-        pylab.plot(cx,cy,"ro")
-        pylab.draw()
-        pylab.show()
-         
 if __name__ == "__main__":
     unittest.main()

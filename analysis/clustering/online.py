@@ -4,10 +4,12 @@ Created on 2 Mar 2012
 @author: george
 '''
 import heapq, operator, scipy, nltk, numpy
+import Orange#!@UnresolvedImport
 from analysis.clustering.abstract import AbstractClusterer
-from analysis.clustering.structures import OnlineCluster
 from analysis.clustering.structures import kernel_dist
-from tools.orange_utils import construct_orange_table, orange_pca, add_metas_to_table
+from tools.orange_utils import construct_orange_table, add_metas_to_table
+from analysis.clustering.structures import OnlineCluster
+import time
 
 class OnlineClusterer(AbstractClusterer):
     '''
@@ -38,45 +40,13 @@ class OnlineClusterer(AbstractClusterer):
         '''
         index = super(OnlineClusterer, self).add_document(document)
         return index
-    
-#===============================================================================
-#    def construct_term_doc_matrix(self, index, document, pca=False):
-#        '''
-#        Overrides the parent method for constructing a td_matrix. The reason is 
-#        because we want to construct the matrix based on a sliding window approach.
-#        '''            
-#        if index < self.window:
-#            documents = self.document_dict.values()
-#        else:
-#            window=(index-self.window+1, index)
-#            documents = self.document_dict.values()[window[0]:window[1]]
-#        
-#        #Online clustering doesn't support term filtering yet     
-#        corpus = nltk.TextCollection([document.tokens for document in documents])
-#        
-#        terms = list(set(corpus))
-#        data_rows = numpy.zeros([len(documents), len(set(corpus))])
-#        
-#        for i, document in enumerate(documents):
-#            text = nltk.Text(document.tokens)
-#            for item in document.word_frequencies:
-#                data_rows[i][terms.index(item.word)] = corpus.tf_idf(item.word, text)
-#                
-#        self.attributes = terms
-#        self.td_matrix = data_rows
-# 
-#        #If PCA is True then we project our points on their principal components
-#        #for dimensionality reduction
-#        if pca:
-#            t = construct_orange_table(self.attributes, self.td_matrix)
-#            self.td_matrix = orange_pca(t)
-#===============================================================================
 
-    def construct_term_doc_matrix(self, index, document, pca=False):
+    def construct_term_doc_matrix(self, index, document):
         '''
         Overrides the parent method for constructing a td_matrix. The reason is 
         because we want to construct the matrix based on a sliding window approach.
-        '''            
+        '''    
+        start=time.time()        
         if index < self.window:
             documents = self.document_dict.values()
         else:
@@ -95,23 +65,24 @@ class OnlineClusterer(AbstractClusterer):
                 
         self.attributes = terms
         self.td_matrix = term_vector
-        
+        print time.time()-start
+    
     def resize(self):
         for c in self.clusters:
             c.resize(self.attributes)
     
-    def cluster(self, doc_index, doc_id, doc_content):
+    def cluster(self, document):
         '''
-        Performs clustering for a new document. The doc_index is used to find
-        the term-document vector of this document in the td_matrix and doc_id and 
-        doc_contetn are used to store the document in its cluster.
+        Performs clustering for a new document. It takes as input 
+        a document object from the db and finds the closer cluster for it.
         '''
-        if doc_index >= self.window:
-            self.construct_term_doc_matrix(index=doc_index, document=doc_content, pca=False)
-            doc_index = self.window-2
-        elif doc_index > 0:
-            self.construct_term_doc_matrix(index=doc_index, document=doc_content, pca=False)   
+        doc_index = self.add_document(document)
+        doc_id = str(document.id)
+        doc_content = document.content
+
+        self.construct_term_doc_matrix(index=doc_index, document=doc_content)
         
+        start = time.time()
         if doc_index > 0: #ignore the first document
             #e = doc_index
             e = self.td_matrix
@@ -146,7 +117,8 @@ class OnlineClusterer(AbstractClusterer):
             # make a new cluster for this point
             self.clusters.append(newc)
             self.updatedist(newc)
-        
+            print 'clustering', time.time() - start, doc_index
+            
     def removedist(self,c):
         """
         Invalidate intercluster distance cache for c
@@ -176,7 +148,37 @@ class OnlineClusterer(AbstractClusterer):
         self.clusters = filter(lambda x: x.size>=t, self.clusters)
         return self.clusters
 
-    
+    def plot_scatter(self):
+        '''
+        Overrides the parent class method. Plots all the data points in 2D.
+        '''
+        #Create a clusterer document list to get the index of a doc (horrible hack I know)
+        clusterer_document_list = [key for key in self.document_dict.keys()] 
+        all_terms_vector = self.clusters[0].term_vector
+        table = construct_orange_table(all_terms_vector)
+        meta_col_name="cluster_id"
+        table = add_metas_to_table(table, meta_col_name=meta_col_name)
+
+        instances = []
+        for cluster in self.clusters:
+            for doc_id, doc_content in cluster.document_dict.iteritems():
+                index = clusterer_document_list.index(doc_id)
+                self.construct_term_doc_matrix(index, doc_content)
+                oc = OnlineCluster(self.td_matrix, 1, doc_id, doc_content, self.attributes)
+                oc.resize(all_terms_vector)
+                inst = Orange.data.Instance(table.domain, list(oc.center))
+                inst[meta_col_name] = str(cluster.id)
+                instances.insert(index, inst)
+
+        #we have a table with the clusters ids as metas.                
+        table.extend(instances)        
+        from visualizations.mds import MDS
+        mds = MDS(table)
+        classes_list = []
+        for c in self.clusters:
+            classes_list.append(c.id)   
+                     
+        mds.plot(classes_list=classes_list, class_col_name="cluster_id")
 
 ################################################
 #HELPER CLASSES AND METHODS
@@ -200,7 +202,7 @@ class Dist(object):
 if __name__=="__main__": 
     
     import random
-    import time
+
     try:
         import pylab#!@UnresolvedImport
         import scipy

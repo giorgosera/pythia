@@ -14,29 +14,29 @@ expected, sample_docs_raw, samples = get_test_documents()
 
 class Test(unittest.TestCase):
 
-#===============================================================================
-#    def test_sample_doc_clustering_with_online(self):
-#        oc = OnlineClusterer(N=2, window=3)        
-#        samples = get_orange_clustering_test_data()
-#        for document in samples:
-#            index = oc.add_document(document)
-#            oc.cluster(index, str(document.id), document.content)
-#        expected = [0, 0, 0, 1, 1, 1]
-#        
-#    def test_cluster_term_document_matrix(self):
-#        oc = OnlineClusterer(N=2, window=3)        
-#        for document in samples:
-#            index = oc.add_document(document)
-#            oc.cluster(index, str(document.id), document.content)
-# 
-#            
-#        calculated = oc.td_matrix
-#        expected = numpy.array([[ 0.31388923,  0.11584717,  0,           0,           0,           0,           0.47083384], 
-#                                [ 0,           0.13515504,  0.3662041,   0,           0.3662041,   0,           0         ],      
-#                                [ 0,           0,           0,           0.54930614,  0,           0.549306140, 0        ]])
-#        
-#        self.assertEqual(expected.all(), calculated.all())
-#===============================================================================
+    def test_sample_doc_clustering_with_online(self):
+        oc = OnlineClusterer(N=2, window=3)        
+        samples = get_orange_clustering_test_data()
+        for document in samples:
+            index = oc.add_document(document)
+            oc.cluster(document)
+        expected = [0, 0, 0, 1, 1, 1]
+        for cluster in oc.clusters:
+            print cluster.document_dict
+        
+    def test_cluster_term_document_matrix(self):
+        oc = OnlineClusterer(N=2, window=3)        
+        for document in samples:
+            index = oc.add_document(document)
+            oc.cluster(document)
+ 
+            
+        calculated = oc.td_matrix
+        expected = numpy.array([[ 0.31388923,  0.11584717,  0,           0,           0,           0,           0.47083384], 
+                                [ 0,           0.13515504,  0.3662041,   0,           0.3662041,   0,           0         ],      
+                                [ 0,           0,           0,           0.54930614,  0,           0.549306140, 0        ]])
+        
+        self.assertEqual(expected.all(), calculated.all())
         
     def test_cluster_center_resize(self):
         center = numpy.array([0, 0, 1, 1, 0, 1])
