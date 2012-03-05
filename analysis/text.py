@@ -68,7 +68,7 @@ class TextAnalyser(object):
             clean_text = self.clean_text(text)
             tokens = self.tokenize(clean_text)
             tokens = [tools.utils.text_stemming(token) for token in tokens]
-        else: #if arabaic returns an empty token list which indicates that this doc should be ignored
+        else: #if arabic then it returns an empty token list which indicates that this doc should be ignored
             encoding = tools.utils.detect_encoding(text)
             if encoding == "unicode":
                 tokens = []

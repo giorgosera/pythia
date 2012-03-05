@@ -148,7 +148,7 @@ class OnlineClusterer(AbstractClusterer):
                 
     def trimclusters(self):
         """Return only clusters over threshold"""
-        t= scipy.mean([x.size for x in filter(lambda x: x.size>0, self.clusters)])*0.1
+        t= scipy.mean([x.size for x in filter(lambda x: x.size>0, self.clusters)])*0.5
         self.clusters = filter(lambda x: x.size>=t, self.clusters)
         return self.clusters
 

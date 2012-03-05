@@ -176,12 +176,10 @@ class AbstractClusterer(object):
                 cluster.analyse()
                 if len(documents) > 0:
                     data.append([doc.date for doc in documents.values()])
-                    #===========================================================
-                    # meta.append({"Terms" :cluster.get_most_frequent_terms(N=10), 
-                    #             "Authors": [len(cluster.get_authors())], #should be wrapped in a list
-                    #             "Locations": cluster.get_locations(N=5),
-                    #             "Mentioned Persons": cluster.get_persons(N=5)})
-                    #===========================================================
+                    meta.append({"Terms" :cluster.get_most_frequent_terms(N=10), 
+                                 "Authors": [len(cluster.get_authors())], #should be wrapped in a list
+                                 "Locations": cluster.get_locations(N=5),
+                                 "Mentioned Persons": cluster.get_persons(N=5)})
 
             dates = []; counts = []
             for d in data:
