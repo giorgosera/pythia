@@ -8,6 +8,7 @@ from tools.orange_utils import construct_orange_table
 from database.warehouse import WarehouseServer
 import orngTree, Orange#!@UnresolvedImport
 from database.model.agents import *
+from analysis.classification.tree import TreeClassifier
 
 from mongoengine import connect
 connect("pythia_db")
@@ -15,6 +16,7 @@ connect("pythia_db")
 class Test(unittest.TestCase):
 
     def test_author_classification_dummy_dataset(self):
+        
         train_set = numpy.array([[0.2, 0.5, 0.2,  0.2, 0.1,  10.,  0],
                                 [0.2, 0.3, 0.12, 0.1, 0.1,  10.,  0],
                                 [0.2, 0.2, 0.08, 0.2, 0.01, 20.,  0],
@@ -28,11 +30,10 @@ class Test(unittest.TestCase):
         
         attributes = ["retweets", "links", "retweeted", "replies", "mentions", "ff-ratio", "class"]
         
-        table = construct_orange_table(attributes, train_set, classed=True)
-        treeLearner = orngTree.TreeLearner()        
-        treeClassifier = treeLearner(table)    
-        example = Orange.data.Instance(table.domain, [0.2, 0.5, 0.2,  0.2, 0.1,  100,  0])    
-        prediction = treeClassifier(example)
+        classifier = TreeClassifier()
+        classifier.train(train_set, attributes)
+        example = [0.2, 0.5, 0.2,  0.2, 0.1,  100,  0]
+        prediction = classifier.classify(example)    
         self.assertEquals(0, prediction.value)
         
     def test_author_classification_real_dataset(self):
@@ -40,7 +41,7 @@ class Test(unittest.TestCase):
         # 1 --> Media
         # 2 --> Journalists
         # 3 --> Common people
-        
+        classifier = TreeClassifier()
         train_set = numpy.array([[0.18, 0.57, 0.01,  0.053, 0.0,  52872.,  0], #Bill Gates
                                 [0.5, 0.1, 0.0, 0.09, 0.0,  151.,  0], #Justin Bieber
                                 [0.096, 0.4, 0.06, 0.2, 0.0, 14052.,  0], #Ashton Kutcher
@@ -60,18 +61,15 @@ class Test(unittest.TestCase):
                                 [0.55, 0.13, 13.2,  0.25, 0.0,  0.7, 3]]) #Yet another person
         
         attributes = ["retweets", "links", "retweeted", "replies", "mentions", "ff-ratio", "class"]
-    
-        table = construct_orange_table(attributes, train_set, classed=True)
-        treeLearner = orngTree.TreeLearner()        
-        treeClassifier = treeLearner(table)    
-        celebrity_example = Orange.data.Instance(table.domain, [0.096, 0.3, 0.03,  0.08, 0.0,  94258,  0]) 
-        media_example = Orange.data.Instance(table.domain, [0.0, 0.8, 0.89,  0.031, 0.0,  184.,  0])    
-        common_example = Orange.data.Instance(table.domain, [0.55, 0.13, 13.2,  0.25, 0.0,  0.7,  0])    
-        journalist_example = Orange.data.Instance(table.domain, [0.24, 0.48, 14.7,  0.11, 0.0,  11.9,  0])    
-        prediction_celebrity = treeClassifier(celebrity_example)
-        prediction_media = treeClassifier(media_example)
-        prediction_journalist = treeClassifier(journalist_example)
-        prediction_common = treeClassifier(common_example)
+        classifier.train(train_set, attributes)
+        celebrity_example = [0.096, 0.3, 0.03,  0.08, 0.0,  94258,  0]
+        media_example = [0.0, 0.8, 0.89,  0.031, 0.0,  184.,  0]
+        common_example = [0.55, 0.13, 13.2,  0.25, 0.0,  0.7,  0]   
+        journalist_example = [0.24, 0.48, 14.7,  0.11, 0.0,  11.9,  0]    
+        prediction_celebrity = classifier.classify(celebrity_example)
+        prediction_media = classifier.classify(media_example)
+        prediction_journalist = classifier.classify(journalist_example)
+        prediction_common = classifier.classify(common_example)
         calculated = [prediction_celebrity, prediction_media, prediction_journalist, prediction_common]
         expected = [0, 1, 2, 3]
         self.assertEqual(expected, calculated)

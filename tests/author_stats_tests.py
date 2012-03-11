@@ -78,5 +78,6 @@ class Test(unittest.TestCase):
         self.assertAlmostEqual(numpy.sum(numpy.array(expected) - numpy.array(fv)), 0)
         
         TestAuthor.drop_collection()
+        
 if __name__ == "__main__":
     unittest.main()
