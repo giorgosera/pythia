@@ -14,7 +14,7 @@ class Content(EmbeddedDocument):
     raw = StringField(required=True, default="Unknown")
     tokens = ListField(StringField(), required=True, default=list)
     word_frequencies = ListField(EmbeddedDocumentField(WordFrequencyTuple), required=True, default=list)
-    date = DateTimeField(required=True)
+    date = DateTimeField(required=True, default=datetime.datetime.utcnow)
     
     def construct_word_freq_list(self, items):
         for item in items:
@@ -26,10 +26,10 @@ class Content(EmbeddedDocument):
 
 class Tweet(Document):
     author_screen_name = StringField(required=True)
-    author_name = StringField(required=True)
+    author_name = StringField(required=False)
     date = DateTimeField(required=True, default=datetime.datetime.utcnow)
-    #content = DictField(required=True)
     content = EmbeddedDocumentField(Content)
+    retweet_count = IntField(required=True, default=0)
     
 class CambridgeTweet(Tweet):
     meta = {"collection": "CambridgeTweets"}    
@@ -39,19 +39,19 @@ class CambridgeTweet(Tweet):
 class TwoGroupsTweet(Tweet):
     meta = {"collection": "TwoGroupsTweets"}
     url = StringField(required=True)
-    retweet_count = IntField(required=True, default=0)
     
 class CyprusTweet(Tweet):
     meta = {"collection": "CyprusTweets"}
     url = StringField(required=True)
-    retweet_count = IntField(required=True, default=0)
             
 class EgyptTweet(Tweet):
     meta = {"collection": "EgyptTweets"}
     url = StringField(required=True)
-    retweet_count = IntField(required=True, default=0)
     
 class PsychTweet(Tweet):
     meta = {"collection": "PsychTweets"}
     url = StringField(required=True)
-    retweet_count = IntField(required=True, default=0)
+    
+class TestTweet(Tweet):
+    meta = {"collection": "TestTweets"}
+    url = StringField(required=True)

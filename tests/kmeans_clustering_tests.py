@@ -31,14 +31,17 @@ class TestOrangeClustering(unittest.TestCase):
         expected = [0, 0, 0, 1, 1, 1]
         self.assertEqual(expected, km.clusters)
 
-    def test_orange_with_tweets_kmeans(self):            
+    def test_orange_with_tweets_kmeans(self):
+        import time
+        start = time.time()            
         from_date = datetime.datetime(2011, 1, 25, 0, 0, 0)
         to_date = datetime.datetime(2011, 1, 26, 0, 0, 0) 
-        items = ws.get_documents_by_date(from_date, to_date, limit=700)
+        items = ws.get_documents_by_date(from_date, to_date, limit=1000)
         
-        oc = OrangeKmeansClusterer(k=140, ngram=1)
+        oc = OrangeKmeansClusterer(k=20, ngram=1)
         oc.add_documents(items)
         oc.run("orange_clustering_test", pca=True)
+        print time.time() - start
         oc.plot_growth_timeline(cumulative=True)
         oc.plot_scatter()
         oc.dump_clusters_to_file("kmeans_with_tweets_orange")

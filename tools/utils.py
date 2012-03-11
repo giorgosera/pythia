@@ -30,14 +30,18 @@ ignorewords = set(['rt', 'via', 'jan25', 'egypt', 'cairo', '25jan', "s", ":)", "
 def strip_url(text):
     #return re.compile(r'(\w+:\/\/\S+)').sub('', text)
     #return re.compile(r"""((?:[a-z][\w-]+:(?:/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|(([^\s()<>]+|(([^\s()<>]+)))*))+(?:(([^\s()<>]+|(([‌​^\s()<>]+)))*)|[^\s`!()[]{};:'".,<>?«»“”‘’]))""", re.DOTALL).sub('',text)
+    urls = extract_urls(text)
+    for url in urls:
+        text=' '.join(re.sub(url['url']," ",text).split())
+    return text
+
+def extract_urls(text):
     extractor = twitter_text.Extractor(text)
     urls = []
     for um in extractor.extract_urls_with_indices():
         urls.append(um)
-    for url in urls:
-        text=' '.join(re.sub(url['url']," ",text).split())
-    return text
-    
+    return urls
+
 def strip_mentions(text):
     return re.compile(r'@[\s,_,A-Z,a-z]+').sub('',text)
 
@@ -111,18 +115,15 @@ def is_a_retweet(tweet):
     else:
         return False
 
-def is_a_mention(tweet):
+def get_mentions(tweet):
     '''
     A regular expression is used to identify mentions.
     '''
     extractor = twitter_text.Extractor(tweet)
     entities = []
     for um in extractor.extract_mentioned_screen_names_with_indices():
-        entities['user_mentions'].append(um)
-    if len(entities) > 0:
-        return True
-    else:
-        return False
+        entities.append(um['screen_name'])
+    return entities
 
 def parse_result(result, type):
     '''

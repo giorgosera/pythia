@@ -125,8 +125,3 @@ class TwitterCrawler(AbstractCrawler):
             cursor = response['next_cursor']
          
         return result
-            
-        
-        
-       
-    

@@ -22,7 +22,7 @@ for author_name in author_names:
         author.screen_name = author_name
     else:
         author = Author.objects(screen_name=author_name).get()
-
+    
     followers = t.get_user_followers(author_name)
     friends= t.get_user_friends(author_name)
     author.followers_count = len(followers)

@@ -68,7 +68,7 @@ class AbstractClusterer(object):
         index = Index("kmeans_index")
         index.add_documents(self.db_documents)
         index.finalize()
-        filtered_terms = index.get_filtered_terms(lowestf=0, highestf=1)
+        filtered_terms = index.get_filtered_terms(lowestf=0.1, highestf=0.2)
         corpus = []
         for id, document in self.document_dict.iteritems():
             filtered_tokens = []
@@ -176,10 +176,10 @@ class AbstractClusterer(object):
                 cluster.analyse()
                 if len(documents) > 0:
                     data.append([doc.date for doc in documents.values()])
-                    meta.append({"Terms" :cluster.get_most_frequent_terms(N=10), 
+                    meta.append({"Terms" :cluster.get_most_frequent_terms(N=8), 
                                  "Authors": [len(cluster.get_authors())], #should be wrapped in a list
-                                 "Locations": cluster.get_locations(N=5),
-                                 "Mentioned Persons": cluster.get_persons(N=5)})
+                                 "Locations": cluster.get_locations(N=2),
+                                 "Main entities": cluster.get_persons(N=2)})
 
             dates = []; counts = []
             for d in data:

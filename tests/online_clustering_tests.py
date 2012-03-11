@@ -26,7 +26,7 @@ class Test_online_clustering(unittest.TestCase):
 
         clusters=oc.trimclusters()            
         oc.dump_clusters_to_file("online_with_tweets")
-        #oc.plot_scatter()
+        oc.plot_scatter()
         oc.plot_growth_timeline(cumulative=True)
 
         for cluster in oc.clusters:

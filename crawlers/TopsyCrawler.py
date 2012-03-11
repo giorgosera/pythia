@@ -9,6 +9,7 @@ from mongoengine import connect
 from AbstractCrawler import AbstractCrawler
 from analysis.text import TextAnalyser
 from database.model.tweets import Content
+from database.model.agents import *
 
 PAGE_SIZE = 10
 connect("pythia_db")
@@ -31,7 +32,7 @@ class TopsyCrawler(AbstractCrawler):
         
     def search_between(self, from_date, to_date, granularity_days=0, granularity_hours=1, granularity_mins=0):
         '''
-        Sets the time period we want to retrive the tweets for.
+        Sets the time period we want to retrieve the tweets for.
         '''
         self.from_date = from_date
         self.delta = datetime.timedelta(days=granularity_days, hours=granularity_hours, minutes=granularity_mins)
@@ -61,7 +62,6 @@ class TopsyCrawler(AbstractCrawler):
                         print "Storing tweet #",count, "for the period",self.from_date,"until",self.maxtime 
                         tt = self.type()
                         tt.url = item.url
-                        print item.content
                         analysed = text_analyser.add_document(item.content)
                         #if this tweet is really small just ignore it. 
                         if len(analysed['tokens']) <= 3: 
@@ -73,17 +73,13 @@ class TopsyCrawler(AbstractCrawler):
                         content.construct_word_freq_list(analysed['word_frequencies'])
                         content.date = self.from_date
                         tt.content = content
-                        print tt.content.raw
-                        print tt.content.tokens
-                        for t in tt.content.word_frequencies:
-                            print t.word, t.count
                         tt.date = self.from_date
-                        tt.screen_name = item.trackback_author_nick
                         tt.retweet_count = item.trackback_total
+                        tt.screen_name = item.trackback_author_nick
                         tt.author_screen_name = item.trackback_author_nick
-                        tt.author_name = item.trackback_author_name
+                        tt.author_name = item.trackback_author_name                        
                         tt.save(safe=True)
-                        count += 1     
+                        count += 1                             
                 except Exception, e:
                     print e
                     exception_log.append(e)
