@@ -4,11 +4,13 @@ Created on 26 Jan 2012
 @author: george
 '''
 import unittest, numpy
-from mongoengine import connect
 from tools.orange_utils import construct_orange_table
-from database.model.agents import *
-connect("pythia_db")
+from database.warehouse import WarehouseServer
 import orngTree, Orange#!@UnresolvedImport
+from database.model.agents import *
+
+from mongoengine import connect
+connect("pythia_db")
 
 class Test(unittest.TestCase):
 
@@ -74,6 +76,30 @@ class Test(unittest.TestCase):
         expected = [0, 1, 2, 3]
         self.assertEqual(expected, calculated)
         #orngTree.printTree(treeClassifier)
+        
+    def test_author_classification_egypt_dataset(self):
+        ws = WarehouseServer()
+        authors = ws.get_authors(type=TestAuthor)
+        vectors = []
+        for author in authors:
+            print '-----------------------'
+            print author.screen_name
+            vector = author.update_feature_vector()
+            print len(author.tweets)
+            print author.retweets
+            print author.links
+            print author.retweeted_tweets
+            print author.replies_to_others
+            print author.mentions_by_others
+            print vector
+            vectors.append(vector)
+        
+        TestAuthor.drop_collection()    
+        for author in [author for author in Author.objects().all()]:
+            t = TestAuthor()
+            t.screen_name = author.screen_name
+            t.tweets = author.tweets
+            t.save()
         
 if __name__ == "__main__":
     unittest.main()

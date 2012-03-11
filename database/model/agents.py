@@ -36,27 +36,44 @@ class Author(Agent):
     followers_history = ListField(EmbeddedDocumentField(History), required=True, default=list)
     friends_history = ListField(EmbeddedDocumentField(History), required=True, default=list)
     
-    def get_feature_vector(self):
+    def update_feature_vector(self):
         '''
-        If a feature vector exists it returns it otherwise it creates it.
+        Updates and returns the feature vector. If it doesn't exist it creates it.
         '''
-        if len(self.feature_vector) == 0:
-            self.calculate_author_stats()
-            total_tweets = len(self.tweets)
-            vector = numpy.zeros(6, dtype=float)
-            vector[0] = self.retweets/float(total_tweets) #retweet ratio
-            vector[1] = self.links/float(total_tweets) #links ratio
+        self.reset_stats()
+        self.calculate_author_stats()
+        total_tweets = len(self.tweets)
+        vector = numpy.zeros(6, dtype=float)
+
+        vector[0] = float(self.retweets)/float(total_tweets) #retweet ratio
+        vector[1] = self.links/float(total_tweets) #links ratio
+        
+        if self.retweeted_tweets != 0:
             vector[2] = float(total_tweets)/self.retweeted_tweets #how often this author gets retweeted
-            vector[3] = self.replies_to_others / float(total_tweets) #how many of them are replies
-            vector[4] = self.mentions_by_others
-            if self.friends_count != 0:
-                vector[5] = self.followers_count / float(self.friends_count)
-            else:
-                #Add 1 to friends count to avoid division by zero
-                vector[5] = self.followers_count / (self.friends_count+1.0)
-                
-            self.feature_vector = vector
+        else:
+            vector[2] = float(total_tweets)/(self.retweeted_tweets+1)
+            
+        vector[3] = self.replies_to_others / float(total_tweets) #how many of them are replies
+        vector[4] = self.mentions_by_others
+        
+        if self.friends_count != 0:
+            vector[5] = self.followers_count / float(self.friends_count)
+        else:
+            #Add 1 to friends count to avoid division by zero
+            vector[5] = self.followers_count / (self.friends_count+1.0)
+            
+        self.feature_vector = vector.tolist()
         return self.feature_vector
+    
+    def reset_stats(self):
+        '''
+        Resets all the stats to allow for update
+        '''
+        self.retweets = 0
+        self.retweeted_tweets = 0
+        self.links = 0
+        self.replies_to_others = 0
+        self.mentions_by_others = 0
     
     def calculate_author_stats(self):
         '''

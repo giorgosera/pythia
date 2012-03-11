@@ -5,6 +5,7 @@ Created on 22 Jan 2012
 '''
 from mongoengine import *
 from database.model.tweets import EgyptTweet
+from database.model.agents import Author
 
 class WarehouseServer(object):
     '''
@@ -79,5 +80,13 @@ class WarehouseServer(object):
         authors = []
         for id in ids:
             authors.append(self.get_document_author(id=id, type=type))
-        return authors    
-        
+        return authors   
+    
+    def get_authors(self, limit=None, type=Author):
+        '''
+        Returns N authors from the database.
+        '''
+        if limit == None:
+            return type.objects
+        else:
+            return type.objects.limit(limit)
