@@ -3,7 +3,7 @@ Created on 26 Jan 2012
 
 @author: george
 '''
-import unittest
+import unittest, numpy
 from tests.test_document import get_single_author_initialisation_data, get_multiple_author_initialisation_data
 from database.model.agents import TestAuthor
 ###########################################
@@ -42,8 +42,18 @@ class Test(unittest.TestCase):
         
         expected1 = [1, 2, 20, 2, 0]
         expected2 = [0, 1, 16, 1, 0]
-        print calculated1
-        print calculated2
-
+        self.assertEqual(expected1, calculated1)
+        self.assertEqual(expected2, calculated2)
+        
+    def test_feature_vector_construction(self):
+        a = TestAuthor()
+        a.screen_name = "ianinegypt"
+        a.tweets = docs1
+        a.followers_count = 100
+        a.friends_count = 4
+        fv = a.get_feature_vector()
+        expected = [0.17948718, 0.05128205, 0.0685413, 0.02564103, 0., 25.] 
+        self.assertAlmostEqual(numpy.sum(expected - fv), 0)
+        
 if __name__ == "__main__":
     unittest.main()

@@ -8,7 +8,7 @@ applications of Orange.
 '''
 import Orange, orange #!@UnresolvedImport
 
-def construct_orange_table(variables, matrix=None):
+def construct_orange_table(variables, matrix=None, classed=False):
     '''
     Constructs an ExampleTable for Orange. It takes a
     list of variables and the corresponding feature vectors along
@@ -19,7 +19,7 @@ def construct_orange_table(variables, matrix=None):
     vars = []
     for var in variables:
         vars.append(Orange.data.variable.Continuous(str(var)))
-    domain = Orange.data.Domain(vars, False) #The second argument indicated that the last attr must not be a class
+    domain = Orange.data.Domain(vars, classed) #The second argument indicated that the last attr must not be a class
     
     #Add data rows 
     if matrix != None:

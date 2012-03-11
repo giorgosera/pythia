@@ -3,10 +3,10 @@ Created on 27 Nov 2011
 
 @author: george
 '''
-import datetime, tools.utils
+import datetime, tools.utils, numpy
 from urlparse import urlparse
 from database.model.tweets import *
-from mongoengine import Document, StringField, ListField, IntField, DateTimeField, EmbeddedDocument, EmbeddedDocumentField, ReferenceField, GenericReferenceField
+from mongoengine import Document, StringField, ListField, IntField, DateTimeField, EmbeddedDocument, EmbeddedDocumentField, ReferenceField, GenericReferenceField, FloatField
 
 class History(EmbeddedDocument):
     date = DateTimeField(required=True, default=datetime.datetime.utcnow())
@@ -31,9 +31,32 @@ class Author(Agent):
     links = IntField(required=True, default=0)
     replies_to_others = IntField(required=True, default=0)
     mentions_by_others = IntField(required=True, default=0)
+    feature_vector = ListField(FloatField(), required=True, default=list)
     
     followers_history = ListField(EmbeddedDocumentField(History), required=True, default=list)
     friends_history = ListField(EmbeddedDocumentField(History), required=True, default=list)
+    
+    def get_feature_vector(self):
+        '''
+        If a feature vector exists it returns it otherwise it creates it.
+        '''
+        if len(self.feature_vector) == 0:
+            self.calculate_author_stats()
+            total_tweets = len(self.tweets)
+            vector = numpy.zeros(6, dtype=float)
+            vector[0] = self.retweets/float(total_tweets) #retweet ratio
+            vector[1] = self.links/float(total_tweets) #links ratio
+            vector[2] = float(total_tweets)/self.retweeted_tweets #how often this author gets retweeted
+            vector[3] = self.replies_to_others / float(total_tweets) #how many of them are replies
+            vector[4] = self.mentions_by_others
+            if self.friends_count != 0:
+                vector[5] = self.followers_count / float(self.friends_count)
+            else:
+                #Add 1 to friends count to avoid division by zero
+                vector[5] = self.followers_count / (self.friends_count+1.0)
+                
+            self.feature_vector = vector
+        return self.feature_vector
     
     def calculate_author_stats(self):
         '''
@@ -84,10 +107,22 @@ class Author(Agent):
         if len(mentions) > 0:
             self.replies_to_others += 1 #No matter how many people are mentioned in the tweet we just increase by one cz we just want to know if this tweet is a reply 
             for mention in mentions:
-                #mentioned_author = Author.objects(screen_name=mention)
-                mentioned_author = TestAuthor.objects(screen_name=mention)                    
+                mentioned_author = Author.objects(screen_name=mention)                  
                 if len(mentioned_author) > 0:
-                    mentioned_author.update(safe_update=True, inc__mentions_by_others=1)
+                    mentioned_author.update(inc__mentions_by_others=1)
 
 class TestAuthor(Author):
     meta = {"collection": "TestAuthors"} 
+    
+    def update_mentions_and_replies(self, tweet):
+        '''
+        If this is a mention to another user then increase replies
+        counter and also update the mentioned user's mentions
+        '''
+        mentions = tools.utils.get_mentions(tweet.content.raw)
+        if len(mentions) > 0:
+            self.replies_to_others += 1 #No matter how many people are mentioned in the tweet we just increase by one cz we just want to know if this tweet is a reply 
+            for mention in mentions:
+                mentioned_author = TestAuthor.objects(screen_name=mention)                   
+                if len(mentioned_author) > 0:
+                    mentioned_author.update(inc__mentions_by_others=1)

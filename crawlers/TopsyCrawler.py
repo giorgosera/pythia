@@ -79,6 +79,17 @@ class TopsyCrawler(AbstractCrawler):
                         tt.author_screen_name = item.trackback_author_nick
                         tt.author_name = item.trackback_author_name                        
                         tt.save(safe=True)
+                        
+                        if len(Author.objects(screen_name=item.trackback_author_nick)) == 0:
+                            
+                            author = Author()
+                            author.screen_name = item.trackback_author_nick
+                            author.tweets.append(tt)
+                        else:
+                            author = Author.objects(screen_name=item.trackback_author_nick).get()
+                            author.tweets.append(tt)
+                        author.save()
+                        
                         count += 1                             
                 except Exception, e:
                     print e
