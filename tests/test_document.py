@@ -117,7 +117,7 @@ def get_orange_clustering_test_data():
 ###############################################################################################
 #AUTHOR INITIALIZATION TEST DOCUMENTS
 ############################################################################################### 
-def get_author_initialisation_data():
+def get_single_author_initialisation_data():
     documents = [["Police are making a move to contain. Minor clashes breaking out. #egypt #jan", "ianinegypt", "http://twitter.com/ianinegypt/status/29882051620503552", 14],
                  ["Protesters calm down for call to prayer. #egypt #jan25", "ianinegypt", "http://twitter.com/ianinegypt/status/29888160099999744", 16],
                  ["Police using water canons on demonstrators in tahrir. #egypt #jan25 protesters throwing rocks", "ianinegypt", "http://twitter.com/ianinegypt/status/29897528803594240", 15],
@@ -160,7 +160,6 @@ def get_author_initialisation_data():
                  ]
     
     docs = []
-
     for document in documents:
         content = Content()
         content.raw = document[0]
@@ -172,3 +171,24 @@ def get_author_initialisation_data():
         doc.save()
         docs.append(doc)
     return docs
+
+def get_multiple_author_initialisation_data():
+    documents = [["Police are making a move to contain. Hello @ianinegypt2 Minor clashes breaking out. http://www.youtube.com/watch?v=vabnZ9-ex7o&feature=relmfu #egypt #jan", "ianinegypt1", "http://twitter.com/ianinegypt1/status/29882051620503552", 14],
+                 ["The son of @ianinegypt2 _nour  Noor Ayman Noor @Noor1Noor2 has been arrested and sent to unknown location", "ianinegypt1", "http://twitter.com/ianinegypt1/status/30051842821984257", 6],
+                 ["RT @AymanM: http://www.youtube.com/watch?v=vabnZ9-ex7o&feature=relmfu death toll in #egypt clashes @dummy2 #jan25 has risen to 4 people, 150 civilians injured according to interior min", "ianinegypt1", "http://twitter.com/aymanm/status/30223227179507712", 33],
+                 ["Protesters calm down for call to prayer. http://www.youtube.com/watch?v=vabnZ9-ex7o&feature=relmfu Hello @ianinegypt1 #egypt #jan25", "ianinegypt2", "http://twitter.com/ianinegypt2/status/29888160099999744", 16]
+                 ]
+    docs = []
+    for document in documents:
+        content = Content()
+        content.raw = document[0]
+        doc = TestTweet()
+        doc.author_screen_name = document[1]
+        doc.content = content
+        doc.url = document[2]
+        doc.retweet_count = document[3]
+        doc.save()
+        docs.append(doc)
+    return docs
+
+  

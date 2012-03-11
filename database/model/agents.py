@@ -18,7 +18,6 @@ class Agent(Document):
     followers_count = IntField(required=True, default=-1)
     friends_count = IntField(required=True, default=-1)
     statuses_count = IntField(required=True, default=0)
-    location = StringField(required=True, default="Unkown")  
     
 class Author(Agent):
     meta = {"collection": "Authors"}
@@ -46,7 +45,7 @@ class Author(Agent):
             is_a_retweet = self.update_retweets(tweet)
             if not is_a_retweet:
                 self.update_mentions_and_replies(tweet)
-            self.save()
+            self.save(safe=True)
                 
     def update_retweeted(self, tweet):
         '''
@@ -85,11 +84,10 @@ class Author(Agent):
         if len(mentions) > 0:
             self.replies_to_others += 1 #No matter how many people are mentioned in the tweet we just increase by one cz we just want to know if this tweet is a reply 
             for mention in mentions:
-                mentioned_author = Author.objects(screen_name=mention)
+                #mentioned_author = Author.objects(screen_name=mention)
+                mentioned_author = TestAuthor.objects(screen_name=mention)                    
                 if len(mentioned_author) > 0:
-                    ma = mentioned_author.get() 
-                    ma.mentions_by_others += 1
-                    ma.save()
+                    mentioned_author.update(safe_update=True, inc__mentions_by_others=1)
 
 class TestAuthor(Author):
     meta = {"collection": "TestAuthors"} 
