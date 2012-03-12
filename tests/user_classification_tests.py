@@ -16,7 +16,7 @@ connect("pythia_db")
 class Test(unittest.TestCase):
 
     def test_author_classification_dummy_dataset(self):
-        
+       
         train_set = numpy.array([[0.2, 0.5, 0.2,  0.2, 0.1,  10.,  0],
                                 [0.2, 0.3, 0.12, 0.1, 0.1,  10.,  0],
                                 [0.2, 0.2, 0.08, 0.2, 0.01, 20.,  0],

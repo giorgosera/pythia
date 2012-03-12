@@ -13,11 +13,11 @@ class History(EmbeddedDocument):
     count = IntField(required=True, default=0)
     
 class Agent(Document):
-    twitter_id = IntField(required=True, default=0)
+    #twitter_id = IntField(required=True, default=0)
     screen_name = StringField(required=True)
     followers_count = IntField(required=True, default=-1)
     friends_count = IntField(required=True, default=-1)
-    statuses_count = IntField(required=True, default=0)
+    #statuses_count = IntField(required=True, default=0)
     
 class Author(Agent):
     meta = {"collection": "Authors"}
