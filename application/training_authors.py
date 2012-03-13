@@ -3,15 +3,11 @@ Created on 22 Jan 2012
 
 @author: george
 '''
-import json
-import os
-from pprint import pprint
-os.chdir("/home/george/virtualenvfyp/pythia/src/crawlers/users/")
-if os.path.exists('/home/george/virtualenvfyp/pythia/src/crawlers/users/items.json'):
-    os.remove('/home/george/virtualenvfyp/pythia/src/crawlers/users/items.json')
-os.system('scrapy crawl user_stats -o items.json -t json')
-json_data=open("/home/george/virtualenvfyp/pythia/src/crawlers/users/items.json")
-data = json.load(json_data)
-for d in data:
-    print raw_input("What type of user " + d["screen_name"] + " is?")
-    print d
+from database.model.agents import TrainingAuthor
+from crawlers.CrawlerFactory import CrawlerFactory
+
+f = CrawlerFactory()
+crawler = f.get_crawler("scrapy")
+
+crawler.setup(user_type=TrainingAuthor)
+crawler.crawl(store=True)

@@ -7,6 +7,12 @@ import datetime, tools.utils, numpy
 from urlparse import urlparse
 from database.model.tweets import *
 from mongoengine import Document, StringField, ListField, IntField, DateTimeField, EmbeddedDocument, EmbeddedDocumentField, ReferenceField, GenericReferenceField, FloatField
+from crawlers.CrawlerFactory import CrawlerFactory
+
+#Initialises crawler
+f = CrawlerFactory()
+crawler = f.get_crawler("scrapy")
+
 
 class History(EmbeddedDocument):
     date = DateTimeField(required=True, default=datetime.datetime.utcnow())
@@ -21,11 +27,12 @@ class Agent(Document):
     
 class Author(Agent):
     meta = {"collection": "Authors"}
-    type = StringField(required=False)
+    type =IntField(required=True, default=0)
     followers_ids = ListField(IntField(), required=True, default=list)
     friends_ids = ListField(IntField(), required=True, default=list)
     
     tweets = ListField(GenericReferenceField(Tweet), required=True, default=list) 
+    tweets_count = IntField(required=True, default=0)
     retweets = IntField(required=True, default=0) 
     retweeted_tweets = IntField(required=True, default=0)
     links = IntField(required=True, default=0)
@@ -38,121 +45,52 @@ class Author(Agent):
     
     def update_feature_vector(self):
         '''
-        Updates and returns the feature vector. If it doesn't exist it creates it.
+        Instead of calculating the stats from the stored tweets we get them 
+        from the crawler.
         '''
-        self.reset_stats()
-        self.calculate_author_stats()
-        total_tweets = len(self.tweets)
-        vector = numpy.zeros(6, dtype=float)
-
-        vector[0] = float(self.retweets)/float(total_tweets) #retweet ratio
-        vector[1] = self.links/float(total_tweets) #links ratio
-        
-        if self.retweeted_tweets != 0:
-            vector[2] = float(total_tweets)/self.retweeted_tweets #how often this author gets retweeted
-        else:
-            vector[2] = float(total_tweets)/(self.retweeted_tweets+1)
-            
-        vector[3] = self.replies_to_others / float(total_tweets) #how many of them are replies
-        vector[4] = self.mentions_to_others / float(total_tweets) 
-        
-        if self.friends_count != 0:
-            vector[5] = self.followers_count / float(self.friends_count)
-        else:
-            #Add 1 to friends count to avoid division by zero
-            vector[5] = self.followers_count / (self.friends_count+1.0)
-            
-        self.feature_vector = vector.tolist()
+        crawler.setup(user_type=self)
+        d = crawler.crawl(url='http://twtrland.com/profile/'+self.screen_name, store=False)[0]
+        if d: #if there was NOTHING wrong in crawling
+            items = [d['retweets'], d['links'], d['retweeted'], d['replies'], d['mentions'], d['followers'], d['friends']]
+            self.retweets = items[0]
+            self.links = items[1]
+            self.retweeted_tweets = items[2] 
+            self.replies_to_others = items[3] 
+            self.mentions_to_others = items[4]
+            self.followers_count = items[5]
+            self.friends_count = items[6]
+            if self.friends_count == 0:
+                self.friends_count = 1
+            self.feature_vector = [self.retweets, self.links, self.retweeted_tweets, self.replies_to_others, self.mentions_to_others, float(self.followers_count)/self.friends_count]
+            self.save()
         return self.feature_vector
     
-    def reset_stats(self):
+    def get_feature_vector_with_type(self):
         '''
-        Resets all the stats to allow for update
+        Returns the feature vector with the type of the author in the end
         '''
-        self.retweets = 0
-        self.retweeted_tweets = 0
-        self.links = 0
-        self.replies_to_others = 0
-        self.mentions_to_others = 0
-    
-    def calculate_author_stats(self):
-        '''
-        Parses the entire list of this author's tweets and calculates stats
-        '''
-        for tweet in self.tweets:
-            self.update_retweeted(tweet)
-            self.update_links(tweet)
-            is_a_retweet = self.update_retweets(tweet)
-            if not is_a_retweet:
-                self.update_mentions_and_replies(tweet)
-            self.save(safe=True)
-                
-    def update_retweeted(self, tweet):
-        '''
-        Parses the tweet and if it belongs to this author and has been retweeted 
-        then it updates the retweeted (another author retweeted this) count
-        '''
-        #If the url belongs to that user then this is their tweet so theri retweets as well
-        if self.screen_name == urlparse(tweet.url).path.split('/')[1]:
-            self.retweeted_tweets += tweet.retweet_count        
-            
-            
-    def update_links(self, tweet):
-        '''
-        Parses the tweet and if it contains a url it updates the links count
-        '''
-        urls = tools.utils.extract_urls(tweet.content.raw)
-        if len(urls) > 0 : #We just want to find out if this tweet has aurl not how many
-            self.links += 1 
-            
-    def update_retweets(self, tweet):
-        '''
-        Parses the tweet and if it is a retweet it updates the retweet count
-        '''
-        #if this is a retweet increase counter
-        is_a_retweet = tools.utils.is_a_retweet(tweet.content.raw)
-        if is_a_retweet:    
-            self.retweets += 1 
-        return is_a_retweet
-    
-    def update_mentions_and_replies(self, tweet):
-        '''
-        If this is a mention to another user then increase replies
-        counter and also update the mentioned user's mentions
-        '''
-        mentions = tools.utils.get_mentions(tweet.content.raw)
-        if len(mentions) > 0:
-            if mentions[0]['indices'][0] == 0:
-                self.replies_to_others += 1 #No matter how many people are mentioned in the tweet we just increase by one cz we just want to know if this tweet is a reply 
-            else:
-                self.mentions_to_others += 1
+        self.feature_vector.append(self.type)
+        return self.feature_vector
+        
+
 
 class TestAuthor(Author):
     meta = {"collection": "TestAuthors"} 
-    
-    def update_mentions_and_replies(self, tweet):
-        '''
-        If this is a mention to another user then increase replies
-        counter and also update the mentioned user's mentions
-        '''
-        mentions = tools.utils.get_mentions(tweet.content.raw)
-        if len(mentions) > 0:
-            if mentions[0]['indices'][0] == 0:
-                self.replies_to_others += 1 #No matter how many people are mentioned in the tweet we just increase by one cz we just want to know if this tweet is a reply 
-            else:
-                self.mentions_to_others += 1
                     
 class TrainingAuthor(Author):
     meta = {"collection": "TrainingAuthors"} 
     
-    def update_mentions_and_replies(self, tweet):
+    def create_feature_vector(self, items):
         '''
-        If this is a mention to another user then increase replies
-        counter and also update the mentioned user's mentions
+        Instead of calculating the stats from the stored tweets we get them 
+        from the crawler.
         '''
-        mentions = tools.utils.get_mentions(tweet.content.raw)
-        if len(mentions) > 0:
-            if mentions[0]['indices'][0] == 0:
-                self.replies_to_others += 1 #No matter how many people are mentioned in the tweet we just increase by one cz we just want to know if this tweet is a reply 
-            else:
-                self.mentions_to_others += 1
+        self.retweets = items[0]
+        self.links = items[1]
+        self.retweeted_tweets = items[2] 
+        self.replies_to_others = items[3] 
+        self.mentions_to_others = items[4]
+        self.followers_count = items[5]
+        self.friends_count = items[6]
+        self.feature_vector = [self.retweets, self.links, self.retweeted_tweets, self.replies_to_others, self.mentions_to_others, float(self.followers_count)/self.friends_count]
+        self.save()

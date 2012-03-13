@@ -26,7 +26,7 @@ class TestPlayground(unittest.TestCase):
         y = Orange.data.variable.Continuous("word2")
         z = Orange.data.variable.Continuous("word3")
         domain = Orange.data.Domain([x, y, z], False)
-   
+    
         #Data
         data = numpy.array([[1, 2, 3], [3, 2, 1]])
         t = Orange.data.Table(domain, data)
@@ -104,7 +104,14 @@ class TestPlayground(unittest.TestCase):
         alchemyObj.setAPIKey("d7605e69dd3d2d7a032f11272d9b000e77d43545");
         result = alchemyObj.TextGetRankedKeywords("Hello my name is Bob Jones.  I am speaking to you at this very moment.  Are you listening to me, Bob?");
         print result
-    
+   
+    def test_spider_with_custom_url(self):
+        import os
+        os.chdir("/home/george/virtualenvfyp/pythia/src/crawlers/users/")
+        if os.path.exists('/home/george/virtualenvfyp/pythia/src/crawlers/users/items.json'):
+            os.remove('/home/george/virtualenvfyp/pythia/src/crawlers/users/items.json')
+        os.system('scrapy crawl user_stats -o items.json -t json -a user_url='+ 'http://twtrland.com/profile/DAVID_LYNCH')
+        
         
 if __name__ == "__main__":
     unittest.main()

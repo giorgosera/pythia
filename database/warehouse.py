@@ -82,7 +82,7 @@ class WarehouseServer(object):
             authors.append(self.get_document_author(id=id, type=type))
         return authors   
     
-    def get_authors(self, limit=None, type=Author):
+    def get_authors(self, limit=None, type=Author, **kwargs):
         '''
         Returns N authors from the database.
         '''

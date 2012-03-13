@@ -6,10 +6,12 @@ Created on 27 Nov 2011
 
 from crawlers.TwitterCrawler import TwitterCrawler
 from crawlers.TopsyCrawler import TopsyCrawler
+from crawlers.ScrapyCrawler import UserCrawler
 
 #Available crawlers
 _crawlers_ = {"twitter": TwitterCrawler,
-              "topsy": TopsyCrawler}
+              "topsy": TopsyCrawler,
+              "scrapy": UserCrawler}
 
 class CrawlerFactory(object):
     '''

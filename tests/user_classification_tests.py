@@ -76,28 +76,39 @@ class Test(unittest.TestCase):
         #orngTree.printTree(treeClassifier)
         
     def test_author_classification_egypt_dataset(self):
-        ws = WarehouseServer()
+        TestAuthor.drop_collection()    
+        ws = WarehouseServer()      
+        for author in [author for author in ws.get_authors(type=Author)]:
+            if len(author.tweets) > 200:
+                t = TestAuthor()
+                t.screen_name = author.screen_name
+                t.tweets = author.tweets
+                t.save()
+            
+        
         authors = ws.get_authors(type=TestAuthor)
-        vectors = []
         for author in authors:
             print '-----------------------'
             print author.screen_name
             vector = author.update_feature_vector()
-            print len(author.tweets)
-            print author.retweets
-            print author.links
-            print author.retweeted_tweets
-            print author.replies_to_others
-            print author.mentions_to_others
             print vector
-            vectors.append(vector)
         
-        TestAuthor.drop_collection()    
-        for author in [author for author in Author.objects().all()]:
-            t = TestAuthor()
-            t.screen_name = author.screen_name
-            t.tweets = author.tweets
-            t.save()
+        classifier = TreeClassifier()
+        attributes = ["retweets", "links", "retweeted", "replies", "mentions", "ff-ratio", "class"]
+        train_set = numpy.array([author.get_feature_vector_with_type() for author in TrainingAuthor.objects])
+
+        classifier.train(train_set, attributes)
         
+        for author in authors:
+            prediction = "No prediction"
+            if len(author.feature_vector) > 0:
+                prediction = classifier.classify(author.get_feature_vector_with_type())
+            print author.screen_name
+            print prediction
+            print '----------------------'
+            
+        TestAuthor.drop_collection()   
+        
+                 
 if __name__ == "__main__":
     unittest.main()
