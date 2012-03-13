@@ -6,6 +6,7 @@
 from scrapy.item import Item, Field#!@UnresolvedImport
 
 class UserStatsItem(Item):
+    screen_name = Field()
     retweets = Field()
     retweeted = Field()
     links = Field()

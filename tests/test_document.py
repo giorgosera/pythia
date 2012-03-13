@@ -124,14 +124,14 @@ def get_single_author_initialisation_data():
                  ["Police beating protesters, protesters respond with rocks. #egypt #jan25", "ianinegypt", "http://twitter.com/ianinegypt/status/29897831477157888", 13],
                  ["Protesters keep out flanking police. Police now surrounded. #egypt #jan25", "ianinegypt", "http://twitter.com/ianinegypt/status/29898774176333824", 15],
                  ["To shouts of allah akbar, police are retreating and regrouping. #egypt #jan25", "ianinegypt", "http://twitter.com/ianinegypt/status/29899637716426752", 10] ,
-                 ["Police use tear gas on demonstrators. #egypt #jan25", "ianinegypt", "http://twitter.com/ianinegypt/status/29901410996850690", 11],
+                 ["@reply Police use tear gas on demonstrators. #egypt #jan25", "ianinegypt", "http://twitter.com/ianinegypt/status/29901410996850690", 11],
                  ["Police flat outnumbered and out flanked PERIOD #egypt #jan25", "ianinegypt", "http://twitter.com/ianinegypt/status/29900862507720704", 11],
                  ["protesters calling for same revolution as in #tunisia Police have yet to challenge them. #jan25 #egypt", "ianinegypt", "http://twitter.com/ianinegypt/status/29877711912566784", 2],
                  ["Twitter problems in #Egypt. I am using a proxy. Expect a video from @dailynewsegypt on today's demonstration. #Jan25", "ianinegypt", "http://twitter.com/ianinegypt/status/29963090992828416", 8],
                  ["RT @Sarahcarr: RT @mand0z: The son of @ayman_nour  Noor Ayman Noor @Noor1Noor2 has been arrested and sent to unknown location", "ianinegypt", "http://twitter.com/ianinegypt/status/30051842821984257", 6],
                  ["This morning's police presence downtown isn't as tight... We'll see what today brings. #jan25 #Egypt", "ianinegypt", "http://twitter.com/ianinegypt/status/30156031812182016", 22],
                  ["Protest scheduled for 9 AM in Tahrir square.  On my way to cover it. #Egypt #jan25", "ianinegypt", "http://twitter.com/ianinegypt/status/30156558721622016", 32],
-                 ["VIDEO: Check out yesterday's and last night's action in Cairo  http://bit.ly/hvIgd0 and http://bit.ly/gO4Zer #Egypt #Jan25", "ianinegypt", "http://twitter.com/ianinegypt/status/30201952587489280", 6],
+                 ["@reply VIDEO: Check out yesterday's and last night's action in Cairo  http://bit.ly/hvIgd0 and http://bit.ly/gO4Zer #Egypt #Jan25", "ianinegypt", "http://twitter.com/ianinegypt/status/30201952587489280", 6],
                  ["Very heavy security in Tahrir, no protests. Aside from security, #Egypt looks like business as usual. #jan25", "ianinegypt", "http://twitter.com/ianinegypt/status/30218377481949184", 19],
                  ["RT @AymanM: death toll in #egypt clashes #jan25 has risen to 4 people, 150 civilians injured according to interior min", "ianinegypt", "http://twitter.com/aymanm/status/30223227179507712", 33] ,
                  ["RT @3arabawy: New post: #Jan25 Marching on State Security Police HQ in Mansoura http://bit.ly/dUy94O", "ianinegypt", "http://twitter.com/3arabawy/status/30240899690668033", 9],
@@ -176,7 +176,7 @@ def get_multiple_author_initialisation_data():
     documents = [["Police are making a move to contain. Hello @ianinegypt2 Minor clashes breaking out. http://www.youtube.com/watch?v=vabnZ9-ex7o&feature=relmfu #egypt #jan", "ianinegypt1", "http://twitter.com/ianinegypt1/status/29882051620503552", 14],
                  ["The son of @ianinegypt2 _nour  Noor Ayman Noor @Noor1Noor2 has been arrested and sent to unknown location", "ianinegypt1", "http://twitter.com/ianinegypt1/status/30051842821984257", 6],
                  ["RT @AymanM: http://www.youtube.com/watch?v=vabnZ9-ex7o&feature=relmfu death toll in #egypt clashes @dummy2 #jan25 has risen to 4 people, 150 civilians injured according to interior min", "ianinegypt1", "http://twitter.com/aymanm/status/30223227179507712", 33],
-                 ["Protesters calm down for call to prayer. http://www.youtube.com/watch?v=vabnZ9-ex7o&feature=relmfu Hello @ianinegypt1 #egypt #jan25", "ianinegypt2", "http://twitter.com/ianinegypt2/status/29888160099999744", 16]
+                 ["@reply Protesters calm down for call to prayer. http://www.youtube.com/watch?v=vabnZ9-ex7o&feature=relmfu Hello @ianinegypt1 #egypt #jan25", "ianinegypt2", "http://twitter.com/ianinegypt2/status/29888160099999744", 16]
                  ]
     docs = []
     for document in documents:

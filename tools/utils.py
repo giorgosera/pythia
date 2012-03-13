@@ -122,7 +122,7 @@ def get_mentions(tweet):
     extractor = twitter_text.Extractor(tweet)
     entities = []
     for um in extractor.extract_mentioned_screen_names_with_indices():
-        entities.append(um['screen_name'])
+        entities.append(um)
     return entities
 
 def parse_result(result, type):

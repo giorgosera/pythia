@@ -16,5 +16,3 @@ size = len(t)
 print "min:", t[0].date
 print "max:", t[size-1].date
 
-     
-

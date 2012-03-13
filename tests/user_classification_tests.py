@@ -88,7 +88,7 @@ class Test(unittest.TestCase):
             print author.links
             print author.retweeted_tweets
             print author.replies_to_others
-            print author.mentions_by_others
+            print author.mentions_to_others
             print vector
             vectors.append(vector)
         

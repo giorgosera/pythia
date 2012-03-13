@@ -30,7 +30,7 @@ class Author(Agent):
     retweeted_tweets = IntField(required=True, default=0)
     links = IntField(required=True, default=0)
     replies_to_others = IntField(required=True, default=0)
-    mentions_by_others = IntField(required=True, default=0)
+    mentions_to_others = IntField(required=True, default=0)
     feature_vector = ListField(FloatField(), required=True, default=list)
     
     followers_history = ListField(EmbeddedDocumentField(History), required=True, default=list)
@@ -54,7 +54,7 @@ class Author(Agent):
             vector[2] = float(total_tweets)/(self.retweeted_tweets+1)
             
         vector[3] = self.replies_to_others / float(total_tweets) #how many of them are replies
-        vector[4] = self.mentions_by_others
+        vector[4] = self.mentions_to_others / float(total_tweets) 
         
         if self.friends_count != 0:
             vector[5] = self.followers_count / float(self.friends_count)
@@ -73,7 +73,7 @@ class Author(Agent):
         self.retweeted_tweets = 0
         self.links = 0
         self.replies_to_others = 0
-        self.mentions_by_others = 0
+        self.mentions_to_others = 0
     
     def calculate_author_stats(self):
         '''
@@ -138,8 +138,23 @@ class TestAuthor(Author):
         '''
         mentions = tools.utils.get_mentions(tweet.content.raw)
         if len(mentions) > 0:
+            if mentions[0]['indices'][0] == 0:
+                self.replies_to_others += 1 #No matter how many people are mentioned in the tweet we just increase by one cz we just want to know if this tweet is a reply 
+            else:
+                self.mentions_to_others += 1
+                    
+class TrainingAuthor(Author):
+    meta = {"collection": "TrainingAuthors"} 
+    
+    def update_mentions_and_replies(self, tweet):
+        '''
+        If this is a mention to another user then increase replies
+        counter and also update the mentioned user's mentions
+        '''
+        mentions = tools.utils.get_mentions(tweet.content.raw)
+        if len(mentions) > 0:
             self.replies_to_others += 1 #No matter how many people are mentioned in the tweet we just increase by one cz we just want to know if this tweet is a reply 
             for mention in mentions:
-                mentioned_author = TestAuthor.objects(screen_name=mention)                   
+                mentioned_author = TrainingAuthor.objects(screen_name=mention)                   
                 if len(mentioned_author) > 0:
                     mentioned_author.update(inc__mentions_by_others=1)

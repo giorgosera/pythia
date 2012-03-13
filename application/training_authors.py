@@ -13,9 +13,5 @@ os.system('scrapy crawl user_stats -o items.json -t json')
 json_data=open("/home/george/virtualenvfyp/pythia/src/crawlers/users/items.json")
 data = json.load(json_data)
 for d in data:
+    print raw_input("What type of user " + d["screen_name"] + " is?")
     print d
-#===============================================================================
-# pprint(data)
-# json_data.close()
-# print raw_input("What type of user " + "a" + " is?")
-#===============================================================================

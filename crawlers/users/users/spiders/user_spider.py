@@ -61,6 +61,10 @@ class UserSpider(BaseSpider):
         hxs = HtmlXPathSelector(response)
         
         item = UserStatsItem()
+        title = hxs.select('/html/head/title/text()').extract()
+        name_pattern = re.compile('[a-zA-Z0-9_]*,')
+        r = name_pattern.findall(str(title))
+        item['screen_name'] = r[0].split(',')[0]
         followers_section = hxs.select('//div[@class="belowImage"]')[1]
         item['followers'] = followers_section.select('b/text()').extract()[0]
         item['friends'] = followers_section.select('b/text()').extract()[1] 
@@ -68,7 +72,7 @@ class UserSpider(BaseSpider):
     
         retweets_section = hxs.select('//div[@class="aboutContent"]')[2]
         sub = retweets_section.select('b/text()').extract()
-        print sub[0]
+        
         if sub[0] != "∞": #infinity symbol 
             item['retweeted'] = sub[0]
         else:
