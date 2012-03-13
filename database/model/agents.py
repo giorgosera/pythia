@@ -122,11 +122,10 @@ class Author(Agent):
         '''
         mentions = tools.utils.get_mentions(tweet.content.raw)
         if len(mentions) > 0:
-            self.replies_to_others += 1 #No matter how many people are mentioned in the tweet we just increase by one cz we just want to know if this tweet is a reply 
-            for mention in mentions:
-                mentioned_author = Author.objects(screen_name=mention)                  
-                if len(mentioned_author) > 0:
-                    mentioned_author.update(inc__mentions_by_others=1)
+            if mentions[0]['indices'][0] == 0:
+                self.replies_to_others += 1 #No matter how many people are mentioned in the tweet we just increase by one cz we just want to know if this tweet is a reply 
+            else:
+                self.mentions_to_others += 1
 
 class TestAuthor(Author):
     meta = {"collection": "TestAuthors"} 
@@ -153,8 +152,7 @@ class TrainingAuthor(Author):
         '''
         mentions = tools.utils.get_mentions(tweet.content.raw)
         if len(mentions) > 0:
-            self.replies_to_others += 1 #No matter how many people are mentioned in the tweet we just increase by one cz we just want to know if this tweet is a reply 
-            for mention in mentions:
-                mentioned_author = TrainingAuthor.objects(screen_name=mention)                   
-                if len(mentioned_author) > 0:
-                    mentioned_author.update(inc__mentions_by_others=1)
+            if mentions[0]['indices'][0] == 0:
+                self.replies_to_others += 1 #No matter how many people are mentioned in the tweet we just increase by one cz we just want to know if this tweet is a reply 
+            else:
+                self.mentions_to_others += 1
