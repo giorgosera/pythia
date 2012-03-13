@@ -3,10 +3,8 @@ Created on 27 Nov 2011
 
 @author: george
 '''
-import datetime, tools.utils, numpy
-from urlparse import urlparse
 from database.model.tweets import *
-from mongoengine import Document, StringField, ListField, IntField, DateTimeField, EmbeddedDocument, EmbeddedDocumentField, ReferenceField, GenericReferenceField, FloatField
+from mongoengine import GenericReferenceField, FloatField
 from crawlers.CrawlerFactory import CrawlerFactory
 
 #Initialises crawler

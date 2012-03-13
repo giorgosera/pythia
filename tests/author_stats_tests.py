@@ -3,6 +3,13 @@ Created on 26 Jan 2012
 
 @author: george
 '''
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+####################################### <---- WARNING ----> ##################################################
+THESE TESTS NO LONGER WORK SINCE NOW WE CRAWL THE STATS INSTEAD OF CALCULATING THEM FROM THE DATASET. HOWEVER, WE KEEP ALL THE 
+FUNCTION IN DEPRECATED/SCRAPY. IN FUTURE IF WE NEED TO CALCULATE USERS STATS WE CAN REUSE THEM.
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 import unittest, numpy
 from tests.test_document import get_single_author_initialisation_data, get_multiple_author_initialisation_data
 from database.model.agents import TestAuthor
