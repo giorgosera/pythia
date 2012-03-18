@@ -5,12 +5,10 @@ Created on 27 Nov 2011
 '''
 from database.model.tweets import *
 from mongoengine import GenericReferenceField, FloatField
-from crawlers.CrawlerFactory import CrawlerFactory
+from crawlers.ScrapyCrawler import UserCrawler
 
 #Initialises crawler
-f = CrawlerFactory()
-crawler = f.get_crawler("scrapy")
-
+crawler = UserCrawler("user_crawler")
 
 class History(EmbeddedDocument):
     date = DateTimeField(required=True, default=datetime.datetime.utcnow())

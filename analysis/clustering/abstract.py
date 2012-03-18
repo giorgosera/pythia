@@ -103,11 +103,8 @@ class AbstractClusterer(object):
             for item in document.word_frequencies:
                 data_rows[i][terms.index(item.word)] = corpus.tf_idf(item.word, text)
         
-        
-        #table = Orange.data.Table("iris.tab")
-        self.attributes = terms#table.domain.features
-        #a, c, w = table.to_numpy()        
-        self.td_matrix = data_rows#a
+        self.attributes = terms
+        self.td_matrix = data_rows
                 
         #If PCA is True then we project our points on their principal components
         #for dimensionality reduction
