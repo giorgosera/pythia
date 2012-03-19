@@ -34,5 +34,11 @@ class TestSummarizationFunctions(unittest.TestCase):
         diff = numpy.sum(cs.centroid - expected)
         self.assertAlmostEqual(diff, 0, places=5)
 
+    def test_ranking(self):
+        cs = CentroidSummarizer(doc_dict)
+        sorted_docs = cs.summarize()
+        expected = [0.21884737839044804, 0.2355835430632936, 0.24201437073508825, 0.25732418417205782, 0.26127247926054975, 0.30161343021498299]
+        self.assertEquals(expected, [doc.dist for doc in sorted_docs])
+        
 if __name__ == "__main__":
     unittest.main()

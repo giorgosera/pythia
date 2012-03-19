@@ -7,6 +7,7 @@ import itertools, nltk, tools.utils, numpy, scipy, math
 from database.warehouse import WarehouseServer
 from analysis.semantic import TwitterSemanticAnalyser
 from collections import OrderedDict
+from analysis.summarization.summarization import CentroidSummarizer
 
 class Cluster(object):
     '''
@@ -47,6 +48,14 @@ class Cluster(object):
         The size of the cluster is defined by the number of its documents.
         '''   
         return len(self.document_dict.keys())
+    
+    def summarize(self):
+        '''
+        Performs cluster summarization. It returns a list of ranked documents.
+        '''
+        cs = CentroidSummarizer(self.document_dict)
+        sorted_documents = cs.summarize()
+        return sorted_documents
     
     def analyse(self):
         '''
