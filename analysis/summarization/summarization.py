@@ -46,39 +46,41 @@ class LexRankSummarizer(AbstractSummarizer):
         
         self._attach_feature_vectors()
         doc_list = [document for document in self.documents.values()]
+        ranked_doc_list = self._rank_documents(doc_list, threshold, tolerance)
+
+        #the bigger the distance the better
+        sorted_documents = sorted(ranked_doc_list, key=lambda document: -document.dist)
+        return sorted_documents
+        
+    def _rank_documents(self, doc_list, threshold, tolerance):
         n = len(doc_list)
         #Initialises the adjacency matrix
         adjacency_matrix = numpy.zeros([n, n])
         
-        degree = numpy.zeros([1, n])
-        scores = numpy.zeros([1, n])
+        degree = numpy.zeros([n])
+        scores = numpy.zeros([n])
         
         for i, documenti in enumerate(doc_list):
             for j, documentj in enumerate(doc_list):
-                if len(documenti.tokens) < 2 or len(documentj) < 2:
-                    if j == i:
-                        adjacency_matrix[i][j] = 1.0
-                    else:
-                        adjacency_matrix[i][j] = 0.0
-                else:
-                    adjacency_matrix[i][j] = cosine(documenti.fv, documentj.fv )
+                adjacency_matrix[i][j] = cosine(documenti.fv, documentj.fv , distance=False)
                 
                 if adjacency_matrix[i][j] > threshold:
                     adjacency_matrix[i][j] = 1.0
-                    degree[0][i] += 1
+                    degree[i] += 1
                 else:
                     adjacency_matrix[i][j] = 0
         
         for i in xrange(n):
             for j in xrange(n):
-                adjacency_matrix[i][j] = adjacency_matrix[i][j] / degree[0][i]
+                if degree[i] == 0: degree[i] = 1.0 #at least similat to itself
+                adjacency_matrix[i][j] = adjacency_matrix[i][j] / degree[i]
 
-        scores[0] = self.power_method(adjacency_matrix, tolerance)
-        result = []
+        scores = self.power_method(adjacency_matrix, tolerance)        
+        
         for i in xrange( 0, n ):
-            result.append( [scores[0][i], doc_list[i].raw] )
-        return result
-    
+            doc_list[i].dist = scores[i]
+        return doc_list
+        
     def power_method(self, m, epsilon ):
         n = len( m )
         p = [1.0 / n] * n

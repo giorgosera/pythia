@@ -7,7 +7,7 @@ import itertools, nltk, tools.utils, numpy, scipy, math
 from database.warehouse import WarehouseServer
 from analysis.semantic import TwitterSemanticAnalyser
 from collections import OrderedDict
-from analysis.summarization.summarization import CentroidSummarizer
+from analysis.summarization.summarization import CentroidSummarizer, LexRankSummarizer
 
 class Cluster(object):
     '''
@@ -53,7 +53,7 @@ class Cluster(object):
         '''
         Performs cluster summarization. It returns a list of ranked documents.
         '''
-        cs = CentroidSummarizer(self.document_dict)
+        cs = LexRankSummarizer(self.document_dict)
         sorted_documents = cs.summarize()
         return sorted_documents
     

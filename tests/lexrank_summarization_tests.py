@@ -19,7 +19,8 @@ class TestLexRankSummarizationFunctions(unittest.TestCase):
     def test_cosine_matrix_creation(self): 
         lrs = LexRankSummarizer(doc_dict)
         res=lrs.summarize(threshold=0.1, tolerance=0.0001)
-        print res
+        for doc in res:
+            print doc.dist, doc.raw
         
 if __name__ == "__main__":
     unittest.main()

@@ -30,17 +30,20 @@ def pearson(v1,v2):
     
     return 1.0-num/den
 
-def cosine(v1,v2):
+def cosine(v1,v2, distance=True):
     '''
-    Calculates the cosine similarity between two vectors. In the end we
+    Calculates the cosine similarity between two vectors. If distance == True we
     return the similarity multiplied by -1 in order to indicate that lower
     distances are closer similarities. The cosine sim of two close vectors
     should be almost 1 but in our clustering algorithm we take distances so
     1 must become -1 to indicate a closer distance. 
     '''
     sim = numpy.dot(v1, v2) / (sqrt(numpy.dot(v1, v1)) * sqrt(numpy.dot(v2, v2))) 
-    return (-1*sim + 1) / 2.0
-
+    if distance:
+        return (-1*sim + 1) / 2.0
+    else:
+        return sim
+     
 def tanimoto(v1,v2):
     '''
     Calculates the tanimoto coeeficient between two vectors. 

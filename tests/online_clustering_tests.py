@@ -17,7 +17,7 @@ class Test_online_clustering(unittest.TestCase):
     def test_online_clustering_with_tweets(self):
         from_date = datetime.datetime(2011, 1, 25, 0, 0, 0)
         to_date = datetime.datetime(2011, 1, 26, 0, 00, 0) 
-        items = ws.get_documents_by_date(from_date, to_date, limit=300)             
+        items = ws.get_documents_by_date(from_date, to_date, limit=200)             
         
         window = 100
         oc = OnlineClusterer(N=50, window = window)
@@ -26,21 +26,21 @@ class Test_online_clustering(unittest.TestCase):
 
         clusters=oc.trimclusters()            
         oc.dump_clusters_to_file("online_with_tweets")
-        oc.plot_scatter()
-        oc.plot_growth_timeline(cumulative=True)
+        #oc.plot_scatter()
+        #oc.plot_growth_timeline(cumulative=True)
+
+        for cluster in oc.clusters:
+            sorted = cluster.summarize()
+            for doc in sorted:
+                print doc.dist, doc.raw
+            print '--------------------'
 
         #=======================================================================
         # for cluster in oc.clusters:
-        #    sorted = cluster.summarize()
-        #    for doc in sorted:
-        #        print doc.dist, doc.raw
-        #    print '--------------------'
+        #    print cluster.id
+        #    print cluster.get_size()
+        #    print '-----------------'
         #=======================================================================
-
-        for cluster in oc.clusters:
-            print cluster.id
-            print cluster.get_size()
-            print '-----------------'
 
 if __name__ == "__main__":
     unittest.main()
