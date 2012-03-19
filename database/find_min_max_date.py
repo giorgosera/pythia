@@ -8,7 +8,6 @@ A small script to escaped HTML characters from the tweet text
 
 from mongoengine import *
 from database.model.tweets import *
-import HTMLParser
 
 connect("pythia_db")
 t = EgyptTweet.objects.order_by("-date")

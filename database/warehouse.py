@@ -20,7 +20,7 @@ class WarehouseServer(object):
         self.connection = connect("pythia_db")
         
     
-    def get_documents_by_date(self, from_date, to_date, limit = 10000, type=EgyptTweet):
+    def get_documents_by_date(self, from_date, to_date, limit = 10000**2, type=EgyptTweet):
         '''
         This is a getter which returns all the documents which were retrieved during
         the period from_date <--> to_date. 
@@ -28,7 +28,7 @@ class WarehouseServer(object):
         t = type.objects(Q(date__gte=from_date) & Q(date__lte=to_date)).limit(limit)
         return t
     
-    def get_top_documents_by_date(self, from_date, to_date, limit = 10000, threshold=5, type=EgyptTweet):
+    def get_top_documents_by_date(self, from_date, to_date, limit = 10000**2, threshold=5, type=EgyptTweet):
         '''
         This is a getter which returns the top documents (in terms of retweets which were retrieved during
         the period from_date <--> to_date. 

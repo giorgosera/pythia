@@ -45,7 +45,7 @@ class CyprusTweet(Tweet):
     url = StringField(required=True)
             
 class EgyptTweet(Tweet):
-    meta = {"collection": "EgyptTweets"}
+    meta = {"collection": "EgyptTweets", "indexes": [("date")]}
     url = StringField(required=True)
     
 class PsychTweet(Tweet):
@@ -55,3 +55,52 @@ class PsychTweet(Tweet):
 class TestTweet(Tweet):
     meta = {"collection": "TestTweets"}
     url = StringField(required=True)
+    
+class EvaluationTweet(Tweet):
+    meta = {"collection": "EvaluationTweets"}
+    url = StringField(required=True)
+    event_class = IntField(required=True, default=0)
+    
+    def set_event_class(self, event_class):
+        '''
+        Sets the event class of this tweet. If class doesn't exist it
+        creates a new class.
+        '''
+        self.event_class = event_class
+        self.save()
+    
+    def get_event_description(self, event_class):
+        '''
+        Based on event_class it returns a textual description
+        of the event.
+        '''
+        for event in el.event_list:
+            if event.event_class == event_class:
+                return el.event_list
+        return None
+    
+    def get_available_events(self):
+        '''
+        It returns a list with the available event classes and descriptions.
+        '''
+        return [event for event in el.event_list]
+        
+
+class EventItem(EmbeddedDocument):
+    event_class = IntField(required=True, default=0)
+    event_desc = StringField(required=True)
+
+class EventList(Document):
+    '''
+    A helper class for the evaluation of event detection
+    '''
+    meta = {"collection": "EventClasses"}
+    event_list = ListField(EmbeddedDocumentField(EventItem), required=True, default=list)
+    
+    def add_new_class(self, event_class, event_desc):
+        ei = EventItem()
+        ei.event_class = event_class
+        ei.event_desc = event_desc
+        self.event_list.append(ei)
+
+el = EventList()    

@@ -34,7 +34,9 @@ class AbstractSummarizer(object):
             for item in document.word_frequencies:
                 fv[terms.index(item.word)]= corpus.tf_idf(item.word, text)
             self.documents[id].fv = fv
-                          
+
+# ============================ LexRankSummarizer ================================ #
+
 class LexRankSummarizer(AbstractSummarizer):
     '''
     This class implements the LexRank algorithm for automatic text summarization.
@@ -96,7 +98,9 @@ class LexRankSummarizer(AbstractSummarizer):
             if total < epsilon:
                 break
         return p
-    
+
+# ============================ CentroidSummarizer ================================ #
+
 class CentroidSummarizer(AbstractSummarizer):
     '''
     This class implements the summarizer which is based on the centroid similarity.
