@@ -66,9 +66,15 @@ class EvaluationTweet(Tweet):
         Sets the event class of this tweet. If class doesn't exist it
         creates a new class.
         '''
-        self.event_class = event_class
-        self.save()
-    
+        if event_class in [event.event_class for event in el.event_list]:
+            self.event_class = event_class
+        else:
+            new_event_class = event_class
+            new_event_desc = raw_input("This is a new event with class #" + str(new_event_class) + "! What is the description of this event?")
+            el.add_new_class(new_event_class, new_event_desc)
+            self.event_class = new_event_class
+        self.save()            
+        
     def get_event_description(self, event_class):
         '''
         Based on event_class it returns a textual description
@@ -102,5 +108,6 @@ class EventList(Document):
         ei.event_class = event_class
         ei.event_desc = event_desc
         self.event_list.append(ei)
+        self.save()
 
 el = EventList()    

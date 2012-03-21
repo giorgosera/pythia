@@ -25,8 +25,8 @@ t = f.get_crawler("topsy")
 search_hashtags = "#25jan OR #jan25 OR #egypt OR #tahrir OR #fuckmubarak OR #mubarak \
                    OR #suez OR #DownWithMubarak OR #NOSCAF OR #SCAF OR #cairo"
 t.search_for(search_hashtags)
-from_date=datetime.datetime(2011, 01, 26, 23, 50, 0)
-to_date=datetime.datetime(2011, 01, 28, 0, 0, 0)
+from_date=datetime.datetime(2011, 01, 27, 23, 55, 0)
+to_date=datetime.datetime(2011, 01, 29, 0, 0, 0)
 t.search_between(from_date=from_date, 
                  to_date=to_date, 
                  granularity_days=0, 
