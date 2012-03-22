@@ -146,10 +146,11 @@ class EventDetectionEvaluator(object):
             recall_average_sum += (correctness-1)/ (len(same_label)-1) if len(same_label) > 1 else 0
         precision_bcubed = precision_average_sum/len(documents_labels_clusters)
         recall_bcubed = recall_average_sum/len(documents_labels_clusters) 
-
+        f_bcubed = (2*precision_bcubed*recall_bcubed)/(precision_bcubed+recall_bcubed)
+        
         print 'precision', precision_bcubed
         print 'recall', recall_bcubed            
-
+        print 'f1', f_bcubed
 
 
 
