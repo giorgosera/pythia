@@ -31,11 +31,20 @@ class TestEvaluationClass(unittest.TestCase):
     
     def test_bcubed_calculation(self):
         ede = EventDetectionEvaluator()
-        documents_labels_clusters = [(0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0), 
-                                     (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1),
-                                     (2, 2), (2, 2), (2, 2), (2, 2), (2, 2), (2, 2)]
+        documents_labels_clusters = [(0, 0), (0, 1), (0, 0), (0, 0), (0, 1), (0, 0), 
+                                     (1, 1), (1, 1), (1, 2), (1, 1), (1, 1), (1, 1),
+                                     (2, 1), (2, 0), (2, 2), (2, 0), (2, 2), (2, 2)]
         
-        ede.calculate_bcubed_measures(documents_labels_clusters)
-        
+        #=======================================================================
+        # documents_labels_clusters = [(0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0), 
+        #                             (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1),
+        #                             (2, 2), (2, 2), (2, 2), (2, 2), (2, 2), (2, 2)]
+        #=======================================================================
+                
+        precision ,recall, f = ede.calculate_bcubed_measures(documents_labels_clusters)
+        self.assertAlmostEqual(0.532407407407 - precision, 0, places=7)
+        self.assertAlmostEqual(0.555555555556 - recall, 0, places=7)
+        self.assertAlmostEqual(0.543735224586 - f, 0, places=7)
+
 if __name__ == "__main__":
     unittest.main()

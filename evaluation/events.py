@@ -139,18 +139,16 @@ class EventDetectionEvaluator(object):
             correctness = 0.0
             for doc in same_cluster:
                 if doci[0] == doc[0]: correctness += 1.0 
-            precision_average_sum += (correctness-1)/ (len(same_cluster)-1) if len(same_cluster) > 1 else 0
+            precision_average_sum += correctness/ len(same_cluster)
             correctness = 0.0
             for doc in same_label:
                 if doci[1] == doc[1]: correctness += 1.0 
-            recall_average_sum += (correctness-1)/ (len(same_label)-1) if len(same_label) > 1 else 0
+            recall_average_sum += correctness/ len(same_label)
         precision_bcubed = precision_average_sum/len(documents_labels_clusters)
         recall_bcubed = recall_average_sum/len(documents_labels_clusters) 
         f_bcubed = (2*precision_bcubed*recall_bcubed)/(precision_bcubed+recall_bcubed)
         
-        print 'precision', precision_bcubed
-        print 'recall', recall_bcubed            
-        print 'f1', f_bcubed
+        return precision_bcubed, recall_bcubed, f_bcubed
 
 
 
