@@ -28,5 +28,14 @@ class TestEvaluationClass(unittest.TestCase):
         rp_rates = ede.calculate_precision_recall(confusion_matrix)
         fs = ede.calculate_f_measure(rp_rates)
         self.assertEquals(sum(fs), [2.5])
+    
+    def test_bcubed_calculation(self):
+        ede = EventDetectionEvaluator()
+        documents_labels_clusters = [(0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0), 
+                                     (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1),
+                                     (2, 2), (2, 2), (2, 2), (2, 2), (2, 2), (2, 2)]
+        
+        ede.calculate_bcubed_measures(documents_labels_clusters)
+        
 if __name__ == "__main__":
     unittest.main()

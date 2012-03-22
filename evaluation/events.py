@@ -8,6 +8,7 @@ from database.model.tweets import EvaluationTweet
 from database.warehouse import WarehouseServer
 from mongoengine import connect
 from database.model.tweets import Content
+from itertools import groupby as g
 connect("pythia_db")
 
 ws = WarehouseServer()
@@ -118,6 +119,66 @@ class EventDetectionEvaluator(object):
             if rp_rates[i,0] != 0 or rp_rates(i,1) != 0:
                 f_measures[i] = (1 + alpha) * (( rp_rates[i,0] * rp_rates[i,1]) / (alpha * rp_rates[i,1] + rp_rates[i,0]));
         return f_measures
+    
+    def calculate_bcubed_measures(self, documents_labels_clusters):
+        '''
+        This method calculates the BCubed precision, recall and F measures. 
+        BCubed measures are extrinsic measures and require the presence of a ground
+        truth.
+        The function assumes that the clusters are in the range 0..Nc and the labels 0..Nl.
+        For more details : http://www.cs.utsa.edu/~qitian/seminar/Spring11/03_11_11/IR2009.pdf
+        '''
+        grouped_by_label = [list(label[1]) for label in g(sorted(documents_labels_clusters), key=lambda(x):x[0])]
+        grouped_by_cluster = {cluster[0] :list(cluster[1]) for cluster in g(sorted(documents_labels_clusters ,key=lambda(x):x[1]), key=lambda(x):x[1])}
+        
+        precision_average_sum = 0.0
+        recall_average_sum = 0.0
+        for i, doci in enumerate(documents_labels_clusters):
+            same_label = grouped_by_label[doci[0]]
+            same_cluster = grouped_by_cluster[doci[1]]
+            correctness = 0.0
+            for doc in same_cluster:
+                if doci[0] == doc[0]: correctness += 1.0 
+            precision_average_sum += (correctness-1)/ (len(same_cluster)-1) if len(same_cluster) > 1 else 0
+            correctness = 0.0
+            for doc in same_label:
+                if doci[1] == doc[1]: correctness += 1.0 
+            recall_average_sum += (correctness-1)/ (len(same_label)-1) if len(same_label) > 1 else 0
+        precision_bcubed = precision_average_sum/len(documents_labels_clusters)
+        recall_bcubed = recall_average_sum/len(documents_labels_clusters) 
+
+        print 'precision', precision_bcubed
+        print 'recall', recall_bcubed            
+
+
+
+
+#===============================================================================
+#        average_sum = 0.0
+# 
+#        for doci in documents_labels_clusters:
+#            correctness = 0.0
+#            docs_in_cluster = len(clusters[doci[1]]) 
+#            if docs_in_cluster != 1:
+#                for label in clusters[doci[1]]: 
+#                    if doci[0] == label: correctness += 1 #If the two docs have the same label
+#                average_sum += (correctness-1)/(docs_in_cluster-1)
+#        precision_bcubed = average_sum/len(documents_labels_clusters)
+# 
+# 
+#        average_sum = 0.0
+#        for doci in documents_labels_clusters:
+#            correctness = 0.0
+#            same_label_count = 0.0
+#            for docj in documents_labels_clusters:
+#                if doci[0] == docj[0]:
+#                    same_label_count += 1
+#                    if doci[1]==docj[1]: correctness+=1
+#            average_sum += (correctness-1)/(same_label_count)
+#        recall_bcubed = average_sum/len(documents_labels_clusters)
+#===============================================================================
+
+        
 #===============================================================================
 # if __name__ == "__main__":
 #    ede = EventDetectionEvaluator()
