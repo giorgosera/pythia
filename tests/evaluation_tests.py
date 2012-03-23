@@ -46,6 +46,7 @@ class TestClassificationEvaluationClass(unittest.TestCase):
         X = [i for i in xrange(97)]
         ce = ClassificationEvaluator(X) 
         ce.evaluate(K=10)
+        #TODO put a self assert
         
         
         

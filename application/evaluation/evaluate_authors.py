@@ -12,5 +12,5 @@ from evaluation.evaluators import ClassificationEvaluator
 ws = WarehouseServer()
 authors = ws.get_all_documents(type=TrainingAuthor)
 ce = ClassificationEvaluator(authors, ["Celebrity", "Media", "Journalists", "Activists", "Commoner"])
-metrics = ce.evaluate(classifier_type=TreeClassifier, K=10)
+metrics = ce.evaluate(classifier=TreeClassifier(), K=10)
 print metrics

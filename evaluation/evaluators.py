@@ -128,6 +128,24 @@ class ClusteringEvaluator(AbstractEvaluator):
         #tt.save(safe=True)
         return tt
     
+    def evaluate(self, clusterer):
+        '''
+        Performs clustering evaluation
+        '''
+        clusterer.add_documents(self.dataset)
+        clusterer.run("orange_clustering_test", pca=True)
+            
+        doc_labels_clusters = []
+        for document in self.dataset:
+            for cluster_no, cluster in enumerate(clusterer.clusters):
+                if str(document.id) in cluster.get_documents().keys():
+                    doc_labels_clusters.append( (document.event_class, cluster_no) )
+                    break
+        
+
+        p, r, f =self.calculate_bcubed_measures(doc_labels_clusters)
+        return p, r, f
+    
     def calculate_bcubed_measures(self, documents_labels_clusters):
         '''
         This method calculates the BCubed precision, recall and F measures. 
@@ -178,14 +196,13 @@ class ClassificationEvaluator(AbstractEvaluator):
         '''
         pass
     
-    def evaluate(self, classifier_type, K=10):
+    def evaluate(self, classifier, K=10):
         '''
         This method performs the actual task of evaluation. It takes as input
         k which determines the number of folds in k-fold cross validation and the type
         of the classifier. It return a numpy array which contains n rows and m columns where
         n is the number of different classes and m = 3 (precision ,recall and f measure).
         '''
-        classifier = classifier_type()
         attributes = ["retweets", "links", "retweeted", "replies", "mentions", "ff-ratio", "class"]
         metrics = numpy.zeros([len(self.classes_list), 3])
         for training, validation in self.split_dataset(K=K, randomize=True):
