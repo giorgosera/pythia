@@ -9,7 +9,11 @@ from AbstractCrawler import AbstractCrawler
 
 PAGE_SIZE = 10
 connect("pythia_db")
-type_dict = {0: "Celebrity", 1: "Media", 2: "Journalist", 3: "Activist", 4: "Commoner" }
+type_dict = {0: "Celebrity", 
+             1: "Media", 
+             2: "Journalist", 
+             3: "Activist", 
+             4: "Commoner" }
 
 from mongoengine import connect
 connect("pythia_db")
@@ -56,6 +60,7 @@ class UserCrawler(AbstractCrawler):
                     ta.create_feature_vector(items)
                     print 'You have stored ' + ta.screen_name + " as " + type_dict[int(ta.type)]
                     print "Their feature vector from twtrland:"
+                    if d['friends'] == 0: d['friends']+=1
                     print [d['retweets'], d['links'], d['retweeted'], d['replies'], d['mentions'], float(d['followers'])/d['friends']]
                     print "Their stored feature vector"
                     print ta.feature_vector

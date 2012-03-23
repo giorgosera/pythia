@@ -4,9 +4,7 @@ Created on 26 Jan 2012
 @author: george
 '''
 import unittest, numpy
-from tools.orange_utils import construct_orange_table
 from database.warehouse import WarehouseServer
-import orngTree, Orange#!@UnresolvedImport
 from database.model.agents import *
 from analysis.classification.tree import TreeClassifier
 

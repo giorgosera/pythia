@@ -31,6 +31,8 @@ class UserSpider(BaseSpider):
                    "http://twtrland.com/profile/nytimesworld",
                    "http://twtrland.com/profile/time",
                    "http://twtrland.com/profile/wired",
+                   "http://twtrland.com/profile/TheOnion",
+                   "http://twtrland.com/profile/BreakingNews",
                    #Journalists
                    "http://twtrland.com/profile/Kristiturnquist",
                    "http://twtrland.com/profile/colliderfrosty",
@@ -48,6 +50,9 @@ class UserSpider(BaseSpider):
                    "http://twtrland.com/profile/sultanalqassemi",
                    "http://twtrland.com/profile/mbaa",
                    "http://twtrland.com/profile/sarahraslan",
+                   "http://twtrland.com/profile/MarcAmbinder",
+                   "http://twtrland.com/profile/TheFix",
+                   "http://twtrland.com/profile/ShiraToeplitz",
                    #Activists
                    "http://twtrland.com/profile/alkoga",
                    "http://twtrland.com/profile/alaa",
@@ -71,6 +76,8 @@ class UserSpider(BaseSpider):
                    "http://twtrland.com/profile/alshaheeed",
                    "http://twtrland.com/profile/justicentric",
                    "http://twtrland.com/profile/exiledsurfer",
+                   "http://twtrland.com/profile/M_Salama86",
+                   "http://twtrland.com/profile/zeenat",
                    #Celebrities
                    "http://twtrland.com/profile/BillGates",
                    "http://twtrland.com/profile/TheEllenShow",
@@ -83,6 +90,9 @@ class UserSpider(BaseSpider):
                    "http://twtrland.com/profile/billmaher",
                    "http://twtrland.com/profile/SethMacFarlane",
                    "http://twtrland.com/profile/stephenfry",
+                   "http://twtrland.com/profile/OPRAH",
+                   "http://twtrland.com/profile/Schwarzenegger",
+                   "http://twtrland.com/profile/CindyCrawford",
                    #Commoners
                    "http://twtrland.com/profile/geracleous",
                    "http://twtrland.com/profile/marios",
@@ -97,7 +107,8 @@ class UserSpider(BaseSpider):
                    "http://twtrland.com/profile/mrad_",
                    "http://twtrland.com/profile/G0rginos",
                    "http://twtrland.com/profile/sonic2000gr",
-                   "http://twtrland.com/profile/mariiaanaM"]
+                   "http://twtrland.com/profile/mariiaanaM",
+                   "http://twtrland.com/profile/gmakkoulis"]
 
     def __init__(self, name=None, **kwargs): 
         BaseSpider.__init__(self,name)

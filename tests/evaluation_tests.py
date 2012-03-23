@@ -7,12 +7,12 @@ Created on 13 Nov 2011
 Unit tests for the evaluation package.
 '''
 import unittest, numpy
-from evaluation.events import EventDetectionEvaluator
+from evaluation.evaluators import ClusteringEvaluator, ClassificationEvaluator
 
-class TestEvaluationClass(unittest.TestCase):
+class TestClusteringEvaluationClass(unittest.TestCase):
     
     def test_confusion_matrix_creation(self):
-        ede = EventDetectionEvaluator()
+        ede = ClusteringEvaluator()
         targets = [1, 1, 1, 1, 1 , 1, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2]
         predictions = [1, 1, 1, 1, 1 , 1, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2]
         confusion_matrix = ede.create_confusion_matrix(targets, predictions, 3)
@@ -21,7 +21,7 @@ class TestEvaluationClass(unittest.TestCase):
         self.assertTrue(numpy.in1d((numpy.sum(confusion_matrix-expected, axis=1)), [0., 0., 0.]).all())
         
     def test_precision_recall_and_f_calculation(self):
-        ede = EventDetectionEvaluator()
+        ede = ClusteringEvaluator()
         targets = [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1 , 1, 2, 2, 2, 2, 2, 2]
         predictions = [0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1 , 2, 2, 2, 2, 2, 0, 2]
         confusion_matrix = ede.create_confusion_matrix(targets, predictions, 3)
@@ -30,21 +30,24 @@ class TestEvaluationClass(unittest.TestCase):
         self.assertEquals(sum(fs), [2.5])
     
     def test_bcubed_calculation(self):
-        ede = EventDetectionEvaluator()
+        ede = ClusteringEvaluator()
         documents_labels_clusters = [(0, 0), (0, 1), (0, 0), (0, 0), (0, 1), (0, 0), 
                                      (1, 1), (1, 1), (1, 2), (1, 1), (1, 1), (1, 1),
                                      (2, 1), (2, 0), (2, 2), (2, 0), (2, 2), (2, 2)]
-        
-        #=======================================================================
-        # documents_labels_clusters = [(0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0), 
-        #                             (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1),
-        #                             (2, 2), (2, 2), (2, 2), (2, 2), (2, 2), (2, 2)]
-        #=======================================================================
                 
         precision ,recall, f = ede.calculate_bcubed_measures(documents_labels_clusters)
         self.assertAlmostEqual(0.532407407407 - precision, 0, places=7)
         self.assertAlmostEqual(0.555555555556 - recall, 0, places=7)
         self.assertAlmostEqual(0.543735224586 - f, 0, places=7)
 
+class TestClassificationEvaluationClass(unittest.TestCase):
+
+    def test_dataset_split(self):
+        X = [i for i in xrange(97)]
+        ce = ClassificationEvaluator(X) 
+        ce.evaluate(K=10)
+        
+        
+        
 if __name__ == "__main__":
     unittest.main()

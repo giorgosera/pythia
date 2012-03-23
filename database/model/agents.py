@@ -88,5 +88,6 @@ class TrainingAuthor(Author):
         self.mentions_to_others = items[4]
         self.followers_count = items[5]
         self.friends_count = items[6]
+        self.friends_count = self.friends_count if self.friends_count >0 else self.friends_count+1 
         self.feature_vector = [self.retweets, self.links, self.retweeted_tweets, self.replies_to_others, self.mentions_to_others, float(self.followers_count)/self.friends_count]
         self.save()
