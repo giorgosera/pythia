@@ -36,11 +36,11 @@ class TestOrangeClustering(unittest.TestCase):
         start = time.time()            
         from_date = datetime.datetime(2011, 1, 26, 0, 0, 0)
         to_date = datetime.datetime(2011, 1, 27, 0, 0, 0) 
-        items = ws.get_documents_by_date(from_date, to_date, limit=100)
+        items = ws.get_documents_by_date(from_date, to_date, limit=1000)
         
         oc = OrangeKmeansClusterer(k=34, ngram=1)
         oc.add_documents(items)
-        oc.run("orange_clustering_test", pca=True)
+        oc.run("orange_clustering_test", pca=False)
         print time.time() - start
         oc.plot_growth_timeline(cumulative=False)
         oc.plot_scatter()

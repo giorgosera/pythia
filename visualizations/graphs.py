@@ -43,7 +43,8 @@ class D3Timeline(Timeline):
         '''
         json_data = {'dates': self.dates, "counts": self.counts, 'meta': self.meta}
         dthandler = lambda obj: obj.isoformat() if isinstance(obj, datetime.datetime) else None
-        template = os.path.join(os.getcwd(), '../visualizations/templates/timeline.html')
+        template = os.path.join(os.getcwd(), '../visualizations/templates/timeline_main_hackathon.html')
+        #template = os.path.join(os.getcwd(), '../visualizations/templates/timeline.html')
 
         html = Template(open(template).read())
         html = html.substitute(items=json.dumps(json_data, default=dthandler))
