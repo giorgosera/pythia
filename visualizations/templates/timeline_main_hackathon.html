@@ -214,8 +214,12 @@ function click(d, i){
           .attr("r", 8) 
           .attr("opacity", 1) 
           .attr("fill", d3.rgb(0, 0, 0))
+          .on("click", clickDot)
           .append("svg:title").text(function(d) {return "Date: " + d.date + "\nTitle: " + d.price;});
 	}
 }
 
+function clickDot(d, i){
+console.log(i);
+}
 </script>

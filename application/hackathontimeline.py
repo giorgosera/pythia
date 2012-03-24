@@ -17,7 +17,7 @@ from_date = datetime.datetime(2011, 1, 26, 0, 0, 0)
 to_date = datetime.datetime(2011, 1, 27, 0, 0, 0) 
 items = ws.get_documents_by_date(from_date, to_date, limit=3000)
 
-oc = OrangeKmeansClusterer(k=34, ngram=1)
+oc = OrangeKmeansClusterer(k=100, ngram=1)
 oc.add_documents(items)
 oc.run("orange_clustering_test", pca=False)
 
@@ -30,14 +30,21 @@ for cluster in oc.clusters:
     delta_seconds = delta.total_seconds()
     if delta_seconds == 0: continue
     rate_growth = float(len(dates))/delta_seconds
-    top_clusters.append( (rate_growth, max(dates)) )
+    top_clusters.append( (rate_growth, max(dates), cluster) )
     
 top_clusters = sorted(top_clusters, key=lambda x: -x[0])[:20]
 
 meta = []
 top_clusters = sorted(top_clusters, key=lambda x: x[1])
 for i, cluster in enumerate(top_clusters):
-    meta.append({"title":"event"+str(i), "date":cluster[1].strftime('%Y-%m-%d %H:%M:%S')})
+    cluster_struct = cluster[2]
+    cluster_struct.analyse()
+    meta.append({"title":"event"+str(i), 
+                 "date":cluster[1].strftime('%Y-%m-%d %H:%M:%S'), 
+                 "keywords":cluster_struct.get_most_frequent_terms(N=9),
+                 "authors": len(cluster_struct.get_authors()),
+                 "locations": cluster_struct.get_locations(),
+                 "namedEntities": cluster_struct.get_persons()})
 
 data = [[doc.date for doc in items]]
 
@@ -50,7 +57,6 @@ for d in data:
    
 final_dates = dates
 final_counts = [count.tolist() for count in counts]
-
 
 t = D3Timeline(final_dates, final_counts, meta=meta, cumulative=False)
 t.plot(url='timeline_hackathon.html')
