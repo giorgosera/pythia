@@ -205,17 +205,21 @@ function click(d, i){
           .enter() 
           .append("circle") 
           .attr("cx", function(d) { return x(formatDate.parse(d.date)); }) 
-          //.attr("cy", function(d) { return y(d.price); })
           .attr("cy", function(d) {    var date = formatDate.parse(d.date);
                                        for (var i = 0; i<series[0].length; i++) 
           								if (date - series[0][i].date == 0) {
           									return y(series[0][i].price);
           								}
            					      }) 
-          .attr("r", 5) 
+          .attr("r", 8) 
           .attr("opacity", 1) 
-          .append("svg:title").text(function(d) {return "Date: " + d.date + "\nTitle: " + d.price;});
+          .attr("fill", d3.rgb(0, 0, 0))
+          .on("click", clickDot)
+          .append("svg:title").text(function(d) {return "Date: " + d.date + "\nTitle: " + d.price;})
 	}
 }
 
+function clickDot(d, i){
+	console.log("TODO: Render response");
+}
 </script>
