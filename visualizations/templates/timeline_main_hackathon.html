@@ -149,8 +149,6 @@ focus.selectAll(".line")
     .attr("d", area)
     .attr("stroke", function(d, i) {return color(i)})
     .attr("stroke-width", 3)
-    .on("mouseover", mouseover)
-    .on("mouseout", mouseout)
     .on("click", click);
 
 //Appends the x axis
@@ -188,13 +186,6 @@ function brush() {
 }
 
 //-------------------EVENT HANDLERS ---------------//
-function mouseover(d, i){
-	focus.select("path:nth-child("+(i+1)+")").attr("stroke-width", 8);
-}
-
-function mouseout(d, i){
-	focus.select("path:nth-child("+(i+1)+")").attr("stroke-width", 3);
-}
 
 function click(d, i){
 	
@@ -215,11 +206,31 @@ function click(d, i){
           .attr("opacity", 1) 
           .attr("fill", d3.rgb(0, 0, 0))
           .on("click", clickDot)
-          .append("svg:title").text(function(d) {return "Date: " + d.date + "\nTitle: " + d.price;});
+          .on("mouseover", mouseoverDot)
+          .on("mouseout", mouseoutDot)
+          .append("svg:title").text(function(d) {return "Date: " + d.date + 
+          												"\nTitle: " + d.title + 
+          												"\nLocation: " + d.locations +
+          												"\nUsers: " + d.authors;});
 	}
 }
 
+function mouseoverDot(d, i){
+	var circle = d3.select(this)
+	circle.attr("r", 10);
+	circle.attr("fill", d3.rgb(255, 0, 0))
+}
+
+function mouseoutDot(d, i){
+	var circle = d3.select(this)
+	circle.attr("r", 8);
+	circle.attr("fill", d3.rgb(0, 0, 0))
+}
+
 function clickDot(d, i){
-console.log(i);
+	console.log(d.keywords);
+	console.log(d.authors);
+	console.log(d.namedEntities);
+	console.log(d.locations);
 }
 </script>
