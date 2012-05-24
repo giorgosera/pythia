@@ -39,7 +39,7 @@ class DatasetAnalyser(object):
         Calculates the average vocabulary size. In plain English
         it calculates how many different words appear in each document on average.
         '''
-        return float(self.vocabulary_size())/float(len(self.dataset))    
+        return float(self.vocabulary_size())/float(len(self.dataset))
 
     def dataset_size(self):
         return len(self.dataset)
