@@ -133,7 +133,7 @@ class ClusteringEvaluator(AbstractEvaluator):
         Performs clustering evaluation
         '''
         clusterer.add_documents(self.dataset)
-        clusterer.run("orange_clustering_test", pca=True)
+        clusterer.run()
             
         doc_labels_clusters = []
         for document in self.dataset:
@@ -142,7 +142,7 @@ class ClusteringEvaluator(AbstractEvaluator):
                     doc_labels_clusters.append( (document.event_class, cluster_no) )
                     break
         
-
+        print doc_labels_clusters
         p, r, f =self.calculate_bcubed_measures(doc_labels_clusters)
         return p, r, f
     

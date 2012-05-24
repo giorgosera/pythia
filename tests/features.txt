@@ -1,0 +1,450 @@
+
+***********************************************************
+Cluster0
+[u'thought', u'region', u'maghreb', u'cool', u'begin', u'protest']
+(0.35771888724359585, u'RT @BoutainaAzzabi: 4 those who thought that protests r cooling down in the Maghreb region #newsflash, this is just the beginning!  #jan25 #arabprotest #egypt')
+(0.35771888724359585, u'4 those who thought that protests r cooling down in the Maghreb region #newsflash, this is just the beginning!  #jan25 #arabprotest #egypt')
+(0.0037137069278992698, u"Egypt's frustrated young wait for their lives to begin, and dream of revolution http://t.co/dLE8rZp #Egypt #25jan")
+(0.0026365654426896506, u'Just landed in #egypt, airport taxi driver knows about the #jan25 protest, says it will be a "black day"')
+(0.0016494854474694656, u"RT @monaeltahawy: On #jan25, #Egyptians in #NYC will protest in front of Office of #Egypt's Permanent Rep. to #UN in solidarity w Egypt nationwide protests")
+(0.0016073565190532872, u'RT @monaeltahawy: Pics of small but loud rally 4 #Egypt in #NYC in front of #UN in solidarity with #jan25 protests http://on.fb.me/ebhue0 #arabprotest')
+(0.0016031853546050699, u'ProJ @monaeltahawy: As #Egyptians prepare for #jan25 protests: #Mubarak has turned #Egypt into a #police state w... http://bit.ly/eHttfG')
+(0.0016019987722154015, u"Security forces to deal strictly with 'illegal' 25 January protest  http://bit.ly/hiPhdx #Egypt #Jan25 #Police #Pigs #FreedomOfExpression")
+(0.00086233074556398492, u"Activists: 25 January protest to be start of 'something big' http://ow.ly/3IXLw #CollectiveProtest #PoliceDay #Egypt")
+(0.00031680253780012456, u'RT @alykhansatchu: #Egypt frustrated young wait for their lives to begin and dream of revolution Guardian http://bit.ly/ex5mXd #Africa h ...')
+
+
+***********************************************************
+Cluster1
+[u'yr', u'presid', u'law', u'emerg', u'29', u'everi']
+(0.3345290192990017, u'RT @CitizenCompass: RT @monaeltahawy: As #Egyptians prepare for #jan25 protests: #Mubarak has been president for 29 yrs, Emergency Law for every 1 of those yrs.')
+(0.3110355301224938, u'RT @monaeltahawy: As #Egyptians prepare for #jan25 protests: #Mubarak has been president for 29 yrs, Emergency Law for every 1 of those yrs. Down w Mubarak!')
+(0.3110355301224938, u'As #Egyptians prepare for #jan25 protests: #Mubarak has been president for 29 yrs, Emergency Law for every 1 of those yrs. Down w Mubarak!')
+(0.0032037875094139351, u'ProJ @monaeltahawy: As #Egyptians prepare for #jan25 protests: #Mubarak has turned #Egypt into a #police state w... http://bit.ly/eHttfG')
+(0.0015088098951050511, u'RT @monaeltahawy: Pics of small but loud rally 4 #Egypt in #NYC in front of #UN in solidarity with #jan25 protests http://on.fb.me/ebhue0 #arabprotest')
+(0.0014849040012449868, u'ProJ @monaeltahawy: I salute #Egyptians preparing 4 nationwide protests 2 coincide w "Police Day" #Jan25. Thank ... http://bit.ly/e3EzTa')
+(0.0014746005474475412, u"Security forces to deal strictly with 'illegal' 25 January protest  http://bit.ly/hiPhdx #Egypt #Jan25 #Police #Pigs #FreedomOfExpression")
+(0.00048523277788369349, u"re. #jan25: every time you tweet wrong/unchecked/exaggerated information the devil will add a year to Mubarak's life.")
+(0.00048523277788369349, u"RT @moftasa: RT @Sarahcarr: re. #jan25: every time you tweet wrong/unchecked/exaggerated information the devil will add a year to Mubarak's life.")
+(0.00048523277788369349, u"RT @Sarahcarr: re. #jan25: every time you tweet wrong/unchecked/exaggerated information the devil will add a year to Mubarak's life.")
+
+
+***********************************************************
+Cluster2
+[u'explos', u'warn', u'tunisia', u'style', u'moham', u'elbaradei']
+(0.45553582655531588, u"Mohamed ElBaradei warns of 'Tunisia-style explosion' in Egypt http://t.co/tA3sUpf #Egypt #25jan #hmmm")
+(0.35389077958644111, u'#Egypt #dictatorship Opposition warns of an explosion of the masses http://bit.ly/hIaRWr in spite of zionism #Revolution to come #Justice')
+(0.14556366931288284, u'Matters #Financial and #Geopolitical from a #Frontier http://bit.ly/9tXPDr\n#Egypt ^EGX30 -6.244% 2011 Tunisia Spillover An Ancient Pharoah')
+(0.10583528376600108, u'RT Scientists Warn Iran Could Produce Enough Nuclear Material for Warhead in 5 Months http://is.gd/L48hqR #Binali #25Jan')
+(0.10583528376600108, u'RT Scientists Warn Iran Could Produce Enough Nuclear Material for Warhead in 5 Months http://is.gd/L48hqR #Binali #25Jan')
+(1.202620226082997e-10, u'#Jan25 Tips! http://www.facebook.com/photo.php?fbid=493802570697&set=a.401779815697.176190.357911695697&theater')
+(1.0333207785055908e-12, u'RT Iran nuclear talks break down without an agreement http://is.gd/gBTQry #25Jan #moritania')
+(2.2204460492503131e-16, u'rt @maafa #Egypt#Gaza Army of Islam responsible for Coptic killings, claims Egypt - Irish Times http://ow.ly/1aZYBH')
+(2.2204460492503131e-16, u"re. #jan25: every time you tweet wrong/unchecked/exaggerated information the devil will add a year to Mubarak's life.")
+(2.2204460492503131e-16, u'human rights trainings, workshops, courses offered by non-governmental organisations http://goo.gl/3fA1U #Egypt #Saudi #Kuwait #Bahrain')
+
+
+***********************************************************
+Cluster3
+[u'workshop', u'train', u'right', u'organis', u'offer', u'non']
+(0.41465333813153016, u'human rights trainings, workshops, courses offered by non-governmental organisations http://goo.gl/3fA1U #Egypt #Saudi #Kuwait #Bahrain')
+(0.39988752457986743, u'Actv @Nabeelrajab: human rights trainings, workshops, courses offered by non-governmental organisations   #Egypt ... http://goo.gl/3fA1U')
+(2.2204460492503131e-16, u'rt @maafa #Egypt#Gaza Army of Islam responsible for Coptic killings, claims Egypt - Irish Times http://ow.ly/1aZYBH')
+(2.2204460492503131e-16, u"re. #jan25: every time you tweet wrong/unchecked/exaggerated information the devil will add a year to Mubarak's life.")
+(2.2204460492503131e-16, u'What an exciting time to be an Arabic language speaker. Others are missing out. #Lebanon #Jordan #Tunisia #Palestine #Gulf #Egypt')
+(2.2204460492503131e-16, u'US may punish China firms evading Iran sanctions: Clinton http://is.gd/7aBKia #ksa #25Jan')
+(2.2204460492503131e-16, u'Strange story RT @YonhapNews: N. Korea leader meets head of #Egypt mobile phone service provider Orascom  http://bit.ly/fMS7r9 #Korea')
+(2.2204460492503131e-16, u"Security forces to deal strictly with 'illegal' 25 January protest  http://bit.ly/hiPhdx #Egypt #Jan25 #Police #Pigs #FreedomOfExpression")
+(2.2204460492503131e-16, u'RT Workers protest outside Gilan Governorate office http://is.gd/rzUKhn Free#Tunisia #25Jan')
+(2.2204460492503131e-16, u'RT US may punish China firms evading Iran sanctions: Clinton http://is.gd/fTA8WT #uae #25Jan')
+
+
+***********************************************************
+Cluster4
+[u'use', u'street', u'sincer', u'hope', u'hit', u'artwork']
+(0.3765351154103101, u'RT @CarlosLatuff: I sincerely hope that my artworks can hit the streets of Cairo, being useful for Egyptian people in #Jan25')
+(0.3765351154103101, u'RT @CarlosLatuff: I sincerely hope that my artworks can hit the streets of Cairo, being useful for Egyptian people in #Jan25')
+(0.3765351154103101, u'I sincerely hope that my artworks can hit the streets of Cairo, being useful for Egyptian people in #Jan25')
+(0.08795728185042144, u"Guilt-tripping people into joining the revolution? That's the way to go.  http://twitpic.com/3sydx9 #jan25")
+(0.055376670371883423, u'RT @RamyRaoof: government officials in #Egypt ask people to close their shops on #Jan25 due to riots that might take place http://twitpic.com/3ss0xq')
+(0.001111230190121478, u'Kidnapped Egyptian in Nigeria released  http://english.ahram.org.eg/News/4702.aspx #Egypt #Nigeria')
+(0.00065577606147591697, u'RT @shabab6april: Egyptians in New York protest in solidarity with #egypt uprising day on Jan25 #sidibouzid #optunisia #opegypt #opalgeria')
+(0.00065577606147591697, u'RT @AnonymousIRC: RT @shabab6april: Egyptians in New York protest in solidarity with #egypt uprising day on Jan25 #sidibouzid #optunisia #opegypt #opalgeria')
+(0.00035929839836745613, u'RT @monaeltahawy: I love fierce Egyptians & their fighting spirit! Yalla, Egypt! RT @demaghmak @Amrosama ucant thx us..its our duty #Egyptians #Jan25 #25JAN')
+(0.00035929839836745613, u'RT @monaeltahawy: I love fierce Egyptians & their fighting spirit! Yalla, Egypt! RT @demaghmak @Amrosama ucant thx us..its our duty #Egyptians #Jan25 #25JAN')
+
+
+***********************************************************
+Cluster5
+[u'york', u'upris', u'new', u'6april', u'solidar', u'day']
+(0.55578904663452933, u'RT @shabab6april: Egyptians in New York protest in solidarity with #egypt uprising day on Jan25 #sidibouzid #optunisia #opegypt #opalgeria')
+(0.55578904663452933, u'RT @AnonymousIRC: RT @shabab6april: Egyptians in New York protest in solidarity with #egypt uprising day on Jan25 #sidibouzid #optunisia #opegypt #opalgeria')
+(0.10212492198447418, u'Just landed in #egypt, airport taxi driver knows about the #jan25 protest, says it will be a "black day"')
+(0.091186694405987714, u'RT @monaeltahawy: Pics of small but loud rally 4 #Egypt in #NYC in front of #UN in solidarity with #jan25 protests http://on.fb.me/ebhue0 #arabprotest')
+(0.056480178010012906, u'Life is great when u get solidarity like this RT @CarlosLatuff: Today I feel myself half Tunisian, half Egyptian! :) #Tunisie #Egypt #Jan25"')
+(0.052475226049624256, u"RT @monaeltahawy: On #jan25, #Egyptians in #NYC will protest in front of Office of #Egypt's Permanent Rep. to #UN in solidarity w Egypt nationwide protests")
+(0.0015811939023885296, u'Kidnapped Egyptian in Nigeria released  http://english.ahram.org.eg/News/4702.aspx #Egypt #Nigeria')
+(0.00037456422376355253, u"Activists: 25 January protest to be start of 'something big' http://ow.ly/3IXLw #CollectiveProtest #PoliceDay #Egypt")
+(7.3073717086430582e-05, u'RT @CarlosLatuff: Today I feel myself half Tunisian, half Egyptian! :) #Tunisie #Egypt #Jan25')
+(7.3073717086430582e-05, u'RT @CarlosLatuff: Today I feel myself half Tunisian, half Egyptian! :) #Tunisie #Egypt #Jan25')
+
+
+***********************************************************
+Cluster6
+[u'speaker', u'other', u'miss', u'languag', u'excit', u'arab']
+(0.4243410589635962, u'What an exciting time to be an Arabic language speaker. Others are missing out. #Lebanon #Jordan #Tunisia #Palestine #Gulf #Egypt')
+(0.29656806994247925, u'rt @maafa #Egypt#Gaza Army of Islam responsible for Coptic killings, claims Egypt - Irish Times http://ow.ly/1aZYBH')
+(0.058230034237206574, u'RT @algergawi: I vote for MBC to scrap Arabs Got Talent and replace it with Arabs Got Shafted (by their leaders). #palestinepapers #tunisia #egypt ++')
+(8.8796413073945819e-07, u"re. #jan25: every time you tweet wrong/unchecked/exaggerated information the devil will add a year to Mubarak's life.")
+(8.8796413073945819e-07, u"RT @moftasa: RT @Sarahcarr: re. #jan25: every time you tweet wrong/unchecked/exaggerated information the devil will add a year to Mubarak's life.")
+(8.8796413073945819e-07, u"RT @Sarahcarr: re. #jan25: every time you tweet wrong/unchecked/exaggerated information the devil will add a year to Mubarak's life.")
+(8.8796413073945819e-07, u"RT @Sarahcarr: re. #jan25: every time you tweet wrong/unchecked/exaggerated information the devil will add a year to Mubarak's life.")
+(8.8796413073945819e-07, u"RT @Sarahcarr: re. #jan25: every time you tweet wrong/unchecked/exaggerated information the devil will add a year to Mubarak's life.")
+(4.2924476849399121e-08, u'#Egyptian classic (sung here by #Lebanese) dedicated w love to #Egypt ahead of #jan25 Al Helwa Ahi (Sayyed Darwish) http://mysp.ac/h7f40b')
+(2.2204460492503131e-16, u'human rights trainings, workshops, courses offered by non-governmental organisations http://goo.gl/3fA1U #Egypt #Saudi #Kuwait #Bahrain')
+
+
+***********************************************************
+Cluster7
+[u'widespread', u'hrw', u'discrimin', u'3arabawi', u'aspx', u'twitpic']
+(0.4878984090306317, u"RT @3arabawy: HRW: #Egypt has 'widespread discrimination' http://j.mp/gOYqmI #copts")
+(0.45332106100303288, u"HRW: #Egypt has 'widespread discrimination' http://english.ahram.org.eg/News/4716.aspx #copts")
+(0.047485247950920267, u'RT @3arabawy: (Cartoon) We are all Khaled Said #Jan25 on Twitpic http://t.co/M7roBrf #torture')
+(2.304253528897027e-06, u'#Egypt requests return of Queen Nefertiti bust http://english.ahram.org.eg/News/4687.aspx')
+(2.2204460492503131e-16, u'rt @maafa #Egypt#Gaza Army of Islam responsible for Coptic killings, claims Egypt - Irish Times http://ow.ly/1aZYBH')
+(2.2204460492503131e-16, u"re. #jan25: every time you tweet wrong/unchecked/exaggerated information the devil will add a year to Mubarak's life.")
+(2.2204460492503131e-16, u'human rights trainings, workshops, courses offered by non-governmental organisations http://goo.gl/3fA1U #Egypt #Saudi #Kuwait #Bahrain')
+(2.2204460492503131e-16, u'What an exciting time to be an Arabic language speaker. Others are missing out. #Lebanon #Jordan #Tunisia #Palestine #Gulf #Egypt')
+(2.2204460492503131e-16, u'US may punish China firms evading Iran sanctions: Clinton http://is.gd/7aBKia #ksa #25Jan')
+(2.2204460492503131e-16, u'Strange story RT @YonhapNews: N. Korea leader meets head of #Egypt mobile phone service provider Orascom  http://bit.ly/fMS7r9 #Korea')
+
+
+***********************************************************
+Cluster8
+[u'tribun', u'rule', u'hariri', u'ahmadinejad', u'afraid', u'leader']
+(0.56253822755637672, u'Ahmadinejad afraid of Hariri tribunal ruling http://is.gd/tDUnGO #25Jan #moritania')
+(2.2204460492503131e-16, u'rt @maafa #Egypt#Gaza Army of Islam responsible for Coptic killings, claims Egypt - Irish Times http://ow.ly/1aZYBH')
+(2.2204460492503131e-16, u"re. #jan25: every time you tweet wrong/unchecked/exaggerated information the devil will add a year to Mubarak's life.")
+(2.2204460492503131e-16, u'human rights trainings, workshops, courses offered by non-governmental organisations http://goo.gl/3fA1U #Egypt #Saudi #Kuwait #Bahrain')
+(2.2204460492503131e-16, u'What an exciting time to be an Arabic language speaker. Others are missing out. #Lebanon #Jordan #Tunisia #Palestine #Gulf #Egypt')
+(2.2204460492503131e-16, u'US may punish China firms evading Iran sanctions: Clinton http://is.gd/7aBKia #ksa #25Jan')
+(2.2204460492503131e-16, u'Strange story RT @YonhapNews: N. Korea leader meets head of #Egypt mobile phone service provider Orascom  http://bit.ly/fMS7r9 #Korea')
+(2.2204460492503131e-16, u"Security forces to deal strictly with 'illegal' 25 January protest  http://bit.ly/hiPhdx #Egypt #Jan25 #Police #Pigs #FreedomOfExpression")
+(2.2204460492503131e-16, u'RT Workers protest outside Gilan Governorate office http://is.gd/rzUKhn Free#Tunisia #25Jan')
+(2.2204460492503131e-16, u'RT US may punish China firms evading Iran sanctions: Clinton http://is.gd/fTA8WT #uae #25Jan')
+
+
+***********************************************************
+Cluster9
+[u'said', u'khale', u'cartoon', u'twitpic', u'3arabawi', u'work']
+(0.43362444796831934, u'(Cartoon) We are all Khaled Said #Jan25 on Twitpic http://t.co/M7roBrf #torture')
+(0.43362444796831934, u'(Cartoon) We are all Khaled Said #Jan25 on Twitpic http://t.co/8IjiI32 #Egypt #Tunisia #25jan #jan25')
+(0.37366587475302565, u'RT @3arabawy: (Cartoon) We are all Khaled Said #Jan25 on Twitpic http://t.co/M7roBrf #torture')
+(0.21032997497115838, u'RT @karembue: Great piece of work thank you \nRT @CarlosLatuff: (Cartoon) We are all Khaled Said #Jan25 http://twitpic.com/3swvnr (@Elsha ...')
+(0.21032997497115838, u'RT @karembue: Great piece of work thank you \nRT @CarlosLatuff: (Cartoon) We are all Khaled Said #Jan25 http://twitpic.com/3swvnr (@Elsha ...')
+(0.0077358954275461673, u'Life is great when u get solidarity like this RT @CarlosLatuff: Today I feel myself half Tunisian, half Egyptian! :) #Tunisie #Egypt #Jan25"')
+(0.0020159639704915105, u'RT @KimBondy: RT @LaurenBohn: Make this for me and @Soledad_OBrien when you ladies come to #Egypt? Good? OK, thanks. <<< you got it sunshine!')
+(2.419051272888946e-05, u"RT @3arabawy: HRW: #Egypt has 'widespread discrimination' http://j.mp/gOYqmI #copts")
+(5.7529376591372288e-07, u'ProJ @monaeltahawy: I salute #Egyptians preparing 4 nationwide protests 2 coincide w "Police Day" #Jan25. Thank ... http://bit.ly/e3EzTa')
+(3.7499297869023466e-15, u'RT @monaeltahawy: I salute #Egyptians preparing 4 nationwide protests 2 coincide w "Police Day" #Jan25. Thank u @demaghmak for RTs of @Amrosama\'s demo advice')
+
+
+***********************************************************
+Cluster10
+[u'return', u'request', u'queen', u'bust', u'display', u'nefert']
+(0.46161230900418482, u'R @ahramonline\n#Egypt requests return of Queen #Nefertiti bust http://bit.ly/gYeEaE - If returned, displayed @ Akhenaten Museum #Minya')
+(0.36245883395421291, u'#Egypt requests return of Queen Nefertiti bust http://english.ahram.org.eg/News/4687.aspx')
+(2.0567184741094145e-11, u"HRW: #Egypt has 'widespread discrimination' http://english.ahram.org.eg/News/4716.aspx #copts")
+(2.2204460492503131e-16, u'rt @maafa #Egypt#Gaza Army of Islam responsible for Coptic killings, claims Egypt - Irish Times http://ow.ly/1aZYBH')
+(2.2204460492503131e-16, u"re. #jan25: every time you tweet wrong/unchecked/exaggerated information the devil will add a year to Mubarak's life.")
+(2.2204460492503131e-16, u'human rights trainings, workshops, courses offered by non-governmental organisations http://goo.gl/3fA1U #Egypt #Saudi #Kuwait #Bahrain')
+(2.2204460492503131e-16, u'What an exciting time to be an Arabic language speaker. Others are missing out. #Lebanon #Jordan #Tunisia #Palestine #Gulf #Egypt')
+(2.2204460492503131e-16, u'US may punish China firms evading Iran sanctions: Clinton http://is.gd/7aBKia #ksa #25Jan')
+(2.2204460492503131e-16, u'Strange story RT @YonhapNews: N. Korea leader meets head of #Egypt mobile phone service provider Orascom  http://bit.ly/fMS7r9 #Korea')
+(2.2204460492503131e-16, u"Security forces to deal strictly with 'illegal' 25 January protest  http://bit.ly/hiPhdx #Egypt #Jan25 #Police #Pigs #FreedomOfExpression")
+
+
+***********************************************************
+Cluster11
+[u'turn', u'state', u'tortur', u'systemat', u'brutal', u'polic']
+(0.25071264646859942, u'RT @monaeltahawy: As #Egyptians prepare for #jan25 protests: #Mubarak has turned #Egypt into a #police state where torture & police brutality r systematic.')
+(0.25071264646859942, u'RT @monaeltahawy: As #Egyptians prepare for #jan25 protests: #Mubarak has turned #Egypt into a #police state where torture & police brutality r systematic.')
+(0.25071264646859942, u'RT @monaeltahawy: As #Egyptians prepare for #jan25 protests: #Mubarak has turned #Egypt into a #police state where torture & police brutality r systematic.')
+(0.25071264646859942, u'RT @monaeltahawy: As #Egyptians prepare for #jan25 protests: #Mubarak has turned #Egypt into a #police state where torture & police brutality r systematic.')
+(0.25071264646859942, u'RT @monaeltahawy: As #Egyptians prepare for #jan25 protests: #Mubarak has turned #Egypt into a #police state where torture & police brutality r systematic.')
+(0.25071264646859942, u'As #Egyptians prepare for #jan25 protests: #Mubarak has turned #Egypt into a #police state where torture & police brutality r systematic.')
+(0.1849913204802949, u'ProJ @monaeltahawy: As #Egyptians prepare for #jan25 protests: #Mubarak has turned #Egypt into a #police state w... http://bit.ly/eHttfG')
+(0.008441951518030115, u"Do you think Egypt's police apparatus is doing a good job protecting you? http://ow.ly/3IVdD #Poll #AlMasryAlYoum #Egypt")
+(0.0082971962611929889, u'ProJ @monaeltahawy: I salute #Egyptians preparing 4 nationwide protests 2 coincide w "Police Day" #Jan25. Thank ... http://bit.ly/e3EzTa')
+(0.0049333700725052087, u'ProJ @monaeltahawy: As #Egyptians prepare for #jan25 protests: there r between 12,000 - 14,000 political prisone... http://bit.ly/eJX0t6')
+
+
+***********************************************************
+Cluster12
+[u'good', u'think', u'protect', u'job', u'apparatu', u'got']
+(0.43198605758986269, u"Do you think Egypt's police apparatus is doing a good job protecting you? http://ow.ly/3IVdD #Poll #AlMasryAlYoum #Egypt")
+(0.27314668104740458, u'RT @KimBondy: RT @LaurenBohn: Make this for me and @Soledad_OBrien when you ladies come to #Egypt? Good? OK, thanks. <<< you got it sunshine!')
+(0.069990204958211927, u'RT @algergawi: I vote for MBC to scrap Arabs Got Talent and replace it with Arabs Got Shafted (by their leaders). #palestinepapers #tunisia #egypt ++')
+(0.0063227345077602843, u'Strange story RT @YonhapNews: N. Korea leader meets head of #Egypt mobile phone service provider Orascom  http://bit.ly/fMS7r9 #Korea')
+(0.0056512680723623445, u'RT @karembue: Great piece of work thank you \nRT @CarlosLatuff: (Cartoon) We are all Khaled Said #Jan25 http://twitpic.com/3swvnr (@Elsha ...')
+(0.0056512680723623445, u'RT @karembue: Great piece of work thank you \nRT @CarlosLatuff: (Cartoon) We are all Khaled Said #Jan25 http://twitpic.com/3swvnr (@Elsha ...')
+(0.0026788669329145371, u'What an exciting time to be an Arabic language speaker. Others are missing out. #Lebanon #Jordan #Tunisia #Palestine #Gulf #Egypt')
+(0.0018423913967117135, u'ProJ @monaeltahawy: I salute #Egyptians preparing 4 nationwide protests 2 coincide w "Police Day" #Jan25. Thank ... http://bit.ly/e3EzTa')
+(1.8936102730473661e-08, u'RT @monaeltahawy: As #Egyptians prepare for #jan25 protests: #Mubarak has turned #Egypt into a #police state where torture & police brutality r systematic.')
+(1.8936102730473661e-08, u'RT @monaeltahawy: As #Egyptians prepare for #jan25 protests: #Mubarak has turned #Egypt into a #police state where torture & police brutality r systematic.')
+
+
+***********************************************************
+Cluster13
+[u'000', u'prison', u'polit', u'14', u'12', u'prepar']
+(0.47821828397078237, u'RT @monaeltahawy: As #Egyptians prepare for #jan25 protests: there r between 12,000 - 14,000 political prisoners in  #Egypt. Down with #Mubarak!')
+(0.47821828397078237, u'As #Egyptians prepare for #jan25 protests: there r between 12,000 - 14,000 political prisoners in  #Egypt. Down with #Mubarak!')
+(0.43757092933559028, u'ProJ @monaeltahawy: As #Egyptians prepare for #jan25 protests: there r between 12,000 - 14,000 political prisone... http://bit.ly/eJX0t6')
+(0.031717872626442198, u'ProJ @monaeltahawy: As #Egyptians prepare for #jan25 protests: #Mubarak has turned #Egypt into a #police state w... http://bit.ly/eHttfG')
+(0.014135575408899197, u'ProJ @monaeltahawy: I salute #Egyptians preparing 4 nationwide protests 2 coincide w "Police Day" #Jan25. Thank ... http://bit.ly/e3EzTa')
+(0.001113702071617366, u"Activists: 25 January protest to be start of 'something big' http://ow.ly/3IXLw #CollectiveProtest #PoliceDay #Egypt")
+(0.00037374378580341919, u'RT @CitizenCompass: RT @monaeltahawy: As #Egyptians prepare for #jan25 protests: #Mubarak has been president for 29 yrs, Emergency Law for every 1 of those yrs.')
+(0.00015149281141762317, u'RT @monaeltahawy: As #Egyptians prepare for #jan25 protests: #Mubarak has been president for 29 yrs, Emergency Law for every 1 of those yrs. Down w Mubarak!')
+(0.00015149281141762317, u'As #Egyptians prepare for #jan25 protests: #Mubarak has been president for 29 yrs, Emergency Law for every 1 of those yrs. Down w Mubarak!')
+(6.1354067804778945e-05, u'RT @monaeltahawy: #Egyptians planning to join #jan25 protests, follow @Amrosama for great advice on how to protest effectively and stay safe #arabprotest')
+
+
+***********************************************************
+Cluster14
+[u'half', u'today', u'feel', u'tunisian', u'egyptian', u'like']
+(0.44993221392701654, u'RT @CarlosLatuff: Today I feel myself half Tunisian, half Egyptian! :) #Tunisie #Egypt #Jan25')
+(0.44993221392701654, u'RT @CarlosLatuff: Today I feel myself half Tunisian, half Egyptian! :) #Tunisie #Egypt #Jan25')
+(0.44993221392701654, u'RT @CarlosLatuff: Today I feel myself half Tunisian, half Egyptian! :) #Tunisie #Egypt #Jan25')
+(0.44993221392701654, u'RT @CarlosLatuff: Today I feel myself half Tunisian, half Egyptian! :) #Tunisie #Egypt #Jan25')
+(0.44993221392701654, u'RT @CarlosLatuff: Today I feel myself half Tunisian, half Egyptian! :) #Tunisie #Egypt #Jan25')
+(0.26059033506539608, u'Life is great when u get solidarity like this RT @CarlosLatuff: Today I feel myself half Tunisian, half Egyptian! :) #Tunisie #Egypt #Jan25"')
+(0.0041290069631369384, u'RT @karembue: Great piece of work thank you \nRT @CarlosLatuff: (Cartoon) We are all Khaled Said #Jan25 http://twitpic.com/3swvnr (@Elsha ...')
+(0.0041290069631369384, u'RT @karembue: Great piece of work thank you \nRT @CarlosLatuff: (Cartoon) We are all Khaled Said #Jan25 http://twitpic.com/3swvnr (@Elsha ...')
+(0.0015238436255836515, u'Kidnapped Egyptian in Nigeria released  http://english.ahram.org.eg/News/4702.aspx #Egypt #Nigeria')
+(0.00061947966940376607, u'RT @CarlosLatuff: I sincerely hope that my artworks can hit the streets of Cairo, being useful for Egyptian people in #Jan25')
+
+
+***********************************************************
+Cluster15
+[u'reshap', u'overthrow', u'nice', u'guid', u'europ', u'dictat']
+(0.57648460319939754, u'RT Nice @ME_Observer: @btnafas7oria this is the guide to overthrowing dictators that reshaped Europe http://j.mp/grkoDn #jan25 #egypt')
+(7.3946280481514961e-09, u'RT Scientists Warn Iran Could Produce Enough Nuclear Material for Warhead in 5 Months http://is.gd/L48hqR #Binali #25Jan')
+(7.3946280481514961e-09, u'RT Scientists Warn Iran Could Produce Enough Nuclear Material for Warhead in 5 Months http://is.gd/L48hqR #Binali #25Jan')
+(1.4194089994518076e-09, u'RT Iran nuclear talks break down without an agreement http://is.gd/gBTQry #25Jan #moritania')
+(2.2204460492503131e-16, u'rt @maafa #Egypt#Gaza Army of Islam responsible for Coptic killings, claims Egypt - Irish Times http://ow.ly/1aZYBH')
+(2.2204460492503131e-16, u"re. #jan25: every time you tweet wrong/unchecked/exaggerated information the devil will add a year to Mubarak's life.")
+(2.2204460492503131e-16, u'human rights trainings, workshops, courses offered by non-governmental organisations http://goo.gl/3fA1U #Egypt #Saudi #Kuwait #Bahrain')
+(2.2204460492503131e-16, u'What an exciting time to be an Arabic language speaker. Others are missing out. #Lebanon #Jordan #Tunisia #Palestine #Gulf #Egypt')
+(2.2204460492503131e-16, u'US may punish China firms evading Iran sanctions: Clinton http://is.gd/7aBKia #ksa #25Jan')
+(2.2204460492503131e-16, u'Strange story RT @YonhapNews: N. Korea leader meets head of #Egypt mobile phone service provider Orascom  http://bit.ly/fMS7r9 #Korea')
+
+
+***********************************************************
+Cluster16
+[u'salut', u'coincid', u'nationwid', u'demo', u'advic', u'thank']
+(0.20144051321603113, u'RT @monaeltahawy: I salute #Egyptians preparing 4 nationwide protests 2 coincide w "Police Day" #Jan25. Thank u @demaghmak for RTs of @Amrosama\'s demo advice')
+(0.20144051321603113, u'RT @monaeltahawy: I salute #Egyptians preparing 4 nationwide protests 2 coincide w "Police Day" #Jan25. Thank u @demaghmak for RTs of @Amrosama\'s demo advice')
+(0.20144051321603113, u'RT @monaeltahawy: I salute #Egyptians preparing 4 nationwide protests 2 coincide w "Police Day" #Jan25. Thank u @demaghmak for RTs of @Amrosama\'s demo advice')
+(0.20144051321603113, u'RT @monaeltahawy: I salute #Egyptians preparing 4 nationwide protests 2 coincide w "Police Day" #Jan25. Thank u @demaghmak for RTs of @Amrosama\'s demo advice')
+(0.20144051321603113, u'RT @monaeltahawy: I salute #Egyptians preparing 4 nationwide protests 2 coincide w "Police Day" #Jan25. Thank u @demaghmak for RTs of @Amrosama\'s demo advice')
+(0.20144051321603113, u'RT @monaeltahawy: I salute #Egyptians preparing 4 nationwide protests 2 coincide w "Police Day" #Jan25. Thank u @demaghmak for RTs of @Amrosama\'s demo advice')
+(0.20144051321603113, u'RT @monaeltahawy: I salute #Egyptians preparing 4 nationwide protests 2 coincide w "Police Day" #Jan25. Thank u @demaghmak for RTs of @Amrosama\'s demo advice')
+(0.20144051321603113, u'I salute #Egyptians preparing 4 nationwide protests 2 coincide w "Police Day" #Jan25. Thank u @demaghmak for RTs of @Amrosama\'s demo advice')
+(0.16724128373512112, u'ProJ @monaeltahawy: I salute #Egyptians preparing 4 nationwide protests 2 coincide w "Police Day" #Jan25. Thank ... http://bit.ly/e3EzTa')
+(0.038501978135691756, u'Just landed in #egypt, airport taxi driver knows about the #jan25 protest, says it will be a "black day"')
+
+
+***********************************************************
+Cluster17
+[u'start', u'januari', u'25', u'someth', u'big', u'activist']
+(0.3862812124618622, u"Activists: 25 January protest to be start of 'something big' http://ow.ly/3IXLw #CollectiveProtest #PoliceDay #Egypt")
+(0.34093114234050914, u'"If #Tunisia can do it, why can\'t we?" read one. "We will either start living or start dying on 25 January." http://bit.ly/ex5mXd   \n#Egypt')
+(0.25975945695334879, u"Security forces to deal strictly with 'illegal' 25 January protest  http://bit.ly/hiPhdx #Egypt #Jan25 #Police #Pigs #FreedomOfExpression")
+(0.002764896218927209, u'Just landed in #egypt, airport taxi driver knows about the #jan25 protest, says it will be a "black day"')
+(0.0012577412936646253, u"RT @monaeltahawy: On #jan25, #Egyptians in #NYC will protest in front of Office of #Egypt's Permanent Rep. to #UN in solidarity w Egypt nationwide protests")
+(0.0012276766914612594, u'ProJ @monaeltahawy: As #Egyptians prepare for #jan25 protests: #Mubarak has turned #Egypt into a #police state w... http://bit.ly/eHttfG')
+(0.0011239216516361092, u'RT @monaeltahawy: Pics of small but loud rally 4 #Egypt in #NYC in front of #UN in solidarity with #jan25 protests http://on.fb.me/ebhue0 #arabprotest')
+(6.2890132918355104e-05, u'RT @monaeltahawy: #Egyptians planning to join #jan25 protests, follow @Amrosama for great advice on how to protest effectively and stay safe #arabprotest')
+(6.2890132918355104e-05, u'RT @monaeltahawy: #Egyptians planning to join #jan25 protests, follow @Amrosama for great advice on how to protest effectively and stay safe #arabprotest')
+(6.2890132918355104e-05, u'RT @monaeltahawy: #Egyptians planning to join #jan25 protests, follow @Amrosama for great advice on how to protest effectively and stay safe #arabprotest')
+
+
+***********************************************************
+Cluster18
+[u'quantum', u'next', u'media', u'magda', u'level', u'leap']
+(0.38781519634106437, u"RT @Tharwacolamus: Magda Abu-Fadil: Tunisian Media's Quantum Leap to the Next Level? http://goo.gl/4RRIP #sidibouzid #egypt")
+(0.38781519634106437, u"Magda Abu-Fadil: Tunisian Media's Quantum Leap to the Next Level? http://goo.gl/4RRIP #sidibouzid #egypt")
+(0.00056159380409695958, u'RT @CarlosLatuff: Today I feel myself half Tunisian, half Egyptian! :) #Tunisie #Egypt #Jan25')
+(0.00056159380409695958, u'RT @CarlosLatuff: Today I feel myself half Tunisian, half Egyptian! :) #Tunisie #Egypt #Jan25')
+(0.00056159380409695958, u'RT @CarlosLatuff: Today I feel myself half Tunisian, half Egyptian! :) #Tunisie #Egypt #Jan25')
+(0.00056159380409695958, u'RT @CarlosLatuff: Today I feel myself half Tunisian, half Egyptian! :) #Tunisie #Egypt #Jan25')
+(0.00056159380409695958, u'RT @CarlosLatuff: Today I feel myself half Tunisian, half Egyptian! :) #Tunisie #Egypt #Jan25')
+(5.3751118365690358e-05, u'Life is great when u get solidarity like this RT @CarlosLatuff: Today I feel myself half Tunisian, half Egyptian! :) #Tunisie #Egypt #Jan25"')
+(2.2204460492503131e-16, u'rt @maafa #Egypt#Gaza Army of Islam responsible for Coptic killings, claims Egypt - Irish Times http://ow.ly/1aZYBH')
+(2.2204460492503131e-16, u"re. #jan25: every time you tweet wrong/unchecked/exaggerated information the devil will add a year to Mubarak's life.")
+
+
+***********************************************************
+Cluster19
+[u'young', u'wait', u'frustrat', u'dream', u'revolut', u'live']
+(0.3735976664248149, u"Egypt's frustrated young wait for their lives to begin, and dream of revolution http://t.co/dLE8rZp #Egypt #25jan")
+(0.36696691228218969, u'RT @alykhansatchu: #Egypt frustrated young wait for their lives to begin and dream of revolution Guardian http://bit.ly/ex5mXd #Africa h ...')
+(0.36696691228218969, u'#Egypt frustrated young wait for their lives to begin and dream of revolution Guardian http://bit.ly/ex5mXd #Africa http://www.rich.co.ke/')
+(0.087408051050695573, u"Guilt-tripping people into joining the revolution? That's the way to go.  http://twitpic.com/3sydx9 #jan25")
+(0.026752082167978791, u'"If #Tunisia can do it, why can\'t we?" read one. "We will either start living or start dying on 25 January." http://bit.ly/ex5mXd   \n#Egypt')
+(0.00056376399166669419, u'RT @RamyRaoof: government officials in #Egypt ask people to close their shops on #Jan25 due to riots that might take place http://twitpic.com/3ss0xq')
+(3.1692321856511565e-16, u'RT @BoutainaAzzabi: 4 those who thought that protests r cooling down in the Maghreb region #newsflash, this is just the beginning!  #jan25 #arabprotest #egypt')
+(3.1692321856511565e-16, u'4 those who thought that protests r cooling down in the Maghreb region #newsflash, this is just the beginning!  #jan25 #arabprotest #egypt')
+(2.2204460492503131e-16, u'rt @maafa #Egypt#Gaza Army of Islam responsible for Coptic killings, claims Egypt - Irish Times http://ow.ly/1aZYBH')
+(2.2204460492503131e-16, u"re. #jan25: every time you tweet wrong/unchecked/exaggerated information the devil will add a year to Mubarak's life.")
+
+
+***********************************************************
+Cluster20
+[u'offic', u'rep', u'perman', u'front', u'proj', u'worker']
+(0.30362420631231041, u"ProJ @monaeltahawy: On #jan25, #Egyptians in #NYC will protest in front of Office of #Egypt's Permanent Rep. to ... http://bit.ly/dYZ7Iv")
+(0.23826329744132049, u'RT Workers protest outside Gilan Governorate office http://is.gd/rzUKhn Free#Tunisia #25Jan')
+(0.22056440813963815, u"RT @monaeltahawy: On #jan25, #Egyptians in #NYC will protest in front of Office of #Egypt's Permanent Rep. to #UN in solidarity w Egypt nationwide protests")
+(0.066769319350117123, u'RT @monaeltahawy: Pics of small but loud rally 4 #Egypt in #NYC in front of #UN in solidarity with #jan25 protests http://on.fb.me/ebhue0 #arabprotest')
+(0.040781238983492465, u'ProJ @monaeltahawy: As #Egyptians prepare for #jan25 protests: #Mubarak has turned #Egypt into a #police state w... http://bit.ly/eHttfG')
+(0.022903937842862498, u'ProJ @monaeltahawy: I salute #Egyptians preparing 4 nationwide protests 2 coincide w "Police Day" #Jan25. Thank ... http://bit.ly/e3EzTa')
+(0.015414742197297635, u'ProJ @monaeltahawy: As #Egyptians prepare for #jan25 protests: there r between 12,000 - 14,000 political prisone... http://bit.ly/eJX0t6')
+(0.0062283569807277134, u'Life is great when u get solidarity like this RT @CarlosLatuff: Today I feel myself half Tunisian, half Egyptian! :) #Tunisie #Egypt #Jan25"')
+(0.0024048310804279187, u"Security forces to deal strictly with 'illegal' 25 January protest  http://bit.ly/hiPhdx #Egypt #Jan25 #Police #Pigs #FreedomOfExpression")
+(0.0012838344155709351, u"Activists: 25 January protest to be start of 'something big' http://ow.ly/3IXLw #CollectiveProtest #PoliceDay #Egypt")
+
+
+***********************************************************
+Cluster21
+[u'salma', u'guy', u'god', u'bless', u'support', u'protest']
+(0.39794035103715703, u'RT @waelsalem: Salma supports the #jan25 protest, God bless all of u guys  http://plixi.com/p/72074500')
+(0.39794035103715703, u'RT @waelsalem: Salma supports the #jan25 protest, God bless all of u guys  http://plixi.com/p/72074500')
+(0.0027726799371752572, u'Just landed in #egypt, airport taxi driver knows about the #jan25 protest, says it will be a "black day"')
+(0.0016691983614962797, u"Security forces to deal strictly with 'illegal' 25 January protest  http://bit.ly/hiPhdx #Egypt #Jan25 #Police #Pigs #FreedomOfExpression")
+(0.00091901116339069709, u"Activists: 25 January protest to be start of 'something big' http://ow.ly/3IXLw #CollectiveProtest #PoliceDay #Egypt")
+(0.00015045496675349326, u'ProJ @monaeltahawy: As #Egyptians prepare for #jan25 protests: #Mubarak has turned #Egypt into a #police state w... http://bit.ly/eHttfG')
+(0.00012848521402338223, u'ProJ @monaeltahawy: I salute #Egyptians preparing 4 nationwide protests 2 coincide w "Police Day" #Jan25. Thank ... http://bit.ly/e3EzTa')
+(8.9677910553428896e-05, u'RT @monaeltahawy: As #Egyptians prepare for #jan25 protests: there r between 12,000 - 14,000 political prisoners in  #Egypt. Down with #Mubarak!')
+(8.9677910553428896e-05, u'As #Egyptians prepare for #jan25 protests: there r between 12,000 - 14,000 political prisoners in  #Egypt. Down with #Mubarak!')
+(7.7130553978816855e-05, u'RT @CitizenCompass: RT @monaeltahawy: As #Egyptians prepare for #jan25 protests: #Mubarak has been president for 29 yrs, Emergency Law for every 1 of those yrs.')
+
+
+***********************************************************
+Cluster22
+[u'ralli', u'pic', u'nyc', u'freedom', u'digniti', u'support']
+(0.55715119148893977, u'RT @monaeltahawy: #Egyptians in NYC rallied in support of freedom & dignity 4 #Egypt (pics) http://on.fb.me/ehSFv6  We will rally again #jan25 #arabprotest')
+(0.27798098475185923, u'RT @monaeltahawy: Pics of small but loud rally 4 #Egypt in #NYC in front of #UN in solidarity with #jan25 protests http://on.fb.me/ebhue0 #arabprotest')
+(0.0039904121694417103, u'Life is great when u get solidarity like this RT @CarlosLatuff: Today I feel myself half Tunisian, half Egyptian! :) #Tunisie #Egypt #Jan25"')
+(0.00071974864427033379, u'RT @waelsalem: Salma supports the #jan25 protest, God bless all of u guys  http://plixi.com/p/72074500')
+(0.00071974864427033379, u'RT @waelsalem: Salma supports the #jan25 protest, God bless all of u guys  http://plixi.com/p/72074500')
+(1.8693485478230031e-08, u"Activists: 25 January protest to be start of 'something big' http://ow.ly/3IXLw #CollectiveProtest #PoliceDay #Egypt")
+(1.2976748579739268e-14, u"RT @monaeltahawy: On #jan25, #Egyptians in #NYC will protest in front of Office of #Egypt's Permanent Rep. to #UN in solidarity w Egypt nationwide protests")
+(2.8563506266715439e-16, u'RT @monaeltahawy: As #Egyptians prepare for #jan25 protests: there r between 12,000 - 14,000 political prisoners in  #Egypt. Down with #Mubarak!')
+(2.8563506266715439e-16, u'As #Egyptians prepare for #jan25 protests: there r between 12,000 - 14,000 political prisoners in  #Egypt. Down with #Mubarak!')
+(2.2204460492503131e-16, u'rt @maafa #Egypt#Gaza Army of Islam responsible for Coptic killings, claims Egypt - Irish Times http://ow.ly/1aZYBH')
+
+
+***********************************************************
+Cluster23
+[u'us', u'sanction', u'punish', u'may', u'firm', u'evad']
+(0.37829148452209183, u'US may punish China firms evading Iran sanctions: Clinton http://is.gd/7aBKia #ksa #25Jan')
+(0.37829148452209183, u'RT US may punish China firms evading Iran sanctions: Clinton http://is.gd/fTA8WT #uae #25Jan')
+(0.09067852051047573, u'RT Scientists Warn Iran Could Produce Enough Nuclear Material for Warhead in 5 Months http://is.gd/L48hqR #Binali #25Jan')
+(0.09067852051047573, u'RT Scientists Warn Iran Could Produce Enough Nuclear Material for Warhead in 5 Months http://is.gd/L48hqR #Binali #25Jan')
+(0.063874076205446217, u'RT Iran nuclear talks break down without an agreement http://is.gd/gBTQry #25Jan #moritania')
+(2.2204460492503131e-16, u'rt @maafa #Egypt#Gaza Army of Islam responsible for Coptic killings, claims Egypt - Irish Times http://ow.ly/1aZYBH')
+(2.2204460492503131e-16, u"re. #jan25: every time you tweet wrong/unchecked/exaggerated information the devil will add a year to Mubarak's life.")
+(2.2204460492503131e-16, u'human rights trainings, workshops, courses offered by non-governmental organisations http://goo.gl/3fA1U #Egypt #Saudi #Kuwait #Bahrain')
+(2.2204460492503131e-16, u'What an exciting time to be an Arabic language speaker. Others are missing out. #Lebanon #Jordan #Tunisia #Palestine #Gulf #Egypt')
+(2.2204460492503131e-16, u'Strange story RT @YonhapNews: N. Korea leader meets head of #Egypt mobile phone service provider Orascom  http://bit.ly/fMS7r9 #Korea')
+
+
+***********************************************************
+Cluster24
+[u'year', u'wrong', u'uncheck', u'tweet', u'inform', u'exagger']
+(0.23891780692750875, u"re. #jan25: every time you tweet wrong/unchecked/exaggerated information the devil will add a year to Mubarak's life.")
+(0.23891780692750875, u"RT @moftasa: RT @Sarahcarr: re. #jan25: every time you tweet wrong/unchecked/exaggerated information the devil will add a year to Mubarak's life.")
+(0.23891780692750875, u"RT @Sarahcarr: re. #jan25: every time you tweet wrong/unchecked/exaggerated information the devil will add a year to Mubarak's life.")
+(0.23891780692750875, u"RT @Sarahcarr: re. #jan25: every time you tweet wrong/unchecked/exaggerated information the devil will add a year to Mubarak's life.")
+(0.23891780692750875, u"RT @Sarahcarr: re. #jan25: every time you tweet wrong/unchecked/exaggerated information the devil will add a year to Mubarak's life.")
+(0.02271686840976983, u'Life is great when u get solidarity like this RT @CarlosLatuff: Today I feel myself half Tunisian, half Egyptian! :) #Tunisie #Egypt #Jan25"')
+(0.0069989089061132043, u'RT @monaeltahawy: As #Egyptians prepare for #jan25 protests: #Mubarak has been president for 29 yrs, Emergency Law for every 1 of those yrs. Down w Mubarak!')
+(0.0069989089061132043, u'As #Egyptians prepare for #jan25 protests: #Mubarak has been president for 29 yrs, Emergency Law for every 1 of those yrs. Down w Mubarak!')
+(0.0046204363892475208, u'What an exciting time to be an Arabic language speaker. Others are missing out. #Lebanon #Jordan #Tunisia #Palestine #Gulf #Egypt')
+(0.00070944531597073336, u'RT @karembue: Great piece of work thank you \nRT @CarlosLatuff: (Cartoon) We are all Khaled Said #Jan25 http://twitpic.com/3swvnr (@Elsha ...')
+
+
+***********************************************************
+Cluster25
+[u'yalla', u'spirit', u'fight', u'fierc', u'duti', u'love']
+(0.30518833242953047, u'RT @monaeltahawy: I love fierce Egyptians & their fighting spirit! Yalla, Egypt! RT @demaghmak @Amrosama ucant thx us..its our duty #Egyptians #Jan25 #25JAN')
+(0.30518833242953047, u'RT @monaeltahawy: I love fierce Egyptians & their fighting spirit! Yalla, Egypt! RT @demaghmak @Amrosama ucant thx us..its our duty #Egyptians #Jan25 #25JAN')
+(0.30518833242953047, u'RT @monaeltahawy: I love fierce Egyptians & their fighting spirit! Yalla, Egypt! RT @demaghmak @Amrosama ucant thx us..its our duty #Egyptians #Jan25 #25JAN')
+(0.30518833242953047, u'I love fierce Egyptians & their fighting spirit! Yalla, Egypt! RT @demaghmak @Amrosama ucant thx us..its our duty #Egyptians #Jan25 #25JAN')
+(0.048061828850006573, u'#Egyptian classic (sung here by #Lebanese) dedicated w love to #Egypt ahead of #jan25 Al Helwa Ahi (Sayyed Darwish) http://mysp.ac/h7f40b')
+(0.00061566523877779327, u'RT @shabab6april: Egyptians in New York protest in solidarity with #egypt uprising day on Jan25 #sidibouzid #optunisia #opegypt #opalgeria')
+(0.00061566523877779327, u'RT @AnonymousIRC: RT @shabab6april: Egyptians in New York protest in solidarity with #egypt uprising day on Jan25 #sidibouzid #optunisia #opegypt #opalgeria')
+(1.4729811482368593e-07, u'RT @CarlosLatuff: I sincerely hope that my artworks can hit the streets of Cairo, being useful for Egyptian people in #Jan25')
+(1.4729811482368593e-07, u'RT @CarlosLatuff: I sincerely hope that my artworks can hit the streets of Cairo, being useful for Egyptian people in #Jan25')
+(1.4729811482368593e-07, u'I sincerely hope that my artworks can hit the streets of Cairo, being useful for Egyptian people in #Jan25')
+
+
+***********************************************************
+Cluster26
+[u'foreign', u'unaccept', u'regim', u'intervent', u'fund', u'except']
+(0.56151059125411207, u'RT @shadihamid: Mubarak: foreign intervention unacceptable (except when foreigners fund my regime) #Egypt')
+(0.0053262283055761379, u'RT @monaeltahawy: As #Egyptians prepare for #jan25 protests: #Mubarak has been president for 29 yrs, Emergency Law for every 1 of those yrs. Down w Mubarak!')
+(0.0053262283055761379, u'As #Egyptians prepare for #jan25 protests: #Mubarak has been president for 29 yrs, Emergency Law for every 1 of those yrs. Down w Mubarak!')
+(0.00021238952119682761, u"re. #jan25: every time you tweet wrong/unchecked/exaggerated information the devil will add a year to Mubarak's life.")
+(0.00021238952119682761, u"RT @moftasa: RT @Sarahcarr: re. #jan25: every time you tweet wrong/unchecked/exaggerated information the devil will add a year to Mubarak's life.")
+(0.00021238952119682761, u"RT @Sarahcarr: re. #jan25: every time you tweet wrong/unchecked/exaggerated information the devil will add a year to Mubarak's life.")
+(0.00021238952119682761, u"RT @Sarahcarr: re. #jan25: every time you tweet wrong/unchecked/exaggerated information the devil will add a year to Mubarak's life.")
+(0.00021238952119682761, u"RT @Sarahcarr: re. #jan25: every time you tweet wrong/unchecked/exaggerated information the devil will add a year to Mubarak's life.")
+(2.2204460492503131e-16, u'rt @maafa #Egypt#Gaza Army of Islam responsible for Coptic killings, claims Egypt - Irish Times http://ow.ly/1aZYBH')
+(2.2204460492503131e-16, u'human rights trainings, workshops, courses offered by non-governmental organisations http://goo.gl/3fA1U #Egypt #Saudi #Kuwait #Bahrain')
+
+
+***********************************************************
+Cluster27
+[u'plan', u'follow', u'join', u'protest', u'way', u'trip']
+(0.36513310454422648, u'RT @monaeltahawy: #Egyptians planning to join #jan25 protests, follow @Amrosama for great advice on how to protest effectively and stay safe #arabprotest')
+(0.36513310454422648, u'RT @monaeltahawy: #Egyptians planning to join #jan25 protests, follow @Amrosama for great advice on how to protest effectively and stay safe #arabprotest')
+(0.36513310454422648, u'RT @monaeltahawy: #Egyptians planning to join #jan25 protests, follow @Amrosama for great advice on how to protest effectively and stay safe #arabprotest')
+(0.36513310454422648, u'RT @monaeltahawy: #Egyptians planning to join #jan25 protests, follow @Amrosama for great advice on how to protest effectively and stay safe #arabprotest')
+(0.36513310454422648, u'RT @monaeltahawy: #Egyptians planning to join #jan25 protests, follow @Amrosama for great advice on how to protest effectively and stay safe #arabprotest')
+(0.36513310454422648, u'#Egyptians planning to join #jan25 protests, follow @Amrosama for great advice on how to protest effectively and stay safe #arabprotest')
+(0.077721052664763396, u"Guilt-tripping people into joining the revolution? That's the way to go.  http://twitpic.com/3sydx9 #jan25")
+(0.0038031077079270217, u'Just landed in #egypt, airport taxi driver knows about the #jan25 protest, says it will be a "black day"')
+(0.003383514140584618, u"RT @monaeltahawy: On #jan25, #Egyptians in #NYC will protest in front of Office of #Egypt's Permanent Rep. to #UN in solidarity w Egypt nationwide protests")
+(0.0029521420002777484, u'RT @monaeltahawy: Pics of small but loud rally 4 #Egypt in #NYC in front of #UN in solidarity with #jan25 protests http://on.fb.me/ebhue0 #arabprotest')
+
+
+***********************************************************
+Cluster28
+[u'talk', u'chairman', u'abba', u'without', u'break', u'agreement']
+(0.42324997456656527, u'#Egypt PA chairman Abbas in Cairo for talks - Palestinian Authority Chairman Mahmoud Abbas in Cairo for talks with P... http://ht.ly/1b07gT')
+(0.27084795153427621, u'RT Iran nuclear talks break down without an agreement http://is.gd/gBTQry #25Jan #moritania')
+(0.019186550491800555, u'RT Scientists Warn Iran Could Produce Enough Nuclear Material for Warhead in 5 Months http://is.gd/L48hqR #Binali #25Jan')
+(0.019186550491800555, u'RT Scientists Warn Iran Could Produce Enough Nuclear Material for Warhead in 5 Months http://is.gd/L48hqR #Binali #25Jan')
+(2.2204460492503131e-16, u'rt @maafa #Egypt#Gaza Army of Islam responsible for Coptic killings, claims Egypt - Irish Times http://ow.ly/1aZYBH')
+(2.2204460492503131e-16, u"re. #jan25: every time you tweet wrong/unchecked/exaggerated information the devil will add a year to Mubarak's life.")
+(2.2204460492503131e-16, u'human rights trainings, workshops, courses offered by non-governmental organisations http://goo.gl/3fA1U #Egypt #Saudi #Kuwait #Bahrain')
+(2.2204460492503131e-16, u'What an exciting time to be an Arabic language speaker. Others are missing out. #Lebanon #Jordan #Tunisia #Palestine #Gulf #Egypt')
+(2.2204460492503131e-16, u'US may punish China firms evading Iran sanctions: Clinton http://is.gd/7aBKia #ksa #25Jan')
+(2.2204460492503131e-16, u'Strange story RT @YonhapNews: N. Korea leader meets head of #Egypt mobile phone service provider Orascom  http://bit.ly/fMS7r9 #Korea')
+
+
+***********************************************************
+Cluster29
+[u'releas', u'nigeria', u'kidnap', u'aspx', u'egyptian', u'nefert']
+(0.50680820186913988, u'Kidnapped Egyptian in Nigeria released  http://english.ahram.org.eg/News/4702.aspx #Egypt #Nigeria')
+(0.0659861074112882, u"HRW: #Egypt has 'widespread discrimination' http://english.ahram.org.eg/News/4716.aspx #copts")
+(0.05402434484534907, u'#Egypt requests return of Queen Nefertiti bust http://english.ahram.org.eg/News/4687.aspx')
+(0.00056409570661959706, u'RT @shabab6april: Egyptians in New York protest in solidarity with #egypt uprising day on Jan25 #sidibouzid #optunisia #opegypt #opalgeria')
+(0.00056409570661959706, u'RT @AnonymousIRC: RT @shabab6april: Egyptians in New York protest in solidarity with #egypt uprising day on Jan25 #sidibouzid #optunisia #opegypt #opalgeria')
+(1.4415480153694528e-06, u'RT @monaeltahawy: I love fierce Egyptians & their fighting spirit! Yalla, Egypt! RT @demaghmak @Amrosama ucant thx us..its our duty #Egyptians #Jan25 #25JAN')
+(1.4415480153694528e-06, u'RT @monaeltahawy: I love fierce Egyptians & their fighting spirit! Yalla, Egypt! RT @demaghmak @Amrosama ucant thx us..its our duty #Egyptians #Jan25 #25JAN')
+(1.4415480153694528e-06, u'RT @monaeltahawy: I love fierce Egyptians & their fighting spirit! Yalla, Egypt! RT @demaghmak @Amrosama ucant thx us..its our duty #Egyptians #Jan25 #25JAN')
+(1.4415480153694528e-06, u'I love fierce Egyptians & their fighting spirit! Yalla, Egypt! RT @demaghmak @Amrosama ucant thx us..its our duty #Egyptians #Jan25 #25JAN')
+(2.0553400518489162e-09, u'RT @CarlosLatuff: I sincerely hope that my artworks can hit the streets of Cairo, being useful for Egyptian people in #Jan25')
+

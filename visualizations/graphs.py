@@ -3,7 +3,7 @@ Created on 5 Feb 2012
 
 @author: george
 '''
-import datetime, json, os
+import datetime, json, os, numpy
 import matplotlib.pyplot as plt#!@UnresolvedImport
 #matplotlib.use('GTKAgg')
 from matplotlib.dates import num2date#!@UnresolvedImport
@@ -71,5 +71,5 @@ class MatplotlibTimeline(Timeline):
     
     def show(self):
         plt.show()
-        plt.hold(False)      
-      
+        plt.hold(False)    
+        

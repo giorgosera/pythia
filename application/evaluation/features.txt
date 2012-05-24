@@ -1,0 +1,585 @@
+
+***********************************************************
+Cluster0
+[u'offici', u'thousand', u'mohandesin', u'protest', u'flag', u'scene']
+(0.47159360607801065, u'RT @AmiraMoslimany: Mohandesin protest is now in thousands officially http://on.fb.me/8Z50YF #Jan25 #Egypt #EgyRevol')
+(0.47159360607801065, u'RT @AmiraMoslimany: Mohandesin protest is now in thousands officially http://on.fb.me/8Z50YF #Jan25 #Egypt #EgyRevol')
+(0.47159360607801065, u'RT @Alshaheeed: Mohandesin protest is now in thousands officially http://on.fb.me/8Z50YF #Jan25 #Egypt #EgyRevol')
+(0.47159360607801065, u'RT @Alshaheeed: Mohandesin protest is now in thousands officially http://on.fb.me/8Z50YF #Jan25 #Egypt #EgyRevol')
+(0.47159360607801065, u'Mohandesin protest is now in thousands officially http://on.fb.me/8Z50YF #Jan25 #Egypt #EgyRevol')
+(0.47159360607801065, u'Mohandesin protest is now in thousands officially http://on.fb.me/8Z50YF #Jan25 #Egypt #EgyRevol')
+(0.063408959713708371, u'Amazing scene at Mostafa Mahmoud. Thousands marching with Egypt flag. #Jan25')
+(0.001040321064924738, u'RT @MhmdAliMhmd: The peak of game3t el dowal protests #jan25 #egypt!!! Sha3b ay kalam :( http://twitpic.com/3t93ql')
+(0.00082632965487803049, u'RT @Ghafari: Left bulak now to mostafa mahmoud #jan25 #cairo #egypt picture of protesters http://yfrog.com/h8ebglkj')
+(0.00082632965487803049, u'RT @Ghafari: Left bulak now to mostafa mahmoud #jan25 #cairo #egypt picture of protesters http://yfrog.com/h8ebglkj')
+
+
+***********************************************************
+Cluster1
+[u'al', u'back', u'jazeera', u'yet', u'quit', u'noth']
+(0.50035051067440262, u'This is quite interesting. Al Jazeera Arabic is back to the news, but has nothing yet about the #Jan25 demos in #Egypt! What gives?')
+(0.50035051067440262, u'This is quite interesting. Al Jazeera Arabic is back to the news, but has nothing yet about the #Jan25 demos in #Egypt! What gives?')
+(0.50035051067440262, u'RT @asa_wire: This is quite interesting. Al Jazeera Arabic is back to the news, but has nothing yet about the #Jan25 demos in #Egypt! What gives?')
+(0.50035051067440262, u'RT @asa_wire: This is quite interesting. Al Jazeera Arabic is back to the news, but has nothing yet about the #Jan25 demos in #Egypt! What gives?')
+(0.27373452692610684, u'RT @Brian_Whit: Al-Masry al-Youm live-streaming Egypt protests #jan25 http://bit.ly/gpWD6N')
+(0.14827631433795063, u'RT @asa_wire: Al Jazeera English reporter speaking about the demos on #Egypt streets: "scenes downtown Cairo has not witnessed since the 70s" #Jan25')
+(0.11223929339711967, u'RT @ianinegypt: Protesters moving back towards Supreme court. Possible circling back to tahrir. Numbers are growing. #jan25 #egypt')
+(0.11223929339711967, u'Protesters moving back towards Supreme court. Possible circling back to tahrir. Numbers are growing. #jan25 #egypt')
+(0.10689052488504157, u"I'm extremely impressed by @ahramonline live coverage of the #Jan25 Egypt protests http://bit.ly/fChyhi via @3arabawy Al Ahram is reborn.")
+(0.026791066331160029, u'RT @NadiaE: Big demo downtown Cairo. Maybe 300 people and 3x as many police #jan25')
+
+
+***********************************************************
+Cluster2
+[u'ministri', u'along', u'cornich', u'foreign', u'move', u'affair']
+(0.37599130319634777, u'RT @ianinegypt: Protesters moving along corniche towards ministry of foreign affairs. #jan25 #egypt')
+(0.37599130319634777, u'RT @ianinegypt: Protesters moving along corniche towards ministry of foreign affairs. #jan25 #egypt')
+(0.37599130319634777, u'Protesters moving along corniche towards ministry of foreign affairs. #jan25 #egypt')
+(0.37599130319634777, u'Protesters moving along corniche towards ministry of foreign affairs. #jan25 #egypt')
+(0.21710203480097651, u"RT @monaeltahawy: RT @ashrafkhalil #Jan25 huge crowd chanting 'Batil' (Illegitimate) in front of NDP building on corniche #Cairo")
+(0.21710203480097651, u"RT @monaeltahawy: RT @ashrafkhalil #Jan25 huge crowd chanting 'Batil' (Illegitimate) in front of NDP building on corniche #Cairo")
+(0.21710203480097651, u"RT @ashrafkhalil #Jan25 huge crowd chanting 'Batil' (Illegitimate) in front of NDP building on corniche #Cairo")
+(0.20758782579998106, u'RT @3arabawy: Protesters are now chanting against the president and the NDP in downtown Cairo, facing NDP HQ http://bit.ly/gn6Ss9 #Jan25')
+(0.20758782579998106, u'RT @3arabawy: Protesters are now chanting against the president and the NDP in downtown Cairo, facing NDP HQ http://bit.ly/gn6Ss9 #Jan25')
+(0.15036458875502609, u'RT @3arabawy: Shubra protesters are chanting "down with Mubarak". others r now in front of foreign ministry in downtown Cairo #Jan25 http://bit.ly/gn6Ss9')
+
+
+***********************************************************
+Cluster3
+[u'peopl', u'roughli', u'leav', u'car', u'buse', u'2000']
+(0.41540708880998728, u'RT @ianinegypt: People leaving buses and cars to join protest. Roughly 2000 people. #egypt #jan25')
+(0.41540708880998728, u'RT @ianinegypt: People leaving buses and cars to join protest. Roughly 2000 people. #egypt #jan25')
+(0.41540708880998728, u'RT @ianinegypt: People leaving buses and cars to join protest. Roughly 2000 people. #egypt #jan25')
+(0.41540708880998728, u'RT @ianinegypt: People leaving buses and cars to join protest. Roughly 2000 people. #egypt #jan25')
+(0.41540708880998728, u'RT @ianinegypt: People leaving buses and cars to join protest. Roughly 2000 people. #egypt #jan25')
+(0.41540708880998728, u'RT @ianinegypt: People leaving buses and cars to join protest. Roughly 2000 people. #egypt #jan25')
+(0.41540708880998728, u'RT @ianinegypt: People leaving buses and cars to join protest. Roughly 2000 people. #egypt #jan25')
+(0.06052659993724295, u'RT @Salamander: For those who want to join the nahya protest enter through the mazla2an of bus stop boulaq #jan25')
+(0.06052659993724295, u'RT @Salamander: For those who want to join the nahya protest enter through the mazla2an of bus stop boulaq #jan25')
+(0.025504222285543936, u'RT @NadiaE: Big demo downtown Cairo. Maybe 300 people and 3x as many police #jan25')
+
+
+***********************************************************
+Cluster4
+[u'talk', u'86', u'us', u'shubra', u'polic', u'wale']
+(0.6027346164710804, u'RT @Gsquare86: Police now talking to us in shubra #Jan25')
+(0.6027346164710804, u'RT @Gsquare86: Police now talking to us in shubra #Jan25')
+(0.22107266880288329, u'RT @Gsquare86: There are about at least 20 thugs and undercover police waling behind us in shubra heading to dawaran #jan25')
+(0.17176813787313855, u'There are about at least 20 thugs and undercover police waling behind us in shubra heading to dawaran #jan25')
+(0.050193941476761345, u'RT @Gsquare86: Shubra ..el sha3b ethan el sha3b etzal #jan25 http://yfrog.com/h5tqmadj')
+(0.049106470188471127, u'RT: @Gsquare86: Marching side streets in shubra gathering people as we go ..growing every second #jan25 http://yfrog.com/h5y4voj')
+(0.049106470188471127, u'RT @Gsquare86: Marching side streets in shubra gathering people as we go ..growing every second #jan25 http://yfrog.com/h5y4voj')
+(0.021142847781010065, u'RT @Gsquare86 Marching side streets in #shubra (#Cairo) gathering people as we go ..growing every second #jan25 http://yfrog.com/h5y4voj')
+(0.021142847781010065, u'RT @Gsquare86 Marching side streets in #shubra (#Cairo) gathering people as we go ..growing every second #jan25 http://yfrog.com/h5y4voj')
+(0.0080573483042297098, u'RT @hackneylad: Protesters stopped outside television building on the nile, sitting down in the street - police look uncertain #jan25')
+
+
+***********************************************************
+Cluster5
+[u'flower', u'give', u'policemen', u'policeman', u'latest', u'pictur']
+(0.60542346697334826, u'RT @Alshaheeed: Protesters are giving flowers to Policemen. http://on.fb.me/8Z50YF #Jan25 #Egypt #EgyRevol')
+(0.49928149886121781, u'#Egypt Latest: Picture of protester giving flower to policeman http://tinyurl.com/63e5r8h #sidibouzid #Jan25')
+(0.47335274334923366, u'RT @Janeinthesky: RT @EANewsFeed: #Egypt Latest: Picture of protester gving flower 2 policeman http://tinyurl.com/63e5r8h #sidibouzid #Jan25')
+(0.082676322317690898, u'#Egypt Latest: Picture of protest outside Cairo Opera House http://tinyurl.com/63e5r8h  #sidibouzid #Jan25')
+(0.082676322317690898, u'#Egypt Latest: Picture of protest outside Cairo Opera House http://tinyurl.com/63e5r8h  #sidibouzid #Jan25')
+(0.022876863444916521, u'RT @Ghafari: Left bulak now to mostafa mahmoud #jan25 #cairo #egypt picture of protesters http://yfrog.com/h8ebglkj')
+(0.022876863444916521, u'RT @Ghafari: Left bulak now to mostafa mahmoud #jan25 #cairo #egypt picture of protesters http://yfrog.com/h8ebglkj')
+(0.0071375419534169399, u'This is quite interesting. Al Jazeera Arabic is back to the news, but has nothing yet about the #Jan25 demos in #Egypt! What gives?')
+(0.0071375419534169399, u'This is quite interesting. Al Jazeera Arabic is back to the news, but has nothing yet about the #Jan25 demos in #Egypt! What gives?')
+(0.0071375419534169399, u'RT @asa_wire: This is quite interesting. Al Jazeera Arabic is back to the news, but has nothing yet about the #Jan25 demos in #Egypt! What gives?')
+
+
+***********************************************************
+Cluster6
+[u'boulak', u'mostafa', u'mahmoud', u'come', u'flag', u'scene']
+(0.80767468239758189, u'RT @Ssirgany: RT @Ghafari: Protests in boulak coming from mostafa mahmoud #jan25 http://yfrog.com/h8wliaj')
+(0.44997990825494216, u'Amazing scene at Mostafa Mahmoud. Thousands marching with Egypt flag. #Jan25')
+(0.01692947136623825, u'Left bulak now to mostafa mahmoud #jan25 http://yfrog.com/h8ebglkj')
+(0.01692947136623825, u'Left bulak now to mostafa mahmoud #jan25 http://yfrog.com/h8ebglkj')
+(0.015127468376877739, u"RT @hackneylad: Protesters marching past min of foreign affairs chanting 'Tunis' and revelling in their control of the street #jan25")
+(0.015127468376877739, u"RT @hackneylad: Protesters marching past min of foreign affairs chanting 'Tunis' and revelling in their control of the street #jan25")
+(0.015127468376877739, u"Protesters marching past min of foreign affairs chanting 'Tunis' and revelling in their control of the street #jan25")
+(0.015127468376877739, u"Protesters marching past min of foreign affairs chanting 'Tunis' and revelling in their control of the street #jan25")
+(0.013294358063183138, u'RT @asa_wire: Al Jazeera English reporter speaking about the demos on #Egypt streets: "scenes downtown Cairo has not witnessed since the 70s" #Jan25')
+(0.0033512154936762269, u'RT @Ghafari: Left bulak now to mostafa mahmoud #jan25 #cairo #egypt picture of protesters http://yfrog.com/h8ebglkj')
+
+
+***********************************************************
+Cluster7
+[u'year', u'show', u'much', u'limit', u'larger', u'indic']
+(0.63425002815478282, u'RT @RawyaRageh: Early indications show numbers much larger than limited protests in Egypt over past 2 years #Egypt #Jan25')
+(0.63425002815478282, u'RT @RawyaRageh: Early indications show numbers much larger than limited protests in Egypt over past 2 years #Egypt #Jan25')
+(0.1028911493804119, u'RT @ianinegypt: Protesters moving back towards Supreme court. Possible circling back to tahrir. Numbers are growing. #jan25 #egypt')
+(0.1028911493804119, u'Protesters moving back towards Supreme court. Possible circling back to tahrir. Numbers are growing. #jan25 #egypt')
+(0.019992076538276955, u"RT @hackneylad: Protesters marching past min of foreign affairs chanting 'Tunis' and revelling in their control of the street #jan25")
+(0.019992076538276955, u"RT @hackneylad: Protesters marching past min of foreign affairs chanting 'Tunis' and revelling in their control of the street #jan25")
+(0.019992076538276955, u"Protesters marching past min of foreign affairs chanting 'Tunis' and revelling in their control of the street #jan25")
+(0.019992076538276955, u"Protesters marching past min of foreign affairs chanting 'Tunis' and revelling in their control of the street #jan25")
+(0.0025306420140487462, u'RT @ehsankooheji: Smart move by #Egypt #jan25 protesters, venues announced were fake. Using social media now to divert. Police in wrong areas, slow to follow')
+(0.00052323146904233414, u'RT @MhmdAliMhmd: The peak of game3t el dowal protests #jan25 #egypt!!! Sha3b ay kalam :( http://twitpic.com/3t93ql')
+
+
+***********************************************************
+Cluster8
+[u'nahya', u'attack', u'secur', u'broke', u'want', u'mazla2an']
+(0.58482664515129479, u'Security attacking nahya protest #jan25')
+(0.58482664515129479, u'RT @Salamander: Security attacking nahya protest #jan25')
+(0.26602278316330402, u'RT @3arabawy: RT: @Salamander: Protesters broke nahya security cordon #jan25')
+(0.17905378289279616, u'RT @monasosh: This is great, we r in nahya street, ppl r walking by our side #jan25')
+(0.17888872358659533, u'RT @Salamander: For those who want to join the nahya protest enter through the mazla2an of bus stop boulaq #jan25')
+(0.17888872358659533, u'RT @Salamander: For those who want to join the nahya protest enter through the mazla2an of bus stop boulaq #jan25')
+(0.036198195005966244, u'RT @simonjhanna: corniche protests passed television building, followed behind by 3 lines of riot police, with security vehicles lingering behind #jan25')
+(0.0059269685984310351, u'RT @hackneylad: Protesters stopped outside television building on the nile, sitting down in the street - police look uncertain #jan25')
+(0.0059269685984310351, u'RT @hackneylad: Protesters stopped outside television building on the nile, sitting down in the street - police look uncertain #jan25')
+(0.0059269685984310351, u'RT @hackneylad: Protesters stopped outside television building on the nile, sitting down in the street - police look uncertain #jan25')
+
+
+***********************************************************
+Cluster9
+[u'pick', u'maspiro', u'also', u'alex', u'gather', u'build']
+(0.47154288709191022, u'most protesters in cairo have gathered in front of the maspiro building, protest in alex is also picking up #jan25')
+(0.47154288709191022, u'RT @adamakary: most protesters in cairo have gathered in front of the maspiro building, protest in alex is also picking up #jan25')
+(0.47154288709191022, u'RT @adamakary: most protesters in cairo have gathered in front of the maspiro building, protest in alex is also picking up #jan25')
+(0.47154288709191022, u'RT @adamakary: most protesters in cairo have gathered in front of the maspiro building, protest in alex is also picking up #jan25')
+(0.068554455749535628, u"RT @monaeltahawy: RT @ashrafkhalil #Jan25 huge crowd chanting 'Batil' (Illegitimate) in front of NDP building on corniche #Cairo")
+(0.068554455749535628, u"RT @monaeltahawy: RT @ashrafkhalil #Jan25 huge crowd chanting 'Batil' (Illegitimate) in front of NDP building on corniche #Cairo")
+(0.068554455749535628, u"RT @ashrafkhalil #Jan25 huge crowd chanting 'Batil' (Illegitimate) in front of NDP building on corniche #Cairo")
+(0.01889640105218348, u'RT: @Gsquare86: Marching side streets in shubra gathering people as we go ..growing every second #jan25 http://yfrog.com/h5y4voj')
+(0.01889640105218348, u'RT @Gsquare86: Marching side streets in shubra gathering people as we go ..growing every second #jan25 http://yfrog.com/h5y4voj')
+(0.017610152326317265, u'RT @Gsquare86 Marching side streets in #shubra (#Cairo) gathering people as we go ..growing every second #jan25 http://yfrog.com/h5y4voj')
+
+
+***********************************************************
+Cluster10
+[u'truck', u'stand', u'siren', u'qada2', u'hear', u'csf']
+(0.45155736708166022, u"RT @Sarahngb: people standing at dar el qada2 surrounded by CSF trucks and I'm hearing sirens #Jan25")
+(0.45155736708166022, u"RT @Sarahngb: people standing at dar el qada2 surrounded by CSF trucks and I'm hearing sirens #Jan25")
+(0.45155736708166022, u"RT @Sarahngb: people standing at dar el qada2 surrounded by CSF trucks and I'm hearing sirens #Jan25")
+(0.45155736708166022, u"RT @Sarahngb: people standing at dar el qada2 surrounded by CSF trucks and I'm hearing sirens #Jan25")
+(0.011783811175098313, u'RT @Ekramibrahim: Demonstrations started in Dakahlia, Sharkia, Menoufia, Assiut, Kafr El Sheikh, North Sinai, Qena, Ismailia and Cairo. #jan25')
+(0.011783811175098313, u'RT @Ekramibrahim: Demonstrations started in Dakahlia, Sharkia, Menoufia, Assiut, Kafr El Sheikh, North Sinai, Qena, Ismailia and Cairo. #jan25')
+(0.0059085157688305483, u'RT @Gsquare86: Shubra ..el sha3b ethan el sha3b etzal #jan25 http://yfrog.com/h5tqmadj')
+(0.0024532933629561235, u'RT @Gsquare86 Marching side streets in #shubra (#Cairo) gathering people as we go ..growing every second #jan25 http://yfrog.com/h5y4voj')
+(0.0024532933629561235, u'RT @Gsquare86 Marching side streets in #shubra (#Cairo) gathering people as we go ..growing every second #jan25 http://yfrog.com/h5y4voj')
+(0.0024225551757716172, u'RT: @Gsquare86: Marching side streets in shubra gathering people as we go ..growing every second #jan25 http://yfrog.com/h5y4voj')
+
+
+***********************************************************
+Cluster11
+[u'aspx', u'shubra', u'start', u'3arabawi', u'protest', u'taken']
+(0.36433153684961894, u'RT @3arabawy: Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25')
+(0.36433153684961894, u'RT @3arabawy: Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25')
+(0.36433153684961894, u'RT @3arabawy: Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25')
+(0.36433153684961894, u'RT @3arabawy: Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25')
+(0.36433153684961894, u'RT @3arabawy: Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25')
+(0.36433153684961894, u'RT @3arabawy: Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25')
+(0.36433153684961894, u'RT @3arabawy: Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25')
+(0.36433153684961894, u'RT @3arabawy: Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25')
+(0.36433153684961894, u'RT @3arabawy: Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25')
+(0.36433153684961894, u'RT @3arabawy: Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25')
+
+
+***********************************************************
+Cluster12
+[u'4palestin', u'two', u'merg', u'protest', u'al', u'youm']
+(0.70188410232936171, u'RT @Jew4palestine: RT @arwasm: Two protests merging #jan25 http://yfrog.com/h48mdhj')
+(0.70188410232936171, u'RT @Jew4palestine: RT @arwasm: Two protests merging #jan25 http://yfrog.com/h48mdhj')
+(0.023343426737004007, u'RT @arwasm: Two protests merging in tahrir #jan25')
+(0.023343426737004007, u'RT @arwasm: Two protests merging in tahrir #jan25')
+(0.0015874258816823395, u'RT @Brian_Whit: Al-Masry al-Youm live-streaming Egypt protests #jan25 http://bit.ly/gpWD6N')
+(0.0011401956913678485, u'RT @Ghafari: Left bulak now to mostafa mahmoud #jan25 #cairo #egypt picture of protesters http://yfrog.com/h8ebglkj')
+(0.0011401956913678485, u'RT @Ghafari: Left bulak now to mostafa mahmoud #jan25 #cairo #egypt picture of protesters http://yfrog.com/h8ebglkj')
+(0.00093635627778646392, u'RT @Ssirgany: RT @Ghafari: Protests in boulak coming from mostafa mahmoud #jan25 http://yfrog.com/h8wliaj')
+(0.0006410996500187978, u'RT @simonjhanna: corniche protests passed television building, followed behind by 3 lines of riot police, with security vehicles lingering behind #jan25')
+(0.0005948382938095626, u'RT @MhmdAliMhmd: The peak of game3t el dowal protests #jan25 #egypt!!! Sha3b ay kalam :( http://twitpic.com/3t93ql')
+
+
+***********************************************************
+Cluster13
+[u'protestor', u'300', u'shubra', u'7oria', u'protest', u'mayb']
+(0.69655809963865989, u'protest now in shubra, 300 protestors #jan25')
+(0.69655809963865989, u'protest now in shubra, 300 protestors #jan25')
+(0.67263923760579292, u'RT @btnafas7oria: protest now in shubra, 300 protestors #jan25')
+(0.13760148705632824, u'RT @NadiaE: Big demo downtown Cairo. Maybe 300 people and 3x as many police #jan25')
+(0.13760148705632824, u'RT @NadiaE: Big demo downtown Cairo. Maybe 300 people and 3x as many police #jan25')
+(0.024842978153319498, u'Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25')
+(0.024842978153319498, u'Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25')
+(0.022418814841681359, u'RT @3arabawy: Shubra protesters are chanting "down with Mubarak". others r now in front of foreign ministry in downtown Cairo #Jan25 http://bit.ly/gn6Ss9')
+(0.022418814841681359, u'RT @3arabawy: Shubra protesters are chanting "down with Mubarak". others r now in front of foreign ministry in downtown Cairo #Jan25 http://bit.ly/gn6Ss9')
+(0.016834036908868793, u'RT: @Gsquare86: Marching side streets in shubra gathering people as we go ..growing every second #jan25 http://yfrog.com/h5y4voj')
+
+
+***********************************************************
+Cluster14
+[u'impress', u'extrem', u'3araba', u'protest', u'reborn', u'ahram']
+(0.59665751321985172, u"RT @SultanAlQassemi: I'm extremely impressed by @ahramonline live coverage of the #Jan25 Egypt protests http://bit.ly/fChyhi via @3araba ...")
+(0.59665751321985172, u"RT @SultanAlQassemi: I'm extremely impressed by @ahramonline live coverage of the #Jan25 Egypt protests http://bit.ly/fChyhi via @3araba ...")
+(0.59665751321985172, u"RT @SultanAlQassemi: I'm extremely impressed by @ahramonline live coverage of the #Jan25 Egypt protests http://bit.ly/fChyhi via @3araba ...")
+(0.25853833605558652, u"I'm extremely impressed by @ahramonline live coverage of the #Jan25 Egypt protests http://bit.ly/fChyhi via @3arabawy Al Ahram is reborn.")
+(0.0084081260894281196, u'RT @Brian_Whit: Al-Masry al-Youm live-streaming Egypt protests #jan25 http://bit.ly/gpWD6N')
+(0.0014747724341790558, u'RT @3arabawy: RT: @Salamander: Protesters broke nahya security cordon #jan25')
+(0.0013263779165702497, u'RT @3arabawy: Protesters are now chanting against the president and the NDP in downtown Cairo, facing NDP HQ http://bit.ly/gn6Ss9 #Jan25')
+(0.0013263779165702497, u'RT @3arabawy: Protesters are now chanting against the president and the NDP in downtown Cairo, facing NDP HQ http://bit.ly/gn6Ss9 #Jan25')
+(0.0012220319844489301, u'RT @asa_wire: Al Jazeera English reporter speaking about the demos on #Egypt streets: "scenes downtown Cairo has not witnessed since the 70s" #Jan25')
+(0.0010068420858439957, u'RT @Ghafari: Left bulak now to mostafa mahmoud #jan25 #cairo #egypt picture of protesters http://yfrog.com/h8ebglkj')
+
+
+***********************************************************
+Cluster15
+[u'young', u'unpreced', u'isn', u'peopl', u'mayb', u'big']
+(0.43956227068542875, u"RT @monaeltahawy: RT @Sandmonkey Families went down with the protesters. This isn't just young people. Unprecedented. #jan25 #Egyptrevolt")
+(0.43956227068542875, u"RT @monaeltahawy: RT @Sandmonkey Families went down with the protesters. This isn't just young people. Unprecedented. #jan25 #Egyptrevolt")
+(0.43956227068542875, u"RT @monaeltahawy: RT @Sandmonkey Families went down with the protesters. This isn't just young people. Unprecedented. #jan25 #Egyptrevolt")
+(0.43956227068542875, u"RT @monaeltahawy: RT @Sandmonkey Families went down with the protesters. This isn't just young people. Unprecedented. #jan25 #Egyptrevolt")
+(0.43956227068542875, u"RT @monaeltahawy: RT @Sandmonkey Families went down with the protesters. This isn't just young people. Unprecedented. #jan25 #Egyptrevolt")
+(0.43956227068542875, u"RT @monaeltahawy: RT @Sandmonkey Families went down with the protesters. This isn't just young people. Unprecedented. #jan25 #Egyptrevolt")
+(0.43956227068542875, u"RT @Sandmonkey Families went down with the protesters. This isn't just young people. Unprecedented. #jan25 #Egyptrevolt")
+(0.43956227068542875, u"RT @Sandmonkey Families went down with the protesters. This isn't just young people. Unprecedented. #jan25 #Egyptrevolt")
+(0.04083628752160829, u"The families went down with the protesters. This isn't just young people. Unprecedented. #jan25")
+(0.04083628752160829, u"The families went down with the protesters. This isn't just young people. Unprecedented. #jan25")
+
+
+***********************************************************
+Cluster16
+[u'behind', u'run', u'leagu', u'arab', u'right', u'build']
+(0.57776378963628738, u"RT @NadiaE: Police running toward Arab League Building. We're right behind them #jan25")
+(0.57776378963628738, u"RT @NadiaE: Police running toward Arab League Building. We're right behind them #jan25")
+(0.17138522413372501, u'RT @simonjhanna: corniche protests passed television building, followed behind by 3 lines of riot police, with security vehicles lingering behind #jan25')
+(0.1443163978929132, u'There are about at least 20 thugs and undercover police waling behind us in shubra heading to dawaran #jan25')
+(0.12805043025802565, u'RT @Gsquare86: There are about at least 20 thugs and undercover police waling behind us in shubra heading to dawaran #jan25')
+(0.01447809183158863, u'RT @monaeltahawy: From @AhmedMorra in #Masnours northern #Egypt: university is empty police is every where in streets #egypt #jan25')
+(0.0099885427029026332, u"RT @monaeltahawy: RT @ashrafkhalil #Jan25 huge crowd chanting 'Batil' (Illegitimate) in front of NDP building on corniche #Cairo")
+(0.0099885427029026332, u"RT @monaeltahawy: RT @ashrafkhalil #Jan25 huge crowd chanting 'Batil' (Illegitimate) in front of NDP building on corniche #Cairo")
+(0.0099885427029026332, u"RT @ashrafkhalil #Jan25 huge crowd chanting 'Batil' (Illegitimate) in front of NDP building on corniche #Cairo")
+(0.0091312327402355044, u'RT @ianinegypt: According to human rights lawyer 12 members of muslim brotherhood arrested and one journalist from ikhwanonline #egypt #jan25')
+
+
+***********************************************************
+Cluster17
+[u'gam3et', u'empow', u'dowal', u'st', u'head', u'el']
+(0.44311774125983516, u'RT: @monasosh: Heading towards gam3et el dowal st, empowered #jan25 #nahya http://yfrog.com/gzljqeuj')
+(0.44311774125983516, u'RT: @monasosh: Heading towards gam3et el dowal st, empowered #jan25 #nahya http://yfrog.com/gzljqeuj')
+(0.44311774125983516, u'RT @monasosh: Heading towards gam3et el dowal st, empowered #jan25 #nahya http://yfrog.com/gzljqeuj')
+(0.44311774125983516, u'RT @monasosh: Heading towards gam3et el dowal st, empowered #jan25 #nahya http://yfrog.com/gzljqeuj')
+(0.44311774125983516, u'RT @maggieosama: RT: @monasosh: Heading towards gam3et el dowal st, empowered #jan25 #nahya http://yfrog.com/gzljqeuj')
+(0.44311774125983516, u'RT @maggieosama: RT: @monasosh: Heading towards gam3et el dowal st, empowered #jan25 #nahya http://yfrog.com/gzljqeuj')
+(0.44311774125983516, u'RT @maggieosama: RT: @monasosh: Heading towards gam3et el dowal st, empowered #jan25 #nahya http://yfrog.com/gzljqeuj')
+(0.44311774125983516, u'RT @maggieosama: RT: @monasosh: Heading towards gam3et el dowal st, empowered #jan25 #nahya http://yfrog.com/gzljqeuj')
+(0.44311774125983516, u'Heading towards gam3et el dowal st, empowered #jan25 #nahya http://yfrog.com/gzljqeuj')
+(0.44311774125983516, u'Heading towards gam3et el dowal st, empowered #jan25 #nahya http://yfrog.com/gzljqeuj')
+
+
+***********************************************************
+Cluster18
+[u'kefaya', u'hold', u'enough', u'man', u'line', u'front']
+(0.28081775592429897, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj')
+(0.28081775592429897, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj')
+(0.28081775592429897, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj')
+(0.28081775592429897, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj')
+(0.28081775592429897, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj')
+(0.28081775592429897, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj')
+(0.28081775592429897, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj')
+(0.28081775592429897, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj')
+(0.28081775592429897, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj')
+(0.28081775592429897, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj')
+
+
+***********************************************************
+Cluster19
+[u'scene', u'riyad', u'rams', u'munim', u'midan', u'marcher']
+(0.65323974671268947, u'RT @hackneylad: Incredible scenes in Ramses St - marchers breaking through police lines and heading towards midan abdel munim riyad #jan25')
+(0.65323974671268947, u'RT @hackneylad: Incredible scenes in Ramses St - marchers breaking through police lines and heading towards midan abdel munim riyad #jan25')
+(0.15378279682068793, u'RT @asa_wire: Al Jazeera English reporter speaking about the demos on #Egypt streets: "scenes downtown Cairo has not witnessed since the 70s" #Jan25')
+(0.11456345647449571, u'Amazing scene at Mostafa Mahmoud. Thousands marching with Egypt flag. #Jan25')
+(0.090993606994069817, u'RT @3arabawy: Protesters have taken over the nile corniche, http://english.ahram.org.eg/News/4773.aspx heading to 15 May bridge #Jan25')
+(0.090993606994069817, u'RT @3arabawy: Protesters have taken over the nile corniche, http://english.ahram.org.eg/News/4773.aspx heading to 15 May bridge #Jan25')
+(0.090993606994069817, u'RT @3arabawy: Protesters have taken over the nile corniche, http://english.ahram.org.eg/News/4773.aspx heading to 15 May bridge #Jan25')
+(0.045441157761987171, u'There are about at least 20 thugs and undercover police waling behind us in shubra heading to dawaran #jan25')
+(0.044021088707362641, u'From the NDP head quarter to Maspero. a large protest reminds me of Copts protest after Alexandria bombing. #Jan25')
+(0.039657153397339419, u'RT @Gsquare86: There are about at least 20 thugs and undercover police waling behind us in shubra heading to dawaran #jan25')
+
+
+***********************************************************
+Cluster20
+[u'left', u'bulak', u'mostafa', u'mahmoud', u'pictur', u'protest']
+(0.5827286987527871, u'Left bulak now to mostafa mahmoud #jan25 http://yfrog.com/h8ebglkj')
+(0.5827286987527871, u'Left bulak now to mostafa mahmoud #jan25 http://yfrog.com/h8ebglkj')
+(0.40481065018694101, u'RT @Ghafari: Left bulak now to mostafa mahmoud #jan25 #cairo #egypt picture of protesters http://yfrog.com/h8ebglkj')
+(0.40481065018694101, u'RT @Ghafari: Left bulak now to mostafa mahmoud #jan25 #cairo #egypt picture of protesters http://yfrog.com/h8ebglkj')
+(0.0059366321699306735, u'RT @Janeinthesky: RT @EANewsFeed: #Egypt Latest: Picture of protester gving flower 2 policeman http://tinyurl.com/63e5r8h #sidibouzid #Jan25')
+(0.005462795006103153, u'#Egypt Latest: Picture of protester giving flower to policeman http://tinyurl.com/63e5r8h #sidibouzid #Jan25')
+(0.00027312742895018675, u'RT @Ssirgany: RT @Ghafari: Protests in boulak coming from mostafa mahmoud #jan25 http://yfrog.com/h8wliaj')
+(0.00018400180437763637, u'From the NDP head quarter to Maspero. a large protest reminds me of Copts protest after Alexandria bombing. #Jan25')
+(0.0001125161703213639, u'RT @ehsankooheji: Smart move by #Egypt #jan25 protesters, venues announced were fake. Using social media now to divert. Police in wrong areas, slow to follow')
+(0.00010594128875797988, u'Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25')
+
+
+***********************************************************
+Cluster21
+[u'cordon', u'time', u'histori', u'first', u'broken', u'larg']
+(0.49305689558956844, u"Very large crowd in Mohandesin Police cordon is broken and police is now surrounded by protesters for first time in Egypt's history #jan25")
+(0.49305689558956844, u"RT @Alshaheeed: Very large crowd in Mohandesin Police cordon is broken and police is now surrounded by protesters for first time in Egypt's history #jan25")
+(0.49305689558956844, u"RT @Alshaheeed: Very large crowd in Mohandesin Police cordon is broken and police is now surrounded by protesters for first time in Egypt's history #jan25")
+(0.49305689558956844, u"RT @Alshaheeed: Very large crowd in Mohandesin Police cordon is broken and police is now surrounded by protesters for first time in Egypt's history #jan25")
+(0.49305689558956844, u"RT @Alshaheeed: Very large crowd in Mohandesin Police cordon is broken and police is now surrounded by protesters for first time in Egypt's history #jan25")
+(0.13034407964925054, u'RT @3arabawy: RT: @Salamander: Protesters broke nahya security cordon #jan25')
+(0.083962121421521124, u'From the NDP head quarter to Maspero. a large protest reminds me of Copts protest after Alexandria bombing. #Jan25')
+(0.083548669940240128, u"RT @monaeltahawy: RT @ashrafkhalil #Jan25 huge crowd chanting 'Batil' (Illegitimate) in front of NDP building on corniche #Cairo")
+(0.083548669940240128, u"RT @monaeltahawy: RT @ashrafkhalil #Jan25 huge crowd chanting 'Batil' (Illegitimate) in front of NDP building on corniche #Cairo")
+(0.083548669940240128, u"RT @ashrafkhalil #Jan25 huge crowd chanting 'Batil' (Illegitimate) in front of NDP building on corniche #Cairo")
+
+
+***********************************************************
+Cluster22
+[u'tahrir', u'two', u'merg', u'protest', u'back', u'suprem']
+(0.70642290471873026, u'RT @arwasm: Two protests merging in tahrir #jan25')
+(0.70642290471873026, u'RT @arwasm: Two protests merging in tahrir #jan25')
+(0.12525958508367513, u'RT @ianinegypt: Protesters moving back towards Supreme court. Possible circling back to tahrir. Numbers are growing. #jan25 #egypt')
+(0.12525958508367513, u'Protesters moving back towards Supreme court. Possible circling back to tahrir. Numbers are growing. #jan25 #egypt')
+(0.022340740052529517, u'RT @Jew4palestine: RT @arwasm: Two protests merging #jan25 http://yfrog.com/h48mdhj')
+(0.022340740052529517, u'RT @Jew4palestine: RT @arwasm: Two protests merging #jan25 http://yfrog.com/h48mdhj')
+(0.0020212904805792897, u'RT @ehsankooheji: Smart move by #Egypt #jan25 protesters, venues announced were fake. Using social media now to divert. Police in wrong areas, slow to follow')
+(0.00074873253419385321, u'RT @hackneylad: Protesters stopped outside television building on the nile, sitting down in the street - police look uncertain #jan25')
+(0.00074873253419385321, u'RT @hackneylad: Protesters stopped outside television building on the nile, sitting down in the street - police look uncertain #jan25')
+(0.00074873253419385321, u'RT @hackneylad: Protesters stopped outside television building on the nile, sitting down in the street - police look uncertain #jan25')
+
+
+***********************************************************
+Cluster23
+[u'versu', u'riot', u'one', u'man', u'polic', u'behind']
+(0.56355636263790632, u'RT @Brian_Whit: One man versus the riot police, Cairo #jan25 http://twitpic.com/3t95uj')
+(0.56355636263790632, u'One man versus the riot police, Cairo #jan25 http://twitpic.com/3t95uj')
+(0.56355636263790632, u'One man versus the riot police, Cairo #jan25 http://twitpic.com/3t95uj')
+(0.070211668637809463, u'RT @simonjhanna: corniche protests passed television building, followed behind by 3 lines of riot police, with security vehicles lingering behind #jan25')
+(0.0094863950688139423, u'RT @monaeltahawy: From @AhmedMorra in #Masnours northern #Egypt: university is empty police is every where in streets #egypt #jan25')
+(0.0054981740314612448, u'RT @ehsankooheji: Smart move by #Egypt #jan25 protesters, venues announced were fake. Using social media now to divert. Police in wrong areas, slow to follow')
+(0.0052191289520332031, u'Man holds up Kefaya - "enough" in front of police l... on Twitpic - http://goo.gl/SbJ1s  #Jan25')
+(0.0052191289520332031, u'Man holds up Kefaya - "enough" in front of police l... on Twitpic - http://goo.gl/SbJ1s  #Jan25')
+(0.0044016116246236043, u'RT @hackneylad: Protesters stopped outside television building on the nile, sitting down in the street - police look uncertain #jan25')
+(0.0044016116246236043, u'RT @hackneylad: Protesters stopped outside television building on the nile, sitting down in the street - police look uncertain #jan25')
+
+
+***********************************************************
+Cluster24
+[u'went', u'famili', u'young', u'unpreced', u'isn', u'peopl']
+(0.35440285307533836, u"The families went down with the protesters. This isn't just young people. Unprecedented. #jan25")
+(0.35440285307533836, u"The families went down with the protesters. This isn't just young people. Unprecedented. #jan25")
+(0.35440285307533836, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25")
+(0.35440285307533836, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25")
+(0.35440285307533836, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25")
+(0.35440285307533836, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25")
+(0.35440285307533836, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25")
+(0.35440285307533836, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25")
+(0.35440285307533836, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25")
+(0.35440285307533836, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25")
+
+
+***********************************************************
+Cluster25
+[u'unemploy', u'set', u'poverti', u'fire', u'desper', u'corrupt']
+(0.40124714507123954, u'RT @monaeltahawy: In past 8 days at least 12 #Egyptians set themselves on fire out of desperation: unemployment, poverty, corruption. #Jan25 #Egypt protest')
+(0.40124714507123954, u'RT @monaeltahawy: In past 8 days at least 12 #Egyptians set themselves on fire out of desperation: unemployment, poverty, corruption. #Jan25 #Egypt protest')
+(0.40124714507123954, u'RT @monaeltahawy: In past 8 days at least 12 #Egyptians set themselves on fire out of desperation: unemployment, poverty, corruption. #Jan25 #Egypt protest')
+(0.40124714507123954, u'RT @monaeltahawy: In past 8 days at least 12 #Egyptians set themselves on fire out of desperation: unemployment, poverty, corruption. #Jan25 #Egypt protest')
+(0.40124714507123954, u'RT @monaeltahawy: In past 8 days at least 12 #Egyptians set themselves on fire out of desperation: unemployment, poverty, corruption. #Jan25 #Egypt protest')
+(0.40124714507123954, u'RT @monaeltahawy: In past 8 days at least 12 #Egyptians set themselves on fire out of desperation: unemployment, poverty, corruption. #Jan25 #Egypt protest')
+(0.054985892345086475, u'RT @guardian_world: #Egypt braced for "day of revolution". Democracy activists, Islamists, workers & football fans demand reform http://t.co/U6F2smu #jan25')
+(0.043975470856673637, u'There are about at least 20 thugs and undercover police waling behind us in shubra heading to dawaran #jan25')
+(0.039145701962988021, u'RT @Gsquare86: There are about at least 20 thugs and undercover police waling behind us in shubra heading to dawaran #jan25')
+(0.025682538957993477, u"RT @hackneylad: Protesters marching past min of foreign affairs chanting 'Tunis' and revelling in their control of the street #jan25")
+
+
+***********************************************************
+Cluster26
+[u'televis', u'build', u'march', u'demo', u'uncertain', u'sit']
+(0.43356272359355791, u'RT @NadiaE: demo marches to television building #jan25')
+(0.43356272359355791, u'RT @NadiaE: demo marches to television building #jan25')
+(0.43356272359355791, u'RT @NadiaE: demo marches to television building #jan25')
+(0.13357240513020111, u'RT @hackneylad: Protesters stopped outside television building on the nile, sitting down in the street - police look uncertain #jan25')
+(0.13357240513020111, u'RT @hackneylad: Protesters stopped outside television building on the nile, sitting down in the street - police look uncertain #jan25')
+(0.13357240513020111, u'RT @hackneylad: Protesters stopped outside television building on the nile, sitting down in the street - police look uncertain #jan25')
+(0.13357240513020111, u'Protesters stopped outside television building on the nile, sitting down in the street - police look uncertain #jan25')
+(0.058916084884594967, u'RT @simonjhanna: corniche protests passed television building, followed behind by 3 lines of riot police, with security vehicles lingering behind #jan25')
+(0.046894211688800799, u'Amazing scene at Mostafa Mahmoud. Thousands marching with Egypt flag. #Jan25')
+(0.039304387777550465, u'RT @NadiaE: Big demo downtown Cairo. Maybe 300 people and 3x as many police #jan25')
+
+
+***********************************************************
+Cluster27
+[u'opera', u'hous', u'pictur', u'real', u'amaz', u'bridg']
+(0.35085546614767199, u"RT @monaeltahawy: Amazing pictures of protesters bridge towards Opera House, #Cairo RT @arwasm It's real #jan25 http://yfrog.com/h4v7yyj")
+(0.35085546614767199, u"RT @monaeltahawy: Amazing pictures of protesters bridge towards Opera House, #Cairo RT @arwasm It's real #jan25 http://yfrog.com/h4v7yyj")
+(0.35085546614767199, u"RT @monaeltahawy: Amazing pictures of protesters bridge towards Opera House, #Cairo RT @arwasm It's real #jan25 http://yfrog.com/h4v7yyj")
+(0.35085546614767199, u"RT @monaeltahawy: Amazing pictures of protesters bridge towards Opera House, #Cairo RT @arwasm It's real #jan25 http://yfrog.com/h4v7yyj")
+(0.35085546614767199, u"RT @monaeltahawy: Amazing pictures of protesters bridge towards Opera House, #Cairo RT @arwasm It's real #jan25 http://yfrog.com/h4v7yyj")
+(0.35085546614767199, u"RT @monaeltahawy: Amazing pictures of protesters bridge towards Opera House, #Cairo RT @arwasm It's real #jan25 http://yfrog.com/h4v7yyj")
+(0.29093737457593322, u'#Egypt Latest: Picture of protest outside Cairo Opera House http://tinyurl.com/63e5r8h  #sidibouzid #Jan25')
+(0.29093737457593322, u'#Egypt Latest: Picture of protest outside Cairo Opera House http://tinyurl.com/63e5r8h  #sidibouzid #Jan25')
+(0.048948925753985323, u'RT @Janeinthesky: RT @EANewsFeed: #Egypt Latest: Picture of protester gving flower 2 policeman http://tinyurl.com/63e5r8h #sidibouzid #Jan25')
+(0.047589300796455722, u'RT @Ghafari: Left bulak now to mostafa mahmoud #jan25 #cairo #egypt picture of protesters http://yfrog.com/h8ebglkj')
+
+
+***********************************************************
+Cluster28
+[u'pro', u'democraci', u'demo', u'start', u'worker', u'revolut']
+(0.56942394322199585, u'RT @Dima_Khatib: Pro democracy demos have started in #Egypt  #Jan25 #sidibouzid')
+(0.56942394322199585, u'RT @Dima_Khatib: Pro democracy demos have started in #Egypt  #Jan25 #sidibouzid')
+(0.56942394322199585, u'RT @Dima_Khatib: Pro democracy demos have started in #Egypt  #Jan25 #sidibouzid')
+(0.081755266447348304, u'RT @guardian_world: #Egypt braced for "day of revolution". Democracy activists, Islamists, workers & football fans demand reform http://t.co/U6F2smu #jan25')
+(0.014619504753512336, u'Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25')
+(0.014619504753512336, u'Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25')
+(0.013405621205276918, u'RT @NadiaE: Big demo downtown Cairo. Maybe 300 people and 3x as many police #jan25')
+(0.013405621205276918, u'RT @NadiaE: Big demo downtown Cairo. Maybe 300 people and 3x as many police #jan25')
+(0.010098244835721351, u'RT @NadiaE: demo marches to television building #jan25')
+(0.010098244835721351, u'RT @NadiaE: demo marches to television building #jan25')
+
+
+***********************************************************
+Cluster29
+[u'sha3b', u'el', u'etzal', u'ethan', u'peak', u'kalam']
+(0.63844255965122598, u'RT @Gsquare86: Shubra ..el sha3b ethan el sha3b etzal #jan25 http://yfrog.com/h5tqmadj')
+(0.42501432239581105, u'RT @MhmdAliMhmd: The peak of game3t el dowal protests #jan25 #egypt!!! Sha3b ay kalam :( http://twitpic.com/3t93ql')
+(0.035740872115501268, u'RT @Ekramibrahim: Demonstrations started in Dakahlia, Sharkia, Menoufia, Assiut, Kafr El Sheikh, North Sinai, Qena, Ismailia and Cairo. #jan25')
+(0.035740872115501268, u'RT @Ekramibrahim: Demonstrations started in Dakahlia, Sharkia, Menoufia, Assiut, Kafr El Sheikh, North Sinai, Qena, Ismailia and Cairo. #jan25')
+(0.0093238872561733632, u'RT: @Gsquare86: Marching side streets in shubra gathering people as we go ..growing every second #jan25 http://yfrog.com/h5y4voj')
+(0.0093238872561733632, u'RT @Gsquare86: Marching side streets in shubra gathering people as we go ..growing every second #jan25 http://yfrog.com/h5y4voj')
+(0.0044708664522083979, u'RT @Gsquare86 Marching side streets in #shubra (#Cairo) gathering people as we go ..growing every second #jan25 http://yfrog.com/h5y4voj')
+(0.0044708664522083979, u'RT @Gsquare86 Marching side streets in #shubra (#Cairo) gathering people as we go ..growing every second #jan25 http://yfrog.com/h5y4voj')
+(0.0041350678643958198, u'RT @3arabawy: Shubra protesters are chanting "down with Mubarak". others r now in front of foreign ministry in downtown Cairo #Jan25 http://bit.ly/gn6Ss9')
+(0.0041350678643958198, u'RT @3arabawy: Shubra protesters are chanting "down with Mubarak". others r now in front of foreign ministry in downtown Cairo #Jan25 http://bit.ly/gn6Ss9')
+
+
+***********************************************************
+Cluster30
+[u'tuni', u'nile', u'chant', u'!"', u'cornich', u'revel']
+(0.55481519219118203, u'Protesters on the Nile Cornich are chanting "Tunis! Tunis!"  http://english.ahram.org.eg/News/4773.aspx #Jan25 #Egypt')
+(0.55481519219118203, u'Protesters on the Nile Cornich are chanting "Tunis! Tunis!"  http://english.ahram.org.eg/News/4773.aspx #Jan25 #Egypt')
+(0.28841514800110291, u"RT @hackneylad: Protesters marching past min of foreign affairs chanting 'Tunis' and revelling in their control of the street #jan25")
+(0.28841514800110291, u"RT @hackneylad: Protesters marching past min of foreign affairs chanting 'Tunis' and revelling in their control of the street #jan25")
+(0.28841514800110291, u"Protesters marching past min of foreign affairs chanting 'Tunis' and revelling in their control of the street #jan25")
+(0.28841514800110291, u"Protesters marching past min of foreign affairs chanting 'Tunis' and revelling in their control of the street #jan25")
+(0.16183542441661347, u'RT @3arabawy: Protesters have taken over the nile corniche, http://english.ahram.org.eg/News/4773.aspx heading to 15 May bridge #Jan25')
+(0.16183542441661347, u'RT @3arabawy: Protesters have taken over the nile corniche, http://english.ahram.org.eg/News/4773.aspx heading to 15 May bridge #Jan25')
+(0.16183542441661347, u'RT @3arabawy: Protesters have taken over the nile corniche, http://english.ahram.org.eg/News/4773.aspx heading to 15 May bridge #Jan25')
+(0.11721197091858775, u'RT @hackneylad: Protesters stopped outside television building on the nile, sitting down in the street - police look uncertain #jan25')
+
+
+***********************************************************
+Cluster31
+[u'mani', u'demonstr', u'alreadi', u'start', u'mayb', u'big']
+(0.74887335759964868, u'RT @livinginCairo: Demonstrations have already started in many places of Cairo #Jan25')
+(0.36476246124225059, u'RT @Ekramibrahim: Demonstrations started in Dakahlia, Sharkia, Menoufia, Assiut, Kafr El Sheikh, North Sinai, Qena, Ismailia and Cairo. #jan25')
+(0.36476246124225059, u'RT @Ekramibrahim: Demonstrations started in Dakahlia, Sharkia, Menoufia, Assiut, Kafr El Sheikh, North Sinai, Qena, Ismailia and Cairo. #jan25')
+(0.29396115632749431, u'RT @NadiaE: Big demo downtown Cairo. Maybe 300 people and 3x as many police #jan25')
+(0.29396115632749431, u'RT @NadiaE: Big demo downtown Cairo. Maybe 300 people and 3x as many police #jan25')
+(0.034065708824299587, u'RT @3arabawy: Protesters are now chanting against the president and the NDP in downtown Cairo, facing NDP HQ http://bit.ly/gn6Ss9 #Jan25')
+(0.034065708824299587, u'RT @3arabawy: Protesters are now chanting against the president and the NDP in downtown Cairo, facing NDP HQ http://bit.ly/gn6Ss9 #Jan25')
+(0.030668510416608882, u'RT @asa_wire: Al Jazeera English reporter speaking about the demos on #Egypt streets: "scenes downtown Cairo has not witnessed since the 70s" #Jan25')
+(0.0099804757416763704, u'Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25')
+(0.0099804757416763704, u'Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25')
+
+
+***********************************************************
+Cluster32
+[u'alexandria', u'aspx', u'start', u'3arabawi', u'protest', u'remind']
+(0.53773680988968087, u'Protests have started in Alexandria http://english.ahram.org.eg/News/4773.aspx #Jan25')
+(0.53773680988968087, u'Protests have started in Alexandria http://english.ahram.org.eg/News/4773.aspx #Jan25')
+(0.41879747889277991, u'RT @3arabawy: Protests have started in Alexandria http://english.ahram.org.eg/News/4773.aspx #Jan25')
+(0.41879747889277991, u'RT @3arabawy: Protests have started in Alexandria http://english.ahram.org.eg/News/4773.aspx #Jan25')
+(0.41879747889277991, u'RT @3arabawy: Protests have started in Alexandria http://english.ahram.org.eg/News/4773.aspx #Jan25')
+(0.1513812759399589, u'From the NDP head quarter to Maspero. a large protest reminds me of Copts protest after Alexandria bombing. #Jan25')
+(0.029335296791789912, u'Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25')
+(0.029335296791789912, u'Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25')
+(0.018152626988693937, u'Protesters on the Nile Cornich are chanting "Tunis! Tunis!"  http://english.ahram.org.eg/News/4773.aspx #Jan25 #Egypt')
+(0.018152626988693937, u'Protesters on the Nile Cornich are chanting "Tunis! Tunis!"  http://english.ahram.org.eg/News/4773.aspx #Jan25 #Egypt')
+
+
+***********************************************************
+Cluster33
+[u'today', u'special', u'footag', u'live', u'protest', u'al']
+(0.45956923863407645, u"RT @EANewsFeed: #Egypt Special: Live Footage of Today's Protests http://tinyurl.com/63wfw3l #sidibouzid #Jan25")
+(0.45956923863407645, u"RT @EANewsFeed: #Egypt Special: Live Footage of Today's Protests http://tinyurl.com/63wfw3l #sidibouzid #Jan25")
+(0.45956923863407645, u"#Egypt Special: Live Footage of Today's Protests http://tinyurl.com/63wfw3l #sidibouzid #Jan25")
+(0.45956923863407645, u"#Egypt Special: Live Footage of Today's Protests http://tinyurl.com/63wfw3l #sidibouzid #Jan25")
+(0.094178849154973751, u'RT @Brian_Whit: Al-Masry al-Youm live-streaming Egypt protests #jan25 http://bit.ly/gpWD6N')
+(0.00084160652075475221, u'From the NDP head quarter to Maspero. a large protest reminds me of Copts protest after Alexandria bombing. #Jan25')
+(0.00081393911034947735, u'RT @Ghafari: Left bulak now to mostafa mahmoud #jan25 #cairo #egypt picture of protesters http://yfrog.com/h8ebglkj')
+(0.00081393911034947735, u'RT @Ghafari: Left bulak now to mostafa mahmoud #jan25 #cairo #egypt picture of protesters http://yfrog.com/h8ebglkj')
+(0.000795899719651175, u"I'm extremely impressed by @ahramonline live coverage of the #Jan25 Egypt protests http://bit.ly/fChyhi via @3arabawy Al Ahram is reborn.")
+(0.00076065620171453545, u'RT @MhmdAliMhmd: The peak of game3t el dowal protests #jan25 #egypt!!! Sha3b ay kalam :( http://twitpic.com/3t93ql')
+
+
+***********************************************************
+Cluster34
+[u'muslim', u'member', u'journalist', u'ikhwanonlin', u'brotherhood', u'arrest']
+(0.4281517004231043, u'RT @ianinegypt Acc to human rights lawyer 12 members of muslim brotherhood arrested and one journalist from ikhwanonline #egypt #jan25')
+(0.40781357958450709, u'RT @ianinegypt: According to human rights lawyer 12 members of muslim brotherhood arrested and one journalist from ikhwanonline #egypt #jan25')
+(0.40781357958450709, u'RT @ianinegypt: According to human rights lawyer 12 members of muslim brotherhood arrested and one journalist from ikhwanonline #egypt #jan25')
+(0.40781357958450709, u'RT @ianinegypt: According to human rights lawyer 12 members of muslim brotherhood arrested and one journalist from ikhwanonline #egypt #jan25')
+(0.40781357958450709, u'According to human rights lawyer 12 members of muslim brotherhood arrested and one journalist from ikhwanonline #egypt #jan25')
+(0.40781357958450709, u'According to human rights lawyer 12 members of muslim brotherhood arrested and one journalist from ikhwanonline #egypt #jan25')
+(0.0029240984712690754, u"RT @NadiaE: Police running toward Arab League Building. We're right behind them #jan25")
+(0.0029240984712690754, u"RT @NadiaE: Police running toward Arab League Building. We're right behind them #jan25")
+(0.001719695978238302, u'RT @Brian_Whit: One man versus the riot police, Cairo #jan25 http://twitpic.com/3t95uj')
+(0.001719695978238302, u'One man versus the riot police, Cairo #jan25 http://twitpic.com/3t95uj')
+
+
+***********************************************************
+Cluster35
+[u'street', u'everi', u'side', u'second', u'go', u'grow']
+(0.36537512392256394, u'RT @Gsquare86 Marching side streets in #shubra (#Cairo) gathering people as we go ..growing every second #jan25 http://yfrog.com/h5y4voj')
+(0.36537512392256394, u'RT @Gsquare86 Marching side streets in #shubra (#Cairo) gathering people as we go ..growing every second #jan25 http://yfrog.com/h5y4voj')
+(0.34982663512715206, u'RT @monaeltahawy: From @AhmedMorra in #Masnours northern #Egypt: university is empty police is every where in streets #egypt #jan25')
+(0.33497207465563761, u'RT: @Gsquare86: Marching side streets in shubra gathering people as we go ..growing every second #jan25 http://yfrog.com/h5y4voj')
+(0.33497207465563761, u'RT @Gsquare86: Marching side streets in shubra gathering people as we go ..growing every second #jan25 http://yfrog.com/h5y4voj')
+(0.32991674902963131, u'RT @monasosh: This is great, we r in nahya street, ppl r walking by our side #jan25')
+(0.066801020908815248, u"RT @hackneylad: Protesters marching past min of foreign affairs chanting 'Tunis' and revelling in their control of the street #jan25")
+(0.066801020908815248, u"RT @hackneylad: Protesters marching past min of foreign affairs chanting 'Tunis' and revelling in their control of the street #jan25")
+(0.066801020908815248, u"Protesters marching past min of foreign affairs chanting 'Tunis' and revelling in their control of the street #jan25")
+(0.066801020908815248, u"Protesters marching past min of foreign affairs chanting 'Tunis' and revelling in their control of the street #jan25")
+
+
+***********************************************************
+Cluster36
+[u'hundr', u'everyon', u'elhekma', u'allow', u'come', u'secur']
+(0.40113109007448799, u'RT @Ghonim: Everyone come to  Dar ElHekma security police allow people to join us and we are few hundreds #Jan25')
+(0.40113109007448799, u'RT @Ghonim: Everyone come to  Dar ElHekma security police allow people to join us and we are few hundreds #Jan25')
+(0.40113109007448799, u'RT @Ghonim: Everyone come to  Dar ElHekma security police allow people to join us and we are few hundreds #Jan25')
+(0.40113109007448799, u'RT @Ghonim: Everyone come to  Dar ElHekma security police allow people to join us and we are few hundreds #Jan25')
+(0.40113109007448799, u'Everyone come to  Dar ElHekma security police allow people to join us and we are few hundreds #Jan25')
+(0.40113109007448799, u'Everyone come to  Dar ElHekma security police allow people to join us and we are few hundreds #Jan25')
+(0.025513301108724094, u'RT @simonjhanna: corniche protests passed television building, followed behind by 3 lines of riot police, with security vehicles lingering behind #jan25')
+(0.023922981504461583, u'RT @3arabawy: RT: @Salamander: Protesters broke nahya security cordon #jan25')
+(0.015348338295845466, u'There are about at least 20 thugs and undercover police waling behind us in shubra heading to dawaran #jan25')
+(0.013474653019873755, u'RT @NadiaE: Big demo downtown Cairo. Maybe 300 people and 3x as many police #jan25')
+
+
+***********************************************************
+Cluster37
+[u'skynew', u'mubarak', u'thousand', u'protest', u'other', u'".']
+(0.6612089803932697, u'RT @AnonymousIRC: SkyNews: Egypt - Thousands to Protest Against Mubarak. http://is.gd/rdqack #OpTunisia #OpEgypt #OpAlgeria #SidiBouzid #Jan25')
+(0.6612089803932697, u'RT @AnonymousIRC: SkyNews: Egypt - Thousands to Protest Against Mubarak. http://is.gd/rdqack #OpTunisia #OpEgypt #OpAlgeria #SidiBouzid #Jan25')
+(0.094273534298988687, u'RT @3arabawy: Shubra protesters are chanting "down with Mubarak". others r now in front of foreign ministry in downtown Cairo #Jan25 http://bit.ly/gn6Ss9')
+(0.094273534298988687, u'RT @3arabawy: Shubra protesters are chanting "down with Mubarak". others r now in front of foreign ministry in downtown Cairo #Jan25 http://bit.ly/gn6Ss9')
+(0.049393959001884653, u'Amazing scene at Mostafa Mahmoud. Thousands marching with Egypt flag. #Jan25')
+(0.004844975220803102, u'RT @guardian_world: #Egypt braced for "day of revolution". Democracy activists, Islamists, workers & football fans demand reform http://t.co/U6F2smu #jan25')
+(0.0025817054964094245, u'RT @AmiraMoslimany: Mohandesin protest is now in thousands officially http://on.fb.me/8Z50YF #Jan25 #Egypt #EgyRevol')
+(0.0025817054964094245, u'RT @AmiraMoslimany: Mohandesin protest is now in thousands officially http://on.fb.me/8Z50YF #Jan25 #Egypt #EgyRevol')
+(0.0025817054964094245, u'RT @Alshaheeed: Mohandesin protest is now in thousands officially http://on.fb.me/8Z50YF #Jan25 #Egypt #EgyRevol')
+(0.0025817054964094245, u'RT @Alshaheeed: Mohandesin protest is now in thousands officially http://on.fb.me/8Z50YF #Jan25 #Egypt #EgyRevol')
+
+
+***********************************************************
+Cluster38
+[u'tactic', u'small', u'seri', u'rel', u'lot', u'harder']
+(0.17395276475782506, u"What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25")
+(0.17395276475782506, u"RT @Brian_Whit: What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25")
+(0.17395276475782506, u"RT @Brian_Whit: What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25")
+(0.17395276475782506, u"RT @Brian_Whit: What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25")
+(0.17395276475782506, u"RT @Brian_Whit: What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25")
+(0.17395276475782506, u"RT @Brian_Whit: What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25")
+(0.17395276475782506, u"RT @Brian_Whit: What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25")
+(0.17395276475782506, u"RT @Brian_Whit: What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25")
+(0.17395276475782506, u"RT @Brian_Whit: What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25")
+(0.17395276475782506, u"RT @Brian_Whit: What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25")
+

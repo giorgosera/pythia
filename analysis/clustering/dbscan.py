@@ -15,6 +15,19 @@ class DBSCANClusterer(AbstractClusterer):
     ACKNOWLEDGMENT: The code is adapted from https://github.com/jessykate/DBScan
                     which provides a robust implementation of the algorithm.
     '''        
+    def __init__(self, epsilon=0.02, min_pts=2, distance=euclidean, debug=False, test_mode=False):
+        """
+        Constructor for DBSCAN clusterer.
+        """
+        super(DBSCANClusterer, self).__init__(filter_terms=False)#Force filter terms to be false cz not yet supported
+        self.epsilon=epsilon        
+        self.min_pts = min_pts
+        self.distance = distance
+        self.debug = debug
+        
+        #A horrible hack to allow tests for DBSCAN to provide a custom document dict
+        self.test_mode = test_mode
+    
     def _as_points(self, points):
         ''' convert a list of list- or array-type objects to internal
         Point class'''
@@ -123,7 +136,7 @@ class DBSCANClusterer(AbstractClusterer):
         # in the clusters back to regular lists
         return self.as_lists(clusters)
     
-    def run(self, epsilon, min_pts, distance=euclidean, debug=False, pca=False, post_process=False):
+    def run(self, pca=False, post_process=False):
         '''
         Runs the DBSCAN algorithm.
         '''
@@ -131,8 +144,9 @@ class DBSCANClusterer(AbstractClusterer):
         if self.clusters != []:
             self.clusters = []
             
-        if self.td_matrix == None:
+        if not self.test_mode:
             self.construct_term_doc_matrix(pca=pca)
+        
         #Ugly code to transform a numpy array to a list
         matrix = []
         for row_index, doc_id in enumerate(self.document_dict.keys()):
@@ -140,10 +154,6 @@ class DBSCANClusterer(AbstractClusterer):
             matrix.append( (list(self.td_matrix[row_index]), doc_id) )
                 
         self.points = matrix
-        self.epsilon = epsilon
-        self.min_pts = min_pts
-        self.distance = distance
-        self.debug = debug
         clusters = self.dbscan()
         self.split_documents(clusters)
         if post_process:

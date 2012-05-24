@@ -61,6 +61,7 @@ def euclidean(x,y):
     # sqrt((x0-y0)^2 + ... (xN-yN)^2)
     assert len(x) == len(y)
     sum = 0.0
-    for i in xrange(len(x)):
-        sum += pow(x[i] - y[i],2)
+    length_x = len(x)
+    for i in xrange(length_x):
+        sum += (x[i] - y[i])*(x[i] - y[i])
     return sqrt(sum)

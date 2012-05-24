@@ -29,7 +29,7 @@ points.append([9.9,11.4])
 points.append([15.0, 17.0])
 points.append([15.0, 17.0])
 points.append([7.5, -5.0])
-dbscan = DBSCANClusterer()
+dbscan = DBSCANClusterer(epsilon=epsilon, min_pts=min_pts, test_mode=True)
 #Small hacks..in normal usage never set td_matrix by urself 
 #and never populate a dummy document_dict
 dbscan.td_matrix = points  
@@ -39,7 +39,7 @@ dbscan.document_dict = OrderedDict( [('0','dummy'), ('1', 'dummy'), ('2', 'dummy
 class Test_Dbscan_clustering(unittest.TestCase):
 
     def test_dbscan_cluster(self):
-        clusters = dbscan.run(epsilon, min_pts)
+        clusters = dbscan.run()
         print '\n========== Results of Clustering ============='
         for cluster, members in clusters.iteritems():
             print '\n--------Cluster %d---------' % cluster
@@ -52,7 +52,7 @@ class Test_Dbscan_clustering(unittest.TestCase):
         self.assertEqual(expected, clusters)
 
     def test_split_documents(self):
-        clusters = dbscan.run(epsilon, min_pts)
+        clusters = dbscan.run()
         expected = [OrderedDict([('0', 'dummy'), ('1', 'dummy'), ('2', 'dummy'), ('3', 'dummy'), ('4', 'dummy'), ('5', 'dummy'), ('6', 'dummy')]), OrderedDict([('7', 'dummy'), ('8', 'dummy'), ('9', 'dummy'), ('10', 'dummy')]), OrderedDict([('11', 'dummy'), ('12', 'dummy'), ('13', 'dummy')])]
         self.assertEqual(expected, [cluster.document_dict for cluster in dbscan.clusters])
     

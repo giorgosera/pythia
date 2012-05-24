@@ -39,12 +39,22 @@ top_clusters = sorted(top_clusters, key=lambda x: x[1])
 for i, cluster in enumerate(top_clusters):
     cluster_struct = cluster[2]
     cluster_struct.analyse()
+    summary = cluster_struct.summarize()[:5]
+    summ_docs = []
+    for doc in summary:
+        if len(doc.raw) > 50:
+            doc.raw = doc.raw[:50] + '\n' + doc.raw[51:]
+            
+        summ_docs.append(doc.raw)
+    docs =  list(set(summ_docs))
+    print len(docs)
     meta.append({"title":"event"+str(i), 
                  "date":cluster[1].strftime('%Y-%m-%d %H:%M:%S'), 
                  "keywords":cluster_struct.get_most_frequent_terms(N=9),
                  "authors": len(cluster_struct.get_authors()),
                  "locations": cluster_struct.get_locations(),
-                 "namedEntities": cluster_struct.get_persons()})
+                 "namedEntities": cluster_struct.get_persons(),
+                 "topTweets": docs})
 
 data = [[doc.date for doc in items]]
 

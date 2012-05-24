@@ -40,15 +40,15 @@ class TestClusteringEvaluationClass(unittest.TestCase):
         self.assertAlmostEqual(0.555555555556 - recall, 0, places=7)
         self.assertAlmostEqual(0.543735224586 - f, 0, places=7)
 
-class TestClassificationEvaluationClass(unittest.TestCase):
-
-    def test_dataset_split(self):
-        X = [i for i in xrange(97)]
-        ce = ClassificationEvaluator(X) 
-        ce.evaluate(K=10)
-        #TODO put a self assert
-        
-        
+#===============================================================================
+# class TestClassificationEvaluationClass(unittest.TestCase):
+# 
+#    def test_dataset_split(self):
+#        X = [i for i in xrange(97)]
+#        ce = ClassificationEvaluator(X) 
+#        ce.evaluate(K=10)
+#        #TODO put a self assert
+#===============================================================================
         
 if __name__ == "__main__":
     unittest.main()

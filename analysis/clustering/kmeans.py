@@ -13,8 +13,7 @@ class OrangeKmeansClusterer(AbstractKmeansClusterer):
     '''
     A clustering data structure that works with Orange
     '''            
-    
-    def run(self, filename, pca=False, post_process=False):
+    def run(self, pca=False, post_process=False):
         '''
         Runs the kmeans algorithm.
         '''

@@ -13,18 +13,31 @@ class NMFClusterer(AbstractClusterer):
     This clusterer uses non-negative matrix factorization to distinguish
     topics in tweets and then identify similar tweets.
     '''
-    def run(self, seed = 'random_vcol', method='nmf', rank=3, max_iter=65, display_N_tokens = 5, display_N_documents = 3):
+    
+    def __init__(self, seed = 'random_vcol', method='nmf', rank=3, max_iter=65, display_N_tokens = 5, display_N_documents = 8):
+        """
+        Constructor for NMF clusterer.
+        """
+        super(NMFClusterer, self).__init__(filter_terms=False)#Force filter terms to be false cz not yet supported
+        self.seed=seed        
+        self.method = method
+        self.rank = rank
+        self.max_iter = max_iter
+        self.display_N_tokens = display_N_tokens
+        self.display_N_documents = display_N_documents 
+    
+    def run(self):
         #Re-initialise clusters
         if self.clusters != []:
             self.clusters = []
             
         self.construct_term_doc_matrix(pca=False) #We cannot perform PCA with NMF because we only want non-negative vectors
         V = self.td_matrix
-        model = nimfa.mf(V, seed = seed, method = method, rank = rank, max_iter = max_iter)
+        model = nimfa.mf(V, seed = self.seed, method = self.method, rank = self.rank, max_iter = self.max_iter)
         fitted = nimfa.mf_run(model)
         w = fitted.basis() 
         h = fitted.coef()
-        self.split_documents(w,h, self.document_dict, self.attributes, display_N_tokens = display_N_tokens, display_N_documents = display_N_documents)
+        self.split_documents(w,h, self.document_dict, self.attributes, display_N_tokens = self.display_N_tokens, display_N_documents = self.display_N_documents)
         #Just testing remove it    
         self.showfeatures(w,h, [self.document_dict.values()[i]["raw"] for i in range(numpy.shape(w)[0])], self.attributes)
         

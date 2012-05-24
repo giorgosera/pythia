@@ -21,21 +21,15 @@ class Test_Dbscan_clustering(unittest.TestCase):
         
         epsilon = 0.02
         min_pts = 2
-        dbscan = DBSCANClusterer(filter_terms=False)
+        dbscan = DBSCANClusterer(epsilon=epsilon, min_pts=min_pts)
         dbscan.add_documents(items)
-        clusters = dbscan.run(epsilon, min_pts, pca=True)
+        clusters = dbscan.run(pca=True)
         dbscan.dump_clusters_to_file("dbscan_with_tweets")
-        #=======================================================================
         dbscan.plot_scatter()
         #dbscan.plot_growth_timeline(cumulative=False, plot_method="matplotlib")
         # dbscan.plot_growth_timeline(cumulative=True)
         dbscan.plot_growth_timeline(cumulative=True)
         # dbscan.plot_sentiment_timeline(cumulative=False)
-        #=======================================================================
          
 if __name__ == "__main__":
-    #===========================================================================
-    # import cProfile
-    # cProfile.run('unittest.main()', "profilerrr.profile")
-    #===========================================================================
     unittest.main()
