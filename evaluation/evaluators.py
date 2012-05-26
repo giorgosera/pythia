@@ -142,7 +142,6 @@ class ClusteringEvaluator(AbstractEvaluator):
                     doc_labels_clusters.append( (document.event_class, cluster_no) )
                     break
         
-        print doc_labels_clusters
         p, r, f =self.calculate_bcubed_measures(doc_labels_clusters)
         return p, r, f
     

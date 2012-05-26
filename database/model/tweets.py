@@ -112,3 +112,6 @@ class EventList(Document):
         self.save()
 
 el = EventList()    
+
+class CustomEvaluationTweet(Tweet):
+    meta = {"collection": "CustomEvaluationTweets"}
