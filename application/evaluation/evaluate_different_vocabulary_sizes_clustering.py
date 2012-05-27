@@ -12,7 +12,7 @@ from database.model.tweets import *
 from analysis.clustering.kmeans import OrangeKmeansClusterer
 from analysis.clustering.dbscan import DBSCANClusterer
 from analysis.clustering.nmf import NMFClusterer
-from evaluation.evaluators import ClusteringEvaluator
+from evaluation.evaluators import IntrinsicClusteringEvaluator
 from analysis.clustering.algorithms import euclidean 
 from analysis.dataset_analysis import DatasetAnalyser
 from analysis.text import TextAnalyser
@@ -88,31 +88,57 @@ def pick_letters(N, with_replacement=False):
         
         
 #####################################MAIN SCRIPT############################################
-ws = WarehouseServer()
-clusterers = [OrangeKmeansClusterer(k=39, ngram=1)] 
-              #DBSCANClusterer(epsilon=0.02, min_pts=3, distance=euclidean), 
-              #NMFClusterer(rank=39, max_iter=65, display_N_tokens = 5, display_N_documents = 10)] 
 
-
-f_measures = []
-
-diversity = [1, 2, 13, 26]#How many different letters to pick from the alphabet each time
-datasets = []
-
-for d in diversity:
-    letters = pick_letters(d)
-    words = []
-    for letter in letters:
-        words += get_words_starting_with(letter)
-    dataset = create_dataset(words, 250)
-    datasets.append(dataset)
-
-for clusterer in clusterers:
-    oc = clusterer
-    i = 0
-    for dataset in datasets:
-        oc.add_documents(dataset)
-        oc.run()
-        oc.dump_clusters_to_file("vocabulary_tests" + str(i))
-        i += 1
+def run_evaluation():
+    ws = WarehouseServer()
+    clusterers = [
+                  #OrangeKmeansClusterer(k=10, ngram=1) 
+                  DBSCANClusterer(epsilon=0.02, min_pts=3, distance=euclidean)
+                  #NMFClusterer(rank=40, max_iter=65, display_N_tokens = 5, display_N_documents = 10)
+                  ] 
     
+    f_measures = []
+    
+    diversity = [1, 2, 12]#How many different letters to pick from the alphabet each time
+    datasets = []
+    
+    for d in diversity:
+        letters = pick_letters(d)
+        words = []
+        for letter in letters:
+            words += get_words_starting_with(letter)
+        dataset = create_dataset(words, 250)
+        datasets.append(dataset)
+    
+    qualities = []
+    for clusterer in clusterers:
+        oc = clusterer
+        print '1'
+        q = []
+        for dataset in datasets:
+            print '2'
+            ice = IntrinsicClusteringEvaluator(dataset)
+            q.append(ice.evaluate(clusterer=oc))
+            print '3'
+            print q
+        qualities.append(q)
+    
+    vocabulary_sizes = []
+    for dataset in datasets:       
+        da = DatasetAnalyser(dataset) 
+        vocabulary_sizes.append(da.avg_vocabulary_size())
+        
+    t = numpy.linspace(vocabulary_sizes[0], vocabulary_sizes[-1], num=len(datasets))
+    plots = []
+    
+    for quality in qualities:
+        plots.append(pylab.plot(t, quality))
+    
+    pylab.xlabel('Average Length of Vocabulary')
+    pylab.ylabel('Quality')
+    #pylab.legend(('kmeans', 'dbscan', 'nmf'), 'lower right', shadow=True)
+    pylab.show()
+
+import cProfile    
+cProfile.run('run_evaluation()', 'test.profile')
+        

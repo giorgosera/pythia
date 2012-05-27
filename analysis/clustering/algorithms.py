@@ -57,11 +57,22 @@ def tanimoto(v1,v2):
     return 1.0-(float(common)/(count_v1+count_v2-common))
 
 def euclidean(x,y):
-    ''' calculate the euclidean distance between x and y.'''
+    ''' 
+    Calculate the euclidean distance between x and y.
+    '''
+    # sqrt((x0-y0)^2 + ... (xN-yN)^2)
+    assert len(x) == len(y)
+    return numpy.linalg.norm(y-x)
+
+def slow_euclidean(x,y):
+    ''' 
+    Calculate the euclidean distance between x and y. This is the slow
+    version. I just included it for future reference
+    '''
     # sqrt((x0-y0)^2 + ... (xN-yN)^2)
     assert len(x) == len(y)
     sum = 0.0
     length_x = len(x)
     for i in xrange(length_x):
-        sum += (x[i] - y[i])*(x[i] - y[i])
+        sum += (x[i] - y[i])**2
     return sqrt(sum)

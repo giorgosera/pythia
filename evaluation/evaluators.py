@@ -7,6 +7,7 @@ import numpy
 from database.model.tweets import EvaluationTweet
 from database.model.tweets import Content
 from itertools import groupby as g
+from analysis.clustering.algorithms import euclidean
 
 class AbstractEvaluator(object):
     
@@ -69,10 +70,99 @@ class AbstractEvaluator(object):
                 f_measures[i] = (1 + alpha) * (( rp_rates[i,0] * rp_rates[i,1]) / (alpha * rp_rates[i,1] + rp_rates[i,0]));
         return f_measures
     
-class ClusteringEvaluator(AbstractEvaluator):
+class IntrinsicClusteringEvaluator(AbstractEvaluator):
     '''
     This class is responsible for performing clustering
-    evaluation.
+    evaluation. It's called intrinsic because we DO NOT use a "gold standard" 
+    to evaluate the clustering results.
+    '''
+    def evaluate(self, clusterer):
+        '''
+        Performs clustering evaluation
+        '''
+        clusterer.add_documents(self.dataset)
+        clusterer.run()
+
+        silhouette_coefficients = []
+        for index, cluster in enumerate(clusterer.clusters):  
+
+            #The first step is to calculate the feature vectors of this cluster and 
+            # the feature vectors of all documents belonging to other clusters. 
+            vectors_of_this_cluster = self._get_cluster_feature_vectors(cluster, clusterer)
+            if len(vectors_of_this_cluster) <= 1: continue #If this cluster has no poitns or just one we won't include it
+            
+            this_cluster = clusterer.clusters.pop(index) #Temporarily remove tghis cluster
+            vectors_of_other_clusters = []
+            for other_cluster in clusterer.clusters:
+                vectors_of_other_clusters.append(self._get_cluster_feature_vectors(other_cluster, clusterer))             
+            clusterer.clusters.insert(index, this_cluster) # Re-insert this cluster            
+
+            sc = self._calculate_shilouette_coefficients(vectors_of_this_cluster, vectors_of_other_clusters)
+            silhouette_coefficients.append(sc) # Appends the list of shilouttes for this cluster into the overall list.
+
+        quality = self._calculate_clustering_quality(silhouette_coefficients)
+        return quality
+        
+    def _get_cluster_feature_vectors(self, cluster, clusterer):
+        '''
+        It returns the feature vectors of this cluster. It's a private method.
+        '''
+        vectors = []
+        document_list = [key for key in clusterer.document_dict.keys()] 
+        for id, document in cluster.document_dict.iteritems():
+            index = document_list.index(id)
+            vectors.append(clusterer.td_matrix[index])
+        return vectors
+    
+    def _calculate_shilouette_coefficients(self, vectors_of_this_cluster, vectors_of_other_clusters):
+        '''
+        It calculates the shilouette_coefficient as described in Data Mining Concepts and Techniques.
+        It returns a list of shilouette coefficients, one for each document in the cluster.
+        '''
+        scs = []
+        #We calculate a and b values for each document where a and b are defined in the book
+        #Data Mining Concepts and Techniques (page 489 third edition)
+        for index1, v1 in enumerate(vectors_of_this_cluster):
+            sum_a = 0 
+            for index2, v2 in enumerate(vectors_of_this_cluster):
+                if index1 != index2:
+                    sum_a += euclidean(v1, v2)
+        
+            # "a" measures the average distance between a point in a cluster
+            #and all the other points belonging to the same cluster 
+            a = sum_a / (len(vectors_of_this_cluster)-1) 
+            
+            bs = []
+            for other_cluster_vectors in vectors_of_other_clusters:
+                sum_b = 0 
+                for v2 in other_cluster_vectors:
+                    sum_b += euclidean(v1,v2)
+                bs.append(sum_b/len(other_cluster_vectors))
+            b = min(bs)
+
+            silhouette_coefficient = (b - a) / max(a, b)
+            scs.append(silhouette_coefficient)
+        
+        return scs
+    
+    def _calculate_clustering_quality(self, silhouette_coefficients):
+        '''
+        It calculates the average of all the silhouette_coefficients in order
+        to find the overall clustering quality.
+        '''
+        sum = 0
+        n = 0
+        for cluster_coefficients in silhouette_coefficients:
+            for coefficient in cluster_coefficients:
+                sum += coefficient
+                n+=1
+        return sum/n 
+
+class ExtrinsicClusteringEvaluator(AbstractEvaluator):
+    '''
+    This class is responsible for performing clustering
+    evaluation. It's called extrinsic because we use a "gold standard" 
+    to evaluate the clustering results.
     '''
         
     def annotate_dataset(self):

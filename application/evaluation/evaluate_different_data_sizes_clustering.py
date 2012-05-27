@@ -11,7 +11,7 @@ from database.model.tweets import EvaluationTweet
 from analysis.clustering.kmeans import OrangeKmeansClusterer
 from analysis.clustering.dbscan import DBSCANClusterer
 from analysis.clustering.nmf import NMFClusterer
-from evaluation.evaluators import ClusteringEvaluator
+from evaluation.evaluators import ExtrinsicClusteringEvaluator
 from analysis.clustering.algorithms import euclidean 
 from analysis.dataset_analysis import DatasetAnalyser
 
@@ -36,7 +36,7 @@ for clusterer in clusterers:
     f_list = []
     i=initial_document_size
     while (i < dataset_size): 
-        ebe = ClusteringEvaluator(documents[:i])
+        ebe = ExtrinsicClusteringEvaluator(documents[:i])
         bcubed_precision, bcubed_recall, bcubed_f = ebe.evaluate(clusterer=oc)
         print bcubed_precision, bcubed_recall, bcubed_f
         f_list.append(bcubed_f)

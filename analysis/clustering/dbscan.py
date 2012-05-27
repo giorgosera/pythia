@@ -3,6 +3,7 @@ Created on 8 Feb 2012
 
 @author: george
 '''
+import numpy
 from analysis.clustering.algorithms import euclidean
 from analysis.clustering.abstract import AbstractClusterer
 from analysis.clustering.structures import Cluster
@@ -61,7 +62,7 @@ class DBSCANClusterer(AbstractClusterer):
             if p == point:
                 # you cant be your own neighbour...!
                 continue
-            d = self.distance(point.feature_vector,p.feature_vector)
+            d = self.distance(numpy.array(point.feature_vector),numpy.array(p.feature_vector))
             if d < self.epsilon:
                 neighbours.append(p)
         return neighbours

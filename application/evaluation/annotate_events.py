@@ -9,11 +9,11 @@ import datetime
 from database.warehouse import WarehouseServer
 from mongoengine import connect
 connect("pythia_db")
-from evaluation.evaluators import ClusteringEvaluator
+from evaluation.evaluators import ExtrinsicClusteringEvaluator
 ws = WarehouseServer()
 
 from_date=datetime.datetime(2011, 01, 25, 12, 20, 0)
 to_date=datetime.datetime(2011, 01, 25, 12, 25, 0)
 tweet_list = ws.get_documents_by_date(from_date, to_date)
-ce = ClusteringEvaluator(tweet_list)
+ce = ExtrinsicClusteringEvaluator(tweet_list)
 ce.annotate_dataset()
