@@ -8,7 +8,14 @@ import Orange, orange #!@UnresolvedImport
 from analysis.clustering.abstract import AbstractKmeansClusterer
 from analysis.clustering.structures import Cluster
 from tools.orange_utils import construct_orange_table, add_metas_to_table
-            
+from analysis.clustering.algorithms import ExamplesDistanceConstructor_Cosine, ExamplesDistanceConstructor_Jaccard
+from analysis.clustering.algorithms import euclidean, cosine, jaccard
+
+distances = {cosine: ExamplesDistanceConstructor_Cosine(), 
+             euclidean: Orange.distance.instances.EuclideanConstructor(),
+             jaccard: ExamplesDistanceConstructor_Jaccard()
+             }
+
 class OrangeKmeansClusterer(AbstractKmeansClusterer):
     '''
     A clustering data structure that works with Orange
@@ -29,7 +36,8 @@ class OrangeKmeansClusterer(AbstractKmeansClusterer):
         domain = Orange.data.Domain(vars, False) #The second argument indicated that the last attr must not be a class
         table = Orange.data.Table(domain, self.td_matrix)
         
-        km = Orange.clustering.kmeans.Clustering(table, self.k)        #initialization= Orange.clustering.kmeans.init_hclustering(n=100), distance =  Orange.distance.instances.PearsonRConstructor
+        km = Orange.clustering.kmeans.Clustering(table, self.k, distance=distances[self.distance])        #initialization= Orange.clustering.kmeans.init_hclustering(n=100), distance =  Orange.distance.instances.PearsonRConstructor    
+
         self.split_documents(km)
         if post_process:
             self._post_processing()

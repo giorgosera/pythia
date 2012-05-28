@@ -90,14 +90,11 @@ def pick_letters(N, with_replacement=False):
 #####################################MAIN SCRIPT############################################
 
 def run_evaluation():
-    ws = WarehouseServer()
     clusterers = [
-                  #OrangeKmeansClusterer(k=10, ngram=1) 
-                  DBSCANClusterer(epsilon=0.02, min_pts=3, distance=euclidean)
-                  #NMFClusterer(rank=40, max_iter=65, display_N_tokens = 5, display_N_documents = 10)
+                  OrangeKmeansClusterer(k=10, ngram=1), 
+                  DBSCANClusterer(epsilon=0.02, min_pts=3, distance=euclidean),
+                  NMFClusterer(rank=10, max_iter=65, display_N_tokens = 5, display_N_documents = 10)
                   ] 
-    
-    f_measures = []
     
     diversity = [1, 2, 12]#How many different letters to pick from the alphabet each time
     datasets = []
@@ -113,13 +110,10 @@ def run_evaluation():
     qualities = []
     for clusterer in clusterers:
         oc = clusterer
-        print '1'
         q = []
         for dataset in datasets:
-            print '2'
             ice = IntrinsicClusteringEvaluator(dataset)
             q.append(ice.evaluate(clusterer=oc))
-            print '3'
             print q
         qualities.append(q)
     
@@ -136,9 +130,9 @@ def run_evaluation():
     
     pylab.xlabel('Average Length of Vocabulary')
     pylab.ylabel('Quality')
-    #pylab.legend(('kmeans', 'dbscan', 'nmf'), 'lower right', shadow=True)
+    pylab.legend(('kmeans', 'dbscan', 'nmf'), 'lower right', shadow=True)
     pylab.show()
 
 import cProfile    
-cProfile.run('run_evaluation()', 'test.profile')
+cProfile.run('run_evaluation()', 'different_vocabulary.profile')
         

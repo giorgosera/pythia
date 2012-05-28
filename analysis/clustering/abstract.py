@@ -11,6 +11,7 @@ from visualizations.mds import MDS
 from tools.utils import aggregate_data
 from matplotlib.dates import num2date#!@UnresolvedImport
 from analysis.index import Index
+from analysis.clustering.algorithms import euclidean, jaccard
         
 class AbstractClusterer(object):
     '''
@@ -18,7 +19,7 @@ class AbstractClusterer(object):
     must be derived from it. 
     '''
 
-    def __init__(self, ngram=1, filter_terms=False):
+    def __init__(self, distance=euclidean, ngram=1, filter_terms=False):
         '''
         Constructs a new cluster object
         '''
@@ -29,6 +30,7 @@ class AbstractClusterer(object):
         self.table_name = None
         self.clusters = []
         self.filter_terms = filter_terms
+        self.distance = distance
         
     def add_documents(self, document_list):
         '''
@@ -101,11 +103,14 @@ class AbstractClusterer(object):
         for i, document in enumerate(self.document_dict.values()):
             text = nltk.Text(document.tokens)
             for item in document.word_frequencies:
-                data_rows[i][terms.index(item.word)] = corpus.tf_idf(item.word, text)
+                if self.distance == jaccard: 
+                    data_rows[i][terms.index(item.word)] = 1 #The number 1 means that the word is present and 0 the opposite
+                else:
+                    data_rows[i][terms.index(item.word)] = corpus.tf_idf(item.word, text)
         
         self.attributes = terms
         self.td_matrix = data_rows
-                
+        
         #If PCA is True then we project our points on their principal components
         #for dimensionality reduction
         if pca:
@@ -273,9 +278,10 @@ class AbstractKmeansClusterer(AbstractClusterer):
     must be derived from it. 
     '''
 
-    def __init__(self, k=3, ngram=1):
+    def __init__(self, distance=euclidean, k=3, ngram=1):
         '''
         Constructs a new kmeans abstract cluster object
         '''
         AbstractClusterer.__init__(self, ngram=ngram)
         self.k = k
+        self.distance = distance

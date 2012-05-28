@@ -4,7 +4,7 @@ Created on 8 Feb 2012
 @author: george
 '''
 import numpy
-from analysis.clustering.algorithms import euclidean
+from analysis.clustering.algorithms import euclidean, cosine
 from analysis.clustering.abstract import AbstractClusterer
 from analysis.clustering.structures import Cluster
 from collections import OrderedDict

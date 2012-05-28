@@ -45,47 +45,52 @@ def increase_length(i, document):
     return document
 
 #####################################MAIN SCRIPT############################################
+
 ws = WarehouseServer()
 clusterers = [OrangeKmeansClusterer(k=39, ngram=1), 
               DBSCANClusterer(epsilon=0.02, min_pts=2, distance=euclidean), 
               NMFClusterer(rank=39, max_iter=65, display_N_tokens = 5, display_N_documents = 10)] 
 
-original_docs = [doc for doc in ws.get_all_documents(type=EvaluationTweet)][:50]
-#Inside the loop we alter the original documents in order to increase their length. However, we should keep
-#the vocabulary size the same. Therefore, we increase the length by concatenating the original
-#documents with random ones from the same dataset. 
+original_docs = [doc for doc in ws.get_all_documents(type=EvaluationTweet)]
 
-iterations=8
-f_measures = []
-for clusterer in clusterers:
-    oc = clusterer
-    f_list = []
-    for i in range(iterations):
-        documents = [doc for doc in ws.get_all_documents(type=EvaluationTweet)][:50]
-        longer_dataset = []
-
-        for document in documents:
-            longer_dataset.append(increase_length(i, document))
+def run_evaluation():
+    #Inside the loop we alter the original documents in order to increase their length. However, we should keep
+    #the vocabulary size the same. Therefore, we increase the length by concatenating the original
+    #documents with random ones from the same dataset. 
+    
+    iterations=8
+    f_measures = []
+    for clusterer in clusterers:
+        oc = clusterer
+        f_list = []
+        for i in range(iterations):
+            documents = [doc for doc in ws.get_all_documents(type=EvaluationTweet)]
+            longer_dataset = []
+    
+            for document in documents:
+                longer_dataset.append(increase_length(i, document))
+                
+            da = DatasetAnalyser(longer_dataset)
+            print da.avg_document_length()
             
-        da = DatasetAnalyser(longer_dataset)
-        print da.avg_document_length()
-        
-        ebe = ExtrinsicClusteringEvaluator(longer_dataset)
-        bcubed_precision, bcubed_recall, bcubed_f = ebe.evaluate(clusterer=oc)
-        f_list.append(bcubed_f)
-    f_measures.append(f_list)
-
-da = DatasetAnalyser(original_docs)
-original_length = da.avg_document_length()
-t = numpy.arange(original_length, 10+original_length*iterations, original_length)
-plots = []
-
-for measures_list in f_measures:
-    plots.append(pylab.plot(t, measures_list))
-
-pylab.xlabel('Document average length')
-pylab.ylabel('Bcubed F metric')
-pylab.legend(('kmeans', 'dbscan', 'nmf'), 'lower right', shadow=True)
-pylab.show()
+            ebe = ExtrinsicClusteringEvaluator(longer_dataset)
+            bcubed_precision, bcubed_recall, bcubed_f = ebe.evaluate(clusterer=oc)
+            f_list.append(bcubed_f)
+        f_measures.append(f_list)
+    
+    da = DatasetAnalyser(original_docs)
+    original_length = da.avg_document_length()
+    t = numpy.arange(original_length, 10+original_length*iterations, original_length)
+    plots = []
+    
+    for measures_list in f_measures:
+        plots.append(pylab.plot(t, measures_list))
+    
+    pylab.xlabel('Document average length')
+    pylab.ylabel('Bcubed F metric')
+    pylab.legend(('kmeans', 'dbscan', 'nmf'), 'lower right', shadow=True)
+    pylab.show()
 
     
+import cProfile    
+cProfile.run('run_evaluation()', 'different_document_lengths.profile')

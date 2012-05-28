@@ -3,12 +3,36 @@ Created on 22 Jan 2012
 
 @author: george
 '''
-import numpy, random, math, scipy
+import numpy, nltk
+import orange #!@UnresolvedImport
 from math import sqrt
 
 ###########################################
-## Similarity measures                   ##
+## Similarity and distance measures      ##
 ###########################################
+
+def jaccard(v1, v2):
+    '''
+    Due to the idiosyncracies of my code the jaccard index is a bit 
+    altered. The theory is the same but the implementation might be a bit 
+    weird. I do not have two vectors containing the words of both documents
+    but instead I have two equally sized vectors. The columns of the vectors 
+    are the same and represent the words in the whole corpus. If an entry
+    is 1 then the word is present in the document. If it is 0 then it is not present.
+    SO first we find the indices of the words in each documents and then jaccard is 
+    calculated based on the indices.
+    '''
+    indices1 = []
+    for index, v in enumerate(v1):
+        if v == 1 : indices1.append(index)
+    indices2 = []
+    for index, v in enumerate(v2):
+        if v == 1 : indices2.append(index)
+
+    dist = nltk.metrics.distance.jaccard_distance(set(indices1), set(indices2))
+
+    return dist
+    
 
 def pearson(v1,v2):
     # Simple sums
@@ -76,3 +100,33 @@ def slow_euclidean(x,y):
     for i in xrange(length_x):
         sum += (x[i] - y[i])**2
     return sqrt(sum)
+
+#################ORANGE OVERRIDEN DISTANCE METHODS #########################
+
+class ExamplesDistance_Cosine(orange.ExamplesDistance):
+    def __init__(self, *args):
+        orange.ExamplesDistance.__init__(self, *args)
+    def __call__(self, ex1, ex2):
+        ex1 = numpy.array(list(ex1))
+        ex2 = numpy.array(list(ex2))
+        return cosine(ex1,ex2, distance=True)
+
+class ExamplesDistanceConstructor_Cosine(orange.ExamplesDistanceConstructor):
+    def __init__(self, *args):
+        orange.ExamplesDistanceConstructor.__init__(self, *args)
+    def __call__(self, *args):
+        return ExamplesDistance_Cosine()
+    
+class ExamplesDistance_Jaccard(orange.ExamplesDistance):
+    def __init__(self, *args):
+        orange.ExamplesDistance.__init__(self, *args)
+    def __call__(self, ex1, ex2):
+        ex1 = numpy.array(list(ex1))
+        ex2 = numpy.array(list(ex2))
+        return jaccard(ex1,ex2)
+
+class ExamplesDistanceConstructor_Jaccard(orange.ExamplesDistanceConstructor):
+    def __init__(self, *args):
+        orange.ExamplesDistanceConstructor.__init__(self, *args)
+    def __call__(self, *args):
+        return ExamplesDistance_Jaccard()
