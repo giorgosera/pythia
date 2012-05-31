@@ -13,7 +13,7 @@ from analysis.clustering.kmeans import OrangeKmeansClusterer
 from analysis.clustering.dbscan import DBSCANClusterer
 from analysis.clustering.nmf import NMFClusterer
 from evaluation.evaluators import ExtrinsicClusteringEvaluator
-from analysis.clustering.algorithms import euclidean 
+from analysis.clustering.algorithms import euclidean, cosine, jaccard 
 from analysis.dataset_analysis import DatasetAnalyser
 
 #####################################HELPER METHODS############################################
@@ -46,10 +46,11 @@ def increase_length(i, document):
 
 #####################################MAIN SCRIPT############################################
 
+distances = [euclidean, cosine, jaccard]
 ws = WarehouseServer()
 clusterers = [OrangeKmeansClusterer(k=39, ngram=1), 
               DBSCANClusterer(epsilon=0.02, min_pts=2, distance=euclidean), 
-              NMFClusterer(rank=39, max_iter=65, display_N_tokens = 5, display_N_documents = 10)] 
+              NMFClusterer(rank=39, max_iter=65, display_N_tokens = 5, display_N_documents = 100**2)] 
 
 original_docs = [doc for doc in ws.get_all_documents(type=EvaluationTweet)]
 
@@ -57,38 +58,48 @@ def run_evaluation():
     #Inside the loop we alter the original documents in order to increase their length. However, we should keep
     #the vocabulary size the same. Therefore, we increase the length by concatenating the original
     #documents with random ones from the same dataset. 
-    
-    iterations=8
-    f_measures = []
-    for clusterer in clusterers:
-        oc = clusterer
-        f_list = []
-        for i in range(iterations):
-            documents = [doc for doc in ws.get_all_documents(type=EvaluationTweet)]
-            longer_dataset = []
-    
-            for document in documents:
-                longer_dataset.append(increase_length(i, document))
-                
-            da = DatasetAnalyser(longer_dataset)
-            print da.avg_document_length()
-            
-            ebe = ExtrinsicClusteringEvaluator(longer_dataset)
-            bcubed_precision, bcubed_recall, bcubed_f = ebe.evaluate(clusterer=oc)
-            f_list.append(bcubed_f)
-        f_measures.append(f_list)
+
+    iterations= 8
+    f_different_distances = []
+    for distance in distances:
+        print '------------------------------------------'
+        f_different_clusterers = [] 
+        for clusterer in clusterers:
+            print 'Evaluating', clusterer, 'for', distance
+            oc = clusterer
+            clusterer.distance = distance
+            f_list = []
+            for i in range(iterations):
+                documents = [doc for doc in ws.get_all_documents(type=EvaluationTweet)]
+                longer_dataset = []
+        
+                for document in documents:
+                    longer_dataset.append(increase_length(i, document))
+                    
+                da = DatasetAnalyser(longer_dataset)
+                print 'with average document length:', da.avg_document_length()
+                ebe = ExtrinsicClusteringEvaluator(longer_dataset)
+                bcubed_precision, bcubed_recall, bcubed_f = ebe.evaluate(clusterer=oc)
+                f_list.append(bcubed_f)
+            f_different_clusterers.append(f_list)
+        f_different_distances.append(f_different_clusterers)
     
     da = DatasetAnalyser(original_docs)
     original_length = da.avg_document_length()
     t = numpy.arange(original_length, 10+original_length*iterations, original_length)
     plots = []
+    pylab.figure(1)
     
-    for measures_list in f_measures:
-        plots.append(pylab.plot(t, measures_list))
+    dist_names = ["Euclidean", "Cosine", "Jaccard"]
+    for i, f_different_distance in enumerate(f_different_distances):
+        pylab.subplot(2,2,i+1)
+        for f_measure in f_different_distance:
+            plots.append(pylab.plot(t, f_measure))
+        pylab.title(dist_names[i])
+        pylab.xlabel('Average document length')
+        pylab.ylabel('Bcubed F metric')
+        pylab.legend(('kmeans', 'dbscan', 'nmf'), 'lower right', shadow=True)
     
-    pylab.xlabel('Document average length')
-    pylab.ylabel('Bcubed F metric')
-    pylab.legend(('kmeans', 'dbscan', 'nmf'), 'lower right', shadow=True)
     pylab.show()
 
     

@@ -12,46 +12,56 @@ from analysis.clustering.kmeans import OrangeKmeansClusterer
 from analysis.clustering.dbscan import DBSCANClusterer
 from analysis.clustering.nmf import NMFClusterer
 from evaluation.evaluators import ExtrinsicClusteringEvaluator
-from analysis.clustering.algorithms import euclidean 
+from analysis.clustering.algorithms import euclidean, cosine, jaccard 
 from analysis.dataset_analysis import DatasetAnalyser
+
+distances = [euclidean, cosine, jaccard]
 
 def run_evaluation():
     ws = WarehouseServer()
     documents = [doc for doc in ws.get_all_documents(type=EvaluationTweet)]
-    clusterers = [OrangeKmeansClusterer(k=39, ngram=1), 
+    clusterers = [OrangeKmeansClusterer(k=40, ngram=1), 
                   DBSCANClusterer(epsilon=0.02, min_pts=3, distance=euclidean), 
-                  NMFClusterer(rank=39, max_iter=65, display_N_tokens = 5, display_N_documents = 10)] 
+                  NMFClusterer(rank=40, max_iter=65, display_N_tokens = 5, display_N_documents = 100**2)] 
     
     dataset_size = len(documents)
-    da = DatasetAnalyser(documents)
-    print da.avg_document_length()
-    print da.vocabulary_size()
-    print da.avg_vocabulary_size()
-    print da.dataset_size()
     
-    f_measures = []
-    step = 5
+    f_different_distances = []
+    step = 50
     initial_document_size = 50
-    for clusterer in clusterers:
-        oc = clusterer
-        f_list = []
-        i=initial_document_size
-        while (i < dataset_size): 
-            ebe = ExtrinsicClusteringEvaluator(documents[:i])
-            bcubed_precision, bcubed_recall, bcubed_f = ebe.evaluate(clusterer=oc)
-            print bcubed_precision, bcubed_recall, bcubed_f
-            f_list.append(bcubed_f)
-            i += step
-        f_measures.append(f_list)
-               
+    for distance in distances:
+        print '------------------------------------------'
+        f_different_clusterers = [] 
+        for clusterer in clusterers:
+            print 'Evaluating', clusterer, 'for', distance
+            oc = clusterer
+            clusterer.distance = distance
+            f_list = []
+            i=initial_document_size
+            while (i < dataset_size): 
+                print 'with data size:', i
+                ebe = ExtrinsicClusteringEvaluator(documents[:i])
+                bcubed_precision, bcubed_recall, bcubed_f = ebe.evaluate(clusterer=oc)
+                print bcubed_precision, bcubed_recall, bcubed_f
+                f_list.append(bcubed_f)
+                i += step
+            f_different_clusterers.append(f_list)
+        f_different_distances.append(f_different_clusterers)
+        
     t = numpy.arange(initial_document_size, dataset_size, step)
     plots = []
-    for measures_list in f_measures:
-        plots.append(pylab.plot(t, measures_list))
+    pylab.figure(1)
     
-    pylab.xlabel('Number of documents')
-    pylab.ylabel('Bcubed F metric')
-    pylab.legend(('kmeans', 'dbscan', 'nmf'), 'lower right', shadow=True)
+    dist_names = ["Euclidean", "Cosine", "Jaccard"]
+    for i, f_different_distance in enumerate(f_different_distances):
+        pylab.subplot(2,2,i+1)
+        for f_measure in f_different_distance:
+            plots.append(pylab.plot(t, f_measure))
+        pylab.title(dist_names[i])
+        pylab.xlabel('Number of documents')
+        pylab.ylabel('Bcubed F metric')
+        pylab.legend(('kmeans', 'dbscan', 'nmf'), 'lower right', shadow=True)
+    
     pylab.show()
     
 import cProfile    

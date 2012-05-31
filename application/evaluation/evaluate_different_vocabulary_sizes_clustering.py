@@ -7,13 +7,12 @@ import random
 import pylab#!@UnresolvedImport 
 import numpy 
 
-from database.warehouse import WarehouseServer
 from database.model.tweets import *
 from analysis.clustering.kmeans import OrangeKmeansClusterer
 from analysis.clustering.dbscan import DBSCANClusterer
 from analysis.clustering.nmf import NMFClusterer
 from evaluation.evaluators import IntrinsicClusteringEvaluator
-from analysis.clustering.algorithms import euclidean 
+from analysis.clustering.algorithms import euclidean, cosine, jaccard 
 from analysis.dataset_analysis import DatasetAnalyser
 from analysis.text import TextAnalyser
 
@@ -88,49 +87,66 @@ def pick_letters(N, with_replacement=False):
         
         
 #####################################MAIN SCRIPT############################################
+distances = [
+             euclidean,
+             cosine,
+             jaccard
+             ]
 
 def run_evaluation():
     clusterers = [
-                  OrangeKmeansClusterer(k=10, ngram=1), 
+                  OrangeKmeansClusterer(k=10, ngram=1),
                   DBSCANClusterer(epsilon=0.02, min_pts=3, distance=euclidean),
-                  NMFClusterer(rank=10, max_iter=65, display_N_tokens = 5, display_N_documents = 10)
+                  NMFClusterer(rank=10, max_iter=65, display_N_tokens = 5, display_N_documents = 10)                  
                   ] 
     
-    diversity = [1, 2, 12]#How many different letters to pick from the alphabet each time
+    diversity = [1, 2, 3, 4]#How many different letters to pick from the alphabet each time
     datasets = []
     
+    #Create different datasets with different diversities
     for d in diversity:
         letters = pick_letters(d)
         words = []
         for letter in letters:
-            words += get_words_starting_with(letter)
-        dataset = create_dataset(words, 250)
+            words += get_words_starting_with(letter[:5])#allakse to 3
+        dataset = create_dataset(words, 100) #allakse to 10
         datasets.append(dataset)
-    
-    qualities = []
-    for clusterer in clusterers:
-        oc = clusterer
-        q = []
-        for dataset in datasets:
-            ice = IntrinsicClusteringEvaluator(dataset)
-            q.append(ice.evaluate(clusterer=oc))
-            print q
-        qualities.append(q)
+
+    qualities_different_distances = []
+    for distance in distances:
+        print '------------------------------------------'
+        q_different_clusterers = [] 
+        for clusterer in clusterers:
+            print 'Evaluating', clusterer, 'for', distance
+            oc = clusterer
+            clusterer.distance = distance
+            q = []
+            for ind, dataset in enumerate(datasets):
+                print 'dataset ', ind
+                ice = IntrinsicClusteringEvaluator(dataset)
+                q.append(ice.evaluate(clusterer=oc))
+            q_different_clusterers.append(q)
+        qualities_different_distances.append(q_different_clusterers)
     
     vocabulary_sizes = []
     for dataset in datasets:       
         da = DatasetAnalyser(dataset) 
         vocabulary_sizes.append(da.avg_vocabulary_size())
-        
+    
     t = numpy.linspace(vocabulary_sizes[0], vocabulary_sizes[-1], num=len(datasets))
     plots = []
+    pylab.figure(1)
     
-    for quality in qualities:
-        plots.append(pylab.plot(t, quality))
+    dist_names = ["Euclidean", "Cosine", "Jaccard"]    
+    for i, distance in enumerate(qualities_different_distances):
+        pylab.subplot(2,2,i+1)
+        for q_clusterer in distance:
+            plots.append(pylab.plot(t, q_clusterer))
+        pylab.title(dist_names[i])
+        pylab.xlabel('Average vocabulary size')
+        pylab.ylabel('Quality')
+        pylab.legend(('kmeans', 'dbscan', 'nmf'), 'lower right', shadow=True)
     
-    pylab.xlabel('Average Length of Vocabulary')
-    pylab.ylabel('Quality')
-    pylab.legend(('kmeans', 'dbscan', 'nmf'), 'lower right', shadow=True)
     pylab.show()
 
 import cProfile    

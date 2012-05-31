@@ -7,6 +7,7 @@ import nimfa, numpy#!@UnresolvedImport
 from analysis.clustering.abstract import AbstractClusterer
 from analysis.clustering.structures import Cluster
 from collections import OrderedDict
+import pymf#!@UnresolvedImport
             
 class NMFClusterer(AbstractClusterer):
     '''
@@ -30,13 +31,22 @@ class NMFClusterer(AbstractClusterer):
         #Re-initialise clusters
         if self.clusters != []:
             self.clusters = []
-            
+ 
         self.construct_term_doc_matrix(pca=False) #We cannot perform PCA with NMF because we only want non-negative vectors
         V = self.td_matrix
-        model = nimfa.mf(V, seed = self.seed, method = self.method, rank = self.rank, max_iter = self.max_iter)
-        fitted = nimfa.mf_run(model)
-        w = fitted.basis() 
-        h = fitted.coef()
+        
+        
+        nmf_mdl = pymf.NMF(V, num_bases=4)
+        nmf_mdl.factorize(niter=10)
+        
+        #model = nimfa.mf(V, seed = self.seed, method = self.method, rank = self.rank, max_iter = self.max_iter)
+        #fitted = nimfa.mf_run(model)
+        #w = fitted.basis() 
+        #h = fitted.coef()
+        
+        w = nmf_mdl.W 
+        h = nmf_mdl.H
+        
         self.split_documents(w,h, self.document_dict, self.attributes, display_N_tokens = self.display_N_tokens, display_N_documents = self.display_N_documents)
         #Just testing remove it    
         self.showfeatures(w,h, [self.document_dict.values()[i]["raw"] for i in range(numpy.shape(w)[0])], self.attributes)
@@ -93,38 +103,38 @@ class NMFClusterer(AbstractClusterer):
         
         # Loop over all the features
         for i in range(pc):
-          outfile.write('\n')
-          outfile.write('***********************************************************')
-          outfile.write('\n')
-          outfile.write('Cluster' + str(i) + '\n')
-          slist=[]
-          # Create a list of words and their weights
-          for j in range(wc):
-            slist.append((h[i,j],wordvec[j]))
-          # Reverse sort the word list
-          slist.sort()
-          slist.reverse()
-          
-          # Print the first six elements
-          n=[s[1] for s in slist[0:6]]
-          outfile.write(str(n)+'\n')
-          patternnames.append(n)
-          
-          # Create a list of articles for this feature
-          flist=[]
-          for j in range(len(titles)):
-            # Add the article with its weight
-            flist.append((w[j,i],titles[j]))
-            toppatterns[j].append((w[j,i],i,titles[j]))
-          
-          # Reverse sort the list
-          flist.sort()
-          flist.reverse()
-          
-          # Show the top 3 articles
-          for f in flist[0:10]:
-            outfile.write(str(f)+'\n')
-          outfile.write('\n')
+            outfile.write('\n')
+            outfile.write('***********************************************************')
+            outfile.write('\n')
+            outfile.write('Cluster' + str(i) + '\n')
+            slist=[]
+            # Create a list of words and their weights
+            for j in range(wc):
+                slist.append((h[i,j],wordvec[j]))
+            # Reverse sort the word list
+            slist.sort()
+            slist.reverse()
+            
+            # Print the first six elements
+            n=[s[1] for s in slist[0:6]]
+            outfile.write(str(n)+'\n')
+            patternnames.append(n)
+            
+            # Create a list of articles for this feature
+            flist=[]
+            for j in range(len(titles)):
+                # Add the article with its weight
+                flist.append((w[j,i],titles[j]))
+                toppatterns[j].append((w[j,i],i,titles[j]))
+            
+            # Reverse sort the list
+            flist.sort()
+            flist.reverse()
+            
+            # Show the top 3 articles
+            for f in flist[0:10]:
+                outfile.write(str(f)+'\n')
+            outfile.write('\n')
         
         outfile.close()
         # Return the pattern names for later use

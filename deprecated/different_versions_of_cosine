@@ -1,0 +1,53 @@
+#===============================================================================
+#    import time    
+#    start = time.time() 
+#    dist =  scipy.spatial.distance.cosine(v1, v2)
+#    print  dist
+#    print "scipy", time.time() - start
+#    
+#    start = time.time() 
+#    numerator=(v1*v2).sum()
+#    denom1=(v1*v1).sum()
+#    denom2=(v2*v2).sum()
+#    dist = 1 - numerator / sqrt(denom1*denom2)
+#    print  dist
+#    print "patenta", time.time() - start
+#    
+#    start = time.time() 
+#    from itertools import izip
+#    ab_sum, a_sum, b_sum = 0, 0, 0
+#    for ai, bi in izip(v1, v2):
+#        ab_sum += ai * bi
+#        a_sum += ai * ai
+#        b_sum += bi * bi
+#    dist = 1 - ab_sum / sqrt(a_sum * b_sum)
+#    print  dist
+#    print "patenta2", time.time() - start
+#    
+#    from itertools import imap
+#    from operator import mul        
+#    start = time.time() 
+#    dot_prod = sum(imap(mul, v1, v2))
+#    a_veclen = sqrt(sum(i ** 2 for i in v1))
+#    b_veclen = sqrt(sum(i ** 2 for i in v2))
+# 
+#    dist = 1 - dot_prod / (a_veclen * b_veclen)
+#    print  dist
+#    print "patenta3", time.time() - start
+#===============================================================================
+    import time
+    start = time.time()
+    dist = distances.distance(v1, v2)
+    print dist
+    print "new", time.time() - start
+
+    start = time.time()
+    sim = numpy.dot(v1, v2) / (sqrt(numpy.dot(v1, v1) * numpy.dot(v2, v2))) 
+    if distance:
+        dist = 1-sim
+    else:
+        dist = sim
+    print dist
+    print "old-tweaked", time.time() - start
+
+    start = time.time()

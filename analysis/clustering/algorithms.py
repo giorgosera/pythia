@@ -4,9 +4,10 @@ Created on 22 Jan 2012
 @author: george
 '''
 import numpy, nltk
-import orange #!@UnresolvedImport
+import orange, Orange #!@UnresolvedImport
 from math import sqrt
-
+from c_extensions import euclidean as cython_euclidean#!@UnresolvedImport
+from c_extensions import cosine as cython_cosine#!@UnresolvedImport
 ###########################################
 ## Similarity and distance measures      ##
 ###########################################
@@ -22,18 +23,12 @@ def jaccard(v1, v2):
     SO first we find the indices of the words in each documents and then jaccard is 
     calculated based on the indices.
     '''
-    indices1 = []
-    for index, v in enumerate(v1):
-        if v == 1 : indices1.append(index)
-    indices2 = []
-    for index, v in enumerate(v2):
-        if v == 1 : indices2.append(index)
+    indices1 = numpy.nonzero(v1>0.0)[0]
+    indices2 = numpy.nonzero(v2==1.0)[0]
 
     dist = nltk.metrics.distance.jaccard_distance(set(indices1), set(indices2))
-
     return dist
     
-
 def pearson(v1,v2):
     # Simple sums
     sum1=sum(v1)
@@ -62,11 +57,16 @@ def cosine(v1,v2, distance=True):
     should be almost 1 but in our clustering algorithm we take distances so
     1 must become -1 to indicate a closer distance. 
     '''
-    sim = numpy.dot(v1, v2) / (sqrt(numpy.dot(v1, v1)) * sqrt(numpy.dot(v2, v2))) 
-    if distance:
-        return (-1*sim + 1) / 2.0
-    else:
-        return sim
+    #===========================================================================
+    # sim = numpy.dot(v1, v2)  / (sqrt(numpy.dot(v1, v1) * numpy.dot(v2, v2))) 
+    # if distance:
+    #    dist = 1-sim
+    # else:
+    #    dist = sim
+    #===========================================================================
+    dist = cython_cosine.distance(v1, v2)
+    return dist 
+     
      
 def tanimoto(v1,v2):
     '''
@@ -86,7 +86,7 @@ def euclidean(x,y):
     '''
     # sqrt((x0-y0)^2 + ... (xN-yN)^2)
     assert len(x) == len(y)
-    return numpy.linalg.norm(y-x)
+    return cython_euclidean.distance(x, y)
 
 def slow_euclidean(x,y):
     ''' 
@@ -107,8 +107,8 @@ class ExamplesDistance_Cosine(orange.ExamplesDistance):
     def __init__(self, *args):
         orange.ExamplesDistance.__init__(self, *args)
     def __call__(self, ex1, ex2):
-        ex1 = numpy.array(list(ex1))
-        ex2 = numpy.array(list(ex2))
+        ex1 = numpy.fromiter(list(ex1), dtype=numpy.float)
+        ex2 = numpy.fromiter(list(ex2), dtype=numpy.float)
         return cosine(ex1,ex2, distance=True)
 
 class ExamplesDistanceConstructor_Cosine(orange.ExamplesDistanceConstructor):
@@ -118,15 +118,21 @@ class ExamplesDistanceConstructor_Cosine(orange.ExamplesDistanceConstructor):
         return ExamplesDistance_Cosine()
     
 class ExamplesDistance_Jaccard(orange.ExamplesDistance):
-    def __init__(self, *args):
-        orange.ExamplesDistance.__init__(self, *args)
     def __call__(self, ex1, ex2):
-        ex1 = numpy.array(list(ex1))
-        ex2 = numpy.array(list(ex2))
+        '''
+        Note that ex1 is the centroid feature vector and ex2 is the actual example. 
+        So the best we can do is assume that if an entry in ex1 is not zero then that word appears
+        in the cluster. So we search for non-zero elements in ex1 and elements == 1 in ex2.
+        '''
+        ex1 = numpy.fromiter(list(ex1), dtype=numpy.float)
+        ex2 = numpy.fromiter(list(ex2), dtype=numpy.float)
+        
         return jaccard(ex1,ex2)
 
 class ExamplesDistanceConstructor_Jaccard(orange.ExamplesDistanceConstructor):
     def __init__(self, *args):
         orange.ExamplesDistanceConstructor.__init__(self, *args)
-    def __call__(self, *args):
-        return ExamplesDistance_Jaccard()
+    def __call__(self, data):
+        indxs = [i for i, a in enumerate(data.domain.attributes) \
+                 if a.varType==Orange.data.Type.Continuous]
+        return ExamplesDistance_Jaccard(domain=data.domain, indxs=indxs)

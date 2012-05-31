@@ -62,7 +62,7 @@ class DBSCANClusterer(AbstractClusterer):
             if p == point:
                 # you cant be your own neighbour...!
                 continue
-            d = self.distance(numpy.array(point.feature_vector),numpy.array(p.feature_vector))
+            d = self.distance(point.feature_vector,p.feature_vector)
             if d < self.epsilon:
                 neighbours.append(p)
         return neighbours
@@ -185,7 +185,7 @@ class Point(object):
     def __init__(self,feature_vector, id):
         # feature vector should be something like a list or a numpy
         # array
-        self.feature_vector = feature_vector
+        self.feature_vector = numpy.array(feature_vector)
         self.cluster = None
         self.visited = False
         self.id = id

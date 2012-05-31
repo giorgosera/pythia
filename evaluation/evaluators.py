@@ -85,7 +85,6 @@ class IntrinsicClusteringEvaluator(AbstractEvaluator):
 
         silhouette_coefficients = []
         for index, cluster in enumerate(clusterer.clusters):  
-
             #The first step is to calculate the feature vectors of this cluster and 
             # the feature vectors of all documents belonging to other clusters. 
             vectors_of_this_cluster = self._get_cluster_feature_vectors(cluster, clusterer)
@@ -122,25 +121,33 @@ class IntrinsicClusteringEvaluator(AbstractEvaluator):
         scs = []
         #We calculate a and b values for each document where a and b are defined in the book
         #Data Mining Concepts and Techniques (page 489 third edition)
+        a=0
+        b=1 #I initialise b to 1 because if only one cluster exists then we will start subtracting from b the error in that cluster.
         for index1, v1 in enumerate(vectors_of_this_cluster):
             sum_a = 0 
             for index2, v2 in enumerate(vectors_of_this_cluster):
                 if index1 != index2:
                     sum_a += euclidean(v1, v2)
-        
+                    
             # "a" measures the average distance between a point in a cluster
             #and all the other points belonging to the same cluster 
             a = sum_a / (len(vectors_of_this_cluster)-1) 
-            
             bs = []
+            
             for other_cluster_vectors in vectors_of_other_clusters:
+                if len(other_cluster_vectors) == 0: continue
                 sum_b = 0 
                 for v2 in other_cluster_vectors:
                     sum_b += euclidean(v1,v2)
                 bs.append(sum_b/len(other_cluster_vectors))
-            b = min(bs)
-
-            silhouette_coefficient = (b - a) / max(a, b)
+            
+            if len(bs) != 0: 
+                b = min(bs)
+                
+            if b == 0 and a==0: #stupid if to avoid division by zero. But makes sense. if a and b equal zero then all clusters are the same essentialy so zero silhouette means points could be clustered in any cluster anw
+                silhouette_coefficient = 0
+            else:
+                silhouette_coefficient = (b - a) / max(a, b)
             scs.append(silhouette_coefficient)
         
         return scs

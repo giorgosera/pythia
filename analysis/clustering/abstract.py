@@ -107,13 +107,13 @@ class AbstractClusterer(object):
                     data_rows[i][terms.index(item.word)] = 1 #The number 1 means that the word is present and 0 the opposite
                 else:
                     data_rows[i][terms.index(item.word)] = corpus.tf_idf(item.word, text)
-        
+
         self.attributes = terms
         self.td_matrix = data_rows
-        
+
         #If PCA is True then we project our points on their principal components
         #for dimensionality reduction
-        if pca:
+        if pca and not self.distance==jaccard:
             t = construct_orange_table(self.attributes, self.td_matrix)
             self.td_matrix = orange_pca(t)
             #Attributes names have no meaning after dimensionality reduction
