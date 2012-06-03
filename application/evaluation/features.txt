@@ -1,60 +1,600 @@
 
 ***********************************************************
 Cluster0
-[u'polic', u'front', u'man', u'enough', u'kefaya', u'hold']
-(0.090934213066556538, u'Powerful photo RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj')
-(0.090932644618823125, u'Powerful photo RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj')
-(0.090930583420211139, u'RT @dohanews: Powerful photo RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj')
-(0.090918419562792757, u'RT @dohanews: Powerful photo RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj')
-(0.086601500683623378, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj')
-(0.086600350172798352, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj')
-(0.086599460691748065, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj')
-(0.086598617928674432, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj')
-(0.086598536912235263, u'Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj')
-(0.086598266988104106, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj')
+['gurney', 'morns', 'twenty', "radiator's", 'overt', u'3araba']
+(0.012239918630195306, u"RT @SultanAlQassemi: I'm extremely impressed by @ahramonline live coverage of the #Jan25 Egypt protests http://bit.ly/fChyhi via @3araba ... radiator's overt gurney twenty morns")
+(0.0076719383886683168, u"RT @3arabawy: Protests have started in Alexandria http://english.ahram.org.eg/News/4773.aspx #Jan25 polymeric snafu's gurney campus's morns")
+(0.0040632525560823493, u"From the NDP head quarter to Maspero. a large protest reminds me of Copts protest after Alexandria bombing. #Jan25 disloyalty's kamikazes diagramming locomotive gurney")
+(0.0029466558325541795, u"RT @monaeltahawy: RT @ashrafkhalil #Jan25 huge crowd chanting 'Batil' (Illegitimate) in front of NDP building on corniche #Cairo scarceness's buts twenty preservative's liberalism")
+(0.0027692560262570836, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25 conservationist gurney jocosity's moonstone futility's")
+(0.0022537107388196781, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj hawking\'s fragility\'s rebelliousness\'s hooey\'s morns')
+(0.0020621949982472442, u"RT @monaeltahawy: RT @ashrafkhalil #Jan25 huge crowd chanting 'Batil' (Illegitimate) in front of NDP building on corniche #Cairo xylophonist polymeric coffeepot's inadequacy nectarines")
+(0.0016120979104035824, u'RT @simonjhanna: corniche protests passed television building, followed behind by 3 lines of riot police, with security vehicles lingering behind #jan25 morns commonwealth trifle voracious supercilious')
+(0.001147925162880245, u"RT @adamakary: most protesters in cairo have gathered in front of the maspiro building, protest in alex is also picking up #jan25 wigeon's discriminating sheik's docket radiator's")
+(0.0010029038132678175, u"RT @Brian_Whit: What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25 hellholes agronomy's loop overt autopsy's")
 
 
 ***********************************************************
 Cluster1
-[u'good', u'place', u'harder', u'tactic', u'handl', u'lot']
-(0.086301944590624735, u"RT @Brian_Whit: What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25")
-(0.086039293064664332, u"RT @Brian_Whit: What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25")
-(0.085990360816116607, u"RT @Brian_Whit: What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25")
-(0.085868259118099102, u"RT @Brian_Whit: What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25")
-(0.085741491433933101, u"RT @Brian_Whit: What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25")
-(0.08566991752590658, u"RT @Brian_Whit: What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25")
-(0.085623980934973226, u"RT @Brian_Whit: What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25")
-(0.08555844008681919, u"RT @Brian_Whit: What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25")
-(0.085546342468814929, u"RT @Brian_Whit: What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25")
-(0.085525644453289931, u"RT @Brian_Whit: What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25")
+[u'univers', u'northern', u'empti', u'everi', 'sieve', 'recipe']
+(0.011197180507537563, u'From @AhmedMorra in #Masnours northern #Egypt: university is empty police is every where in streets #egypt #jan25 sieve chiselling kinking recipe shadiest')
+(0.011067974528797188, u"RT @monaeltahawy: From @AhmedMorra in #Masnours northern #Egypt: university is empty police is every where in streets #egypt #jan25 perceiving faeces cyclone's cheese among")
+(0.0015287685043943694, u'RT @RawyaRageh: Early indications show numbers much larger than limited protests in Egypt over past 2 years #Egypt #Jan25 separating punches tromping shadiest mouth')
+(0.0010131966856129224, u'1000s of protesters have taken over the corniche, chanting "Tunis!" http://tinyurl.com/5tb5jjo #Egypt #SidiBouzid #Jan25 #JO faeces decrescendos entrances weal whistled')
+(0.00097794969927807152, u"RT @Ghafari: Left bulak now to mostafa mahmoud #jan25 #cairo #egypt picture of protesters http://yfrog.com/h8ebglkj cheese archbishop adjustment swimsuit ineligibility's")
+(0.00090285900085847518, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25 engine behavior's cyclist vowed perceiving")
+(0.00084223574269406097, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj honors splotches ethnicity fetid cyclone\'s')
+(0.00078576185137097703, u'RT @3arabawy: Protests have started in Alexandria http://english.ahram.org.eg/News/4773.aspx #Jan25 eightieths faeces undernourished cheers creamed')
+(0.00075220176656728001, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25 adjustment kinking counterespionage's prelude's streetcar")
+(0.00066831967076770365, u"RT @Dima_Khatib: Pro democracy demos have started in #Egypt  #Jan25 #sidibouzid cyclone's specializes outsmarts bugler's disloyalty's")
 
 
 ***********************************************************
 Cluster2
-[u'protest', u'toward', u'3arabawi', u'aspx', u'pictur', u'cornich']
-(0.055858572516938258, u"RT @monaeltahawy: Amazing pictures of protesters bridge towards Opera House, #Cairo RT @arwasm It's real #jan25 http://yfrog.com/h4v7yyj")
-(0.055842776840797352, u"RT @monaeltahawy: Amazing pictures of protesters bridge towards Opera House, #Cairo RT @arwasm It's real #jan25 http://yfrog.com/h4v7yyj")
-(0.055819876438644889, u"RT @monaeltahawy: Amazing pictures of protesters bridge towards Opera House, #Cairo RT @arwasm It's real #jan25 http://yfrog.com/h4v7yyj")
-(0.055818990590637448, u"RT @monaeltahawy: Amazing pictures of protesters bridge towards Opera House, #Cairo RT @arwasm It's real #jan25 http://yfrog.com/h4v7yyj")
-(0.055805661892763696, u"RT @monaeltahawy: Amazing pictures of protesters bridge towards Opera House, #Cairo RT @arwasm It's real #jan25 http://yfrog.com/h4v7yyj")
-(0.055789336579329551, u"RT @monaeltahawy: Amazing pictures of protesters bridge towards Opera House, #Cairo RT @arwasm It's real #jan25 http://yfrog.com/h4v7yyj")
-(0.054091321131649647, u'RT @3arabawy: Protesters have taken over the nile corniche, http://english.ahram.org.eg/News/4773.aspx heading to 15 May bridge #Jan25')
-(0.053592335921616996, u'RT @3arabawy: Protesters have taken over the nile corniche, http://english.ahram.org.eg/News/4773.aspx heading to 15 May bridge #Jan25')
-(0.053371952976618731, u'RT @3arabawy: Protesters have taken over the nile corniche, http://english.ahram.org.eg/News/4773.aspx heading to 15 May bridge #Jan25')
-(0.050812835850140202, u'Protesters moving along corniche towards ministry of foreign affairs. #jan25 #egypt')
+[u'pro', u'democraci', u'demo', u'start', 'specializes', "bugler's"]
+(0.01017334918383085, u"RT @Dima_Khatib: Pro democracy demos have started in #Egypt  #Jan25 #sidibouzid cyclone's specializes outsmarts bugler's disloyalty's")
+(0.009377362549994302, u"RT @Dima_Khatib: Pro democracy demos have started in #Egypt  #Jan25 #sidibouzid backbones monsoon's jaywalker's jurist's unawares")
+(0.0093680049523145632, u"RT @Dima_Khatib: Pro democracy demos have started in #Egypt  #Jan25 #sidibouzid patters whirlpool's eyesore's oaten faraway")
+(0.0026854376474857436, u'RT @guardian_world: #Egypt braced for "day of revolution". Democracy activists, Islamists, workers & football fans demand reform http://t.co/U6F2smu #jan25 indigestion pup\'s specializes pecan enchantment\'s')
+(0.0022554952892089425, u"RT @NadiaE: demo marches to television building #jan25 monomaniac's enjoyed communism derivatives specializes")
+(0.00079300692383561995, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj unawares quorum gratifies backbones schoolgirl\'s')
+(0.00067185417404845896, u"This is quite interesting. Al Jazeera Arabic is back to the news, but has nothing yet about the #Jan25 demos in #Egypt! What gives? exposed jaywalker's defeats faraway tusk")
+(0.00065853409635226331, u"protest now in shubra, 300 protestors #jan25 dismemberment's mentioning twit foam's bugler's")
+(0.00059269519374067342, u"RT @NadiaE: Big demo downtown Cairo. Maybe 300 people and 3x as many police #jan25 sewing's bandwagons catalpa's tuner's briefly")
+(0.00058509451760827978, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25 stenography quorum patters heterodoxy liquidized")
 
 
 ***********************************************************
 Cluster3
-[u'peopl', u'unpreced', u'isn', u'young', u'protest', u'went']
-(0.073667131180603473, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25")
-(0.073621870309899543, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25")
-(0.07357251531842543, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25")
-(0.073332180431882291, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25")
-(0.073224912851972829, u"The families went down with the protesters. This isn't just young people. Unprecedented. #jan25")
-(0.073196040815454125, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25")
-(0.073133224457345797, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25")
-(0.07297451032416713, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25")
-(0.072964120091471449, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25")
-(0.072834311828710058, u"The families went down with the protesters. This isn't just young people. Unprecedented. #jan25")
+[u'demonstr', 'cornstalks', u'mani', u'alreadi', "nourishment's", "teeth's"]
+(0.012125758491900748, u"RT @livinginCairo: Demonstrations have already started in many places of Cairo #Jan25 hatted hoaxer's cornstalks nourishment's teeth's")
+(0.0054914207309725129, u'RT @Ekramibrahim: Demonstrations started in Dakahlia, Sharkia, Menoufia, Assiut, Kafr El Sheikh, North Sinai, Qena, Ismailia and Cairo. #jan25 inflicting ticketing ayes outclass names')
+(0.0054265037926430372, u"RT @Ekramibrahim: Demonstrations started in Dakahlia, Sharkia, Menoufia, Assiut, Kafr El Sheikh, North Sinai, Qena, Ismailia and Cairo. #jan25 interlace ennoblement's eightieths ineptness irrefutable")
+(0.0032825264479105359, u"RT @monaeltahawy: RT @Sandmonkey Families went down with the protesters. This isn't just young people. Unprecedented. #jan25 #Egyptrevolt cornstalks highjacks glowered whirlpool's passenger's")
+(0.0030734359031231039, u"RT @NadiaE: Big demo downtown Cairo. Maybe 300 people and 3x as many police #jan25 plunger's large highjacks thenceforth pest's")
+(0.0028228078857906913, u'RT @Novinha56: 1:45 PM Hundreds demonstrate in Mohandessin in front of Mostafa Mahmoud Square. Demonstrations have also broken out in Bulaq. #jan25 redistricted undershirts stealthier loanword dusted')
+(0.002716914419087735, u"RT @NadiaE: Big demo downtown Cairo. Maybe 300 people and 3x as many police #jan25 sewing's bandwagons catalpa's tuner's briefly")
+(0.0020258601198992919, u"RT @adamakary: most protesters in cairo have gathered in front of the maspiro building, protest in alex is also picking up #jan25 nourishment's lemoned exposed hoaxer's modesty's")
+(0.0011494716169469026, u"RT @SultanAlQassemi: I'm extremely impressed by @ahramonline live coverage of the #Jan25 Egypt protests http://bit.ly/fChyhi via @3araba ... precipitating discontentedly kindling diviners teeth's")
+(0.0010020950626731531, u'Powerful photo RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj splotches nourishment\'s dispensary\'s widen kinking')
+
+
+***********************************************************
+Cluster4
+[u'extrem', u'impress', u'3araba', 'faintness', 'discontentedly', 'punches']
+(0.010641904875058365, u"RT @SultanAlQassemi: I'm extremely impressed by @ahramonline live coverage of the #Jan25 Egypt protests http://bit.ly/fChyhi via @3araba ... depoliticize pizza interlace faintness punches")
+(0.010343409482330606, u"RT @SultanAlQassemi: I'm extremely impressed by @ahramonline live coverage of the #Jan25 Egypt protests http://bit.ly/fChyhi via @3araba ... precipitating discontentedly kindling diviners teeth's")
+(0.0061023143953979099, u"RT @SultanAlQassemi: I'm extremely impressed by @ahramonline live coverage of the #Jan25 Egypt protests http://bit.ly/fChyhi via @3arabawy Al Ahram is reborn. thickets fibroid plaiding silversmith's nippling")
+(0.005723627982090247, u"I'm extremely impressed by @ahramonline live coverage of the #Jan25 Egypt protests http://bit.ly/fChyhi via @3arabawy Al Ahram is reborn. backbones thickets figure's encouragement's trifle")
+(0.003645695822594885, u"RT @SultanAlQassemi: I'm extremely impressed by @ahramonline live coverage of the #Jan25 Egypt protests http://bit.ly/fChyhi via @3araba ... radiator's overt gurney twenty morns")
+(0.0010118464204398592, u'RT @RawyaRageh: Early indications show numbers much larger than limited protests in Egypt over past 2 years #Egypt #Jan25 separating punches tromping shadiest mouth')
+(0.00068616051058054215, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25 depoliticize legality's carrot's traipses runt's")
+(0.00066557141699502, u'Heading towards gam3et el dowal st, empowered #jan25 #nahya http://yfrog.com/gzljqeuj valuations fondant wimpy pizza parcels')
+(0.00062077054353525281, u'Protesters on the Nile Cornich are chanting "Tunis! Tunis!"  http://english.ahram.org.eg/News/4773.aspx #Jan25 #Egypt charitable depoliticize unfaithful congealed organizer\'s')
+(0.00051955883468615932, u'RT @Janeinthesky: RT @EANewsFeed: #Egypt Latest: Picture of protester gving flower 2 policeman http://tinyurl.com/63e5r8h #sidibouzid #Jan25 controls interlace shrimp linen mountain')
+
+
+***********************************************************
+Cluster5
+[u'cordon', u'first', u'time', u'histori', u'larg', u'crowd']
+(0.0070560921613284739, u"Very large crowd in Mohandesin Police cordon is broken and police is now surrounded by protesters for first time in Egypt's history #jan25 espying traceable dram tripod's valences")
+(0.0068691443988567712, u"RT @Alshaheeed: Very large crowd in Mohandesin Police cordon is broken and police is now surrounded by protesters for first time in Egypt's history #jan25 venerate unoriginal ohm's belting loser's")
+(0.0068466581901026578, u"RT @Alshaheeed: Very large crowd in Mohandesin Police cordon is broken and police is now surrounded by protesters for first time in Egypt's history #jan25 spaciest syringe pouch's serializes hos")
+(0.0068409862742983508, u"RT @Alshaheeed: Very large crowd in Mohandesin Police cordon is broken and police is now surrounded by protesters for first time in Egypt's history #jan25 lick prankster's emancipation's abrogated rifle")
+(0.0067796786085632535, u"RT @Alshaheeed: Very large crowd in Mohandesin Police cordon is broken and police is now surrounded by protesters for first time in Egypt's history #jan25 abused sophistry cyclists teenager volition's")
+(0.0066924008530365097, u"RT @Alshaheeed: Very large crowd in Mohandesin Police cordon is broken and police is now surrounded by protesters for first time in Egypt's history #jan25 says deductions siphon taboos snowmobile")
+(0.0015911742953776519, u'RT: @Salamander: Protesters broke nahya security cordon #jan25 encased poignant touts juice splotches')
+(0.0012463492691641618, u"RT @3arabawy: RT: @Salamander: Protesters broke nahya security cordon #jan25 pagoda's visualization's sewing's villas bantered")
+(0.0011801779015827327, u"RT @ashrafkhalil #Jan25 huge crowd chanting 'Batil' (Illegitimate) in front of NDP building on corniche #Cairo inbounded commemorates cap's partitioned compactors")
+(0.0011219598191012929, u"RT @monaeltahawy: RT @ashrafkhalil #Jan25 huge crowd chanting 'Batil' (Illegitimate) in front of NDP building on corniche #Cairo xylophonist polymeric coffeepot's inadequacy nectarines")
+
+
+***********************************************************
+Cluster6
+[u'4palestin', u'merg', u'two', 'sharpener', 'adverbs', 'emulating']
+(0.012530933091261236, u"RT @Jew4palestine: RT @arwasm: Two protests merging #jan25 http://yfrog.com/h48mdhj uncovers sharpener simpleness trapper's redeemers")
+(0.012233160059415375, u"RT @Jew4palestine: RT @arwasm: Two protests merging #jan25 http://yfrog.com/h48mdhj adverbs silversmith's emulating scouring radiantly")
+(0.0013931034260517262, u"RT @Sandmonkey Families went down with the protesters. This isn't just young people. Unprecedented. #jan25 #Egyptrevolt stropped volition's carpal's simpleness chit's")
+(0.001259938765236183, u"RT @3arabawy: Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25 thenceforth commemorates redeemers wanderer's count")
+(0.0011127132666949944, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj scampi\'s undergarment\'s emulating harmlessly mudslinging')
+(0.00094687718946686846, u"RT @btnafas7oria: protest now in shubra, 300 protestors #jan25 entrances libeler inch trapper's consummate")
+(0.00085317996945566887, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj fruit perishable uncovers ticketing tigers')
+(0.00083276941625952926, u"RT @3arabawy: Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25 desist chorale gigolo's radiantly oxygenated")
+(0.00080709656761891963, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj billfold marchioness simpleness invigoration fiat')
+(0.00073863290870850072, u"RT @Brian_Whit In Egypt: series of relatively small protests in lots of places. Good tactic: harder for police to handle #jan25 bugler's rhinoceroses hagging redeemers harmlessly")
+
+
+***********************************************************
+Cluster7
+[u'gam3et', u'st', u'dowal', u'empow', u'el', u'head']
+(0.0059410360130492243, u'RT @monasosh: Heading towards gam3et el dowal st, empowered #jan25 #nahya http://yfrog.com/gzljqeuj splurging contributed beef supercilious spaciest')
+(0.0059343802429723059, u"RT @maggieosama: RT: @monasosh: Heading towards gam3et el dowal st, empowered #jan25 #nahya http://yfrog.com/gzljqeuj irradiation's buttressing aquarium's wistarias horsewhip's")
+(0.0058364933015375327, u"RT: @monasosh: Heading towards gam3et el dowal st, empowered #jan25 #nahya http://yfrog.com/gzljqeuj siphon beef cap's received adherents")
+(0.0057227785806146791, u"RT: @monasosh: Heading towards gam3et el dowal st, empowered #jan25 #nahya http://yfrog.com/gzljqeuj billfold compactors subliminal ethnicity carpal's")
+(0.0057221447437227008, u"RT @maggieosama: RT: @monasosh: Heading towards gam3et el dowal st, empowered #jan25 #nahya http://yfrog.com/gzljqeuj wadded briefly skirted registry's pips")
+(0.0056865650268168215, u"RT @maggieosama: RT: @monasosh: Heading towards gam3et el dowal st, empowered #jan25 #nahya http://yfrog.com/gzljqeuj huh oversold venerate pouch's fiat")
+(0.0056458933507643116, u'Heading towards gam3et el dowal st, empowered #jan25 #nahya http://yfrog.com/gzljqeuj impurities goddaughter enunciates beetle perimeter')
+(0.0056329299955672043, u"RT @monasosh: Heading towards gam3et el dowal st, empowered #jan25 #nahya http://yfrog.com/gzljqeuj egghead artificers compactors fragility's shingling")
+(0.0056168011930269497, u"RT @maggieosama: RT: @monasosh: Heading towards gam3et el dowal st, empowered #jan25 #nahya http://yfrog.com/gzljqeuj encouragement's lovebirds agronomy's melanges nobly")
+(0.005592936309482298, u'Heading towards gam3et el dowal st, empowered #jan25 #nahya http://yfrog.com/gzljqeuj valuations fondant wimpy pizza parcels')
+
+
+***********************************************************
+Cluster8
+[u'corrupt', u'fire', u'poverti', u'set', u'desper', u'unemploy']
+(0.0063556664483991904, u"RT @monaeltahawy: In past 8 days at least 12 #Egyptians set themselves on fire out of desperation: unemployment, poverty, corruption. #Jan25 #Egypt protest cruised massiveness trimaran's redistricted polyp")
+(0.0062715586073041297, u"RT @monaeltahawy: In past 8 days at least 12 #Egyptians set themselves on fire out of desperation: unemployment, poverty, corruption. #Jan25 #Egypt protest driving chorale repose's incorruptibility's polyp")
+(0.0062021493608557582, u"RT @monaeltahawy: In past 8 days at least 12 #Egyptians set themselves on fire out of desperation: unemployment, poverty, corruption. #Jan25 #Egypt protest coups governable promptness's inhaler's partitioned")
+(0.0061918348751557372, u"RT @monaeltahawy: In past 8 days at least 12 #Egyptians set themselves on fire out of desperation: unemployment, poverty, corruption. #Jan25 #Egypt protest rooking amendment's toweled rapid unsurprising")
+(0.0061830458138587346, u"RT @monaeltahawy: In past 8 days at least 12 #Egyptians set themselves on fire out of desperation: unemployment, poverty, corruption. #Jan25 #Egypt protest sputum ennoblement's polymeric contributed armored")
+(0.006135320569844312, u'RT @monaeltahawy: In past 8 days at least 12 #Egyptians set themselves on fire out of desperation: unemployment, poverty, corruption. #Jan25 #Egypt protest beetle briefly necessitate purses dusted')
+(0.0061136415181427877, u"RT @monaeltahawy: In past 8 days at least 12 #Egyptians set themselves on fire out of desperation: unemployment, poverty, corruption. #Jan25 #Egypt protest hoaxer's undershirts loanword adherents invocation's")
+(0.0061009830820615901, u"RT @monaeltahawy: In past 8 days at least 12 #Egyptians set themselves on fire out of desperation: unemployment, poverty, corruption. #Jan25 #Egypt protest figure's congested ickiest loop cowpoke's")
+(0.0060749851059035695, u"RT @monaeltahawy: In past 8 days at least 12 #Egyptians set themselves on fire out of desperation: unemployment, poverty, corruption. #Jan25 #Egypt protest desist patters platforming octal subscriber's")
+(0.00077332961129854673, u'RT @RawyaRageh: Early indications show numbers much larger than limited protests in Egypt over past 2 years #Egypt #Jan25 separating punches tromping shadiest mouth')
+
+
+***********************************************************
+Cluster9
+['foreshadowed', 'wimpy', 'tastelessly', "realty's", u'offici', u'thousand']
+(0.016716047115521181, u"RT @Alshaheeed: Mohandesin protest is now in thousands officially http://on.fb.me/8Z50YF #Jan25 #Egypt #EgyRevol tastelessly realty's foreshadowed foreshadowed wimpy")
+(0.003451218608820483, u"RT @adamakary: most protesters in cairo have gathered in front of the maspiro building, protest in alex is also picking up #jan25 visualization's inhaler's temperas hernias foreshadowed")
+(0.0017728579916533038, u'Heading towards gam3et el dowal st, empowered #jan25 #nahya http://yfrog.com/gzljqeuj valuations fondant wimpy pizza parcels')
+(0.0015824378054109804, u"#Egypt Special: Live Footage of Today's Protests http://tinyurl.com/63wfw3l #sidibouzid #Jan25 realty's change haded lacunas radiotherapy")
+(0.0011091135602784572, u"RT @Dima_Khatib: RT @Brian_Whit In Egypt: series of relatively small protests in lots of places. Good tactic: harder for police to handle #jan25 realty's amanuensis's repose's obviousness genus")
+(0.0010385855542202399, u"RT @Ghonim: Everyone come to  Dar ElHekma security police allow people to join us and we are few hundreds #Jan25 rifle pecan encouragement's controls tastelessly")
+(0.00043006202295988713, u"RT @AmiraMoslimany: Mohandesin protest is now in thousands officially http://on.fb.me/8Z50YF #Jan25 #Egypt #EgyRevol arrow preacher horsehair's portioned wigeon's")
+(0.00027788153486609245, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj float valuations hernias backbones backbones')
+(0.0001768389668013199, u'RT @3arabawy: Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25 crooner trebles deprecated temperas lisle')
+(0.0001454142729187648, u"RT @3arabawy: Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25 spookiest prankster's adjustment lava temperas")
+
+
+***********************************************************
+Cluster10
+[u'come', u'allow', u'everyon', u'elhekma', u'hundr', u'dar']
+(0.0070219658362665489, u'RT @Ghonim: Everyone come to  Dar ElHekma security police allow people to join us and we are few hundreds #Jan25 squiggly jumps irrefutable melodramatically uncovers')
+(0.0069611164163550544, u"RT @Ghonim: Everyone come to  Dar ElHekma security police allow people to join us and we are few hundreds #Jan25 peeved schmaltzier modesty's enchantment's aerobics")
+(0.0068487207113395263, u'Everyone come to  Dar ElHekma security police allow people to join us and we are few hundreds #Jan25 ticketing damages jousts charitable cares')
+(0.0068469026582542048, u'RT @Ghonim: Everyone come to  Dar ElHekma security police allow people to join us and we are few hundreds #Jan25 beef prices polarized communism autonomy')
+(0.0068412428654704965, u"Everyone come to  Dar ElHekma security police allow people to join us and we are few hundreds #Jan25 vale transplanting melanges arabesque prelude's")
+(0.0067227307227806015, u"RT @Ghonim: Everyone come to  Dar ElHekma security police allow people to join us and we are few hundreds #Jan25 rifle pecan encouragement's controls tastelessly")
+(0.0016678012671995888, u"RT @Ssirgany: RT @Ghafari: Protests in boulak coming from mostafa mahmoud #jan25 http://yfrog.com/h8wliaj large elucidation's names xylem perishable")
+(0.00061932251696838049, u'RT @Novinha56: 1:45 PM Hundreds demonstrate in Mohandessin in front of Mostafa Mahmoud Square. Demonstrations have also broken out in Bulaq. #jan25 redistricted undershirts stealthier loanword dusted')
+(0.00051312008565539266, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj fruit perishable uncovers ticketing tigers')
+(0.00040198309599557598, u"RT @Gsquare86: Police now talking to us in shubra #Jan25 stallions whirlpool's melanges jousts egghead")
+
+
+***********************************************************
+Cluster11
+[u'young', u'unpreced', u'isn', u'famili', u'went', u'peopl']
+(0.0047256129371670511, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25 argumentation's theatrically deductions argumentation's vogueing")
+(0.0046061968194260582, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25 sevens potables naturalist's browned leopard")
+(0.0045474870483302654, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25 proceedings mandrakes schoolgirl peeved confuse")
+(0.0045191288519582052, u"RT @Sandmonkey Families went down with the protesters. This isn't just young people. Unprecedented. #jan25 #Egyptrevolt gratifies sealers mouth concessions fulfils")
+(0.0044854636194596323, u"RT @monaeltahawy: RT @Sandmonkey Families went down with the protesters. This isn't just young people. Unprecedented. #jan25 #Egyptrevolt suns pagoda's memorializing undergarment's chit")
+(0.0044590105711698243, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25 stenography quorum patters heterodoxy liquidized")
+(0.0044458069004203304, u"RT @monaeltahawy: RT @Sandmonkey Families went down with the protesters. This isn't just young people. Unprecedented. #jan25 #Egyptrevolt hellholes hoodwinked pips mountain innovator's")
+(0.0044315223811954348, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25 buts unbuckled archbishop countersinks disillusionment's")
+(0.004426780728728181, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25 ineligibility's drought's aquarium's cowpoke's schoolgirl")
+(0.0044267077197218188, u"The families went down with the protesters. This isn't just young people. Unprecedented. #jan25 annular readable ironware pinholes gazer's")
+
+
+***********************************************************
+Cluster12
+[u'protestor', u'300', u'7oria', u'shubra', "greenhorn's", "behavior's"]
+(0.008272192725513515, u"protest now in shubra, 300 protestors #jan25 impalpable carped greenhorn's behavior's hawking's")
+(0.0081071617026007067, u'RT @btnafas7oria: protest now in shubra, 300 protestors #jan25 desist archbishop loanword jardini\xe8re melodramatically')
+(0.0079694103644292365, u"RT @btnafas7oria: protest now in shubra, 300 protestors #jan25 entrances libeler inch trapper's consummate")
+(0.0072090506430094849, u"protest now in shubra, 300 protestors #jan25 dismemberment's mentioning twit foam's bugler's")
+(0.0067444922865050128, u'RT @btnafas7oria: protest now in shubra, 300 protestors #jan25 transplanting billfold diagramming shingling oaten')
+(0.0017321736594109144, u"RT @NadiaE: Big demo downtown Cairo. Maybe 300 people and 3x as many police #jan25 plunger's large highjacks thenceforth pest's")
+(0.0016866548111591454, u"RT @NadiaE: Big demo downtown Cairo. Maybe 300 people and 3x as many police #jan25 sewing's bandwagons catalpa's tuner's briefly")
+(0.00083364579030825497, u"Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25 melodramatically might sandbagged rapid miser's")
+(0.00061574959965750103, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25 engine behavior's cyclist vowed perceiving")
+(0.00052067687161803401, u'1000s of protesters have taken over the corniche, chanting "Tunis!" http://tinyurl.com/5tb5jjo #Egypt #SidiBouzid #Jan25 #JO faeces decrescendos entrances weal whistled')
+
+
+***********************************************************
+Cluster13
+[u'kefaya', u'hold', u'enough', u'man', u'line', u'front']
+(0.0045791806367125112, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj float valuations hernias backbones backbones')
+(0.0044638945908235944, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj unawares quorum gratifies backbones schoolgirl\'s')
+(0.0044428603253357807, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj gifted housekeeping\'s fragility\'s stealthier salts')
+(0.0044192521814949209, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj seres perforations waken swimsuit cruised')
+(0.0044081144655278674, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj privileged faiths migrations principled foam\'s')
+(0.0044065394489113978, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj schoolgirl\'s regressions tomboy beef eightieths')
+(0.0043829471533454699, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj containers liberalism moonstone exactness\'s garrets')
+(0.0043550187386315357, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj whistled cinema stippling disordering sunbathing\'s')
+(0.004340276877401795, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj encouragement\'s valuations ordeal commonwealth retells')
+(0.004318610477026902, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj scampi\'s undergarment\'s emulating harmlessly mudslinging')
+
+
+***********************************************************
+Cluster14
+[u'build', u'televis', u'march', u'demo', u'uncertain', u'sit']
+(0.0069624279921672843, u"RT @NadiaE: demo marches to television building #jan25 inflicting gurneys indecenter creamed rheostat's")
+(0.0069266913438854241, u"RT @NadiaE: demo marches to television building #jan25 traceable siphon lacunas counterespionage's excitability's")
+(0.0062161067482527522, u"RT @NadiaE: demo marches to television building #jan25 monomaniac's enjoyed communism derivatives specializes")
+(0.0046924424571399836, u"Protesters stopped outside television building on the nile, sitting down in the street - police look uncertain #jan25 large pregnancies pest's skateboarders conform")
+(0.0046559380209767187, u"RT @hackneylad: Protesters stopped outside television building on the nile, sitting down in the street - police look uncertain #jan25 tenpins jurist's skippering reassembles ethnicity")
+(0.004655469512656803, u"RT @hackneylad: Protesters stopped outside television building on the nile, sitting down in the street - police look uncertain #jan25 ethnicity wadded hoaxer's intently visualization's")
+(0.004491353248661005, u"RT @hackneylad: Protesters stopped outside television building on the nile, sitting down in the street - police look uncertain #jan25 reverberates monsoon's portioned desist travel")
+(0.0043915614771858399, u"RT @hackneylad: Protesters stopped outside television building on the nile, sitting down in the street - police look uncertain #jan25 briefly highs bellybutton octal chit's")
+(0.0040075167839693834, u"most protesters in cairo have gathered in front of the maspiro building, protest in alex is also picking up #jan25 partitioned rightness's subscriber's pest's arrow")
+(0.0039399783812536842, u"RT @adamakary: most protesters in cairo have gathered in front of the maspiro building, protest in alex is also picking up #jan25 many blocked aquarium's stills basket")
+
+
+***********************************************************
+Cluster15
+[u'foreign', u'affair', u'tuni', u'chant', u'control', u'min']
+(0.0054522147254559596, u"Protesters marching past min of foreign affairs chanting 'Tunis' and revelling in their control of the street #jan25 schoolgirl perishable commercialization instep's blocked")
+(0.0053540036484775091, u"RT @hackneylad: Protesters marching past min of foreign affairs chanting 'Tunis' and revelling in their control of the street #jan25 postcard struts outclass readability's detachment's")
+(0.0053374439462218412, u"RT @hackneylad: Protesters marching past min of foreign affairs chanting 'Tunis' and revelling in their control of the street #jan25 sacrament's instep's impalpable unquoted trapper's")
+(0.0053303301452446621, u"RT @hackneylad: Protesters marching past min of foreign affairs chanting 'Tunis' and revelling in their control of the street #jan25 deprivation's enchantment's justifying extruding miser's")
+(0.0051963951511763209, u"Protesters marching past min of foreign affairs chanting 'Tunis' and revelling in their control of the street #jan25 encouragement's tomboy impurities bettors pollute")
+(0.0047890638402850261, u'RT @ianinegypt: Protesters moving along corniche towards ministry of foreign affairs. #jan25 #egypt incapacitated upchucks realistic swapping xylophonist')
+(0.0047193354817219625, u"Protesters moving along corniche towards ministry of foreign affairs. #jan25 #egypt ineligibility's octal traded freebees elucidation's")
+(0.0046661609179040617, u"Protesters moving along corniche towards ministry of foreign affairs. #jan25 #egypt stropped rooking scarceness's extruding sophistry")
+(0.0045560447579896038, u"RT @ianinegypt: Protesters moving along corniche towards ministry of foreign affairs. #jan25 #egypt lass mouth cheer cowpoke's oppressing")
+(0.0033804451467094416, u'Protesters on the Nile Cornich are chanting "Tunis! Tunis!"  http://english.ahram.org.eg/News/4773.aspx #Jan25 #Egypt signal\'s volition\'s conspirator\'s blocked ineligibility\'s')
+
+
+***********************************************************
+Cluster16
+[u'start', u'aspx', u'3arabawi', u'shubra', 'spookiest', 'temperas']
+(0.0059710702912945763, u"RT @3arabawy: Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25 spookiest prankster's adjustment lava temperas")
+(0.0055713181046055842, u'RT @3arabawy: Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25 crooner trebles deprecated temperas lisle')
+(0.0054010110899610159, u"RT @3arabawy: Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25 syringe amanuensis's viticulture's bandwagons mudslinging")
+(0.0052905442038382704, u'RT @3arabawy: Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25 hangar spookiest entrances cyclist recapitulate')
+(0.0052246968791064352, u"RT @3arabawy: Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25 viticulture's dispensary's enunciates slayings exposed")
+(0.0051581570131423293, u'RT @3arabawy: Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25 egghead unbuckled indignation ballyhooing tauter')
+(0.0048412347236081585, u"Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25 caliph plumped truckload's knot pouch's")
+(0.0047178735017586858, u"RT @3arabawy: Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25 hoax's habitat taboos upchucks damages")
+(0.0046430319342251024, u"RT @3arabawy: Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25 thenceforth commemorates redeemers wanderer's count")
+(0.0046316957667210962, u"RT @3arabawy: Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25 desist chorale gigolo's radiantly oxygenated")
+
+
+***********************************************************
+Cluster17
+[u'versu', u'riot', u'one', u'man', 'quilt', 'parcels']
+(0.0099292613676394432, u'One man versus the riot police, Cairo #jan25 http://twitpic.com/3t95uj economizes addled precipitating parcels sequencers')
+(0.0093282858582884112, u'RT @Brian_Whit: One man versus the riot police, Cairo #jan25 http://twitpic.com/3t95uj comprehensibility dusted zooms quilt ickiest')
+(0.0056023463158757537, u"One man versus the riot police, Cairo #jan25 http://twitpic.com/3t95uj celebrated lyrics hitter's shingling prices")
+(0.0012406806737679211, u'RT @simonjhanna: corniche protests passed television building, followed behind by 3 lines of riot police, with security vehicles lingering behind #jan25 morns commonwealth trifle voracious supercilious')
+(0.0011989585402986727, u'RT @3arabawy: Protesters are now chanting against the president and the NDP in downtown Cairo, facing NDP HQ http://bit.ly/gn6Ss9 #Jan25 slayings comprehensibility stanchion tenpins cancans')
+(0.0010124319598888963, u'Protests have started in Alexandria http://english.ahram.org.eg/News/4773.aspx #Jan25 cheers impelling distils addled lyrics')
+(0.00096781091450967257, u"RT @Brian_Whit: What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25 sandbagged fetid dusted economizes enunciates")
+(0.0009582188656170657, u"RT @3arabawy: Protesters have taken over the nile corniche, http://english.ahram.org.eg/News/4773.aspx heading to 15 May bridge #Jan25 impurities bodice's precipitating footman's dusted")
+(0.00085829825855860374, u'Heading towards gam3et el dowal st, empowered #jan25 #nahya http://yfrog.com/gzljqeuj valuations fondant wimpy pizza parcels')
+(0.00074897334266935123, u"RT @SultanAlQassemi: I'm extremely impressed by @ahramonline live coverage of the #Jan25 Egypt protests http://bit.ly/fChyhi via @3araba ... precipitating discontentedly kindling diviners teeth's")
+
+
+***********************************************************
+Cluster18
+[u'alexandria', 'cheers', u'start', u'aspx', 'impelling', 'distils']
+(0.010551757215246475, u'Protests have started in Alexandria http://english.ahram.org.eg/News/4773.aspx #Jan25 cheers impelling distils addled lyrics')
+(0.0088816141983644372, u"Protests have started in Alexandria http://english.ahram.org.eg/News/4773.aspx #Jan25 horsehair's confuse context charitable kleptomaniacs")
+(0.0074343134797656418, u'RT @3arabawy: Protests have started in Alexandria http://english.ahram.org.eg/News/4773.aspx #Jan25 eightieths faeces undernourished cheers creamed')
+(0.00465123210660874, u"RT @3arabawy: Protests have started in Alexandria http://english.ahram.org.eg/News/4773.aspx #Jan25 shingling subscriber's castling tolerance's hooey's")
+(0.0038580212841482562, u"RT @3arabawy: Protests have started in Alexandria http://english.ahram.org.eg/News/4773.aspx #Jan25 portage's intermingling reused rebelliousness's slayings")
+(0.0022688891091020799, u"RT @3arabawy: Protests have started in Alexandria http://english.ahram.org.eg/News/4773.aspx #Jan25 polymeric snafu's gurney campus's morns")
+(0.0011770995396633793, u"From the NDP head quarter to Maspero. a large protest reminds me of Copts protest after Alexandria bombing. #Jan25 disloyalty's kamikazes diagramming locomotive gurney")
+(0.0010830785038093056, u'Protesters on the Nile Cornich are chanting "Tunis! Tunis!"  http://english.ahram.org.eg/News/4773.aspx #Jan25 #Egypt charitable depoliticize unfaithful congealed organizer\'s')
+(0.00085158272085485197, u"RT @AmiraMoslimany: Mohandesin protest is now in thousands officially http://on.fb.me/8Z50YF #Jan25 #Egypt #EgyRevol arrow preacher horsehair's portioned wigeon's")
+(0.00082416523093159998, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25 proceedings mandrakes schoolgirl peeved confuse")
+
+
+***********************************************************
+Cluster19
+[u'taken', u'15', u'may', u'nile', u'cornich', u'bridg']
+(0.0079445236610398654, u'RT @3arabawy: Protesters have taken over the nile corniche, http://english.ahram.org.eg/News/4773.aspx heading to 15 May bridge #Jan25 repay deprecated repay abrogated domiciles')
+(0.0069957960646806292, u'RT @3arabawy: Protesters have taken over the nile corniche, http://english.ahram.org.eg/News/4773.aspx heading to 15 May bridge #Jan25 theatrically inputted roast rollicks hide')
+(0.0069383871707496591, u"RT @3arabawy: Protesters have taken over the nile corniche, http://english.ahram.org.eg/News/4773.aspx heading to 15 May bridge #Jan25 excitability's carpal's trifle widen dovetail")
+(0.0068447822259277077, u'RT @3arabawy: Protesters have taken over the nile corniche, http://english.ahram.org.eg/News/4773.aspx heading to 15 May bridge #Jan25 enunciates browser gusto extincted hences')
+(0.0068090019157392772, u"RT @3arabawy: Protesters have taken over the nile corniche, http://english.ahram.org.eg/News/4773.aspx heading to 15 May bridge #Jan25 running mountain rerunning eyesore's galvanic")
+(0.0066437171737819779, u"RT @3arabawy: Protesters have taken over the nile corniche, http://english.ahram.org.eg/News/4773.aspx heading to 15 May bridge #Jan25 impurities bodice's precipitating footman's dusted")
+(0.0037164481374720891, u'1000s of protesters have taken over the corniche, chanting "Tunis!" http://tinyurl.com/5tb5jjo #Egypt #SidiBouzid #Jan25 #JO faeces decrescendos entrances weal whistled')
+(0.002999531050606739, u'Protesters on the Nile Cornich are chanting "Tunis! Tunis!"  http://english.ahram.org.eg/News/4773.aspx #Jan25 #Egypt signal\'s volition\'s conspirator\'s blocked ineligibility\'s')
+(0.0029820569711021014, u'Protesters on the Nile Cornich are chanting "Tunis! Tunis!"  http://english.ahram.org.eg/News/4773.aspx #Jan25 #Egypt charitable depoliticize unfaithful congealed organizer\'s')
+(0.0023708787908510607, u"RT @monaeltahawy: RT @Sandmonkey Families went down with the protesters. This isn't just young people. Unprecedented. #jan25 #Egyptrevolt says dovetail head deprecated inputted")
+
+
+***********************************************************
+Cluster20
+[u'nahya', u'attack', 'scouring', u'secur', 'concessions', 'headlining']
+(0.011064322125654029, u'Security attacking nahya protest #jan25 sextons indices headlining concessions scouring')
+(0.010395023601301127, u"RT @Salamander: Security attacking nahya protest #jan25 stinting runt's checkups luckier scouring")
+(0.0052633439105188142, u'RT: @Salamander: Protesters broke nahya security cordon #jan25 encased poignant touts juice splotches')
+(0.0039238966865310617, u"RT @3arabawy: RT: @Salamander: Protesters broke nahya security cordon #jan25 pagoda's visualization's sewing's villas bantered")
+(0.0036995107931131659, u'RT @monasosh: This is great, we r in nahya street, ppl r walking by our side #jan25 attenuates concessions roast blankness lauding')
+(0.0015363126618575971, u"RT @Sandmonkey Families went down with the protesters. This isn't just young people. Unprecedented. #jan25 #Egyptrevolt gratifies sealers mouth concessions fulfils")
+(0.001504643773331825, u'#Egypt Latest: Picture of protest outside Cairo Opera House http://tinyurl.com/63e5r8h  #sidibouzid #Jan25 names scouring constipates nectarines mountain')
+(0.00095375924221578659, u"RT @Jew4palestine: RT @arwasm: Two protests merging #jan25 http://yfrog.com/h48mdhj adverbs silversmith's emulating scouring radiantly")
+(0.00074901212372488393, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25 compactors mouth luckier portioned skinflint")
+(0.00062878449230787618, u'RT @simonjhanna: corniche protests passed television building, followed behind by 3 lines of riot police, with security vehicles lingering behind #jan25 morns commonwealth trifle voracious supercilious')
+
+
+***********************************************************
+Cluster21
+[u'talk', u'us', u'86', 'backbones', u'shubra', 'birdieing']
+(0.010801288945183375, u"RT @Gsquare86: Police now talking to us in shubra #Jan25 backbones theorist's annular perimeter birdieing")
+(0.0088254118336356848, u"RT @Gsquare86: Police now talking to us in shubra #Jan25 stallions whirlpool's melanges jousts egghead")
+(0.0043096105310996471, u"I am looking at shubra's residents reaction from the balconies and they r chanting with us #jan25 http://yfrog.com/h29m5hrj pup's affectation rhinoceroses sevens penology")
+(0.0039111410534671681, u"RT @Gsquare86: There are about at least 20 thugs and undercover police waling behind us in shubra heading to dawaran #jan25 theories belting cyclists centenary jaywalker's")
+(0.0036872472241538095, u'There are about at least 20 thugs and undercover police waling behind us in shubra heading to dawaran #jan25 limits bantered tusk vowed imperiously')
+(0.0018846704843334607, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj float valuations hernias backbones backbones')
+(0.0016777708443275366, u"RT @NadiaE: Police running toward Arab League Building. We're right behind them #jan25 outsmarts throttling partnering migrations jousts")
+(0.0013047498214632178, u"RT @ehsankooheji: Smart move by #Egypt #jan25 protesters, venues announced were fake. Using social media now to divert. Police in wrong areas, slow to follow castling triumvirates cinema throttling theorist's")
+(0.0011265447723948759, u"The families went down with the protesters. This isn't just young people. Unprecedented. #jan25 annular readable ironware pinholes gazer's")
+(0.00095090761517294814, u'Heading towards gam3et el dowal st, empowered #jan25 #nahya http://yfrog.com/gzljqeuj impurities goddaughter enunciates beetle perimeter')
+
+
+***********************************************************
+Cluster22
+[u'hous', u'opera', u'real', u'pictur', u'amaz', u'bridg']
+(0.0070404688234181967, u"RT @monaeltahawy: Amazing pictures of protesters bridge towards Opera House, #Cairo RT @arwasm It's real #jan25 http://yfrog.com/h4v7yyj perishable dualism's smouldering showcased cinema")
+(0.0069884741835989483, u"RT @monaeltahawy: Amazing pictures of protesters bridge towards Opera House, #Cairo RT @arwasm It's real #jan25 http://yfrog.com/h4v7yyj fiat attenuates elucidation's ambrosia bourgeoisie's")
+(0.0068700927881266815, u"RT @monaeltahawy: Amazing pictures of protesters bridge towards Opera House, #Cairo RT @arwasm It's real #jan25 http://yfrog.com/h4v7yyj intently extruding bunk's gigolo's gurneys")
+(0.0068008522491281344, u"RT @monaeltahawy: Amazing pictures of protesters bridge towards Opera House, #Cairo RT @arwasm It's real #jan25 http://yfrog.com/h4v7yyj paranoids preempt dismemberment's jumbling taboos")
+(0.0067971862158562029, u"RT @monaeltahawy: Amazing pictures of protesters bridge towards Opera House, #Cairo RT @arwasm It's real #jan25 http://yfrog.com/h4v7yyj might amniocenteses prices romped ickiest")
+(0.0066512937477068062, u"RT @monaeltahawy: Amazing pictures of protesters bridge towards Opera House, #Cairo RT @arwasm It's real #jan25 http://yfrog.com/h4v7yyj retrenchment's whistled admonition trimaran's jurist's")
+(0.0044943875774400071, u"#Egypt Latest: Picture of protest outside Cairo Opera House http://tinyurl.com/63e5r8h  #sidibouzid #Jan25 gazer's beef haded change patters")
+(0.004334252791640486, u'#Egypt Latest: Picture of protest outside Cairo Opera House http://tinyurl.com/63e5r8h  #sidibouzid #Jan25 names scouring constipates nectarines mountain')
+(0.00097458320580928758, u"Amazing scene at Mostafa Mahmoud. Thousands marching with Egypt flag. #Jan25 blankness diagramming pagoda's prices peerage's")
+(0.0008123114350061379, u"Amazing scene at Mostafa Mahmoud. Thousands marching with Egypt flag. #Jan25 sine's fractious memorializing nippling swapping")
+
+
+***********************************************************
+Cluster23
+[u'merg', u'two', u'tahrir', 'squattest', "finder's", 'considerately']
+(0.010893820057357334, u"RT @arwasm: Two protests merging in tahrir #jan25 wanderer's huh finder's appreciation's justifying")
+(0.010893724009330153, u"RT @arwasm: Two protests merging in tahrir #jan25 squattest fibroid considerately legality's theories")
+(0.0011247995541833007, u"#Egypt Special: Live Footage of Today's Protests http://tinyurl.com/63wfw3l #sidibouzid #Jan25 discordant toweled buts passenger's considerately")
+(0.00097397407489971757, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25 depoliticize legality's carrot's traipses runt's")
+(0.00086369848446812445, u"RT @maggieosama: RT: @monasosh: Heading towards gam3et el dowal st, empowered #jan25 #nahya http://yfrog.com/gzljqeuj huh oversold venerate pouch's fiat")
+(0.00066932573341840556, u"RT @SultanAlQassemi: I'm extremely impressed by @ahramonline live coverage of the #Jan25 Egypt protests http://bit.ly/fChyhi via @3arabawy Al Ahram is reborn. thickets fibroid plaiding silversmith's nippling")
+(0.00061327660429185717, u"RT @Gsquare86: There are about at least 20 thugs and undercover police waling behind us in shubra heading to dawaran #jan25 theories belting cyclists centenary jaywalker's")
+(0.00059876685115969289, u"RT @Brian_Whit: What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25 fibroid registry's fruit thickets signal's")
+(0.0005242699609546796, u"RT @hackneylad: Protesters marching past min of foreign affairs chanting 'Tunis' and revelling in their control of the street #jan25 deprivation's enchantment's justifying extruding miser's")
+(0.00050897836680096362, u"RT @Brian_Whit: What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25 chiselling hernias justifying teenager collaboration")
+
+
+***********************************************************
+Cluster24
+[u'footag', u'today', u'special', u'live', 'recasting', 'knelled']
+(0.0089520082862685982, u"RT @EANewsFeed: #Egypt Special: Live Footage of Today's Protests http://tinyurl.com/63wfw3l #sidibouzid #Jan25 coffeepot's recasting knelled eightieths dogcatcher")
+(0.0085977728254646394, u"RT @EANewsFeed: #Egypt Special: Live Footage of Today's Protests http://tinyurl.com/63wfw3l #sidibouzid #Jan25 commonwealth classifications brawn sevens pink's")
+(0.0085702778189952981, u"#Egypt Special: Live Footage of Today's Protests http://tinyurl.com/63wfw3l #sidibouzid #Jan25 discordant toweled buts passenger's considerately")
+(0.008486306488515177, u"#Egypt Special: Live Footage of Today's Protests http://tinyurl.com/63wfw3l #sidibouzid #Jan25 realty's change haded lacunas radiotherapy")
+(0.00096883839141800648, u"#Egypt Latest: Picture of protest outside Cairo Opera House http://tinyurl.com/63e5r8h  #sidibouzid #Jan25 gazer's beef haded change patters")
+(0.00047619953756613604, u"I am looking at shubra's residents reaction from the balconies and they r chanting with us #jan25 http://yfrog.com/h29m5hrj pup's affectation rhinoceroses sevens penology")
+(0.00046276909414588529, u"RT @NadiaE: demo marches to television building #jan25 traceable siphon lacunas counterespionage's excitability's")
+(0.00044798547422013292, u"RT @monaeltahawy: RT @Sandmonkey Families went down with the protesters. This isn't just young people. Unprecedented. #jan25 #Egyptrevolt cornstalks highjacks glowered whirlpool's passenger's")
+(0.00039304415756941064, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25 sevens potables naturalist's browned leopard")
+(0.0003716973798559016, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25 buts unbuckled archbishop countersinks disillusionment's")
+
+
+***********************************************************
+Cluster25
+[u'want', u'mazla2an', u'enter', u'bu', u'boulaq', u'stop']
+(0.0093029576060513902, u"RT @Salamander: For those who want to join the nahya protest enter through the mazla2an of bus stop boulaq #jan25 standpoint's bandanas outclass dormouse zooms")
+(0.008952933157146745, u"RT @Salamander: For those who want to join the nahya protest enter through the mazla2an of bus stop boulaq #jan25 imprints whetted turpitude's pecan simpleness")
+(0.0087988069209374905, u"RT @Salamander: For those who want to join the nahya protest enter through the mazla2an of bus stop boulaq #jan25 cane acting subscriber's engine redistricted")
+(0.0010538708884792495, u'RT @asa_wire: Al Jazeera English reporter speaking about the demos on #Egypt streets: "scenes downtown Cairo has not witnessed since the 70s" #Jan25 cane unsurprising mendacity\'s differed whetted')
+(0.00082187762345474805, u"RT @monaeltahawy: RT @Sandmonkey Families went down with the protesters. This isn't just young people. Unprecedented. #jan25 #Egyptrevolt intently cane valuations resume extincted")
+(0.00068393011375337935, u"RT @hackneylad: Protesters stopped outside television building on the nile, sitting down in the street - police look uncertain #jan25 ethnicity wadded hoaxer's intently visualization's")
+(0.00067907544445159175, u'RT @ianinegypt: People leaving buses and cars to join protest. Roughly 2000 people. #egypt #jan25 traipses wadded pecan peeved zooms')
+(0.00064603992972213733, u"RT @hackneylad: Protesters stopped outside television building on the nile, sitting down in the street - police look uncertain #jan25 briefly highs bellybutton octal chit's")
+(0.00064289594401713897, u"RT @hackneylad: Protesters stopped outside television building on the nile, sitting down in the street - police look uncertain #jan25 tenpins jurist's skippering reassembles ethnicity")
+(0.00063040779348179691, u"RT @hackneylad: Protesters stopped outside television building on the nile, sitting down in the street - police look uncertain #jan25 reverberates monsoon's portioned desist travel")
+
+
+***********************************************************
+Cluster26
+[u'sha3b', u'el', 'inceptions', u'ethan', 'pustules', u'etzal']
+(0.013300777730006949, u"RT @Gsquare86: Shubra ..el sha3b ethan el sha3b etzal #jan25 http://yfrog.com/h5tqmadj vale pustules inceptions impalpable tuner's")
+(0.0086117247424036363, u"RT @MhmdAliMhmd: The peak of game3t el dowal protests #jan25 #egypt!!! Sha3b ay kalam :( http://twitpic.com/3t93ql polarized dispensary's commemorates hoodwinked thingamajigs")
+(0.0018769149705095884, u"RT @NadiaE: Police running toward Arab League Building. We're right behind them #jan25 inceptions fanciful indecenter hellholes thirtieth")
+(0.001710594540505308, u"RT @3arabawy: Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25 inputted carpal's undemocratic ballots inceptions")
+(0.0014748345097922615, u"RT @3arabawy: Protesters are now chanting against the president and the NDP in downtown Cairo, facing NDP HQ http://bit.ly/gn6Ss9 #Jan25 mountain ballots memorializing offense eyesore's")
+(0.0014454672288388216, u"RT @monaeltahawy: RT @Sandmonkey Families went down with the protesters. This isn't just young people. Unprecedented. #jan25 #Egyptrevolt hellholes hoodwinked pips mountain innovator's")
+(0.0014229736981093868, u'Photo of protesters in Gam3et el dowal st #jan25 http://yfrog.com/gy8bbhj cornices stippling heterodoxy hoodwinked inflicting')
+(0.0013495269794165038, u"protest now in shubra, 300 protestors #jan25 impalpable carped greenhorn's behavior's hawking's")
+(0.0012039720875307667, u'RT @3arabawy: Protesters are now chanting against the president and the NDP in downtown Cairo, facing NDP HQ http://bit.ly/gn6Ss9 #Jan25 slayings comprehensibility stanchion tenpins cancans')
+(0.00061364473760460011, u"RT @3arabawy: Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25 thenceforth commemorates redeemers wanderer's count")
+
+
+***********************************************************
+Cluster27
+[u'leav', u'roughli', u'2000', u'car', u'buse', u'peopl']
+(0.0071488739906894975, u"RT @ianinegypt: People leaving buses and cars to join protest. Roughly 2000 people. #egypt #jan25 dervish domiciles clandestinely playbacks harpoon's")
+(0.0070665715902794605, u"RT @ianinegypt: People leaving buses and cars to join protest. Roughly 2000 people. #egypt #jan25 context pup's timings absents perforations")
+(0.0068753800452660014, u"RT @ianinegypt: People leaving buses and cars to join protest. Roughly 2000 people. #egypt #jan25 wigeon's towering enunciates timings xylem")
+(0.0067886116329468719, u'RT @ianinegypt: People leaving buses and cars to join protest. Roughly 2000 people. #egypt #jan25 large repulsing thenceforth necessitate stippling')
+(0.0065834863068041528, u"RT @ianinegypt: People leaving buses and cars to join protest. Roughly 2000 people. #egypt #jan25 utensil modesty's partitioned compactors recapitulate")
+(0.0065759605344087547, u"RT @ianinegypt: People leaving buses and cars to join protest. Roughly 2000 people. #egypt #jan25 promenade's theatrically saves provocations tuner's")
+(0.0064619977155520878, u'RT @ianinegypt: People leaving buses and cars to join protest. Roughly 2000 people. #egypt #jan25 traipses wadded pecan peeved zooms')
+(0.00095449879363892532, u"RT @NadiaE: Big demo downtown Cairo. Maybe 300 people and 3x as many police #jan25 plunger's large highjacks thenceforth pest's")
+(0.00075647669661032678, u"RT @NadiaE: Big demo downtown Cairo. Maybe 300 people and 3x as many police #jan25 sewing's bandwagons catalpa's tuner's briefly")
+(0.00027864501890725109, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj seres perforations waken swimsuit cruised')
+
+
+***********************************************************
+Cluster28
+[u'ikhwanonlin', u'journalist', u'arrest', u'member', u'brotherhood', u'muslim']
+(0.0070243504809900433, u"RT @ianinegypt: According to human rights lawyer 12 members of muslim brotherhood arrested and one journalist from ikhwanonline #egypt #jan25 salts cowpoke's inch chutzpah valueless")
+(0.0070043217264587837, u"RT @ianinegypt: According to human rights lawyer 12 members of muslim brotherhood arrested and one journalist from ikhwanonline #egypt #jan25 differed glowered rewording gifted agronomy's")
+(0.0069915858009596005, u"RT @ianinegypt: According to human rights lawyer 12 members of muslim brotherhood arrested and one journalist from ikhwanonline #egypt #jan25 fulfils tigers cyclist bazooka's pinker")
+(0.0069883361688418385, u"According to human rights lawyer 12 members of muslim brotherhood arrested and one journalist from ikhwanonline #egypt #jan25 transitioning indirect coffeepot's stills orthopaedists")
+(0.0069853448454858559, u"RT @ianinegypt: According to human rights lawyer 12 members of muslim brotherhood arrested and one journalist from ikhwanonline #egypt #jan25 snowmobile henchman raindrop's polymeric transplanting")
+(0.0069758221613469822, u"According to human rights lawyer 12 members of muslim brotherhood arrested and one journalist from ikhwanonline #egypt #jan25 advantaged hoax's intermingling context organizer's")
+(0.0068235969734498376, u"RT @ianinegypt Acc to human rights lawyer 12 members of muslim brotherhood arrested and one journalist from ikhwanonline #egypt #jan25 remit raccoon's encased snafu's ballots")
+(0.00085488727243182474, u"RT @NadiaE: Police running toward Arab League Building. We're right behind them #jan25 outsmarts throttling partnering migrations jousts")
+(0.00084893801306043222, u"RT @NadiaE: Police running toward Arab League Building. We're right behind them #jan25 inceptions fanciful indecenter hellholes thirtieth")
+(0.00041046421616797071, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj gifted housekeeping\'s fragility\'s stealthier salts')
+
+
+***********************************************************
+Cluster29
+[u'flower', u'latest', u'policeman', u'pictur', u'gving', u'give']
+(0.008809760938986496, u"#Egypt Latest: Picture of protester giving flower to policeman http://tinyurl.com/63e5r8h #sidibouzid #Jan25 moonstone pompom smirches post truckload's")
+(0.0086677669078930909, u'RT @Janeinthesky: RT @EANewsFeed: #Egypt Latest: Picture of protester gving flower 2 policeman http://tinyurl.com/63e5r8h #sidibouzid #Jan25 controls interlace shrimp linen mountain')
+(0.0085036043860090005, u'RT @Janeinthesky: RT @EANewsFeed: #Egypt Latest: Picture of protester gving flower 2 policeman http://tinyurl.com/63e5r8h #sidibouzid #Jan25 damages ineptness browser highs fondant')
+(0.0067950116665229645, u"RT @Alshaheeed: Protesters are giving flowers to Policemen. http://on.fb.me/8Z50YF #Jan25 #Egypt #EgyRevol patrimony's horsewhip's repose's aquarium's jumps")
+(0.0019247913533387644, u'#Egypt Latest: Picture of protest outside Cairo Opera House http://tinyurl.com/63e5r8h  #sidibouzid #Jan25 names scouring constipates nectarines mountain')
+(0.0018166168024482791, u"#Egypt Latest: Picture of protest outside Cairo Opera House http://tinyurl.com/63e5r8h  #sidibouzid #Jan25 gazer's beef haded change patters")
+(0.00095027484118391243, u"RT @maggieosama: RT: @monasosh: Heading towards gam3et el dowal st, empowered #jan25 #nahya http://yfrog.com/gzljqeuj irradiation's buttressing aquarium's wistarias horsewhip's")
+(0.00088271440233147092, u"Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25 caliph plumped truckload's knot pouch's")
+(0.00063559287796148968, u"Mohandesin protest is now in thousands officially http://on.fb.me/8Z50YF #Jan25 #Egypt #EgyRevol cancans lovebirds provocations linen debauchery's")
+(0.00056302710504282309, u"RT @Ekramibrahim: Demonstrations started in Dakahlia, Sharkia, Menoufia, Assiut, Kafr El Sheikh, North Sinai, Qena, Ismailia and Cairo. #jan25 interlace ennoblement's eightieths ineptness irrefutable")
+
+
+***********************************************************
+Cluster30
+["hitter's", 'oaten', 'apertures', 'centenary', 'merchant', 'shingling']
+(0.01367318890807737, u"RT @monaeltahawy: RT @Sandmonkey Families went down with the protesters. This isn't just young people. Unprecedented. #jan25 #Egyptrevolt merchant hitter's centenary oaten apertures")
+(0.0070713015827913121, u"One man versus the riot police, Cairo #jan25 http://twitpic.com/3t95uj celebrated lyrics hitter's shingling prices")
+(0.0042385861715581409, u'RT @btnafas7oria: protest now in shubra, 300 protestors #jan25 transplanting billfold diagramming shingling oaten')
+(0.001937853431077069, u"RT @3arabawy: Protests have started in Alexandria http://english.ahram.org.eg/News/4773.aspx #Jan25 shingling subscriber's castling tolerance's hooey's")
+(0.0017598887198300728, u"RT @Gsquare86: There are about at least 20 thugs and undercover police waling behind us in shubra heading to dawaran #jan25 theories belting cyclists centenary jaywalker's")
+(0.0016590548278121507, u"RT @Dima_Khatib: Pro democracy demos have started in #Egypt  #Jan25 #sidibouzid patters whirlpool's eyesore's oaten faraway")
+(0.0015454054905820003, u"Amazing scene at Mostafa Mahmoud. Thousands marching with Egypt flag. #Jan25 blankness diagramming pagoda's prices peerage's")
+(0.0012390920126100294, u"RT @Brian_Whit: What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25 memorializing oaten bellybutton highjacks genre")
+(0.001183767809292456, u"RT @monasosh: Heading towards gam3et el dowal st, empowered #jan25 #nahya http://yfrog.com/gzljqeuj egghead artificers compactors fragility's shingling")
+(0.0010642907178557307, u"RT @Gsquare86: Marching side streets in shubra gathering people as we go ..growing every second #jan25 http://yfrog.com/h5y4voj agronomy's catalpa's rotted scurf's merchant")
+
+
+***********************************************************
+Cluster31
+[u'lot', u'small', u'seri', u'tactic', u'rel', u'harder']
+(0.0038677075521545089, u"RT @Brian_Whit: What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25 nippling wholesale feeble dyke's nippling")
+(0.0038171295814468254, u"RT @Brian_Whit: What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25 passenger's segues genus thesauri disillusionment's")
+(0.0037599883644913439, u"RT @Brian_Whit: What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25 readability's ape's towering thesauri stanchion")
+(0.0037559648294104276, u"RT @Brian_Whit: What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25 suing arises pillory drinking jumbling")
+(0.0037428529802285685, u"RT @Brian_Whit: What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25 roast incarnated genre ballyhooing gratifies")
+(0.0037376563073478874, u"RT @Brian_Whit: What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25 table's interviewer stealthier uninsured shrimp")
+(0.0037124432314115502, u"What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25 wholesale suns chutzpah diviners enjoyed")
+(0.0037102233810404044, u"RT @Brian_Whit: What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25 sandbagged redbreast's instep's moonstone undemocratic")
+(0.0037073619564163491, u"RT @Brian_Whit: What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25 chiselling hernias justifying teenager collaboration")
+(0.0037018092863179623, u"RT @Brian_Whit: What we're seeing in Egypt is series of relatively small protests in lots of places. Good tactic: harder for the police to handle #jan25 uniquest traipses struts edicts saves")
+
+
+***********************************************************
+Cluster32
+[u'skynew', u'mubarak', u'thousand', 'terrifies', 'brisk', 'ironware']
+(0.01250054752858221, u"RT @AnonymousIRC: SkyNews: Egypt - Thousands to Protest Against Mubarak. http://is.gd/rdqack #OpTunisia #OpEgypt #OpAlgeria #SidiBouzid #Jan25 foam's transplanting ironware brisk terrifies")
+(0.010761611562257406, u"RT @AnonymousIRC: SkyNews: Egypt - Thousands to Protest Against Mubarak. http://is.gd/rdqack #OpTunisia #OpEgypt #OpAlgeria #SidiBouzid #Jan25 unsurprising chorale rightness's ennoblement's chit's")
+(0.0025323488704083108, u'RT @3arabawy: Shubra protesters are chanting "down with Mubarak". others r now in front of foreign ministry in downtown Cairo #Jan25 http://bit.ly/gn6Ss9 hallows rheostat\'s fractious undergarment\'s ironware')
+(0.0016051717255327724, u'RT @3arabawy: Shubra protesters are chanting "down with Mubarak". others r now in front of foreign ministry in downtown Cairo #Jan25 http://bit.ly/gn6Ss9 twit schoolgirl huge extincted plumped')
+(0.0012530450586940064, u"Amazing scene at Mostafa Mahmoud. Thousands marching with Egypt flag. #Jan25 sine's fractious memorializing nippling swapping")
+(0.0012484637770967624, u"RT @Sandmonkey Families went down with the protesters. This isn't just young people. Unprecedented. #jan25 #Egyptrevolt stropped volition's carpal's simpleness chit's")
+(0.0011675881239309885, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj privileged faiths migrations principled foam\'s')
+(0.0011078271743239438, u"protest now in shubra, 300 protestors #jan25 dismemberment's mentioning twit foam's bugler's")
+(0.0010855416891438327, u"The families went down with the protesters. This isn't just young people. Unprecedented. #jan25 annular readable ironware pinholes gazer's")
+(0.0010257139516793505, u"Amazing scene at Mostafa Mahmoud. Thousands marching with Egypt flag. #Jan25 blankness diagramming pagoda's prices peerage's")
+
+
+***********************************************************
+Cluster33
+[u'siren', u'csf', u'stand', u'qada2', u'hear', u'truck']
+(0.0084153237770235433, u"RT @Sarahngb: people standing at dar el qada2 surrounded by CSF trucks and I'm hearing sirens #Jan25 bodice's deaconess's coups sequencers incorruptibility's")
+(0.0083614393668498474, u"RT @Sarahngb: people standing at dar el qada2 surrounded by CSF trucks and I'm hearing sirens #Jan25 scarceness's venerate sequencers deaconess's hoax's")
+(0.0077968521961050844, u"RT @Sarahngb: people standing at dar el qada2 surrounded by CSF trucks and I'm hearing sirens #Jan25 many liberalism kinking egghead recheck's")
+(0.0076334122308523607, u"RT @Sarahngb: people standing at dar el qada2 surrounded by CSF trucks and I'm hearing sirens #Jan25 snowmobile radiantly invigoration peerage's appreciation's")
+(0.00053790723542577459, u"The families went down with the protesters. This isn't just young people. Unprecedented. #jan25 scarceness's hoodwinked thenceforth ayes egghead")
+(0.00046542064967320962, u"RT @monaeltahawy: RT @ashrafkhalil #Jan25 huge crowd chanting 'Batil' (Illegitimate) in front of NDP building on corniche #Cairo scarceness's buts twenty preservative's liberalism")
+(0.00039974013198057463, u"RT @3effat: Photo of protesters in Gam3et el dowal st #jan25 http://yfrog.com/gy8bbhj incorruptibility's stropped mentioning hallows cyclist")
+(0.00032697616751275088, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj billfold marchioness simpleness invigoration fiat')
+(0.00030076795402443352, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj containers liberalism moonstone exactness\'s garrets')
+(0.0002799706049804506, u"RT @3arabawy: Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25 hoax's habitat taboos upchucks damages")
+
+
+***********************************************************
+Cluster34
+[u'back', u'number', u'court', u'possibl', u'circl', u'suprem']
+(0.0074114779802236996, u"Protesters moving back towards Supreme court. Possible circling back to tahrir. Numbers are growing. #jan25 #egypt transitioning peerage's marginal radiantly pitcher")
+(0.0074107634929148685, u"RT @ianinegypt: Protesters moving back towards Supreme court. Possible circling back to tahrir. Numbers are growing. #jan25 #egypt redeployment's happen orthopaedists sextons jousts")
+(0.0074007783306071417, u"RT @ianinegypt: Protesters moving back towards Supreme court. Possible circling back to tahrir. Numbers are growing. #jan25 #egypt admonition puck's undemocratic properly rhinoceroses")
+(0.007360306082995832, u'RT @ianinegypt: Protesters moving back towards Supreme court. Possible circling back to tahrir. Numbers are growing. #jan25 #egypt highs rifle servo count libeler')
+(0.007275202219138981, u'RT @ianinegypt: Protesters moving back towards Supreme court. Possible circling back to tahrir. Numbers are growing. #jan25 #egypt cyclists provocations theories castling experiences')
+(0.0019469929506732663, u"RT @RawyaRageh: Early indications show numbers much larger than limited protests in Egypt over past 2 years #Egypt #Jan25 libeler classifications autopsy's pesetas retrenchment's")
+(0.00176707330043487, u'RT @RawyaRageh: Early indications show numbers much larger than limited protests in Egypt over past 2 years #Egypt #Jan25 separating punches tromping shadiest mouth')
+(0.00074799555048274337, u"RT @ehsankooheji: Smart move by #Egypt #jan25 protesters, venues announced were fake. Using social media now to divert. Police in wrong areas, slow to follow castling triumvirates cinema throttling theorist's")
+(0.00068719351949166551, u"RT @ianinegypt: Protesters moving along corniche towards ministry of foreign affairs. #jan25 #egypt lass mouth cheer cowpoke's oppressing")
+(0.00063428075975817237, u"Protesters moving along corniche towards ministry of foreign affairs. #jan25 #egypt ineligibility's octal traded freebees elucidation's")
+
+
+***********************************************************
+Cluster35
+[u'side', u'go', u'second', u'everi', u'86', u'gather']
+(0.0071149963469418617, u'RT @Gsquare86 Marching side streets in #shubra (#Cairo) gathering people as we go ..growing every second #jan25 http://yfrog.com/h5y4voj pips rabbit erythrocytes artificers inch')
+(0.0070324803478388686, u'RT @Gsquare86 Marching side streets in #shubra (#Cairo) gathering people as we go ..growing every second #jan25 http://yfrog.com/h5y4voj plovers twit canine recuperating docket')
+(0.0067088882082958837, u"RT @Gsquare86: Marching side streets in shubra gathering people as we go ..growing every second #jan25 http://yfrog.com/h5y4voj legality's creamed great redistricted honors")
+(0.00668011160974534, u'RT: @Gsquare86: Marching side streets in shubra gathering people as we go ..growing every second #jan25 http://yfrog.com/h5y4voj theories enjoyed throughways pipe lovebirds')
+(0.0066724137131947423, u"RT: @Gsquare86: Marching side streets in shubra gathering people as we go ..growing every second #jan25 http://yfrog.com/h5y4voj advantaged kindling preacher viticulture's sheik's")
+(0.0066434333822345294, u"RT @Gsquare86: Marching side streets in shubra gathering people as we go ..growing every second #jan25 http://yfrog.com/h5y4voj agronomy's catalpa's rotted scurf's merchant")
+(0.0039569253944187754, u'RT @monasosh: This is great, we r in nahya street, ppl r walking by our side #jan25 attenuates concessions roast blankness lauding')
+(0.00092985866766793991, u"Amazing scene at Mostafa Mahmoud. Thousands marching with Egypt flag. #Jan25 blankness diagramming pagoda's prices peerage's")
+(0.00073176444694788179, u"Amazing scene at Mostafa Mahmoud. Thousands marching with Egypt flag. #Jan25 sine's fractious memorializing nippling swapping")
+(0.00065896566563126611, u"RT @adamakary: most protesters in cairo have gathered in front of the maspiro building, protest in alex is also picking up #jan25 wigeon's discriminating sheik's docket radiator's")
+
+
+***********************************************************
+Cluster36
+[u'jazeera', u'interest', u'quit', u'noth', u'news', u'yet']
+(0.0088066251144619436, u"RT @asa_wire: This is quite interesting. Al Jazeera Arabic is back to the news, but has nothing yet about the #Jan25 demos in #Egypt! What gives? purifiers puck's lyrics saves skinflint")
+(0.0086589247655889691, u'RT @asa_wire: This is quite interesting. Al Jazeera Arabic is back to the news, but has nothing yet about the #Jan25 demos in #Egypt! What gives? ickiest differed archbishop saves commercialization')
+(0.0084500355560283014, u"This is quite interesting. Al Jazeera Arabic is back to the news, but has nothing yet about the #Jan25 demos in #Egypt! What gives? exposed jaywalker's defeats faraway tusk")
+(0.0084386189868443148, u"This is quite interesting. Al Jazeera Arabic is back to the news, but has nothing yet about the #Jan25 demos in #Egypt! What gives? gratifies cheer preempt runt's canine")
+(0.0027734323997946481, u'RT @asa_wire: Al Jazeera English reporter speaking about the demos on #Egypt streets: "scenes downtown Cairo has not witnessed since the 70s" #Jan25 cane unsurprising mendacity\'s differed whetted')
+(0.0012473158088846139, u"RT @Alshaheeed: Protesters are giving flowers to Policemen. http://on.fb.me/8Z50YF #Jan25 #Egypt #EgyRevol patrimony's horsewhip's repose's aquarium's jumps")
+(0.0011593963135780373, u"RT @NadiaE: Police running toward Arab League Building. We're right behind them #jan25 inceptions fanciful indecenter hellholes thirtieth")
+(0.0011134779852093133, u"RT @NadiaE: Police running toward Arab League Building. We're right behind them #jan25 outsmarts throttling partnering migrations jousts")
+(0.00074193036627376579, u"RT @SultanAlQassemi: I'm extremely impressed by @ahramonline live coverage of the #Jan25 Egypt protests http://bit.ly/fChyhi via @3arabawy Al Ahram is reborn. thickets fibroid plaiding silversmith's nippling")
+(0.00068428684737124098, u"I'm extremely impressed by @ahramonline live coverage of the #Jan25 Egypt protests http://bit.ly/fChyhi via @3arabawy Al Ahram is reborn. backbones thickets figure's encouragement's trifle")
+
+
+***********************************************************
+Cluster37
+[u'al', 'vogueing', u'youm', u'stream', u'masri', "doggerel's"]
+(0.014394996810015366, u"RT @Brian_Whit: Al-Masry al-Youm live-streaming Egypt protests #jan25 http://bit.ly/gpWD6N rebelliousness's vogueing portioned retrenchment's doggerel's")
+(0.0027152267394874, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25 argumentation's theatrically deductions argumentation's vogueing")
+(0.0021358633385020779, u"RT @AmiraMoslimany: Mohandesin protest is now in thousands officially http://on.fb.me/8Z50YF #Jan25 #Egypt #EgyRevol arrow preacher horsehair's portioned wigeon's")
+(0.0013312578580144789, u"RT @3arabawy: Protests have started in Alexandria http://english.ahram.org.eg/News/4773.aspx #Jan25 portage's intermingling reused rebelliousness's slayings")
+(0.0012582412371531897, u"RT @Sandmonkey: The families went down with the protesters. This isn't just young people. Unprecedented. #jan25 compactors mouth luckier portioned skinflint")
+(0.0011882016403788466, u'RT @LaurenBohn: Man holds up Kefaya - "enough" in front of police line. #Jan25 #Cairo http://twitpic.com/3t95uj hawking\'s fragility\'s rebelliousness\'s hooey\'s morns')
+(0.0010324277889846758, u"RT @hackneylad: Protesters stopped outside television building on the nile, sitting down in the street - police look uncertain #jan25 reverberates monsoon's portioned desist travel")
+(0.00097055494869095684, u"I'm extremely impressed by @ahramonline live coverage of the #Jan25 Egypt protests http://bit.ly/fChyhi via @3arabawy Al Ahram is reborn. backbones thickets figure's encouragement's trifle")
+(0.00094918323173671015, u"RT @SultanAlQassemi: I'm extremely impressed by @ahramonline live coverage of the #Jan25 Egypt protests http://bit.ly/fChyhi via @3arabawy Al Ahram is reborn. thickets fibroid plaiding silversmith's nippling")
+(0.00092717199379291782, u"RT @monaeltahawy: Amazing pictures of protesters bridge towards Opera House, #Cairo RT @arwasm It's real #jan25 http://yfrog.com/h4v7yyj retrenchment's whistled admonition trimaran's jurist's")
+
+
+***********************************************************
+Cluster38
+[u'offici', u'thousand', u'mohandesin', 'preempt', 'caliph', 'liquidized']
+(0.0081289337265564744, u'Mohandesin protest is now in thousands officially http://on.fb.me/8Z50YF #Jan25 #Egypt #EgyRevol carped caliph xylem preempt liquidized')
+(0.0076453710643861836, u'RT @AmiraMoslimany: Mohandesin protest is now in thousands officially http://on.fb.me/8Z50YF #Jan25 #Egypt #EgyRevol preempt partitioned oppressing rerunning extincted')
+(0.0074830745559626268, u'RT @Alshaheeed: Mohandesin protest is now in thousands officially http://on.fb.me/8Z50YF #Jan25 #Egypt #EgyRevol consummate nutria rotted imperiously aerobics')
+(0.0074154614634203255, u"Mohandesin protest is now in thousands officially http://on.fb.me/8Z50YF #Jan25 #Egypt #EgyRevol cancans lovebirds provocations linen debauchery's")
+(0.0066088075019530889, u"RT @AmiraMoslimany: Mohandesin protest is now in thousands officially http://on.fb.me/8Z50YF #Jan25 #Egypt #EgyRevol arrow preacher horsehair's portioned wigeon's")
+(0.0011695964847677578, u"Amazing scene at Mostafa Mahmoud. Thousands marching with Egypt flag. #Jan25 sine's fractious memorializing nippling swapping")
+(0.0010805029466662618, u"Amazing scene at Mostafa Mahmoud. Thousands marching with Egypt flag. #Jan25 blankness diagramming pagoda's prices peerage's")
+(0.000843999138933962, u"Protests have started in Shubra. http://english.ahram.org.eg/News/4773.aspx #Jan25 caliph plumped truckload's knot pouch's")
+(0.0005963546013834888, u"RT @monaeltahawy: Amazing pictures of protesters bridge towards Opera House, #Cairo RT @arwasm It's real #jan25 http://yfrog.com/h4v7yyj paranoids preempt dismemberment's jumbling taboos")
+(0.00052676869772806201, u'Man holds up Kefaya - "enough" in front of police l... on Twitpic - http://goo.gl/SbJ1s  #Jan25 upchucks communism resume nutria monsoon\'s')
+
+
+***********************************************************
+Cluster39
+[u'mahmoud', u'mostafa', u'left', u'bulak', "peerage's", 'habitat']
+(0.0097837756937070516, u"Left bulak now to mostafa mahmoud #jan25 http://yfrog.com/h8ebglkj habitat constipates mentioning promenade's pregnancies")
+(0.009372371419842403, u"Left bulak now to mostafa mahmoud #jan25 http://yfrog.com/h8ebglkj peerage's deprecated undernourished patterns villas")
+(0.0067447136185398082, u"RT @Ghafari: Left bulak now to mostafa mahmoud #jan25 #cairo #egypt picture of protesters http://yfrog.com/h8ebglkj pesetas incorruptibility's angioplasties pips eyesore's")
+(0.0065819568096871263, u"RT @Ghafari: Left bulak now to mostafa mahmoud #jan25 #cairo #egypt picture of protesters http://yfrog.com/h8ebglkj cheese archbishop adjustment swimsuit ineligibility's")
+(0.0038586990423974551, u"Amazing scene at Mostafa Mahmoud. Thousands marching with Egypt flag. #Jan25 blankness diagramming pagoda's prices peerage's")
+(0.0038000780057236136, u"RT @Ssirgany: RT @Ghafari: Protests in boulak coming from mostafa mahmoud #jan25 http://yfrog.com/h8wliaj large elucidation's names xylem perishable")
+(0.0035608252317848154, u"Amazing scene at Mostafa Mahmoud. Thousands marching with Egypt flag. #Jan25 sine's fractious memorializing nippling swapping")
+(0.0016809345026759291, u'RT @Novinha56: 1:45 PM Hundreds demonstrate in Mohandessin in front of Mostafa Mahmoud Square. Demonstrations have also broken out in Bulaq. #jan25 redistricted undershirts stealthier loanword dusted')
+(0.00072197079907694855, u"RT @3effat: Photo of protesters in Gam3et el dowal st #jan25 http://yfrog.com/gy8bbhj incorruptibility's stropped mentioning hallows cyclist")
+(0.00069011215097666248, u'#Egypt Latest: Picture of protest outside Cairo Opera House http://tinyurl.com/63e5r8h  #sidibouzid #Jan25 names scouring constipates nectarines mountain')
 

@@ -11,18 +11,21 @@ from database.model.tweets import EvaluationTweet
 from analysis.clustering.kmeans import OrangeKmeansClusterer
 from analysis.clustering.dbscan import DBSCANClusterer
 from analysis.clustering.nmf import NMFClusterer
+from analysis.clustering.online import OnlineClusterer
 from evaluation.evaluators import ExtrinsicClusteringEvaluator
 from analysis.clustering.algorithms import euclidean, cosine, jaccard 
-from analysis.dataset_analysis import DatasetAnalyser
 
 distances = [euclidean, cosine, jaccard]
 
 def run_evaluation():
     ws = WarehouseServer()
     documents = [doc for doc in ws.get_all_documents(type=EvaluationTweet)]
-    clusterers = [OrangeKmeansClusterer(k=40, ngram=1), 
-                  DBSCANClusterer(epsilon=0.02, min_pts=3, distance=euclidean), 
-                  NMFClusterer(rank=40, max_iter=65, display_N_tokens = 5, display_N_documents = 100**2)] 
+    clusterers = [
+                  OnlineClusterer(N=40, window = 50),
+                  OrangeKmeansClusterer(k=40, ngram=1), 
+                  DBSCANClusterer(epsilon=0.5, min_pts=3, distance=euclidean), 
+                  NMFClusterer(rank=40, max_iter=65, display_N_tokens = 5, display_N_documents = 200)
+                  ] 
     
     dataset_size = len(documents)
     
@@ -40,9 +43,20 @@ def run_evaluation():
             i=initial_document_size
             while (i < dataset_size): 
                 print 'with data size:', i
+                
+                #Special case for onlie clustering
+                if type(oc) == OnlineClusterer:
+                    oc.window = i #no the window is the whole data set
+                    for item in documents[:i]:
+                        oc.cluster(item)
+                    ebe = ExtrinsicClusteringEvaluator(documents[:i])
+                    bcubed_precision, bcubed_recall, bcubed_f = ebe.evaluate(clusterer=oc)  
+                    f_list.append(bcubed_f)
+                    i += step
+                    continue
+                
                 ebe = ExtrinsicClusteringEvaluator(documents[:i])
                 bcubed_precision, bcubed_recall, bcubed_f = ebe.evaluate(clusterer=oc)
-                print bcubed_precision, bcubed_recall, bcubed_f
                 f_list.append(bcubed_f)
                 i += step
             f_different_clusterers.append(f_list)
@@ -60,7 +74,7 @@ def run_evaluation():
         pylab.title(dist_names[i])
         pylab.xlabel('Number of documents')
         pylab.ylabel('Bcubed F metric')
-        pylab.legend(('kmeans', 'dbscan', 'nmf'), 'lower right', shadow=True)
+        pylab.legend(('online', 'kmeans', 'dbscan', 'nmf'), 'lower right', shadow=True)
     
     pylab.show()
     

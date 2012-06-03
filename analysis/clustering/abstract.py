@@ -98,15 +98,20 @@ class AbstractClusterer(object):
             corpus = nltk.TextCollection(self._filter_terms())
             
         terms = list(set(corpus))
+        
+        index_dict = {}
+        for i, term in enumerate(terms):
+            index_dict[term] = i
+        
         data_rows = numpy.zeros([len(self.document_dict), len(set(corpus))])
         
         for i, document in enumerate(self.document_dict.values()):
             text = nltk.Text(document.tokens)
             for item in document.word_frequencies:
                 if self.distance == jaccard: 
-                    data_rows[i][terms.index(item.word)] = 1 #The number 1 means that the word is present and 0 the opposite
+                    data_rows[i][index_dict[item.word]] = 1 #The number 1 means that the word is present and 0 the opposite
                 else:
-                    data_rows[i][terms.index(item.word)] = corpus.tf_idf(item.word, text)
+                    data_rows[i][index_dict[item.word]] = corpus.tf_idf(item.word, text)
 
         self.attributes = terms
         self.td_matrix = data_rows

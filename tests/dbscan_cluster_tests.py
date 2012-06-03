@@ -15,16 +15,16 @@ ws = WarehouseServer()
 epsilon = 2.0
 min_pts = 2.0
 points = []
-points.append([1,1])
-points.append([1.5,1])
+points.append([1.0,1.0])
+points.append([1.5,1.0])
 points.append([1.8,1.5])
-points.append([2.1,1])
-points.append([3.1,2])
-points.append([4.1,2])
-points.append([5.1,2])
-points.append([10,10])
-points.append([11,10.5])
-points.append([9.5,11])
+points.append([2.1,1.0])
+points.append([3.1,2.0])
+points.append([4.1,2.0])
+points.append([5.1,2.0])
+points.append([10.0,10.0])
+points.append([11.0,10.5])
+points.append([9.5,11.0])
 points.append([9.9,11.4])
 points.append([15.0, 17.0])
 points.append([15.0, 17.0])
@@ -46,8 +46,8 @@ class Test_Dbscan_clustering(unittest.TestCase):
             for point in members:
                 print point
         
-        expected = {0: [('0', [1, 1]), ('1', [1.5, 1]), ('2', [1.8, 1.5]), ('3', [2.1, 1]), ('0', [1, 1]), ('4', [3.1, 2]), ('5', [4.1, 2]), ('6', [5.1, 2])], 
-                    1: [('7', [10, 10]), ('8', [11, 10.5]), ('9', [9.5, 11]), ('10', [9.9, 11.4])], 
+        expected = {0: [('0', [1.0, 1.0]), ('1', [1.5, 1.0]), ('2', [1.8, 1.5]), ('3', [2.1, 1.0]), ('0', [1.0, 1.0]), ('4', [3.1, 2.0]), ('5', [4.1, 2.0]), ('6', [5.1, 2.0])], 
+                    1: [('7', [10.0, 10.0]), ('8', [11.0, 10.5]), ('9', [9.5, 11.0]), ('10', [9.9, 11.4])], 
                     -1: [('11', [15.0, 17.0]), ('12', [15.0, 17.0]), ('13', [7.5, -5.0])]}
         self.assertEqual(expected, clusters)
 

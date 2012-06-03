@@ -12,47 +12,66 @@ from database.model.tweets import EvaluationTweet
 from analysis.clustering.kmeans import OrangeKmeansClusterer
 from analysis.clustering.dbscan import DBSCANClusterer
 from analysis.clustering.nmf import NMFClusterer
+from analysis.clustering.online import OnlineClusterer
 from evaluation.evaluators import ExtrinsicClusteringEvaluator
 from analysis.clustering.algorithms import euclidean, cosine, jaccard 
 from analysis.dataset_analysis import DatasetAnalyser
+from database.model.tweets import WordFrequencyTuple
 
 #####################################HELPER METHODS############################################
+
+def create_dictionary(documents):
+    '''
+    Creates a dictionary from the words in the original
+    dataset. These words will be appended randomly in documents 
+    to increase their size but keep the vocabulary size the same.
+    '''
+    dictionary = set()
+    for document in documents:
+        dictionary = dictionary | set(document.content.tokens)
+    return list(dictionary)
+
 def increase_length(i, document):
     '''
-    Takes as input a document and concatenates on it as many as i random documents.
+    Takes as input a document and concatenates on it as many as i random words from
+    the dictionary.
     '''
-    extending_documents = []
+    extending_words = []
     for k in range(i):
-        randint = random.randint(0, len(original_docs)-1)
-        random_doc = original_docs[randint]
-        extending_documents.append(random_doc)
+        randint = random.randint(0, len(dictionary)-1)
+        random_words = dictionary[randint]
+        extending_words.append(random_words)
         
-    for random_doc in extending_documents:
-
-        document.content.raw += ' ' + random_doc.content.raw
-        document.content.tokens.append(",".join(random_doc.content.tokens))
+    for random_word in extending_words:
+        document.content.raw += ' ' + random_word
+        document.content.tokens.append(random_word)
         
-        for tuple in random_doc.content.word_frequencies:
-            j = 0
-            for t in document.content.word_frequencies:
-                if t.word == tuple.word:
-                    document.content.word_frequencies[j].count += tuple.count                        
-                    break
-                j += 1            
-            if j == len(document.content.word_frequencies):
-                document.content.word_frequencies.append(tuple)
-
+        j = 0
+        for t in document.content.word_frequencies:
+            if t.word == random_word:
+                document.content.word_frequencies[j].count += 1                        
+                break
+            j += 1            
+        if j == len(document.content.word_frequencies):
+            t = WordFrequencyTuple()
+            t.word = random_word
+            t.count = 1
+            document.content.word_frequencies.append(t)
+                
     return document
 
 #####################################MAIN SCRIPT############################################
 
 distances = [euclidean, cosine, jaccard]
 ws = WarehouseServer()
-clusterers = [OrangeKmeansClusterer(k=39, ngram=1), 
-              DBSCANClusterer(epsilon=0.02, min_pts=2, distance=euclidean), 
-              NMFClusterer(rank=39, max_iter=65, display_N_tokens = 5, display_N_documents = 100**2)] 
+clusterers = [
+              OnlineClusterer(N=40, window = 50),
+              OrangeKmeansClusterer(k=40, ngram=1), 
+              DBSCANClusterer(epsilon=0.5, min_pts=2, distance=euclidean), 
+              NMFClusterer(rank=40, max_iter=65, display_N_tokens = 5, display_N_documents = 200)] 
 
 original_docs = [doc for doc in ws.get_all_documents(type=EvaluationTweet)]
+dictionary = create_dictionary(original_docs)
 
 def run_evaluation():
     #Inside the loop we alter the original documents in order to increase their length. However, we should keep
@@ -77,7 +96,19 @@ def run_evaluation():
                     longer_dataset.append(increase_length(i, document))
                     
                 da = DatasetAnalyser(longer_dataset)
-                print 'with average document length:', da.avg_document_length()
+                print 'with average document length: ', da.avg_document_length()
+                print 'with vocabulary size: ', da.avg_vocabulary_size()
+                
+                #Special case for onlie clustering
+                if type(oc) == OnlineClusterer:
+                    oc.window = len(longer_dataset) #no the window is the whole data set
+                    for item in longer_dataset:
+                        oc.cluster(item)
+                    ebe = ExtrinsicClusteringEvaluator(longer_dataset)
+                    bcubed_precision, bcubed_recall, bcubed_f = ebe.evaluate(clusterer=oc)  
+                    f_list.append(bcubed_f)
+                    continue
+                
                 ebe = ExtrinsicClusteringEvaluator(longer_dataset)
                 bcubed_precision, bcubed_recall, bcubed_f = ebe.evaluate(clusterer=oc)
                 f_list.append(bcubed_f)
@@ -98,7 +129,7 @@ def run_evaluation():
         pylab.title(dist_names[i])
         pylab.xlabel('Average document length')
         pylab.ylabel('Bcubed F metric')
-        pylab.legend(('kmeans', 'dbscan', 'nmf'), 'lower right', shadow=True)
+        pylab.legend(('online', 'kmeans', 'dbscan', 'nmf'), 'lower right', shadow=True)
     
     pylab.show()
 

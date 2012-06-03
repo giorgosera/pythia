@@ -126,13 +126,10 @@ class ExamplesDistance_Jaccard(orange.ExamplesDistance):
         '''
         ex1 = numpy.fromiter(list(ex1), dtype=numpy.float)
         ex2 = numpy.fromiter(list(ex2), dtype=numpy.float)
-        
         return jaccard(ex1,ex2)
 
 class ExamplesDistanceConstructor_Jaccard(orange.ExamplesDistanceConstructor):
     def __init__(self, *args):
         orange.ExamplesDistanceConstructor.__init__(self, *args)
     def __call__(self, data):
-        indxs = [i for i, a in enumerate(data.domain.attributes) \
-                 if a.varType==Orange.data.Type.Continuous]
-        return ExamplesDistance_Jaccard(domain=data.domain, indxs=indxs)
+        return ExamplesDistance_Jaccard()

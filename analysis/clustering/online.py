@@ -9,8 +9,153 @@ from analysis.clustering.abstract import AbstractClusterer
 from analysis.clustering.structures import kernel_dist
 from tools.orange_utils import construct_orange_table, add_metas_to_table
 from analysis.clustering.structures import OnlineCluster
-import time
+import random, math
 
+class OnlineKmeansClusterer(AbstractClusterer):
+    '''
+    This class implements a basic online kmeans clustering algorithm. The code is adapted from
+    https://github.com/dydt/onlineclustering/blob/master/onlinekmeans.py .
+    '''
+    
+    def __init__(self, window):
+        super(OnlineKmeansClusterer, self).__init__(filter_terms=False)#Force filter terms to be false cz not yet supported
+        self.window = window
+        self.worddict = {}
+        self.docs = {}
+        self.clusters = [] # array of Groups
+        self.means = []  # array of vectors (which are hashes)
+        self.counts = [] # array of integers
+        self.stopwords = {}
+    
+    def add_document(self, document):
+        '''
+        Overrides the parent method add_document to facilitate
+        the needs of online clustering. Basically, it adds the new document 
+        normally and then 
+        '''
+        index = super(OnlineKmeansClusterer, self).add_document(document)
+        return index
+
+    def construct_term_doc_matrix(self, index, document):
+        '''
+        Overrides the parent method for constructing a td_matrix. The reason is 
+        because we want to construct the matrix based on a sliding window approach.
+        '''        
+        if index < self.window:
+            documents = self.document_dict.values()
+        else:
+            window=(index-self.window+1, index)
+            documents = self.document_dict.values()[window[0]:window[1]]
+        
+        #Online clustering doesn't support term filtering yet     
+        corpus = nltk.TextCollection([document.tokens for document in documents])
+        
+        terms = list(set(corpus))
+        term_vector = numpy.zeros(len(set(corpus)))
+        
+        text = nltk.Text(document.tokens)
+        for item in document.word_frequencies:
+            term_vector[terms.index(item.word)] = corpus.tf_idf(item.word, text)
+                
+        self.attributes = terms
+        self.td_matrix = term_vector
+
+
+    def cluster(self, k, document):
+        """
+        Does online k-mean clustering as outlined in http://www.cs.princeton.edu/courses/archive/fall08/cos436/Duda/C/sk_means.htm
+        Initializes means (self.means) and clusters each streaming doc by finding out which mean it is closest to.
+        """
+        
+        doc_index = self.add_document(document)
+        doc_id = str(document.id)
+        doc_content = document.content
+        self.construct_term_doc_matrix(index=doc_index, document=doc_content)
+        vector = self.td_matrix
+        
+        if self.means == []:
+            for i in range(k):
+                # Generating the means entails generating random vectors. This should reflect the end size of the corpus's worddict.
+                # I'm using 30 as a placeholder.
+                # Vectors should be front-heavy; as the corpus gets bigger, the common core words would be early and numerous.
+                tempdict = {}
+                for j in range(4):
+                    if j*random.randint(1, 4) > 4/2:  # Trying to enforce front-heaviness
+                        tempdict[j] = 0
+                    else:
+                        tempdict[j] = random.randint(0, math.ceil(4/100.))
+                self.means.append(tempdict)
+        # Initializes counts and # of clusters if not already created
+        if self.counts == []:
+            self.counts = [0]*k
+        if self.clusters == []:
+            self.clusters = [0]*k
+            for i in range(k): 
+                g = Group(i) 
+                self.clusters[i] = g
+        # Finds the mean closest to the document, adds the doc to the mean's cluster, and adjusts the mean
+        distances = [self.own_distance(mean, vector) for mean in self.means]
+        i = distances.index(min(distances))
+        self.counts[i] += 1
+        self.means[i] = self.newmean(self.counts[i], self.means[i], vector)
+        self.clusters[i].add(doc_content) 
+
+        
+    def own_distance(self, vector1, vector2):
+        """
+        Calculating distance between two vectors.
+        
+        Returns (Euclidean distance)^2
+        """
+        v1 = vector1.values()
+        v2 = vector2.tolist()
+        l1 = len(v1)
+        l2 = len(v2)
+        distance = 0
+        # The two vectors are of unequal size, so just equalize them by adding 0s
+        i = max(l1, l2)
+        
+        if l2 > l1:
+                v1.extend([0 for i in range(l2-l1)])
+        else:
+                v2.extend([0 for i in range(l1-l2)])
+
+        for j in range(0, i):
+            distance += (v1[j] - v2[j])**2
+        return distance
+        
+    # each vector is a dict of {index: frequency}.  vector1 is the mean.
+    def newmean(self, integer, vector1, vector2):
+        """
+        As described in http://www.cs.princeton.edu/courses/archive/fall08/cos436/Duda/C/sk_means.htm,
+        this is the way to readjust a mean when a new document is added.
+        """
+        newdict = {}
+        v1 = list(vector1)
+        v2 = list(vector2)
+        for key in vector1:
+            if key not in vector2:
+                v2[key] = 0
+        for key in vector2:
+            if key not in vector1:
+                v1[key] = 0
+        for key in vector1:
+            newdict[key] = v1[key] + (v2[key] - v1[key])*(1./integer)
+        return newdict
+
+
+class Group():
+
+    def __init__(self, integer):
+        self.documents = []
+        self.id = integer
+
+    def add(self, document):
+        """
+        Adds a document to a particular cluster.
+        """
+        self.documents.append(document)
+        
 class OnlineClusterer(AbstractClusterer):
     '''
     This class implements a basic online clustering algorithm. The code is adapted from
@@ -80,8 +225,10 @@ class OnlineClusterer(AbstractClusterer):
 
         self.construct_term_doc_matrix(index=doc_index, document=doc_content)
         
-        print 'N', len(self.clusters)
-        print 'clustering', doc_index
+        #=======================================================================
+        # print 'N', len(self.clusters)
+        # print 'clustering', doc_index
+        #=======================================================================
         if doc_index > 0: #ignore the first document
             #e = doc_index
             e = self.td_matrix
@@ -199,53 +346,59 @@ class Dist(object):
         self.x=x
         self.y=y
         self.d=d
-    def __cmp__(self,o):
-        return cmp(self.d,o.d)
+
+    #I removed it for efficiency. MIGHT CAUSE ERRORS
+    #===========================================================================
+    # def __cmp__(self,o):
+    #    return cmp(self.d,o.d)
+    #===========================================================================
+    
     def __str__(self):
         return "Dist(%f)"%(self.d)  
 
 
-
-if __name__=="__main__": 
-    
-    import random
-
-    try:
-        import pylab#!@UnresolvedImport
-        import scipy
-        plot=True
-    except:
-        plot=False
-
-    points=[]
-    # create three random 2D gaussian clusters
-    for i in range(3):
-        x=random.random()*3
-        y=random.random()*3
-        c=[scipy.array((x+random.normalvariate(0,0.1), y+random.normalvariate(0,0.1))) for j in range(100)]
-        points+=c
-
-    
-    if plot: pylab.scatter([x[0] for x in points], [x[1] for x in points])
-
-    random.shuffle(points)
-    n=len(points)
-
-    start=time.time()
-    # the value of N is generally quite forgiving, i.e.
-    # giving 6 will still only find the 3 clusters.
-    # around 10 it will start finding more
-    c=OnlineClusterer(N=6, window=0)
-    while len(points)>0: 
-        c.cluster(points.pop(), 1, "test")
-
-    clusters=c.trimclusters()
-    print "I clustered %d points in %.2f seconds and found %d clusters."%(n, time.time()-start, len(clusters))
-
-    if plot: 
-        cx=[x.center[0] for x in clusters]
-        cy=[y.center[1] for y in clusters]
-    
-        pylab.plot(cx,cy,"ro")
-        pylab.draw()
-        pylab.show()
+#===============================================================================
+# if __name__=="__main__": 
+#    
+#    import random
+# 
+#    try:
+#        import pylab#!@UnresolvedImport
+#        import scipy
+#        plot=True
+#    except:
+#        plot=False
+# 
+#    points=[]
+#    # create three random 2D gaussian clusters
+#    for i in range(3):
+#        x=random.random()*3
+#        y=random.random()*3
+#        c=[scipy.array((x+random.normalvariate(0,0.1), y+random.normalvariate(0,0.1))) for j in range(100)]
+#        points+=c
+# 
+#    
+#    if plot: pylab.scatter([x[0] for x in points], [x[1] for x in points])
+# 
+#    random.shuffle(points)
+#    n=len(points)
+# 
+#    start=time.time()
+#    # the value of N is generally quite forgiving, i.e.
+#    # giving 6 will still only find the 3 clusters.
+#    # around 10 it will start finding more
+#    c=OnlineClusterer(N=6, window=0)
+#    while len(points)>0: 
+#        c.cluster(points.pop(), 1, "test")
+# 
+#    clusters=c.trimclusters()
+#    print "I clustered %d points in %.2f seconds and found %d clusters."%(n, time.time()-start, len(clusters))
+# 
+#    if plot: 
+#        cx=[x.center[0] for x in clusters]
+#        cy=[y.center[1] for y in clusters]
+#    
+#        pylab.plot(cx,cy,"ro")
+#        pylab.draw()
+#        pylab.show()
+#===============================================================================

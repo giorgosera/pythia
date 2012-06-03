@@ -82,7 +82,7 @@ class OrangeKmeansClusterer(AbstractKmeansClusterer):
         
     def save_table(self, filename):
         '''
-        It stores the term-docuemtn matrix as a tab delimited file
+        It stores the term-document matrix as a tab delimited file
         which is supported by Orange. 
         '''
         if self.td_matrix != None: 

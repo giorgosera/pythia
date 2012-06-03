@@ -3,12 +3,13 @@ Created on 29 Jan 2012
 
 @author: george
 '''
-import itertools, nltk, tools.utils, numpy, scipy, math
+import itertools, nltk, tools.utils, numpy, scipy, math, time
 from database.warehouse import WarehouseServer
 from analysis.semantic import TwitterSemanticAnalyser
 from collections import OrderedDict
 from analysis.summarization.summarization import CentroidSummarizer, LexRankSummarizer
-
+from c_extensions.resize import resize
+        
 class Cluster(object):
     '''
     This is a structure responsible for representing a cluster after the 
@@ -176,6 +177,15 @@ class OnlineCluster(Cluster):
         self.center=a
         self.size=0
         self.term_vector = term_vector
+        self._update_term_vector_index_cache()
+        
+    def _update_term_vector_index_cache(self):
+        '''
+        Whenerver the term vector is changed we must update the index cache
+        '''
+        self.term_dict = {}
+        for i, term in enumerate(self.term_vector):
+            self.term_dict[term] = i
         
     def add(self, e, doc_id, doc_content):
         self.size+= kernel(self.center, e)
@@ -191,24 +201,9 @@ class OnlineCluster(Cluster):
         '''
         This function resizes the center vector of this cluster according to
         a new term vector. 
-        '''       
-        new_center = numpy.zeros(len(new_term_vector))
-        new_vector = []
-        
-        #assert(len(new_term_vector) >= len(self.term_vector) )
-        #Iterates over the new term vector (either smaller or bigger)
-        #and modifies the existing one.
-        for new_index, term in enumerate(new_term_vector):
-            if term in self.term_vector: 
-                old_index = self.term_vector.index(term)
-                old_value = self.center[old_index]
-                new_center[new_index] = old_value
-                new_vector.insert(new_index, term)
-            else:
-                new_vector.insert(new_index, term)
-                new_center[new_index]= 0.0
-        self.center = new_center
-        self.term_vector = new_vector
+        '''               
+        self.center, self.term_vector = resize.resize(self.center, self.term_dict, new_term_vector, self.term_vector) 
+        self._update_term_vector_index_cache()
         
     def __str__(self):
         return "Cluster( %s, %f )"%(self.center, self.size)

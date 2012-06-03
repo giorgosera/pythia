@@ -1,0 +1,189 @@
+from distutils.core import setup
+from distutils.extension import Extension
+from Cython.Distutils import build_ext
+
+import numpy
+
+ext = Extension("resize", ["resize.pyx"], extra_compile_args=["-O3",],language="c++",
+    include_dirs = [numpy.get_include()])
+                
+setup(ext_modules=[ext],
+      cmdclass = {'build_ext': build_ext})
+7.55404496193
+0.0221300279921 RT @Tharwacolamus Counting the hours, minutes and seconds. Let's kick the ass of that false pharaoh, and restore some dignity #jan25 #Egypt
+0.0221300279921 RT @Dima_Khatib RT @monaeltahawy In past 8 days at least 12 Egyptians set themselves on fire  #Jan25
+0.0221300279921 Egypt's frustrated young dream of revolution | They're doing more than dreaming, they're putting lives on line http://goo.gl/7wKrw #jan25
+0.0221300279921 #egypt #Jan25 #25Jan #egy BBCWorld
+  
+Egypt prepares for day of action http://bbc.in/eW2VaN
+0.0221300279921 RT @monaeltahawy: Past 29yrs: #US has had 5 presidents, major ally #Egypt has had 1 president: #Mubarak = Unemployment. Corruption. #Policebrutality #Jan25
+0.0221300279921 RT @weddady: #Egypt police has a long history of torture, brutalities which is one of the causes of today's protest #sidibouzid #Jan25
+0.0221300279921 #Mubarak regime has politicized #Islam to fight political Islam of Muslim Brotherhood = intolerance, discrimination vs #Christians #Jan25
+0.0221300279921 #Egypt's youth, knows only 1 president, fed up w/politics, pushing 4greater alternative political space. #Jan25 not organized by pol parties
+0.0221300279921 RT @monaeltahawy: For yrs, #Egypt dictator #Mubarak has used Muslim Brotherhood bogeyman to frighten western allies. No excuse for tyrrany. #Jan25
+0.0221300279921 RT @Tharwacolamus: Lebanese Egyptians will demonstrate anger tomorrow Business as usual Manipulation of popular will No longer acceptable: change afoot #jan25
+0.0221300279921 #dictatorship #Egypt govt warns activists against Tuesday protest http://bit.ly/i5SL2g #sidibouzid #Justice hit the road mubarak! #Jan25
+0.0221300279921 RT @ArabRevolution: Forza #Egypt!  Come on #Egypt! Allez #Egypt! Gehen #Egypt! Haya ya masr (#Egypt) #Jan25  #25Jan
+0.0221300279921 Hello new tweeps and thank you for reccos to follow me. I will pass on whatever I learn from #Egypt tweeps on #Jan25 protests
+0.0221300279921 RT @monaeltahawy: #Egypt braced for 'day of revolution' protests http://bit.ly/elhVpu Good Guardian story on #Jan25 protests
+0.0221300279921 Good Morning, #Egypt. Love and solidarity coming your way from around the world as your prepare for #Jan25 protests. Be safe Be Free!
+0.0221300279921 RT @yslaise: Let's see if the Dictator's Club in Jeddah gets a new member today #Jan25 #sidibouzid
+0.0221300279921 When will there be another Walter Cronkite stating the obvious on American TV:winds of freedom blowing hard in Arab world #sidibouzid #Jan25
+0.0221300279921 RT @SamehWahba: RT @worldeventobs: #jan25 #25jan #egypt slowly starting to trend globally.
+http://trendsmap.com/topic/%23jan25
+0.0221300279921 RT @ArabRevolution #Tunisia started it. But if (/when) #Egypt revolts & liberates itself, all Mideast will follow Egypt leads #Jan25 #25Jan
+0.0221300279921 RT @shadihamid: If everyone on facebook 'attending' today's #Egypt protest attended, would prob be biggest democracy protest in Arab history #Jan25
+0.0221300279921 Mubarak to Benali : Antom sabikun wa nahnu lahikun :D http://bit.ly/gopjmc #jan25 #sidibouzid #Egypt
+0.0221300279921 RT @MinaNaguib90: Knew from a good source most of the ministers went to switzerland on egyptair today for the confrence #egypt will b empty on #jan25
+0.0221300279921 RT @weddady Tmorrow will be a vital day,watch how Arab #socialmedia is going to be on fire.Prepare for the data overdrive #sidibouzid #Egypt
+0.0221300279921 RT @ehsankooheji: Today thousands of Egyptians will protest for their freedom: http://bit.ly/eGnwy7 http://t.co/cDdC5uQ #Jan25 #sidibouzid
+0.0221300279921 #Jan25 demonstrations to mark new direction for #Egypt? http://ow.ly/3JowE / @amnesty
+0.0221300279921 RT @monaeltahawy: Majority of #Egyptians younger than 30. #Mubarak president 29yrs. Every 1 of those yrs, #Egypt under Emergency Law. #Jan25 protests
+0.0221300279921 Habib el-Adli:"Youth street action has no impact" http://is.gd/fCyyOx We'll see about that. #Egypt #Jan25 #25Jan
+0.0221300279921 RT @Gsquare86: The end is near ya #Mubarak you better pack and leave ..or just leave #Jan25
+0.0221300279921 RT @zaynabon: 12 #egyptians in past week set themselves on fire. #Mubarak is burning #egypt to the ground. Tom #jan25 protesters will extinguish the fire.
+0.0221300279921 RT @Alshaheeed: For FULL Live coverage of protests in #Egypt & #Worldwide on #Jan25 in #English. Plz Follow @alshaheeed & on http://on.fb.me/8Z50YF
+0.021624977487 RT @monaeltahawy: In past 8 days at least 12 #Egyptians set themselves on fire out of desperation: unemployment, poverty, corruption. #Jan25 #Egypt protest
+0.021624977487 @royasmusic ~ My article: an analysis of class conflict and prospects for #jan25 #sidibouzid in #Egypt ~~ http://bit.ly/h6kdnu ~~ Plz RT
+0.021624977487 @shabab6april  ~ My article: an analysis of class conflict and prospects for #jan25 #sidibouzid in #Egypt ~~ http://bit.ly/h6kdnu ~~ Plz RT
+0.021624977487 RT @monaeltahawy: In past 8 days at least 12 #Egyptians set themselves on fire out of desperation: unemployment, poverty, corruption. #Jan25 #Egypt protest
+0.021624977487 #Egypt's frustrated young wait for their lives to begin, and dream of revolution RT @monaeltahawy http://bit.ly/gTd5ZX #Jan25
+0.021624977487 Eyes on #Egypt. Will it erupt on #Jan25 anti-Mubarak ppl power Vs. Pro-Mubarak police force? Will the Mideast witness another revolution?
+0.021624977487 RT @octavianasr: #Egypt's frustrated young wait for their lives to begin, and dream of revolution RT @monaeltahawy http://bit.ly/gTd5ZX #Jan25
+0.021624977487 RT @octavianasr: Eyes on #Egypt. Will it erupt on #Jan25 anti-Mubarak ppl power Vs. Pro-Mubarak police force? Will the Mideast witness another revolution?
+0.0210964362608 17 political movements & parties in Egypt are to take part in protests on Police Day (today).  #Jan25 #sidibouzid
+0.0210964362608 RT @Dima_Khatib 17 political movements & parties in Egypt are to take part in protests on Police Day (today). #Jan25 #sidibouzid
+0.0210964362608 RT @Dima_Khatib: 17 political movements & parties in Egypt are to take part in protests on Police Day (today).  #Jan25 #sidibouzid
+0.0199620063119 How can you not be a proud #Arab thanks to Tunisians #JasemineRevolution & Egyptian #Jan25 protest day.  #VivaLaRevolution
+0.0199620063119 RT @Shefaa: How can you not be a proud #Arab thanks to Tunisians #JasemineRevolution & Egyptian #Jan25 protest day.  #VivaLaRevolution
+0.0199620063119 RT @Shefaa: How can you not be a proud #Arab thanks to Tunisians #JasemineRevolution & Egyptian #Jan25 protest day.  #VivaLaRevolution
+0.0199620063119 RT @Shefaa: How can you not be a proud #Arab thanks to Tunisians #JasemineRevolution & Egyptian #Jan25 protest day.  #VivaLaRevolution
+0.0199620063119 RT @Shefaa: How can you not be a proud #Arab thanks to Tunisians #JasemineRevolution & Egyptian #Jan25 protest day.  #VivaLaRevolution
+--------------------
+0.0286233190398 Majority of #Egyptians younger than 30. #Mubarak president 29yrs. Every 1 of those yrs, #Egypt under Emergency Law. #Jan25 protests
+0.0286233190398 RT @monaeltahawy: Imagine being 25: no job, no freedom, no money, same dictator all your life, robbing your country blind. What would you do? #Egypt #Jan25
+0.0286233190398 RT @Dima_Khatib: RT @monaeltahawy In past 8 days at least 12 Egyptians set themselves on fire out of desperation: unemployment, poverty, corruption. #Jan25
+0.0286233190398 RT @monaeltahawy: #Egypt #Jan25 protests 1st since #Tunisia revolution. #Tunisians' courage in toppling #BenAli thrilled #Egyptians = love 2 topple #Mubarak
+0.0286233190398 RT @Jnoubiyeh: The "Day of Wrath" will shake #Egypt to its core and remind #Mubarak that dictators break before the will of the people. #Jan25 #SidiBouzid
+0.0286233190398 One, two, many Tunisias #Jan25
+0.0286233190398 God bless #Masr http://www.youtube.com/watch?v=7Eh9PvCgb3c&sns=tw #Jan25 #25jan #Egypt
+0.0286233190398 RT @monaeltahawy: #Egypt braced for 'day of revolution' protests http://bit.ly/elhVpu Good Guardian story on #Jan25 protests
+0.0286233190398 RT @iRevolt: In solidarity with brave Egyptians who will begin protesting today against the totalitarian,pharaonic regime of Hosni Mubarak. #Jan25
+0.0286233190398 RT @Novinha56 Amazing paper #Egypt 's #police: From liberators to oppressors http://bit.ly/gQG19m #Jan25
+0.0286233190398 RT @peterarcher: The wind of change is blowing over the pyramids #jan25
+0.0286233190398 The end is near ya #Mubarak you better pack and leave ..or just leave #Jan25
+0.0286233190398 RT @InesInProg: Tonight, my prayers go to Egypt and its amazing people! I hope January 25 will bring the change you/we all want. #Egypt #SidiBouzid #Jan25
+0.0286233190398 RT @FatmaNaib: #Egypt gov threats to arrest #Jan25 http://english.aljazeera.net/news/middleeast/2011/01/2011124233659875688.html
+0.0278834464099 Today thousands of Egyptians will protest for their freedom: http://bit.ly/eGnwy7 http://t.co/cDdC5uQ #Jan25 #sidibouzid
+0.0278834464099 RT @ehsankooheji: Today thousands of Egyptians will protest for their freedom: http://bit.ly/eGnwy7 http://t.co/cDdC5uQ #Jan25 #sidibouzid
+0.0278834464099 Support the January 25 Egypt Uprising. Add a Twibbon to ur avatar now! http://ow.ly/3JuF7 #Jan25
+0.0278834464099 Support the January 25 Egypt Uprising. Add a Twibbon to ur avatar now! http://ow.ly/3JuF7 #Jan25
+0.0278834464099 RT @Gsquare86: Support #Jan25 Egypt Uprising, add a #twibbon now! - http://twb.ly/eGUB91 - Create one here - http://twb.ly/f02AU3
+0.0278834464099 RT @Gsquare86: Support #Jan25 Egypt Uprising, add a #twibbon now! - http://twb.ly/eGUB91 - Create one here - http://twb.ly/f02AU3
+0.02714243486 RT @monaeltahawy: RT @Dima_Khatib 17 political movements & parties in Egypt are to take part in protests on Police Day (today). #Jan25 #sidibouzid
+0.02714243486 RT @Dima_Khatib: 17 political movements & parties in Egypt are to take part in protests on Police Day (today).  #Jan25 #sidibouzid
+0.02714243486 RT @Dima_Khatib: 17 political movements & parties in Egypt are to take part in protests on Police Day (today).  #Jan25 #sidibouzid
+0.02714243486 We will be doing FULL Live coverage of protests in #Egypt & #Worldwide on #25Jan. Follow me here or on http://on.fb.me/8Z50YF. #EgyRevol
+0.02714243486 RT @Alshaheeed: We will be doing FULL Live coverage of protests in #Egypt & #Worldwide on #25Jan. Follow me here or on http://on.fb.me/8Z50YF. #EgyRevol
+0.02714243486 RT @Alshaheeed: We will be doing FULL Live coverage of protests in #Egypt & #Worldwide on #Jan25. Follow me here or on http://on.fb.me/8Z50YF. #EgyRevol
+0.0192227318446 Support #Jan25 Egypt Uprising, add a #twibbon now! - http://twb.ly/eGUB91 - Create one here - http://twb.ly/f02AU3
+0.0192227318446 Support #Jan25 Egypt Uprising, add a #twibbon now! - http://twb.ly/eGUB91 - Create one here - http://twb.ly/f02AU3
+0.0192227318446 Support #Jan25 Egypt Uprising, add a #twibbon now! - http://twb.ly/eGUB91 - Create one here - http://twb.ly/f02AU3
+0.0192227318446 Support #Jan25 Egypt Uprising, add a #twibbon now! - http://twb.ly/eGUB91 - Create one here - http://twb.ly/f02AU3
+0.0192227318446 Support #Jan25 Egypt Uprising, add a #twibbon now! - http://twb.ly/eGUB91 - Create one here - http://twb.ly/f02AU3
+0.0192227318446 Support #Jan25 Egypt Uprising, add a #twibbon now! - http://twb.ly/eGUB91 - Create one here - http://twb.ly/f02AU3
+0.0192227318446 Support #Jan25 Egypt Uprising, add a #twibbon now! - http://twb.ly/eGUB91 - Create one here - http://twb.ly/f02AU3
+0.0192227318446 Support #Jan25 #Egypt Uprising, add a #twibbon now! http://twb.ly/eGUB91 - Create one here - http://twb.ly/f02AU3 #tunisia #syria #arab
+0.0192227318446 Support #Jan25 Egypt Uprising, add a #twibbon now! - http://twb.ly/eGUB91 - Create one here - http://twb.ly/f02AU3 #Algeria #Syria #Lebanon
+0.0192227318446 Support #Jan25 #Egypt Uprising, add a #twibbon now! - http://twb.ly/eGUB91 - Create one here - http://twb.ly/f02AU3 #Tunisia #Sidibouzid
+0.0192227318446 Support #Jan25 Egypt Uprising, add a #twibbon now! - http://twb.ly/eGUB91 - Create one here - http://twb.ly/f02AU3
+0.0192227318446 Support #Jan25 Egypt Uprising, add a #twibbon now! - http://twb.ly/eGUB91 - Create one here - http://twb.ly/f02AU3
+0.0192227318446 RT @monmonaya: Support #Jan25 Egypt Uprising, add a #twibbon now! - http://twb.ly/eGUB91 - Create one here - http://twb.ly/f02AU3
+0.0192227318446 #sidibouzid RT @loai_1: Support #Jan25 Egypt Uprising, add a #twibbon now! - http://twb.ly/eGUB91 - Create one here - http://twb.ly/f02AU3
+--------------------
+0.111111111111 Actv @Tharwacolamus: Is #Egypt About to Have a Facebook Revolution? - TIME | Coveting Freedom | Scoop.it -   #jan... http://goo.gl/uyYNf
+0.111111111111 RT @HopefulMona: @Elshaheeed  Is #Egypt About to Have a Facebook Revolution? - TIME | Coveting Freedom | Scoop.it - http://goo.gl/uyYNf #jan25 #sidibouzid
+0.111111111111 RT @iDhooom: Proud of this spirit, spirit that shout with thunder voice : Egyptians Deserve better Egypt! Deserve Freedom! #jan25
+0.111111111111 RT @monaeltahawy: Majority of #Egyptians younger than 30. #Mubarak president 29yrs. Every 1 of those yrs, #Egypt under Emergency Law. #Jan25 protests
+0.111111111111 I love this wish via @Maghreblog to #Egyptians protesting #Jan25: May the #Tunisian force be with you! Yes! #Sidibouzid
+0.111111111111 RT @fouad_marei My article: an analysis of class conflict and prospects for #jan25 #sidibouzid in #Egypt ~~ http://bit.ly/h6kdnu
+0.111111111111 Support #Jan25 Egypt Uprising, add a #twibbon now! - http://twb.ly/eGUB91 - Create one here - http://twb.ly/f02AU3
+0.111111111111 RT @iRevolt: In solidarity with brave Egyptians who will begin protesting today against the totalitarian,pharaonic regime of Hosni Mubarak. #Jan25
+0.111111111111 RT @shadihamid: If everyone on facebook 'attending' today's #Egypt protest attended, would prob be biggest democracy protest in Arab history #Jan25
+--------------------
+0.0612303536039 RT @manixs: In #Tunisia and #Egypt -they'll be demonstrating in the streets against their respective Governments! #25Jan #Sidibouzid #PowerToThePeople
+0.0612303536039 #Egypt #Jan25 #egyrevol #arabprotest The Egyptian Revolution will be twittered shortly.
+0.0612303536039 I'm Ready For #Mubarak To go with #Gaddafi, He Assisted In Kidnapping My Father From #Egypt To #Libya... http://www.freeizzat.org
+0.0612303536039 RT @tatn: RT @weddady Tmorrow will be a vital day,watch how Arab #socialmedia is going to be on fire.Prepare for the data overdrive #sidibouzid #Egypt
+0.0612303536039 RT @VerdantSage: @monaeltahawy :not just Egyptians unable to work, concentrate (sleep) in anticipation of #Jan25 protests - I'm American following all night!
+0.0576588800359 Update| Front to Defend Egypt Protesters: Wesam Atta and Abdel Halim Henish were released from few minutes. #Jan25 #Egypt
+0.0576588800359 RT @RamyRaoof: Update| Front to Defend Egypt Protesters: Wesam Atta and Abdel Halim Henish were released from few minutes. #Jan25 #Egypt
+0.0576588800359 RT @InesInProg: Tonight, my prayers go to Egypt and its amazing people! I hope January 25 will bring the change you/we all want. #Egypt #SidiBouzid #Jan25
+0.0576588800359 RT @Alshaheeed: We will be doing FULL Live coverage of protests in #Egypt & #Worldwide on #25Jan. Follow me here or on http://on.fb.me/8Z50YF. #EgyRevol
+0.0576588800359 Support #Jan25 Egypt Uprising, add a #twibbon now! - http://twb.ly/eGUB91 - Create one here - http://twb.ly/f02AU3
+0.0576588800359 RT @Alshaheeed: We will be doing FULL Live coverage of protests in #Egypt & #Worldwide on #Jan25. Follow me here or on http://on.fb.me/8 ...
+0.0576588800359 Support #Jan25 Egypt Uprising, add a #twibbon now! - http://twb.ly/eGUB91 - Create one here - http://twb.ly/f02AU3
+0.0576588800359 RT @InesInProg: Tonight, my prayers go to Egypt and its amazing people! I hope January 25 will bring the change you/we all want. #Egypt #SidiBouzid #Jan25
+0.0465154383386 For a minute by minute coverage of #Jan25 protests in Egypt please follow @AlShaheeed
+0.0465154383386 RT @Elshaheeed: For a minute by minute coverage of #Jan25 protests in Egypt please follow @AlShaheeed
+0.0465154383386 RT: @Elshaheeed: For a minute by minute coverage of #Jan25 protests in Egypt please follow @AlShaheeed
+0.0465154383386 RT @maboulazm: RT: @Elshaheeed: For a minute by minute coverage of #Jan25 protests in Egypt please follow @AlShaheeed
+0.0465154383386 RT @Elshaheeed: For a minute by minute coverage of #Jan25 protests in Egypt please follow @AlShaheeed
+--------------------
+0.102160493827 RT @mfatta7: A substantial number of Egyptian celebrities announced their participation. #jan25
+0.102160493827 RT @Organica_: I am excited to see what the Egyptian people and #Jan25 will bring :)
+0.102160493827 RT @monaeltahawy: Majority of #Egyptians younger than 30. #Mubarak president 29yrs. Every 1 of those yrs, #Egypt under Emergency Law. #Jan25 protests
+0.102160493827 In past 8 days at least 12 #Egyptians set themselves on fire out of desperation: unemployment, poverty, corruption. #Jan25 #Egypt protest
+0.102160493827 RT @Tharwacolamus: @monaeltahawy @yslaise Counting the hours, minutes and seconds. Let's kick the ass of that false pharaoh, and restore some dignity #jan25
+0.102160493827 I am an #Egyptian #Muslim who isn't a fan of the Muslim Brotherhood but I will never defend #Mubarak's dictatorship. I want neither. #Jan25
+0.102160493827 I oppose both #Mubarak and the Muslim Brotherhood. #Egypt has 80 mln people. Surely we can come up with more and better choice. #Jan25
+0.102160493827 RT @monaeltahawy: Is #Mubarak sleeping easy tonight ahead of #Jan25 protests? Foolish is the #Arab dictator who closes his eyes post #Tunisia revolution.
+0.0913580246914 Egyptians who can update us on what's happening in english, plz do, the world is following. plz retweet  #jan25 #Egypt
+0.0913580246914 RT @ReemAbdellatif: Egyptians who can update us on what's happening in english, plz do, the world is following. plz retweet  #jan25 #Egypt
+--------------------
+0.109972775118 RT @maboulazm: Please follow @Alshaheeed for English Updates about #Jan25 demonstration in #Egypt against corruption, unemployment, poverty
+0.109972775118 #Jan25 protests organized by #6April youth movement & @Elshaheeed (in memory of police brutality victim). New kind of organization in #Egypt
+0.109972775118 RT @CarlosLatuff: Today my thoughts go out to my brothers and sisters in #Egypt I'm with you, in heart and soul #Jan25
+0.109972775118 Let's see if the Dictator's Club in Jeddah gets a new member today #Jan25 #sidibouzid
+0.109972775118 RT @theblackrabbit: Habib el-Adli:  "arrest any persons expressing their views illegally". http://is.gd/fCyyOx #Egypt #25Jan #Jan25
+0.0978598023572 RT @adamakary: Just landed in #egypt, airport taxi driver knows about the #jan25 protest, says it will be a "black day"
+0.0978598023572 RT @adamakary: Just landed in #egypt, airport taxi driver knows about the #jan25 protest, says it will be a "black day"
+0.0848055065648 u r going to think i'm a nerd but i am so excited for tmrrw that i can't sleep even though I NEED to sleep cuz who knows when i will #Jan25
+0.0848055065648 RT @Gsquare86: u r going to think i'm a nerd but i am so excited for tmrrw that i can't sleep even though I NEED to sleep cuz who knows when i will #Jan25
+0.0848055065648 RT @Gsquare86: u r going to think i'm a nerd but i am so excited for tmrrw that i can't sleep even though I NEED to sleep cuz who knows when i will #Jan25
+--------------------
+0.0630952380952 But what would happen if you shook this bottle(#Egypt)?  http://t.co/7kYnjO1 via @SkyNewsBlogs #Egypt #Jan25 #egypolice #Mahalla
+0.0630952380952 #Mubarak longest serving ruler in #Egypt's modern history = police state, torture systematic, 12,000-14,000 detained persons #Jan25 protest
+0.0630952380952 Dear #Egyptians, please stick together no matter what happens. #jan25
+0.0630952380952 I don't want #Mubarak or Muslim Brotherhood. Where are other options? #Egypt dictator has shut down all other opposition. #Jan25
+0.0630952380952 some 1 said: i'm going on the streets, cuz i don't know what to tell my kids if they asked me : what did U do on this day? #Jan25
+0.0630952380952 #Tunisia revolution: leaderless. #BenAli, #Mubarak & #Arab dictators, quashed opposition. #Egypt youth don't care 4 "leaders" onoffer #Jan25
+0.0630952380952 RT @worldeventobs: #jan25 #25jan #egypt slowly starting to trend globally.
+http://trendsmap.com/topic/%23jan25
+0.0630952380952 RT @monaeltahawy: RT @marwame interesting - mobile coverage is terrible this morning here in Cairo. Can't make more than a 20 second call! #jan25
+0.0630952380952 "Those confronting regime (#Jan25) will be sons & daughters of virtual activism, symbol of contemporary #Egypt." http://bit.ly/elhVpu
+0.0630952380952 Support #Jan25 Egypt Uprising, add a #twibbon now! - http://twb.ly/eGUB91 - Create one here - http://twb.ly/f02AU3
+0.0630952380952 RT @monaeltahawy: #Egypt #Jan25 protests 1st since #Tunisia revolution. #Tunisians' courage in toppling #BenAli thrilled #Egyptians = love 2 topple #Mubarak
+0.0630952380952 Follow this tag >>>  #jan25 <<< #Egypt
+0.0630952380952 RT @ahmedbehiry: If you can't be an Asset, don't be a liability. Or at least for heavens' sake, don't be just an Ass! #Jan25
+0.0630952380952 RT @shadihamid: If everyone on facebook 'attending' today's #Egypt protest attended, would prob be biggest democracy protest in Arab history #Jan25
+0.0583333333333 RT @monaeltahawy: In past 8 days at least 12 #Egyptians set themselves on fire out of desperation: unemployment, poverty, corruption. #Jan25 #Egypt protest
+0.0583333333333 RT @monaeltahawy: In past 8 days at least 12 #Egyptians set themselves on fire out of desperation: unemployment, poverty, corruption. #Jan25 #Egypt protest
+--------------------
+0.0685988004669 Les tweeps du #Maghreb, a vos claviers demain, rendez-vous sur #jan25 AIDEZ les egyptiens 
+#Maroc #Algerie #Tunisie
+0.0685988004669 BBC News - #Egypt activists to hold #Tunisia-inspired 'action day' - http://goo.gl/wLSKS #jan25 #sidibouzid
+0.0685988004669 #Egypt police tactics: deploy massive number of policemen to overwhelm static crowds to encircle & cutoff #jan25
+0.0685988004669 RT @Dima_Khatib: 17 political movements & parties in Egypt are to take part in protests on Police Day (today).  #Jan25 #sidibouzid
+0.0685988004669 RT @monaeltahawy: I am an #Egyptian #Muslim who isn't a fan of the Muslim Brotherhood but I will never defend #Mubarak's dictatorship. I want neither. #Jan25
+0.0685988004669 RT @Sannri: RT @Tharwacolamus BBC News - #Egypt activists to hold #Tunisia-inspired 'action day' - http://goo.gl/wLSKS #jan25 #sidibouzid
+0.0685988004669 CitJ @edbice: GoogleDoc revolution?   Hoping for peaceful protests in Egypt. #Jan25 http://bit.ly/gR7Qpg
+0.0685988004669 RT @samiaonthemove Statistics show around 1,000 Egyptian commit suicide 4 same reasons every year! Unemployment, corruption, poverty #Jan25
+0.0685988004669 Tunisia, #Wikileaks And Food Crisis: Vectors For A Global #Revolution  http://bit.ly/hdYO0P #Tunisie #Egypt #Assange {@gabyverdier }#fb
+0.0637684659663 Elkhawa du #Maghreb #Maroc #Algerie si vous voulez donner un coup de mains a ns freres Egyptiens: Traduisez demain sur #Jan25 #sidibouzid
+0.0637684659663 RT @weddady: Elkhawa du #Maghreb #Maroc #Algerie si vous voulez donner un coup de mains a ns freres Egyptiens: Traduisez demain sur #Jan25 #sidibouzid
+0.0637684659663 RT @monaeltahawy: #Mubarak longest serving ruler in #Egypt's modern history = police state, torture systematic, 12,000-14,000 detained persons #Jan25 protest
+0.0637684659663 For yrs, #Egypt dictator #Mubarak has used Muslim Brotherhood bogeyman to frighten western allies. No excuse for tyrrany. #Jan25
+0.0637684659663 RT @monaeltahawy: For yrs, #Egypt dictator #Mubarak has used Muslim Brotherhood bogeyman to frighten western allies. No excuse for tyrrany. #Jan25
+0.0637684659663 RT @monaeltahawy: #Mubarak longest serving ruler in #Egypt's modern history = police state, torture systematic, 12,000-14,000 detained persons #Jan25 protest
+--------------------

@@ -35,21 +35,20 @@ class NMFClusterer(AbstractClusterer):
         self.construct_term_doc_matrix(pca=False) #We cannot perform PCA with NMF because we only want non-negative vectors
         V = self.td_matrix
         
-        
-        nmf_mdl = pymf.NMF(V, num_bases=4)
-        nmf_mdl.factorize(niter=10)
-        
+        nmf_mdl = pymf.NMF(V, num_bases=self.rank)
+        nmf_mdl.factorize(niter=self.max_iter)
+        w = nmf_mdl.W 
+        h = nmf_mdl.H
+                
         #model = nimfa.mf(V, seed = self.seed, method = self.method, rank = self.rank, max_iter = self.max_iter)
         #fitted = nimfa.mf_run(model)
         #w = fitted.basis() 
         #h = fitted.coef()
-        
-        w = nmf_mdl.W 
-        h = nmf_mdl.H
-        
+                
         self.split_documents(w,h, self.document_dict, self.attributes, display_N_tokens = self.display_N_tokens, display_N_documents = self.display_N_documents)
+
         #Just testing remove it    
-        self.showfeatures(w,h, [self.document_dict.values()[i]["raw"] for i in range(numpy.shape(w)[0])], self.attributes)
+        #self.showfeatures(w,h, [self.document_dict.values()[i]["raw"] for i in range(numpy.shape(w)[0])], self.attributes)
         
     def split_documents(self, w, h, documents, colnames, display_N_tokens, display_N_documents):
         pc, wc = numpy.shape(h)

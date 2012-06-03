@@ -8,6 +8,7 @@ from database.model.tweets import EvaluationTweet
 from database.model.tweets import Content
 from itertools import groupby as g
 from analysis.clustering.algorithms import euclidean
+from analysis.clustering.online import OnlineClusterer
 
 class AbstractEvaluator(object):
     
@@ -81,7 +82,11 @@ class IntrinsicClusteringEvaluator(AbstractEvaluator):
         Performs clustering evaluation
         '''
         clusterer.add_documents(self.dataset)
-        clusterer.run()
+        
+        #if the clusterer is an online clusterer no need to run
+        #the algorithm since we have already done so (hopefully)
+        if type(clusterer) != OnlineClusterer:
+            clusterer.run()
 
         silhouette_coefficients = []
         for index, cluster in enumerate(clusterer.clusters):  
@@ -90,13 +95,13 @@ class IntrinsicClusteringEvaluator(AbstractEvaluator):
             vectors_of_this_cluster = self._get_cluster_feature_vectors(cluster, clusterer)
             if len(vectors_of_this_cluster) <= 1: continue #If this cluster has no poitns or just one we won't include it
             
-            this_cluster = clusterer.clusters.pop(index) #Temporarily remove tghis cluster
+            this_cluster = clusterer.clusters.pop(index) #Temporarily remove this cluster
             vectors_of_other_clusters = []
             for other_cluster in clusterer.clusters:
                 vectors_of_other_clusters.append(self._get_cluster_feature_vectors(other_cluster, clusterer))             
             clusterer.clusters.insert(index, this_cluster) # Re-insert this cluster            
 
-            sc = self._calculate_shilouette_coefficients(vectors_of_this_cluster, vectors_of_other_clusters)
+            sc = self._calculate_silhouette_coefficients(vectors_of_this_cluster, vectors_of_other_clusters)
             silhouette_coefficients.append(sc) # Appends the list of shilouttes for this cluster into the overall list.
 
         quality = self._calculate_clustering_quality(silhouette_coefficients)
@@ -113,7 +118,7 @@ class IntrinsicClusteringEvaluator(AbstractEvaluator):
             vectors.append(clusterer.td_matrix[index])
         return vectors
     
-    def _calculate_shilouette_coefficients(self, vectors_of_this_cluster, vectors_of_other_clusters):
+    def _calculate_silhouette_coefficients(self, vectors_of_this_cluster, vectors_of_other_clusters):
         '''
         It calculates the shilouette_coefficient as described in Data Mining Concepts and Techniques.
         It returns a list of shilouette coefficients, one for each document in the cluster.
@@ -230,16 +235,19 @@ class ExtrinsicClusteringEvaluator(AbstractEvaluator):
         Performs clustering evaluation
         '''
         clusterer.add_documents(self.dataset)
-        clusterer.run()
-            
+
+        if type(clusterer) != OnlineClusterer:
+            clusterer.run()
+        
         doc_labels_clusters = []
         for document in self.dataset:
             for cluster_no, cluster in enumerate(clusterer.clusters):
                 if str(document.id) in cluster.get_documents().keys():
                     doc_labels_clusters.append( (document.event_class, cluster_no) )
                     break
-        
+
         p, r, f =self.calculate_bcubed_measures(doc_labels_clusters)
+
         return p, r, f
     
     def calculate_bcubed_measures(self, documents_labels_clusters):

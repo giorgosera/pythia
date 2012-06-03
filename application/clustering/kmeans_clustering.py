@@ -5,7 +5,7 @@ Created on 13 Nov 2011
 @author: george
 
 '''
-import datetime, cProfile
+import datetime, cProfile, time
 from database.warehouse import WarehouseServer
 from database.model.tweets import EvaluationTweet
 from analysis.clustering.kmeans import OrangeKmeansClusterer
@@ -17,13 +17,13 @@ from analysis.clustering.algorithms import jaccard, euclidean
 ws = WarehouseServer()
 sample_docs = get_orange_clustering_test_data()
 
-def orange_with_tweets_kmeans():
-        import time
-        start = time.time()            
+def orange_with_tweets_kmeans():           
         from_date = datetime.datetime(2011, 1, 26, 0, 0, 0)
         to_date = datetime.datetime(2011, 1, 27, 0, 0, 0) 
-        items = ws.get_documents_by_date(from_date, to_date, limit=10)
-        oc = OrangeKmeansClusterer(distance=jaccard, k=4, ngram=1)
+        items = ws.get_documents_by_date(from_date, to_date, limit=1000)
+
+        start = time.time() 
+        oc = OrangeKmeansClusterer(distance=euclidean, k=4, ngram=1)
         oc.add_documents(items)
         oc.run(pca=False)
         print time.time() - start
