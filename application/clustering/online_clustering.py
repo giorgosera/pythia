@@ -21,13 +21,11 @@ def online_clustering_with_tweets():
     oc = OnlineClusterer(N=50, window = window)
     for item in items:
         oc.cluster(item)
-
-    clusters=oc.trimclusters()    
     print time.time() - start        
-    #oc.dump_clusters_to_file("online_with_tweets")
+    clusters=oc.trimclusters()    
+
+    oc.dump_clusters_to_file("online_with_tweets")
     #oc.plot_scatter()
-
-
 
     #=======================================================================
     # for cluster in oc.clusters:

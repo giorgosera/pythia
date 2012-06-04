@@ -70,7 +70,7 @@ clusterers = [
               DBSCANClusterer(epsilon=0.5, min_pts=2, distance=euclidean), 
               NMFClusterer(rank=40, max_iter=65, display_N_tokens = 5, display_N_documents = 200)] 
 
-original_docs = [doc for doc in ws.get_all_documents(type=EvaluationTweet)]
+original_docs = [doc for doc in ws.get_all_documents(type=EvaluationTweet)][:150]
 dictionary = create_dictionary(original_docs)
 
 def run_evaluation():

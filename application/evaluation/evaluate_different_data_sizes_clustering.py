@@ -30,7 +30,7 @@ def run_evaluation():
     dataset_size = len(documents)
     
     f_different_distances = []
-    step = 50
+    step = 5
     initial_document_size = 50
     for distance in distances:
         print '------------------------------------------'

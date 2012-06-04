@@ -155,7 +155,7 @@ class Group():
         Adds a document to a particular cluster.
         """
         self.documents.append(document)
-        
+    
 class OnlineClusterer(AbstractClusterer):
     '''
     This class implements a basic online clustering algorithm. The code is adapted from
@@ -191,6 +191,8 @@ class OnlineClusterer(AbstractClusterer):
         Overrides the parent method for constructing a td_matrix. The reason is 
         because we want to construct the matrix based on a sliding window approach.
         '''        
+        text = nltk.Text(document.tokens)
+        
         if index < self.window:
             documents = self.document_dict.values()
         else:
@@ -200,16 +202,20 @@ class OnlineClusterer(AbstractClusterer):
         #Online clustering doesn't support term filtering yet     
         corpus = nltk.TextCollection([document.tokens for document in documents])
         
-        terms = list(set(corpus))
-        term_vector = numpy.zeros(len(set(corpus)))
+        corpus_set = set(corpus)
+        terms = list(corpus_set)
+        term_vector = numpy.zeros(len(corpus_set)) 
         
-        text = nltk.Text(document.tokens)
         for item in document.word_frequencies:
             term_vector[terms.index(item.word)] = corpus.tf_idf(item.word, text)
                 
         self.attributes = terms
         self.td_matrix = term_vector
-    
+        
+        #td = numpy.array([])
+        #tfidf = TfidfTransformer(norm="l2")
+        #tfidf.fit(self.td)
+        
     def resize(self):
         for c in self.clusters:
             c.resize(self.attributes)
@@ -225,10 +231,6 @@ class OnlineClusterer(AbstractClusterer):
 
         self.construct_term_doc_matrix(index=doc_index, document=doc_content)
         
-        #=======================================================================
-        # print 'N', len(self.clusters)
-        # print 'clustering', doc_index
-        #=======================================================================
         if doc_index > 0: #ignore the first document
             #e = doc_index
             e = self.td_matrix

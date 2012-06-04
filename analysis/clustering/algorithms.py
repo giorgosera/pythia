@@ -23,7 +23,7 @@ def jaccard(v1, v2):
     SO first we find the indices of the words in each documents and then jaccard is 
     calculated based on the indices.
     '''
-    indices1 = numpy.nonzero(v1>0.0)[0]
+    indices1 = numpy.nonzero(v1>0.0)[0]#The first vector is the cluster centroid so each entry containing smt greater than zero is a possible match
     indices2 = numpy.nonzero(v2==1.0)[0]
 
     dist = nltk.metrics.distance.jaccard_distance(set(indices1), set(indices2))

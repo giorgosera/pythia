@@ -27,7 +27,7 @@ def get_words_starting_with(letter):
     words = []
     for word in open("/usr/share/dict/words"):
                     if word.startswith(letter):
-                            words.append(word.rstrip())
+                            words.append(unicode(word.rstrip()))
     return words
 
 def pick_letters(N, with_replacement=False):
@@ -79,20 +79,20 @@ def increase_vocabulary(document, dictionary, i=5):
 #####################################MAIN SCRIPT############################################
 distances = [
              euclidean,
-             #cosine,
-             #jaccard
+             cosine,
+             jaccard
              ]
 
 ws = WarehouseServer()
 def run_evaluation():
     clusterers = [
                   OnlineClusterer(N=40, window = 50),
-                  #OrangeKmeansClusterer(k=40, ngram=1),
-                  #DBSCANClusterer(epsilon=0.5, min_pts=2, distance=euclidean),
-                  #NMFClusterer(rank=40, max_iter=65, display_N_tokens = 5, display_N_documents = 20)                  
+                  OrangeKmeansClusterer(k=40, ngram=1),
+                  DBSCANClusterer(epsilon=0.5, min_pts=2, distance=euclidean),
+                  NMFClusterer(rank=40, max_iter=65, display_N_tokens = 5, display_N_documents = 20)                  
                   ] 
     
-    diversity = [1, 5]#How many different letters to pick from the alphabet each time
+    diversity = [1, 2, 5, 10, 26]#How many different letters to pick from the alphabet each time
     dictionaries = []
     
     #Create different diversities

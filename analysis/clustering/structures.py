@@ -9,6 +9,7 @@ from analysis.semantic import TwitterSemanticAnalyser
 from collections import OrderedDict
 from analysis.summarization.summarization import CentroidSummarizer, LexRankSummarizer
 from c_extensions.resize import resize
+from c_extensions.dot import dot#!@UnresolvedImport
         
 class Cluster(object):
     '''
@@ -146,10 +147,11 @@ class Cluster(object):
 # Online clustering algos
 ####################################
 def kernel_linear(x,y):
-    return scipy.dot(x,y)
+    dist = dot.dot(x,y)
+    return dist if dist > 0 else 0.001 
 
 def kernel_poly(x,y,a=1.0,b=1.0,p=2.0):
-    return (a*scipy.dot(x,y)+b)**p
+    return (a*dot.dot(x,y)+b)**p
      
 def kernel_gauss(x,y, sigma=0.00001):
     v=x-y
@@ -158,13 +160,14 @@ def kernel_gauss(x,y, sigma=0.00001):
 
 def kernel_dist(x,y):
     # if gaussian kernel:
-    return 2-2*kernel(x,y)
+    #return 2-2*kernel(x,y)
     # if not
-    #return kernel(x,x)-2*kernel(x,y)+kernel(y,y)   
+    return kernel(x,x)-2*kernel(x,y)+kernel(y,y)   
+
 def kernel_normalise(k): 
     return lambda x,y: k(x,y)/math.sqrt(k(x,x)+k(y,y))
 
-kernel=kernel_normalise(kernel_poly)
+kernel=kernel_normalise(kernel_linear)
 
 class OnlineCluster(Cluster):
     '''
@@ -177,15 +180,15 @@ class OnlineCluster(Cluster):
         self.center=a
         self.size=0
         self.term_vector = term_vector
-        self._update_term_vector_index_cache()
+        self._update_term_vector_index_cache(self.center)
         
-    def _update_term_vector_index_cache(self):
+    def _update_term_vector_index_cache(self, new_vector):
         '''
         Whenerver the term vector is changed we must update the index cache
         '''
         self.term_dict = {}
         for i, term in enumerate(self.term_vector):
-            self.term_dict[term] = i
+            self.term_dict[term] = (i, new_vector[i])
         
     def add(self, e, doc_id, doc_content):
         self.size+= kernel(self.center, e)
@@ -202,8 +205,8 @@ class OnlineCluster(Cluster):
         This function resizes the center vector of this cluster according to
         a new term vector. 
         '''               
-        self.center, self.term_vector = resize.resize(self.center, self.term_dict, new_term_vector, self.term_vector) 
-        self._update_term_vector_index_cache()
+        self.center, self.term_vector = resize.resize(self.term_dict, new_term_vector, self.term_vector) 
+        self._update_term_vector_index_cache(self.center)
         
     def __str__(self):
         return "Cluster( %s, %f )"%(self.center, self.size)
