@@ -16,10 +16,10 @@ ws = WarehouseServer()
 def dbscan_clustering_with_tweets():
     from_date = datetime.datetime(2011, 1, 25, 12, 0, 0)
     to_date = datetime.datetime(2011, 1, 26, 12, 30, 0) 
-    items = ws.get_documents_by_date(from_date, to_date, limit=100)             
+    items = ws.get_documents_by_date(from_date, to_date, limit=300)             
     
-    epsilon = 0.02
-    min_pts = 3
+    epsilon = 0.05
+    min_pts = 10
     dbscan = DBSCANClusterer(epsilon=epsilon, min_pts=min_pts, distance=cosine)
     dbscan.add_documents(items)
     clusters = dbscan.run(pca=True)

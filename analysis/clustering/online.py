@@ -212,10 +212,6 @@ class OnlineClusterer(AbstractClusterer):
         self.attributes = terms
         self.td_matrix = term_vector
         
-        #td = numpy.array([])
-        #tfidf = TfidfTransformer(norm="l2")
-        #tfidf.fit(self.td)
-        
     def resize(self):
         for c in self.clusters:
             c.resize(self.attributes)

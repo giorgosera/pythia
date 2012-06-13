@@ -7,6 +7,7 @@ import unittest, numpy
 from database.warehouse import WarehouseServer
 from database.model.agents import *
 from analysis.classification.tree import TreeClassifier
+from analysis.classification.knn import kNNClassifier
 
 from mongoengine import connect
 connect("pythia_db")
@@ -94,7 +95,7 @@ class Test(unittest.TestCase):
         classifier = TreeClassifier()
         attributes = ["retweets", "links", "retweeted", "replies", "mentions", "ff-ratio", "class"]
         train_set = numpy.array([author.get_feature_vector_with_type() for author in TrainingAuthor.objects])
-
+ 
         classifier.train(train_set, attributes)
         
         for author in authors:
@@ -105,8 +106,26 @@ class Test(unittest.TestCase):
             print prediction
             print '----------------------'
             
-        TestAuthor.drop_collection()   
+        TestAuthor.drop_collection()  
         
-                 
+    def test_author_knn_classification_egypt_dataset(self):
+        ws = WarehouseServer()      
+        authors = ws.get_authors(type=TestAuthor)
+        classifier = kNNClassifier()
+        attributes = ["retweets", "links", "retweeted", "replies", "mentions", "ff-ratio", "class"]
+        train_set = numpy.array([author.get_feature_vector_with_type() for author in TrainingAuthor.objects])
+        classifier.train(train_set, attributes)
+        
+        for author in authors:
+            prediction = "No prediction"
+            if len(author.feature_vector) > 0:
+                vector = author.get_feature_vector_with_type()
+                prediction = classifier.classify(vector)
+            print author.screen_name
+            print prediction
+            print '----------------------'
+        
+         
+
 if __name__ == "__main__":
     unittest.main()
