@@ -3,7 +3,7 @@ Created on 19 Mar 2012
 
 @author: george
 '''
-import numpy
+import numpy, time
 from database.model.tweets import EvaluationTweet
 from database.model.tweets import Content
 from itertools import groupby as g
@@ -237,7 +237,9 @@ class ExtrinsicClusteringEvaluator(AbstractEvaluator):
         clusterer.add_documents(self.dataset)
 
         if type(clusterer) != OnlineClusterer:
+            start = time.time() 
             clusterer.run()
+            print time.time() - start
         
         doc_labels_clusters = []
         for document in self.dataset:
@@ -326,7 +328,7 @@ class ClassificationEvaluator(AbstractEvaluator):
         Splits the dataset according to the number of folds.
         '''
         feature_vectors_type = [(datapoint.get_feature_vector_with_type(), datapoint.type) for datapoint in self.dataset]
-        if randomize: from random import shuffle; X=list(feature_vectors_type); shuffle(X)
+        if randomize: import random; random.seed(time.clock()); X=list(feature_vectors_type); random.shuffle(X)
         for k in xrange(K):
             training = [x for i, x in enumerate(X) if i % K != k]
             validation = [x for i, x in enumerate(X) if i % K == k]

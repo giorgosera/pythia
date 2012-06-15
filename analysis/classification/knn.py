@@ -24,7 +24,7 @@ class kNNClassifier(object):
         Gets the training data (numpy array) and the attribute list and constructs the tree
         '''
         self.train_table = construct_orange_table(attributes, train_set, classed=True)
-        self.classifer = Orange.classification.knn.kNNLearner(self.train_table, k=10)       
+        self.classifer = Orange.classification.knn.kNNLearner(self.train_table, k=1)       
         
     def classify(self, example):
         '''

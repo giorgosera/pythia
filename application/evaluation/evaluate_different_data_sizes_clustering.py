@@ -3,9 +3,11 @@ Created on 21 Mar 2012
 
 @author: george
 '''
-import pylab#!@UnresolvedImport 
+import pylab, time#!@UnresolvedImport 
 import numpy 
-
+from matplotlib.font_manager import FontProperties#!@UnresolvedImport 
+fontP = FontProperties()
+fontP.set_size(45)
 from database.warehouse import WarehouseServer
 from database.model.tweets import EvaluationTweet
 from analysis.clustering.kmeans import OrangeKmeansClusterer
@@ -30,7 +32,7 @@ def run_evaluation():
     dataset_size = len(documents)
     
     f_different_distances = []
-    step = 5
+    step = 10
     initial_document_size = 50
     for distance in distances:
         print '------------------------------------------'
@@ -47,8 +49,10 @@ def run_evaluation():
                 #Special case for onlie clustering
                 if type(oc) == OnlineClusterer:
                     oc.window = i #no the window is the whole data set
+                    start = time.time() 
                     for item in documents[:i]:
                         oc.cluster(item)
+                    print time.time() - start
                     ebe = ExtrinsicClusteringEvaluator(documents[:i])
                     bcubed_precision, bcubed_recall, bcubed_f = ebe.evaluate(clusterer=oc)  
                     f_list.append(bcubed_f)
@@ -66,15 +70,18 @@ def run_evaluation():
     plots = []
     pylab.figure(1)
     
+    linestyles=['solid', 'dashed', 'dashdot','dotted']
     dist_names = ["Euclidean", "Cosine", "Jaccard"]
     for i, f_different_distance in enumerate(f_different_distances):
         pylab.subplot(2,2,i+1)
-        for f_measure in f_different_distance:
-            plots.append(pylab.plot(t, f_measure))
+        for j, f_measure in enumerate(f_different_distance):
+            plots.append(pylab.plot(t, f_measure, marker='o', linestyle=linestyles[j], markersize=3))
         pylab.title(dist_names[i])
         pylab.xlabel('Number of documents')
         pylab.ylabel('Bcubed F metric')
-        pylab.legend(('online', 'kmeans', 'dbscan', 'nmf'), 'lower right', shadow=True)
+    
+    #Kanonika i seira sto legend prepei na eni 'online', 'kmeans', 'dbscan', 'nmf' alla gia to report kai mono allaksa to
+    pylab.legend(('nmf', 'kmeans', 'dbscan', 'online'), bbox_to_anchor=(2,0) , loc='lower right', shadow=True, prop=fontP)
     
     pylab.show()
     

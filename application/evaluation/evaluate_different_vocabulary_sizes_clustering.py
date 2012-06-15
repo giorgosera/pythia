@@ -6,7 +6,9 @@ Created on 21 Mar 2012
 import random
 import pylab#!@UnresolvedImport 
 import numpy, time
-
+from matplotlib.font_manager import FontProperties#!@UnresolvedImport 
+fontP = FontProperties()
+fontP.set_size(45)
 from database.model.tweets import *
 from database.warehouse import WarehouseServer
 from analysis.clustering.kmeans import OrangeKmeansClusterer
@@ -165,11 +167,11 @@ def run_evaluation():
     for i, distance in enumerate(qualities_different_distances):
         pylab.subplot(2,2,i+1)
         for q_clusterer in distance:
-            plots.append(pylab.plot(t, q_clusterer))
+            plots.append(pylab.plot(t, q_clusterer, marker='o'))
         pylab.title(dist_names[i])
         pylab.xlabel('Average vocabulary size')
-        pylab.ylabel('Quality')
-        pylab.legend(('online','kmeans', 'dbscan', 'nmf'), 'lower right', shadow=True)
+        pylab.ylabel('BCubed F metric')
+    pylab.legend(('online', 'kmeans', 'dbscan', 'nmf'), bbox_to_anchor=(2,0) , loc='lower right', shadow=True, prop=fontP)
     
     pylab.show()
 

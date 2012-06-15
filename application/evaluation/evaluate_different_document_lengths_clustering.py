@@ -6,7 +6,9 @@ Created on 21 Mar 2012
 import pylab#!@UnresolvedImport 
 import numpy 
 import random
-
+from matplotlib.font_manager import FontProperties#!@UnresolvedImport 
+fontP = FontProperties()
+fontP.set_size(45)
 from database.warehouse import WarehouseServer
 from database.model.tweets import EvaluationTweet
 from analysis.clustering.kmeans import OrangeKmeansClusterer
@@ -70,7 +72,7 @@ clusterers = [
               DBSCANClusterer(epsilon=0.5, min_pts=2, distance=euclidean), 
               NMFClusterer(rank=40, max_iter=65, display_N_tokens = 5, display_N_documents = 200)] 
 
-original_docs = [doc for doc in ws.get_all_documents(type=EvaluationTweet)][:150]
+original_docs = [doc for doc in ws.get_all_documents(type=EvaluationTweet)][:250]
 dictionary = create_dictionary(original_docs)
 
 def run_evaluation():
@@ -129,7 +131,7 @@ def run_evaluation():
         pylab.title(dist_names[i])
         pylab.xlabel('Average document length')
         pylab.ylabel('Bcubed F metric')
-        pylab.legend(('online', 'kmeans', 'dbscan', 'nmf'), 'lower right', shadow=True)
+    pylab.legend(('online', 'kmeans', 'dbscan', 'nmf'), bbox_to_anchor=(2,0) , loc='lower right', shadow=True, prop=fontP)
     
     pylab.show()
 
