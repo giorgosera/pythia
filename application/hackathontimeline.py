@@ -7,11 +7,15 @@ Created on 24 Mar 2012
 import datetime, unittest 
 from database.warehouse import WarehouseServer
 from analysis.clustering.kmeans import OrangeKmeansClusterer
+from database.model.tweets import *
 from tools.utils import aggregate_data
 from matplotlib.dates import num2date#!@UnresolvedImport
 from visualizations.graphs import D3Timeline
 
 
+
+print '--------------------------------------'
+print '--> Retrieving tweets...'
 ws = WarehouseServer()
 from_date = datetime.datetime(2011, 1, 26, 0, 0, 0)
 to_date = datetime.datetime(2011, 1, 27, 0, 0, 0) 
@@ -19,8 +23,10 @@ items = ws.get_documents_by_date(from_date, to_date, limit=3000)
 
 oc = OrangeKmeansClusterer(k=100, ngram=1)
 oc.add_documents(items)
-oc.run("orange_clustering_test", pca=False)
+print '--> Running clustering...'
+oc.run(pca=False)
 
+print '--> Identifying events...'
 top_clusters = []
 for cluster in oc.clusters:
     documents = cluster.get_documents().values()
@@ -34,6 +40,7 @@ for cluster in oc.clusters:
     
 top_clusters = sorted(top_clusters, key=lambda x: -x[0])[:20]
 
+print '--> Generating summaries...'
 meta = []
 top_clusters = sorted(top_clusters, key=lambda x: x[1])
 for i, cluster in enumerate(top_clusters):

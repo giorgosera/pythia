@@ -237,9 +237,7 @@ class ExtrinsicClusteringEvaluator(AbstractEvaluator):
         clusterer.add_documents(self.dataset)
 
         if type(clusterer) != OnlineClusterer:
-            start = time.time() 
             clusterer.run()
-            print time.time() - start
         
         doc_labels_clusters = []
         for document in self.dataset:
@@ -311,11 +309,14 @@ class ClassificationEvaluator(AbstractEvaluator):
         '''
         attributes = ["retweets", "links", "retweeted", "replies", "mentions", "ff-ratio", "class"]
         metrics = numpy.zeros([len(self.classes_list), 3])
+        
+        overall_confusion_matrix = numpy.zeros([len(self.classes_list), len(self.classes_list)])
         for training, validation in self.split_dataset(K=K, randomize=True):
             targets = [vector[1] for vector in validation]
             classifier.train([vector[0] for vector in training], attributes)
             fold_predictions = [int(classifier.classify(example[0]).value) for example in validation]
             confusion_matrix = self.create_confusion_matrix(targets, fold_predictions, len(self.classes_list))
+            overall_confusion_matrix += confusion_matrix
             rp_rates = self.calculate_precision_recall(confusion_matrix)
             f_measures = self.calculate_f_measure(rp_rates)
             metrics += numpy.concatenate((rp_rates, f_measures), axis=1)

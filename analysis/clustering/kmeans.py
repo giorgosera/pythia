@@ -35,7 +35,7 @@ class OrangeKmeansClusterer(AbstractKmeansClusterer):
             vars.append(Orange.data.variable.Continuous(str(token)))
         domain = Orange.data.Domain(vars, False) #The second argument indicated that the last attr must not be a class
         table = Orange.data.Table(domain, self.td_matrix)
-            
+        
         km = Orange.clustering.kmeans.Clustering(table, self.k, distance=distances[self.distance])        #initialization= Orange.clustering.kmeans.init_hclustering(n=100), distance =  Orange.distance.instances.PearsonRConstructor    
 
         self.split_documents(km)

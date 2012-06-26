@@ -3,7 +3,7 @@ Created on 22 Jan 2012
 
 @author: george
 '''
-import numpy, nltk
+import numpy, nltk, time
 import orange, Orange #!@UnresolvedImport
 from math import sqrt
 from c_extensions import euclidean as cython_euclidean#!@UnresolvedImport
@@ -22,11 +22,13 @@ def jaccard(v1, v2):
     is 1 then the word is present in the document. If it is 0 then it is not present.
     SO first we find the indices of the words in each documents and then jaccard is 
     calculated based on the indices.
-    '''
-    indices1 = numpy.nonzero(v1>0.0)[0]#The first vector is the cluster centroid so each entry containing smt greater than zero is a possible match
-    indices2 = numpy.nonzero(v2==1.0)[0]
+    '''  
 
-    dist = nltk.metrics.distance.jaccard_distance(set(indices1), set(indices2))
+    indices1 = numpy.nonzero(v1)[0].tolist()
+    indices2 = numpy.nonzero(v2)[0].tolist()
+    inter = len(set(indices1) & set(indices2))
+    un = len(set(indices1) | set(indices2))
+    dist = 1 - inter/float(un)
     return dist
     
 def pearson(v1,v2):
@@ -124,9 +126,9 @@ class ExamplesDistance_Jaccard(orange.ExamplesDistance):
         So the best we can do is assume that if an entry in ex1 is not zero then that word appears
         in the cluster. So we search for non-zero elements in ex1 and elements == 1 in ex2.
         '''
-        ex1 = numpy.fromiter(list(ex1), dtype=numpy.float)
-        ex2 = numpy.fromiter(list(ex2), dtype=numpy.float)
-        return jaccard(ex1,ex2)
+        example1 = numpy.fromiter(list(ex1), dtype=numpy.float)
+        example2 = numpy.fromiter(list(ex2), dtype=numpy.float)
+        return jaccard(example1,example2)
 
 class ExamplesDistanceConstructor_Jaccard(orange.ExamplesDistanceConstructor):
     def __init__(self, *args):

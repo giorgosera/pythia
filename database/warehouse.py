@@ -4,7 +4,7 @@ Created on 22 Jan 2012
 @author: george
 '''
 from mongoengine import *
-from database.model.tweets import EgyptTweet
+from database.model.tweets import *
 from database.model.agents import Author
 
 class WarehouseServer(object):

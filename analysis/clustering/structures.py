@@ -55,7 +55,7 @@ class Cluster(object):
         '''
         Performs cluster summarization. It returns a list of ranked documents.
         '''
-        cs = LexRankSummarizer(self.document_dict)
+        cs = CentroidSummarizer(self.document_dict)
         sorted_documents = cs.summarize()
         return sorted_documents
     
@@ -196,7 +196,12 @@ class OnlineCluster(Cluster):
         self.document_dict[doc_id] = doc_content
         
     def merge(self, c):        
-        self.center=(self.center*self.size+c.center*c.size)/(self.size+c.size)
+        size = 0
+        if self.size+c.size == 0: 
+            size = self.size+c.size +1
+        else:
+            size = self.size+c.size 
+        self.center=(self.center*self.size+c.center*c.size)/size
         self.size+=c.size
         self.document_dict.update(c.document_dict)
         

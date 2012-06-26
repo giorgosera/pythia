@@ -9,6 +9,7 @@ import numpy, time
 from matplotlib.font_manager import FontProperties#!@UnresolvedImport 
 fontP = FontProperties()
 fontP.set_size(45)
+pylab.rcParams.update({'font.size': 20})
 from database.model.tweets import *
 from database.warehouse import WarehouseServer
 from analysis.clustering.kmeans import OrangeKmeansClusterer
@@ -87,14 +88,9 @@ distances = [
 
 ws = WarehouseServer()
 def run_evaluation():
-    clusterers = [
-                  OnlineClusterer(N=40, window = 50),
-                  OrangeKmeansClusterer(k=40, ngram=1),
-                  DBSCANClusterer(epsilon=0.5, min_pts=2, distance=euclidean),
-                  NMFClusterer(rank=40, max_iter=65, display_N_tokens = 5, display_N_documents = 20)                  
-                  ] 
+    start = time.time()
     
-    diversity = [1, 2, 5, 10, 26]#How many different letters to pick from the alphabet each time
+    diversity = [1, 5, 10,  15, 20, 26]#How many different letters to pick from the alphabet each time
     dictionaries = []
     
     #Create different diversities
@@ -109,9 +105,9 @@ def run_evaluation():
     
     #Create different document datasets based on the diversities
     datasets = []
-    datasets.append([doc for doc in ws.get_all_documents(type=EvaluationTweet)])#Append the original dataset
+    datasets.append([doc for doc in ws.get_all_documents(type=EvaluationTweet)][:150])#Append the original dataset
     for ind, dictionary in enumerate(dictionaries):        
-        documents = [doc for doc in ws.get_all_documents(type=EvaluationTweet)]
+        documents = [doc for doc in ws.get_all_documents(type=EvaluationTweet)][:150]
         size = len(dictionary)
 
         augmented_dataset = []
@@ -124,6 +120,12 @@ def run_evaluation():
     
     qualities_different_distances = []
     for distance in distances:
+        clusterers = [
+                      OnlineClusterer(N=35, window = 50),
+                      OrangeKmeansClusterer(k=20, ngram=1),
+                      DBSCANClusterer(epsilon=0.5, min_pts=2, distance=euclidean),#DBSCANClusterer(epsilon=0.7, min_pts=2, distance=euclidean),
+                      NMFClusterer(rank=40, max_iter=65, display_N_tokens = 5, display_N_documents = 10)                  
+                      ] 
         print '------------------------------------------'
         q_different_clusterers = [] 
         for clusterer in clusterers:
@@ -136,7 +138,7 @@ def run_evaluation():
                 da = DatasetAnalyser(dataset)
                 print 'with vocabulary size: ', da.avg_vocabulary_size()
                 print 'with average document length: ', da.avg_document_length()
-                print da.vocabulary_size()
+                print 'with term-frequency vector length: ', da.vocabulary_size()
                 
                 #Special case for online clustering
                 if type(oc) == OnlineClusterer:
@@ -163,18 +165,22 @@ def run_evaluation():
     plots = []
     pylab.figure(1)
     
+    linestyles=[':', 'dashed', 'dashdot','solid']
+    colors = ['r', 'g', 'b', 'k']
     dist_names = ["Euclidean", "Cosine", "Jaccard"]    
     for i, distance in enumerate(qualities_different_distances):
         pylab.subplot(2,2,i+1)
-        for q_clusterer in distance:
-            plots.append(pylab.plot(t, q_clusterer, marker='o'))
+        pylab.ylim([0,1])
+        for j, q_clusterer in enumerate(distance):
+            plots.append(pylab.plot(t, q_clusterer, marker='o', linestyle=linestyles[j], markersize=3, c=colors[j]))
         pylab.title(dist_names[i])
         pylab.xlabel('Average vocabulary size')
         pylab.ylabel('BCubed F metric')
-    pylab.legend(('online', 'kmeans', 'dbscan', 'nmf'), bbox_to_anchor=(2,0) , loc='lower right', shadow=True, prop=fontP)
-    
+    pylab.legend(('nmf', 'kmeans', 'dbscan', 'online'), bbox_to_anchor=(2,0) , loc='lower right', shadow=True, prop=fontP)
+    print "It ran for: ", (time.time()-start)/60.0, "minutes"   
     pylab.show()
 
 import cProfile    
+
 cProfile.run('run_evaluation()', 'different_vocabulary.profile')
-        
+     

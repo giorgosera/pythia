@@ -16,10 +16,10 @@ PAGE_SIZE = 10
 connect("pythia_db")
 
 #The old retrievals were between 1/1/2011 and 15/2/2011 (3 hours)
-mintime = datetime.datetime(2011, 01, 23, 0, 0, 0)
+mintime = datetime.datetime(2011, 01, 28, 0, 0, 0)
 delta = datetime.timedelta(hours=1)
 maxtime = mintime + delta
-final_date = datetime.datetime(2011, 01, 27, 0, 0, 0)
+final_date = datetime.datetime(2011, 01, 30, 0, 0, 0)
 
 exception_log = []
 

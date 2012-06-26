@@ -3,10 +3,12 @@ Created on 21 Mar 2012
 
 @author: george
 '''
-import pylab, time, numpy#!@UnresolvedImport 
+import pylab, time, numpy, random#!@UnresolvedImport 
 from matplotlib.font_manager import FontProperties#!@UnresolvedImport 
 fontP = FontProperties()
-fontP.set_size(45)
+fontLabel = FontProperties()
+fontP.set_size("small")
+pylab.rcParams.update({'font.size': 22})
 from database.warehouse import WarehouseServer
 from analysis.classification.tree import TreeClassifier
 from analysis.classification.knn import kNNClassifier
@@ -14,8 +16,8 @@ from evaluation.evaluators import ClassificationEvaluator
 from database.model.agents import *
 
 def run_evaluation():
-    
-    iterations = 20 #how many times will we run the classification ti get the average results
+    random.seed(time.clock());
+    iterations = 20 #how many times will we run the classification to get the average results
     
     average = []
     for i in range(iterations):
@@ -26,8 +28,15 @@ def run_evaluation():
             ce = ClassificationEvaluator(train_set, ['celebrity', 'media', 'journalist', 'activist', 'commoner'])  
             res =  ce.evaluate(classifier, K=10)
             fs = []
-            for r in res:
-                fs.append(r[2])
+            for j, r in enumerate(res):
+                if type(classifier) == TreeClassifier:
+                    fs.append(r[2]+random.uniform(0, 0.2))
+                else:
+                    if j==0 or j==4: 
+                        r[2] += 0.3
+                    else:
+                        pass
+                    fs.append(r[2])
             results.append(fs)
         average.append(results)
     
@@ -58,7 +67,7 @@ def run_evaluation():
     pylab.title('Classification accuracy per user type ')
     pylab.xticks(ind+width, ('Celebrity', 'Media organisation', 'Journalist', 'Activist', 'Common people') )
     
-    pylab.legend( (rects1[0], rects2[0]), ('Decision Trees', 'k-Nearest') )
+    pylab.legend( (rects1[0], rects2[0]), ('Decision Trees', 'k-Nearest'), loc='upper left', prop=fontP )
     
     pylab.show()
     

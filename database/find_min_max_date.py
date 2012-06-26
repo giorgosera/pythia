@@ -10,7 +10,7 @@ from mongoengine import *
 from database.model.tweets import *
 
 connect("pythia_db")
-t = EgyptTweet.objects.order_by("-date")
+t = EgyptTweetWeekly.objects.order_by("-date")
 size = len(t)
 print "min:", t[0].date
 print "max:", t[size-1].date

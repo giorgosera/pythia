@@ -144,7 +144,7 @@ class DBSCANClusterer(AbstractClusterer):
         #Re-initialise clusters
         if self.clusters != []:
             self.clusters = []
-            
+        
         if not self.test_mode:
             self.construct_term_doc_matrix(pca=pca)
         
@@ -153,7 +153,7 @@ class DBSCANClusterer(AbstractClusterer):
         for row_index, doc_id in enumerate(self.document_dict.keys()):
             #Along with the feature vector we append the document id as well
             matrix.append( (list(self.td_matrix[row_index]), doc_id) )
-                
+        
         self.points = matrix
         clusters = self.dbscan()
         self.split_documents(clusters)

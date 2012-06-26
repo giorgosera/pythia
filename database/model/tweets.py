@@ -47,9 +47,17 @@ class CyprusTweet(Tweet):
 class EgyptTweet(Tweet):
     meta = {"collection": "EgyptTweets", "indexes": [("date")]}
     url = StringField(required=True)
+
+class EgyptTweetMonthly(Tweet):
+    meta = {"collection": "EgyptTweetsMonthly", "indexes": [("date")]}
+    url = StringField(required=True)
+
+class EgyptTweetWeekly(Tweet):
+    meta = {"collection": "EgyptTweetsWeekly", "indexes": [("date")]}
+    url = StringField(required=True)
     
-class PsychTweet(Tweet):
-    meta = {"collection": "PsychTweets"}
+class SudanTweet(Tweet):
+    meta = {"collection": "SudanTweets"}
     url = StringField(required=True)
     
 class TestTweet(Tweet):

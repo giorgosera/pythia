@@ -8,6 +8,7 @@ import numpy
 from matplotlib.font_manager import FontProperties#!@UnresolvedImport 
 fontP = FontProperties()
 fontP.set_size(45)
+pylab.rcParams.update({'font.size': 20})
 from database.warehouse import WarehouseServer
 from database.model.tweets import EvaluationTweet
 from analysis.clustering.kmeans import OrangeKmeansClusterer
@@ -32,7 +33,7 @@ def run_evaluation():
     dataset_size = len(documents)
     
     f_different_distances = []
-    step = 10
+    step = 20
     initial_document_size = 50
     for distance in distances:
         print '------------------------------------------'
@@ -70,17 +71,17 @@ def run_evaluation():
     plots = []
     pylab.figure(1)
     
-    linestyles=['solid', 'dashed', 'dashdot','dotted']
+    linestyles=[':', 'dashed', 'dashdot','solid']
+    colors = ['r', 'g', 'b', 'k']
     dist_names = ["Euclidean", "Cosine", "Jaccard"]
     for i, f_different_distance in enumerate(f_different_distances):
         pylab.subplot(2,2,i+1)
         for j, f_measure in enumerate(f_different_distance):
-            plots.append(pylab.plot(t, f_measure, marker='o', linestyle=linestyles[j], markersize=3))
+            plots.append(pylab.plot(t, f_measure, marker='o', linestyle=linestyles[j], markersize=3, c=colors[j], linewidth=3.0))
         pylab.title(dist_names[i])
         pylab.xlabel('Number of documents')
         pylab.ylabel('Bcubed F metric')
     
-    #Kanonika i seira sto legend prepei na eni 'online', 'kmeans', 'dbscan', 'nmf' alla gia to report kai mono allaksa to
     pylab.legend(('nmf', 'kmeans', 'dbscan', 'online'), bbox_to_anchor=(2,0) , loc='lower right', shadow=True, prop=fontP)
     
     pylab.show()
